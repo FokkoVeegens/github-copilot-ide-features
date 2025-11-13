@@ -1,0 +1,22 @@
+{
+  "ides": [
+    { "id": "github-com", "name": "GitHub.com" },
+    { "id": "coding-agent", "name": "Coding Agent" },
+    { "id": "cli", "name": "GitHub Copilot CLI" },
+    { "id": "vs-code", "name": "VS Code" },
+    { "id": "visual-studio", "name": "Visual Studio" },
+    { "id": "jetbrains", "name": "JetBrains" },
+    { "id": "xcode", "name": "Xcode" },
+    { "id": "vim-neovim", "name": "Vim/NeoVim" },
+    { "id": "eclipse", "name": "Eclipse" }
+  ],
+  "stages": {
+    "GA": { "name": "Generally available" },
+    "PUB": { "name": "Public Preview" },
+    "PRV": { "name": "Private Preview" }
+  },
+  "flags": {
+    "individual-only": { "description": "Only available to individual subscriptions (Free, Pro, Pro+)", "icon": "🧑‍💻" },
+    "preview-version": { "description": "Only available in preview/insiders version", "icon": "⚠️" }
+  }
+}

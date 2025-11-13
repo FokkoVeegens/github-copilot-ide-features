@@ -1,0 +1,30 @@
+{
+  "features": [
+    {
+      "id": "mcp-registry",
+      "name": "MCP Registry",
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-09-12-internal-mcp-registry-and-allowlist-controls-for-vs-code-insiders/",
+          "flags": ["preview-version"]
+        },
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-10-28-mcp-registry-and-allowlist-controls-for-copilot-in-jetbrains-eclipse-and-xcode-now-in-public-preview/",
+          "flags": ["preview-version"]
+        },
+        "xcode": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-10-28-mcp-registry-and-allowlist-controls-for-copilot-in-jetbrains-eclipse-and-xcode-now-in-public-preview/",
+          "flags": ["preview-version"]
+        },
+        "eclipse": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-10-28-mcp-registry-and-allowlist-controls-for-copilot-in-jetbrains-eclipse-and-xcode-now-in-public-preview/",
+          "flags": ["preview-version"]
+        }
+      }
+    }
+  ]
+}

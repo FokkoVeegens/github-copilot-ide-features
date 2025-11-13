@@ -1,0 +1,53 @@
+{
+  "features": [
+    {
+      "id": "claude-haiku-4-5",
+      "name": "Claude Haiku 4.5",
+      "availability": {
+        "github-com": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/"
+        },
+        "cli": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/"
+        },
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/"
+        },
+        "visual-studio": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/"
+        },
+        "jetbrains": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/"
+        },
+        "xcode": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/"
+        },
+        "vim-neovim": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/"
+        },
+        "eclipse": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/"
+        }
+      }
+    },
+    {
+      "id": "raptor-mini",
+      "name": "Raptor mini",
+      "availability": {
+        "github-com": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-10-raptor-mini-is-rolling-out-in-public-preview-for-github-copilot/",
+          "flags": ["individual-only"]
+        }
+      }
+    }
+  ]
+}
