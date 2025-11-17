@@ -16,6 +16,37 @@
       }
     },
     {
+      "id": "gpt-5-1",
+      "name": "GPT-5.1",
+      "category": "models",
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/"
+        },
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/"
+        },
+        "xcode": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/"
+        },
+        "eclipse": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/"
+        },
+        "github-com": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/"
+        },
+        "cli": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/"
+        }
+      }
+    }
+    {
       "id": "claude-haiku-4-5",
       "name": "Claude Haiku 4.5",
       "category": "models",
