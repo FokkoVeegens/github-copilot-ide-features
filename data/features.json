@@ -1,8 +1,24 @@
 {
   "features": [
     {
+      "id": "auto-model-selection",
+      "name": "Auto model selection",
+      "category": "chat",
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-09-15-auto-model-selection-for-copilot-in-vs-code-in-public-preview"
+        },
+        "visual-studio": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-11-auto-model-selection-for-copilot-in-visual-studio-in-public-preview"
+        }
+      }
+    },
+    {
       "id": "claude-haiku-4-5",
       "name": "Claude Haiku 4.5",
+      "category": "models",
       "availability": {
         "github-com": {
           "stage": "GA",
@@ -41,11 +57,39 @@
     {
       "id": "raptor-mini",
       "name": "Raptor mini",
+      "category": "models",
       "availability": {
         "github-com": {
           "stage": "PUB",
           "url": "https://github.blog/changelog/2025-11-10-raptor-mini-is-rolling-out-in-public-preview-for-github-copilot/",
           "flags": ["individual-only"]
+        }
+      }
+    },
+    {
+      "id": "mcp-registry",
+      "name": "MCP Registry",
+      "category": "policies",
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-09-12-internal-mcp-registry-and-allowlist-controls-for-vs-code-insiders/",
+          "flags": ["preview-version"]
+        },
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-10-28-mcp-registry-and-allowlist-controls-for-copilot-in-jetbrains-eclipse-and-xcode-now-in-public-preview/",
+          "flags": ["preview-version"]
+        },
+        "xcode": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-10-28-mcp-registry-and-allowlist-controls-for-copilot-in-jetbrains-eclipse-and-xcode-now-in-public-preview/",
+          "flags": ["preview-version"]
+        },
+        "eclipse": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-10-28-mcp-registry-and-allowlist-controls-for-copilot-in-jetbrains-eclipse-and-xcode-now-in-public-preview/",
+          "flags": ["preview-version"]
         }
       }
     }
