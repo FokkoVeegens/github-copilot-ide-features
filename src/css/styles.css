@@ -266,6 +266,24 @@
             border-top: 1px solid #e5e7eb;
         }
 
+        footer .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #8b5cf6;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer .github-link:hover {
+            text-decoration: underline;
+        }
+
+        footer .github-icon {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
         footer .license {
             margin-left: 10px;
             padding-left: 10px;
