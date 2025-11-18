@@ -96,7 +96,7 @@
                             link.target = '_blank';
                             link.rel = 'noopener noreferrer';
                             
-                            let badgeContent = availability.stage;
+                            let badgeContent = '✅ ' + availability.stage;
                             
                             if (availability.flags && availability.flags.length > 0) {
                                 const flagIcons = availability.flags.map(flagId => {
