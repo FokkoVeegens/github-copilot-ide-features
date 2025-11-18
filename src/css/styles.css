@@ -35,6 +35,17 @@
             font-weight: 700;
         }
 
+        header .header-link {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        header .header-link:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
         header p {
             font-size: 1rem;
             opacity: 0.95;
@@ -255,6 +266,12 @@
             border-top: 1px solid #e5e7eb;
         }
 
+        footer .license {
+            margin-left: 10px;
+            padding-left: 10px;
+            border-left: 2px solid #d1d5db;
+        }
+
         footer a {
             color: #8b5cf6;
             text-decoration: none;
@@ -303,6 +320,14 @@
             .status-badge {
                 padding: 4px 8px;
                 font-size: 0.75rem;
+            }
+
+            footer .license {
+                display: block;
+                margin-left: 0;
+                padding-left: 0;
+                margin-top: 5px;
+                border-left: none;
             }
         }
 
