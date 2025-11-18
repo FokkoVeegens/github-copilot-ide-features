@@ -1,5 +1,5 @@
-        const FEATURES_URL = 'data/features.json';
-        const METADATA_URL = 'data/metadata.json';
+        const FEATURES_URL = '../data/features.json';
+        const METADATA_URL = '../data/metadata.json';
 
         let metadata = {};
         let features = [];
