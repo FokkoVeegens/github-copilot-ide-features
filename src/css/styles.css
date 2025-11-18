@@ -1,0 +1,327 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #24292e;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        .legend {
+            background: #f9fafb;
+            padding: 20px 30px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .legend h3 {
+            color: #8b5cf6;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .legend-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .legend-badge {
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .legend-badge.GA {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .legend-badge.PUB {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .legend-badge.PRV {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .legend-item span {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .category-section {
+            margin-bottom: 40px;
+        }
+
+        .category-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #8b5cf6;
+        }
+
+        .category-header h2 {
+            color: #8b5cf6;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+
+        .category-count {
+            margin-left: auto;
+            background: #f3e8ff;
+            color: #7c3aed;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        thead {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            color: white;
+        }
+
+        th {
+            padding: 15px 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        th:first-child {
+            border-top-left-radius: 8px;
+        }
+
+        th:last-child {
+            border-top-right-radius: 8px;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #f3f4f6;
+            transition: background-color 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #f9fafb;
+        }
+
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        td {
+            padding: 15px 12px;
+            font-size: 0.9rem;
+        }
+
+        td:first-child {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .availability-cell {
+            text-align: center;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .status-badge.GA {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .status-badge.PUB {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .status-badge.PRV {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .status-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .flag-icon {
+            font-size: 0.9rem;
+        }
+
+        .not-available {
+            color: #d1d5db;
+            font-weight: 500;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: #8b5cf6;
+            font-size: 1.2rem;
+        }
+
+        .error {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #991b1b;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #6b7280;
+            font-size: 0.9rem;
+            background: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        footer a {
+            color: #8b5cf6;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            .content {
+                padding: 20px 15px;
+            }
+
+            .category-header h2 {
+                font-size: 1.3rem;
+            }
+
+            th, td {
+                padding: 10px 8px;
+                font-size: 0.8rem;
+            }
+
+            .legend-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .table-wrapper {
+                font-size: 0.85rem;
+            }
+
+            .status-badge {
+                padding: 4px 8px;
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 20px 15px;
+            }
+
+            header h1 {
+                font-size: 1.3rem;
+            }
+
+            .category-count {
+                font-size: 0.8rem;
+                padding: 4px 10px;
+            }
+
+            th, td {
+                padding: 8px 6px;
+                font-size: 0.75rem;
+            }
+        }
