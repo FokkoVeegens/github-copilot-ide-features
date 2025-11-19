@@ -14,6 +14,21 @@
           "stage": "PUB",
           "url": "https://github.blog/changelog/2025-11-11-auto-model-selection-for-copilot-in-visual-studio-in-public-preview",
           "publishdate": "11-nov-2025"
+        },
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-18-auto-model-selection-for-copilot-in-jetbrains-ides-xcode-and-eclipse-in-public-preview/",
+          "publishdate": "18-nov-2025"
+        },
+        "xcode": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-18-auto-model-selection-for-copilot-in-jetbrains-ides-xcode-and-eclipse-in-public-preview/",
+          "publishdate": "18-nov-2025"
+        },
+        "eclipse": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-18-auto-model-selection-for-copilot-in-jetbrains-ides-xcode-and-eclipse-in-public-preview/",
+          "publishdate": "18-nov-2025"
         }
       }
     },
@@ -254,6 +269,60 @@
         "vs-code": {
           "stage": "PUB",
           "url": "https://github.blog/changelog/2025-11-18-internal-mcp-registry-and-allowlist-controls-for-vs-code-stable-in-public-preview/",
+          "publishdate": "18-nov-2025"
+        }
+      }
+    },
+    {
+      "id": "mcp-oauth-enhanced-support",
+      "name": "Enhanced MCP OAuth support",
+      "tags": ["compliancy", "mcp"],
+      "availability": {
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-18-enhanced-mcp-oauth-support-for-github-copilot-in-jetbrains-eclipse-and-xcode/",
+          "publishdate": "18-nov-2025"
+        },
+        "eclipse": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-18-enhanced-mcp-oauth-support-for-github-copilot-in-jetbrains-eclipse-and-xcode/",
+          "publishdate": "18-nov-2025"
+        },
+        "xcode": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-18-enhanced-mcp-oauth-support-for-github-copilot-in-jetbrains-eclipse-and-xcode/",
+          "publishdate": "18-nov-2025"
+        }
+      }
+    },
+    {
+      "id": "custom-agents",
+      "name": "Custom agents",
+      "tags": ["agentic", "chat"],
+      "availability": {
+        "github-com": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-10-28-custom-agents-for-github-copilot/",
+          "publishdate": "28-oct-2025"
+        },
+        "cli": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-10-28-github-copilot-cli-use-custom-agents-and-delegate-to-copilot-coding-agent/",
+          "publishdate": "28-oct-2025"
+        },
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-18-custom-agents-available-in-github-copilot-for-jetbrains-eclipse-and-xcode-now-in-public-preview/",
+          "publishdate": "18-nov-2025"
+        },
+        "eclipse": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-18-custom-agents-available-in-github-copilot-for-jetbrains-eclipse-and-xcode-now-in-public-preview/",
+          "publishdate": "18-nov-2025"
+        },
+        "xcode": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-18-custom-agents-available-in-github-copilot-for-jetbrains-eclipse-and-xcode-now-in-public-preview/",
           "publishdate": "18-nov-2025"
         }
       }

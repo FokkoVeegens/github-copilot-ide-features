@@ -8,7 +8,8 @@ If the article talks about an IDE called "stable", like "VS Code Stable", it mea
 
 When adding or updating features in `features.json`, please adhere to the following guidelines:
 
-- Each feature must have a unique `id`, human-readable `name`, and a `category`. Only use existing categories (e.g. `chat`, `models`, `policies`) unless we explicitly agree to add a new one.
+- Each feature must have a unique `id`, human-readable `name`. Never put the IDE name in the feature id or name. Examples of IDE names are "VS Code", "JetBrains", "Neovim", etc.
+- Each feature must have one or more `tags`. Only use existing tags (e.g. `chat`, `models`, `policies`) unless we explicitly agree to add a new one.
 - `availability` is a map of IDE identifiers (must match the IDE keys in metadata.json) to an object with at least:  
   - `stage`: one of the stage codes defined in metadata.json (e.g. `PRI`, `PUB`, `GA`).  
   - `url`: a GitHub Changelog URL pointing to the feature announcement.
