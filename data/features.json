@@ -189,6 +189,28 @@
       }
     },
     {
+      "id": "gemini-3-pro",
+      "name": "Gemini 3 Pro",
+      "tags": ["models"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot/",
+          "publishdate": "18-nov-2025"
+        },
+        "github-com": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot/",
+          "publishdate": "18-nov-2025"
+        },
+        "cli": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot/",
+          "publishdate": "18-nov-2025"
+        }
+      }
+    },
+    {
       "id": "mcp-registry-discovery",
       "name": "MCP registries (discovery)",
       "tags": ["compliancy", "mcp", "agentic"],
