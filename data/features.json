@@ -191,7 +191,7 @@
     {
       "id": "mcp-registry-discovery",
       "name": "MCP registries (discovery)",
-      "tags": ["chat"],
+      "tags": ["compliancy", "mcp", "agentic"],
       "availability": {
         "vs-code": {
           "stage": "PUB",
@@ -227,7 +227,7 @@
     {
       "id": "mcp-registry-enforcement",
       "name": "MCP registries (enforcement)",
-      "tags": ["chat"],
+      "tags": ["compliancy", "mcp", "agentic"],
       "availability": {
         "vs-code": {
           "stage": "PUB",
