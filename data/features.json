@@ -3,7 +3,7 @@
     {
       "id": "auto-model-selection",
       "name": "Auto model selection",
-      "category": "chat",
+      "tags": ["chat"],
       "availability": {
         "vs-code": {
           "stage": "PUB",
@@ -20,7 +20,7 @@
     {
       "id": "gpt-5-1",
       "name": "GPT-5.1",
-      "category": "models",
+      "tags": ["models"],
       "availability": {
         "vs-code": {
           "stage": "PUB",
@@ -57,7 +57,7 @@
     {
       "id": "gpt-5-1-codex",
       "name": "GPT-5.1-Codex",
-      "category": "models",
+      "tags": ["models"],
       "availability": {
         "vs-code": {
           "stage": "PUB",
@@ -94,7 +94,7 @@
     {
       "id": "gpt-5-1-codex-mini",
       "name": "GPT-5.1-Codex-Mini",
-      "category": "models",
+      "tags": ["models"],
       "availability": {
         "vs-code": {
           "stage": "PUB",
@@ -131,7 +131,7 @@
     {
       "id": "claude-haiku-4-5",
       "name": "Claude Haiku 4.5",
-      "category": "models",
+      "tags": ["models"],
       "availability": {
         "github-com": {
           "stage": "GA",
@@ -178,7 +178,7 @@
     {
       "id": "raptor-mini",
       "name": "Raptor mini",
-      "category": "models",
+      "tags": ["models"],
       "availability": {
         "github-com": {
           "stage": "PUB",
@@ -191,7 +191,7 @@
     {
       "id": "mcp-registry-discovery",
       "name": "MCP registries (discovery)",
-      "category": "chat",
+      "tags": ["chat"],
       "availability": {
         "vs-code": {
           "stage": "PUB",
@@ -227,7 +227,7 @@
     {
       "id": "mcp-registry-enforcement",
       "name": "MCP registries (enforcement)",
-      "category": "chat",
+      "tags": ["chat"],
       "availability": {
         "vs-code": {
           "stage": "PUB",
