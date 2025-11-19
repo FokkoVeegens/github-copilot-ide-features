@@ -1,26 +1,13 @@
 # GitHub Copilot features per IDE
 
-- GA = Generally available
-- PUB = Public Preview
-- PRV = Private Preview
-- 🧑‍💻 = Only available to individual subscriptions (Free, Pro, Pro+)
-- ⚠️ = Only available in preview/insiders version
+This repository provides a comprehensive overview of the features available in GitHub Copilot across different Integrated Development Environments (IDEs). It aims to help users understand the capabilities of GitHub Copilot in their preferred development environment.
 
-## Chat
+The site is available here: https://fokkoveegens.github.io/github-copilot-ide-features/
 
-|Feature|GitHub.com|GitHub Copilot CLI|VS Code|Visual Studio|JetBrains|Xcode|Vim/NeoVim|Eclipse|
-|-|-|-|-|-|-|-|-|-|
-|Auto model selection|❌|❌|[PUB](https://github.blog/changelog/2025-09-15-auto-model-selection-for-copilot-in-vs-code-in-public-preview)|[PUB](https://github.blog/changelog/2025-11-11-auto-model-selection-for-copilot-in-visual-studio-in-public-preview)|❌|❌|❌|❌|
+## Technology
 
-## Organization/enterprise policies
+The project contains a static website published to GitHub Pages. It is built using plain HTML, CSS, and JavaScript, ensuring compatibility across all modern web browsers without the need for additional frameworks or libraries. The data is stored in JSON format, making it easy to update and maintain.
 
-|Feature|GitHub.com|Coding Agent|GitHub Copilot CLI|VS Code|Visual Studio|JetBrains|Xcode|Vim/NeoVim|Eclipse|
-|-|-|-|-|-|-|-|-|-|-|
-|MCP Registry|❌|❌|❌|[PUB](https://github.blog/changelog/2025-09-12-internal-mcp-registry-and-allowlist-controls-for-vs-code-insiders/)⚠️|❌|[PUB](https://github.blog/changelog/2025-10-28-mcp-registry-and-allowlist-controls-for-copilot-in-jetbrains-eclipse-and-xcode-now-in-public-preview/)⚠️|[PUB](https://github.blog/changelog/2025-10-28-mcp-registry-and-allowlist-controls-for-copilot-in-jetbrains-eclipse-and-xcode-now-in-public-preview/)⚠️|❌|[PUB](https://github.blog/changelog/2025-10-28-mcp-registry-and-allowlist-controls-for-copilot-in-jetbrains-eclipse-and-xcode-now-in-public-preview/)⚠️|
+## Contributing
 
-## Models
-
-|Model name|GitHub.com|GitHub Copilot CLI|VS Code|Visual Studio|JetBrains|Xcode|Vim/NeoVim|Eclipse|
-|-|-|-|-|-|-|-|-|-|
-|Claude Haiku 4.5|[GA](https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/)|[GA](https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/)|[GA](https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/)|[GA](https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/)|[GA](https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/)|[GA](https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/)|[GA](https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/)|[GA](https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/)|
-|Raptor mini|[PUB](https://github.blog/changelog/2025-11-10-raptor-mini-is-rolling-out-in-public-preview-for-github-copilot/) 🧑‍💻|❌|❌|❌|❌|❌|
+Contributions are welcome! If you have information about GitHub Copilot features in different IDEs or improvements to the existing data, please feel free to submit a pull request. Make sure to follow the existing JSON structure for consistency.
