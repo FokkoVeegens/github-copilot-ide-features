@@ -189,14 +189,19 @@
       }
     },
     {
-      "id": "mcp-registry",
-      "name": "MCP Registry",
-      "category": "policies",
+      "id": "mcp-registry-discovery",
+      "name": "MCP registries (discovery)",
+      "category": "chat",
       "availability": {
         "vs-code": {
           "stage": "PUB",
-          "url": "https://github.blog/changelog/2025-09-12-internal-mcp-registry-and-allowlist-controls-for-vs-code-insiders/",
-          "publishdate": "12-sep-2025",
+          "url": "https://github.blog/changelog/2025-11-18-internal-mcp-registry-and-allowlist-controls-for-vs-code-stable-in-public-preview/",
+          "publishdate": "18-nov-2025"
+        },
+        "visual-studio": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-18-internal-mcp-registry-and-allowlist-controls-for-vs-code-stable-in-public-preview/",
+          "publishdate": "18-nov-2025",
           "flags": ["preview-version"]
         },
         "jetbrains": {
@@ -216,6 +221,18 @@
           "url": "https://github.blog/changelog/2025-10-28-mcp-registry-and-allowlist-controls-for-copilot-in-jetbrains-eclipse-and-xcode-now-in-public-preview/",
           "publishdate": "28-oct-2025",
           "flags": ["preview-version"]
+        }
+      }
+    },
+    {
+      "id": "mcp-registry-enforcement",
+      "name": "MCP registries (enforcement)",
+      "category": "chat",
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-18-internal-mcp-registry-and-allowlist-controls-for-vs-code-stable-in-public-preview/",
+          "publishdate": "18-nov-2025"
         }
       }
     }

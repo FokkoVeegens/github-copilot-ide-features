@@ -1,6 +1,13 @@
 ---
 applyTo: '**/features.json'
 ---
+
+If you're asked to add a new feature, first verify if it already exists. If it exists, you'll need to update the table data instead of adding a new feature entry. You are allowed to retrieve the URL of an existing feature to have more context to compare with.
+
+If the article talks about an IDE called "stable", like "VS Code Stable", it means it's the opposite of the `preview-version` flag. So if a feature is flagged `preview-version` and then an article describes the same feature as available for the "stable" version, then you should remove the `preview-version` flag and not change anything else for that feature.
+
+When adding or updating features in `features.json`, please adhere to the following guidelines:
+
 - Each feature must have a unique `id`, human-readable `name`, and a `category`. Only use existing categories (e.g. `chat`, `models`, `policies`) unless we explicitly agree to add a new one.
 - `availability` is a map of IDE identifiers (must match the IDE keys in metadata.json) to an object with at least:  
   - `stage`: one of the stage codes defined in metadata.json (e.g. `PRI`, `PUB`, `GA`).  
