@@ -90,13 +90,17 @@
                         const availability = feature.availability[ide.id];
                         
                         if (availability) {
+                            const checkmark = document.createElement('span');
+                            checkmark.className = 'checkmark';
+                            checkmark.textContent = '✅';
+                            
                             const link = document.createElement('a');
                             link.href = availability.url || '#';
                             link.className = `status-badge ${availability.stage}`;
                             link.target = '_blank';
                             link.rel = 'noopener noreferrer';
                             
-                            let badgeContent = '✅ ' + availability.stage;
+                            let badgeContent = availability.stage;
                             
                             if (availability.flags && availability.flags.length > 0) {
                                 const flagIcons = availability.flags.map(flagId => {
@@ -110,6 +114,7 @@
                             }
                             
                             link.innerHTML = badgeContent;
+                            cell.appendChild(checkmark);
                             cell.appendChild(link);
                         } else {
                             cell.innerHTML = '<span class="not-available">❌</span>';

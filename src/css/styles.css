@@ -200,6 +200,11 @@
             text-align: center;
         }
 
+        .checkmark {
+            margin-right: 5px;
+            font-size: 0.9rem;
+        }
+
         .status-badge {
             display: inline-flex;
             align-items: center;
