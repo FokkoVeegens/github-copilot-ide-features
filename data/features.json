@@ -300,6 +300,11 @@
       "name": "Custom agents",
       "tags": ["agentic", "chat"],
       "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://code.visualstudio.com/updates/v1_106",
+          "publishdate": "12-nov-2025"
+        },
         "github-com": {
           "stage": "PUB",
           "url": "https://github.blog/changelog/2025-10-28-custom-agents-for-github-copilot/",
