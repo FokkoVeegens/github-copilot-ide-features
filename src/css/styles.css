@@ -153,6 +153,11 @@
             color: #92400e;
         }
 
+        .legend-badge.DEP {
+            background: #fee2e2;
+            color: #ef4444;
+        }
+
         .legend-item span {
             font-size: 0.9rem;
             color: #6b7280;
@@ -285,6 +290,11 @@
         .status-badge.PRV {
             background: #fef3c7;
             color: #92400e;
+        }
+
+        .status-badge.DEP {
+            background: #fee2e2;
+            color: #ef4444;
         }
 
         .status-badge:hover {

@@ -191,6 +191,53 @@
       }
     },
     {
+      "id": "claude-sonnet-3-5",
+      "name": "Claude Sonnet 3.5",
+      "tags": ["models"],
+      "availability": {
+        "github-com": {
+          "stage": "DEP",
+          "url": "https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free/",
+          "publishdate": "10-nov-2025"
+        },
+        "cli": {
+          "stage": "DEP",
+          "url": "https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free/",
+          "publishdate": "10-nov-2025"
+        },
+        "vs-code": {
+          "stage": "DEP",
+          "url": "https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free/",
+          "publishdate": "10-nov-2025"
+        },
+        "visual-studio": {
+          "stage": "DEP",
+          "url": "https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free/",
+          "publishdate": "10-nov-2025"
+        },
+        "jetbrains": {
+          "stage": "DEP",
+          "url": "https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free/",
+          "publishdate": "10-nov-2025"
+        },
+        "xcode": {
+          "stage": "DEP",
+          "url": "https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free/",
+          "publishdate": "10-nov-2025"
+        },
+        "vim-neovim": {
+          "stage": "DEP",
+          "url": "https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free/",
+          "publishdate": "10-nov-2025"
+        },
+        "eclipse": {
+          "stage": "DEP",
+          "url": "https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free/",
+          "publishdate": "10-nov-2025"
+        }
+      }
+    },
+    {
       "id": "raptor-mini",
       "name": "Raptor mini",
       "tags": ["models"],

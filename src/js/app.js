@@ -117,9 +117,6 @@
                         cell.className = 'availability-cell';
                         const availability = feature.availability[ide.id];
                         if (availability) {
-                            const checkmark = document.createElement('span');
-                            checkmark.className = 'checkmark';
-                            checkmark.textContent = '✅';
                             const link = document.createElement('a');
                             link.href = availability.url || '#';
                             link.className = `status-badge ${availability.stage}`;
@@ -136,7 +133,12 @@
                                 }
                             }
                             link.innerHTML = badgeContent;
-                            cell.appendChild(checkmark);
+                            if (availability.stage !== 'DEP') {
+                                const checkmark = document.createElement('span');
+                                checkmark.className = 'checkmark';
+                                checkmark.textContent = '✅';
+                                cell.appendChild(checkmark);
+                            }
                             cell.appendChild(link);
                         } else {
                             cell.innerHTML = '<span class="not-available">❌</span>';
