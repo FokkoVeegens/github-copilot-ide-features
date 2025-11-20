@@ -3,6 +3,7 @@
 
         let metadata = {};
         let features = [];
+        let tooltipEl = null;
 
         async function loadData() {
             try {
@@ -18,6 +19,8 @@
                 const featuresData = await featuresResponse.json();
                 metadata = await metadataResponse.json();
                 features = featuresData.features;
+
+                tooltipEl = document.getElementById('feature-tooltip');
 
                 renderFeatureTable();
             } catch (error) {
@@ -98,6 +101,25 @@
                     // Feature name
                     const nameText = document.createElement('div');
                     nameText.textContent = feature.name;
+                    nameText.className = 'feature-name';
+
+                    if (feature.description && tooltipEl) {
+                        nameText.addEventListener('mouseenter', (event) => {
+                            tooltipEl.textContent = feature.description;
+                            tooltipEl.classList.add('visible');
+                            tooltipEl.setAttribute('aria-hidden', 'false');
+                            positionTooltip(event);
+                        });
+
+                        nameText.addEventListener('mousemove', (event) => {
+                            positionTooltip(event);
+                        });
+
+                        nameText.addEventListener('mouseleave', () => {
+                            tooltipEl.classList.remove('visible');
+                            tooltipEl.setAttribute('aria-hidden', 'true');
+                        });
+                    }
                     nameCell.appendChild(nameText);
                     // Feature tags as mini badges
                     if (Array.isArray(feature.tags) && feature.tags.length > 0) {
@@ -160,6 +182,28 @@
             }
 
             updateTable();
+        }
+
+        function positionTooltip(event) {
+            if (!tooltipEl) return;
+
+            const offset = 16;
+            let x = event.clientX + offset;
+            let y = event.clientY + offset;
+
+            const tooltipRect = tooltipEl.getBoundingClientRect();
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+
+            if (x + tooltipRect.width > viewportWidth - 8) {
+                x = event.clientX - offset;
+            }
+            if (y + tooltipRect.height > viewportHeight - 8) {
+                y = event.clientY - offset;
+            }
+
+            tooltipEl.style.left = x + 'px';
+            tooltipEl.style.top = y + 'px';
         }
 
         loadData();

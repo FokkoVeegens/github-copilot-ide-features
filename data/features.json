@@ -3,6 +3,7 @@
     {
       "id": "auto-model-selection",
       "name": "Auto model selection",
+      "description": "Adds an Auto option in Copilot Chat that automatically routes requests to an appropriate model based on availability while honoring your model settings and policies.",
       "tags": ["chat"],
       "availability": {
         "vs-code": {
@@ -35,6 +36,7 @@
     {
       "id": "gpt-5-1",
       "name": "GPT-5.1",
+      "description": "Advanced reasoning model for complex tasks with long-context understanding and fast generation.",
       "tags": ["models"],
       "availability": {
         "vs-code": {
@@ -72,6 +74,7 @@
     {
       "id": "gpt-5-1-codex",
       "name": "GPT-5.1-Codex",
+      "description": "Reasoning model optimized for high-quality code generation and editing.",
       "tags": ["models"],
       "availability": {
         "vs-code": {
@@ -109,6 +112,7 @@
     {
       "id": "gpt-5-1-codex-mini",
       "name": "GPT-5.1-Codex-Mini",
+      "description": "Smaller, faster reasoning model tuned for efficient coding tasks.",
       "tags": ["models"],
       "availability": {
         "vs-code": {
@@ -146,6 +150,7 @@
     {
       "id": "claude-haiku-4-5",
       "name": "Claude Haiku 4.5",
+      "description": "Fast, cost-efficient model offering strong general intelligence and long-context support.",
       "tags": ["models"],
       "availability": {
         "github-com": {
@@ -193,6 +198,7 @@
     {
       "id": "claude-sonnet-3-5",
       "name": "Claude Sonnet 3.5",
+      "description": "Versatile high-intelligence model for reasoning, coding, and multilingual tasks.",
       "tags": ["models"],
       "availability": {
         "github-com": {
@@ -240,6 +246,7 @@
     {
       "id": "raptor-mini",
       "name": "Raptor mini",
+      "description": "Specialized model for fast, accurate code suggestions and explanations in everyday development tasks.",
       "tags": ["models"],
       "availability": {
         "github-com": {
@@ -253,6 +260,7 @@
     {
       "id": "gemini-3-pro",
       "name": "Gemini 3 Pro",
+      "description": "Frontier multimodal model for rich visual understanding and interactive reasoning.",
       "tags": ["models"],
       "availability": {
         "vs-code": {
@@ -275,6 +283,7 @@
     {
       "id": "mcp-registry-discovery",
       "name": "MCP registries (discovery)",
+      "description": "Enables discovery of approved MCP servers via internal registries and allowlist controls across supported Copilot IDEs.",
       "tags": ["compliancy", "mcp", "agentic"],
       "availability": {
         "vs-code": {
@@ -311,6 +320,7 @@
     {
       "id": "mcp-registry-enforcement",
       "name": "MCP registries (enforcement)",
+      "description": "Lets administrators enforce registry-only MCP server usage in VS Code Stable using allowlist governance policies.",
       "tags": ["compliancy", "mcp", "agentic"],
       "availability": {
         "vs-code": {
@@ -323,6 +333,7 @@
     {
       "id": "mcp-oauth-enhanced-support",
       "name": "Enhanced MCP OAuth support",
+      "description": "Expands MCP OAuth authentication in JetBrains, Eclipse, and Xcode to support more identity providers with DCR and client-credentials flows.",
       "tags": ["compliancy", "mcp"],
       "availability": {
         "jetbrains": {
@@ -345,6 +356,7 @@
     {
       "id": "custom-agents",
       "name": "Custom agents",
+      "description": "Allows users and organizations to define reusable custom Copilot agents with tailored prompts, tools, and MCP servers across supported surfaces.",
       "tags": ["agentic", "chat"],
       "availability": {
         "vs-code": {
@@ -382,6 +394,7 @@
     {
       "id": "openai-codex-vs-code",
       "name": "OpenAI Codex integration",
+      "description": "Integrates OpenAI Codex into VS Code Insiders for Copilot Pro+ users via the VS Code Copilot extension.",
       "tags": ["extensibility", "agentic", "integration"],
       "availability": {
         "vs-code": {
@@ -395,6 +408,7 @@
     {
       "id": "agent-sessions-view",
       "name": "Agent Sessions view",
+      "description": "Adds an Agent Sessions view in VS Code to manage local and cloud Copilot agent sessions from one interface.",
       "tags": ["agentic"],
       "availability": {
         "vs-code": {
@@ -408,6 +422,7 @@
     {
       "id": "context-isolated-sub-agents",
       "name": "Context-isolated sub-agents",
+      "description": "Introduces context-isolated subagents in VS Code so Copilot can run focused tasks in separate, optimized contexts.",
       "tags": ["agentic", "multi-agent", "chat"],
       "availability": {
         "vs-code": {
@@ -421,6 +436,7 @@
     {
       "id": "plan-mode",
       "name": "Plan Mode",
+      "description": "Adds Plan Mode in VS Code, where Copilot creates and validates step-by-step implementation plans before writing code.",
       "tags": ["agentic", "chat"],
       "availability": {
         "vs-code": {

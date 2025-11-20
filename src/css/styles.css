@@ -311,6 +311,33 @@
             font-weight: 500;
         }
 
+        .feature-name {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+        }
+
+        .feature-tooltip {
+            position: fixed;
+            max-width: 320px;
+            background: #111827;
+            color: #f9fafb;
+            padding: 8px 10px;
+            border-radius: 6px;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.4);
+            font-size: 0.8rem;
+            line-height: 1.4;
+            z-index: 1000;
+            pointer-events: none;
+            opacity: 0;
+            transform: translate(-50%, -12px);
+            transition: opacity 0.12s ease-out;
+        }
+
+        .feature-tooltip.visible {
+            opacity: 1;
+        }
+
         .loading {
             text-align: center;
             padding: 60px 20px;
