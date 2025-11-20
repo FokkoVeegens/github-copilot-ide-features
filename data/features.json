@@ -44,6 +44,11 @@
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
           "publishdate": "13-nov-2025"
         },
+        "visual-studio": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
+          "publishdate": "13-nov-2025"
+        },
         "jetbrains": {
           "stage": "PUB",
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
@@ -55,6 +60,11 @@
           "publishdate": "13-nov-2025"
         },
         "eclipse": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
+          "publishdate": "13-nov-2025"
+        },
+        "vim-neovim": {
           "stage": "PUB",
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
           "publishdate": "13-nov-2025"
