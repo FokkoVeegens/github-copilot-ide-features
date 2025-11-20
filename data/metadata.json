@@ -13,7 +13,8 @@
   "stages": {
     "GA": { "name": "Generally available" },
     "PUB": { "name": "Public Preview" },
-    "PRV": { "name": "Private Preview" }
+    "PRV": { "name": "Private Preview" },
+    "DEP": { "name": "Deprecated" }
   },
   "flags": {
     "individual-only": { "description": "Only available to individual subscriptions (Free, Pro, Pro+)", "icon": "🧑‍💻" },

@@ -112,6 +112,32 @@
             border-bottom: 1px solid #e5e7eb;
         }
 
+        /* Wrapper for multiple legend sections so they can sit side-by-side */
+        .legend-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .legend-group .legend {
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        @media (min-width: 768px) {
+            .legend-group {
+                flex-direction: row;
+                gap: 1px; /* visually separate cards while keeping border continuity */
+            }
+
+            .legend-group .legend {
+                flex: 1;
+                border-right: 1px solid #e5e7eb;
+            }
+
+            .legend-group .legend:last-child {
+                border-right: none;
+            }
+        }
+
         .legend h3 {
             color: #8b5cf6;
             margin-bottom: 12px;
