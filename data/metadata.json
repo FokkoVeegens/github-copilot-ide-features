@@ -1,7 +1,6 @@
 {
   "ides": [
     { "id": "github-com", "name": "GitHub.com" },
-    { "id": "coding-agent", "name": "Coding Agent" },
     { "id": "cli", "name": "GitHub Copilot CLI" },
     { "id": "vs-code", "name": "VS Code" },
     { "id": "visual-studio", "name": "Visual Studio" },

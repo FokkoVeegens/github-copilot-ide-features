@@ -456,6 +456,29 @@
           "flags": ["preview-version"]
         }
       }
+    },
+    {
+      "id": "delegate-to-coding-agent",
+      "name": "Delegate to Coding Agent",
+      "description": "Lets you delegate coding tasks from Copilot Chat to Copilot coding agent, track progress while it runs in the background, and stay focused on other work while changes are made in the cloud.",
+      "tags": ["agentic"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://code.visualstudio.com/updates/v1_105",
+          "publishdate": "09-oct-2025"
+        },
+        "cli": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-10-28-github-copilot-cli-use-custom-agents-and-delegate-to-copilot-coding-agent/",
+          "publishdate": "28-oct-2025"
+        },
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-10-28-delegate-tasks-to-copilot-coding-agent-from-jetbrains-ides/",
+          "publishdate": "28-oct-2025"
+        }
+      }
     }
   ]
 }
