@@ -479,6 +479,24 @@
           "publishdate": "28-oct-2025"
         }
       }
+    },
+    {
+      "id": "copilot-app-modernization",
+      "name": "Copilot app modernization",
+      "description": "Brings GitHub Copilot app modernization workflows for Java and .NET into the IDE, enabling developers to assess applications, apply automated code transformations, remediate build and security issues, and containerize services without leaving their development environment.",
+      "tags": ["agentic", "integration"],
+      "availability": {
+        "visual-studio": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-09-22-github-copilot-app-modernization-is-now-generally-available-for-java-and-net/",
+          "publishdate": "22-sep-2025"
+        },
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-10-28-github-copilot-app-modernization-now-available-in-intellij-idea/",
+          "publishdate": "28-oct-2025"
+        }
+      }
     }
   ]
 }
