@@ -378,6 +378,58 @@
           "publishdate": "18-nov-2025"
         }
       }
+    },
+    {
+      "id": "openai-codex-vs-code",
+      "name": "OpenAI Codex integration",
+      "tags": ["extensibility", "agentic", "integration"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded/",
+          "publishdate": "28-oct-2025",
+          "flags": ["preview-version"]
+        }
+      }
+    },
+    {
+      "id": "agent-sessions-view",
+      "name": "Agent Sessions view",
+      "tags": ["agentic"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded/",
+          "publishdate": "28-oct-2025",
+          "flags": ["preview-version"]
+        }
+      }
+    },
+    {
+      "id": "context-isolated-sub-agents",
+      "name": "Context-isolated sub-agents",
+      "tags": ["agentic", "multi-agent", "chat"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded/",
+          "publishdate": "28-oct-2025",
+          "flags": ["preview-version"]
+        }
+      }
+    },
+    {
+      "id": "plan-mode",
+      "name": "Plan Mode",
+      "tags": ["agentic", "chat"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded/",
+          "publishdate": "28-oct-2025",
+          "flags": ["preview-version"]
+        }
+      }
     }
   ]
 }
