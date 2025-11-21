@@ -206,6 +206,54 @@
       }
     },
     {
+      "id": "claude-sonnet-4-5",
+      "name": "Claude Sonnet 4.5",
+      "description": "Next-generation Claude Sonnet model offering stronger reasoning, coding, and multilingual capabilities across supported IDEs.",
+      "tags": ["models"],
+      "availability": {
+        "github-com": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-13-anthropics-claude-sonnet-4-5-is-now-generally-available-in-github-copilot/",
+          "publishdate": "13-oct-2025"
+        },
+        "cli": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-13-anthropics-claude-sonnet-4-5-is-now-generally-available-in-github-copilot/",
+          "publishdate": "13-oct-2025"
+        },
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-13-anthropics-claude-sonnet-4-5-is-now-generally-available-in-github-copilot/",
+          "publishdate": "13-oct-2025"
+        },
+        "visual-studio": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-13-anthropics-claude-sonnet-4-5-is-now-generally-available-in-github-copilot/",
+          "publishdate": "13-oct-2025"
+        },
+        "jetbrains": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-13-anthropics-claude-sonnet-4-5-is-now-generally-available-in-github-copilot/",
+          "publishdate": "13-oct-2025"
+        },
+        "xcode": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-13-anthropics-claude-sonnet-4-5-is-now-generally-available-in-github-copilot/",
+          "publishdate": "13-oct-2025"
+        },
+        "vim-neovim": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-13-anthropics-claude-sonnet-4-5-is-now-generally-available-in-github-copilot/",
+          "publishdate": "13-oct-2025"
+        },
+        "eclipse": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-13-anthropics-claude-sonnet-4-5-is-now-generally-available-in-github-copilot/",
+          "publishdate": "13-oct-2025"
+        }
+      }
+    },
+    {
       "id": "claude-sonnet-3-5",
       "name": "Claude Sonnet 3.5",
       "description": "Versatile high-intelligence model for reasoning, coding, and multilingual tasks.",
@@ -495,6 +543,32 @@
           "stage": "PUB",
           "url": "https://github.blog/changelog/2025-10-28-github-copilot-app-modernization-now-available-in-intellij-idea/",
           "publishdate": "28-oct-2025"
+        }
+      }
+    },
+    {
+      "id": "instruction-files",
+      "name": "Instruction files",
+      "description": "Lets developers configure .instruction.md files for Copilot so it can follow specific guidelines and patterns when generating code.",
+      "tags": ["policies"],
+      "availability": {
+        "visual-studio": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-27-github-copilot-in-visual-studio-october-update/",
+          "publishdate": "27-oct-2025"
+        }
+      }
+    },
+    {
+      "id": "inline-chat",
+      "name": "Inline Chat",
+      "description": "Brings Copilot inline chat interactions directly into the editor to chat about and modify code in place.",
+      "tags": ["chat"],
+      "availability": {
+        "visual-studio": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-10-27-github-copilot-in-visual-studio-october-update/",
+          "publishdate": "27-oct-2025"
         }
       }
     }
