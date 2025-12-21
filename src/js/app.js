@@ -239,8 +239,14 @@
         }
 
         // Set legend height as CSS variable for sticky positioning
+        let legendGroup = null;
+        
         function setLegendHeight() {
-            const legendGroup = document.querySelector('.legend-group');
+            // Cache the element reference on first call
+            if (!legendGroup) {
+                legendGroup = document.querySelector('.legend-group');
+            }
+            
             if (legendGroup) {
                 const height = legendGroup.offsetHeight;
                 document.documentElement.style.setProperty('--legend-height', `${height}px`);
@@ -267,11 +273,8 @@
         window.addEventListener('resize', debounce(setLegendHeight, RESIZE_DEBOUNCE_DELAY));
         // Set initial legend height after layout is complete
         window.addEventListener('load', () => {
-            setLegendHeight();
             // Use requestAnimationFrame to ensure calculation happens after rendering
-            requestAnimationFrame(() => {
-                requestAnimationFrame(setLegendHeight);
-            });
+            requestAnimationFrame(setLegendHeight);
         });
 
         loadData();
