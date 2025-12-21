@@ -116,6 +116,10 @@
         .legend-group {
             display: flex;
             flex-direction: column;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #f9fafb;
         }
 
         .legend-group .legend {
@@ -241,6 +245,9 @@
         thead {
             background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
             color: white;
+            position: sticky;
+            top: 158px;
+            z-index: 10;
         }
 
         th {
