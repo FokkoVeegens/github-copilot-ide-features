@@ -74,7 +74,6 @@
             background: white;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
         }
 
         header {
@@ -116,6 +115,10 @@
         .legend-group {
             display: flex;
             flex-direction: column;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: white;
         }
 
         .legend-group .legend {
@@ -249,6 +252,10 @@
             font-weight: 600;
             font-size: 0.9rem;
             white-space: nowrap;
+            position: sticky;
+            top: 158px;
+            z-index: 10;
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
         }
 
         th:first-child {
