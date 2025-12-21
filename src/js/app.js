@@ -144,17 +144,49 @@
                             link.className = `status-badge ${availability.stage}`;
                             link.target = '_blank';
                             link.rel = 'noopener noreferrer';
-                            let badgeContent = availability.stage;
+                            
+                            // Add stage text
+                            const stageText = document.createTextNode(availability.stage);
+                            link.appendChild(stageText);
+                            
+                            // Add flag icons with tooltips
                             if (availability.flags && availability.flags.length > 0) {
-                                const flagIcons = availability.flags.map(flagId => {
+                                availability.flags.forEach(flagId => {
                                     const flag = metadata.flags[flagId];
-                                    return flag ? flag.icon : '';
-                                }).filter(icon => icon).join(' ');
-                                if (flagIcons) {
-                                    badgeContent += ` <span class="flag-icon">${flagIcons}</span>`;
-                                }
+                                    if (flag && flag.icon) {
+                                        const flagSpan = document.createElement('span');
+                                        flagSpan.className = 'flag-icon';
+                                        flagSpan.textContent = flag.icon;
+                                        flagSpan.style.cursor = 'help';
+                                        
+                                        // Add tooltip event handlers
+                                        flagSpan.addEventListener('mouseenter', (event) => {
+                                            event.stopPropagation();
+                                            if (tooltipEl) {
+                                                tooltipEl.textContent = flag.description;
+                                                tooltipEl.classList.add('visible');
+                                                tooltipEl.setAttribute('aria-hidden', 'false');
+                                                positionTooltip(event);
+                                            }
+                                        });
+                                        
+                                        flagSpan.addEventListener('mousemove', (event) => {
+                                            event.stopPropagation();
+                                            positionTooltip(event);
+                                        });
+                                        
+                                        flagSpan.addEventListener('mouseleave', () => {
+                                            if (tooltipEl) {
+                                                tooltipEl.classList.remove('visible');
+                                                tooltipEl.setAttribute('aria-hidden', 'true');
+                                            }
+                                        });
+                                        
+                                        link.appendChild(flagSpan);
+                                    }
+                                });
                             }
-                            link.innerHTML = badgeContent;
+                            
                             if (availability.stage !== 'DEP') {
                                 const checkmark = document.createElement('span');
                                 checkmark.className = 'checkmark';
