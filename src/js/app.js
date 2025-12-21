@@ -156,7 +156,7 @@
                                     if (flag && flag.icon) {
                                         const flagSpan = document.createElement('span');
                                         flagSpan.className = 'flag-icon';
-                                        flagSpan.textContent = ' ' + flag.icon;
+                                        flagSpan.textContent = flag.icon;
                                         flagSpan.style.cursor = 'help';
                                         
                                         // Add tooltip event handlers
@@ -175,8 +175,7 @@
                                             positionTooltip(event);
                                         });
                                         
-                                        flagSpan.addEventListener('mouseleave', (event) => {
-                                            event.stopPropagation();
+                                        flagSpan.addEventListener('mouseleave', () => {
                                             if (tooltipEl) {
                                                 tooltipEl.classList.remove('visible');
                                                 tooltipEl.setAttribute('aria-hidden', 'true');
