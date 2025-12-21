@@ -238,4 +238,22 @@
             tooltipEl.style.top = y + 'px';
         }
 
+        // Set legend height as CSS variable for sticky positioning
+        function setLegendHeight() {
+            const legendGroup = document.querySelector('.legend-group');
+            if (legendGroup) {
+                const height = legendGroup.offsetHeight;
+                document.documentElement.style.setProperty('--legend-height', `${height}px`);
+            }
+        }
+
+        // Update legend height on window resize
+        window.addEventListener('resize', setLegendHeight);
+        // Set initial legend height after a short delay to ensure layout is complete
+        window.addEventListener('load', () => {
+            setLegendHeight();
+            // Also set after a small delay to catch any layout shifts
+            setTimeout(setLegendHeight, 100);
+        });
+
         loadData();
