@@ -261,16 +261,17 @@
         }
 
         // Constants for timing
-        const LAYOUT_STABILIZATION_DELAY = 100; // ms to wait for layout shifts
         const RESIZE_DEBOUNCE_DELAY = 150; // ms to debounce resize events
 
         // Update legend height on window resize with debouncing
         window.addEventListener('resize', debounce(setLegendHeight, RESIZE_DEBOUNCE_DELAY));
-        // Set initial legend height after a short delay to ensure layout is complete
+        // Set initial legend height after layout is complete
         window.addEventListener('load', () => {
             setLegendHeight();
-            // Also set after a small delay to catch any layout shifts
-            setTimeout(setLegendHeight, LAYOUT_STABILIZATION_DELAY);
+            // Use requestAnimationFrame to ensure calculation happens after rendering
+            requestAnimationFrame(() => {
+                requestAnimationFrame(setLegendHeight);
+            });
         });
 
         loadData();
