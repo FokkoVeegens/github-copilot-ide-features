@@ -234,6 +234,8 @@
             overflow-x: auto;
             border-radius: 8px;
             border: 1px solid #e5e7eb;
+            /* Ensure sticky works - don't set overflow on container that has sticky children */
+            position: relative;
         }
 
         table {
