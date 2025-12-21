@@ -234,7 +234,6 @@
             overflow-x: auto;
             border-radius: 8px;
             border: 1px solid #e5e7eb;
-            /* Ensure sticky works - don't set overflow on container that has sticky children */
             position: relative;
         }
 
@@ -247,9 +246,6 @@
         thead {
             background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
             color: white;
-            position: sticky;
-            top: var(--legend-height, 0px);
-            z-index: 10;
         }
 
         th {
@@ -258,6 +254,10 @@
             font-weight: 600;
             font-size: 0.9rem;
             white-space: nowrap;
+            position: sticky;
+            top: var(--legend-height, 0px);
+            z-index: 10;
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
         }
 
         th:first-child {
