@@ -7,9 +7,9 @@
       "tags": ["chat"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
-          "url": "https://github.blog/changelog/2025-09-15-auto-model-selection-for-copilot-in-vs-code-in-public-preview",
-          "publishdate": "15-sep-2025"
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-10-auto-model-selection-is-generally-available-in-github-copilot-in-visual-studio-code/",
+          "publishdate": "10-dec-2025"
         },
         "visual-studio": {
           "stage": "PUB",
