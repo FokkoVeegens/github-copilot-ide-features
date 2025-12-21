@@ -843,6 +843,20 @@
           "publishdate": "20-oct-2025"
         }
       }
+    },
+    {
+      "id": "cpp-code-editing-tools",
+      "name": "C++ code editing tools",
+      "description": "Provides deep symbol awareness for C++ code editing with tools for viewing references across the codebase, understanding symbol metadata, visualizing class inheritance hierarchies, and tracing function call chains in agent mode.",
+      "tags": ["agentic", "chat"],
+      "availability": {
+        "visual-studio": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-12-16-c-code-editing-tools-for-github-copilot-in-public-preview/",
+          "publishdate": "16-dec-2025",
+          "flags": ["preview-version"]
+        }
+      }
     }
   ]
 }
