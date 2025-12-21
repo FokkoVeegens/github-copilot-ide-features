@@ -34,35 +34,48 @@
       }
     },
     {
+      "id": "global-instruction-files",
+      "name": "Global instruction and prompt files",
+      "description": "Adds support for global instruction and prompt files so Copilot can follow shared guidance across workspaces.",
+      "tags": ["policies"],
+      "availability": {
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/892199",
+          "publishdate": "12-nov-2025"
+        }
+      }
+    },
+    {
       "id": "gpt-5-1",
       "name": "GPT-5.1",
       "description": "Advanced reasoning model for complex tasks with long-context understanding and fast generation.",
       "tags": ["models"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
-          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
-          "publishdate": "13-nov-2025"
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
         },
         "visual-studio": {
-          "stage": "PUB",
-          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
-          "publishdate": "13-nov-2025"
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
         },
         "jetbrains": {
-          "stage": "PUB",
-          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
-          "publishdate": "13-nov-2025"
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
         },
         "xcode": {
-          "stage": "PUB",
-          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
-          "publishdate": "13-nov-2025"
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
         },
         "eclipse": {
-          "stage": "PUB",
-          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
-          "publishdate": "13-nov-2025"
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
         },
         "vim-neovim": {
           "stage": "PUB",
@@ -70,9 +83,9 @@
           "publishdate": "13-nov-2025"
         },
         "github-com": {
-          "stage": "PUB",
-          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
-          "publishdate": "13-nov-2025"
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
         },
         "cli": {
           "stage": "PUB",
@@ -88,29 +101,34 @@
       "tags": ["models"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
-          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
-          "publishdate": "13-nov-2025"
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
+        },
+        "visual-studio": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
         },
         "jetbrains": {
-          "stage": "PUB",
-          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
-          "publishdate": "13-nov-2025"
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
         },
         "xcode": {
-          "stage": "PUB",
-          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
-          "publishdate": "13-nov-2025"
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
         },
         "eclipse": {
-          "stage": "PUB",
-          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
-          "publishdate": "13-nov-2025"
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
         },
         "github-com": {
-          "stage": "PUB",
-          "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
-          "publishdate": "13-nov-2025"
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
         },
         "cli": {
           "stage": "PUB",
@@ -154,6 +172,82 @@
           "stage": "PUB",
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
           "publishdate": "13-nov-2025"
+        }
+      }
+    },
+    {
+      "id": "gpt-5-1-codex-max",
+      "name": "GPT-5.1-Codex-Max",
+      "description": "Most intelligent coding model optimized for long-horizon, agentic coding tasks.",
+      "tags": ["models"],
+      "availability": {
+        "github-com": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-codex-max-is-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
+        },
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-codex-max-is-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
+        },
+        "visual-studio": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-codex-max-is-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
+        },
+        "jetbrains": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-codex-max-is-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
+        },
+        "xcode": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-codex-max-is-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
+        },
+        "eclipse": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-codex-max-is-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
+        }
+      }
+    },
+    {
+      "id": "gpt-5-2",
+      "name": "GPT-5.2",
+      "description": "Most capable model for professional knowledge work with significant improvements in general intelligence, long-context understanding, agentic tool-calling, and vision. Excels at creating spreadsheets, building presentations, writing code, and handling complex multi-step projects.",
+      "tags": ["models"],
+      "availability": {
+        "github-com": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-2-is-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
+        },
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-2-is-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
+        },
+        "visual-studio": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-2-is-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
+        },
+        "jetbrains": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-2-is-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
+        },
+        "xcode": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-2-is-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
+        },
+        "eclipse": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-17-gpt-5-2-is-now-generally-available-in-github-copilot/",
+          "publishdate": "17-dec-2025"
         }
       }
     },
@@ -302,6 +396,44 @@
       }
     },
     {
+      "id": "claude-opus-4-5",
+      "name": "Claude Opus 4.5",
+      "description": "Advanced reasoning model for complex tasks requiring deep analysis and extended context understanding.",
+      "tags": ["models"],
+      "availability": {
+        "github-com": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-18-claude-opus-4-5-is-now-generally-available-in-github-copilot/",
+          "publishdate": "18-dec-2025"
+        },
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-18-claude-opus-4-5-is-now-generally-available-in-github-copilot/",
+          "publishdate": "18-dec-2025"
+        },
+        "visual-studio": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-18-claude-opus-4-5-is-now-generally-available-in-github-copilot/",
+          "publishdate": "18-dec-2025"
+        },
+        "jetbrains": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-18-claude-opus-4-5-is-now-generally-available-in-github-copilot/",
+          "publishdate": "18-dec-2025"
+        },
+        "xcode": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-18-claude-opus-4-5-is-now-generally-available-in-github-copilot/",
+          "publishdate": "18-dec-2025"
+        },
+        "eclipse": {
+          "stage": "GA",
+          "url": "https://github.blog/changelog/2025-12-18-claude-opus-4-5-is-now-generally-available-in-github-copilot/",
+          "publishdate": "18-dec-2025"
+        }
+      }
+    },
+    {
       "id": "raptor-mini",
       "name": "Raptor mini",
       "description": "Specialized model for fast, accurate code suggestions and explanations in everyday development tasks.",
@@ -335,6 +467,29 @@
           "stage": "PUB",
           "url": "https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot/",
           "publishdate": "18-nov-2025"
+        }
+      }
+    },
+    {
+      "id": "gemini-3-flash",
+      "name": "Gemini 3 Flash",
+      "description": "Most intelligent model built for speed, combining frontier intelligence with superior search and grounding capabilities.",
+      "tags": ["models"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-12-17-gemini-3-flash-is-now-in-public-preview-for-github-copilot/",
+          "publishdate": "17-dec-2025"
+        },
+        "github-com": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-12-17-gemini-3-flash-is-now-in-public-preview-for-github-copilot/",
+          "publishdate": "17-dec-2025"
+        },
+        "github-mobile": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-12-17-gemini-3-flash-is-now-in-public-preview-for-github-copilot/",
+          "publishdate": "17-dec-2025"
         }
       }
     },
@@ -391,7 +546,7 @@
     {
       "id": "mcp-oauth-enhanced-support",
       "name": "Enhanced MCP OAuth support",
-      "description": "Expands MCP OAuth authentication in JetBrains, Eclipse, and Xcode to support more identity providers with DCR and client-credentials flows.",
+      "description": "Expands MCP OAuth authentication to support more identity providers with DCR and client-credentials flows.",
       "tags": ["compliancy", "mcp"],
       "availability": {
         "jetbrains": {
@@ -450,9 +605,9 @@
       }
     },
     {
-      "id": "openai-codex-vs-code",
+      "id": "openai-codex-integration",
       "name": "OpenAI Codex integration",
-      "description": "Integrates OpenAI Codex into VS Code Insiders for Copilot Pro+ users via the VS Code Copilot extension.",
+      "description": "Integrates OpenAI Codex into the IDE.",
       "tags": ["extensibility", "agentic", "integration"],
       "availability": {
         "vs-code": {
@@ -569,6 +724,123 @@
           "stage": "GA",
           "url": "https://github.blog/changelog/2025-10-27-github-copilot-in-visual-studio-october-update/",
           "publishdate": "27-oct-2025"
+        }
+      }
+    },
+    {
+      "id": "drag-file-into-context",
+      "name": "Drag file into Copilot context",
+      "description": "Lets you drag a file from the editor tab into Copilot to quickly add it as context.",
+      "tags": ["chat"],
+      "availability": {
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/882517",
+          "publishdate": "24-oct-2025"
+        }
+      }
+    },
+    {
+      "id": "tools-fold-unfold",
+      "name": "Fold/unfold tools",
+      "description": "Adds fold and unfold controls for Copilot tools to keep tool lists organized.",
+      "tags": ["agentic"],
+      "availability": {
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
+          "publishdate": "20-oct-2025"
+        }
+      }
+    },
+    {
+      "id": "mcp-input-placeholders",
+      "name": "MCP input placeholders",
+      "description": "Extends mcp.json configuration to support input placeholders for sensitive information so values can be provided securely at runtime.",
+      "tags": ["compliancy", "mcp"],
+      "availability": {
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
+          "publishdate": "20-oct-2025"
+        }
+      }
+    },
+    {
+      "id": "inline-code-review",
+      "name": "Inline code review",
+      "description": "Introduces inline code review with Copilot so you can review and apply changes directly in the editor.",
+      "tags": ["chat"],
+      "availability": {
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
+          "publishdate": "20-oct-2025"
+        }
+      }
+    },
+    {
+      "id": "open-file-tool-conversation-agent",
+      "name": "Open file tool in conversation agent",
+      "description": "Adds an Open file tool to the Copilot chat conversation agent so it can open files directly from chat.",
+      "tags": ["chat", "agentic"],
+      "availability": {
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
+          "publishdate": "20-oct-2025"
+        }
+      }
+    },
+    {
+      "id": "hash-context-references",
+      "name": "Hash context for files, folders, and tools",
+      "description": "Enables # context references for files, folders, and tools in Copilot chat so you can quickly add them as context.",
+      "tags": ["chat", "agentic"],
+      "availability": {
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
+          "publishdate": "20-oct-2025"
+        }
+      }
+    },
+    {
+      "id": "mcp-tool-annotations-clientinfo",
+      "name": "MCP tool annotations and client info",
+      "description": "Adds support for tool annotations and clientInfo for MCP servers so tools receive richer metadata about requests.",
+      "tags": ["mcp", "agentic"],
+      "availability": {
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
+          "publishdate": "20-oct-2025"
+        }
+      }
+    },
+    {
+      "id": "tool-call-result-updates",
+      "name": "Tool call result updates",
+      "description": "Improves how Copilot displays and updates tool call result information.",
+      "tags": ["agentic", "mcp"],
+      "availability": {
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
+          "publishdate": "20-oct-2025"
+        }
+      }
+    },
+    {
+      "id": "sensitive-file-edit-confirmation",
+      "name": "Sensitive file edit confirmation",
+      "description": "Introduces a security confirmation step before Copilot edits sensitive files.",
+      "tags": ["compliancy", "agentic"],
+      "availability": {
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
+          "publishdate": "20-oct-2025"
         }
       }
     }

@@ -1,0 +1,56 @@
+# Validate that feature IDs and names don't contain IDE identifiers
+
+$ErrorActionPreference = "Stop"
+
+# Load metadata and features
+$metadataPath = Join-Path $PSScriptRoot "..\data\metadata.json"
+$featuresPath = Join-Path $PSScriptRoot "..\data\features.json"
+
+Write-Host "Loading metadata from: $metadataPath"
+$metadata = Get-Content $metadataPath -Raw | ConvertFrom-Json
+
+Write-Host "Loading features from: $featuresPath"
+$features = Get-Content $featuresPath -Raw | ConvertFrom-Json
+
+# Get IDE identifiers
+$ideIds = $metadata.ides | ForEach-Object { $_.id }
+Write-Host "IDE identifiers to check: $($ideIds -join ', ')"
+Write-Host ""
+
+# Track validation errors
+$errors = @()
+
+# Check each feature
+foreach ($feature in $features.features) {
+    foreach ($ideId in $ideIds) {
+        # Check if feature ID contains IDE identifier as a separate word (with word boundaries)
+        if ($feature.id -match "\b$([regex]::Escape($ideId))\b") {
+            $errors += "Feature ID '$($feature.id)' contains IDE identifier '$ideId'"
+        }
+        
+        # Check if feature name contains IDE identifier as a separate word (case-insensitive with word boundaries)
+        if ($feature.name -match "(?i)\b$([regex]::Escape($ideId))\b") {
+            $errors += "Feature name '$($feature.name)' (ID: $($feature.id)) contains IDE identifier '$ideId'"
+        }
+        
+        # Check if feature description contains IDE identifier as a separate word (case-insensitive with word boundaries)
+        if ($feature.description -match "(?i)\b$([regex]::Escape($ideId))\b") {
+            $errors += "Feature description for '$($feature.name)' (ID: $($feature.id)) contains IDE identifier '$ideId'"
+        }
+    }
+}
+
+# Report results
+if ($errors.Count -gt 0) {
+    Write-Host "VALIDATION FAILED" -ForegroundColor Red
+    Write-Host "Found $($errors.Count) error(s):" -ForegroundColor Red
+    Write-Host ""
+    foreach ($error in $errors) {
+        Write-Host "  ❌ $error" -ForegroundColor Red
+    }
+    exit 1
+} else {
+    Write-Host "✅ VALIDATION PASSED" -ForegroundColor Green
+    Write-Host "All features have valid IDs and names (no IDE identifiers found)" -ForegroundColor Green
+    exit 0
+}
