@@ -1,7 +1,7 @@
 {
   "ides": [
     { "id": "github-com", "name": "GitHub.com", "logo": "src/images/github-com.svg" },
-    { "id": "cli", "name": "GitHub Copilot CLI" },
+    { "id": "background-agent", "name": "GitHub Copilot Background Agent / CLI", "logo": "src/images/background-agent.svg" },
     { "id": "vs-code", "name": "VS Code", "logo": "src/images/vs-code.svg" },
     { "id": "visual-studio", "name": "Visual Studio", "logo": "src/images/visual-studio.svg" },
     { "id": "jetbrains", "name": "JetBrains", "logo": "src/images/jetbrains.svg" },

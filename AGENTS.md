@@ -24,6 +24,8 @@ For examples, please check existing data in the file.
 
 If the article talks about an IDE called "stable", like "VS Code Stable", it means it's the opposite of the `preview-version` flag. So if a feature is flagged `preview-version` and then an article describes the same feature as available for the "stable" version, then you should remove the `preview-version` flag and not change anything else for that feature.
 
+> NOTE: The GitHub Copilot CLI (command line interface) has been renamed to the GitHub Copilot Background Agent. Keep this in mind when processing older blogs/updates.
+
 #### INCLUDED FEATURES
 
 These features should be in the features list:

@@ -87,7 +87,7 @@
           "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot/",
           "publishdate": "17-dec-2025"
         },
-        "cli": {
+        "background-agent": {
           "stage": "PUB",
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
           "publishdate": "13-nov-2025"
@@ -130,7 +130,7 @@
           "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot/",
           "publishdate": "17-dec-2025"
         },
-        "cli": {
+        "background-agent": {
           "stage": "PUB",
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
           "publishdate": "13-nov-2025"
@@ -168,7 +168,7 @@
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
           "publishdate": "13-nov-2025"
         },
-        "cli": {
+        "background-agent": {
           "stage": "PUB",
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
           "publishdate": "13-nov-2025"
@@ -262,7 +262,7 @@
           "url": "https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/",
           "publishdate": "20-oct-2025"
         },
-        "cli": {
+        "background-agent": {
           "stage": "GA",
           "url": "https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/",
           "publishdate": "20-oct-2025"
@@ -310,7 +310,7 @@
           "url": "https://github.blog/changelog/2025-10-13-anthropics-claude-sonnet-4-5-is-now-generally-available-in-github-copilot/",
           "publishdate": "13-oct-2025"
         },
-        "cli": {
+        "background-agent": {
           "stage": "GA",
           "url": "https://github.blog/changelog/2025-10-13-anthropics-claude-sonnet-4-5-is-now-generally-available-in-github-copilot/",
           "publishdate": "13-oct-2025"
@@ -358,7 +358,7 @@
           "url": "https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free/",
           "publishdate": "10-nov-2025"
         },
-        "cli": {
+        "background-agent": {
           "stage": "DEP",
           "url": "https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free/",
           "publishdate": "10-nov-2025"
@@ -483,7 +483,7 @@
           "url": "https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot/",
           "publishdate": "18-nov-2025"
         },
-        "cli": {
+        "background-agent": {
           "stage": "PUB",
           "url": "https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot/",
           "publishdate": "18-nov-2025"
@@ -602,7 +602,7 @@
           "url": "https://github.blog/changelog/2025-10-28-custom-agents-for-github-copilot/",
           "publishdate": "28-oct-2025"
         },
-        "cli": {
+        "background-agent": {
           "stage": "PUB",
           "url": "https://github.blog/changelog/2025-10-28-github-copilot-cli-use-custom-agents-and-delegate-to-copilot-coding-agent/",
           "publishdate": "28-oct-2025"
@@ -691,7 +691,7 @@
           "url": "https://code.visualstudio.com/updates/v1_105",
           "publishdate": "09-oct-2025"
         },
-        "cli": {
+        "background-agent": {
           "stage": "PUB",
           "url": "https://github.blog/changelog/2025-10-28-github-copilot-cli-use-custom-agents-and-delegate-to-copilot-coding-agent/",
           "publishdate": "28-oct-2025"
