@@ -1,13 +1,13 @@
 {
   "ides": [
-    { "id": "github-com", "name": "GitHub.com" },
-    { "id": "cli", "name": "GitHub Copilot CLI" },
-    { "id": "vs-code", "name": "VS Code" },
-    { "id": "visual-studio", "name": "Visual Studio" },
-    { "id": "jetbrains", "name": "JetBrains" },
-    { "id": "xcode", "name": "Xcode" },
-    { "id": "vim-neovim", "name": "Vim/NeoVim" },
-    { "id": "eclipse", "name": "Eclipse" }
+    { "id": "github-com", "name": "GitHub.com", "logo": "src/images/github-com.svg" },
+    { "id": "background-agent", "name": "GitHub Copilot Background Agent / CLI", "logo": "src/images/background-agent.svg" },
+    { "id": "vs-code", "name": "VS Code", "logo": "src/images/vs-code.svg" },
+    { "id": "visual-studio", "name": "Visual Studio", "logo": "src/images/visual-studio.svg" },
+    { "id": "jetbrains", "name": "JetBrains", "logo": "src/images/jetbrains.svg" },
+    { "id": "xcode", "name": "Xcode", "logo": "src/images/xcode.svg" },
+    { "id": "vim-neovim", "name": "Vim/NeoVim", "logo": "src/images/vim-neovim.svg" },
+    { "id": "eclipse", "name": "Eclipse", "logo": "src/images/eclipse.svg" }
   ],
   "stages": {
     "GA": { "name": "Generally available" },

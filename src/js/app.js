@@ -84,7 +84,44 @@
                 headerRow.innerHTML = '<th>Feature</th>';
                 metadata.ides.forEach(ide => {
                     const th = document.createElement('th');
-                    th.textContent = ide.name;
+                    
+                    if (ide.logo) {
+                        // Create a wrapper for the icon
+                        const ideHeader = document.createElement('div');
+                        ideHeader.className = 'ide-header';
+                        
+                        // Create the image element
+                        const img = document.createElement('img');
+                        img.src = ide.logo;
+                        img.alt = ide.name;
+                        img.className = 'ide-logo';
+                        
+                        // Add custom tooltip event handlers
+                        if (tooltipEl) {
+                            img.addEventListener('mouseenter', (event) => {
+                                tooltipEl.textContent = ide.name;
+                                tooltipEl.classList.add('visible');
+                                tooltipEl.setAttribute('aria-hidden', 'false');
+                                positionTooltip(event);
+                            });
+                            
+                            img.addEventListener('mousemove', (event) => {
+                                positionTooltip(event);
+                            });
+                            
+                            img.addEventListener('mouseleave', () => {
+                                tooltipEl.classList.remove('visible');
+                                tooltipEl.setAttribute('aria-hidden', 'true');
+                            });
+                        }
+                        
+                        ideHeader.appendChild(img);
+                        th.appendChild(ideHeader);
+                    } else {
+                        // Fallback to text if no logo is available
+                        th.textContent = ide.name;
+                    }
+                    
                     headerRow.appendChild(th);
                 });
                 thead.appendChild(headerRow);
