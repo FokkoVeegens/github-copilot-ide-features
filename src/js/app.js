@@ -95,7 +95,25 @@
                         img.src = ide.logo;
                         img.alt = ide.name;
                         img.className = 'ide-logo';
-                        img.title = ide.name;
+                        
+                        // Add custom tooltip event handlers
+                        if (tooltipEl) {
+                            img.addEventListener('mouseenter', (event) => {
+                                tooltipEl.textContent = ide.name;
+                                tooltipEl.classList.add('visible');
+                                tooltipEl.setAttribute('aria-hidden', 'false');
+                                positionTooltip(event);
+                            });
+                            
+                            img.addEventListener('mousemove', (event) => {
+                                positionTooltip(event);
+                            });
+                            
+                            img.addEventListener('mouseleave', () => {
+                                tooltipEl.classList.remove('visible');
+                                tooltipEl.setAttribute('aria-hidden', 'true');
+                            });
+                        }
                         
                         ideHeader.appendChild(img);
                         th.appendChild(ideHeader);
