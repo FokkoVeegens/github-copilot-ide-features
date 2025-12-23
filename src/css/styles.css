@@ -313,6 +313,19 @@
             white-space: nowrap;
         }
 
+        .ide-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ide-logo {
+            width: 32px;
+            height: 32px;
+            display: block;
+            cursor: help;
+        }
+
         th:first-child {
             border-top-left-radius: 8px;
         }
