@@ -53,6 +53,68 @@
             border-color: #7c3aed;
             box-shadow: 0 2px 8px rgba(124, 58, 237, 0.12);
         }
+
+        /* In Development Badge */
+        .dev-badge {
+            position: fixed;
+            top: 50px;
+            right: -70px;
+            background: #f97316;
+            color: #000;
+            padding: 10px 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-align: center;
+            transform: rotate(45deg);
+            z-index: 1001;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: help;
+            user-select: none;
+        }
+
+        .dev-badge::after {
+            content: attr(title);
+            position: fixed;
+            top: 120px;
+            right: 20px;
+            transform: rotate(-45deg);
+            background: #111827;
+            color: #f9fafb;
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 400;
+            white-space: normal;
+            width: 280px;
+            text-align: left;
+            line-height: 1.5;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease-out;
+        }
+
+        .dev-badge:hover::after {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .dev-badge {
+                top: 40px;
+                right: -60px;
+                padding: 8px 50px;
+                font-size: 0.75rem;
+            }
+
+            .dev-badge::after {
+                top: 100px;
+                right: 10px;
+                width: 220px;
+                font-size: 0.75rem;
+                padding: 8px 12px;
+            }
+        }
+
         * {
             margin: 0;
             padding: 0;
