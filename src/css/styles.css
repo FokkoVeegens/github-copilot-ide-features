@@ -301,25 +301,34 @@
 
         .table-wrapper {
             flex: 1;
-            overflow-y: auto;
-            overflow-x: auto;
+            overflow: hidden;
             border-radius: 8px;
             border: 1px solid #e5e7eb;
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             background: white;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
 
         thead {
             background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
             color: white;
-            position: sticky;
-            top: 0;
-            z-index: 10;
+            flex-shrink: 0;
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        thead tr {
+            display: table-row;
         }
 
         th {
@@ -328,6 +337,7 @@
             font-weight: 600;
             font-size: 0.9rem;
             white-space: nowrap;
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
         }
 
         .ide-header {
@@ -351,7 +361,17 @@
             border-top-right-radius: 8px;
         }
 
+        tbody {
+            display: block;
+            overflow-y: auto;
+            overflow-x: hidden;
+            flex: 1;
+        }
+
         tbody tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
             border-bottom: 1px solid #f3f4f6;
             transition: background-color 0.2s;
         }
