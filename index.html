@@ -10,11 +10,13 @@
     <div class="dev-badge" title="This site is in active development and might contain incorrect information. Please contribute to improve this site.">In development</div>
     <div class="container">
         <header>
-            <h1><a href="https://github.com/fokkoveegens/github-copilot-ide-features" target="_blank" class="header-link">GitHub Copilot IDE Features</a></h1>
-            <p>Feature availability across different IDEs and platforms</p>
+            <h1>
+                <a href="https://github.com/fokkoveegens/github-copilot-ide-features" target="_blank" class="header-link">GitHub Copilot IDE Features</a>
+                <button id="legend-toggle" class="info-icon" aria-label="Toggle legend" title="Show/hide legend">ℹ️</button>
+            </h1>
         </header>
 
-        <div class="legend-group">
+        <div class="legend-group" id="legend-group" style="display: none;">
             <div class="legend">
                 <h3>Release status</h3>
                 <div class="legend-grid">

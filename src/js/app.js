@@ -5,6 +5,19 @@
         let features = [];
         let tooltipEl = null;
 
+        // Toggle legend visibility
+        function initLegendToggle() {
+            const toggleBtn = document.getElementById('legend-toggle');
+            const legendGroup = document.getElementById('legend-group');
+            
+            if (toggleBtn && legendGroup) {
+                toggleBtn.addEventListener('click', () => {
+                    const isHidden = legendGroup.style.display === 'none';
+                    legendGroup.style.display = isHidden ? 'flex' : 'none';
+                });
+            }
+        }
+
         async function loadData() {
             try {
                 const [featuresResponse, metadataResponse] = await Promise.all([
@@ -275,4 +288,6 @@
             tooltipEl.style.top = y + 'px';
         }
 
+        // Initialize the app
+        initLegendToggle();
         loadData();
