@@ -5,6 +5,7 @@
                     gap: 10px;
                     margin-bottom: 24px;
                     padding: 8px 0;
+                    flex-shrink: 0;
                 }
 
                 .feature-mini-badge {
@@ -137,6 +138,9 @@
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 40px);
         }
 
         header {
@@ -144,6 +148,7 @@
             color: white;
             padding: 30px;
             text-align: center;
+            flex-shrink: 0;
         }
 
         header h1 {
@@ -178,6 +183,7 @@
         .legend-group {
             display: flex;
             flex-direction: column;
+            flex-shrink: 0;
         }
 
         .legend-group .legend {
@@ -253,6 +259,10 @@
 
         .content {
             padding: 30px;
+            flex: 1;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .category-section {
@@ -289,20 +299,38 @@
         }
 
         .table-wrapper {
-            overflow-x: auto;
+            flex: 1;
+            overflow: auto;
             border-radius: 8px;
             border: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             background: white;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
 
         thead {
             background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
             color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        thead tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
         }
 
         th {
@@ -334,7 +362,16 @@
             border-top-right-radius: 8px;
         }
 
+        tbody {
+            display: block;
+            overflow-y: auto;
+            flex: 1;
+        }
+
         tbody tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
             border-bottom: 1px solid #f3f4f6;
             transition: background-color 0.2s;
         }
@@ -466,6 +503,7 @@
             font-size: 0.9rem;
             background: #f9fafb;
             border-top: 1px solid #e5e7eb;
+            flex-shrink: 0;
         }
 
         footer .github-link {
