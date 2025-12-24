@@ -5,6 +5,7 @@
                     gap: 10px;
                     margin-bottom: 24px;
                     padding: 8px 0;
+                    flex-shrink: 0;
                 }
 
                 .feature-mini-badge {
@@ -137,6 +138,10 @@
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 40px);
+            min-height: 600px;
         }
 
         header {
@@ -144,6 +149,7 @@
             color: white;
             padding: 30px;
             text-align: center;
+            flex-shrink: 0;
         }
 
         header h1 {
@@ -178,6 +184,7 @@
         .legend-group {
             display: flex;
             flex-direction: column;
+            flex-shrink: 0;
         }
 
         .legend-group .legend {
@@ -253,6 +260,10 @@
 
         .content {
             padding: 30px;
+            flex: 1;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .category-section {
@@ -289,9 +300,12 @@
         }
 
         .table-wrapper {
+            flex: 1;
+            overflow-y: auto;
             overflow-x: auto;
             border-radius: 8px;
             border: 1px solid #e5e7eb;
+            position: relative;
         }
 
         table {
@@ -303,6 +317,9 @@
         thead {
             background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
             color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         th {
@@ -466,6 +483,7 @@
             font-size: 0.9rem;
             background: #f9fafb;
             border-top: 1px solid #e5e7eb;
+            flex-shrink: 0;
         }
 
         footer .github-link {
