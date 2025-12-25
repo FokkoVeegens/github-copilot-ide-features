@@ -145,6 +145,8 @@
                 if (selectedTags.length > 0) {
                     filtered = features.filter(f => selectedTags.every(tag => f.tags && f.tags.includes(tag)));
                 }
+                // Sort features by name alphabetically
+                filtered = filtered.slice().sort((a, b) => a.name.localeCompare(b.name));
                 filtered.forEach(feature => {
                     const row = document.createElement('tr');
                     const nameCell = document.createElement('td');
