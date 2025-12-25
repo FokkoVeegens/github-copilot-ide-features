@@ -59,14 +59,14 @@
         .dev-badge {
             position: fixed;
             top: 50px;
-            right: -70px;
+            left: -70px;
             background: #f97316;
             color: #000;
             padding: 10px 100px;
             font-size: 0.85rem;
             font-weight: 600;
             text-align: center;
-            transform: rotate(45deg);
+            transform: rotate(-45deg);
             z-index: 1001;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             cursor: help;
@@ -77,8 +77,8 @@
             content: attr(title);
             position: fixed;
             top: 120px;
-            right: 20px;
-            transform: rotate(-45deg);
+            left: 20px;
+            transform: rotate(45deg);
             background: #111827;
             color: #f9fafb;
             padding: 10px 14px;
@@ -102,14 +102,14 @@
         @media (max-width: 768px) {
             .dev-badge {
                 top: 40px;
-                right: -60px;
+                left: -60px;
                 padding: 8px 50px;
                 font-size: 0.75rem;
             }
 
             .dev-badge::after {
                 top: 100px;
-                right: 10px;
+                left: 10px;
                 width: 220px;
                 font-size: 0.75rem;
                 padding: 8px 12px;
@@ -152,6 +152,14 @@
             flex-shrink: 0;
         }
 
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-wrap: wrap;
+        }
+
         header h1 {
             font-size: 2rem;
             margin-bottom: 0;
@@ -160,6 +168,38 @@
             align-items: center;
             justify-content: center;
             gap: 12px;
+        }
+
+        .contribute-button {
+            position: absolute;
+            right: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background 0.2s, box-shadow 0.2s;
+            z-index: 1002;
+        }
+
+        .contribute-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        .contribute-button .github-icon {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .contribute-button .github-icon path {
+            fill: white;
         }
 
         .info-icon {
@@ -549,13 +589,44 @@
             text-decoration: underline;
         }
 
+        @media (max-width: 1000px) {
+            .contribute-button {
+                position: static;
+                margin-top: 10px;
+            }
+
+            .header-content {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            header h1 {
+                flex: 1 1 100%;
+            }
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 10px;
             }
 
+            header {
+                padding: 15px 10px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
             header h1 {
                 font-size: 1.5rem;
+            }
+
+            .contribute-button {
+                position: static;
+                font-size: 0.85rem;
+                padding: 6px 12px;
             }
 
             header p {
