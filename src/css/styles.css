@@ -157,6 +157,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            flex-wrap: wrap;
         }
 
         header h1 {
@@ -176,9 +177,9 @@
             align-items: center;
             gap: 8px;
             padding: 8px 16px;
-            background: white;
-            color: #24292e;
-            border: 1px solid #d1d5db;
+            background: transparent;
+            color: white;
+            border: 2px solid white;
             border-radius: 6px;
             text-decoration: none;
             font-size: 0.9rem;
@@ -188,13 +189,17 @@
         }
 
         .contribute-button:hover {
-            background: #f9fafb;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
         }
 
         .contribute-button .github-icon {
             display: inline-block;
             vertical-align: middle;
+        }
+
+        .contribute-button .github-icon path {
+            fill: white;
         }
 
         .info-icon {
@@ -582,6 +587,22 @@
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 1000px) {
+            .contribute-button {
+                position: static;
+                margin-top: 10px;
+            }
+
+            .header-content {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            header h1 {
+                flex: 1 1 100%;
+            }
         }
 
         @media (max-width: 768px) {
