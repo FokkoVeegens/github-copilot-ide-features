@@ -62,10 +62,26 @@
 
             // Selected tags state
             let selectedTags = [];
+            let showDeprecated = false;
 
             // Tag badges UI
             const tagsDiv = document.createElement('div');
             tagsDiv.className = 'tags-bar';
+            
+            // Add deprecated features toggle
+            const deprecatedToggle = document.createElement('label');
+            deprecatedToggle.className = 'deprecated-toggle';
+            deprecatedToggle.innerHTML = `
+                <input type="checkbox" id="show-deprecated" ${showDeprecated ? 'checked' : ''}>
+                <span>Show deprecated features</span>
+            `;
+            const checkbox = deprecatedToggle.querySelector('input');
+            checkbox.addEventListener('change', () => {
+                showDeprecated = checkbox.checked;
+                updateTable();
+            });
+            tagsDiv.appendChild(deprecatedToggle);
+            
             allTags.forEach(tag => {
                 const badge = document.createElement('span');
                 badge.className = 'tag-badge';
@@ -148,6 +164,15 @@
                     // Create a copy to avoid mutating the original array
                     filtered = features.slice();
                 }
+                
+                // Filter out deprecated features unless explicitly shown
+                if (!showDeprecated) {
+                    filtered = filtered.filter(feature => {
+                        // Check if any availability has a non-deprecated stage
+                        return Object.values(feature.availability || {}).some(avail => avail.stage !== 'DEP');
+                    });
+                }
+                
                 // Sort features by name alphabetically
                 filtered.sort((a, b) => a.name.localeCompare(b.name));
                 filtered.forEach(feature => {
