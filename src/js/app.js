@@ -63,6 +63,7 @@
             // Selected tags state
             let selectedTags = [];
             let showDeprecated = false;
+            let searchTerm = '';
 
             // Tag badges UI
             const tagsDiv = document.createElement('div');
@@ -81,6 +82,51 @@
                 updateTable();
             });
             tagsDiv.appendChild(deprecatedToggle);
+            
+            // Add search input and buttons
+            const searchContainer = document.createElement('div');
+            searchContainer.className = 'search-container';
+            
+            const searchInput = document.createElement('input');
+            searchInput.type = 'text';
+            searchInput.className = 'search-input';
+            searchInput.placeholder = 'Search features...';
+            searchInput.value = searchTerm;
+            
+            const searchButton = document.createElement('button');
+            searchButton.className = 'search-button';
+            searchButton.textContent = '🔍';
+            searchButton.title = 'Search';
+            
+            const clearButton = document.createElement('button');
+            clearButton.className = 'clear-button';
+            clearButton.textContent = '✕';
+            clearButton.title = 'Clear search';
+            
+            // Search functionality
+            const performSearch = () => {
+                searchTerm = searchInput.value.trim();
+                updateTable();
+            };
+            
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+            
+            searchButton.addEventListener('click', performSearch);
+            
+            clearButton.addEventListener('click', () => {
+                searchInput.value = '';
+                searchTerm = '';
+                updateTable();
+            });
+            
+            searchContainer.appendChild(searchInput);
+            searchContainer.appendChild(searchButton);
+            searchContainer.appendChild(clearButton);
+            tagsDiv.appendChild(searchContainer);
             
             allTags.forEach(tag => {
                 const badge = document.createElement('span');
@@ -158,11 +204,23 @@
 
                 const tbody = document.createElement('tbody');
                 let filtered = features;
+                
+                // Filter by selected tags
                 if (selectedTags.length > 0) {
                     filtered = features.filter(f => selectedTags.every(tag => f.tags && f.tags.includes(tag)));
                 } else {
                     // Create a copy to avoid mutating the original array
                     filtered = features.slice();
+                }
+                
+                // Filter by search term
+                if (searchTerm) {
+                    const lowerSearchTerm = searchTerm.toLowerCase();
+                    filtered = filtered.filter(feature => {
+                        const nameMatch = feature.name.toLowerCase().includes(lowerSearchTerm);
+                        const descMatch = feature.description && feature.description.toLowerCase().includes(lowerSearchTerm);
+                        return nameMatch || descMatch;
+                    });
                 }
                 
                 // Filter out deprecated features unless explicitly shown

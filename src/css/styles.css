@@ -8,6 +8,54 @@
                     flex-shrink: 0;
                 }
                 
+                .search-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    margin-left: auto;
+                }
+                
+                .search-input {
+                    padding: 6px 12px;
+                    border: 2px solid #e9d5ff;
+                    border-radius: 16px;
+                    font-size: 0.95rem;
+                    outline: none;
+                    transition: border-color 0.2s;
+                    min-width: 200px;
+                }
+                
+                .search-input:focus {
+                    border-color: #7c3aed;
+                }
+                
+                .search-button,
+                .clear-button {
+                    padding: 6px 12px;
+                    border: 2px solid #e9d5ff;
+                    border-radius: 16px;
+                    background: #f3e8ff;
+                    color: #7c3aed;
+                    font-size: 0.95rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: background 0.2s, border-color 0.2s;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .search-button:hover,
+                .clear-button:hover {
+                    background: #e9d5ff;
+                    border-color: #7c3aed;
+                }
+                
+                .search-button:active,
+                .clear-button:active {
+                    transform: scale(0.95);
+                }
+                
                 .deprecated-toggle {
                     display: inline-flex;
                     align-items: center;
@@ -689,6 +737,17 @@
             .status-badge {
                 padding: 4px 8px;
                 font-size: 0.75rem;
+            }
+            
+            .search-container {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            
+            .search-input {
+                flex: 1;
+                min-width: 0;
             }
 
             footer {
