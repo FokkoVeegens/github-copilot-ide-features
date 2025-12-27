@@ -69,20 +69,6 @@
             const tagsDiv = document.createElement('div');
             tagsDiv.className = 'tags-bar';
             
-            // Add deprecated features toggle
-            const deprecatedToggle = document.createElement('label');
-            deprecatedToggle.className = 'deprecated-toggle';
-            deprecatedToggle.innerHTML = `
-                <input type="checkbox" id="show-deprecated" ${showDeprecated ? 'checked' : ''}>
-                <span>Show deprecated features</span>
-            `;
-            const checkbox = deprecatedToggle.querySelector('input');
-            checkbox.addEventListener('change', () => {
-                showDeprecated = checkbox.checked;
-                updateTable();
-            });
-            tagsDiv.appendChild(deprecatedToggle);
-            
             // Add search input and buttons
             const searchContainer = document.createElement('div');
             searchContainer.className = 'search-container';
@@ -144,6 +130,20 @@
                 };
                 tagsDiv.appendChild(badge);
             });
+            
+            // Add deprecated features toggle
+            const deprecatedToggle = document.createElement('label');
+            deprecatedToggle.className = 'deprecated-toggle';
+            deprecatedToggle.innerHTML = `
+                <input type="checkbox" id="show-deprecated" ${showDeprecated ? 'checked' : ''}>
+                <span>Show deprecated features</span>
+            `;
+            const checkbox = deprecatedToggle.querySelector('input');
+            checkbox.addEventListener('change', () => {
+                showDeprecated = checkbox.checked;
+                updateTable();
+            });
+            tagsDiv.appendChild(deprecatedToggle);
             contentDiv.appendChild(tagsDiv);
 
             // Table wrapper
