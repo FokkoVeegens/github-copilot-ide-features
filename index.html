@@ -4,110 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Copilot IDE Features</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
     <div id="app">
         <div class="dev-badge" title="This site is in active development and might contain incorrect information. Please contribute to improve this site.">In development</div>
-        <div class="container">
-            <header>
-                <div class="header-content">
-                    <h1>
-                        <a href="https://github.com/fokkoveegens/github-copilot-ide-features" target="_blank" class="header-link">GitHub Copilot IDE Features</a>
-                        <button @click="showLegend = !showLegend" class="info-icon" aria-label="Toggle legend" title="Show/hide legend">ℹ️</button>
-                    </h1>
-                    <a href="https://github.com/FokkoVeegens/github-copilot-ide-features" target="_blank" class="contribute-button" aria-label="Contribute to this project">
-                        <svg class="github-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
-                            <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-                        </svg>
-                        Contribute
-                    </a>
-                </div>
-            </header>
-
-            <div v-show="showLegend" class="legend-group">
-                <div class="legend">
-                    <h3>Release status</h3>
-                    <div class="legend-grid">
-                        <div class="legend-item">
-                            <span class="legend-badge GA">GA</span>
-                            <span>Generally available</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-badge PUB">PUB</span>
-                            <span>Public Preview</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-badge PRV">PRV</span>
-                            <span>Private Preview</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-badge DEP">DEP</span>
-                            <span>Deprecated / Retired</span>
+        <div class="app-container">
+            <section class="hero is-primary">
+                <div class="hero-body">
+                    <div class="container">
+                        <div class="level is-mobile">
+                            <div class="level-left">
+                                <div class="level-item">
+                                    <h1 class="title">
+                                        <a href="https://github.com/fokkoveegens/github-copilot-ide-features" target="_blank" class="has-text-white">GitHub Copilot IDE Features</a>
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="level-right">
+                                <div class="level-item">
+                                    <a href="https://github.com/FokkoVeegens/github-copilot-ide-features" target="_blank" class="button is-primary is-inverted is-outlined" aria-label="Contribute to this project">
+                                        <span class="icon">
+                                            <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+                                                <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                                            </svg>
+                                        </span>
+                                        <span>Contribute</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="legend">
-                    <h3>Annotations</h3>
-                    <div class="legend-grid">
-                        <div class="legend-item">
-                            <span class="flag-icon">🧑‍💻</span>
-                            <span>Individual subscriptions only</span>
+            <div @click="showLegend = !showLegend" class="legend-toggle" :class="{ 'is-active': showLegend }">
+                <div class="legend-toggle-content">
+                    <span class="legend-toggle-icon">{{ showLegend ? '▼' : '▶' }}</span>
+                    <span class="legend-toggle-text">ℹ️ Legend</span>
+                </div>
+            </div>
+
+            <div v-show="showLegend" class="box legend-box">
+                <div class="columns">
+                    <div class="column">
+                        <h3 class="title is-5 has-text-primary">Release status</h3>
+                        <div class="legend-grid">
+                            <div class="legend-item">
+                                <span class="tag legend-badge GA">GA</span>
+                                <span>Generally available</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="tag legend-badge PUB">PUB</span>
+                                <span>Public Preview</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="tag legend-badge PRV">PRV</span>
+                                <span>Private Preview</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="tag legend-badge DEP">DEP</span>
+                                <span>Deprecated / Retired</span>
+                            </div>
                         </div>
-                        <div class="legend-item">
-                            <span class="flag-icon">⚠️</span>
-                            <span>Preview/insiders version only</span>
+                    </div>
+
+                    <div class="column">
+                        <h3 class="title is-5 has-text-primary">Annotations</h3>
+                        <div class="legend-grid">
+                            <div class="legend-item">
+                                <span class="flag-icon">🧑‍💻</span>
+                                <span>Individual subscriptions only</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="flag-icon">⚠️</span>
+                                <span>Preview/insiders version only</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div v-if="loading" class="content">
-                <div class="loading">Loading data...</div>
+            <div v-if="loading" class="section">
+                <div class="has-text-centered has-text-primary">
+                    <p class="is-size-4">Loading data...</p>
+                </div>
             </div>
 
-            <div v-else-if="error" class="content">
-                <div class="error">
+            <div v-else-if="error" class="section">
+                <div class="notification is-danger">
                     <strong>Error loading data:</strong> {{ error }}
                 </div>
             </div>
 
-            <div v-else class="content">
-                <div class="tags-bar">
-                    <div class="search-container">
-                        <input 
-                            v-model="searchTerm" 
-                            @keypress.enter="performSearch"
-                            type="text" 
-                            class="search-input" 
-                            placeholder="Search features..."
+            <div v-else class="section main-content">
+                <div class="box tags-bar">
+                    <div class="tags are-small">
+                        <div class="field has-addons search-container">
+                            <div class="control is-expanded">
+                                <input 
+                                    v-model="searchTerm" 
+                                    @keypress.enter="performSearch"
+                                    type="text" 
+                                    class="input is-small" 
+                                    placeholder="Search features..."
+                                >
+                            </div>
+                            <div class="control">
+                                <button @click="performSearch" class="button is-small" title="Search">
+                                    <span class="icon">🔍</span>
+                                </button>
+                            </div>
+                            <div class="control">
+                                <button @click="clearSearch" class="button is-small" title="Clear search">
+                                    <span class="icon">✕</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <span 
+                            v-for="tag in allTags" 
+                            :key="tag"
+                            @click="toggleTag(tag)"
+                            :class="['tag', 'is-clickable', { 'is-primary': selectedTags.includes(tag) }]"
                         >
-                        <button @click="performSearch" class="search-button" title="Search">🔍</button>
-                        <button @click="clearSearch" class="clear-button" title="Clear search">✕</button>
+                            {{ tag }}
+                        </span>
+                        
+                        <label class="tag deprecated-toggle">
+                            <input type="checkbox" v-model="showDeprecated">
+                            Show deprecated features
+                        </label>
                     </div>
-                    
-                    <span 
-                        v-for="tag in allTags" 
-                        :key="tag"
-                        @click="toggleTag(tag)"
-                        :class="['tag-badge', { selected: selectedTags.includes(tag) }]"
-                    >
-                        {{ tag }}
-                    </span>
-                    
-                    <label class="deprecated-toggle">
-                        <input type="checkbox" v-model="showDeprecated">
-                        <span>Show deprecated features</span>
-                    </label>
                 </div>
 
-                <div class="table-wrapper">
-                    <table>
+                <div class="table-container">
+                    <table class="table is-striped is-hoverable is-fullwidth">
                         <thead>
                             <tr>
                                 <th>Feature</th>
-                                <th v-for="ide in metadata.ides" :key="ide.id">
+                                <th v-for="ide in metadata.ides" :key="ide.id" class="has-text-centered">
                                     <div class="ide-header">
                                         <img 
                                             v-if="ide.logo"
@@ -132,24 +169,24 @@
                                         @mousemove="moveTooltip($event)"
                                         @mouseleave="hideTooltip"
                                     >
-                                        {{ feature.name }}
+                                        <strong>{{ feature.name }}</strong>
                                     </div>
-                                    <div v-if="feature.tags && feature.tags.length" style="margin-top: 4px">
+                                    <div v-if="feature.tags && feature.tags.length" class="tags" style="margin-top: 4px">
                                         <span 
                                             v-for="tag in feature.tags" 
                                             :key="tag"
-                                            class="feature-mini-badge"
+                                            class="tag is-small is-primary is-light"
                                         >
                                             {{ tag }}
                                         </span>
                                     </div>
                                 </td>
-                                <td v-for="ide in metadata.ides" :key="ide.id" class="availability-cell">
+                                <td v-for="ide in metadata.ides" :key="ide.id" class="has-text-centered">
                                     <template v-if="feature.availability[ide.id]">
                                         <span v-if="feature.availability[ide.id].stage !== 'DEP'" class="checkmark">✅</span>
                                         <a 
                                             :href="feature.availability[ide.id].url || '#'" 
-                                            :class="['status-badge', feature.availability[ide.id].stage]"
+                                            :class="['tag', 'status-badge', feature.availability[ide.id].stage]"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -166,7 +203,7 @@
                                             </span>
                                         </a>
                                     </template>
-                                    <span v-else class="not-available">❌</span>
+                                    <span v-else class="has-text-grey-light">❌</span>
                                 </td>
                             </tr>
                         </tbody>
@@ -185,14 +222,21 @@
                 {{ tooltip.text }}
             </div>
 
-            <footer>
-                <a href="https://github.com/FokkoVeegens/github-copilot-ide-features" target="_blank" class="github-link">
-                    <svg class="github-icon" viewBox="0 0 16 16" width="20" height="20" aria-hidden="true">
-                        <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-                    </svg>
-                    Proudly hosted on GitHub
-                </a>
-                <span class="license">Licensed under <a href="https://github.com/fokkoveegens/github-copilot-ide-features/blob/main/LICENSE" target="_blank">AGPL-3.0</a></span>
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>
+                        <a href="https://github.com/FokkoVeegens/github-copilot-ide-features" target="_blank" class="has-text-primary">
+                            <span class="icon">
+                                <svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true">
+                                    <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                                </svg>
+                            </span>
+                            <strong>Proudly hosted on GitHub</strong>
+                        </a>
+                        <br>
+                        <small>Licensed under <a href="https://github.com/fokkoveegens/github-copilot-ide-features/blob/main/LICENSE" target="_blank" class="has-text-primary">AGPL-3.0</a></small>
+                    </p>
+                </div>
             </footer>
         </div>
     </div>
