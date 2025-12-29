@@ -8,8 +8,8 @@ The features data resides in [features.json](./data/features.json). A feature lo
 
 |Attribute L1|Attribute L2|Format|Instructions|
 |-|-|-|-|
-|id||string, lower case, dash separated|NEVER contains the name of an IDE (IDE is put in the **availability** attribute), short name for the feature, always first check if one already exists, NO DUPLICATE id's|
-|name||string|Name of the feature, keep it less than 50 characters. NEVER contains the name of an IDE (IDE is put in the **availability** attribute), human-readable name of the feature|
+|id||string, lower case, dash separated|NEVER contains the name of an IDE (IDE is put in the **availability** attribute), NEVER contains the word "Copilot", short name for the feature, always first check if one already exists, NO DUPLICATE id's|
+|name||string|Name of the feature, keep it less than 50 characters. NEVER contains the name of an IDE (IDE is put in the **availability** attribute), NEVER contains the word "Copilot", human-readable name of the feature|
 |description||long string|Longer description of the feature, can contain about 2 sentences, will be shown as a popup when hovered over the name|
 |tags||string array, all lower case|These should identify the feature and allow the user to filter features, never create a new one without approval from me|
 |availability||object map|Map of IDE identifiers (matching keys in metadata.json) to availability objects|
@@ -36,12 +36,13 @@ These features should be in the features list:
 
 #### EXCLUDED FEATURES
 
-These features should NOT be in the features list:
+These features should **NOT** be in the features list:
 
 - Bugfixes
 - Background improvements, not directly visible to the user
 - Performance improvements
 - Improvements where the impact is not directly clear to the user
+- Enhancements
 
 #### New LLM models
 

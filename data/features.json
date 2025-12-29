@@ -1,6 +1,107 @@
 {
   "features": [
     {
+      "id": "next-edit-suggestions",
+      "name": "Next Edit Suggestions",
+      "description": "Copilot predicts the location and content of your next edit based on current changes, allowing quick navigation and acceptance with Tab.",
+      "tags": ["code-completions", "agentic"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://code.visualstudio.com/updates/v1_97#_copilot-next-edit-suggestions-preview",
+          "publishdate": "08-jan-2025"
+        }
+      }
+    },
+    {
+      "id": "edits",
+      "name": "Edits",
+      "description": "Make code changes across multiple files directly from chat with improved editor controls for accepting and discarding individual edits.",
+      "tags": ["chat", "agentic"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_97#_copilot-edits-general-availability",
+          "publishdate": "08-jan-2025"
+        }
+      }
+    },
+    {
+      "id": "workspace-index-status-ui",
+      "name": "Workspace index status UI",
+      "description": "View the type of workspace index being used by Copilot (remote, local, or basic) and reindexing status in the Status Bar.",
+      "tags": ["chat"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_97#_workspace-index-status-ui",
+          "publishdate": "08-jan-2025"
+        }
+      }
+    },
+    {
+      "id": "build-remote-workspace-index",
+      "name": "Build remote workspace index",
+      "description": "Create high-quality remote workspace indexes managed by GitHub for faster @workspace results across large projects.",
+      "tags": ["chat"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_97#_build-a-remote-workspace-index",
+          "publishdate": "08-jan-2025"
+        }
+      }
+    },
+    {
+      "id": "git-changes-context",
+      "name": "Git changes context variable",
+      "description": "Reference files modified in Git source control using the #changes context variable in Chat or Edits.",
+      "tags": ["chat"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_97#_git-changes-context-variable",
+          "publishdate": "08-jan-2025"
+        }
+      }
+    },
+    {
+      "id": "o3-mini",
+      "name": "o3-mini",
+      "description": "OpenAI's newest reasoning model offering advanced problem-solving capabilities for complex coding tasks.",
+      "tags": ["models"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-01-31-openai-o3-mini-now-available-in-github-copilot-and-github-models-public-preview/",
+          "publishdate": "31-jan-2025"
+        },
+        "github-com": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-01-31-openai-o3-mini-now-available-in-github-copilot-and-github-models-public-preview/",
+          "publishdate": "31-jan-2025"
+        }
+      }
+    },
+    {
+      "id": "gemini-2-0-flash",
+      "name": "Gemini 2.0 Flash",
+      "description": "Google's latest model with high capabilities for code suggestions, documentation, and explaining code, available to all Copilot customers.",
+      "tags": ["models"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-02-05-google-gemini-2-0-flash-is-now-available-to-all-copilot-users-in-public-preview/",
+          "publishdate": "05-feb-2025"
+        },
+        "github-com": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-02-05-google-gemini-2-0-flash-is-now-available-to-all-copilot-users-in-public-preview/",
+          "publishdate": "05-feb-2025"
+        }
+      }
+    },
+    {
       "id": "auto-model-selection",
       "name": "Auto model selection",
       "description": "Adds an Auto option in Copilot Chat that automatically routes requests to an appropriate model based on availability while honoring your model settings and policies.",
@@ -704,8 +805,8 @@
       }
     },
     {
-      "id": "copilot-app-modernization",
-      "name": "Copilot app modernization",
+      "id": "java-net-app-modernization",
+      "name": "Java & .NET app modernization",
       "description": "Brings GitHub Copilot app modernization workflows for Java and .NET into the IDE, enabling developers to assess applications, apply automated code transformations, remediate build and security issues, and containerize services without leaving their development environment.",
       "tags": ["agentic", "integration"],
       "availability": {

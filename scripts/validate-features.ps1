@@ -17,11 +17,35 @@ $ideIds = $metadata.ides | ForEach-Object { $_.id }
 Write-Host "IDE identifiers to check: $($ideIds -join ', ')"
 Write-Host ""
 
-# Track validation errors
+# Track validation errors and warnings
 $errors = @()
+$warnings = @()
+
+# Keywords that might indicate irrelevant content
+$excludedKeywords = @("enhancement", "bugfix", "performance")
 
 # Check each feature
 foreach ($feature in $features.features) {
+    # Check if feature ID contains "copilot" (case-insensitive)
+    if ($feature.id -match "(?i)copilot") {
+        $errors += "Feature ID '$($feature.id)' contains the word 'copilot' which is not allowed"
+    }
+    
+    # Check if feature name contains "copilot" (case-insensitive)
+    if ($feature.name -match "(?i)copilot") {
+        $errors += "Feature name '$($feature.name)' (ID: $($feature.id)) contains the word 'copilot' which is not allowed"
+    }
+    
+    # Check for excluded keywords in feature ID and name
+    foreach ($keyword in $excludedKeywords) {
+        if ($feature.id -match "(?i)\b$([regex]::Escape($keyword))\b") {
+            $warnings += "Feature ID '$($feature.id)' contains excluded keyword '$keyword' - might contain irrelevant content"
+        }
+        if ($feature.name -match "(?i)\b$([regex]::Escape($keyword))\b") {
+            $warnings += "Feature name '$($feature.name)' (ID: $($feature.id)) contains excluded keyword '$keyword' - might contain irrelevant content"
+        }
+    }
+    
     foreach ($ideId in $ideIds) {
         # Check if feature ID contains IDE identifier as a separate word (with word boundaries)
         if ($feature.id -match "\b$([regex]::Escape($ideId))\b") {
@@ -41,6 +65,16 @@ foreach ($feature in $features.features) {
 }
 
 # Report results
+if ($warnings.Count -gt 0) {
+    Write-Host "⚠️  WARNINGS FOUND" -ForegroundColor Yellow
+    Write-Host "Found $($warnings.Count) warning(s):" -ForegroundColor Yellow
+    Write-Host ""
+    foreach ($warning in $warnings) {
+        Write-Host "  ⚠️  $warning" -ForegroundColor Yellow
+    }
+    Write-Host ""
+}
+
 if ($errors.Count -gt 0) {
     Write-Host "VALIDATION FAILED" -ForegroundColor Red
     Write-Host "Found $($errors.Count) error(s):" -ForegroundColor Red
