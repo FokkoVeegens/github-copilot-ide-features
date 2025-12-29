@@ -183,7 +183,6 @@
                                 </td>
                                 <td v-for="ide in metadata.ides" :key="ide.id" class="has-text-centered">
                                     <template v-if="feature.availability[ide.id]">
-                                        <span v-if="feature.availability[ide.id].stage !== 'DEP'" class="checkmark">✅</span>
                                         <a 
                                             :href="feature.availability[ide.id].url || '#'" 
                                             :class="['tag', 'status-badge', feature.availability[ide.id].stage]"
