@@ -594,7 +594,6 @@
             z-index: 1000;
             pointer-events: none;
             opacity: 0;
-            transform: translate(-50%, -12px);
             transition: opacity 0.12s ease-out;
         }
 

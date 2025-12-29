@@ -11,6 +11,7 @@ createApp({
         const searchTerm = ref('');
         const selectedTags = ref([]);
         const showDeprecated = ref(false);
+        const tooltipEl = ref(null);
         const tooltip = ref({
             visible: false,
             text: '',
@@ -100,13 +101,26 @@ createApp({
         };
 
         const positionTooltip = (event) => {
+            if (!tooltipEl.value) return;
+
             const offset = 16;
             let x = event.clientX + offset;
             let y = event.clientY + offset;
 
-            // Note: We can't get the tooltip dimensions here easily
-            // Vue will handle this in the next tick, but for simplicity
-            // we'll use basic positioning
+            const tooltipRect = tooltipEl.value.getBoundingClientRect();
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+
+            // Prevent tooltip from going off the right edge
+            if (x + tooltipRect.width > viewportWidth - 8) {
+                x = event.clientX - tooltipRect.width - offset;
+            }
+
+            // Prevent tooltip from going off the bottom edge
+            if (y + tooltipRect.height > viewportHeight - 8) {
+                y = event.clientY - tooltipRect.height - offset;
+            }
+
             tooltip.value.x = x;
             tooltip.value.y = y;
         };
@@ -147,6 +161,7 @@ createApp({
             searchTerm,
             selectedTags,
             showDeprecated,
+            tooltipEl,
             tooltip,
             allTags,
             filteredFeatures,
