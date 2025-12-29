@@ -14,6 +14,19 @@
       }
     },
     {
+      "id": "next-edit-suggestions-collapsed-mode",
+      "name": "Next Edit Suggestions Collapsed Mode",
+      "description": "Collapsed display mode for Next Edit Suggestions showing only the suggestion indicator in the editor margin, with code revealed when navigating to it using Tab.",
+      "tags": ["code-completions", "agentic"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://code.visualstudio.com/updates/v1_98#_collapsed-mode-for-next-edit-suggestions-preview",
+          "publishdate": "27-feb-2025"
+        }
+      }
+    },
+    {
       "id": "edits",
       "name": "Edits",
       "description": "Make code changes across multiple files directly from chat with improved editor controls for accepting and discarding individual edits.",
@@ -23,6 +36,33 @@
           "stage": "GA",
           "url": "https://code.visualstudio.com/updates/v1_97#_copilot-edits-general-availability",
           "publishdate": "08-jan-2025"
+        }
+      }
+    },
+    {
+      "id": "agent-mode",
+      "name": "Agent Mode",
+      "description": "Agent mode enables autonomous task completion by automatically searching workspace for context, editing files, checking for errors, and running terminal commands with user permission. Includes UX improvements like inline terminal commands, editable suggestions, and automatic build task execution.",
+      "tags": ["agentic", "chat"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://code.visualstudio.com/updates/v1_98#_agent-mode-improvements-experimental",
+          "publishdate": "27-feb-2025"
+        }
+      }
+    },
+    {
+      "id": "edits-notebook-support",
+      "name": "Edits Notebook Support",
+      "description": "Use Copilot Edits to work with notebook files, including creating new notebooks, modifying content across multiple cells, inserting and deleting cells, and changing cell types.",
+      "tags": ["chat", "agentic"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://code.visualstudio.com/updates/v1_98#_notebook-support-in-copilot-edits-preview",
+          "publishdate": "27-feb-2025",
+          "flags": ["preview-version"]
         }
       }
     },
@@ -135,9 +175,27 @@
       }
     },
     {
-      "id": "global-instruction-files",
-      "name": "Global instruction and prompt files",
-      "description": "Adds support for global instruction and prompt files so Copilot can follow shared guidance across workspaces.",
+      "id": "global-instruction-file",
+      "name": "Global instruction file",
+      "description": "Tailor GitHub Copilot to provide chat responses and code suggestions aligned with your team's specific requirements using instruction files that can be configured globally or per workspace.",
+      "tags": ["policies", "chat"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_98#_custom-instructions-generally-available",
+          "publishdate": "27-feb-2025"
+        },
+        "jetbrains": {
+          "stage": "PUB",
+          "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/892199",
+          "publishdate": "12-nov-2025"
+        }
+      }
+    },
+    {
+      "id": "prompt-files",
+      "name": "Prompt files",
+      "description": "Ready-made prompts that can be reused locally or shared by putting them in the repository, enabling teams to standardize common Copilot interactions.",
       "tags": ["policies"],
       "availability": {
         "jetbrains": {
@@ -353,6 +411,26 @@
       }
     },
     {
+      "id": "gpt-4-5",
+      "name": "GPT-4.5",
+      "description": "OpenAI's latest large language model designed with advanced capabilities in intuition, writing style, and broad knowledge.",
+      "tags": ["models"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-02-27-openai-gpt-4-5-in-github-copilot-now-available-in-public-preview",
+          "publishdate": "27-feb-2025",
+          "flags": ["enterprise-only"]
+        },
+        "github-com": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-02-27-openai-gpt-4-5-in-github-copilot-now-available-in-public-preview",
+          "publishdate": "27-feb-2025",
+          "flags": ["enterprise-only"]
+        }
+      }
+    },
+    {
       "id": "claude-haiku-4-5",
       "name": "Claude Haiku 4.5",
       "description": "Fast, cost-efficient model offering strong general intelligence and long-context support.",
@@ -531,6 +609,24 @@
           "stage": "GA",
           "url": "https://github.blog/changelog/2025-12-18-claude-opus-4-5-is-now-generally-available-in-github-copilot/",
           "publishdate": "18-dec-2025"
+        }
+      }
+    },
+    {
+      "id": "claude-3-7-sonnet",
+      "name": "Claude 3.7 Sonnet",
+      "description": "Claude 3.7 Sonnet with enhanced reasoning, coding, and multilingual capabilities. Supports both thinking and non-thinking modes with particularly strong improvements in agentic scenarios.",
+      "tags": ["models"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-02-24-claude-3-7-sonnet-is-now-available-in-github-copilot-in-public-preview/",
+          "publishdate": "24-feb-2025"
+        },
+        "github-com": {
+          "stage": "PUB",
+          "url": "https://github.blog/changelog/2025-02-24-claude-3-7-sonnet-is-now-available-in-github-copilot-in-public-preview/",
+          "publishdate": "24-feb-2025"
         }
       }
     },
@@ -726,6 +822,84 @@
       }
     },
     {
+      "id": "codebase-search",
+      "name": "Advanced codebase search",
+      "description": "Enhanced #codebase context variable that runs multiple tools including text search, file search, embeddings-based semantic search, Git modified files, project structure analysis, file reading, directory reading, and workspace symbol search.",
+      "tags": ["chat", "agentic"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_98#_more-advanced-codebase-search-in-copilot-chat",
+          "publishdate": "27-feb-2025"
+        }
+      }
+    },
+    {
+      "id": "attach-problems-context",
+      "name": "Attach problems as context",
+      "description": "Attach problems from the Problems panel to Copilot chat as context by dragging items, typing #problems, or using the paperclip button to help fix code issues.",
+      "tags": ["chat"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_98#_attach-problems-as-chat-context",
+          "publishdate": "27-feb-2025"
+        }
+      }
+    },
+    {
+      "id": "attach-folders-context",
+      "name": "Attach folders as context",
+      "description": "Attach folders as context in Copilot chat by selecting the paperclip icon or typing #folder: followed by the folder name.",
+      "tags": ["chat"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_98#_attach-folders-as-context",
+          "publishdate": "27-feb-2025"
+        }
+      }
+    },
+    {
+      "id": "change-completions-model",
+      "name": "Change completions model",
+      "description": "Select and change the language model used for inline code completions and suggestions via the Command Palette or Copilot menu.",
+      "tags": ["code-completions"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_98#_change-completions-model",
+          "publishdate": "27-feb-2025"
+        }
+      }
+    },
+    {
+      "id": "vision",
+      "name": "Vision",
+      "description": "Attach and interact with images in Copilot Chat prompts by dragging and dropping images, pasting from clipboard, or attaching screenshots of VS Code window. Supports JPEG/JPG, PNG, GIF, and WEBP formats.",
+      "tags": ["chat"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://code.visualstudio.com/updates/v1_98#_copilot-vision-preview",
+          "publishdate": "27-feb-2025"
+        }
+      }
+    },
+    {
+      "id": "pr-custom-instructions",
+      "name": "Pull request custom instructions",
+      "description": "Provide custom instructions for generating pull request titles and descriptions to ensure consistency with team conventions.",
+      "tags": ["policies", "integration"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_98#_custom-instructions-for-pull-request-title-and-description",
+          "publishdate": "27-feb-2025"
+        }
+      }
+    },
+    {
       "id": "openai-codex-integration",
       "name": "OpenAI Codex integration",
       "description": "Integrates OpenAI Codex into the IDE.",
@@ -850,7 +1024,7 @@
     },
     {
       "id": "drag-file-into-context",
-      "name": "Drag file into Copilot context",
+      "name": "Drag file into context",
       "description": "Lets you drag a file from the editor tab into Copilot to quickly add it as context.",
       "tags": ["chat"],
       "availability": {

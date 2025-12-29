@@ -18,13 +18,15 @@ The features data resides in [features.json](./data/features.json). A feature lo
 ||publishdate|string|Date in dd-mmm-yyyy format, derived from the date in the blog/changelog URL or the contents of the page behind the URL|
 ||flags|string array (optional)|Array of flag values defined in metadata.json (e.g., individual-only, preview-version)|
 
-If you're asked to add a new feature, first verify if it already exists. If it exists, you'll need to update the table data instead of adding a new feature entry. You are allowed to retrieve the URL of an existing feature to have more context to compare with. ALWAYS run [validate-features.ps1](./scripts/validate-features.ps1) to validate your work!
+#### Add new/update existing feature guidance
 
-For examples, please check existing data in the file.
+- **No duplication**: If you're asked to add a new feature, first verify if it already exists. Naming can be slightly different. If you're unsure, ask me to validate if two features are the same. If a feature already exists in [./data/features.json](./data/features.json), you'll need to update the existing feature instead of adding a new entry. You are allowed to retrieve the URL of an existing feature to have more context to compare with. ALWAYS run [validate-features.ps1](./scripts/validate-features.ps1) to validate your work!
+- **Example features**: For examples, please check existing data in the file.
 
-If the article talks about an IDE called "stable", like "VS Code Stable", it means it's the opposite of the `preview-version` flag. So if a feature is flagged `preview-version` and then an article describes the same feature as available for the "stable" version, then you should remove the `preview-version` flag and not change anything else for that feature.
+#### Exceptions / special cases
 
-> NOTE: The GitHub Copilot CLI (command line interface) has been renamed to the GitHub Copilot Background Agent. Keep this in mind when processing older blogs/updates.
+- **Stages and flags**: If the article talks about an IDE called "stable", like "VS Code Stable", it means it's the opposite of the `preview-version` flag. So if a feature is flagged `preview-version` and then an article describes the same feature as available for the "stable" version, then you should remove the `preview-version` flag and not change anything else for that feature.
+- **GitHub Copilot CLI / Background Agent**: The GitHub Copilot CLI (command line interface) has been renamed to the GitHub Copilot Background Agent. Keep this in mind when processing older blogs/updates.
 
 #### INCLUDED FEATURES
 
