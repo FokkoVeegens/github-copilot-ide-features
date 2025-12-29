@@ -1,784 +1,428 @@
-        /* Tag badges bar */
-                .tags-bar {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 10px;
-                    margin-bottom: 24px;
-                    padding: 8px 0;
-                    flex-shrink: 0;
-                }
-                
-                .search-container {
-                    display: flex;
-                    align-items: center;
-                    gap: 6px;
-                }
-                
-                .search-input {
-                    padding: 6px 12px;
-                    border: 2px solid #e9d5ff;
-                    border-radius: 16px;
-                    font-size: 0.95rem;
-                    outline: none;
-                    transition: border-color 0.2s;
-                    min-width: 200px;
-                }
-                
-                .search-input:focus {
-                    border-color: #7c3aed;
-                }
-                
-                .search-button,
-                .clear-button {
-                    padding: 6px 12px;
-                    border: 2px solid #e9d5ff;
-                    border-radius: 16px;
-                    background: #f3e8ff;
-                    color: #7c3aed;
-                    font-size: 0.95rem;
-                    font-weight: 600;
-                    cursor: pointer;
-                    transition: background 0.2s, border-color 0.2s;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                
-                .search-button:hover,
-                .clear-button:hover {
-                    background: #e9d5ff;
-                    border-color: #7c3aed;
-                }
-                
-                .search-button:active,
-                .clear-button:active {
-                    transform: scale(0.95);
-                }
-                
-                .deprecated-toggle {
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 8px;
-                    padding: 6px 16px;
-                    background: #f3e8ff;
-                    color: #7c3aed;
-                    border-radius: 16px;
-                    border: 2px solid #e9d5ff;
-                    font-size: 0.95rem;
-                    font-weight: 600;
-                    cursor: pointer;
-                    user-select: none;
-                    transition: background 0.2s, border-color 0.2s;
-                }
-                
-                .deprecated-toggle:hover {
-                    background: #e9d5ff;
-                }
-                
-                .deprecated-toggle input[type="checkbox"] {
-                    width: 16px;
-                    height: 16px;
-                    cursor: pointer;
-                    margin: 0;
-                }
-                
-                .deprecated-toggle span {
-                    cursor: pointer;
-                }
-
-                .feature-mini-badge {
-                    display: inline-flex;
-                    align-items: center;
-                    padding: 1px 6px;
-                    margin-right: 6px;
-                    margin-bottom: 4px;
-                    color: #7c3aed;
-                    background: #f3e8ff;
-                    border-radius: 6px;
-                    box-shadow: 0 1px 2px rgba(124,58,237,0.06);
-                    letter-spacing: 0.01em;
-                    border: 1px solid #e9d5ff;
-                    font-size: 0.75rem;
-                    font-weight: 600;
-                    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-                }
-
-                .feature-mini-badge.selected {
-            background: #7c3aed;
-            color: #fff;
-            border-color: #7c3aed;
-            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.12);
-        }
-        .feature-mini-badge:hover {
-            /* No hover style for mini badges */
-        }
-
-        .tag-badge {
-            background: #f3e8ff;
-            color: #7c3aed;
-            border-radius: 16px;
-            padding: 6px 16px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-            border: 2px solid #e9d5ff;
-            user-select: none;
-        }
-
-        .tag-badge.selected {
-            background: #7c3aed;
-            color: #fff;
-            border-color: #7c3aed;
-            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.12);
-        }
-
-        /* In Development Badge */
-        .dev-badge {
-            position: fixed;
-            top: 50px;
-            left: -70px;
-            background: #f97316;
-            color: #000;
-            padding: 10px 100px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-align: center;
-            transform: rotate(-45deg);
-            z-index: 1001;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            cursor: help;
-            user-select: none;
-        }
-
-        .dev-badge::after {
-            content: attr(title);
-            position: fixed;
-            top: 120px;
-            left: 20px;
-            transform: rotate(45deg);
-            background: #111827;
-            color: #f9fafb;
-            padding: 10px 14px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 400;
-            white-space: normal;
-            width: 280px;
-            text-align: left;
-            line-height: 1.5;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.2s ease-out;
-        }
-
-        .dev-badge:hover::after {
-            opacity: 1;
-        }
-
-        @media (max-width: 768px) {
-            .dev-badge {
-                top: 40px;
-                left: -60px;
-                padding: 8px 50px;
-                font-size: 0.75rem;
-            }
-
-            .dev-badge::after {
-                top: 100px;
-                left: 10px;
-                width: 220px;
-                font-size: 0.75rem;
-                padding: 8px 12px;
-            }
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #24292e;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-            padding: 20px;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            height: calc(100vh - 40px);
-            min-height: 600px;
-        }
-
-        header {
-            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-            color: white;
-            padding: 15px;
-            text-align: center;
-            flex-shrink: 0;
-        }
-
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            flex-wrap: wrap;
-        }
-
-        header h1 {
-            font-size: 2rem;
-            margin-bottom: 0;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-        }
-
-        .contribute-button {
-            position: absolute;
-            right: 0;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 16px;
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: background 0.2s, box-shadow 0.2s;
-            z-index: 1002;
-        }
-
-        .contribute-button:hover {
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
-        }
-
-        .contribute-button .github-icon {
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        .contribute-button .github-icon path {
-            fill: white;
-        }
-
-        .info-icon {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 4px 8px;
-            border-radius: 50%;
-            transition: background 0.2s, transform 0.2s;
-            line-height: 1;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .info-icon:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: scale(1.1);
-        }
-
-        .info-icon:active {
-            transform: scale(0.95);
-        }
-
-        header .header-link {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-
-        header .header-link:hover {
-            opacity: 0.8;
-            text-decoration: underline;
-        }
-
-        header p {
-            font-size: 1rem;
-            opacity: 0.95;
-        }
-
-        .legend {
-            background: #f9fafb;
-            padding: 20px 30px;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        /* Wrapper for multiple legend sections so they can sit side-by-side */
-        .legend-group {
-            display: flex;
-            flex-direction: column;
-            flex-shrink: 0;
-        }
-
-        .legend-group .legend {
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        @media (min-width: 768px) {
-            .legend-group {
-                flex-direction: row;
-                gap: 1px; /* visually separate cards while keeping border continuity */
-            }
-
-            .legend-group .legend {
-                flex: 1;
-                border-right: 1px solid #e5e7eb;
-            }
-
-            .legend-group .legend:last-child {
-                border-right: none;
-            }
-        }
-
-        .legend h3 {
-            color: #8b5cf6;
-            margin-bottom: 12px;
-            font-size: 1.1rem;
-        }
-
-        .legend-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .legend-badge {
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .legend-badge.GA {
-            background: #dcfce7;
-            color: #166534;
-        }
-
-        .legend-badge.PUB {
-            background: #dbeafe;
-            color: #1e40af;
-        }
-
-        .legend-badge.PRV {
-            background: #fef3c7;
-            color: #92400e;
-        }
-
-        .legend-badge.DEP {
-            background: #fee2e2;
-            color: #ef4444;
-        }
-
-        .legend-item span {
-            font-size: 0.9rem;
-            color: #6b7280;
-        }
-
-        .content {
-            padding: 30px;
-            flex: 1;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .category-section {
-            margin-bottom: 40px;
-        }
-
-        .category-section:last-child {
-            margin-bottom: 0;
-        }
-
-        .category-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #8b5cf6;
-        }
-
-        .category-header h2 {
-            color: #8b5cf6;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-transform: capitalize;
-        }
-
-        .category-count {
-            margin-left: auto;
-            background: #f3e8ff;
-            color: #7c3aed;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        .table-wrapper {
-            flex: 1;
-            overflow-y: auto;
-            overflow-x: auto;
-            border-radius: 8px;
-            border: 1px solid #e5e7eb;
-            position: relative;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-        }
-
-        thead {
-            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        th {
-            padding: 15px 12px;
-            text-align: left;
-            font-weight: 600;
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
-
-        .ide-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .ide-logo {
-            width: 32px;
-            height: 32px;
-            display: block;
-            cursor: help;
-        }
-
-        th:first-child {
-            border-top-left-radius: 8px;
-        }
-
-        th:last-child {
-            border-top-right-radius: 8px;
-        }
-
-        tbody tr {
-            border-bottom: 1px solid #f3f4f6;
-            transition: background-color 0.2s;
-        }
-
-        tbody tr:hover {
-            background: #f9fafb;
-        }
-
-        tbody tr:last-child {
-            border-bottom: none;
-        }
-
-        td {
-            padding: 15px 12px;
-            font-size: 0.9rem;
-        }
-
-        td:first-child {
-            font-weight: 600;
-            color: #374151;
-        }
-
-        .availability-cell {
-            text-align: center;
-        }
-
-        .checkmark {
-            margin-right: 5px;
-            font-size: 0.9rem;
-        }
-
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            padding: 5px 10px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-
-        .status-badge.GA {
-            background: #dcfce7;
-            color: #166534;
-        }
-
-        .status-badge.PUB {
-            background: #dbeafe;
-            color: #1e40af;
-        }
-
-        .status-badge.PRV {
-            background: #fef3c7;
-            color: #92400e;
-        }
-
-        .status-badge.DEP {
-            background: #fee2e2;
-            color: #ef4444;
-        }
-
-        .status-badge:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .flag-icon {
-            font-size: 0.9rem;
-            margin-left: 5px;
-        }
-
-        .not-available {
-            color: #d1d5db;
-            font-weight: 500;
-        }
-
-        .feature-name {
-            position: relative;
-            display: inline-block;
-            cursor: help;
-        }
-
-        .feature-tooltip {
-            position: fixed;
-            max-width: 320px;
-            background: #111827;
-            color: #f9fafb;
-            padding: 8px 10px;
-            border-radius: 6px;
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.4);
-            font-size: 0.8rem;
-            line-height: 1.4;
-            z-index: 1000;
-            pointer-events: none;
-            opacity: 0;
-            transform: translate(-50%, -12px);
-            transition: opacity 0.12s ease-out;
-        }
-
-        .feature-tooltip.visible {
-            opacity: 1;
-        }
-
-        .loading {
-            text-align: center;
-            padding: 60px 20px;
-            color: #8b5cf6;
-            font-size: 1.2rem;
-        }
-
-        .error {
-            background: #fef2f2;
-            border: 1px solid #fecaca;
-            color: #991b1b;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px;
-        }
-
-        footer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 12px;
-            padding: 20px;
-            color: #6b7280;
-            font-size: 0.9rem;
-            background: #f9fafb;
-            border-top: 1px solid #e5e7eb;
-            flex-shrink: 0;
-        }
-
-        footer .github-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #8b5cf6;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        footer .github-link:hover {
-            text-decoration: underline;
-        }
-
-        footer .github-icon {
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        footer .license {
-            display: inline-flex;
-            align-items: center;
-            margin-left: 0;
-            padding-left: 12px;
-            border-left: 2px solid #d1d5db;
-        }
-
-        footer a {
-            color: #8b5cf6;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 1000px) {
-            .contribute-button {
-                position: static;
-                margin-top: 10px;
-            }
-
-            .header-content {
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-
-            header h1 {
-                flex: 1 1 100%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-
-            header {
-                padding: 15px 10px;
-            }
-
-            .header-content {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            header h1 {
-                font-size: 1.5rem;
-            }
-
-            .contribute-button {
-                position: static;
-                font-size: 0.85rem;
-                padding: 6px 12px;
-            }
-
-            header p {
-                font-size: 0.9rem;
-            }
-
-            .content {
-                padding: 20px 15px;
-            }
-
-            .category-header h2 {
-                font-size: 1.3rem;
-            }
-
-            th, td {
-                padding: 10px 8px;
-                font-size: 0.8rem;
-            }
-
-            .legend-grid {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .table-wrapper {
-                font-size: 0.85rem;
-            }
-
-            .status-badge {
-                padding: 4px 8px;
-                font-size: 0.75rem;
-            }
-            
-            .search-container {
-                width: 100%;
-                margin-left: 0;
-                margin-top: 10px;
-            }
-            
-            .search-input {
-                flex: 1;
-                min-width: 0;
-            }
-
-            footer {
-                flex-direction: column;
-                gap: 4px;
-                text-align: center;
-            }
-
-            footer .license {
-                display: block;
-                margin-left: 0;
-                padding-left: 0;
-                border-left: none;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 20px 15px;
-            }
-
-            header h1 {
-                font-size: 1.3rem;
-            }
-
-            .category-count {
-                font-size: 0.8rem;
-                padding: 4px 10px;
-            }
-
-            th, td {
-                padding: 8px 6px;
-                font-size: 0.75rem;
-            }
-        }
+/* ============================================
+   Purple Theme Customization for Bulma
+   ============================================ */
+
+:root {
+    --bulma-primary-h: 258deg;
+    --bulma-primary-s: 77%;
+    --bulma-primary-l: 58%;
+    --bulma-primary: hsl(258, 77%, 58%);
+    --bulma-primary-invert: #fff;
+}
+
+/* ============================================
+   Global Styles
+   ============================================ */
+
+body {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.app-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================================
+   Development Badge
+   ============================================ */
+
+.dev-badge {
+    position: fixed;
+    top: 50px;
+    left: -70px;
+    background: #f97316;
+    color: #000;
+    padding: 10px 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    transform: rotate(-45deg);
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: help;
+    user-select: none;
+}
+
+.dev-badge::after {
+    content: attr(title);
+    position: fixed;
+    top: 120px;
+    left: 20px;
+    transform: rotate(45deg);
+    background: #111827;
+    color: #f9fafb;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    white-space: normal;
+    width: 280px;
+    text-align: left;
+    line-height: 1.5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-out;
+}
+
+.dev-badge:hover::after {
+    opacity: 1;
+}
+
+/* ============================================
+   Hero/Header Customization
+   ============================================ */
+
+.hero.is-primary {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.hero .hero-body {
+    padding: 1.5rem 1.5rem;
+}
+
+.hero .title {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.hero .title a {
+    text-decoration: none;
+}
+
+.hero .title a:hover {
+    opacity: 0.85;
+}
+
+.hero .button.is-primary.is-inverted.is-outlined {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
+
+.hero .button.is-primary.is-inverted.is-outlined:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hero .button svg path {
+    fill: white;
+}
+
+/* ============================================
+   Legend Toggle Bar
+   ============================================ */
+
+.legend-toggle {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    user-select: none;
+}
+
+.legend-toggle:hover {
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+}
+
+.legend-toggle-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    color: white;
+    font-weight: 600;
+}
+
+.legend-toggle-icon {
+    font-size: 0.75rem;
+}
+
+.legend-toggle-text {
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   Legend Box
+   ============================================ */
+
+.legend-box {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.legend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.legend-item span:not(.tag) {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* Shared Badge Colors */
+.legend-badge.GA,
+.status-badge.GA {
+    background-color: #dcfce7 !important;
+    color: #166534 !important;
+}
+
+.legend-badge.PUB,
+.status-badge.PUB {
+    background-color: #dbeafe !important;
+    color: #1e40af !important;
+}
+
+.legend-badge.PRV,
+.status-badge.PRV {
+    background-color: #fef3c7 !important;
+    color: #92400e !important;
+}
+
+.legend-badge.DEP,
+.status-badge.DEP {
+    background-color: #fee2e2 !important;
+    color: #ef4444 !important;
+}
+
+/* ============================================
+   Main Content Section
+   ============================================ */
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+/* ============================================
+   Tags/Filter Bar
+   ============================================ */
+
+.tags-bar {
+    margin-bottom: 1.5rem;
+}
+
+.tags-bar .field.has-addons {
+    margin-bottom: 0;
+}
+
+.tags-bar .tags {
+    margin-top: 0 !important;
+    margin-bottom: 0.5rem;
+}
+
+.tag.is-clickable {
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.tag.is-clickable:not(.is-primary) {
+    background-color: #f3e8ff;
+    color: #7c3aed;
+    border: 1px solid #e9d5ff;
+}
+
+.tag.is-clickable:not(.is-primary):hover {
+    background-color: #e9d5ff;
+}
+
+.deprecated-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.5rem 1rem;
+    background: #f3e8ff;
+    color: #7c3aed;
+    border-radius: 4px;
+    border: 1px solid #e9d5ff;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+}
+
+.deprecated-toggle:hover {
+    background: #e9d5ff;
+}
+
+/* ============================================
+   Table Customization
+   ============================================ */
+
+.table-container {
+    flex: 1;
+    overflow: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    max-height: calc(100vh - 320px);
+    transition: max-height 0.3s ease;
+}
+
+.legend-expanded .table-container {
+    max-height: calc(100vh - 520px);
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    position: sticky;
+    top: 0;
+}
+
+.table thead th {
+    color: white;
+    border-color: rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.ide-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ide-logo {
+    width: 32px;
+    height: 32px;
+    display: block;
+    cursor: help;
+}
+
+.feature-name {
+    cursor: help;
+    position: relative;
+}
+
+.checkmark {
+    margin-right: 5px;
+}
+
+/* Status Badge Colors */
+.status-badge {
+    text-decoration: none;
+    transition: all 0.2s;
+    font-weight: 600;
+}
+
+.status-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.flag-icon {
+    margin-left: 5px;
+}
+
+/* ============================================
+   Tooltip
+   ============================================ */
+
+.feature-tooltip {
+    position: fixed;
+    max-width: 320px;
+    background: #111827;
+    color: #f9fafb;
+    padding: 8px 10px;
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.4);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.12s ease-out;
+}
+
+.feature-tooltip.visible {
+    opacity: 1;
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .app-container {
+        min-height: calc(100vh - 20px);
+    }
+
+    .hero .level,
+    .hero .level-left,
+    .hero .level-right {
+        display: block;
+    }
+
+    .hero .level-item {
+        margin-bottom: 0.75rem;
+    }
+
+    .hero .title {
+        font-size: 1.5rem;
+    }
+
+    .legend-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-container {
+        flex-wrap: wrap;
+    }
+
+    .dev-badge {
+        top: 40px;
+        left: -60px;
+        padding: 8px 50px;
+        font-size: 0.75rem;
+    }
+
+    .dev-badge::after {
+        top: 100px;
+        left: 10px;
+        width: 220px;
+        font-size: 0.75rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero .title {
+        font-size: 1.25rem;
+    }
+}
