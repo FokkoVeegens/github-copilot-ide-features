@@ -10,7 +10,7 @@
 <body>
     <div id="app">
         <div class="dev-badge" title="This site is in active development and might contain incorrect information. Please contribute to improve this site.">In development</div>
-        <div class="app-container">
+        <div class="app-container" :class="{ 'legend-expanded': showLegend }">
             <section class="hero is-primary">
                 <div class="hero-body">
                     <div class="container">

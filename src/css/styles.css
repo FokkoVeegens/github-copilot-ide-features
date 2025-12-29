@@ -279,6 +279,11 @@ body {
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     max-height: calc(100vh - 320px);
+    transition: max-height 0.3s ease;
+}
+
+.legend-expanded .table-container {
+    max-height: calc(100vh - 520px);
 }
 
 .table {
