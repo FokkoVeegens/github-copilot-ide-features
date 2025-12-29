@@ -750,7 +750,7 @@
     {
       "id": "mcp-registry-enforcement",
       "name": "MCP registries (enforcement)",
-      "description": "Lets administrators enforce registry-only MCP server usage in VS Code Stable using allowlist governance policies.",
+      "description": "Lets administrators enforce registry-only MCP server usage, using allowlist governance policies.",
       "tags": ["compliancy", "mcp", "agentic"],
       "availability": {
         "vs-code": {
@@ -876,7 +876,7 @@
     {
       "id": "vision",
       "name": "Vision",
-      "description": "Attach and interact with images in Copilot Chat prompts by dragging and dropping images, pasting from clipboard, or attaching screenshots of VS Code window. Supports JPEG/JPG, PNG, GIF, and WEBP formats.",
+      "description": "Attach and interact with images in Copilot Chat prompts by dragging and dropping images, pasting from clipboard, or attaching screenshots of the IDE. Supports JPEG/JPG, PNG, GIF, and WEBP formats.",
       "tags": ["chat"],
       "availability": {
         "vs-code": {
@@ -916,7 +916,7 @@
     {
       "id": "agent-sessions-view",
       "name": "Agent Sessions view",
-      "description": "Adds an Agent Sessions view in VS Code to manage local and cloud Copilot agent sessions from one interface.",
+      "description": "Adds an Agent Sessions view to manage local and cloud Copilot agent sessions from one interface.",
       "tags": ["agentic"],
       "availability": {
         "vs-code": {
@@ -930,7 +930,7 @@
     {
       "id": "context-isolated-sub-agents",
       "name": "Context-isolated sub-agents",
-      "description": "Introduces context-isolated subagents in VS Code so Copilot can run focused tasks in separate, optimized contexts.",
+      "description": "Introduces context-isolated subagents so Copilot can run focused tasks in separate, optimized contexts.",
       "tags": ["agentic", "multi-agent", "chat"],
       "availability": {
         "vs-code": {
@@ -944,7 +944,7 @@
     {
       "id": "plan-mode",
       "name": "Plan Mode",
-      "description": "Adds Plan Mode in VS Code, where Copilot creates and validates step-by-step implementation plans before writing code.",
+      "description": "Adds Plan Mode, where Copilot creates and validates step-by-step implementation plans before writing code.",
       "tags": ["agentic", "chat"],
       "availability": {
         "vs-code": {

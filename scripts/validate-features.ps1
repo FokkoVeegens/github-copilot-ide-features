@@ -12,9 +12,11 @@ $metadata = Get-Content $metadataPath -Raw | ConvertFrom-Json
 Write-Host "Loading features from: $featuresPath"
 $features = Get-Content $featuresPath -Raw | ConvertFrom-Json
 
-# Get IDE identifiers
+# Get IDE identifiers and names
 $ideIds = $metadata.ides | ForEach-Object { $_.id }
+$ideNames = $metadata.ides | ForEach-Object { $_.name }
 Write-Host "IDE identifiers to check: $($ideIds -join ', ')"
+Write-Host "IDE names to check: $($ideNames -join ', ')"
 Write-Host ""
 
 # Track validation errors and warnings
@@ -62,6 +64,23 @@ foreach ($feature in $features.features) {
             $errors += "Feature description for '$($feature.name)' (ID: $($feature.id)) contains IDE identifier '$ideId'"
         }
     }
+    
+    foreach ($ideName in $ideNames) {
+        # Check if feature ID contains IDE name as a separate word (case-insensitive with word boundaries)
+        if ($feature.id -match "(?i)\b$([regex]::Escape($ideName))\b") {
+            $errors += "Feature ID '$($feature.id)' contains IDE name '$ideName'"
+        }
+        
+        # Check if feature name contains IDE name as a separate word (case-insensitive with word boundaries)
+        if ($feature.name -match "(?i)\b$([regex]::Escape($ideName))\b") {
+            $errors += "Feature name '$($feature.name)' (ID: $($feature.id)) contains IDE name '$ideName'"
+        }
+        
+        # Check if feature description contains IDE name as a separate word (case-insensitive with word boundaries)
+        if ($feature.description -match "(?i)\b$([regex]::Escape($ideName))\b") {
+            $errors += "Feature description for '$($feature.name)' (ID: $($feature.id)) contains IDE name '$ideName'"
+        }
+    }
 }
 
 # Report results
@@ -85,6 +104,6 @@ if ($errors.Count -gt 0) {
     exit 1
 } else {
     Write-Host "✅ VALIDATION PASSED" -ForegroundColor Green
-    Write-Host "All features have valid IDs and names (no IDE identifiers found)" -ForegroundColor Green
+    Write-Host "All features have valid IDs and names (no IDE identifiers or names found)" -ForegroundColor Green
     exit 0
 }
