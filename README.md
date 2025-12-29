@@ -6,7 +6,7 @@ The site is available here: https://fokkoveegens.github.io/github-copilot-ide-fe
 
 ## Technology
 
-The project contains a static website published to GitHub Pages. It is built using plain HTML, CSS, and JavaScript, ensuring compatibility across all modern web browsers without the need for additional frameworks or libraries. The data is stored in JSON format, making it easy to update and maintain.
+The project contains a static website published to GitHub Pages. It is built using Vue.js and Bulma CSS framework, ensuring compatibility across all modern web browsers. The data is stored in JSON format, making it easy to update and maintain.
 
 ## Local Development / running the website
 
