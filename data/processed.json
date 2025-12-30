@@ -1,0 +1,164 @@
+{
+  "processed": [
+    {
+      "url": "https://code.visualstudio.com/updates/v1_99",
+      "type": "vs-code"
+    },
+    {
+      "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/892199",
+      "type": "jetbrains"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-11-18-auto-model-selection-for-copilot-in-jetbrains-ides-xcode-and-eclipse-in-public-preview/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-02-05-google-gemini-2-0-flash-is-now-available-to-all-copilot-users-in-public-preview/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-12-12-gemini-3-pro-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://code.visualstudio.com/updates/v1_106",
+      "type": "vs-code"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-12-18-claude-opus-4-5-is-now-generally-available-in-github-copilot/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-09-22-github-copilot-app-modernization-is-now-generally-available-for-java-and-net/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-12-17-gemini-3-flash-is-now-in-public-preview-for-github-copilot/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-11-18-custom-agents-available-in-github-copilot-for-jetbrains-eclipse-and-xcode-now-in-public-preview/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-11-11-auto-model-selection-for-copilot-in-visual-studio-in-public-preview",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-12-10-auto-model-selection-is-generally-available-in-github-copilot-in-visual-studio-code/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-10-28-github-copilot-app-modernization-now-available-in-intellij-idea/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-02-24-claude-3-7-sonnet-is-now-available-in-github-copilot-in-public-preview/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-10-13-anthropics-claude-sonnet-4-5-is-now-generally-available-in-github-copilot/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://code.visualstudio.com/updates/v1_105",
+      "type": "vs-code"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-codex-max-is-now-generally-available-in-github-copilot/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-10-20-claude-haiku-4-5-is-generally-available-in-all-supported-ides/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://code.visualstudio.com/updates/v1_98",
+      "type": "vs-code"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-11-18-enhanced-mcp-oauth-support-for-github-copilot-in-jetbrains-eclipse-and-xcode/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://code.visualstudio.com/updates/v1_100",
+      "type": "vs-code"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-12-17-gpt-5-2-is-now-generally-available-in-github-copilot/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-10-28-delegate-tasks-to-copilot-coding-agent-from-jetbrains-ides/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://code.visualstudio.com/updates/v1_97",
+      "type": "vs-code"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-01-31-openai-o3-mini-now-available-in-github-copilot-and-github-models-public-preview/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-11-18-internal-mcp-registry-and-allowlist-controls-for-vs-code-stable-in-public-preview/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-12-16-c-code-editing-tools-for-github-copilot-in-public-preview/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-02-27-openai-gpt-4-5-in-github-copilot-now-available-in-public-preview",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/882517",
+      "type": "jetbrains"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-12-17-gpt-5-1-and-gpt-5-1-codex-are-now-generally-available-in-github-copilot/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-10-28-mcp-registry-and-allowlist-controls-for-copilot-in-jetbrains-eclipse-and-xcode-now-in-public-preview/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-11-10-claude-sonnet-3-5-deprecated-claude-haiku-4-5-available-in-copilot-free/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-10-28-github-copilot-cli-use-custom-agents-and-delegate-to-copilot-coding-agent/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-10-28-custom-agents-for-github-copilot/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-10-27-github-copilot-in-visual-studio-october-update/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://github.blog/changelog/2025-11-10-raptor-mini-is-rolling-out-in-public-preview-for-github-copilot/",
+      "type": "github-changelog"
+    },
+    {
+      "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
+      "type": "jetbrains"
+    }
+  ]
+}

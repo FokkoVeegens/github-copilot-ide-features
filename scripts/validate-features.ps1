@@ -98,8 +98,8 @@ if ($errors.Count -gt 0) {
     Write-Host "VALIDATION FAILED" -ForegroundColor Red
     Write-Host "Found $($errors.Count) error(s):" -ForegroundColor Red
     Write-Host ""
-    foreach ($error in $errors) {
-        Write-Host "  ❌ $error" -ForegroundColor Red
+    foreach ($err in $errors) {
+        Write-Host "  ❌ $err" -ForegroundColor Red
     }
     exit 1
 } else {
