@@ -8,8 +8,8 @@ The features data resides in [features.json](./data/features.json). A feature lo
 
 |Attribute L1|Attribute L2|Format|Instructions|
 |-|-|-|-|
-|id||string, lower case, dash separated|NEVER contains the name of an IDE (IDE is put in the **availability** attribute), short name for the feature, always first check if one already exists, NO DUPLICATE id's|
-|name||string|Name of the feature, keep it less than 50 characters. NEVER contains the name of an IDE (IDE is put in the **availability** attribute), human-readable name of the feature|
+|id||string, lower case, dash separated|NEVER contains the name of an IDE (IDE is put in the **availability** attribute), NEVER contains the word "Copilot", short name for the feature, always first check if one already exists, NO DUPLICATE id's|
+|name||string|Name of the feature, keep it less than 50 characters. NEVER contains the name of an IDE (IDE is put in the **availability** attribute), NEVER contains the word "Copilot", human-readable name of the feature|
 |description||long string|Longer description of the feature, can contain about 2 sentences, will be shown as a popup when hovered over the name|
 |tags||string array, all lower case|These should identify the feature and allow the user to filter features, never create a new one without approval from me|
 |availability||object map|Map of IDE identifiers (matching keys in metadata.json) to availability objects|
@@ -18,13 +18,15 @@ The features data resides in [features.json](./data/features.json). A feature lo
 ||publishdate|string|Date in dd-mmm-yyyy format, derived from the date in the blog/changelog URL or the contents of the page behind the URL|
 ||flags|string array (optional)|Array of flag values defined in metadata.json (e.g., individual-only, preview-version)|
 
-If you're asked to add a new feature, first verify if it already exists. If it exists, you'll need to update the table data instead of adding a new feature entry. You are allowed to retrieve the URL of an existing feature to have more context to compare with. ALWAYS run [validate-features.ps1](./scripts/validate-features.ps1) to validate your work!
+#### Add new/update existing feature guidance
 
-For examples, please check existing data in the file.
+- **No duplication**: If you're asked to add a new feature, first verify if it already exists. Naming can be slightly different. If you're unsure, ask me to validate if two features are the same. If a feature already exists in [./data/features.json](./data/features.json), you'll need to update the existing feature instead of adding a new entry. You are allowed to retrieve the URL of an existing feature to have more context to compare with. ALWAYS run [validate-features.ps1](./scripts/validate-features.ps1) to validate your work!
+- **Example features**: For examples, please check existing data in the file.
 
-If the article talks about an IDE called "stable", like "VS Code Stable", it means it's the opposite of the `preview-version` flag. So if a feature is flagged `preview-version` and then an article describes the same feature as available for the "stable" version, then you should remove the `preview-version` flag and not change anything else for that feature.
+#### Exceptions / special cases
 
-> NOTE: The GitHub Copilot CLI (command line interface) has been renamed to the GitHub Copilot Background Agent. Keep this in mind when processing older blogs/updates.
+- **Stages and flags**: If the article talks about an IDE called "stable", like "VS Code Stable", it means it's the opposite of the `preview-version` flag. So if a feature is flagged `preview-version` and then an article describes the same feature as available for the "stable" version, then you should remove the `preview-version` flag and not change anything else for that feature.
+- **GitHub Copilot CLI / Background Agent**: The GitHub Copilot CLI (command line interface) has been renamed to the GitHub Copilot Background Agent. Keep this in mind when processing older blogs/updates.
 
 #### INCLUDED FEATURES
 
@@ -36,12 +38,26 @@ These features should be in the features list:
 
 #### EXCLUDED FEATURES
 
-These features should NOT be in the features list:
+These features should **NOT** be in the features list:
 
 - Bugfixes
 - Background improvements, not directly visible to the user
-- Performance improvements
+- Performance improvements (e.g., "faster edits", "improved responses", "optimized prompts")
 - Improvements where the impact is not directly clear to the user
+- Enhancements to existing features (UI polish, visual improvements)
+- **Infrastructure changes** (new protocols, transports, backend architecture)
+- **Default configuration changes** (e.g., "model X is now the default")
+- **Quality improvements** (better/smarter suggestions, more accurate results - these are non-deterministic and hard to demo reliably)
+- **Minor UI improvements** (fold/unfold controls, status indicators, visual polish)
+- **Configuration details** (input placeholders, config generation methods)
+- **Preview/V2 versions of existing features** (unless they represent a fundamentally different approach)
+- Features that require specific, hard-to-reproduce scenarios to demonstrate
+
+**The "Demo Test"**: If you cannot easily demonstrate the feature's value in a 2-minute live demo to a client, showing clear before/after differences, it should not be in the list. Good features are:
+- Clearly distinct and identifiable
+- Provide obvious value in common scenarios
+- Work reliably enough to demonstrate
+- Can be compared across different IDEs
 
 #### New LLM models
 
