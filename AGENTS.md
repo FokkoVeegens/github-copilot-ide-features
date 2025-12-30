@@ -13,7 +13,7 @@ The features data resides in [features.json](./data/features.json). A feature lo
 |description||long string|Longer description of the feature, can contain about 2 sentences, will be shown as a popup when hovered over the name|
 |tags||string array, all lower case|These should identify the feature and allow the user to filter features, never create a new one without approval from me|
 |availability||object map|Map of IDE identifiers (matching keys in metadata.json) to availability objects|
-||stage|string|One of the stage codes from metadata.json (PRV, PRE, GA)|
+||stage|string|One of the stage codes from metadata.json (GA, PRE, PRV, DEP)|
 ||url|string|GitHub Changelog URL pointing to the feature announcement|
 ||publishdate|string|Date in dd-mmm-yyyy format, derived from the date in the blog/changelog URL or the contents of the page behind the URL|
 ||flags|string array (optional)|Array of flag values defined in metadata.json (e.g., individual-only, preview-version)|
