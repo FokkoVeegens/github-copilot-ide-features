@@ -7,9 +7,9 @@
       "tags": ["code-completions", "agentic"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
-          "url": "https://code.visualstudio.com/updates/v1_97#_copilot-next-edit-suggestions-preview",
-          "publishdate": "08-jan-2025"
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_99#_next-edit-suggestions-general-availability",
+          "publishdate": "27-mar-2025"
         }
       }
     },
@@ -46,23 +46,153 @@
       "tags": ["agentic", "chat"],
       "availability": {
         "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_99#_agent-mode-is-available-in-vs-code-stable",
+          "publishdate": "27-mar-2025"
+        }
+      }
+    },
+    {
+      "id": "mcp-server-support",
+      "name": "Model Context Protocol server support",
+      "description": "Support for Model Context Protocol (MCP) servers in agent mode, offering a standardized method for AI models to discover and interact with external tools, applications, and data sources. Includes AI-assisted setup for Docker, npm, and PyPI packages, on-demand server startup, and discovery of existing MCP servers from Claude Desktop.",
+      "tags": ["agentic", "mcp", "extensibility"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_99#_model-context-protocol-server-support",
+          "publishdate": "27-mar-2025"
+        }
+      }
+    },
+    {
+      "id": "thinking-tool",
+      "name": "Thinking tool",
+      "description": "Agent mode tool that gives models the opportunity to think between tool calls, improving performance on complex tasks and SWE-bench evaluations.",
+      "tags": ["agentic", "chat"],
+      "availability": {
+        "vs-code": {
           "stage": "PUB",
-          "url": "https://code.visualstudio.com/updates/v1_98#_agent-mode-improvements-experimental",
-          "publishdate": "27-feb-2025"
+          "url": "https://code.visualstudio.com/updates/v1_99#_thinking-tool-experimental",
+          "publishdate": "27-mar-2025"
+        }
+      }
+    },
+    {
+      "id": "fetch-tool",
+      "name": "Fetch tool",
+      "description": "Tool for including content from publicly accessible webpages in prompts. Works by rendering the webpage in a headless browser with cached data for repeated queries. Accessible via #fetch in agent mode or explicitly via #fetch with URL in other modes.",
+      "tags": ["agentic", "chat"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_99#_fetch-tool",
+          "publishdate": "27-mar-2025"
+        }
+      }
+    },
+    {
+      "id": "usages-tool",
+      "name": "Usages tool",
+      "description": "Tool combining Find All References, Find Implementation, and Go to Definition to help chat learn about functions, classes, or interfaces. Useful for finding sample implementations or identifying places to change during refactoring.",
+      "tags": ["agentic", "chat"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_99#_usages-tool",
+          "publishdate": "27-mar-2025"
+        }
+      }
+    },
+    {
+      "id": "create-workspace-agent-mode",
+      "name": "Create workspace with agent mode",
+      "description": "Scaffold new workspaces in agent mode, including extensions, MCP servers, and other development environments with necessary dependencies and settings.",
+      "tags": ["agentic", "chat", "workspace"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://code.visualstudio.com/updates/v1_99#_create-a-new-workspace-with-agent-mode-experimental",
+          "publishdate": "27-mar-2025"
+        }
+      }
+    },
+    {
+      "id": "extension-tools-agent-mode",
+      "name": "Extension tools in agent mode",
+      "description": "Support for language model tools contributed by extensions in agent mode. Extensions can contribute tools via the language model tools API that can be enabled, disabled, and used in agent mode.",
+      "tags": ["agentic", "extensibility"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_99#_vs-code-extension-tools-in-agent-mode",
+          "publishdate": "27-mar-2025"
+        }
+      }
+    },
+    {
+      "id": "agent-tool-approvals",
+      "name": "Agent mode tool approvals",
+      "description": "Approval system for tools and terminal commands in agent mode with the ability to remember approvals at session, workspace, or application level. Includes experimental auto-approve setting for all tools.",
+      "tags": ["agentic", "compliancy"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_99#_agent-mode-tool-approvals",
+          "publishdate": "27-mar-2025"
+        }
+      }
+    },
+    {
+      "id": "unified-chat-view",
+      "name": "Unified Chat view",
+      "description": "Streamlined chat experience merging Chat and Copilot Edits views into one with three modes: Ask for questions, Edit for code editing across files, and Agent for autonomous coding. Enables switching modes mid-conversation, restoring past edit sessions, and running multiple agent sessions.",
+      "tags": ["chat"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_99#_unified-chat-view",
+          "publishdate": "27-mar-2025"
+        }
+      }
+    },
+    {
+      "id": "byok",
+      "name": "Bring Your Own Key (BYOK)",
+      "description": "Allows Copilot Pro and Free users to bring their own API keys for providers like Azure, Anthropic, Gemini, OpenAI, Ollama, and OpenRouter to use new models not natively supported by Copilot.",
+      "tags": ["chat", "extensibility"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://code.visualstudio.com/updates/v1_99#_bring-your-own-key-byok-preview",
+          "publishdate": "27-mar-2025",
+          "flags": ["individual-only"]
+        }
+      }
+    },
+    {
+      "id": "tool-based-edit-mode",
+      "name": "Tool-based edit mode",
+      "description": "New edit mode implementation using the same tool-based approach as agent mode, enabling seamless switching between ask, edit, and agent modes while simplifying the underlying architecture.",
+      "tags": ["chat", "agentic"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://code.visualstudio.com/updates/v1_99#_tool-based-edit-mode",
+          "publishdate": "27-mar-2025"
         }
       }
     },
     {
       "id": "edits-notebook-support",
       "name": "Edits Notebook Support",
-      "description": "Use Copilot Edits to work with notebook files, including creating new notebooks, modifying content across multiple cells, inserting and deleting cells, and changing cell types.",
+      "description": "Use Copilot Edits to work with notebook files, including creating new notebooks, modifying content across multiple cells, inserting and deleting cells, and changing cell types. Includes new notebook tool, diff navigation, undo support, and cell output context attachment.",
       "tags": ["chat", "agentic"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
-          "url": "https://code.visualstudio.com/updates/v1_98#_notebook-support-in-copilot-edits-preview",
-          "publishdate": "27-feb-2025",
-          "flags": ["preview-version"]
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_99#_ai-notebook-editing-improvements",
+          "publishdate": "27-mar-2025"
         }
       }
     },
@@ -70,7 +200,7 @@
       "id": "workspace-index-status-ui",
       "name": "Workspace index status UI",
       "description": "View the type of workspace index being used by Copilot (remote, local, or basic) and reindexing status in the Status Bar.",
-      "tags": ["chat"],
+      "tags": ["chat", "workspace"],
       "availability": {
         "vs-code": {
           "stage": "GA",
@@ -82,13 +212,13 @@
     {
       "id": "build-remote-workspace-index",
       "name": "Build remote workspace index",
-      "description": "Create high-quality remote workspace indexes managed by GitHub for faster @workspace results across large projects.",
-      "tags": ["chat"],
+      "description": "Create high-quality remote workspace indexes managed by GitHub for faster @workspace results across large projects. Now includes instant indexing that automatically builds the index when first asking #codebase or @workspace questions.",
+      "tags": ["chat", "workspace"],
       "availability": {
         "vs-code": {
           "stage": "GA",
-          "url": "https://code.visualstudio.com/updates/v1_97#_build-a-remote-workspace-index",
-          "publishdate": "08-jan-2025"
+          "url": "https://code.visualstudio.com/updates/v1_99#_faster-workspace-searches-with-instant-indexing",
+          "publishdate": "27-mar-2025"
         }
       }
     },
@@ -96,7 +226,7 @@
       "id": "git-changes-context",
       "name": "Git changes context variable",
       "description": "Reference files modified in Git source control using the #changes context variable in Chat or Edits.",
-      "tags": ["chat"],
+      "tags": ["chat", "context"],
       "availability": {
         "vs-code": {
           "stage": "GA",
@@ -178,7 +308,7 @@
       "id": "global-instruction-file",
       "name": "Global instruction file",
       "description": "Tailor GitHub Copilot to provide chat responses and code suggestions aligned with your team's specific requirements using instruction files that can be configured globally or per workspace.",
-      "tags": ["policies", "chat"],
+      "tags": ["chat", "customization"],
       "availability": {
         "vs-code": {
           "stage": "GA",
@@ -195,13 +325,31 @@
     {
       "id": "prompt-files",
       "name": "Prompt files",
-      "description": "Ready-made prompts that can be reused locally or shared by putting them in the repository, enabling teams to standardize common Copilot interactions.",
-      "tags": ["policies"],
+      "description": "Ready-made prompts that can be reused locally or shared by putting them in the repository, enabling teams to standardize common Copilot interactions. Includes glob pattern support, autocompletion for filesystem paths, diagnostic information for broken links, and alignment with custom instructions.",
+      "tags": ["customization"],
       "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_99#_reusable-prompt-files",
+          "publishdate": "27-mar-2025"
+        },
         "jetbrains": {
           "stage": "PUB",
           "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/892199",
           "publishdate": "12-nov-2025"
+        }
+      }
+    },
+    {
+      "id": "user-prompts",
+      "name": "User prompts",
+      "description": "Personal prompts stored in the user data folder that can be synchronized across machines, similar to code snippets or user settings.",
+      "tags": ["customization"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_99#_user-prompts",
+          "publishdate": "27-mar-2025"
         }
       }
     },
@@ -838,7 +986,7 @@
       "id": "attach-problems-context",
       "name": "Attach problems as context",
       "description": "Attach problems from the Problems panel to Copilot chat as context by dragging items, typing #problems, or using the paperclip button to help fix code issues.",
-      "tags": ["chat"],
+      "tags": ["chat", "context"],
       "availability": {
         "vs-code": {
           "stage": "GA",
@@ -851,7 +999,7 @@
       "id": "attach-folders-context",
       "name": "Attach folders as context",
       "description": "Attach folders as context in Copilot chat by selecting the paperclip icon or typing #folder: followed by the folder name.",
-      "tags": ["chat"],
+      "tags": ["chat", "context"],
       "availability": {
         "vs-code": {
           "stage": "GA",
@@ -874,15 +1022,28 @@
       }
     },
     {
+      "id": "inline-suggestion-syntax-highlighting",
+      "name": "Inline suggestion syntax highlighting",
+      "description": "Syntax highlighting for inline code suggestions enabled by default, making ghost text suggestions more readable with syntax coloring applied.",
+      "tags": ["code-completions"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_99#_inline-suggestion-syntax-highlighting",
+          "publishdate": "27-mar-2025"
+        }
+      }
+    },
+    {
       "id": "vision",
       "name": "Vision",
-      "description": "Attach and interact with images in Copilot Chat prompts by dragging and dropping images, pasting from clipboard, or attaching screenshots of the IDE. Supports JPEG/JPG, PNG, GIF, and WEBP formats.",
+      "description": "Attach and interact with images in Copilot Chat prompts by dragging and dropping images from browsers or files, pasting from clipboard, or attaching screenshots of the IDE. Supports JPEG/JPG, PNG, GIF, WEBP, and BMP formats.",
       "tags": ["chat"],
       "availability": {
         "vs-code": {
           "stage": "PUB",
-          "url": "https://code.visualstudio.com/updates/v1_98#_copilot-vision-preview",
-          "publishdate": "27-feb-2025"
+          "url": "https://code.visualstudio.com/updates/v1_99#_improved-vision-support-preview",
+          "publishdate": "27-mar-2025"
         }
       }
     },
@@ -890,7 +1051,7 @@
       "id": "pr-custom-instructions",
       "name": "Pull request custom instructions",
       "description": "Provide custom instructions for generating pull request titles and descriptions to ensure consistency with team conventions.",
-      "tags": ["policies", "integration"],
+      "tags": ["integration", "customization"],
       "availability": {
         "vs-code": {
           "stage": "GA",
@@ -1000,7 +1161,7 @@
       "id": "instruction-files",
       "name": "Instruction files",
       "description": "Lets developers configure .instruction.md files for Copilot so it can follow specific guidelines and patterns when generating code.",
-      "tags": ["policies"],
+      "tags": ["customization"],
       "availability": {
         "visual-studio": {
           "stage": "GA",
@@ -1026,7 +1187,7 @@
       "id": "drag-file-into-context",
       "name": "Drag file into context",
       "description": "Lets you drag a file from the editor tab into Copilot to quickly add it as context.",
-      "tags": ["chat"],
+      "tags": ["chat", "context"],
       "availability": {
         "jetbrains": {
           "stage": "PUB",
@@ -1091,7 +1252,7 @@
       "id": "hash-context-references",
       "name": "Hash context for files, folders, and tools",
       "description": "Enables # context references for files, folders, and tools in Copilot chat so you can quickly add them as context.",
-      "tags": ["chat", "agentic"],
+      "tags": ["chat", "agentic", "context"],
       "availability": {
         "jetbrains": {
           "stage": "PUB",

@@ -24,7 +24,7 @@ $errors = @()
 $warnings = @()
 
 # Keywords that might indicate irrelevant content
-$excludedKeywords = @("enhancement", "bugfix", "performance")
+$excludedKeywords = @("enhancement", "enhancements", "bugfix", "bugfixes", "performance", "improvement", "improvements")
 
 # Check each feature
 foreach ($feature in $features.features) {
