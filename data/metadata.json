@@ -11,7 +11,7 @@
   ],
   "stages": {
     "GA": { "name": "Generally available" },
-    "PUB": { "name": "Public Preview" },
+    "PRE": { "name": "Public Preview" },
     "PRV": { "name": "Private Preview" },
     "DEP": { "name": "Deprecated" }
   },

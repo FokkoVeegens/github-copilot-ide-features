@@ -180,6 +180,10 @@ body {
     color: #6b7280;
 }
 
+.status-emoji {
+    font-size: 1.2rem;
+}
+
 /* Shared Badge Colors */
 .legend-badge.GA,
 .status-badge.GA {
@@ -187,8 +191,8 @@ body {
     color: #166534 !important;
 }
 
-.legend-badge.PUB,
-.status-badge.PUB {
+.legend-badge.PRE,
+.status-badge.PRE {
     background-color: #dbeafe !important;
     color: #1e40af !important;
 }
@@ -340,6 +344,17 @@ body {
 .status-badge:hover {
     transform: translateY(-2px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.status-emoji-link {
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.status-emoji-link:hover {
+    transform: scale(1.2);
 }
 
 .flag-icon {

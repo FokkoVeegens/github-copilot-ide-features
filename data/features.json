@@ -20,7 +20,7 @@
       "tags": ["code-completions", "agentic"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://code.visualstudio.com/updates/v1_98#_collapsed-mode-for-next-edit-suggestions-preview",
           "publishdate": "27-feb-2025"
         }
@@ -72,7 +72,7 @@
       "tags": ["agentic", "chat"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://code.visualstudio.com/updates/v1_99#_thinking-tool-experimental",
           "publishdate": "27-mar-2025"
         }
@@ -111,7 +111,7 @@
       "tags": ["agentic", "chat", "workspace"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://code.visualstudio.com/updates/v1_99#_create-a-new-workspace-with-agent-mode-experimental",
           "publishdate": "27-mar-2025"
         }
@@ -163,7 +163,7 @@
       "tags": ["chat", "extensibility"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://code.visualstudio.com/updates/v1_99#_bring-your-own-key-byok-preview",
           "publishdate": "27-mar-2025",
           "flags": ["individual-only"]
@@ -216,12 +216,12 @@
       "tags": ["models"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-01-31-openai-o3-mini-now-available-in-github-copilot-and-github-models-public-preview/",
           "publishdate": "31-jan-2025"
         },
         "github-com": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-01-31-openai-o3-mini-now-available-in-github-copilot-and-github-models-public-preview/",
           "publishdate": "31-jan-2025"
         }
@@ -234,12 +234,12 @@
       "tags": ["models"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-02-05-google-gemini-2-0-flash-is-now-available-to-all-copilot-users-in-public-preview/",
           "publishdate": "05-feb-2025"
         },
         "github-com": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-02-05-google-gemini-2-0-flash-is-now-available-to-all-copilot-users-in-public-preview/",
           "publishdate": "05-feb-2025"
         }
@@ -257,22 +257,22 @@
           "publishdate": "10-dec-2025"
         },
         "visual-studio": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-11-auto-model-selection-for-copilot-in-visual-studio-in-public-preview",
           "publishdate": "11-nov-2025"
         },
         "jetbrains": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-18-auto-model-selection-for-copilot-in-jetbrains-ides-xcode-and-eclipse-in-public-preview/",
           "publishdate": "18-nov-2025"
         },
         "xcode": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-18-auto-model-selection-for-copilot-in-jetbrains-ides-xcode-and-eclipse-in-public-preview/",
           "publishdate": "18-nov-2025"
         },
         "eclipse": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-18-auto-model-selection-for-copilot-in-jetbrains-ides-xcode-and-eclipse-in-public-preview/",
           "publishdate": "18-nov-2025"
         }
@@ -290,7 +290,7 @@
           "publishdate": "27-feb-2025"
         },
         "jetbrains": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/892199",
           "publishdate": "12-nov-2025"
         }
@@ -308,7 +308,7 @@
           "publishdate": "27-mar-2025"
         },
         "jetbrains": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/892199",
           "publishdate": "12-nov-2025"
         }
@@ -359,7 +359,7 @@
           "publishdate": "17-dec-2025"
         },
         "vim-neovim": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
           "publishdate": "13-nov-2025"
         },
@@ -369,7 +369,7 @@
           "publishdate": "17-dec-2025"
         },
         "background-agent": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
           "publishdate": "13-nov-2025"
         }
@@ -412,7 +412,7 @@
           "publishdate": "17-dec-2025"
         },
         "background-agent": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
           "publishdate": "13-nov-2025"
         }
@@ -425,32 +425,32 @@
       "tags": ["models"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
           "publishdate": "13-nov-2025"
         },
         "jetbrains": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
           "publishdate": "13-nov-2025"
         },
         "xcode": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
           "publishdate": "13-nov-2025"
         },
         "eclipse": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
           "publishdate": "13-nov-2025"
         },
         "github-com": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
           "publishdate": "13-nov-2025"
         },
         "background-agent": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/",
           "publishdate": "13-nov-2025"
         }
@@ -539,13 +539,13 @@
       "tags": ["models"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-02-27-openai-gpt-4-5-in-github-copilot-now-available-in-public-preview",
           "publishdate": "27-feb-2025",
           "flags": ["enterprise-only"]
         },
         "github-com": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-02-27-openai-gpt-4-5-in-github-copilot-now-available-in-public-preview",
           "publishdate": "27-feb-2025",
           "flags": ["enterprise-only"]
@@ -741,12 +741,12 @@
       "tags": ["models"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-02-24-claude-3-7-sonnet-is-now-available-in-github-copilot-in-public-preview/",
           "publishdate": "24-feb-2025"
         },
         "github-com": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-02-24-claude-3-7-sonnet-is-now-available-in-github-copilot-in-public-preview/",
           "publishdate": "24-feb-2025"
         }
@@ -759,7 +759,7 @@
       "tags": ["models"],
       "availability": {
         "github-com": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-10-raptor-mini-is-rolling-out-in-public-preview-for-github-copilot/",
           "publishdate": "10-nov-2025",
           "flags": ["individual-only"]
@@ -773,37 +773,37 @@
       "tags": ["models"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot/",
           "publishdate": "18-nov-2025"
         },
         "visual-studio": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-12-12-gemini-3-pro-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse/",
           "publishdate": "12-dec-2025"
         },
         "jetbrains": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-12-12-gemini-3-pro-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse/",
           "publishdate": "12-dec-2025"
         },
         "xcode": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-12-12-gemini-3-pro-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse/",
           "publishdate": "12-dec-2025"
         },
         "eclipse": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-12-12-gemini-3-pro-is-now-available-in-visual-studio-jetbrains-ides-xcode-and-eclipse/",
           "publishdate": "12-dec-2025"
         },
         "github-com": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot/",
           "publishdate": "18-nov-2025"
         },
         "background-agent": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot/",
           "publishdate": "18-nov-2025"
         }
@@ -816,17 +816,17 @@
       "tags": ["models"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-12-17-gemini-3-flash-is-now-in-public-preview-for-github-copilot/",
           "publishdate": "17-dec-2025"
         },
         "github-com": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-12-17-gemini-3-flash-is-now-in-public-preview-for-github-copilot/",
           "publishdate": "17-dec-2025"
         },
         "github-mobile": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-12-17-gemini-3-flash-is-now-in-public-preview-for-github-copilot/",
           "publishdate": "17-dec-2025"
         }
@@ -839,30 +839,30 @@
       "tags": ["compliancy", "mcp", "agentic"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-18-internal-mcp-registry-and-allowlist-controls-for-vs-code-stable-in-public-preview/",
           "publishdate": "18-nov-2025"
         },
         "visual-studio": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-18-internal-mcp-registry-and-allowlist-controls-for-vs-code-stable-in-public-preview/",
           "publishdate": "18-nov-2025",
           "flags": ["preview-version"]
         },
         "jetbrains": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-10-28-mcp-registry-and-allowlist-controls-for-copilot-in-jetbrains-eclipse-and-xcode-now-in-public-preview/",
           "publishdate": "28-oct-2025",
           "flags": ["preview-version"]
         },
         "xcode": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-10-28-mcp-registry-and-allowlist-controls-for-copilot-in-jetbrains-eclipse-and-xcode-now-in-public-preview/",
           "publishdate": "28-oct-2025",
           "flags": ["preview-version"]
         },
         "eclipse": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-10-28-mcp-registry-and-allowlist-controls-for-copilot-in-jetbrains-eclipse-and-xcode-now-in-public-preview/",
           "publishdate": "28-oct-2025",
           "flags": ["preview-version"]
@@ -876,7 +876,7 @@
       "tags": ["compliancy", "mcp", "agentic"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-18-internal-mcp-registry-and-allowlist-controls-for-vs-code-stable-in-public-preview/",
           "publishdate": "18-nov-2025"
         }
@@ -889,17 +889,17 @@
       "tags": ["compliancy", "mcp"],
       "availability": {
         "jetbrains": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-18-enhanced-mcp-oauth-support-for-github-copilot-in-jetbrains-eclipse-and-xcode/",
           "publishdate": "18-nov-2025"
         },
         "eclipse": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-18-enhanced-mcp-oauth-support-for-github-copilot-in-jetbrains-eclipse-and-xcode/",
           "publishdate": "18-nov-2025"
         },
         "xcode": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-18-enhanced-mcp-oauth-support-for-github-copilot-in-jetbrains-eclipse-and-xcode/",
           "publishdate": "18-nov-2025"
         }
@@ -912,32 +912,32 @@
       "tags": ["agentic", "chat"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://code.visualstudio.com/updates/v1_106",
           "publishdate": "12-nov-2025"
         },
         "github-com": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-10-28-custom-agents-for-github-copilot/",
           "publishdate": "28-oct-2025"
         },
         "background-agent": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-10-28-github-copilot-cli-use-custom-agents-and-delegate-to-copilot-coding-agent/",
           "publishdate": "28-oct-2025"
         },
         "jetbrains": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-18-custom-agents-available-in-github-copilot-for-jetbrains-eclipse-and-xcode-now-in-public-preview/",
           "publishdate": "18-nov-2025"
         },
         "eclipse": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-18-custom-agents-available-in-github-copilot-for-jetbrains-eclipse-and-xcode-now-in-public-preview/",
           "publishdate": "18-nov-2025"
         },
         "xcode": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-11-18-custom-agents-available-in-github-copilot-for-jetbrains-eclipse-and-xcode-now-in-public-preview/",
           "publishdate": "18-nov-2025"
         }
@@ -1002,7 +1002,7 @@
       "tags": ["chat"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://code.visualstudio.com/updates/v1_99#_improved-vision-support-preview",
           "publishdate": "27-mar-2025"
         }
@@ -1028,7 +1028,7 @@
       "tags": ["extensibility", "agentic", "integration"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded/",
           "publishdate": "28-oct-2025",
           "flags": ["preview-version"]
@@ -1042,7 +1042,7 @@
       "tags": ["agentic"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded/",
           "publishdate": "28-oct-2025",
           "flags": ["preview-version"]
@@ -1056,7 +1056,7 @@
       "tags": ["agentic", "multi-agent", "chat"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded/",
           "publishdate": "28-oct-2025",
           "flags": ["preview-version"]
@@ -1070,7 +1070,7 @@
       "tags": ["agentic", "chat"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded/",
           "publishdate": "28-oct-2025",
           "flags": ["preview-version"]
@@ -1084,17 +1084,17 @@
       "tags": ["agentic"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://code.visualstudio.com/updates/v1_105",
           "publishdate": "09-oct-2025"
         },
         "background-agent": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-10-28-github-copilot-cli-use-custom-agents-and-delegate-to-copilot-coding-agent/",
           "publishdate": "28-oct-2025"
         },
         "jetbrains": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-10-28-delegate-tasks-to-copilot-coding-agent-from-jetbrains-ides/",
           "publishdate": "28-oct-2025"
         }
@@ -1112,7 +1112,7 @@
           "publishdate": "22-sep-2025"
         },
         "jetbrains": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-10-28-github-copilot-app-modernization-now-available-in-intellij-idea/",
           "publishdate": "28-oct-2025"
         }
@@ -1151,7 +1151,7 @@
       "tags": ["chat", "context"],
       "availability": {
         "jetbrains": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/882517",
           "publishdate": "24-oct-2025"
         }
@@ -1164,7 +1164,7 @@
       "tags": ["chat"],
       "availability": {
         "jetbrains": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
           "publishdate": "20-oct-2025"
         }
@@ -1177,7 +1177,7 @@
       "tags": ["chat", "agentic"],
       "availability": {
         "jetbrains": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
           "publishdate": "20-oct-2025"
         }
@@ -1190,7 +1190,7 @@
       "tags": ["chat", "agentic", "context"],
       "availability": {
         "jetbrains": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
           "publishdate": "20-oct-2025"
         }
@@ -1203,7 +1203,7 @@
       "tags": ["compliancy", "agentic"],
       "availability": {
         "jetbrains": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
           "publishdate": "20-oct-2025"
         }
@@ -1216,7 +1216,7 @@
       "tags": ["agentic", "chat"],
       "availability": {
         "visual-studio": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://github.blog/changelog/2025-12-16-c-code-editing-tools-for-github-copilot-in-public-preview/",
           "publishdate": "16-dec-2025",
           "flags": ["preview-version"]
@@ -1269,7 +1269,7 @@
       "tags": ["chat", "context"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://code.visualstudio.com/updates/v1_100#_select-and-attach-ui-elements-to-chat-experimental",
           "publishdate": "08-may-2025"
         }
@@ -1282,7 +1282,7 @@
       "tags": ["agentic", "workspace"],
       "availability": {
         "vs-code": {
-          "stage": "PUB",
+          "stage": "PRE",
           "url": "https://code.visualstudio.com/updates/v1_100#_create-and-launch-tasks-in-agent-mode-experimental",
           "publishdate": "08-may-2025"
         }
