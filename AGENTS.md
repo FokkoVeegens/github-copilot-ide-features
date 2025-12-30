@@ -42,9 +42,22 @@ These features should **NOT** be in the features list:
 
 - Bugfixes
 - Background improvements, not directly visible to the user
-- Performance improvements
+- Performance improvements (e.g., "faster edits", "improved responses", "optimized prompts")
 - Improvements where the impact is not directly clear to the user
-- Enhancements
+- Enhancements to existing features (UI polish, visual improvements)
+- **Infrastructure changes** (new protocols, transports, backend architecture)
+- **Default configuration changes** (e.g., "model X is now the default")
+- **Quality improvements** (better/smarter suggestions, more accurate results - these are non-deterministic and hard to demo reliably)
+- **Minor UI improvements** (fold/unfold controls, status indicators, visual polish)
+- **Configuration details** (input placeholders, config generation methods)
+- **Preview/V2 versions of existing features** (unless they represent a fundamentally different approach)
+- Features that require specific, hard-to-reproduce scenarios to demonstrate
+
+**The "Demo Test"**: If you cannot easily demonstrate the feature's value in a 2-minute live demo to a client, showing clear before/after differences, it should not be in the list. Good features are:
+- Clearly distinct and identifiable
+- Provide obvious value in common scenarios
+- Work reliably enough to demonstrate
+- Can be compared across different IDEs
 
 #### New LLM models
 

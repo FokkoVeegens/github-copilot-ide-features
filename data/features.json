@@ -171,19 +171,6 @@
       }
     },
     {
-      "id": "tool-based-edit-mode",
-      "name": "Tool-based edit mode",
-      "description": "New edit mode implementation using the same tool-based approach as agent mode, enabling seamless switching between ask, edit, and agent modes while simplifying the underlying architecture.",
-      "tags": ["chat", "agentic"],
-      "availability": {
-        "vs-code": {
-          "stage": "PUB",
-          "url": "https://code.visualstudio.com/updates/v1_99#_tool-based-edit-mode",
-          "publishdate": "27-mar-2025"
-        }
-      }
-    },
-    {
       "id": "edits-notebook-support",
       "name": "Edits Notebook Support",
       "description": "Use Copilot Edits to work with notebook files, including creating new notebooks, modifying content across multiple cells, inserting and deleting cells, and changing cell types. Includes new notebook tool, diff navigation, undo support, and cell output context attachment.",
@@ -193,19 +180,6 @@
           "stage": "GA",
           "url": "https://code.visualstudio.com/updates/v1_99#_ai-notebook-editing-improvements",
           "publishdate": "27-mar-2025"
-        }
-      }
-    },
-    {
-      "id": "workspace-index-status-ui",
-      "name": "Workspace index status UI",
-      "description": "View the type of workspace index being used by Copilot (remote, local, or basic) and reindexing status in the Status Bar.",
-      "tags": ["chat", "workspace"],
-      "availability": {
-        "vs-code": {
-          "stage": "GA",
-          "url": "https://code.visualstudio.com/updates/v1_97#_workspace-index-status-ui",
-          "publishdate": "08-jan-2025"
         }
       }
     },
@@ -1022,19 +996,6 @@
       }
     },
     {
-      "id": "inline-suggestion-syntax-highlighting",
-      "name": "Inline suggestion syntax highlighting",
-      "description": "Syntax highlighting for inline code suggestions enabled by default, making ghost text suggestions more readable with syntax coloring applied.",
-      "tags": ["code-completions"],
-      "availability": {
-        "vs-code": {
-          "stage": "GA",
-          "url": "https://code.visualstudio.com/updates/v1_99#_inline-suggestion-syntax-highlighting",
-          "publishdate": "27-mar-2025"
-        }
-      }
-    },
-    {
       "id": "vision",
       "name": "Vision",
       "description": "Attach and interact with images in Copilot Chat prompts by dragging and dropping images from browsers or files, pasting from clipboard, or attaching screenshots of the IDE. Supports JPEG/JPG, PNG, GIF, WEBP, and BMP formats.",
@@ -1197,32 +1158,6 @@
       }
     },
     {
-      "id": "tools-fold-unfold",
-      "name": "Fold/unfold tools",
-      "description": "Adds fold and unfold controls for Copilot tools to keep tool lists organized.",
-      "tags": ["agentic"],
-      "availability": {
-        "jetbrains": {
-          "stage": "PUB",
-          "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
-          "publishdate": "20-oct-2025"
-        }
-      }
-    },
-    {
-      "id": "mcp-input-placeholders",
-      "name": "MCP input placeholders",
-      "description": "Extends mcp.json configuration to support input placeholders for sensitive information so values can be provided securely at runtime.",
-      "tags": ["compliancy", "mcp"],
-      "availability": {
-        "jetbrains": {
-          "stage": "PUB",
-          "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
-          "publishdate": "20-oct-2025"
-        }
-      }
-    },
-    {
       "id": "inline-code-review",
       "name": "Inline code review",
       "description": "Introduces inline code review with Copilot so you can review and apply changes directly in the editor.",
@@ -1262,32 +1197,6 @@
       }
     },
     {
-      "id": "mcp-tool-annotations-clientinfo",
-      "name": "MCP tool annotations and client info",
-      "description": "Adds support for tool annotations and clientInfo for MCP servers so tools receive richer metadata about requests.",
-      "tags": ["mcp", "agentic"],
-      "availability": {
-        "jetbrains": {
-          "stage": "PUB",
-          "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
-          "publishdate": "20-oct-2025"
-        }
-      }
-    },
-    {
-      "id": "tool-call-result-updates",
-      "name": "Tool call result updates",
-      "description": "Improves how Copilot displays and updates tool call result information.",
-      "tags": ["agentic", "mcp"],
-      "availability": {
-        "jetbrains": {
-          "stage": "PUB",
-          "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions/stable/880279",
-          "publishdate": "20-oct-2025"
-        }
-      }
-    },
-    {
       "id": "sensitive-file-edit-confirmation",
       "name": "Sensitive file edit confirmation",
       "description": "Introduces a security confirmation step before Copilot edits sensitive files.",
@@ -1311,6 +1220,123 @@
           "url": "https://github.blog/changelog/2025-12-16-c-code-editing-tools-for-github-copilot-in-public-preview/",
           "publishdate": "16-dec-2025",
           "flags": ["preview-version"]
+        }
+      }
+    },
+    {
+      "id": "github-repo-tool",
+      "name": "GitHub repository search tool",
+      "description": "Search for code snippets in any GitHub repository using the #githubRepo tool, which accepts a user/repo parameter to find specific implementations without opening the repository in the editor.",
+      "tags": ["chat", "agentic", "integration"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_100#_search-code-of-a-github-repository-with-the-githubrepo-tool",
+          "publishdate": "08-may-2025"
+        }
+      }
+    },
+    {
+      "id": "extensions-tool",
+      "name": "Extensions tool",
+      "description": "Find and install Marketplace extensions directly from chat using the #extensions tool, which automatically invokes based on your prompt or can be explicitly referenced.",
+      "tags": ["chat", "agentic"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_100#_find-marketplace-extensions-with-the-extensions-tool",
+          "publishdate": "08-may-2025"
+        }
+      }
+    },
+    {
+      "id": "autofix-agent-diagnostics",
+      "name": "Autofix diagnostics in agent mode",
+      "description": "Agent mode automatically detects and proposes follow-up edits to fix errors introduced by file edits, eliminating the need for manual follow-up prompts.",
+      "tags": ["agentic"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_100#_autofix-diagnostics-from-agent-mode-edits",
+          "publishdate": "08-may-2025"
+        }
+      }
+    },
+    {
+      "id": "ui-element-attachment",
+      "name": "Attach UI elements to chat",
+      "description": "Select and attach specific UI elements from web pages as context to chat using the built-in Simple Browser, including screenshots and associated HTML/CSS.",
+      "tags": ["chat", "context"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://code.visualstudio.com/updates/v1_100#_select-and-attach-ui-elements-to-chat-experimental",
+          "publishdate": "08-may-2025"
+        }
+      }
+    },
+    {
+      "id": "task-creation-workspace",
+      "name": "Task creation for new workspaces",
+      "description": "At the end of workspace creation in agent mode, users are prompted to create and run a task for launching their app or project, streamlining the project launch process.",
+      "tags": ["agentic", "workspace"],
+      "availability": {
+        "vs-code": {
+          "stage": "PUB",
+          "url": "https://code.visualstudio.com/updates/v1_100#_create-and-launch-tasks-in-agent-mode-experimental",
+          "publishdate": "08-may-2025"
+        }
+      }
+    },
+    {
+      "id": "alt-text-generation",
+      "name": "Alt text generation",
+      "description": "Generate or update alt text for images in HTML and Markdown files by triggering quick fixes on lines containing embedded images.",
+      "tags": ["chat"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_100#_generate-alt-text-in-html-or-markdown",
+          "publishdate": "08-may-2025"
+        }
+      }
+    },
+    {
+      "id": "notebook-agent-tools",
+      "name": "Notebook tools for agent mode",
+      "description": "Agent mode includes tools for running notebook cells, getting kernel state with active variables, and listing/installing packages into the notebook environment.",
+      "tags": ["agentic", "chat"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_100#_notebook-tools-for-agent-mode",
+          "publishdate": "08-may-2025"
+        }
+      }
+    },
+    {
+      "id": "python-env-chat-tools",
+      "name": "Python Environments chat tools",
+      "description": "Chat tools for getting Python environment information and installing packages, with automatic environment detection based on file or workspace context.",
+      "tags": ["chat", "agentic", "integration"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_100#_python-environments-chat-tools",
+          "publishdate": "08-may-2025"
+        }
+      }
+    },
+    {
+      "id": "chat-mode-shortcuts",
+      "name": "Chat mode keyboard shortcuts",
+      "description": "Keyboard shortcuts for opening Chat view in specific modes, including Ctrl+Shift+I for agent mode and commands for each mode (ask, edit, agent).",
+      "tags": ["chat"],
+      "availability": {
+        "vs-code": {
+          "stage": "GA",
+          "url": "https://code.visualstudio.com/updates/v1_100#_chat-mode-keyboard-shortcuts",
+          "publishdate": "08-may-2025"
         }
       }
     }
