@@ -72,9 +72,13 @@ You are allowed to follow one of the links to specific model information.
 
 You can also check https://docs.github.com/en/copilot/reference/ai-models/model-comparison if no information can be found on the previously supplied URLs.
 
+#### Store processed URLs
+
+After processing a URL when adding features, it needs to be stored in [./data/processed.json](./data/processed.json) using the script [./scripts/update-processed](./scripts/update-processed.ps1). The type should be the applicable "ides" "name" from [./data/metadata.json](./data/metadata.json) and besides that, you can use `github-changelog` when the URL starts with https://github.blog/changelog.
+
 ### Metadata
 
-The metadata referred to (ides, stages, flags) can be found in [metadata.json](./data/metadata.json). The data in [metadata.json](./data/metadata.json) is fixed and should not be changed, except for Flags in very .
+The metadata referred to (ides, stages, flags) can be found in [metadata.json](./data/metadata.json). The data in [metadata.json](./data/metadata.json) is fixed and should not be changed.
 
 - IDEs: contains all IDEs used in the features data
 - Stages: contains info about the stage a release of a feature is in; Private Preview, Public Preview, General Availability
