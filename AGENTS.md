@@ -78,7 +78,7 @@ After processing a URL when adding features, it needs to be stored in [./data/pr
 
 ### Metadata
 
-The metadata referred to (ides, stages, flags) can be found in [metadata.json](./data/metadata.json). The data in [metadata.json](./data/metadata.json) is fixed and should not be changed, except for Flags in very .
+The metadata referred to (ides, stages, flags) can be found in [metadata.json](./data/metadata.json). The data in [metadata.json](./data/metadata.json) is fixed and should not be changed.
 
 - IDEs: contains all IDEs used in the features data
 - Stages: contains info about the stage a release of a feature is in; Private Preview, Public Preview, General Availability
