@@ -18,14 +18,10 @@
       "extensions": [
         "GitHub.copilot",
         "GitHub.copilot-chat",
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "ritwickdey.LiveServer",
         "ms-vscode.powershell"
       ],
       "settings": {
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "files.autoSave": "afterDelay"
       }
     }
