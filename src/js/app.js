@@ -62,6 +62,8 @@ createApp({
                 let filtered = baseFiltered.slice();
                 
                 // Apply current selected tags plus this tag
+                // Note: If the tag is already selected, this ensures it stays in the filter
+                // If it's not selected, this shows what would happen if clicked
                 const tagsToCheck = [...selectedTags.value];
                 if (!tagsToCheck.includes(tag)) {
                     tagsToCheck.push(tag);
@@ -79,7 +81,7 @@ createApp({
 
         // Visible tags: only show tags with results > 0
         const visibleTags = computed(() => {
-            // If no filters are active, show all tags
+            // If no user-initiated filters are active, show all tags
             if (selectedTags.value.length === 0 && !searchTerm.value.trim()) {
                 return allTags.value;
             }
