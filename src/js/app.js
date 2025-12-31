@@ -30,6 +30,64 @@ createApp({
             return Array.from(tagSet).sort();
         });
 
+        // Compute tag counts based on current filters
+        const tagCounts = computed(() => {
+            const counts = {};
+            
+            // First, filter by search term and deprecated setting (not by tags)
+            let baseFiltered = features.value.slice();
+            
+            // Filter by search term
+            if (searchTerm.value.trim()) {
+                const lowerSearchTerm = searchTerm.value.toLowerCase();
+                baseFiltered = baseFiltered.filter(feature => {
+                    const nameMatch = feature.name.toLowerCase().includes(lowerSearchTerm);
+                    const descMatch = feature.description && 
+                                     feature.description.toLowerCase().includes(lowerSearchTerm);
+                    return nameMatch || descMatch;
+                });
+            }
+            
+            // Filter out deprecated features unless explicitly shown
+            if (!showDeprecated.value) {
+                baseFiltered = baseFiltered.filter(feature => {
+                    return Object.values(feature.availability || {}).some(
+                        avail => avail.stage !== 'DEP'
+                    );
+                });
+            }
+            
+            // For each tag, count how many features would match if that tag was added to the filter
+            allTags.value.forEach(tag => {
+                let filtered = baseFiltered.slice();
+                
+                // Apply current selected tags plus this tag
+                const tagsToCheck = [...selectedTags.value];
+                if (!tagsToCheck.includes(tag)) {
+                    tagsToCheck.push(tag);
+                }
+                
+                filtered = filtered.filter(f => 
+                    tagsToCheck.every(t => f.tags && f.tags.includes(t))
+                );
+                
+                counts[tag] = filtered.length;
+            });
+            
+            return counts;
+        });
+
+        // Visible tags: only show tags with results > 0
+        const visibleTags = computed(() => {
+            // If no filters are active, show all tags
+            if (selectedTags.value.length === 0 && !searchTerm.value.trim()) {
+                return allTags.value;
+            }
+            
+            // Otherwise, only show tags that have results
+            return allTags.value.filter(tag => tagCounts.value[tag] > 0);
+        });
+
         const filteredFeatures = computed(() => {
             let filtered = features.value.slice();
 
@@ -168,6 +226,8 @@ createApp({
             tooltipEl,
             tooltip,
             allTags,
+            visibleTags,
+            tagCounts,
             filteredFeatures,
             toggleTag,
             performSearch,
