@@ -52,11 +52,11 @@
                         <h3 class="title is-5 has-text-primary">Release status</h3>
                         <div class="legend-grid">
                             <div class="legend-item">
-                                <span class="tag legend-badge GA">GA</span>
-                                <span>Generally available</span>
+                                <span class="status-emoji">✅</span>
+                                <span>General availability</span>
                             </div>
                             <div class="legend-item">
-                                <span class="tag legend-badge PUB">PUB</span>
+                                <span class="tag legend-badge PRE">PRE</span>
                                 <span>Public Preview</span>
                             </div>
                             <div class="legend-item">
@@ -66,6 +66,13 @@
                             <div class="legend-item">
                                 <span class="tag legend-badge DEP">DEP</span>
                                 <span>Deprecated / Retired</span>
+                            </div>
+                            <div class="legend-item">
+                                <span>
+                                    <a href="https://github.blog/changelog/2024-10-18-new-terminology-for-github-previews/" target="_blank" rel="noopener noreferrer" class="has-text-primary">
+                                        ℹ️ More info on release status
+                                    </a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -184,10 +191,33 @@
                                 <td v-for="ide in metadata.ides" :key="ide.id" class="has-text-centered">
                                     <template v-if="feature.availability[ide.id]">
                                         <a 
+                                            v-if="feature.availability[ide.id].stage === 'GA'"
+                                            :href="feature.availability[ide.id].url || '#'" 
+                                            class="status-emoji-link"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            ✅
+                                            <span 
+                                                v-for="flagId in feature.availability[ide.id].flags" 
+                                                :key="flagId"
+                                                class="flag-icon"
+                                                @mouseenter="showTooltip($event, metadata.flags[flagId]?.description)"
+                                                @mousemove="moveTooltip($event)"
+                                                @mouseleave="hideTooltip"
+                                            >
+                                                {{ metadata.flags[flagId]?.icon }}
+                                            </span>
+                                        </a>
+                                        <a 
+                                            v-else
                                             :href="feature.availability[ide.id].url || '#'" 
                                             :class="['tag', 'status-badge', feature.availability[ide.id].stage]"
                                             target="_blank"
                                             rel="noopener noreferrer"
+                                            @mouseenter="feature.availability[ide.id].stage !== 'GA' ? showTooltip($event, getStageTooltip(feature.availability[ide.id].stage)) : null"
+                                            @mousemove="feature.availability[ide.id].stage !== 'GA' ? moveTooltip($event) : null"
+                                            @mouseleave="feature.availability[ide.id].stage !== 'GA' ? hideTooltip() : null"
                                         >
                                             {{ feature.availability[ide.id].stage }}
                                             <span 

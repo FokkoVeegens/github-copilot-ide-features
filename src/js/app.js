@@ -100,6 +100,10 @@ createApp({
             tooltip.value.visible = false;
         };
 
+        const getStageTooltip = (stage) => {
+            return metadata.value.stages[stage]?.name || '';
+        };
+
         const positionTooltip = (event) => {
             if (!tooltipEl.value) return;
 
@@ -170,7 +174,8 @@ createApp({
             clearSearch,
             showTooltip,
             moveTooltip,
-            hideTooltip
+            hideTooltip,
+            getStageTooltip
         };
     }
 }).mount('#app');

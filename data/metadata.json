@@ -10,8 +10,8 @@
     { "id": "eclipse", "name": "Eclipse", "logo": "src/images/eclipse.svg" }
   ],
   "stages": {
-    "GA": { "name": "Generally available" },
-    "PUB": { "name": "Public Preview" },
+    "GA": { "name": "General availability" },
+    "PRE": { "name": "Public Preview" },
     "PRV": { "name": "Private Preview" },
     "DEP": { "name": "Deprecated" }
   },
