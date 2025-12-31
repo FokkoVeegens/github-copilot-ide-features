@@ -1,0 +1,38 @@
+{
+  "name": "GitHub Copilot IDE Features",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "Web Server",
+      "onAutoForward": "notify"
+    }
+  },
+
+  "postCreateCommand": "npm install -g npm@latest",
+  "postStartCommand": "node server.js &",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ms-vscode.powershell"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "files.autoSave": "afterDelay"
+      }
+    }
+  },
+
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/powershell:1": {
+      "version": "latest"
+    }
+  },
+
+  "remoteUser": "node"
+}
