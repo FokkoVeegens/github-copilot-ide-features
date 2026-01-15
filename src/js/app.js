@@ -19,6 +19,27 @@ createApp({
             y: 0
         });
 
+        // Helper functions for filtering
+        const filterBySearchTerm = (featuresList, term) => {
+            if (!term.trim()) return featuresList;
+            const lowerSearchTerm = term.toLowerCase();
+            return featuresList.filter(feature => {
+                const nameMatch = feature.name.toLowerCase().includes(lowerSearchTerm);
+                const descMatch = feature.description && 
+                                 feature.description.toLowerCase().includes(lowerSearchTerm);
+                return nameMatch || descMatch;
+            });
+        };
+
+        const filterByDeprecated = (featuresList, showDeprecated) => {
+            if (showDeprecated) return featuresList;
+            return featuresList.filter(feature => {
+                return Object.values(feature.availability || {}).some(
+                    avail => avail.stage !== 'DEP'
+                );
+            });
+        };
+
         // Computed properties
         const allTags = computed(() => {
             const tagSet = new Set();
@@ -28,6 +49,48 @@ createApp({
                 }
             });
             return Array.from(tagSet).sort();
+        });
+
+        // Compute tag counts based on current filters
+        const tagCounts = computed(() => {
+            const counts = {};
+            
+            // First, filter by search term and deprecated setting (not by tags)
+            let baseFiltered = features.value.slice();
+            baseFiltered = filterBySearchTerm(baseFiltered, searchTerm.value);
+            baseFiltered = filterByDeprecated(baseFiltered, showDeprecated.value);
+            
+            // For each tag, count how many features would match if that tag was added to the filter
+            allTags.value.forEach(tag => {
+                let filtered = baseFiltered.slice();
+                
+                // Apply current selected tags plus this tag
+                // Note: If the tag is already selected, this ensures it stays in the filter
+                // If it's not selected, this shows what would happen if clicked
+                const tagsToCheck = [...selectedTags.value];
+                if (!tagsToCheck.includes(tag)) {
+                    tagsToCheck.push(tag);
+                }
+                
+                filtered = filtered.filter(f => 
+                    tagsToCheck.every(t => f.tags && f.tags.includes(t))
+                );
+                
+                counts[tag] = filtered.length;
+            });
+            
+            return counts;
+        });
+
+        // Visible tags: only show tags with results > 0
+        const visibleTags = computed(() => {
+            // If no user-initiated filters are active, show all tags
+            if (selectedTags.value.length === 0 && !searchTerm.value.trim()) {
+                return allTags.value;
+            }
+            
+            // Otherwise, only show tags that have results
+            return allTags.value.filter(tag => tagCounts.value[tag] > 0);
         });
 
         const filteredFeatures = computed(() => {
@@ -40,25 +103,9 @@ createApp({
                 );
             }
 
-            // Filter by search term
-            if (searchTerm.value.trim()) {
-                const lowerSearchTerm = searchTerm.value.toLowerCase();
-                filtered = filtered.filter(feature => {
-                    const nameMatch = feature.name.toLowerCase().includes(lowerSearchTerm);
-                    const descMatch = feature.description && 
-                                     feature.description.toLowerCase().includes(lowerSearchTerm);
-                    return nameMatch || descMatch;
-                });
-            }
-
-            // Filter out deprecated features unless explicitly shown
-            if (!showDeprecated.value) {
-                filtered = filtered.filter(feature => {
-                    return Object.values(feature.availability || {}).some(
-                        avail => avail.stage !== 'DEP'
-                    );
-                });
-            }
+            // Filter by search term and deprecated setting
+            filtered = filterBySearchTerm(filtered, searchTerm.value);
+            filtered = filterByDeprecated(filtered, showDeprecated.value);
 
             // Sort features by name alphabetically
             return filtered.sort((a, b) => a.name.localeCompare(b.name));
@@ -168,6 +215,8 @@ createApp({
             tooltipEl,
             tooltip,
             allTags,
+            visibleTags,
+            tagCounts,
             filteredFeatures,
             toggleTag,
             performSearch,

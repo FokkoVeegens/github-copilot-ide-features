@@ -131,12 +131,13 @@
                         </div>
                         
                         <span 
-                            v-for="tag in allTags" 
+                            v-for="tag in visibleTags" 
                             :key="tag"
                             @click="toggleTag(tag)"
                             :class="['tag', 'is-clickable', { 'is-primary': selectedTags.includes(tag) }]"
                         >
                             {{ tag }}
+                            <span class="tag-count">{{ tagCounts[tag] }}</span>
                         </span>
                         
                         <label class="tag deprecated-toggle">
