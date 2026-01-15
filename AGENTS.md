@@ -89,3 +89,8 @@ The metadata referred to (ides, stages, flags) can be found in [metadata.json](.
 The HTML resides in the root in index.html. The CSS styles are in src/css/styles.css and the logic that is written in JavaScript is in src/js/scripts.js.
 
 Ensure you keep the codebase maintainable and readable. If you need to splitup files for the sake of maintainability, do so.
+
+It's based on static HTML, CSS and JavaScript, no frameworks are used. There are two references in the `index.html` to external libraries:
+* The Bulma CSS framework (for styling)
+* The Vue.js framework (for reactive UI)
+You have access to both libraries when working on the code.
