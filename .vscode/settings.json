@@ -1,5 +1,0 @@
-{
-    "chat.tools.edits.autoApprove": {
-        "**/data/metadata.json": false
-    }
-}
