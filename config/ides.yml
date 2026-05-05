@@ -1,0 +1,16 @@
+ides:
+  - id: dummy
+    name: Dummy IDE
+    data_dir: data/dummy
+    fetcher: dummy
+    start_version: "0.0.1"
+
+  # Real IDE entries will be added in subsequent MVPs:
+  # - id: eclipse
+  # - id: jetbrains
+  # - id: xcode
+  # - id: vim-neovim
+  # - id: vs-code
+  # - id: visual-studio-2022
+  # - id: visual-studio-2026
+  # - id: sql-server-management-studio
