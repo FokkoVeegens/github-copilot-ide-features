@@ -1,0 +1,14 @@
+{
+  "ide": "eclipse",
+  "version": "0.8.0",
+  "release_date": "2025-06-18",
+  "title": "0.8.0 - 20250618",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.8.0",
+  "source": "api",
+  "body_markdown": "### Added\n- Enable remote MCP server.\n- Add up-sell link to the model picker for free plan accounts.\n### Changed\n- Make the chat view appear as a side bar by default.\n### Fixed\n- MCP tools are not visible.\n- Validate duplicate keys in MCP preference page.\n- Last line of the completion dialog in chat view is not visible.\n- Support error status for tool invocation result.\n- Fix rendering issue on Linux GTK.\n- Cannot use arrow up key in the completion dialog in chat view.\n- Decimal display incorrectly in usage quota.\n- Invalid thread access when reuse compare editor.\n- Reuse existing compare editor for create\\_file tool.\n- Add timeout when fetching env during activation on MacOS.\n- Check signin before get persisted path.",
+  "body_html": "### Added\n- Enable remote MCP server.\n- Add up-sell link to the model picker for free plan accounts.\n\n### Changed\n- Make the chat view appear as a side bar by default.\n\n### Fixed\n- MCP tools are not visible.\n- Validate duplicate keys in MCP preference page.\n- Last line of the completion dialog in chat view is not visible.\n- Support error status for tool invocation result.\n- Fix rendering issue on Linux GTK.\n- Cannot use arrow up key in the completion dialog in chat view.\n- Decimal display incorrectly in usage quota.\n- Invalid thread access when reuse compare editor.\n- Reuse existing compare editor for create_file tool.\n- Add timeout when fetching env during activation on MacOS.\n- Check signin before get persisted path.",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}

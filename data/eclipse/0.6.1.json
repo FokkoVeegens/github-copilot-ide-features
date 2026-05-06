@@ -1,0 +1,14 @@
+{
+  "ide": "eclipse",
+  "version": "0.6.1",
+  "release_date": "2025-05-27",
+  "title": "0.6.1 - 20250527",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.6.1",
+  "source": "api",
+  "body_markdown": "### Fixed\n- Correct the bundle version requirement to align with Eclipse 2024-09.",
+  "body_html": "### Fixed\n- Correct the bundle version requirement to align with Eclipse 2024-09.",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}

@@ -1,0 +1,14 @@
+{
+  "ide": "eclipse",
+  "version": "0.4.0",
+  "release_date": "2025-03-18",
+  "title": "0.4.0 - 20250318",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.4.0",
+  "source": "api",
+  "body_markdown": "### Added\n- Support ABAP.\n### Changed\n- Mark org.eclipse.jdt.annotation to optional.\n### Fixed\n- NPE when IFile.getLocation() is null.\n- Illegal state exception in Turn widget.\n- SWT resources not disposed properly.\n- Markdown viewer fallbacks to textviewer.\n- Chat input cannot be rendered as multi line when input text in too long.\n- Exception when deleting word leading with brackets in chat input box.",
+  "body_html": "### Added\n- Support ABAP.\n\n### Changed\n- Mark org.eclipse.jdt.annotation to optional.\n\n### Fixed\n- NPE when IFile.getLocation() is null.\n- Illegal state exception in Turn widget.\n- SWT resources not disposed properly.\n- Markdown viewer fallbacks to textviewer.\n- Chat input cannot be rendered as multi line when input text in too long.\n- Exception when deleting word leading with brackets in chat input box.",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}

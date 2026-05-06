@@ -1,0 +1,16 @@
+{
+  "ide": "eclipse",
+  "version": "0.1.0",
+  "release_date": "2025-02-12",
+  "title": "0.1.0 - 20250212",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.1.0",
+  "source": "api",
+  "body_markdown": "### Added\n- Support authentication from GitHub Copilot.\n- Support free plan subscription.\n- Support inline completion.\n- Support accepting completion by word.\n- Support fetching Java format options when triggering inline completion.\n- Support proxy configuration.\n- Support toggling auto inline completion.\n- Support configuring key bindings from the status bar menu.\n- Support opening feedback forum from the status bar menu.",
+  "body_html": "### Added\n\n- Support authentication from GitHub Copilot.\n- Support free plan subscription.\n- Support inline completion.\n- Support accepting completion by word.\n- Support fetching Java format options when triggering inline completion.\n- Support proxy configuration.\n- Support toggling auto inline completion.\n- Support configuring key bindings from the status bar menu.\n- Support opening feedback forum from the status bar menu.",
+  "categories": [],
+  "copilot_mentions": [
+    "- Support authentication from GitHub Copilot."
+  ],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}

@@ -146,7 +146,18 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 3. Spot-check one file: `release_date` parsed correctly, `body_markdown` non-empty, `copilot_mentions[]` populated.
 4. Schema validation passes for all files.
 
-**Done when:** Eclipse backfill is complete and stable. Validates the schema + extract utilities against real-world HTML.
+**Done when:** Eclipse backfill is complete and stable, and the workflow runs cleanly in CI. Validates the schema + extract utilities against real-world HTML, and proves the CI plumbing before fanning out.
+
+**Why include the workflow here:** the Eclipse fetcher is the simplest real fetcher and the ideal place to validate commit strategy, `GITHUB_TOKEN` usage, and idempotent CI runs. Every subsequent workflow is a copy-paste with a different `--ide` flag — no value in deferring.
+
+**Additional steps (CI):**
+- `.github/workflows/fetch-eclipse.yml`: cron + `workflow_dispatch`, direct push to main (per Decision A).
+- Permissions: `contents: write`.
+
+**Additional tests (CI):**
+5. Trigger via `workflow_dispatch` on a branch — confirm green run.
+6. Delete one local file, trigger again — confirm exactly that file is recommitted.
+7. Trigger again — confirm "no changes" (no empty commits).
 
 ---
 
@@ -240,23 +251,8 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 
 ---
 
-### MVP 8 — One GitHub Actions workflow (Eclipse only)
-**Why one IDE first:** validates CI plumbing, commit strategy, and `GITHUB_TOKEN` usage on the simplest fetcher before fanning out.
-
-- `.github/workflows/fetch-eclipse.yml`: cron + `workflow_dispatch`, direct push to main (per Decision A).
-- Permissions: `contents: write`.
-
-**Test in isolation:**
-1. Trigger via `workflow_dispatch` on a branch — confirm green run.
-2. Delete one local file, trigger again — confirm exactly that file is recommitted.
-3. Trigger again — confirm "no changes" (no empty commits).
-
-**Done when:** one IDE runs in CI cleanly with idempotent commits.
-
----
-
-### MVP 9 — Fan out workflows + schema-lint CI
-- Copy MVP 8 workflow per IDE with staggered cron minutes.
+### MVP 8 — Fan out workflows + schema-lint CI
+- Copy the MVP 1 workflow per IDE with staggered cron minutes.
 - Add `.github/workflows/lint-schema.yml` running `jsonschema` over all `data/**/*.json` on PR.
 - Optional `fetch-all.yml` via `workflow_call`.
 
@@ -268,7 +264,7 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 
 ---
 
-### MVP 10 — Hardening
+### MVP 9 — Hardening
 - `--force-backfill` flag (re-process existing files).
 - Per-IDE `copilot_mentions` regex override in config.
 - Error-budget: fetcher returns partial success, `run.py` exits non-zero only on hard errors.
@@ -278,7 +274,7 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 ### MVP dependency graph
 
 ```
-MVP 0 ──┬─► MVP 1 (Eclipse) ──► MVP 8 (CI for one) ──► MVP 9 (fan out) ──► MVP 10
+MVP 0 ──┬─► MVP 1 (Eclipse + CI) ──► MVP 8 (fan out) ──► MVP 9
         ├─► MVP 2 (JetBrains)
         ├─► MVP 3 (Xcode + Vim)
         └─► MVP 4 (VS Code) ──► MVP 5 (VS 2026 + splitter) ──┬─► MVP 6 (SSMS)

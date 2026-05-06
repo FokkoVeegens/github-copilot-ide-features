@@ -5,8 +5,14 @@ ides:
     fetcher: dummy
     start_version: "0.0.1"
 
+  - id: eclipse
+    name: Copilot for Eclipse
+    data_dir: data/eclipse
+    fetcher: eclipse
+    start_version: all
+    source_url: https://api.github.com/repos/microsoft/copilot-for-eclipse/releases
+
   # Real IDE entries will be added in subsequent MVPs:
-  # - id: eclipse
   # - id: jetbrains
   # - id: xcode
   # - id: vim-neovim

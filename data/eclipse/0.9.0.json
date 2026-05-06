@@ -1,0 +1,17 @@
+{
+  "ide": "eclipse",
+  "version": "0.9.0",
+  "release_date": "2025-07-15",
+  "title": "0.9.0 - 20250715",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.9.0",
+  "source": "api",
+  "body_markdown": "### Added\n- Show MCP logs in Console View.\n- Add welcome introduction page.\n- Support workspace context (@workspace) in ask mode.\n- Add open chat view command to perspectives' onboard command list.\n- Add keyboard shortcut command for open chat view command.\n- Add new Copilot perspective.\n- Support generate git commit message.\n### Changed\n- Support Eclipse 2024-03 & 2024-06.\n- Make agent mode as default chat mode.\n- Improve the chat view layout.\n- Improve the Copilot menu in menu bar and status bar.\n- Remove the spinner when completing code.\n### Fixed\n- MCP tool configuration button should not be visible in ask mode.\n- Use workbench job to avoid blocking shutdown action.\n- Check if the project is accessible before scanning watched files.\n- Fix quota rendering issue on MacOS and Linux.\n- Wrong completion when IDE auto closed brackets.\n- Entire settings are synced even just changing one item.\n- Wrong welcome page displayed in chat view when user is not signed in.\n- File with no extension cannot be attached in chat view.\n- Error 'SWT Resource was not properly disposed' after sign in.",
+  "body_html": "### Added\n- Show MCP logs in Console View.\n- Add welcome introduction page.\n- Support workspace context (@workspace) in ask mode.\n- Add open chat view command to perspectives' onboard command list.\n- Add keyboard shortcut command for open chat view command.\n- Add new Copilot perspective.\n- Support generate git commit message.\n\n### Changed\n- Support Eclipse 2024-03 & 2024-06.\n- Make agent mode as default chat mode.\n- Improve the chat view layout.\n- Improve the Copilot menu in menu bar and status bar.\n- Remove the spinner when completing code.\n\n### Fixed\n- MCP tool configuration button should not be visible in ask mode.\n- Use workbench job to avoid blocking shutdown action.\n- Check if the project is accessible before scanning watched files.\n- Fix quota rendering issue on MacOS and Linux.\n- Wrong completion when IDE auto closed brackets.\n- Entire settings are synced even just changing one item.\n- Wrong welcome page displayed in chat view when user is not signed in.\n- File with no extension cannot be attached in chat view.\n- Error 'SWT Resource was not properly disposed' after sign in.",
+  "categories": [],
+  "copilot_mentions": [
+    "- Add new Copilot perspective.",
+    "- Improve the Copilot menu in menu bar and status bar."
+  ],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}

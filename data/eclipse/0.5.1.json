@@ -1,0 +1,14 @@
+{
+  "ide": "eclipse",
+  "version": "0.5.1",
+  "release_date": "2025-04-23",
+  "title": "0.5.1 - 20250423",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.5.1",
+  "source": "api",
+  "body_markdown": "### Fixed\n- Annotation model is null when triggering completion.\n- Input text box shakes when sending message by hitting Enter-Key.\n- SWTException when disposing completion manager.\n- Timeout error shows late when fail to login.\n- Improve auto scroll to bottom behavior.\n- Fixed schema name copilotCapabilities.\n- Wrong node runtime may be found.",
+  "body_html": "### Fixed\n- Annotation model is null when triggering completion.\n- Input text box shakes when sending message by hitting Enter-Key.\n- SWTException when disposing completion manager.\n- Timeout error shows late when fail to login.\n- Improve auto scroll to bottom behavior.\n- Fixed schema name copilotCapabilities.\n- Wrong node runtime may be found.",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}

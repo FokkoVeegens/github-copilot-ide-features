@@ -1,0 +1,14 @@
+{
+  "ide": "eclipse",
+  "version": "0.9.3",
+  "release_date": "2025-07-24",
+  "title": "0.9.3 - 20250724",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.9.3",
+  "source": "api",
+  "body_markdown": "### Fixed\n- Update CLS to 1.348.0.",
+  "body_html": "### Fixed\n- Update CLS to 1.348.0.",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}

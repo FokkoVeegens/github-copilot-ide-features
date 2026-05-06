@@ -1,0 +1,14 @@
+{
+  "ide": "eclipse",
+  "version": "0.2.0",
+  "release_date": "2025-02-19",
+  "title": "0.2.0 - 20250219",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.2.0",
+  "source": "api",
+  "body_markdown": "### Added\n- Support C/C++ format options.\n### Fixed\n- Track uncaught exceptions.\n- Invalid thread access when generating completion.\n- NPE when authStatesManager is not ready.\n- Noise error log when signin is cancelled.\n- Hide the credential information in proxy log.\n- Remove hard-coded plugin version in GithubPanicErrorReport.\n- Move the update status icon logic to display thread.",
+  "body_html": "### Added\n- Support C/C++ format options.\n\n### Fixed\n- Track uncaught exceptions.\n- Invalid thread access when generating completion.\n- NPE when authStatesManager is not ready.\n- Noise error log when signin is cancelled.\n- Hide the credential information in proxy log.\n- Remove hard-coded plugin version in GithubPanicErrorReport.\n- Move the update status icon logic to display thread.",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}

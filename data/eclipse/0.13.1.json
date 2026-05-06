@@ -1,0 +1,14 @@
+{
+  "ide": "eclipse",
+  "version": "0.13.1",
+  "release_date": "2025-11-18",
+  "title": "0.13.1 - 20251118",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.13.1",
+  "source": "api",
+  "body_markdown": "### Fixed\n- Chat View - NPE when rendering buttons in action bar.\n- Completion - Invalid thread access when completion in Eclipse 2024-03.",
+  "body_html": "### Fixed\n- Chat View - NPE when rendering buttons in action bar.\n- Completion - Invalid thread access when completion in Eclipse 2024-03.",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}
