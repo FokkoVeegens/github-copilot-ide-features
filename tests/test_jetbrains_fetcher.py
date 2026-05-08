@@ -60,6 +60,40 @@ _FAKE_UPDATES_PAGE2 = [
     },
 ]
 
+# Realistic 4-part version format as returned by the actual JetBrains Marketplace API
+_FAKE_UPDATES_FOUR_PART = [
+    {
+        "id": 2001,
+        "version": "1.5.6.8049-251",
+        "since": "251.1",
+        "until": "251.*",
+        "cdate": 1745280000000,  # 2025-04-22
+        "downloads": 84321,
+        "compatibleVersions": {"IntelliJ IDEA": ["2025.1"]},
+        "notes": "<h2>What's new</h2><ul><li>GitHub Copilot improved inline chat experience.</li></ul>",
+    },
+    {
+        "id": 2002,
+        "version": "1.5.6.8049-243",
+        "since": "243.1",
+        "until": "243.*",
+        "cdate": 1745280000000,
+        "downloads": 39201,
+        "compatibleVersions": {"IntelliJ IDEA": ["2024.3"]},
+        "notes": "<h2>What's new</h2><ul><li>GitHub Copilot improved inline chat experience.</li></ul>",
+    },
+    {
+        "id": 2003,
+        "version": "1.5.5.7956-251",
+        "since": "251.1",
+        "until": "251.*",
+        "cdate": 1744070400000,  # 2025-04-08
+        "downloads": 12000,
+        "compatibleVersions": {"IntelliJ IDEA": ["2025.1"]},
+        "notes": "<h2>What's new</h2><ul><li>Copilot Chat now supports multi-file context.</li></ul>",
+    },
+]
+
 
 class TestParseVersion:
     def test_standard_format(self):
@@ -67,10 +101,20 @@ class TestParseVersion:
         assert semver == "1.5.62"
         assert ide_build == "241"
 
+    def test_four_part_version(self):
+        semver, ide_build = _parse_version("1.5.6.8049-251")
+        assert semver == "1.5.6.8049"
+        assert ide_build == "251"
+
     def test_leading_trailing_spaces(self):
         semver, ide_build = _parse_version("  1.8.2-243  ")
         assert semver == "1.8.2"
         assert ide_build == "243"
+
+    def test_four_part_leading_trailing_spaces(self):
+        semver, ide_build = _parse_version("  1.5.6.8049-251  ")
+        assert semver == "1.5.6.8049"
+        assert ide_build == "251"
 
     def test_large_build_number(self):
         semver, ide_build = _parse_version("2.0.0-9999")
@@ -212,3 +256,52 @@ class TestFetch:
         ]
         releases = self._run_fetch([update_no_cdate, []])
         assert releases[0]["release_date"] == "1970-01-01"
+
+
+class TestFetchFourPartVersions:
+    """Tests that verify the fetcher handles 4-part version strings (actual API format)."""
+
+    def _run_fetch(self, api_pages):
+        call_count = 0
+
+        def fake_get_json(url, params=None, **kwargs):
+            nonlocal call_count
+            result = api_pages[call_count] if call_count < len(api_pages) else []
+            call_count += 1
+            return result
+
+        with patch("scripts.fetchers.jetbrains.get_json", side_effect=fake_get_json):
+            return fetch(_IDE_CONFIG)
+
+    def test_groups_four_part_versions_by_semver(self):
+        releases = self._run_fetch([_FAKE_UPDATES_FOUR_PART, []])
+        versions = {r["version"] for r in releases}
+        assert "1.5.6.8049" in versions
+        assert "1.5.5.7956" in versions
+        assert len(releases) == 2
+
+    def test_four_part_builds_array_populated(self):
+        releases = self._run_fetch([_FAKE_UPDATES_FOUR_PART, []])
+        by_version = {r["version"]: r for r in releases}
+        # 1.5.6.8049 has 2 builds (-251 and -243)
+        assert len(by_version["1.5.6.8049"]["builds"]) == 2
+
+    def test_four_part_ide_builds_captured(self):
+        releases = self._run_fetch([_FAKE_UPDATES_FOUR_PART, []])
+        by_version = {r["version"]: r for r in releases}
+        ide_builds = {b["ide_build"] for b in by_version["1.5.6.8049"]["builds"]}
+        assert "251" in ide_builds
+        assert "243" in ide_builds
+
+    def test_four_part_release_date_derived_from_cdate(self):
+        releases = self._run_fetch([_FAKE_UPDATES_FOUR_PART, []])
+        by_version = {r["version"]: r for r in releases}
+        # cdate 1745280000000 → 2025-04-22
+        assert by_version["1.5.6.8049"]["release_date"] == "2025-04-22"
+        # cdate 1744070400000 → 2025-04-08
+        assert by_version["1.5.5.7956"]["release_date"] == "2025-04-08"
+
+    def test_four_part_copilot_mentions_extracted(self):
+        releases = self._run_fetch([_FAKE_UPDATES_FOUR_PART, []])
+        assert all(len(r["copilot_mentions"]) >= 1 for r in releases)
+

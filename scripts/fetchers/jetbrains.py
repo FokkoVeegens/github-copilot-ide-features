@@ -2,7 +2,8 @@
 
 Source: https://plugins.jetbrains.com/api/plugins/17718/updates?page=N&size=100
 
-Version format: "1.5.62-241"  →  semver=1.5.62, ide_build=241
+Version format: "1.5.6.8049-251"  →  semver=1.5.6.8049, ide_build=251
+Also handles 3-part semvers like "1.5.62-241"  →  semver=1.5.62, ide_build=241
 Each semver maps to multiple build-line entries (e.g. -241, -242, -243).
 We group them into one JSON file per semver with a `builds[]` array.
 """
@@ -13,12 +14,13 @@ from scripts.common.extract import extract_copilot_mentions, html_to_markdown
 from scripts.common.http import get_json
 
 _API_URL = "https://plugins.jetbrains.com/api/plugins/17718/updates"
-_VERSION_RE = re.compile(r"^(?P<semver>\d+\.\d+\.\d+)-(?P<build>\d+)$")
+# Matches "X.Y.Z-NNN" (3-part) or "X.Y.Z.NNNN-NNN" (4-part) version strings.
+_VERSION_RE = re.compile(r"^(?P<semver>\d+(?:\.\d+){2,3})-(?P<build>\d+)$")
 _PLUGIN_URL = "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions"
 
 
 def _parse_version(version_str: str) -> tuple[str, str]:
-    """Return (semver, ide_build) from a version string like '1.5.62-241'."""
+    """Return (semver, ide_build) from a version string like '1.5.6.8049-251'."""
     m = _VERSION_RE.match(version_str.strip())
     if not m:
         raise ValueError(f"Unrecognised JetBrains version string: {version_str!r}")
