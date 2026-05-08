@@ -357,7 +357,10 @@ class TestFetchLegacyVersions:
         assert by_version["1.5.29.7524"]["builds"][0]["ide_build"] is None
 
     def test_legacy_version_passes_schema_validation(self):
-        import json, pathlib
+        import datetime as _dt
+        import json
+        import pathlib
+
         import jsonschema
 
         schema = json.loads(
@@ -365,7 +368,6 @@ class TestFetchLegacyVersions:
         )
         releases = self._run_fetch([self._FAKE_LEGACY, []])
         # Add required fields that write_release would normally inject
-        import datetime as _dt
         for r in releases:
             r["fetched_at"] = _dt.datetime.now(_dt.timezone.utc).isoformat()
             r["schema_version"] = 1
