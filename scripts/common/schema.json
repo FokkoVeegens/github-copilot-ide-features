@@ -65,7 +65,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "ide_build": {"type": "string"},
+          "ide_build": {"type": ["string", "null"]},
           "since": {"type": ["string", "null"]},
           "until": {"type": ["string", "null"]},
           "compatible_versions": {},

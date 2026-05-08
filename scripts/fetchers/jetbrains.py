@@ -2,8 +2,11 @@
 
 Source: https://plugins.jetbrains.com/api/plugins/17718/updates?page=N&size=100
 
-Version format: "1.5.6.8049-251"  →  semver=1.5.6.8049, ide_build=251
-Also handles 3-part semvers like "1.5.62-241"  →  semver=1.5.62, ide_build=241
+Version formats observed in the API:
+- "1.9.0-251"       →  semver=1.9.0,       ide_build=251  (3-part + build, current)
+- "1.5.6.8049-251"  →  semver=1.5.6.8049,  ide_build=251  (4-part + build)
+- "1.5.29.7524"     →  semver=1.5.29.7524, ide_build=None (4-part, no build, legacy)
+
 Each semver maps to multiple build-line entries (e.g. -241, -242, -243).
 We group them into one JSON file per semver with a `builds[]` array.
 """
@@ -14,28 +17,49 @@ from scripts.common.extract import extract_copilot_mentions, html_to_markdown
 from scripts.common.http import get_json
 
 _API_URL = "https://plugins.jetbrains.com/api/plugins/17718/updates"
-# Matches "X.Y.Z-NNN" (3-part) or "X.Y.Z.NNNN-NNN" (4-part) version strings.
+# Matches "X.Y.Z-NNN" or "X.Y.Z.NNNN-NNN" (3-part or 4-part + build suffix).
 _VERSION_RE = re.compile(r"^(?P<semver>\d+(?:\.\d+){2,3})-(?P<build>\d+)$")
+# Matches "X.Y.Z.NNNN" (4-part, no build suffix — legacy universal releases).
+_VERSION_NO_BUILD_RE = re.compile(r"^(?P<semver>\d+(?:\.\d+){3})$")
 _PLUGIN_URL = "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions"
 
 
-def _parse_version(version_str: str) -> tuple[str, str]:
-    """Return (semver, ide_build) from a version string like '1.5.6.8049-251'."""
-    m = _VERSION_RE.match(version_str.strip())
-    if not m:
-        raise ValueError(f"Unrecognised JetBrains version string: {version_str!r}")
-    return m.group("semver"), m.group("build")
+def _parse_version(version_str: str) -> tuple[str, str | None]:
+    """Return (semver, ide_build) from a version string.
+
+    Handles all known formats:
+    - ``"1.9.0-251"``      → ``("1.9.0", "251")``
+    - ``"1.5.6.8049-251"`` → ``("1.5.6.8049", "251")``
+    - ``"1.5.29.7524"``    → ``("1.5.29.7524", None)``  (legacy, no build suffix)
+    """
+    s = version_str.strip()
+    m = _VERSION_RE.match(s)
+    if m:
+        return m.group("semver"), m.group("build")
+    m = _VERSION_NO_BUILD_RE.match(s)
+    if m:
+        return m.group("semver"), None
+    raise ValueError(f"Unrecognised JetBrains version string: {version_str!r}")
 
 
 def _paginate_updates() -> list[dict]:
-    """Return all plugin update objects from the JetBrains Marketplace API."""
+    """Return all plugin update objects from the JetBrains Marketplace API.
+
+    Deduplicates by entry ``id`` because the API can return the same entry on
+    multiple pages when new releases are published between requests.
+    """
+    seen_ids: set[int] = set()
     updates: list[dict] = []
     page = 0
     while True:
-        page_data = get_json(_API_URL, params={"size": 100, "page": page})
+        page_data = get_json(_API_URL, params={"size": 100, "page": page}, use_auth=False)
         if not page_data:
             break
-        updates.extend(page_data)
+        for item in page_data:
+            item_id = item.get("id")
+            if item_id not in seen_ids:
+                seen_ids.add(item_id)
+                updates.append(item)
         page += 1
     return updates
 
@@ -63,7 +87,8 @@ def fetch(ide_config: dict) -> list[dict]:
     results: list[dict] = []
     for semver, build_list in groups.items():
         # Earliest cdate (milliseconds epoch) across builds → ISO-8601 date.
-        cdate_values = [b["item"].get("cdate") or 0 for b in build_list]
+        # cdate may be an integer or a numeric string depending on API version.
+        cdate_values = [int(b["item"].get("cdate") or 0) for b in build_list]
         earliest_cdate = min(cdate_values)
         if earliest_cdate:
             release_date = datetime.fromtimestamp(

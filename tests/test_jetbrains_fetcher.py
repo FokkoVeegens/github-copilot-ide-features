@@ -125,6 +125,17 @@ class TestParseVersion:
         with pytest.raises(ValueError, match="Unrecognised JetBrains version string"):
             _parse_version("1.5.62")
 
+    def test_legacy_no_build_suffix_format(self):
+        # 4-part version with no build suffix (legacy universal releases)
+        semver, ide_build = _parse_version("1.5.29.7524")
+        assert semver == "1.5.29.7524"
+        assert ide_build is None
+
+    def test_three_part_no_suffix_raises_value_error(self):
+        # 3-part without suffix is not a recognised format
+        with pytest.raises(ValueError):
+            _parse_version("1.5.62")
+
     def test_no_build_suffix_raises_value_error(self):
         with pytest.raises(ValueError):
             _parse_version("1.5.62-abc")
@@ -183,6 +194,21 @@ class TestFetch:
         assert "241" in ide_builds
         assert "242" in ide_builds
         assert "243" in ide_builds
+
+    def test_pagination_deduplicates_by_id(self):
+        """Entries repeated across pages (real API behaviour) must not be counted twice."""
+        # id=1001 (1.5.62-241) appears on both pages
+        page1 = _FAKE_UPDATES_PAGE1  # contains id 1001, 1002, 1003
+        page2_with_dupe = [
+            _FAKE_UPDATES_PAGE1[0],  # id=1001 again (duplicate)
+            _FAKE_UPDATES_PAGE2[0],  # id=1004 (new)
+        ]
+        releases = self._run_fetch([page1, page2_with_dupe, []])
+        by_version = {r["version"]: r for r in releases}
+        # 1.5.62 should have 3 unique builds (241, 242, 243), not 4
+        assert len(by_version["1.5.62"]["builds"]) == 3
+        ids = [b["file_id"] for b in by_version["1.5.62"]["builds"]]
+        assert len(ids) == len(set(ids)), "Duplicate file IDs in builds"
 
     def test_release_date_uses_earliest_cdate(self):
         # Both 1.5.62 builds share cdate 1700000000000 → 2023-11-14
@@ -256,6 +282,95 @@ class TestFetch:
         ]
         releases = self._run_fetch([update_no_cdate, []])
         assert releases[0]["release_date"] == "1970-01-01"
+
+    def test_cdate_as_string_parsed_correctly(self):
+        """Real API returns cdate as a string, not an integer."""
+        update_string_cdate = [
+            {
+                "id": 3001,
+                "version": "2.1.0-251",
+                "since": "251.0",
+                "until": "",
+                "cdate": "1778131970000",  # string, as returned by real API
+                "downloads": 500,
+                "notes": "<ul><li>GitHub Copilot update.</li></ul>",
+            }
+        ]
+        releases = self._run_fetch([update_string_cdate, []])
+        assert len(releases) == 1
+        # 1778131970 seconds → 2026-05-07
+        assert releases[0]["release_date"] == "2026-05-07"
+
+
+class TestFetchLegacyVersions:
+    """Tests for legacy 4-part no-build-suffix versions (e.g. 1.5.29.7524)."""
+
+    _FAKE_LEGACY = [
+        {
+            "id": 5001,
+            "version": "1.5.29.7524",
+            "since": "231.0",
+            "until": "243.*",
+            "cdate": 1700000000000,
+            "downloads": 661644,
+            "compatibleVersions": {"IntelliJ IDEA": ["2023.1", "2023.3"]},
+            "notes": "<h2>Changes</h2><ul><li>GitHub Copilot stability improvements.</li></ul>",
+        },
+        {
+            "id": 5002,
+            "version": "1.5.28.7313",
+            "since": "231.0",
+            "until": "242.*",
+            "cdate": 1695000000000,
+            "downloads": 174214,
+            "compatibleVersions": {"IntelliJ IDEA": ["2023.1", "2023.2"]},
+            "notes": "<h2>Changes</h2><ul><li>Copilot Chat beta improvements.</li></ul>",
+        },
+    ]
+
+    def _run_fetch(self, api_pages):
+        call_count = 0
+
+        def fake_get_json(url, params=None, **kwargs):
+            nonlocal call_count
+            result = api_pages[call_count] if call_count < len(api_pages) else []
+            call_count += 1
+            return result
+
+        with patch("scripts.fetchers.jetbrains.get_json", side_effect=fake_get_json):
+            return fetch(_IDE_CONFIG)
+
+    def test_legacy_versions_are_included(self):
+        releases = self._run_fetch([self._FAKE_LEGACY, []])
+        versions = {r["version"] for r in releases}
+        assert "1.5.29.7524" in versions
+        assert "1.5.28.7313" in versions
+
+    def test_legacy_version_has_single_build_entry(self):
+        releases = self._run_fetch([self._FAKE_LEGACY, []])
+        by_version = {r["version"]: r for r in releases}
+        assert len(by_version["1.5.29.7524"]["builds"]) == 1
+
+    def test_legacy_version_ide_build_is_none(self):
+        releases = self._run_fetch([self._FAKE_LEGACY, []])
+        by_version = {r["version"]: r for r in releases}
+        assert by_version["1.5.29.7524"]["builds"][0]["ide_build"] is None
+
+    def test_legacy_version_passes_schema_validation(self):
+        import json, pathlib
+        import jsonschema
+
+        schema = json.loads(
+            pathlib.Path("scripts/common/schema.json").read_text()
+        )
+        releases = self._run_fetch([self._FAKE_LEGACY, []])
+        # Add required fields that write_release would normally inject
+        import datetime as _dt
+        for r in releases:
+            r["fetched_at"] = _dt.datetime.now(_dt.timezone.utc).isoformat()
+            r["schema_version"] = 1
+        for r in releases:
+            jsonschema.validate(r, schema)  # raises if invalid
 
 
 class TestFetchFourPartVersions:
