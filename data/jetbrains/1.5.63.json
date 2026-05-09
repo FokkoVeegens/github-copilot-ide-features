@@ -1,0 +1,71 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.63",
+  "release_date": "2026-01-15",
+  "title": "GitHub Copilot for JetBrains 1.5.63",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **New Features**\n\n* Added: Refined copilot settings page\n* Added: Inline Chat UI refinement\n* Added: Inline Diff: Respect user edits, bug fixing and other UX improvements\n* Added: Support customizing location for pkg temp files\n* Added: Chat UI refinement on collapsing and expanding files\n\n* **Performance and reliability**\n\n* Fixed: Open settings not in EDT issue\n* Fixed: UI improvements in undo and keep button\n* Fixed: UI improvement for Working Set Panel\n* Fixed: tool will overwrite existing files issue\n* Fixed: Copy button is not enabled for error messages of agent's responses issue\n* Fixed: Double empty lines when creating new file",
+  "body_html": "<ul><li><strong>New Features</strong>\n</li></ul>\n<ul><li>Added: Refined copilot settings page \n</li><li>Added: Inline Chat UI refinement\n</li><li>Added: Inline Diff: Respect user edits, bug fixing and other UX improvements\n</li><li>Added: Support customizing location for pkg temp files\n</li><li>Added: Chat UI refinement on collapsing and expanding files\n</li></ul>\n<ul><li><strong>Performance and reliability</strong>\n</li></ul>\n<ul><li>Fixed: Open settings not in EDT issue\n</li><li>Fixed: UI improvements in undo and keep button\n</li><li>Fixed: UI improvement for Working Set Panel\n</li><li>Fixed:  tool will overwrite existing files issue\n</li><li>Fixed: Copy button is not enabled for error messages of agent's responses issue\n</li><li>Fixed: Double empty lines when creating new file</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Added: Refined copilot settings page",
+    "* Added: Inline Chat UI refinement"
+  ],
+  "builds": [
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "",
+      "compatible_versions": {
+        "MPS": "2024.3+",
+        "PHPSTORM": "2024.3+",
+        "IDEA_COMMUNITY": "2024.3+",
+        "GOLAND": "2024.3+",
+        "PYCHARM": "2024.3+",
+        "WEBSTORM": "2024.3+",
+        "CWMGUEST": "1.0+",
+        "RIDER": "2024.3+",
+        "PYCHARM_COMMUNITY": "2024.3+",
+        "CLION": "2024.3+",
+        "DATASPELL": "2024.3+",
+        "RUST": "2024.3+",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1+",
+        "JBCLIENT": "1.0+",
+        "DBE": "2024.3+",
+        "RUBYMINE": "2024.3+",
+        "IDEA": "2024.3+"
+      },
+      "file_id": 933548,
+      "downloads": 1199442
+    },
+    {
+      "ide_build": "241",
+      "since": "241.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "2024.1 — 2024.1.6",
+        "PHPSTORM": "2024.1 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.1 — 2024.2.6",
+        "GOLAND": "2024.1 — 2024.2.5",
+        "PYCHARM": "2024.1 — 2024.2.6",
+        "WEBSTORM": "2024.1 — 2024.2.6",
+        "CWMGUEST": "build 241.0 — 242.*",
+        "RIDER": "2024.1 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.1 — 2024.2.6",
+        "CLION": "2024.1 — 2024.2.5",
+        "DATASPELL": "2024.1 — 2024.2.3",
+        "RUST": "2024.1 — 2024.2.5",
+        "ANDROID_STUDIO": "Koala | 2024.1.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 241.0 — 242.*",
+        "DBE": "2024.1 — 2024.2.2",
+        "RUBYMINE": "2024.1 — 2024.2.6",
+        "IDEA": "2024.1 — 2024.2.6"
+      },
+      "file_id": 933544,
+      "downloads": 760464
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

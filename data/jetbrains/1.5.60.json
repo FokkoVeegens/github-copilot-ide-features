@@ -1,0 +1,72 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.60",
+  "release_date": "2025-11-12",
+  "title": "GitHub Copilot for JetBrains 1.5.60",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Added: Custom agent – customize your chat mode with your own configurations.\n* Added: Isolated subagents – use isolated context of specified agents to make agents more accurate and effective.\n* Added: Plan agent – create detailed implementation plans before starting the implementation.\n* Added: Dynamic OAuth – flexible authentication for enterprise and cloud environments.\n* Added: Auto model selection – automatic model selection within Copilot Chat for optimized performance.\n* Added: Support for the GPT-5-Codex model (Preview).\n* Added: Global instruction and prompt file support.\n* Added: Customize folder path for Workspace instruction and prompt file.\n* Added: **Log Models** action and command for easier troubleshooting.\n* Added: Continue confirmation UI when max tool calls are reached.\n* Added: MCP server management and configuration.\n* Added: Support multiple modules projects in agent mode.\n* Added: Various UI improvements.\n* Fixed: Popup position and focus issues for # context.\n* Fixed: **No model found** error when sampling.\n* Fixed: Multi-line paste issue in Copilot Chat input panel.\n* Fixed: Copilot editing wrong file.\n* Fixed: Adjusted input handling for required and optional resource template variables.",
+  "body_html": "<ul><li>Added: Custom agent – customize your chat mode with your own configurations.\n</li><li>Added: Isolated subagents – use isolated context of specified agents to make agents more accurate and effective.\n</li><li>Added: Plan agent – create detailed implementation plans before starting the implementation.\n</li><li>Added: Dynamic OAuth – flexible authentication for enterprise and cloud environments.\n</li><li>Added: Auto model selection – automatic model selection within Copilot Chat for optimized performance.\n</li><li>Added: Support for the GPT-5-Codex model (Preview).\n</li><li>Added: Global instruction and prompt file support.\n</li><li>Added: Customize folder path for Workspace instruction and prompt file.\n</li><li>Added: <strong>Log Models</strong> action and command for easier troubleshooting.\n</li><li>Added: Continue confirmation UI when max tool calls are reached.\n</li><li>Added: MCP server management and configuration.\n</li><li>Added: Support multiple modules projects in agent mode.\n</li><li>Added: Various UI improvements.\n</li><li>Fixed: Popup position and focus issues for # context.\n</li><li>Fixed: <strong>No model found</strong> error when sampling.\n</li><li>Fixed: Multi-line paste issue in Copilot Chat input panel.\n</li><li>Fixed: Copilot editing wrong file.\n</li><li>Fixed: Adjusted input handling for required and optional resource template variables.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Added: Auto model selection – automatic model selection within Copilot Chat for optimized performance.",
+    "* Fixed: Multi-line paste issue in Copilot Chat input panel.",
+    "* Fixed: Copilot editing wrong file."
+  ],
+  "builds": [
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "",
+      "compatible_versions": {
+        "MPS": "2024.3+",
+        "PHPSTORM": "2024.3+",
+        "IDEA_COMMUNITY": "2024.3+",
+        "GOLAND": "2024.3+",
+        "PYCHARM": "2024.3+",
+        "WEBSTORM": "2024.3+",
+        "CWMGUEST": "1.0+",
+        "RIDER": "2024.3+",
+        "PYCHARM_COMMUNITY": "2024.3+",
+        "CLION": "2024.3+",
+        "DATASPELL": "2024.3+",
+        "RUST": "2024.3+",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1+",
+        "JBCLIENT": "1.0+",
+        "DBE": "2024.3+",
+        "RUBYMINE": "2024.3+",
+        "IDEA": "2024.3+"
+      },
+      "file_id": 892199,
+      "downloads": 541413
+    },
+    {
+      "ide_build": "241",
+      "since": "241.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "2024.1 — 2024.1.6",
+        "PHPSTORM": "2024.1 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.1 — 2024.2.6",
+        "GOLAND": "2024.1 — 2024.2.5",
+        "PYCHARM": "2024.1 — 2024.2.6",
+        "WEBSTORM": "2024.1 — 2024.2.6",
+        "CWMGUEST": "build 241.0 — 242.*",
+        "RIDER": "2024.1 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.1 — 2024.2.6",
+        "CLION": "2024.1 — 2024.2.5",
+        "DATASPELL": "2024.1 — 2024.2.3",
+        "RUST": "2024.1 — 2024.2.5",
+        "ANDROID_STUDIO": "Koala | 2024.1.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 241.0 — 242.*",
+        "DBE": "2024.1 — 2024.2.2",
+        "RUBYMINE": "2024.1 — 2024.2.6",
+        "IDEA": "2024.1 — 2024.2.6"
+      },
+      "file_id": 892198,
+      "downloads": 36650
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

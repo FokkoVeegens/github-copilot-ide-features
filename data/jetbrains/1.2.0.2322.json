@@ -1,0 +1,42 @@
+{
+  "ide": "jetbrains",
+  "version": "1.2.0.2322",
+  "release_date": "2023-01-19",
+  "title": "GitHub Copilot for JetBrains 1.2.0.2322",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Major improvements of model quality for the most used languages\n* Better support for C# in Rider\n* Fixed critical issue with Jupyter notebooks\n* Various bug fixes",
+  "body_html": "<ul><li>Major improvements of model quality for the most used languages</li><li>Better support for C# in Rider</li><li>Fixed critical issue with Jupyter notebooks</li><li>Various bug fixes</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "211.0",
+      "until": "223.*",
+      "compatible_versions": {
+        "MPS": "2021.1 — 2022.3.3",
+        "PHPSTORM": "2021.1 — 2022.3.3",
+        "IDEA_COMMUNITY": "2021.1 — 2022.3.3",
+        "GOLAND": "2021.1 — 2022.3.4",
+        "PYCHARM": "2021.1 — 2022.3.3",
+        "WEBSTORM": "2021.1 — 2022.3.4",
+        "CWMGUEST": "build 211.0 — 223.*",
+        "RIDER": "2021.1 — 2022.3.3",
+        "PYCHARM_COMMUNITY": "2021.1 — 2022.3.3",
+        "CLION": "2021.1 — 2022.3.3",
+        "DATASPELL": "2021.3 — 2022.3.3",
+        "RUST": "build 211.0 — 223.*",
+        "ANDROID_STUDIO": "Bumblebee | 2021.1.1 — Giraffe | 2022.3.1 Patch 4",
+        "JBCLIENT": "build 211.0 — 223.*",
+        "DBE": "2021.1 — 2022.3.3",
+        "RUBYMINE": "2021.1 — 2022.3.3",
+        "IDEA": "2021.1 — 2022.3.3"
+      },
+      "file_id": 279568,
+      "downloads": 38762
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

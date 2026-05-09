@@ -1,0 +1,68 @@
+{
+  "ide": "jetbrains",
+  "version": "1.6.1",
+  "release_date": "2026-03-10",
+  "title": "GitHub Copilot for JetBrains 1.6.1",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **New Features**\n\n* Added: Sub-agents, Custom Agents, and Plan Agent are generally available.\n* Added: Auto model selection is generally available.\n* Added: Agent hooks support is in public preview.\n* Added: Auto-approve support for MCP at both server and tool levels.\n* Added: Thinking panel for extended‑reasoning models (e.g., Codex), with configurable Anthropic thinking budgets.\n* Added: Support for AGENTS.md and CLAUDE.md instruction files, including generating initial instructions and prompting updates.\n* Added: /memory slash command to open Customization settings.\n* Added: Context window usage indicator in the chat panel.\n\n* **User Experience**\n\n* Improved: Smoother login experience for GitHub Enterprise users.\n* Improved: Automatically open the chat panel after signing in for easier access.\n* Improved: Support for prioritizing device code flow authentication via a config entry in settings.\n* Improved: NES trigger timing and popup dismissal logic.\n* Improved: More responsive chat panel layout across different window sizes.\n* Improved: Cleaner auto-approve UI for a more intuitive approval workflow.\n* Improved: Chat panel context UX with cleaner and more consistent file attachments.\n* Improved: Windows ARM platform support.\n\n* **Bug Fixes**\n\n* Fixed: Improved stability when reading terminal output.\n* Fixed: The replace\\_string\\_in\\_file tool did not update file content correctly.\n* Fixed: Keep\n  All/Undo\n  All buttons remained after switching windows.\n* Fixed: UI hangs in chat and inline completions caused by blocking EDT calls.\n* Fixed: Blank chat panel when the terminal plugin was unavailable.\n* Fixed: MCP code vision appeared when signed out.\n* Fixed: File icons flickered when the selected code range changed.\n\n* **Deprecation**\n\n* Updated: Edit mode is now marked as deprecated.",
+  "body_html": "<ul><li><strong>New Features</strong>\n</li></ul>\n<ul><li>Added: Sub-agents, Custom Agents, and Plan Agent are generally available.\n</li><li>Added: Auto model selection is generally available.\n</li><li>Added: Agent hooks support is in public preview.\n</li><li>Added: Auto-approve support for MCP at both server and tool levels.\n</li><li>Added: Thinking panel for extended‑reasoning models (e.g., Codex), with configurable Anthropic thinking budgets.\n</li><li>Added: Support for AGENTS.md and CLAUDE.md instruction files, including generating initial instructions and prompting updates.\n</li><li>Added: /memory slash command to open Customization settings.\n</li><li>Added: Context window usage indicator in the chat panel.\n\n</li></ul>\n<ul><li><strong>User Experience</strong>\n</li></ul>\n<ul><li>Improved: Smoother login experience for GitHub Enterprise users.\n</li><li>Improved: Automatically open the chat panel after signing in for easier access.\n</li><li>Improved: Support for prioritizing device code flow authentication via a config entry in settings.\n</li><li>Improved: NES trigger timing and popup dismissal logic.\n</li><li>Improved: More responsive chat panel layout across different window sizes.\n</li><li>Improved: Cleaner auto-approve UI for a more intuitive approval workflow.\n</li><li>Improved: Chat panel context UX with cleaner and more consistent file attachments.\n</li><li>Improved: Windows ARM platform support.\n\n</li></ul>\n<ul><li><strong>Bug Fixes</strong>\n</li></ul>\n<ul><li>Fixed: Improved stability when reading terminal output.\n</li><li>Fixed: The replace_string_in_file tool did not update file content correctly.\n</li><li>Fixed: Keep\nAll/Undo\nAll buttons remained after switching windows.\n</li><li>Fixed: UI hangs in chat and inline completions caused by blocking EDT calls.\n</li><li>Fixed: Blank chat panel when the terminal plugin was unavailable.\n</li><li>Fixed: MCP code vision appeared when signed out.\n</li><li>Fixed: File icons flickered when the selected code range changed.\n\n</li></ul>\n<ul><li><strong>Deprecation</strong>\n</li></ul>\n<ul><li>Updated: Edit mode is now marked as deprecated.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": "242",
+      "since": "242.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "build 242.0 — 242.*",
+        "PHPSTORM": "2024.2 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.2 — 2024.2.6",
+        "GOLAND": "2024.2 — 2024.2.5",
+        "PYCHARM": "2024.2 — 2024.2.6",
+        "WEBSTORM": "2024.2 — 2024.2.6",
+        "CWMGUEST": "build 242.0 — 242.*",
+        "RIDER": "2024.2 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.2 — 2024.2.6",
+        "CLION": "2024.2 — 2024.2.5",
+        "DATASPELL": "2024.2 — 2024.2.3",
+        "RUST": "2024.2 — 2024.2.5",
+        "ANDROID_STUDIO": "Ladybug | 2024.2.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 242.0 — 242.*",
+        "DBE": "2024.2 — 2024.2.2",
+        "RUBYMINE": "2024.2 — 2024.2.6",
+        "IDEA": "2024.2 — 2024.2.6"
+      },
+      "file_id": 982717,
+      "downloads": 21320
+    },
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "",
+      "compatible_versions": {
+        "MPS": "2024.3+",
+        "PHPSTORM": "2024.3+",
+        "IDEA_COMMUNITY": "2024.3+",
+        "GOLAND": "2024.3+",
+        "PYCHARM": "2024.3+",
+        "WEBSTORM": "2024.3+",
+        "CWMGUEST": "1.0+",
+        "RIDER": "2024.3+",
+        "PYCHARM_COMMUNITY": "2024.3+",
+        "CLION": "2024.3+",
+        "DATASPELL": "2024.3+",
+        "RUST": "2024.3+",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1+",
+        "JBCLIENT": "1.0+",
+        "DBE": "2024.3+",
+        "RUBYMINE": "2024.3+",
+        "IDEA": "2024.3+"
+      },
+      "file_id": 982712,
+      "downloads": 859116
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

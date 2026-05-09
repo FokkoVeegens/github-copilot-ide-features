@@ -1,0 +1,44 @@
+{
+  "ide": "jetbrains",
+  "version": "1.1.13.747",
+  "release_date": "2022-03-02",
+  "title": "GitHub Copilot for JetBrains 1.1.13.747",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "### Added\n\n* Enable access to 'Nightly (Agent)' update channel via Copilot preferences. This channel provides highly improved but experimental integration with Github Copilot.\n* Support for IntelliJ 2021.1 and Android Studio Bumblebee\n\n### Fixed\n\n* Fixed errors when showing multiple solutions for certain file types.",
+  "body_html": "<h3>Added</h3>\n<ul><li>Enable access to 'Nightly (Agent)' update channel via Copilot preferences. This channel provides highly improved but experimental integration with Github Copilot.</li><li>Support for IntelliJ 2021.1 and Android Studio Bumblebee</li></ul>\n\n<h3>Fixed</h3>\n<ul><li>Fixed errors when showing multiple solutions for certain file types.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Enable access to 'Nightly (Agent)' update channel via Copilot preferences. This channel provides highly improved but experimental integration with Github Copilot."
+  ],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "211.0",
+      "until": "221.*",
+      "compatible_versions": {
+        "MPS": "2021.1 — 2021.3.5",
+        "PHPSTORM": "2021.1 — 2022.1.4",
+        "IDEA_COMMUNITY": "2021.1 — 2022.1.4",
+        "GOLAND": "2021.1 — 2022.1.4",
+        "PYCHARM": "2021.1 — 2022.1.4",
+        "WEBSTORM": "2021.1 — 2022.1.4",
+        "CWMGUEST": "build 211.0 — 221.*",
+        "RIDER": "2021.1 — 2022.1.2",
+        "PYCHARM_COMMUNITY": "2021.1 — 2022.1.4",
+        "CLION": "2021.1 — 2022.1.3",
+        "DATASPELL": "2021.3 — 2022.1.4",
+        "RUST": "build 211.0 — 221.*",
+        "ANDROID_STUDIO": "Bumblebee | 2021.1.1 — Electric Eel | 2022.1.1 Patch 2",
+        "JBCLIENT": "build 211.0 — 221.*",
+        "DBE": "2021.1 — 2022.1.5",
+        "RUBYMINE": "2021.1 — 2022.1.4",
+        "IDEA": "2021.1 — 2022.1.4"
+      },
+      "file_id": 160755,
+      "downloads": 13264
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

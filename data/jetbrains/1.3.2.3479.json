@@ -1,0 +1,43 @@
+{
+  "ide": "jetbrains",
+  "version": "1.3.2.3479",
+  "release_date": "2023-10-12",
+  "title": "GitHub Copilot for JetBrains 1.3.2.3479",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Various bug fixes",
+  "body_html": "<ul><li>Various bug fixes</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "221.0",
+      "until": "233.*",
+      "compatible_versions": {
+        "MPS": "2022.2 — 2023.3.3",
+        "PHPSTORM": "2022.1 — 2023.3.8",
+        "IDEA_COMMUNITY": "2022.1 — 2023.3.8",
+        "GOLAND": "2022.1 — 2023.3.8",
+        "PYCHARM": "2022.1 — 2023.3.7",
+        "WEBSTORM": "2022.1 — 2023.3.8",
+        "CWMGUEST": "build 221.0 — 233.*",
+        "RIDER": "2022.1 — 2023.3.6",
+        "APPCODE": "2022.1 — 2023.1.5",
+        "PYCHARM_COMMUNITY": "2022.1 — 2023.3.7",
+        "CLION": "2022.1 — 2023.3.6",
+        "DATASPELL": "2022.1 — 2023.3.6",
+        "RUST": "build 221.0 — 233.*",
+        "ANDROID_STUDIO": "Electric Eel | 2022.1.1 — Jellyfish | 2023.3.1 Patch 2",
+        "JBCLIENT": "build 221.0 — 233.*",
+        "DBE": "2022.1 — 2023.3.4",
+        "RUBYMINE": "2022.1 — 2023.3.8",
+        "IDEA": "2022.1 — 2023.3.8"
+      },
+      "file_id": 415524,
+      "downloads": 152321
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

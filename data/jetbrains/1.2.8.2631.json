@@ -1,0 +1,43 @@
+{
+  "ide": "jetbrains",
+  "version": "1.2.8.2631",
+  "release_date": "2023-06-02",
+  "title": "GitHub Copilot for JetBrains 1.2.8.2631",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Various bug fixes",
+  "body_html": "<ul><li>Various bug fixes</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "211.0",
+      "until": "232.*",
+      "compatible_versions": {
+        "MPS": "2021.1 — 2023.2.3",
+        "PHPSTORM": "2021.1 — 2023.2.7",
+        "IDEA_COMMUNITY": "2021.1 — 2023.2.8",
+        "GOLAND": "2021.1 — 2023.2.8",
+        "PYCHARM": "2021.1 — 2023.2.8",
+        "WEBSTORM": "2021.1 — 2023.2.8",
+        "CWMGUEST": "build 211.0 — 232.*",
+        "RIDER": "2021.1 — 2023.2.5",
+        "APPCODE": "2021.1 — 2023.1.5",
+        "PYCHARM_COMMUNITY": "2021.1 — 2023.2.8",
+        "CLION": "2021.1 — 2023.2.5",
+        "DATASPELL": "2021.3 — 2023.2.7",
+        "RUST": "build 211.0 — 232.*",
+        "ANDROID_STUDIO": "Bumblebee | 2021.1.1 — Iguana | 2023.2.1 Patch 2",
+        "JBCLIENT": "build 211.0 — 232.*",
+        "DBE": "2021.1 — 2023.2.3",
+        "RUBYMINE": "2021.1 — 2023.2.8",
+        "IDEA": "2021.1 — 2023.2.8"
+      },
+      "file_id": 341846,
+      "downloads": 180991
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

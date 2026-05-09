@@ -1,0 +1,42 @@
+{
+  "ide": "jetbrains",
+  "version": "1.1.38.2229",
+  "release_date": "2022-12-19",
+  "title": "GitHub Copilot for JetBrains 1.1.38.2229",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Improve error handling",
+  "body_html": "<ul><li>Improve error handling</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "211.0",
+      "until": "223.*",
+      "compatible_versions": {
+        "MPS": "2021.1 — 2022.3.3",
+        "PHPSTORM": "2021.1 — 2022.3.3",
+        "IDEA_COMMUNITY": "2021.1 — 2022.3.3",
+        "GOLAND": "2021.1 — 2022.3.4",
+        "PYCHARM": "2021.1 — 2022.3.3",
+        "WEBSTORM": "2021.1 — 2022.3.4",
+        "CWMGUEST": "build 211.0 — 223.*",
+        "RIDER": "2021.1 — 2022.3.3",
+        "PYCHARM_COMMUNITY": "2021.1 — 2022.3.3",
+        "CLION": "2021.1 — 2022.3.3",
+        "DATASPELL": "2021.3 — 2022.3.3",
+        "RUST": "build 211.0 — 223.*",
+        "ANDROID_STUDIO": "Bumblebee | 2021.1.1 — Giraffe | 2022.3.1 Patch 4",
+        "JBCLIENT": "build 211.0 — 223.*",
+        "DBE": "2021.1 — 2022.3.3",
+        "RUBYMINE": "2021.1 — 2022.3.3",
+        "IDEA": "2021.1 — 2022.3.3"
+      },
+      "file_id": 268309,
+      "downloads": 129301
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

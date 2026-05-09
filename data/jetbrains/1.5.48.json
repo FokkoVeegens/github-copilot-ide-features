@@ -1,0 +1,70 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.48",
+  "release_date": "2025-07-03",
+  "title": "GitHub Copilot for JetBrains 1.5.48",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **Added**: Custom proxy configuration that overrides the default IDE proxy settings when enabled.\n* **Added**: Support for slash commands in both Edits and Agent modes.\n* **Added**: Session history tracking in Agent mode.\n* **Added**: Restore to Checkpoint as a preview feature in Agent mode.\n* **Added**: Improved user interface for managing MCP tools more efficiently.\n* **Changed**: Settings interface reorganized for improved usability and navigation, now in **Settings** -> **Tools** -> **GitHub Copilot**.\n* **Fixed**: Issue when creating a new file in Edit mode.\n* **Fixed**: Incorrect handling of special characters in the inline diff view.\n* **Fixed**: Missing User-Agent header in network requests.\n* **Fixed**: Various performance and stability improvements.",
+  "body_html": "<ul><li><strong>Added</strong>: Custom proxy configuration that overrides the default IDE proxy settings when enabled.\n</li><li><strong>Added</strong>: Support for slash commands in both Edits and Agent modes.\n</li><li><strong>Added</strong>: Session history tracking in Agent mode.\n</li><li><strong>Added</strong>: Restore to Checkpoint as a preview feature in Agent mode.\n</li><li><strong>Added</strong>: Improved user interface for managing MCP tools more efficiently.\n</li><li><strong>Changed</strong>: Settings interface reorganized for improved usability and navigation, now in <strong>Settings</strong> -&gt; <strong>Tools</strong> -&gt; <strong>GitHub Copilot</strong>. \n</li><li><strong>Fixed</strong>: Issue when creating a new file in Edit mode.\n</li><li><strong>Fixed</strong>: Incorrect handling of special characters in the inline diff view.\n</li><li><strong>Fixed</strong>: Missing User-Agent header in network requests.\n</li><li><strong>Fixed</strong>: Various performance and stability improvements.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* **Changed**: Settings interface reorganized for improved usability and navigation, now in **Settings** -> **Tools** -> **GitHub Copilot**."
+  ],
+  "builds": [
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "",
+      "compatible_versions": {
+        "MPS": "2024.3+",
+        "PHPSTORM": "2024.3+",
+        "IDEA_COMMUNITY": "2024.3+",
+        "GOLAND": "2024.3+",
+        "PYCHARM": "2024.3+",
+        "WEBSTORM": "2024.3+",
+        "CWMGUEST": "1.0+",
+        "RIDER": "2024.3+",
+        "PYCHARM_COMMUNITY": "2024.3+",
+        "CLION": "2024.3+",
+        "DATASPELL": "2024.3+",
+        "RUST": "2024.3+",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1+",
+        "JBCLIENT": "1.0+",
+        "DBE": "2024.3+",
+        "RUBYMINE": "2024.3+",
+        "IDEA": "2024.3+"
+      },
+      "file_id": 786198,
+      "downloads": 360256
+    },
+    {
+      "ide_build": "241",
+      "since": "241.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "2024.1 — 2024.1.6",
+        "PHPSTORM": "2024.1 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.1 — 2024.2.6",
+        "GOLAND": "2024.1 — 2024.2.5",
+        "PYCHARM": "2024.1 — 2024.2.6",
+        "WEBSTORM": "2024.1 — 2024.2.6",
+        "CWMGUEST": "build 241.0 — 242.*",
+        "RIDER": "2024.1 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.1 — 2024.2.6",
+        "CLION": "2024.1 — 2024.2.5",
+        "DATASPELL": "2024.1 — 2024.2.3",
+        "RUST": "2024.1 — 2024.2.5",
+        "ANDROID_STUDIO": "Koala | 2024.1.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 241.0 — 242.*",
+        "DBE": "2024.1 — 2024.2.2",
+        "RUBYMINE": "2024.1 — 2024.2.6",
+        "IDEA": "2024.1 — 2024.2.6"
+      },
+      "file_id": 786197,
+      "downloads": 50709
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

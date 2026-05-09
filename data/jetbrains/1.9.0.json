@@ -1,0 +1,47 @@
+{
+  "ide": "jetbrains",
+  "version": "1.9.0",
+  "release_date": "2026-05-07",
+  "title": "GitHub Copilot for JetBrains 1.9.0",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **New Features**\n\n* Added: GitHub Copilot CLI support for delegating tasks to a locally running Copilot CLI (preview)\n* Added: Unified session view to manage local and GitHub Copilot CLI sessions\n* Added: Ask question tool in agent mode\n* Added: GitHub Enterprise Server (GHES) support in the sign-in flow\n* Added: Global .agent.md file support under ~/.copilot/agents, with UI support coming soon\n\n* **User Experience**\n\n* Improved: Added confirmation when starting a new command to cancel the active one\n* Improved: Sub-agent rendering and current file as context styling\n* Improved: Auto‑approval panel UI\n* Improved: Hover and pressed states for code‑block actions\n* Improved: Code review apply behavior with full‑line replacements\n\n* **Bug Fixes**\n\n* Fixed: Code completions not working on a second screen\n* Fixed: Shift+Home / Shift+End issues for inline selection\n* Fixed: Drag-and-drop issues when adding files to Copilot Chat\n* Fixed: Multiple UI freezes and responsiveness issues\n\n* **Changed**\n\n* Changed: Plan agent is no longer auto-invoked in sub-agent workflows, and remains available from the mode picker\n\n* **Deprecation**\n\n* Removed: Edit mode support",
+  "body_html": "<ul><li><strong>New Features</strong>\n</li></ul>\n<ul><li>Added: GitHub Copilot CLI support for delegating tasks to a locally running Copilot CLI (preview)\n</li><li>Added: Unified session view to manage local and GitHub Copilot CLI sessions\n</li><li>Added: Ask question tool in agent mode\n</li><li>Added: GitHub Enterprise Server (GHES) support in the sign-in flow\n</li><li>Added: Global .agent.md file support under ~/.copilot/agents, with UI support coming soon\n\n</li></ul>\n<ul><li><strong>User Experience</strong>\n</li></ul>\n<ul><li>Improved: Added confirmation when starting a new command to cancel the active one\n</li><li>Improved: Sub-agent rendering and current file as context styling\n</li><li>Improved: Auto‑approval panel UI\n</li><li>Improved: Hover and pressed states for code‑block actions\n</li><li>Improved: Code review apply behavior with full‑line replacements\n\n</li></ul>\n<ul><li><strong>Bug Fixes</strong>\n</li></ul>\n<ul><li>Fixed: Code completions not working on a second screen\n</li><li>Fixed: Shift+Home / Shift+End issues for inline selection\n</li><li>Fixed: Drag-and-drop issues when adding files to Copilot Chat\n</li><li>Fixed: Multiple UI freezes and responsiveness issues\n\n</li></ul>\n<ul><li><strong>Changed</strong>\n</li></ul>\n<ul><li>Changed: Plan agent is no longer auto-invoked in sub-agent workflows, and remains available from the mode picker\n\n</li></ul>\n<ul><li><strong>Deprecation</strong>\n</li></ul>\n<ul><li>Removed: Edit mode support</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Added: GitHub Copilot CLI support for delegating tasks to a locally running Copilot CLI (preview)",
+    "* Added: Unified session view to manage local and GitHub Copilot CLI sessions",
+    "* Added: Global .agent.md file support under ~/.copilot/agents, with UI support coming soon",
+    "* Fixed: Drag-and-drop issues when adding files to Copilot Chat"
+  ],
+  "builds": [
+    {
+      "ide_build": "251",
+      "since": "251.0",
+      "until": "",
+      "compatible_versions": {
+        "MPS": "2025.1+",
+        "PHPSTORM": "2025.1+",
+        "IDEA_COMMUNITY": "2025.1+",
+        "GOLAND": "2025.1+",
+        "PYCHARM": "2025.1+",
+        "WEBSTORM": "2025.1+",
+        "CWMGUEST": "1.0+",
+        "RIDER": "2025.1+",
+        "PYCHARM_COMMUNITY": "2025.1+",
+        "CLION": "2025.1+",
+        "DATASPELL": "2025.1+",
+        "RUST": "2025.1+",
+        "ANDROID_STUDIO": "Narwhal | 2025.1.1+",
+        "JBCLIENT": "1.0+",
+        "DBE": "2025.1+",
+        "RUBYMINE": "2025.1+",
+        "IDEA": "2025.1+"
+      },
+      "file_id": 1041417,
+      "downloads": 223301
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

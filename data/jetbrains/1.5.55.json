@@ -1,0 +1,68 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.55",
+  "release_date": "2025-09-03",
+  "title": "GitHub Copilot for JetBrains 1.5.55",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Added: **Next Edit Suggestions (NES):** Enhanced auto-completion to anticipate your next edit.\n* Added: **Prompt Files:** Support for **.prompt.md** files, which allow defining project-scoped prompt customization in the **.github/prompts** directory.\n* Added: **Built-in Tools Management:** Built-in tools management view in the Agent mode UI.\n* Added: **Shared Sessions:** Seamless switching between Ask mode and Agent mode without content loss.\n* Added: **Setting on delay for Auto-Accept :** Configure a delay after which suggested edits are automatically accepted.\n* Added: Support Bring your own Key for Azure, OpenAI, Gemini, Groq, Anthropic and OpenRouter providers\n* Added: **Image Paste Support:** Paste images directly into the conversation.\n* Added: **Terminal Auto-Approve:** Set specific commands or patterns to auto-approve without manual confirmation.\n* Added: Updated MCP Stdio uv server close logic\n* Added: Support cancel token for MCP tool calling\n* Fixed: Extra white border in the text input panel.\n* Fixed: Slow loading of menu items when first opened from the status icon.\n* Fixed: **Various Fixes and UX Improvements**",
+  "body_html": "<ul><li>Added: <strong>Next Edit Suggestions (NES):</strong> Enhanced auto-completion to anticipate your next edit.  \n</li><li>Added: <strong>Prompt Files:</strong> Support for <strong>.prompt.md</strong> files, which allow defining project-scoped prompt customization in the <strong>.github/prompts</strong> directory.\n</li><li>Added: <strong>Built-in Tools Management:</strong> Built-in tools management view in the Agent mode UI.  \n</li><li>Added: <strong>Shared Sessions:</strong> Seamless switching between Ask mode and Agent mode without content loss.  \n</li><li>Added: <strong>Setting on delay for Auto-Accept :</strong> Configure a delay after which suggested edits are automatically accepted. \n</li><li>Added: Support Bring your own Key for Azure, OpenAI, Gemini, Groq, Anthropic and OpenRouter providers\n</li><li>Added: <strong>Image Paste Support:</strong> Paste images directly into the conversation.\n</li><li>Added: <strong>Terminal Auto-Approve:</strong> Set specific commands or patterns to auto-approve without manual confirmation.\n</li><li>Added: Updated MCP Stdio uv server close logic\n</li><li>Added: Support cancel token for MCP tool calling\n</li><li>Fixed: Extra white border in the text input panel.\n</li><li>Fixed: Slow loading of menu items when first opened from the status icon. \n</li><li>Fixed: <strong>Various Fixes and UX Improvements</strong></li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": "241",
+      "since": "241.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "2024.1 — 2024.1.6",
+        "PHPSTORM": "2024.1 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.1 — 2024.2.6",
+        "GOLAND": "2024.1 — 2024.2.5",
+        "PYCHARM": "2024.1 — 2024.2.6",
+        "WEBSTORM": "2024.1 — 2024.2.6",
+        "CWMGUEST": "build 241.0 — 242.*",
+        "RIDER": "2024.1 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.1 — 2024.2.6",
+        "CLION": "2024.1 — 2024.2.5",
+        "DATASPELL": "2024.1 — 2024.2.3",
+        "RUST": "2024.1 — 2024.2.5",
+        "ANDROID_STUDIO": "Koala | 2024.1.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 241.0 — 242.*",
+        "DBE": "2024.1 — 2024.2.2",
+        "RUBYMINE": "2024.1 — 2024.2.6",
+        "IDEA": "2024.1 — 2024.2.6"
+      },
+      "file_id": 848722,
+      "downloads": 46298
+    },
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "",
+      "compatible_versions": {
+        "MPS": "2024.3+",
+        "PHPSTORM": "2024.3+",
+        "IDEA_COMMUNITY": "2024.3+",
+        "GOLAND": "2024.3+",
+        "PYCHARM": "2024.3+",
+        "WEBSTORM": "2024.3+",
+        "CWMGUEST": "1.0+",
+        "RIDER": "2024.3+",
+        "PYCHARM_COMMUNITY": "2024.3+",
+        "CLION": "2024.3+",
+        "DATASPELL": "2024.3+",
+        "RUST": "2024.3+",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1+",
+        "JBCLIENT": "1.0+",
+        "DBE": "2024.3+",
+        "RUBYMINE": "2024.3+",
+        "IDEA": "2024.3+"
+      },
+      "file_id": 848721,
+      "downloads": 337951
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

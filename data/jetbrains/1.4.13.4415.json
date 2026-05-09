@@ -1,0 +1,41 @@
+{
+  "ide": "jetbrains",
+  "version": "1.4.13.4415",
+  "release_date": "2024-01-25",
+  "title": "GitHub Copilot for JetBrains 1.4.13.4415",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "### Changed\n\n* Agent binary for MacOs is now signed with GitHub's official developer ID certificate.",
+  "body_html": "<h3>Changed</h3>\n<ul><li>Agent binary for MacOs is now signed with GitHub's official developer ID certificate.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "231.0",
+      "until": "241.*",
+      "compatible_versions": {
+        "MPS": "2023.2 — 2024.1.6",
+        "PHPSTORM": "2023.1 — 2024.1.7",
+        "IDEA_COMMUNITY": "2023.1 — 2024.1.7",
+        "GOLAND": "2023.1 — 2024.1.6",
+        "PYCHARM": "2023.1 — 2024.1.7",
+        "WEBSTORM": "2023.1 — 2024.1.7",
+        "RIDER": "2023.1 — 2024.1.7",
+        "APPCODE": "2023.1 — 2023.1.5",
+        "PYCHARM_COMMUNITY": "2023.1 — 2024.1.7",
+        "CLION": "2023.1 — 2024.1.6",
+        "DATASPELL": "2023.1 — 2024.1.4",
+        "RUST": "2024.1 — 2024.1.8",
+        "ANDROID_STUDIO": "Hedgehog | 2023.1.1 — Koala Feature Drop | 2024.1.2 Patch 1",
+        "DBE": "2023.1 — 2024.1.5",
+        "RUBYMINE": "2023.1 — 2024.1.7",
+        "IDEA": "2023.1 — 2024.1.7"
+      },
+      "file_id": 474473,
+      "downloads": 183200
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

@@ -1,0 +1,68 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.38",
+  "release_date": "2025-03-10",
+  "title": "GitHub Copilot for JetBrains 1.5.38",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **Added**: New OpenAI model **GPT-4.5** for chat.\n* **Mitigated**: Addressed an issue where non-English characters were garbled in inline completion. This was due to an upstream bug (IJPL-174995) in JetBrains related to the inline completion API. The bug has been fixed in 2025.1 EAP and will be resolved in 2024.3 later. For versions 2024.1 and 2024.2, we have reverted to the previous implementation to ensure smooth functionality. This means it won't work with built-in Full Line Code Completion, but it ensures non-English characters display correctly. For 2024.3 users, the fix will be available in version 2024.3.5. Meanwhile, you can change the font in Settings -> Editor -> Font (e.g., Microsoft YaHei for Chinese characters) as a workaround.\n* **Fixed**: The selected model now remains as default when creating a new chat conversation.\n* **Fixed**: Resolved an issue where the ESC key did not close dialogs.\n* **Fixed**: Corrected a bug where the backspace key always triggered completion, even when disabled.\n* **Fixed**: Various UI improvements for a better user experience.",
+  "body_html": "<ul><li><strong>Added</strong>: New OpenAI model <strong>GPT-4.5</strong> for chat.\n</li><li><strong>Mitigated</strong>: Addressed an issue where non-English characters were garbled in inline completion. This was due to an upstream bug (IJPL-174995) in JetBrains related to the inline completion API. The bug has been fixed in 2025.1 EAP and will be resolved in 2024.3 later. For versions 2024.1 and 2024.2, we have reverted to the previous implementation to ensure smooth functionality. This means it won't work with built-in Full Line Code Completion, but it ensures non-English characters display correctly. For 2024.3 users, the fix will be available in version 2024.3.5. Meanwhile, you can change the font in Settings -&gt; Editor -&gt; Font (e.g., Microsoft YaHei for Chinese characters) as a workaround.\n</li><li><strong>Fixed</strong>: The selected model now remains as default when creating a new chat conversation.\n</li><li><strong>Fixed</strong>: Resolved an issue where the ESC key did not close dialogs.\n</li><li><strong>Fixed</strong>: Corrected a bug where the backspace key always triggered completion, even when disabled.\n</li><li><strong>Fixed</strong>: Various UI improvements for a better user experience.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "251.*",
+      "compatible_versions": {
+        "MPS": "2024.3 — 2025.1.2",
+        "PHPSTORM": "2024.3 — 2025.1.7.1",
+        "IDEA_COMMUNITY": "2024.3 — 2025.1.7.1",
+        "GOLAND": "2024.3 — 2025.1.7.1",
+        "PYCHARM": "2024.3 — 2025.1.6.1",
+        "WEBSTORM": "2024.3 — 2025.1.7.1",
+        "CWMGUEST": "build 243.0 — 251.*",
+        "RIDER": "2024.3 — 2025.1.9",
+        "PYCHARM_COMMUNITY": "2024.3 — 2025.1.6.1",
+        "CLION": "2024.3 — 2025.1.7.1",
+        "DATASPELL": "2024.3 — 2025.1.2.2",
+        "RUST": "2024.3 — 2025.1.5.1",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1 — Narwhal 4 Feature Drop | 2025.1.4",
+        "JBCLIENT": "build 243.0 — 251.*",
+        "DBE": "2024.3 — 2025.1.4.1",
+        "RUBYMINE": "2024.3 — 2025.1.7.1",
+        "IDEA": "2024.3 — 2025.1.7.1"
+      },
+      "file_id": 694875,
+      "downloads": 161648
+    },
+    {
+      "ide_build": "241",
+      "since": "241.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "2024.1 — 2024.1.6",
+        "PHPSTORM": "2024.1 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.1 — 2024.2.6",
+        "GOLAND": "2024.1 — 2024.2.5",
+        "PYCHARM": "2024.1 — 2024.2.6",
+        "WEBSTORM": "2024.1 — 2024.2.6",
+        "CWMGUEST": "build 241.0 — 242.*",
+        "RIDER": "2024.1 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.1 — 2024.2.6",
+        "CLION": "2024.1 — 2024.2.5",
+        "DATASPELL": "2024.1 — 2024.2.3",
+        "RUST": "2024.1 — 2024.2.5",
+        "ANDROID_STUDIO": "Koala | 2024.1.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 241.0 — 242.*",
+        "DBE": "2024.1 — 2024.2.2",
+        "RUBYMINE": "2024.1 — 2024.2.6",
+        "IDEA": "2024.1 — 2024.2.6"
+      },
+      "file_id": 694874,
+      "downloads": 44733
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

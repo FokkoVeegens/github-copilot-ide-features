@@ -1,0 +1,43 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.29.7524",
+  "release_date": "2024-11-11",
+  "title": "GitHub Copilot for JetBrains 1.5.29.7524",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Support for 2024.3 EAP\n* Authentication bug fixes\n* UI/Accessibility bug fixes",
+  "body_html": "<ul><li>Support for 2024.3 EAP\n</li><li>Authentication bug fixes\n</li><li>UI/Accessibility bug fixes</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "231.0",
+      "until": "243.*",
+      "compatible_versions": {
+        "MPS": "2023.2 — 2024.3.5",
+        "PHPSTORM": "2023.1 — 2024.3.7.1",
+        "IDEA_COMMUNITY": "2023.1 — 2024.3.7.1",
+        "GOLAND": "2023.1 — 2024.3.6.1",
+        "PYCHARM": "2023.1 — 2024.3.6.1",
+        "WEBSTORM": "2023.1 — 2024.3.6.1",
+        "CWMGUEST": "build 231.0 — 243.*",
+        "RIDER": "2023.1 — 2024.3.10",
+        "APPCODE": "2023.1 — 2023.1.5",
+        "PYCHARM_COMMUNITY": "2023.1 — 2024.3.6.1",
+        "CLION": "2023.1 — 2024.3.6.1",
+        "DATASPELL": "2023.1 — 2024.3.2.1",
+        "RUST": "2024.1 — 2024.3.7",
+        "ANDROID_STUDIO": "Hedgehog | 2023.1.1 — Meerkat Feature Drop | 2024.3.2 Patch 1",
+        "JBCLIENT": "build 231.0 — 243.*",
+        "DBE": "2023.1 — 2024.3.5.1",
+        "RUBYMINE": "2023.1 — 2024.3.6.1",
+        "IDEA": "2023.1 — 2024.3.7.1"
+      },
+      "file_id": 631741,
+      "downloads": 661644
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

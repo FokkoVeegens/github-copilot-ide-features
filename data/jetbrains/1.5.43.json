@@ -1,0 +1,68 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.43",
+  "release_date": "2025-04-27",
+  "title": "GitHub Copilot for JetBrains 1.5.43",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **Fixed**: an issue where the project context was not functioning correctly.",
+  "body_html": "<ul><li><strong>Fixed</strong>: an issue where the project context was not functioning correctly.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "251.*",
+      "compatible_versions": {
+        "MPS": "2024.3 — 2025.1.2",
+        "PHPSTORM": "2024.3 — 2025.1.7.1",
+        "IDEA_COMMUNITY": "2024.3 — 2025.1.7.1",
+        "GOLAND": "2024.3 — 2025.1.7.1",
+        "PYCHARM": "2024.3 — 2025.1.6.1",
+        "WEBSTORM": "2024.3 — 2025.1.7.1",
+        "CWMGUEST": "build 243.0 — 251.*",
+        "RIDER": "2024.3 — 2025.1.9",
+        "PYCHARM_COMMUNITY": "2024.3 — 2025.1.6.1",
+        "CLION": "2024.3 — 2025.1.7.1",
+        "DATASPELL": "2024.3 — 2025.1.2.2",
+        "RUST": "2024.3 — 2025.1.5.1",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1 — Narwhal 4 Feature Drop | 2025.1.4",
+        "JBCLIENT": "build 243.0 — 251.*",
+        "DBE": "2024.3 — 2025.1.4.1",
+        "RUBYMINE": "2024.3 — 2025.1.7.1",
+        "IDEA": "2024.3 — 2025.1.7.1"
+      },
+      "file_id": 726456,
+      "downloads": 313436
+    },
+    {
+      "ide_build": "241",
+      "since": "241.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "2024.1 — 2024.1.6",
+        "PHPSTORM": "2024.1 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.1 — 2024.2.6",
+        "GOLAND": "2024.1 — 2024.2.5",
+        "PYCHARM": "2024.1 — 2024.2.6",
+        "WEBSTORM": "2024.1 — 2024.2.6",
+        "CWMGUEST": "build 241.0 — 242.*",
+        "RIDER": "2024.1 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.1 — 2024.2.6",
+        "CLION": "2024.1 — 2024.2.5",
+        "DATASPELL": "2024.1 — 2024.2.3",
+        "RUST": "2024.1 — 2024.2.5",
+        "ANDROID_STUDIO": "Koala | 2024.1.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 241.0 — 242.*",
+        "DBE": "2024.1 — 2024.2.2",
+        "RUBYMINE": "2024.1 — 2024.2.6",
+        "IDEA": "2024.1 — 2024.2.6"
+      },
+      "file_id": 726455,
+      "downloads": 36115
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

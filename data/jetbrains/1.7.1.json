@@ -1,0 +1,71 @@
+{
+  "ide": "jetbrains",
+  "version": "1.7.1",
+  "release_date": "2026-03-30",
+  "title": "GitHub Copilot for JetBrains 1.7.1",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **User Experience**\n\n* Improved: Chat input history syncs across sessions.\n* Improved: Model picker reliability with better caching and degradation warnings.\n* Improved: Thinking panel layout for readability.\n* Improved: Auto‐approve flow, including confirmation before resetting rules.\n* Improved: Tool‑result code blocks are read‑only and large outputs load smoothly.\n* Improved: Settings management for pre‑login confirmation, proxy validation, and safer revert behavior.\n* Improved: Copilot status bar displays GitHub username and sign‑in state.\n\n* **Bug Fixes**\n\n* Fixed: Reduced multiple UI freezes.\n* Fixed: Chat scroller flicker and HiDPI scaling issues.\n* Fixed: Chat panel stuck on the loading page.\n* Fixed: Markdown file links in the chat panel failed to open.\n* Fixed: Incomplete copied response content in Ask mode.\n* Fixed: Inconsistent UI appearance when switching themes, fonts, or modes.\n\n* **Deprecation**\n\n* Updated: GitHub Copilot will end support for JetBrains IDEs versions 2024.2 and 2024.3.",
+  "body_html": "<ul><li><strong>User Experience</strong>\n</li></ul>\n<ul><li>Improved: Chat input history syncs across sessions.\n</li><li>Improved: Model picker reliability with better caching and degradation warnings.\n</li><li>Improved: Thinking panel layout for readability.\n</li><li>Improved: Auto‐approve flow, including confirmation before resetting rules.\n</li><li>Improved: Tool‑result code blocks are read‑only and large outputs load smoothly.\n</li><li>Improved: Settings management for pre‑login confirmation, proxy validation, and safer revert behavior.\n</li><li>Improved: Copilot status bar displays GitHub username and sign‑in state.\n\n</li></ul>\n<ul><li><strong>Bug Fixes</strong>\n</li></ul>\n<ul><li>Fixed: Reduced multiple UI freezes. \n</li><li>Fixed: Chat scroller flicker and HiDPI scaling issues.\n</li><li>Fixed: Chat panel stuck on the loading page.\n</li><li>Fixed: Markdown file links in the chat panel failed to open.\n</li><li>Fixed: Incomplete copied response content in Ask mode.\n</li><li>Fixed: Inconsistent UI appearance when switching themes, fonts, or modes.\n\n\n</li></ul>\n<ul><li><strong>Deprecation</strong>\n</li></ul>\n<ul><li>Updated: GitHub Copilot will end support for JetBrains IDEs versions 2024.2 and 2024.3.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Improved: Copilot status bar displays GitHub username and sign‑in state.",
+    "* Updated: GitHub Copilot will end support for JetBrains IDEs versions 2024.2 and 2024.3."
+  ],
+  "builds": [
+    {
+      "ide_build": "242",
+      "since": "242.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "build 242.0 — 242.*",
+        "PHPSTORM": "2024.2 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.2 — 2024.2.6",
+        "GOLAND": "2024.2 — 2024.2.5",
+        "PYCHARM": "2024.2 — 2024.2.6",
+        "WEBSTORM": "2024.2 — 2024.2.6",
+        "CWMGUEST": "build 242.0 — 242.*",
+        "RIDER": "2024.2 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.2 — 2024.2.6",
+        "CLION": "2024.2 — 2024.2.5",
+        "DATASPELL": "2024.2 — 2024.2.3",
+        "RUST": "2024.2 — 2024.2.5",
+        "ANDROID_STUDIO": "Ladybug | 2024.2.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 242.0 — 242.*",
+        "DBE": "2024.2 — 2024.2.2",
+        "RUBYMINE": "2024.2 — 2024.2.6",
+        "IDEA": "2024.2 — 2024.2.6"
+      },
+      "file_id": 1001591,
+      "downloads": 18290
+    },
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "",
+      "compatible_versions": {
+        "MPS": "2024.3+",
+        "PHPSTORM": "2024.3+",
+        "IDEA_COMMUNITY": "2024.3+",
+        "GOLAND": "2024.3+",
+        "PYCHARM": "2024.3+",
+        "WEBSTORM": "2024.3+",
+        "CWMGUEST": "1.0+",
+        "RIDER": "2024.3+",
+        "PYCHARM_COMMUNITY": "2024.3+",
+        "CLION": "2024.3+",
+        "DATASPELL": "2024.3+",
+        "RUST": "2024.3+",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1+",
+        "JBCLIENT": "1.0+",
+        "DBE": "2024.3+",
+        "RUBYMINE": "2024.3+",
+        "IDEA": "2024.3+"
+      },
+      "file_id": 1001590,
+      "downloads": 1098616
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}
