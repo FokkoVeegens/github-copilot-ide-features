@@ -1,0 +1,45 @@
+{
+  "ide": "jetbrains",
+  "version": "1.0.2",
+  "release_date": "2021-10-28",
+  "title": "GitHub Copilot for JetBrains 1.0.2",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "### Changed\n\n* Notify when the `super-early-bird` plugin repository is still used.\n\n### Fixed\n\n* Several causes of `IndexOutOfBoundsException` when applying a solution of \"Open Copilot\" to the editor, which was changed in the meantime.\n* `NullPointerException` when using GitHub Copilot in Jupyter Notebook files",
+  "body_html": "<h3>Changed</h3>\n<ul><li>Notify when the <code>super-early-bird</code> plugin repository is still used.</li></ul>\n\n<h3>Fixed</h3>\n<ul><li>Several causes of <code>IndexOutOfBoundsException</code> when applying a solution of \"Open Copilot\" to the editor, which was changed in the meantime.</li><li><code>NullPointerException</code> when using GitHub Copilot in Jupyter Notebook files</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Several causes of `IndexOutOfBoundsException` when applying a solution of \"Open Copilot\" to the editor, which was changed in the meantime.",
+    "* `NullPointerException` when using GitHub Copilot in Jupyter Notebook files"
+  ],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "212.0",
+      "until": "213.*",
+      "compatible_versions": {
+        "PYCHARM_COMMUNITY": "2021.2 — 2021.3.3",
+        "DBE": "2021.2 — 2021.3.4",
+        "CWMGUEST": "build 212.0 — 213.*",
+        "RIDER": "2021.2 — 2021.3.4",
+        "IDEA_COMMUNITY": "2021.2 — 2021.3.3",
+        "PHPSTORM": "2021.2 — 2021.3.3",
+        "CLION": "2021.2 — 2021.3.4",
+        "RUBYMINE": "2021.2 — 2021.3.3",
+        "PYCHARM": "2021.2 — 2021.3.3",
+        "GOLAND": "2021.2 — 2021.3.5",
+        "ANDROID_STUDIO": "Chipmunk | 2021.2.1 — Dolphin | 2021.3.1 Patch 1",
+        "WEBSTORM": "2021.2 — 2021.3.3",
+        "MPS": "2021.2 — 2021.3.5",
+        "RUST": "build 212.0 — 213.*",
+        "JBCLIENT": "build 212.0 — 213.*",
+        "IDEA": "2021.2 — 2021.3.3",
+        "DATASPELL": "2021.3 — 2021.3.3"
+      },
+      "file_id": 143458,
+      "downloads": 17035
+    }
+  ],
+  "fetched_at": "2026-05-09T09:15:28Z",
+  "schema_version": 1
+}

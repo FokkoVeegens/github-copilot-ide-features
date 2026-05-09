@@ -1,0 +1,42 @@
+{
+  "ide": "jetbrains",
+  "version": "1.0.3",
+  "release_date": "2021-11-03",
+  "title": "GitHub Copilot for JetBrains 1.0.3",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "### Added\n\n* Allow to define a custom shortcut to accept completions. TAB is still the default shortcut.\n* Allow to define a custom shortcut to hide the completions in the editor. ESC is still the default shortcut.\n\n### Fixed\n\n* The IDE was incorrectly prompting to re-authenticate with GitHub.",
+  "body_html": "<h3>Added</h3>\n<ul><li>Allow to define a custom shortcut to accept completions. TAB is still the default shortcut.</li><li>Allow to define a custom shortcut to hide the completions in the editor. ESC is still the default shortcut.</li></ul>\n\n<h3>Fixed</h3>\n<ul><li>The IDE was incorrectly prompting to re-authenticate with GitHub.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "212.0",
+      "until": "213.*",
+      "compatible_versions": {
+        "PYCHARM_COMMUNITY": "2021.2 — 2021.3.3",
+        "DBE": "2021.2 — 2021.3.4",
+        "CWMGUEST": "build 212.0 — 213.*",
+        "RIDER": "2021.2 — 2021.3.4",
+        "IDEA_COMMUNITY": "2021.2 — 2021.3.3",
+        "PHPSTORM": "2021.2 — 2021.3.3",
+        "CLION": "2021.2 — 2021.3.4",
+        "RUBYMINE": "2021.2 — 2021.3.3",
+        "PYCHARM": "2021.2 — 2021.3.3",
+        "GOLAND": "2021.2 — 2021.3.5",
+        "ANDROID_STUDIO": "Chipmunk | 2021.2.1 — Dolphin | 2021.3.1 Patch 1",
+        "WEBSTORM": "2021.2 — 2021.3.3",
+        "MPS": "2021.2 — 2021.3.5",
+        "RUST": "build 212.0 — 213.*",
+        "JBCLIENT": "build 212.0 — 213.*",
+        "IDEA": "2021.2 — 2021.3.3",
+        "DATASPELL": "2021.3 — 2021.3.3"
+      },
+      "file_id": 144352,
+      "downloads": 32218
+    }
+  ],
+  "fetched_at": "2026-05-09T09:15:28Z",
+  "schema_version": 1
+}

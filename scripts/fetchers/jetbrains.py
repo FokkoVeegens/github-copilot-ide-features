@@ -6,6 +6,7 @@ Version formats observed in the API:
 - "1.9.0-251"       →  semver=1.9.0,       ide_build=251  (3-part + build, current)
 - "1.5.6.8049-251"  →  semver=1.5.6.8049,  ide_build=251  (4-part + build)
 - "1.5.29.7524"     →  semver=1.5.29.7524, ide_build=None (4-part, no build, legacy)
+- "1.1.1"           →  semver=1.1.1,        ide_build=None (3-part, no build, very old)
 
 Each semver maps to multiple build-line entries (e.g. -241, -242, -243).
 We group them into one JSON file per semver with a `builds[]` array.
@@ -19,8 +20,8 @@ from scripts.common.http import get_json
 _API_URL = "https://plugins.jetbrains.com/api/plugins/17718/updates"
 # Matches "X.Y.Z-NNN" or "X.Y.Z.NNNN-NNN" (3-part or 4-part + build suffix).
 _VERSION_RE = re.compile(r"^(?P<semver>\d+(?:\.\d+){2,3})-(?P<build>\d+)$")
-# Matches "X.Y.Z.NNNN" (4-part, no build suffix — legacy universal releases).
-_VERSION_NO_BUILD_RE = re.compile(r"^(?P<semver>\d+(?:\.\d+){3})$")
+# Matches "X.Y.Z..." (3 or more parts, no build suffix — legacy universal releases).
+_VERSION_NO_BUILD_RE = re.compile(r"^(?P<semver>\d+(?:\.\d+){2,})$")
 _PLUGIN_URL = "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions"
 
 
@@ -31,6 +32,7 @@ def _parse_version(version_str: str) -> tuple[str, str | None]:
     - ``"1.9.0-251"``      → ``("1.9.0", "251")``
     - ``"1.5.6.8049-251"`` → ``("1.5.6.8049", "251")``
     - ``"1.5.29.7524"``    → ``("1.5.29.7524", None)``  (legacy, no build suffix)
+    - ``"1.1.1"``          → ``("1.1.1", None)``         (very old, no build suffix)
     """
     s = version_str.strip()
     m = _VERSION_RE.match(s)

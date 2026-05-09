@@ -121,20 +121,23 @@ class TestParseVersion:
         assert semver == "2.0.0"
         assert ide_build == "9999"
 
-    def test_invalid_format_raises_value_error(self):
-        with pytest.raises(ValueError, match="Unrecognised JetBrains version string"):
-            _parse_version("1.5.62")
-
-    def test_legacy_no_build_suffix_format(self):
+    def test_legacy_no_build_suffix_four_part(self):
         # 4-part version with no build suffix (legacy universal releases)
         semver, ide_build = _parse_version("1.5.29.7524")
         assert semver == "1.5.29.7524"
         assert ide_build is None
 
-    def test_three_part_no_suffix_raises_value_error(self):
-        # 3-part without suffix is not a recognised format
-        with pytest.raises(ValueError):
-            _parse_version("1.5.62")
+    def test_three_part_no_suffix_is_valid(self):
+        # 3-part without build suffix is valid (very old releases like 1.1.1)
+        semver, ide_build = _parse_version("1.5.62")
+        assert semver == "1.5.62"
+        assert ide_build is None
+
+    def test_very_old_three_part_format(self):
+        # Oldest API entries use plain 3-part version with no build suffix
+        semver, ide_build = _parse_version("1.1.1")
+        assert semver == "1.1.1"
+        assert ide_build is None
 
     def test_no_build_suffix_raises_value_error(self):
         with pytest.raises(ValueError):
