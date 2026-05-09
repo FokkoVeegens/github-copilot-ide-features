@@ -8,7 +8,7 @@ This repository collects GitHub Copilot release notes across IDEs using schedule
 pip install -r requirements.txt
 
 # Fetch (or update) release notes for a specific IDE:
-GITHUB_TOKEN=<your-token> python -m scripts.run --ide eclipse
+GITHUB_TOKEN=<your-token> python -m scripts.run --ide xcode
 
 # Re-running is safe — existing files are never overwritten (idempotent).
 ```
@@ -27,7 +27,7 @@ config/ides.yml              – IDE configuration (id, fetcher, data_dir, sourc
 data/<ide>/<version>.json    – one JSON file per release; presence = already processed
 scripts/run.py               – CLI entry point: --ide <id>
 scripts/common/              – shared utilities (config, HTTP, JSON schema, extraction, I/O)
-scripts/fetchers/            – one module per IDE (eclipse.py, dummy.py, …)
+scripts/fetchers/            – one module per IDE (eclipse.py, jetbrains.py, xcode.py, copilot_vim.py, dummy.py, …)
 tests/                       – pytest test suite
 .github/workflows/           – per-IDE scheduled fetch workflows
 ```

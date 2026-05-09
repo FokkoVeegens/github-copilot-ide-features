@@ -18,6 +18,9 @@ tests/                   – pytest test suite
 | ID | Name |
 |----|------|
 | `eclipse` | Copilot for Eclipse |
+| `jetbrains` | GitHub Copilot for JetBrains |
+| `xcode` | GitHub Copilot for Xcode |
+| `vim-neovim` | GitHub Copilot for Vim/Neovim |
 
 ## Running a fetcher locally
 
@@ -25,7 +28,7 @@ tests/                   – pytest test suite
 pip install -r requirements.txt
 
 # Fetch (or update) release notes for a single IDE:
-python -m scripts.run --ide eclipse
+python -m scripts.run --ide xcode
 
 # Set GITHUB_TOKEN for higher API rate limits (recommended):
 GITHUB_TOKEN=ghp_... python -m scripts.run --ide eclipse
