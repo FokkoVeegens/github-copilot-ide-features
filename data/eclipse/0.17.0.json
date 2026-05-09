@@ -1,0 +1,22 @@
+{
+  "ide": "eclipse",
+  "version": "0.17.0",
+  "release_date": "2026-05-08",
+  "title": "0.17.0 - 20260508",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.17.0",
+  "source": "api",
+  "body_markdown": "### Added\n- Add context size donut and popup for visualizing token usage.\n- Add rate limit warning banner in chat view. [PR#17](https://github.com/microsoft/copilot-for-eclipse/pull/17)\n- Support delegating read directory to IDE. [PR#18](https://github.com/microsoft/copilot-for-eclipse/pull/18)\n- Support delegating file and text search to IDE. [PR#22](https://github.com/microsoft/copilot-for-eclipse/pull/22)\n- Support custom models (BYOK) for Copilot Business and Enterprise users. [PR#140](https://github.com/microsoft/copilot-for-eclipse/pull/140)\n### Changed\n- Update the combos rendering and add context button style in chat view.\n### Fixed\n- Fix ConcurrentModificationException in CompletionProvider listener iteration. [PR#13](https://github.com/microsoft/copilot-for-eclipse/pull/13)\n- Fix capitalization of \"GitHub\" in signin description. [PR#10](https://github.com/microsoft/copilot-for-eclipse/pull/10)\n- Fix NES annotation type mapping and foreign text marker registration. [#23](https://github.com/microsoft/copilot-for-eclipse/issues/23)",
+  "body_html": "### Added\r\n- Add context size donut and popup for visualizing token usage.\r\n- Add rate limit warning banner in chat view. [PR#17](https://github.com/microsoft/copilot-for-eclipse/pull/17)\r\n- Support delegating read directory to IDE. [PR#18](https://github.com/microsoft/copilot-for-eclipse/pull/18)\r\n- Support delegating file and text search to IDE. [PR#22](https://github.com/microsoft/copilot-for-eclipse/pull/22)\r\n- Support custom models (BYOK) for Copilot Business and Enterprise users. [PR#140](https://github.com/microsoft/copilot-for-eclipse/pull/140)\r\n\r\n### Changed\r\n- Update the combos rendering and add context button style in chat view.\r\n\r\n### Fixed\r\n- Fix ConcurrentModificationException in CompletionProvider listener iteration. [PR#13](https://github.com/microsoft/copilot-for-eclipse/pull/13)\r\n- Fix capitalization of \"GitHub\" in signin description. [PR#10](https://github.com/microsoft/copilot-for-eclipse/pull/10)\r\n- Fix NES annotation type mapping and foreign text marker registration. [#23](https://github.com/microsoft/copilot-for-eclipse/issues/23)",
+  "categories": [],
+  "copilot_mentions": [
+    "- Add rate limit warning banner in chat view. [PR#17](https://github.com/microsoft/copilot-for-eclipse/pull/17)",
+    "- Support delegating read directory to IDE. [PR#18](https://github.com/microsoft/copilot-for-eclipse/pull/18)",
+    "- Support delegating file and text search to IDE. [PR#22](https://github.com/microsoft/copilot-for-eclipse/pull/22)",
+    "- Support custom models (BYOK) for Copilot Business and Enterprise users. [PR#140](https://github.com/microsoft/copilot-for-eclipse/pull/140)",
+    "- Fix ConcurrentModificationException in CompletionProvider listener iteration. [PR#13](https://github.com/microsoft/copilot-for-eclipse/pull/13)",
+    "- Fix capitalization of \"GitHub\" in signin description. [PR#10](https://github.com/microsoft/copilot-for-eclipse/pull/10)",
+    "- Fix NES annotation type mapping and foreign text marker registration. [#23](https://github.com/microsoft/copilot-for-eclipse/issues/23)"
+  ],
+  "fetched_at": "2026-05-09T20:22:47Z",
+  "schema_version": 1
+}
