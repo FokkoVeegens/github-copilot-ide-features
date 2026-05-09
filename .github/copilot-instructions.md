@@ -8,3 +8,5 @@
 # Important notes
 
 The GITHUB_TOKEN used by the GitHub Copilot Cloud Agent should never be used to retrieve data for items in the ./data folder.
+
+When adding a new fetch workflow, ensure it includes both a "Commit new files" step (runs only on `main`, i.e. `if: github.ref == 'refs/heads/main'`) and a "Simulate commit (non-default branch)" step (runs on all other branches, logs what would have been committed without pushing).

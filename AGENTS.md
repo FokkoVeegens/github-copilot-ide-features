@@ -44,3 +44,7 @@ tests/                       – pytest test suite
 Each workflow runs on a daily cron and can also be triggered manually via `workflow_dispatch`.
 It commits any newly written files directly to `main`. If the fetcher produces no new files no
 commit is made (no empty commits).
+
+When a workflow is triggered on a non-default branch, the commit step is skipped. Instead, a
+"Simulate commit" step logs which files *would* have been committed, allowing safe testing of
+the fetch logic on feature branches without writing to the repository.
