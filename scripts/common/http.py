@@ -84,9 +84,13 @@ def get_json(
     return response.json()
 
 
-def get_text(url: str, *, params: dict | None = None) -> str:
-    """GET *url* and return the response body as text."""
-    session = get_session()
+def get_text(url: str, *, params: dict | None = None, use_auth: bool = True) -> str:
+    """GET *url* and return the response body as text.
+
+    Pass ``use_auth=False`` for third-party APIs that must not receive the
+    GitHub token in the Authorization header.
+    """
+    session = get_session() if use_auth else get_session_no_auth()
     response = session.get(url, params=params, timeout=_DEFAULT_TIMEOUT)
     response.raise_for_status()
     return response.text
