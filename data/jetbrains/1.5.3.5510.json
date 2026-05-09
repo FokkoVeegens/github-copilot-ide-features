@@ -1,0 +1,43 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.3.5510",
+  "release_date": "2024-05-07",
+  "title": "GitHub Copilot for JetBrains 1.5.3.5510",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Add support for more languages for completions\n* Show chat progress when processing messages\n* Expose editor networking via settings. This can be used e.g. when facing HTTP(S) proxy issues.\n* Fix issues when cancelling chat messages\n* Fix invalid thread access when performing some network requests\n* Several prompt improvements",
+  "body_html": "<ul><li>Add support for more languages for completions\n</li><li>Show chat progress when processing messages\n</li><li>Expose editor networking via settings. This can be used e.g. when facing HTTP(S) proxy issues.\n</li><li>Fix issues when cancelling chat messages\n</li><li>Fix invalid thread access when performing some network requests\n</li><li>Several prompt improvements</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "231.0",
+      "until": "241.*",
+      "compatible_versions": {
+        "MPS": "2023.2 — 2024.1.6",
+        "PHPSTORM": "2023.1 — 2024.1.7",
+        "IDEA_COMMUNITY": "2023.1 — 2024.1.7",
+        "GOLAND": "2023.1 — 2024.1.6",
+        "PYCHARM": "2023.1 — 2024.1.7",
+        "WEBSTORM": "2023.1 — 2024.1.7",
+        "CWMGUEST": "build 231.0 — 241.*",
+        "RIDER": "2023.1 — 2024.1.7",
+        "APPCODE": "2023.1 — 2023.1.5",
+        "PYCHARM_COMMUNITY": "2023.1 — 2024.1.7",
+        "CLION": "2023.1 — 2024.1.6",
+        "DATASPELL": "2023.1 — 2024.1.4",
+        "RUST": "2024.1 — 2024.1.8",
+        "ANDROID_STUDIO": "Hedgehog | 2023.1.1 — Koala Feature Drop | 2024.1.2 Patch 1",
+        "JBCLIENT": "build 231.0 — 241.*",
+        "DBE": "2023.1 — 2024.1.5",
+        "RUBYMINE": "2023.1 — 2024.1.7",
+        "IDEA": "2023.1 — 2024.1.7"
+      },
+      "file_id": 533388,
+      "downloads": 240691
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

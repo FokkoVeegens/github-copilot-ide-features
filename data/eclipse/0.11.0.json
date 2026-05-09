@@ -1,0 +1,17 @@
+{
+  "ide": "eclipse",
+  "version": "0.11.0",
+  "release_date": "2025-09-01",
+  "title": "0.11.0 - 20250901",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.11.0",
+  "source": "api",
+  "body_markdown": "### Added\n- Support drag and drop resources to referenced files.\n- Support adding resources to referenced files via context menu in Package Explorer and Project Explorer.\n- Enhance the color design of chat view.\n- Use fragment bundle to split Copilot Language Server binaries.\n- Add public API to start a new ask session.\n- Add Copilot chat view to JEE related perspectives.\n- Use configuration scope to control whether to show what's new page and expose to preference dialog.\n- Add copyright info and branding plugin.\n### Fixed\n- Input history in chat is wrong in a new conversation.\n- Use configuration scope to control getting started walkthrough page display.\n- Fix compatibility issue for terminal across different Eclipse platform versions.\n- Typo in release note entry.\n- Referenced files cannot be closed if the project is deleted.\n- NPE when calling InputNavigation.\n- Shift+Tab move from inputText to chatContent.",
+  "body_html": "### Added\n- Support drag and drop resources to referenced files.\n- Support adding resources to referenced files via context menu in Package Explorer and Project Explorer.\n- Enhance the color design of chat view.\n- Use fragment bundle to split Copilot Language Server binaries.\n- Add public API to start a new ask session.\n- Add Copilot chat view to JEE related perspectives.\n- Use configuration scope to control whether to show what's new page and expose to preference dialog.\n- Add copyright info and branding plugin.\n\n### Fixed\n- Input history in chat is wrong in a new conversation.\n- Use configuration scope to control getting started walkthrough page display.\n- Fix compatibility issue for terminal across different Eclipse platform versions.\n- Typo in release note entry.\n- Referenced files cannot be closed if the project is deleted.\n- NPE when calling InputNavigation.\n- Shift+Tab move from inputText to chatContent.",
+  "categories": [],
+  "copilot_mentions": [
+    "- Use fragment bundle to split Copilot Language Server binaries.",
+    "- Add Copilot chat view to JEE related perspectives."
+  ],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}

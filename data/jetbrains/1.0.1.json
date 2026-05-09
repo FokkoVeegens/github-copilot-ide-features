@@ -1,0 +1,40 @@
+{
+  "ide": "jetbrains",
+  "version": "1.0.1",
+  "release_date": "2021-10-26",
+  "title": "GitHub Copilot for JetBrains 1.0.1",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "### Added\n\n* 1.0.1, our first public release\n\n### Fixed\n\n* Completions appeared at the wrong position after accepting lookup items, which also modified the document before the cursor position.\n* Several causes of exception `NullPointerException`.\n* Fixed a possible cause of `ClassNotFoundException`.",
+  "body_html": "<h3>Added</h3>\n<ul><li>1.0.1, our first public release</li></ul>\n\n<h3>Fixed</h3>\n<ul><li>Completions appeared at the wrong position after accepting lookup items, which also modified the document before the cursor position.</li><li>Several causes of exception <code>NullPointerException</code>.</li><li>Fixed a possible cause of <code>ClassNotFoundException</code>.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "212.0",
+      "until": "213.*",
+      "compatible_versions": {
+        "PYCHARM_COMMUNITY": "2021.2 — 2021.3.3",
+        "DBE": "2021.2 — 2021.3.4",
+        "CWMGUEST": "build 212.0 — 213.*",
+        "IDEA_COMMUNITY": "2021.2 — 2021.3.3",
+        "PHPSTORM": "2021.2 — 2021.3.3",
+        "RUBYMINE": "2021.2 — 2021.3.3",
+        "PYCHARM": "2021.2 — 2021.3.3",
+        "GOLAND": "2021.2 — 2021.3.5",
+        "ANDROID_STUDIO": "Chipmunk | 2021.2.1 — Dolphin | 2021.3.1 Patch 1",
+        "WEBSTORM": "2021.2 — 2021.3.3",
+        "MPS": "2021.2 — 2021.3.5",
+        "RUST": "build 212.0 — 213.*",
+        "JBCLIENT": "build 212.0 — 213.*",
+        "IDEA": "2021.2 — 2021.3.3",
+        "DATASPELL": "2021.3 — 2021.3.3"
+      },
+      "file_id": 142991,
+      "downloads": 5608
+    }
+  ],
+  "fetched_at": "2026-05-09T09:15:28Z",
+  "schema_version": 1
+}

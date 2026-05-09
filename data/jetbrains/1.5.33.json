@@ -1,0 +1,69 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.33",
+  "release_date": "2025-02-14",
+  "title": "GitHub Copilot for JetBrains 1.5.33",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **Added**: Support for model picker\n* **Added**: Support for 2025.1 EAP\n* **Fixed**: Enhanced commit message generation with error handling\n* **Fixed**: Code block styling issues",
+  "body_html": "<ul><li><strong>Added</strong>: Support for model picker\n</li><li><strong>Added</strong>: Support for 2025.1 EAP\n</li><li><strong>Fixed</strong>: Enhanced commit message generation with error handling\n</li><li><strong>Fixed</strong>: Code block styling issues</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": "242",
+      "since": "242.0",
+      "until": "251.*",
+      "compatible_versions": {
+        "MPS": "2024.3 — 2025.1.2",
+        "PHPSTORM": "2024.2 — 2025.1.7.1",
+        "IDEA_COMMUNITY": "2024.2 — 2025.1.7.1",
+        "GOLAND": "2024.2 — 2025.1.7.1",
+        "PYCHARM": "2024.2 — 2025.1.6.1",
+        "WEBSTORM": "2024.2 — 2025.1.7.1",
+        "CWMGUEST": "build 242.0 — 251.*",
+        "RIDER": "2024.2 — 2025.1.9",
+        "PYCHARM_COMMUNITY": "2024.2 — 2025.1.6.1",
+        "CLION": "2024.2 — 2025.1.7.1",
+        "DATASPELL": "2024.2 — 2025.1.2.2",
+        "RUST": "2024.2 — 2025.1.5.1",
+        "ANDROID_STUDIO": "Ladybug | 2024.2.1 — Narwhal 4 Feature Drop | 2025.1.4",
+        "JBCLIENT": "build 242.0 — 251.*",
+        "DBE": "2024.2 — 2025.1.4.1",
+        "RUBYMINE": "2024.2 — 2025.1.7.1",
+        "IDEA": "2024.2 — 2025.1.7.1"
+      },
+      "file_id": 681217,
+      "downloads": 66362
+    },
+    {
+      "ide_build": "231",
+      "since": "231.0",
+      "until": "241.*",
+      "compatible_versions": {
+        "MPS": "2023.2 — 2024.1.6",
+        "PHPSTORM": "2023.1 — 2024.1.7",
+        "IDEA_COMMUNITY": "2023.1 — 2024.1.7",
+        "GOLAND": "2023.1 — 2024.1.6",
+        "PYCHARM": "2023.1 — 2024.1.7",
+        "WEBSTORM": "2023.1 — 2024.1.7",
+        "CWMGUEST": "build 231.0 — 241.*",
+        "RIDER": "2023.1 — 2024.1.7",
+        "APPCODE": "2023.1 — 2023.1.5",
+        "PYCHARM_COMMUNITY": "2023.1 — 2024.1.7",
+        "CLION": "2023.1 — 2024.1.6",
+        "DATASPELL": "2023.1 — 2024.1.4",
+        "RUST": "2024.1 — 2024.1.8",
+        "ANDROID_STUDIO": "Hedgehog | 2023.1.1 — Koala Feature Drop | 2024.1.2 Patch 1",
+        "JBCLIENT": "build 231.0 — 241.*",
+        "DBE": "2023.1 — 2024.1.5",
+        "RUBYMINE": "2023.1 — 2024.1.7",
+        "IDEA": "2023.1 — 2024.1.7"
+      },
+      "file_id": 681216,
+      "downloads": 308072
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

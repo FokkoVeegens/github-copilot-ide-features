@@ -1,0 +1,68 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.64",
+  "release_date": "2026-02-05",
+  "title": "GitHub Copilot for JetBrains 1.5.64",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **New Features**\n\n* Added: Toggle settings for Agent mode, Coding Agent, Code Review, and Custom Agent.\n* Added: Sign-in prompt in settings for unauthenticated users.\n* Added: Settings UX improvements.\n* Added: Support Skills in Agent mode (Preview)\n\n* **Performance and reliability**\n\n* Fixed: Resolved login issues for GitHub Enterprise users by enabling support for custom authentication providers.\n* Fixed: Refined buttons to make actions more intuitive on view diff toolbar.\n* Fixed: Better readability on the chat panel.",
+  "body_html": "<ul><li><strong>New Features</strong>\n</li></ul>\n<ul><li>Added: Toggle settings for Agent mode, Coding Agent, Code Review, and Custom Agent.\n</li><li>Added: Sign-in prompt in settings for unauthenticated users.\n</li><li>Added: Settings UX improvements.\n</li><li>Added: Support Skills in Agent mode (Preview)\n\n</li></ul>\n<ul><li><strong>Performance and reliability</strong>\n</li></ul>\n<ul><li>Fixed: Resolved login issues for GitHub Enterprise users by enabling support for custom authentication providers.\n</li><li>Fixed: Refined buttons to make actions more intuitive on view diff toolbar.\n</li><li>Fixed: Better readability on the chat panel.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "",
+      "compatible_versions": {
+        "MPS": "2024.3+",
+        "PHPSTORM": "2024.3+",
+        "IDEA_COMMUNITY": "2024.3+",
+        "GOLAND": "2024.3+",
+        "PYCHARM": "2024.3+",
+        "WEBSTORM": "2024.3+",
+        "CWMGUEST": "1.0+",
+        "RIDER": "2024.3+",
+        "PYCHARM_COMMUNITY": "2024.3+",
+        "CLION": "2024.3+",
+        "DATASPELL": "2024.3+",
+        "RUST": "2024.3+",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1+",
+        "JBCLIENT": "1.0+",
+        "DBE": "2024.3+",
+        "RUBYMINE": "2024.3+",
+        "IDEA": "2024.3+"
+      },
+      "file_id": 949506,
+      "downloads": 473840
+    },
+    {
+      "ide_build": "242",
+      "since": "242.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "build 242.0 — 242.*",
+        "PHPSTORM": "2024.2 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.2 — 2024.2.6",
+        "GOLAND": "2024.2 — 2024.2.5",
+        "PYCHARM": "2024.2 — 2024.2.6",
+        "WEBSTORM": "2024.2 — 2024.2.6",
+        "CWMGUEST": "build 242.0 — 242.*",
+        "RIDER": "2024.2 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.2 — 2024.2.6",
+        "CLION": "2024.2 — 2024.2.5",
+        "DATASPELL": "2024.2 — 2024.2.3",
+        "RUST": "2024.2 — 2024.2.5",
+        "ANDROID_STUDIO": "Ladybug | 2024.2.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 242.0 — 242.*",
+        "DBE": "2024.2 — 2024.2.2",
+        "RUBYMINE": "2024.2 — 2024.2.6",
+        "IDEA": "2024.2 — 2024.2.6"
+      },
+      "file_id": 949505,
+      "downloads": 5537
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

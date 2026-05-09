@@ -1,0 +1,43 @@
+{
+  "ide": "jetbrains",
+  "version": "1.2.5.2507",
+  "release_date": "2023-03-30",
+  "title": "GitHub Copilot for JetBrains 1.2.5.2507",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Improve compatibility with 2023.1 by adding a workaround for <https://youtrack.jetbrains.com/issue/IDEA-316656>",
+  "body_html": "<ul><li>Improve compatibility with 2023.1 by adding a workaround for <a href=\"https://youtrack.jetbrains.com/issue/IDEA-316656\">https://youtrack.jetbrains.com/issue/IDEA-316656</a></li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "211.0",
+      "until": "231.*",
+      "compatible_versions": {
+        "MPS": "2021.1 — 2022.3.3",
+        "PHPSTORM": "2021.1 — 2023.1.6",
+        "IDEA_COMMUNITY": "2021.1 — 2023.1.7",
+        "GOLAND": "2021.1 — 2023.1.6",
+        "PYCHARM": "2021.1 — 2023.1.6",
+        "WEBSTORM": "2021.1 — 2023.1.6",
+        "CWMGUEST": "build 211.0 — 231.*",
+        "RIDER": "2021.1 — 2023.1.7",
+        "APPCODE": "2021.1 — 2023.1.5",
+        "PYCHARM_COMMUNITY": "2021.1 — 2023.1.6",
+        "CLION": "2021.1 — 2023.1.7",
+        "DATASPELL": "2021.3 — 2023.1.6",
+        "RUST": "build 211.0 — 231.*",
+        "ANDROID_STUDIO": "Bumblebee | 2021.1.1 — Hedgehog | 2023.1.1 Patch 2",
+        "JBCLIENT": "build 211.0 — 231.*",
+        "DBE": "2021.1 — 2023.1.2",
+        "RUBYMINE": "2021.1 — 2023.1.7",
+        "IDEA": "2021.1 — 2023.1.7"
+      },
+      "file_id": 313933,
+      "downloads": 411331
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

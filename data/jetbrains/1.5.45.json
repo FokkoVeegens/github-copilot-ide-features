@@ -1,0 +1,70 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.45",
+  "release_date": "2025-05-16",
+  "title": "GitHub Copilot for JetBrains 1.5.45",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Added: Preview of Agent mode with support for MCP tools. Requires enabling Editor Preview Features in Copilot settings.\n* Fixed: Resolved authorization issue. If an unexpected Authorize button appears in the chat panel, logging out and back in will fix it.\n* Fixed: Addressed IDE freezing in certain rare scenarios.\n* Fixed: Commit message generation now includes the current Git branch name as context.\n* Fixed: Enhanced user experience, including improved rendering of code blocks.",
+  "body_html": "<ul><li>Added: Preview of Agent mode with support for MCP tools. Requires enabling Editor Preview Features in Copilot settings.\n</li><li>Fixed: Resolved authorization issue. If an unexpected Authorize button appears in the chat panel, logging out and back in will fix it.\n</li><li>Fixed: Addressed IDE freezing in certain rare scenarios.\n</li><li>Fixed: Commit message generation now includes the current Git branch name as context.\n</li><li>Fixed: Enhanced user experience, including improved rendering of code blocks.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Added: Preview of Agent mode with support for MCP tools. Requires enabling Editor Preview Features in Copilot settings."
+  ],
+  "builds": [
+    {
+      "ide_build": "241",
+      "since": "241.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "2024.1 — 2024.1.6",
+        "PHPSTORM": "2024.1 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.1 — 2024.2.6",
+        "GOLAND": "2024.1 — 2024.2.5",
+        "PYCHARM": "2024.1 — 2024.2.6",
+        "WEBSTORM": "2024.1 — 2024.2.6",
+        "CWMGUEST": "build 241.0 — 242.*",
+        "RIDER": "2024.1 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.1 — 2024.2.6",
+        "CLION": "2024.1 — 2024.2.5",
+        "DATASPELL": "2024.1 — 2024.2.3",
+        "RUST": "2024.1 — 2024.2.5",
+        "ANDROID_STUDIO": "Koala | 2024.1.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 241.0 — 242.*",
+        "DBE": "2024.1 — 2024.2.2",
+        "RUBYMINE": "2024.1 — 2024.2.6",
+        "IDEA": "2024.1 — 2024.2.6"
+      },
+      "file_id": 743192,
+      "downloads": 1077050
+    },
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "251.*",
+      "compatible_versions": {
+        "MPS": "2024.3 — 2025.1.2",
+        "PHPSTORM": "2024.3 — 2025.1.7.1",
+        "IDEA_COMMUNITY": "2024.3 — 2025.1.7.1",
+        "GOLAND": "2024.3 — 2025.1.7.1",
+        "PYCHARM": "2024.3 — 2025.1.6.1",
+        "WEBSTORM": "2024.3 — 2025.1.7.1",
+        "CWMGUEST": "build 243.0 — 251.*",
+        "RIDER": "2024.3 — 2025.1.9",
+        "PYCHARM_COMMUNITY": "2024.3 — 2025.1.6.1",
+        "CLION": "2024.3 — 2025.1.7.1",
+        "DATASPELL": "2024.3 — 2025.1.2.2",
+        "RUST": "2024.3 — 2025.1.5.1",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1 — Narwhal 4 Feature Drop | 2025.1.4",
+        "JBCLIENT": "build 243.0 — 251.*",
+        "DBE": "2024.3 — 2025.1.4.1",
+        "RUBYMINE": "2024.3 — 2025.1.7.1",
+        "IDEA": "2024.3 — 2025.1.7.1"
+      },
+      "file_id": 743191,
+      "downloads": 432781
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

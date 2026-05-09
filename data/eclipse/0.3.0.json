@@ -1,0 +1,14 @@
+{
+  "ide": "eclipse",
+  "version": "0.3.0",
+  "release_date": "2025-03-10",
+  "title": "0.3.0 - 20250310",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.3.0",
+  "source": "api",
+  "body_markdown": "### Added\n- Support chat feature\n- Support to create a new conversation\n- Support slash commands\n- Support to attach context files\n- Support cancel a conversation\n- Support model picker for chat",
+  "body_html": "### Added\n- Support chat feature\n - Support to create a new conversation\n - Support slash commands\n - Support to attach context files\n - Support cancel a conversation\n - Support model picker for chat",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}

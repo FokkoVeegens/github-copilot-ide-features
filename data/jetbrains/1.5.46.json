@@ -1,0 +1,68 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.46",
+  "release_date": "2025-06-04",
+  "title": "GitHub Copilot for JetBrains 1.5.46",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **Added**: Custom instructions are supported for Agent mode. Workspace and global custom instructions can be configured in Settings.\n* **Added**: Support for premium requests.\n* **Changed**: Enhanced transparency in conversation context. The current file is now explicitly shown as context, and recent files are no longer included.\n* **Fixed**: Removed the maximum number of files containing proposed changes in Agent mode.\n* **Fixed**: Auto-scroll feature to focus on the last user message in chat.\n* **Fixed**: Various improvements for Agent mode and MCP tools support.\n* **Fixed**: Addressed several performance issues.",
+  "body_html": "<ul><li><strong>Added</strong>: Custom instructions are supported for Agent mode. Workspace and global custom instructions can be configured in Settings.\n</li><li><strong>Added</strong>: Support for premium requests.\n</li><li><strong>Changed</strong>: Enhanced transparency in conversation context. The current file is now explicitly shown as context, and recent files are no longer included.\n</li><li><strong>Fixed</strong>: Removed the maximum number of files containing proposed changes in Agent mode.\n</li><li><strong>Fixed</strong>: Auto-scroll feature to focus on the last user message in chat.\n</li><li><strong>Fixed</strong>: Various improvements for Agent mode and MCP tools support.\n</li><li><strong>Fixed</strong>: Addressed several performance issues.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": "241",
+      "since": "241.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "2024.1 — 2024.1.6",
+        "PHPSTORM": "2024.1 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.1 — 2024.2.6",
+        "GOLAND": "2024.1 — 2024.2.5",
+        "PYCHARM": "2024.1 — 2024.2.6",
+        "WEBSTORM": "2024.1 — 2024.2.6",
+        "CWMGUEST": "build 241.0 — 242.*",
+        "RIDER": "2024.1 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.1 — 2024.2.6",
+        "CLION": "2024.1 — 2024.2.5",
+        "DATASPELL": "2024.1 — 2024.2.3",
+        "RUST": "2024.1 — 2024.2.5",
+        "ANDROID_STUDIO": "Koala | 2024.1.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 241.0 — 242.*",
+        "DBE": "2024.1 — 2024.2.2",
+        "RUBYMINE": "2024.1 — 2024.2.6",
+        "IDEA": "2024.1 — 2024.2.6"
+      },
+      "file_id": 765946,
+      "downloads": 54357
+    },
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "252.*",
+      "compatible_versions": {
+        "MPS": "2024.3 — 2025.2.2",
+        "PHPSTORM": "2024.3 — 2025.2.6.1",
+        "IDEA_COMMUNITY": "2024.3 — 2025.2.6.2",
+        "GOLAND": "2024.3 — 2025.2.6.1",
+        "PYCHARM": "2024.3 — 2025.2.6.1",
+        "WEBSTORM": "2024.3 — 2025.2.6.1",
+        "CWMGUEST": "build 243.0 — 252.*",
+        "RIDER": "2024.3 — 2025.2.6",
+        "PYCHARM_COMMUNITY": "2024.3 — 2025.2.6.1",
+        "CLION": "2024.3 — 2025.2.6.1",
+        "DATASPELL": "2024.3 — 2025.2.3.1",
+        "RUST": "2024.3 — 2025.2.5.1",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1 — Otter 3 Feature Drop | 2025.2.3",
+        "JBCLIENT": "build 243.0 — 252.*",
+        "DBE": "2024.3 — 2025.2.5.1",
+        "RUBYMINE": "2024.3 — 2025.2.6.1",
+        "IDEA": "2024.3 — 2025.2.6.2"
+      },
+      "file_id": 765945,
+      "downloads": 390783
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

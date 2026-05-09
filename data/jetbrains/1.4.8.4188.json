@@ -1,0 +1,43 @@
+{
+  "ide": "jetbrains",
+  "version": "1.4.8.4188",
+  "release_date": "2024-01-09",
+  "title": "GitHub Copilot for JetBrains 1.4.8.4188",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Fixed some invalid thread access problems\n* Better handling of conversation history\n* Minor bug fixes",
+  "body_html": "<ul><li>Fixed some invalid thread access problems</li><li>Better handling of conversation history</li><li>Minor bug fixes</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "231.0",
+      "until": "233.*",
+      "compatible_versions": {
+        "MPS": "2023.2 — 2023.3.3",
+        "PHPSTORM": "2023.1 — 2023.3.8",
+        "IDEA_COMMUNITY": "2023.1 — 2023.3.8",
+        "GOLAND": "2023.1 — 2023.3.8",
+        "PYCHARM": "2023.1 — 2023.3.7",
+        "WEBSTORM": "2023.1 — 2023.3.8",
+        "CWMGUEST": "build 231.0 — 233.*",
+        "RIDER": "2023.1 — 2023.3.6",
+        "APPCODE": "2023.1 — 2023.1.5",
+        "PYCHARM_COMMUNITY": "2023.1 — 2023.3.7",
+        "CLION": "2023.1 — 2023.3.6",
+        "DATASPELL": "2023.1 — 2023.3.6",
+        "RUST": "build 231.0 — 233.*",
+        "ANDROID_STUDIO": "Hedgehog | 2023.1.1 — Jellyfish | 2023.3.1 Patch 2",
+        "JBCLIENT": "build 231.0 — 233.*",
+        "DBE": "2023.1 — 2023.3.4",
+        "RUBYMINE": "2023.1 — 2023.3.8",
+        "IDEA": "2023.1 — 2023.3.8"
+      },
+      "file_id": 464331,
+      "downloads": 90267
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

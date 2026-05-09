@@ -1,0 +1,68 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.57",
+  "release_date": "2025-09-18",
+  "title": "GitHub Copilot for JetBrains 1.5.57",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Added: Code review with Suggested Changes panel.\n* Added: MCP prompt files support.\n* Added: New settings for creating instruction and prompt files.\n* Added: Improved Ask mode layout for better usability.\n* Added: Automatic history migration from Ask mode to Agent mode.\n* Added: MCP sampling support for advanced interactions.\n* Added: MCP elicitation support.\n* Added: MCP resource support for extended functionality.\n* Added: Tool grouping for better organization.\n* Fixed: Session disposal issues causing unexpected behavior.\n* Fixed: Inlay display updates when changing font size.\n* Fixed: Updated tools status method for reliability.\n* Fixed: Chat reference spacing for cleaner appearance.\n* Fixed: Multiple edits to the same file failing in Agent mode.",
+  "body_html": "<ul><li>Added: Code review with Suggested Changes panel.\n</li><li>Added: MCP prompt files support.\n</li><li>Added: New settings for creating instruction and prompt files.\n</li><li>Added: Improved Ask mode layout for better usability.\n</li><li>Added: Automatic history migration from Ask mode to Agent mode.\n</li><li>Added: MCP sampling support for advanced interactions.\n</li><li>Added: MCP elicitation support.\n</li><li>Added: MCP resource support for extended functionality.\n</li><li>Added: Tool grouping for better organization.\n</li><li>Fixed: Session disposal issues causing unexpected behavior.\n</li><li>Fixed: Inlay display updates when changing font size.\n</li><li>Fixed: Updated tools status method for reliability.\n</li><li>Fixed: Chat reference spacing for cleaner appearance.\n</li><li>Fixed: Multiple edits to the same file failing in Agent mode.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "",
+      "compatible_versions": {
+        "MPS": "2024.3+",
+        "PHPSTORM": "2024.3+",
+        "IDEA_COMMUNITY": "2024.3+",
+        "GOLAND": "2024.3+",
+        "PYCHARM": "2024.3+",
+        "WEBSTORM": "2024.3+",
+        "CWMGUEST": "1.0+",
+        "RIDER": "2024.3+",
+        "PYCHARM_COMMUNITY": "2024.3+",
+        "CLION": "2024.3+",
+        "DATASPELL": "2024.3+",
+        "RUST": "2024.3+",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1+",
+        "JBCLIENT": "1.0+",
+        "DBE": "2024.3+",
+        "RUBYMINE": "2024.3+",
+        "IDEA": "2024.3+"
+      },
+      "file_id": 859668,
+      "downloads": 1364977
+    },
+    {
+      "ide_build": "241",
+      "since": "241.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "2024.1 — 2024.1.6",
+        "PHPSTORM": "2024.1 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.1 — 2024.2.6",
+        "GOLAND": "2024.1 — 2024.2.5",
+        "PYCHARM": "2024.1 — 2024.2.6",
+        "WEBSTORM": "2024.1 — 2024.2.6",
+        "CWMGUEST": "build 241.0 — 242.*",
+        "RIDER": "2024.1 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.1 — 2024.2.6",
+        "CLION": "2024.1 — 2024.2.5",
+        "DATASPELL": "2024.1 — 2024.2.3",
+        "RUST": "2024.1 — 2024.2.5",
+        "ANDROID_STUDIO": "Koala | 2024.1.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 241.0 — 242.*",
+        "DBE": "2024.1 — 2024.2.2",
+        "RUBYMINE": "2024.1 — 2024.2.6",
+        "IDEA": "2024.1 — 2024.2.6"
+      },
+      "file_id": 859667,
+      "downloads": 231014
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

@@ -1,0 +1,16 @@
+{
+  "ide": "eclipse",
+  "version": "0.7.0",
+  "release_date": "2025-06-04",
+  "title": "0.7.0 - 20250604",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.7.0",
+  "source": "api",
+  "body_markdown": "### Added\n- New billing support and user interface update.\n- Input history navigation.\n- A button shortcut to open the MCP configuration page.\n### Changed\n- Update CLS to 1.327.0.\n- Update Copilot status icon.\n### Fixed\n- Fix the memory leak issue that the document is not disconnected.\n- Document for URI could not be found.\n- No tools is displayed in MCP configuration page.\n- NPE when resolve menu bar handler.\n- Compare editor title cannot be rendered correctly.",
+  "body_html": "### Added\n- New billing support and user interface update.\n- Input history navigation.\n- A button shortcut to open the MCP configuration page.\n\n### Changed\n- Update CLS to 1.327.0.\n- Update Copilot status icon.\n\n### Fixed\n- Fix the memory leak issue that the document is not disconnected.\n- Document for URI could not be found.\n- No tools is displayed in MCP configuration page.\n- NPE when resolve menu bar handler.\n- Compare editor title cannot be rendered correctly.",
+  "categories": [],
+  "copilot_mentions": [
+    "- Update Copilot status icon."
+  ],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}

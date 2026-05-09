@@ -1,0 +1,16 @@
+{
+  "ide": "eclipse",
+  "version": "0.12.0",
+  "release_date": "2025-10-16",
+  "title": "0.12.0 - 20251016",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.12.0",
+  "source": "api",
+  "body_markdown": "### Added\n- Support chat history.\n- Support BYOK (Bring Your Own Keys), including Azure, OpenAI, Groq, Anthropic, OpenRouter and Gemini.\n- (Preview) Support MCP Registry.\n- (Preview) Add an extension point to allow MCP server registration from other plugins.\n### Changed\n- Show the generate commit message button to different places per Eclipse platform version.\n- Re-organize the Copilot preference pages.\n- Use new GitHub App ID.\n### Fixed\n- Improve focus indicator for buttons in chat view.\n- Misleading description for custom instructions.\n- SWT Resource was not properly disposed by run\\_in\\_terminal tool.\n- java.nio.file.FileSystemException thrown by TerminalServiceManager.\n- Rendering of the whats new page is broken on webkit.\n- Consider product customization for what's new preferences.\n- Get charset by file.\n- Dedup the files from the add context file dialog.\n- '&' is used as mnemonic character in SWT Label.\n- Refine color of line separator in chat view.\n- Validates the files before editing.\n- Set right background color and hover listener for action items in summary bar.\n- Do not trigger completion if code mining is disabled.\n- UI bundle is started before CLS is activated.",
+  "body_html": "### Added\n- Support chat history.\n- Support BYOK (Bring Your Own Keys), including Azure, OpenAI, Groq, Anthropic, OpenRouter and Gemini.\n- (Preview) Support MCP Registry.\n- (Preview) Add an extension point to allow MCP server registration from other plugins.\n\n### Changed\n- Show the generate commit message button to different places per Eclipse platform version.\n- Re-organize the Copilot preference pages.\n- Use new GitHub App ID.\n\n### Fixed\n- Improve focus indicator for buttons in chat view.\n- Misleading description for custom instructions.\n- SWT Resource was not properly disposed by run_in_terminal tool.\n- java.nio.file.FileSystemException thrown by TerminalServiceManager.\n- Rendering of the whats new page is broken on webkit.\n- Consider product customization for what's new preferences.\n- Get charset by file.\n- Dedup the files from the add context file dialog.\n- '&' is used as mnemonic character in SWT Label.\n- Refine color of line separator in chat view.\n- Validates the files before editing.\n- Set right background color and hover listener for action items in summary bar.\n- Do not trigger completion if code mining is disabled.\n- UI bundle is started before CLS is activated.",
+  "categories": [],
+  "copilot_mentions": [
+    "- Re-organize the Copilot preference pages."
+  ],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}

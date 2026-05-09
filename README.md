@@ -1,27 +1,66 @@
 # GitHub Copilot features per IDE
 
-This repository provides a comprehensive overview of the features available in GitHub Copilot across different Integrated Development Environments (IDEs). It aims to help users understand the capabilities of GitHub Copilot in their preferred development environment.
+This repository collects release notes for GitHub Copilot features across different IDEs. Scheduled GitHub Actions workflows collect the release notes from the official IDEs and IDE extensions/plugins and store these in json files.
 
-The site is available here: https://fokkoveegens.github.io/github-copilot-ide-features/
+## Repository layout
 
-## Technology
+```
+config/ides.yml          – single source of truth for IDE configuration
+data/<ide>/<version>.json – one JSON file per release; presence = already processed
+scripts/run.py           – CLI entry point
+scripts/common/          – shared utilities (config, HTTP, extraction, I/O)
+scripts/fetchers/        – one module per IDE
+tests/                   – pytest test suite
+```
 
-The project contains a static website published to GitHub Pages. It is built using Vue.js and Bulma CSS framework, ensuring compatibility across all modern web browsers. The data is stored in JSON format, making it easy to update and maintain.
+## Supported IDEs
 
-## Local Development / running the website
+| ID | Name |
+|----|------|
+| `eclipse` | Copilot for Eclipse |
 
-For local development, the project uses a [Node.js static web server](./server.js). If you're using VS Code, simply press F5 to launch the server and automatically open the site in your default browser. Alternatively, run `node server.js` from the project root and navigate to http://localhost:8000.
+## Running a fetcher locally
 
-## Sources
+```bash
+pip install -r requirements.txt
 
-These are the main sources for information in this project:
+# Fetch (or update) release notes for a single IDE:
+python -m scripts.run --ide eclipse
 
-- https://github.blog/changelog/
-- https://code.visualstudio.com/updates
-- https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions
-- https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes
-- https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes
+# Set GITHUB_TOKEN for higher API rate limits (recommended):
+GITHUB_TOKEN=ghp_... python -m scripts.run --ide eclipse
+```
 
-## Contributing
+Re-running the same command is safe: existing files are never overwritten (idempotent).
 
-Contributions are welcome! If you have information about GitHub Copilot features in different IDEs or improvements to the existing data, please feel free to submit a pull request. Make sure to follow the existing JSON structure for consistency.
+### GitHub token scopes
+
+The fetchers that call the GitHub REST API (Eclipse, and future IDEs: Xcode, Vim/Neovim) only read **public** repositories, so no specific OAuth scopes are required. Any of the following work:
+
+| Token type | Required scopes |
+|-----------|----------------|
+| Personal access token (classic) | *(none — leave all scopes unchecked)* |
+| Fine-grained PAT | `Public Repositories (read-only)` access (the default) |
+| GitHub Actions `GITHUB_TOKEN` | Default permissions are sufficient; no extra configuration needed |
+
+Without a token the API allows **60 requests per hour per IP address**. Any authenticated token raises this to **5,000 requests per hour**.
+
+## Running the tests
+
+```bash
+pip install -r requirements.txt
+pytest
+```
+
+## Output format
+
+Each file under `data/<ide>/` follows the JSON schema defined in `scripts/common/schema.json`. Key fields:
+
+| Field | Description |
+|-------|-------------|
+| `ide` | IDE identifier matching `config/ides.yml` |
+| `version` | Normalised version string (e.g. `0.16.0`) |
+| `release_date` | ISO-8601 date (`YYYY-MM-DD`) |
+| `body_markdown` | Full release notes as Markdown |
+| `copilot_mentions` | Lines from the notes matching a Copilot/AI heuristic |
+| `source` | How the data was obtained (`api`, `feed`, `html`, …) |

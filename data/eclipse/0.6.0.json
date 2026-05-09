@@ -1,0 +1,14 @@
+{
+  "ide": "eclipse",
+  "version": "0.6.0",
+  "release_date": "2025-05-16",
+  "title": "0.6.0 - 20250516",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.6.0",
+  "source": "api",
+  "body_markdown": "### Added\n- Support agent mode with stdio mcp server integration in chat.",
+  "body_html": "### Added\n- Support agent mode with stdio mcp server integration in chat.",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}

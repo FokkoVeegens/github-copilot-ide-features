@@ -1,0 +1,45 @@
+{
+  "ide": "jetbrains",
+  "version": "1.1.8.421",
+  "release_date": "2022-02-02",
+  "title": "GitHub Copilot for JetBrains 1.1.8.421",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "### Fixed\n\n* Pressing TAB was over-eager to insert Copilot's suggestions to the editor.\n* Turn off GitHub Copilot if [light edit mode](https://www.jetbrains.com/help/idea/lightedit-mode.html) is enabled.",
+  "body_html": "<h3>Fixed</h3>\n<ul><li>Pressing TAB was over-eager to insert Copilot's suggestions to the editor.</li><li>Turn off GitHub Copilot if <a href=\"https://www.jetbrains.com/help/idea/lightedit-mode.html\">light edit mode</a> is enabled.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Pressing TAB was over-eager to insert Copilot's suggestions to the editor.",
+    "* Turn off GitHub Copilot if [light edit mode](https://www.jetbrains.com/help/idea/lightedit-mode.html) is enabled."
+  ],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "212.0",
+      "until": "221.*",
+      "compatible_versions": {
+        "MPS": "2021.2 — 2021.3.5",
+        "PHPSTORM": "2021.2 — 2022.1.4",
+        "IDEA_COMMUNITY": "2021.2 — 2022.1.4",
+        "GOLAND": "2021.2 — 2022.1.4",
+        "PYCHARM": "2021.2 — 2022.1.4",
+        "WEBSTORM": "2021.2 — 2022.1.4",
+        "CWMGUEST": "build 212.0 — 221.*",
+        "RIDER": "2021.2 — 2022.1.2",
+        "PYCHARM_COMMUNITY": "2021.2 — 2022.1.4",
+        "CLION": "2021.2 — 2022.1.3",
+        "DATASPELL": "2021.3 — 2022.1.4",
+        "RUST": "build 212.0 — 221.*",
+        "ANDROID_STUDIO": "Chipmunk | 2021.2.1 — Electric Eel | 2022.1.1 Patch 2",
+        "JBCLIENT": "build 212.0 — 221.*",
+        "DBE": "2021.2 — 2022.1.5",
+        "RUBYMINE": "2021.2 — 2022.1.4",
+        "IDEA": "2021.2 — 2022.1.4"
+      },
+      "file_id": 156161,
+      "downloads": 11904
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

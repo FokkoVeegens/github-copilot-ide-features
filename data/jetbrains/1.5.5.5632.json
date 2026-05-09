@@ -1,0 +1,46 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.5.5632",
+  "release_date": "2024-05-29",
+  "title": "GitHub Copilot for JetBrains 1.5.5.5632",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Fix intermitent duplicate Copilot context menu items\n* Add new Copilot Chat preconditions\n* Completions improvements",
+  "body_html": "<ul><li>Fix intermitent duplicate Copilot context menu items\n</li><li>Add new Copilot Chat preconditions\n</li><li>Completions improvements</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Fix intermitent duplicate Copilot context menu items",
+    "* Add new Copilot Chat preconditions"
+  ],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "231.0",
+      "until": "241.*",
+      "compatible_versions": {
+        "MPS": "2023.2 — 2024.1.6",
+        "PHPSTORM": "2023.1 — 2024.1.7",
+        "IDEA_COMMUNITY": "2023.1 — 2024.1.7",
+        "GOLAND": "2023.1 — 2024.1.6",
+        "PYCHARM": "2023.1 — 2024.1.7",
+        "WEBSTORM": "2023.1 — 2024.1.7",
+        "CWMGUEST": "build 231.0 — 241.*",
+        "RIDER": "2023.1 — 2024.1.7",
+        "APPCODE": "2023.1 — 2023.1.5",
+        "PYCHARM_COMMUNITY": "2023.1 — 2024.1.7",
+        "CLION": "2023.1 — 2024.1.6",
+        "DATASPELL": "2023.1 — 2024.1.4",
+        "RUST": "2024.1 — 2024.1.8",
+        "ANDROID_STUDIO": "Hedgehog | 2023.1.1 — Koala Feature Drop | 2024.1.2 Patch 1",
+        "JBCLIENT": "build 231.0 — 241.*",
+        "DBE": "2023.1 — 2024.1.5",
+        "RUBYMINE": "2023.1 — 2024.1.7",
+        "IDEA": "2023.1 — 2024.1.7"
+      },
+      "file_id": 547487,
+      "downloads": 96165
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

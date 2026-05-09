@@ -1,0 +1,14 @@
+{
+  "ide": "eclipse",
+  "version": "0.16.0",
+  "release_date": "2026-04-03",
+  "title": "0.16.0 - 20260403",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.16.0",
+  "source": "api",
+  "body_markdown": "### Added\n- Support tool calling in Ask Mode.\n- Show detailed model information on dropdown hover.\n- Add openChatView mode parameter and wire handoff to command.\n### Changed\n- Update chat mode selector and model selector to show more information.\n- Remove 'Included' billing message and simplify multiplier to 0.\n- Remove border for Add Context button and center layout in ActionBar.\n### Fixed\n- Fix NPE under updateCodeMinings() lambda if editor is already disposed\n- Fix bind Ctrl++ shortcut additionally for increaseChatFontSize command\n- Fix Binary LSP agent start failed\n- Fix some languages does not have syntax highlighting\n- Fix wrong line delimiter is generated in completion\n- Fix \"Copy and Open\" does not copy\n- Fix BadPositionCategoryException in RenderManager when closing markdown editor\n- Fix use invisible OSC escape sequence for terminal command completion marker\n- Fix URI comparison for similar URI schemes.\n- Fix CLS \"temperature and top\\_p cannot both be specified for this model\".",
+  "body_html": "### Added\n- Support tool calling in Ask Mode.\n- Show detailed model information on dropdown hover.\n- Add openChatView mode parameter and wire handoff to command.\n\n### Changed\n- Update chat mode selector and model selector to show more information.\n- Remove 'Included' billing message and simplify multiplier to 0.\n- Remove border for Add Context button and center layout in ActionBar.\n\n### Fixed\n- Fix NPE under updateCodeMinings() lambda if editor is already disposed\n- Fix bind Ctrl++ shortcut additionally for increaseChatFontSize command\n- Fix Binary LSP agent start failed\n- Fix some languages does not have syntax highlighting\n- Fix wrong line delimiter is generated in completion\n- Fix \"Copy and Open\" does not copy\n- Fix BadPositionCategoryException in RenderManager when closing markdown editor\n- Fix use invisible OSC escape sequence for terminal command completion marker\n- Fix URI comparison for similar URI schemes.\n- Fix CLS \"temperature and top_p cannot both be specified for this model\".",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}

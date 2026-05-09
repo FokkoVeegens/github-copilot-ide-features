@@ -1,0 +1,16 @@
+{
+  "ide": "eclipse",
+  "version": "0.10.0",
+  "release_date": "2025-08-11",
+  "title": "0.10.0 - 20250811",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.10.0",
+  "source": "api",
+  "body_markdown": "### Added\n- Support custom instructions.\n- Support MCP feature flag.\n- Support GitHub MCP server OAuth.\n- Support adding image to the chat context.\n- Support adding folder to chat context.\n- Add confirmation dialog for unhandled files when create a new conversation in agent mode.\n- Add `Edit Preferences...` button into chat top banner.\n- Show conversation title in chat top banner.\n### Changed\n- Improve the Copilot perspective with onboarding images and more shortcuts.\n- Update chat view's icon.\n- Merge all open url related commands into one command.\n### Fixed\n- Error 'Document for URI could not be found' during chat.\n- Unexpected files are listed in the Search Attachments dialog.\n- Correct the default index when build SignInDialog.\n- Input history is not cleared after switching account.\n- Preference will be cleared if username is not ready when start up.\n- Delay the show hint invocation timing to avoid command not found error.\n- Active model does not reset to default model when model list change.\n- Welcome view does not render correctly when height is limited.\n- Persist chat input when mode switches.\n- Send MCP tools status notification after server started.\n### Removed\n- Remove CopilotAuthStatusListener from AvatarService.\n- Remove CopilotAuthStatusListener from CopilotStatusManager.",
+  "body_html": "### Added\n- Support custom instructions.\n- Support MCP feature flag.\n- Support GitHub MCP server OAuth.\n- Support adding image to the chat context.\n- Support adding folder to chat context.\n- Add confirmation dialog for unhandled files when create a new conversation in agent mode.\n- Add `Edit Preferences...` button into chat top banner.\n- Show conversation title in chat top banner.\n\n### Changed\n- Improve the Copilot perspective with onboarding images and more shortcuts.\n- Update chat view's icon.\n- Merge all open url related commands into one command.\n\n### Fixed\n- Error 'Document for URI could not be found' during chat.\n- Unexpected files are listed in the Search Attachments dialog.\n- Correct the default index when build SignInDialog.\n- Input history is not cleared after switching account.\n- Preference will be cleared if username is not ready when start up.\n- Delay the show hint invocation timing to avoid command not found error.\n- Active model does not reset to default model when model list change.\n- Welcome view does not render correctly when height is limited.\n- Persist chat input when mode switches.\n- Send MCP tools status notification after server started.\n\n### Removed\n- Remove CopilotAuthStatusListener from AvatarService.\n- Remove CopilotAuthStatusListener from CopilotStatusManager.",
+  "categories": [],
+  "copilot_mentions": [
+    "- Improve the Copilot perspective with onboarding images and more shortcuts."
+  ],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}

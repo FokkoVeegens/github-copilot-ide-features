@@ -1,0 +1,28 @@
+ides:
+  - id: dummy
+    name: Dummy IDE
+    data_dir: data/dummy
+    fetcher: dummy
+    start_version: "0.0.1"
+
+  - id: eclipse
+    name: Copilot for Eclipse
+    data_dir: data/eclipse
+    fetcher: eclipse
+    start_version: all
+    source_url: https://api.github.com/repos/microsoft/copilot-for-eclipse/releases
+
+  - id: jetbrains
+    name: GitHub Copilot for JetBrains
+    data_dir: data/jetbrains
+    fetcher: jetbrains
+    start_version: all
+    source_url: https://plugins.jetbrains.com/api/plugins/17718/updates
+
+  # Real IDE entries will be added in subsequent MVPs:
+  # - id: xcode
+  # - id: vim-neovim
+  # - id: vs-code
+  # - id: visual-studio-2022
+  # - id: visual-studio-2026
+  # - id: sql-server-management-studio

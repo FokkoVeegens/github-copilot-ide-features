@@ -1,0 +1,16 @@
+{
+  "ide": "eclipse",
+  "version": "0.5.0",
+  "release_date": "2025-03-25",
+  "title": "0.5.0 - 20250325",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.5.0",
+  "source": "api",
+  "body_markdown": "### Added\n- Added GitHub Copilot menu to the top menu bar.\n### Changed\n- Updated the LS to 1.290.0.\n### Fixed\n- Stop append INFO log when format preference changes.\n- Should not attach bin files even it was opened in editor (behavior of VSCode).\n- Aligned the menu item on Mac.",
+  "body_html": "### Added\n- Added GitHub Copilot menu to the top menu bar.\n\n### Changed\n- Updated the LS to 1.290.0.\n\n### Fixed\n- Stop append INFO log when format preference changes.\n- Should not attach bin files even it was opened in editor (behavior of VSCode).\n- Aligned the menu item on Mac.",
+  "categories": [],
+  "copilot_mentions": [
+    "- Added GitHub Copilot menu to the top menu bar."
+  ],
+  "fetched_at": "2026-05-05T19:53:39Z",
+  "schema_version": 1
+}
