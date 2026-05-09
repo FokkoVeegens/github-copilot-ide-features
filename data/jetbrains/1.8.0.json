@@ -1,0 +1,68 @@
+{
+  "ide": "jetbrains",
+  "version": "1.8.0",
+  "release_date": "2026-04-16",
+  "title": "GitHub Copilot for JetBrains 1.8.0",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **New Features**\n\n* Added: Inline agent mode (preview).\n* Added: Next Edit Suggestions enhancements, including inline edit previews and far-away edits.\n* Added: Global auto‑approve and granular controls for terminal commands and file edits.\n\n* **User Experience**\n\n* Improved: Chat context resets automatically after sending messages.\n* Improved: Chat history rendering performance for large conversations.\n* Improved: Stability and quality of chat code blocks.\n* Improved: Inline code review panel supports automatic resizing.\n* Improved: Refined login experience with a smoother device code flow.\n* Improved: UX enhancements across sign‑in, tooltips, and focus behavior.\n\n* **Bug Fixes**\n\n* Fixed: Chat spinner hanging during responses.\n* Fixed: Esc key failing to dismiss selections and IDE popups.\n* Fixed: Improved state handling in the Configure Tools window.\n* Fixed: Multiple UI freeze issues.",
+  "body_html": "<ul><li><strong>New Features</strong>\n</li></ul>\n<ul><li>Added: Inline agent mode (preview).\n</li><li>Added: Next Edit Suggestions enhancements, including inline edit previews and far-away edits.\n</li><li>Added: Global auto‑approve and granular controls for terminal commands and file edits.\n\n</li></ul>\n<ul><li><strong>User Experience</strong>\n</li></ul>\n<ul><li>Improved: Chat context resets automatically after sending messages.\n</li><li>Improved: Chat history rendering performance for large conversations.\n</li><li>Improved: Stability and quality of chat code blocks.\n</li><li>Improved: Inline code review panel supports automatic resizing.\n</li><li>Improved: Refined login experience with a smoother device code flow.\n</li><li>Improved: UX enhancements across sign‑in, tooltips, and focus behavior.\n\n</li></ul>\n<ul><li><strong>Bug Fixes</strong>\n</li></ul>\n<ul><li>Fixed: Chat spinner hanging during responses.\n</li><li>Fixed: Esc key failing to dismiss selections and IDE popups.\n</li><li>Fixed: Improved state handling in the Configure Tools window.\n</li><li>Fixed: Multiple UI freeze issues.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "",
+      "compatible_versions": {
+        "MPS": "2024.3+",
+        "PHPSTORM": "2024.3+",
+        "IDEA_COMMUNITY": "2024.3+",
+        "GOLAND": "2024.3+",
+        "PYCHARM": "2024.3+",
+        "WEBSTORM": "2024.3+",
+        "CWMGUEST": "1.0+",
+        "RIDER": "2024.3+",
+        "PYCHARM_COMMUNITY": "2024.3+",
+        "CLION": "2024.3+",
+        "DATASPELL": "2024.3+",
+        "RUST": "2024.3+",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1+",
+        "JBCLIENT": "1.0+",
+        "DBE": "2024.3+",
+        "RUBYMINE": "2024.3+",
+        "IDEA": "2024.3+"
+      },
+      "file_id": 1022367,
+      "downloads": 564292
+    },
+    {
+      "ide_build": "242",
+      "since": "242.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "build 242.0 — 242.*",
+        "PHPSTORM": "2024.2 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.2 — 2024.2.6",
+        "GOLAND": "2024.2 — 2024.2.5",
+        "PYCHARM": "2024.2 — 2024.2.6",
+        "WEBSTORM": "2024.2 — 2024.2.6",
+        "CWMGUEST": "build 242.0 — 242.*",
+        "RIDER": "2024.2 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.2 — 2024.2.6",
+        "CLION": "2024.2 — 2024.2.5",
+        "DATASPELL": "2024.2 — 2024.2.3",
+        "RUST": "2024.2 — 2024.2.5",
+        "ANDROID_STUDIO": "Ladybug | 2024.2.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 242.0 — 242.*",
+        "DBE": "2024.2 — 2024.2.2",
+        "RUBYMINE": "2024.2 — 2024.2.6",
+        "IDEA": "2024.2 — 2024.2.6"
+      },
+      "file_id": 1022361,
+      "downloads": 4475
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

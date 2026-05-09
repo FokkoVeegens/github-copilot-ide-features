@@ -1,0 +1,45 @@
+{
+  "ide": "jetbrains",
+  "version": "1.2.22.3129",
+  "release_date": "2023-09-08",
+  "title": "GitHub Copilot for JetBrains 1.2.22.3129",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Fix for recent intermittent login failures\n* Improved messaging when Copilot is disabled",
+  "body_html": "<ul><li>Fix for recent intermittent login failures</li><li>Improved messaging when Copilot is disabled</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Improved messaging when Copilot is disabled"
+  ],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "221.0",
+      "until": "232.*",
+      "compatible_versions": {
+        "MPS": "2022.2 — 2023.2.3",
+        "PHPSTORM": "2022.1 — 2023.2.7",
+        "IDEA_COMMUNITY": "2022.1 — 2023.2.8",
+        "GOLAND": "2022.1 — 2023.2.8",
+        "PYCHARM": "2022.1 — 2023.2.8",
+        "WEBSTORM": "2022.1 — 2023.2.8",
+        "CWMGUEST": "build 221.0 — 232.*",
+        "RIDER": "2022.1 — 2023.2.5",
+        "APPCODE": "2022.1 — 2023.1.5",
+        "PYCHARM_COMMUNITY": "2022.1 — 2023.2.8",
+        "CLION": "2022.1 — 2023.2.5",
+        "DATASPELL": "2022.1 — 2023.2.7",
+        "RUST": "build 221.0 — 232.*",
+        "ANDROID_STUDIO": "Electric Eel | 2022.1.1 — Iguana | 2023.2.1 Patch 2",
+        "JBCLIENT": "build 221.0 — 232.*",
+        "DBE": "2022.1 — 2023.2.3",
+        "RUBYMINE": "2022.1 — 2023.2.8",
+        "IDEA": "2022.1 — 2023.2.8"
+      },
+      "file_id": 391768,
+      "downloads": 397685
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

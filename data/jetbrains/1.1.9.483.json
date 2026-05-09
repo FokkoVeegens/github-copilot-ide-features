@@ -1,0 +1,45 @@
+{
+  "ide": "jetbrains",
+  "version": "1.1.9.483",
+  "release_date": "2022-02-08",
+  "title": "GitHub Copilot for JetBrains 1.1.9.483",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "### Added\n\n* Show a context menu on suggestions shown by GitHub Copilot.\n\n### Fixed\n\n* Copilot suggestions are removed from the editor when the selection changed.",
+  "body_html": "<h3>Added</h3>\n<ul><li>Show a context menu on suggestions shown by GitHub Copilot.</li></ul>\n\n<h3>Fixed</h3>\n<ul><li>Copilot suggestions are removed from the editor when the selection changed.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Show a context menu on suggestions shown by GitHub Copilot.",
+    "* Copilot suggestions are removed from the editor when the selection changed."
+  ],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "212.0",
+      "until": "221.*",
+      "compatible_versions": {
+        "MPS": "2021.2 — 2021.3.5",
+        "PHPSTORM": "2021.2 — 2022.1.4",
+        "IDEA_COMMUNITY": "2021.2 — 2022.1.4",
+        "GOLAND": "2021.2 — 2022.1.4",
+        "PYCHARM": "2021.2 — 2022.1.4",
+        "WEBSTORM": "2021.2 — 2022.1.4",
+        "CWMGUEST": "build 212.0 — 221.*",
+        "RIDER": "2021.2 — 2022.1.2",
+        "PYCHARM_COMMUNITY": "2021.2 — 2022.1.4",
+        "CLION": "2021.2 — 2022.1.3",
+        "DATASPELL": "2021.3 — 2022.1.4",
+        "RUST": "build 212.0 — 221.*",
+        "ANDROID_STUDIO": "Chipmunk | 2021.2.1 — Electric Eel | 2022.1.1 Patch 2",
+        "JBCLIENT": "build 212.0 — 221.*",
+        "DBE": "2021.2 — 2022.1.5",
+        "RUBYMINE": "2021.2 — 2022.1.4",
+        "IDEA": "2021.2 — 2022.1.4"
+      },
+      "file_id": 156966,
+      "downloads": 2775
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

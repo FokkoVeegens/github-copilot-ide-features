@@ -1,0 +1,70 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.62",
+  "release_date": "2025-12-12",
+  "title": "GitHub Copilot for JetBrains 1.5.62",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **New Features**\n* Added: MCP registry – browse, install, or uninstall MCP servers from the registry.\n* Added: MCP allowlist controls – administrators can configure which MCP servers developers are allowed to discover and use.\n* Added: Slash command update for /clear and support for /clearFileContext.\n* Added: CVE Remediator subagent – detects and fixes security vulnerabilities in project dependencies while keeping the build functional.\n* Added: Continue subagent execution when max request limit reached\n* **User Experience**\n* Fixed: Context consistency in Agent Mode, Edit Mode and Ask Mode.\n* Fixed: Incorrect mode display when switching from Edit Mode back to Agent Mode.\n* **Performance and reliability**\n* Fixed: Long initialization time when opening a new session.\n* Fixed: Specific files opening unexpectedly when starting a new session.\n* Fixed: Various startup and stability issues.\n* **MCP**\n* Fixed: Code completion for mcp.json incorrectly appearing in other JSON files.\n* **Custom Instructions & Models**\n* Fixed: applyTo field not working in instruction files.\n* Fixed: Selected model not remembered after restart.\n* Fixed: Workspace-level Copilot Instruction and Git Commit Instruction files opening the wrong file when multiple IDE windows are open.",
+  "body_html": "<ul><li><strong>New Features</strong>\n</li><li>Added: MCP registry – browse, install, or uninstall MCP servers from the registry.\n</li><li>Added: MCP allowlist controls – administrators can configure which MCP servers developers are allowed to discover and use.\n</li><li>Added: Slash command update for /clear and support for /clearFileContext.\n</li><li>Added: CVE Remediator subagent – detects and fixes security vulnerabilities in project dependencies while keeping the build functional.\n</li><li>Added: Continue subagent execution when max request limit reached\n</li><li><strong>User Experience</strong>\n</li><li>Fixed: Context consistency in Agent Mode, Edit Mode and Ask Mode.\n</li><li>Fixed: Incorrect mode display when switching from Edit Mode back to Agent Mode.\n</li><li><strong>Performance and reliability</strong>\n</li><li>Fixed: Long initialization time when opening a new session.\n</li><li>Fixed: Specific files opening unexpectedly when starting a new session.\n</li><li>Fixed: Various startup and stability issues.\n</li><li><strong>MCP</strong>\n</li><li>Fixed: Code completion for mcp.json incorrectly appearing in other JSON files.\n</li><li><strong>Custom Instructions &amp; Models</strong>\n</li><li>Fixed: applyTo field not working in instruction files.\n</li><li>Fixed: Selected model not remembered after restart.\n</li><li>Fixed: Workspace-level Copilot Instruction and Git Commit Instruction files opening the wrong file when multiple IDE windows are open.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Fixed: Workspace-level Copilot Instruction and Git Commit Instruction files opening the wrong file when multiple IDE windows are open."
+  ],
+  "builds": [
+    {
+      "ide_build": "241",
+      "since": "241.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "2024.1 — 2024.1.6",
+        "PHPSTORM": "2024.1 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.1 — 2024.2.6",
+        "GOLAND": "2024.1 — 2024.2.5",
+        "PYCHARM": "2024.1 — 2024.2.6",
+        "WEBSTORM": "2024.1 — 2024.2.6",
+        "CWMGUEST": "build 241.0 — 242.*",
+        "RIDER": "2024.1 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.1 — 2024.2.6",
+        "CLION": "2024.1 — 2024.2.5",
+        "DATASPELL": "2024.1 — 2024.2.3",
+        "RUST": "2024.1 — 2024.2.5",
+        "ANDROID_STUDIO": "Koala | 2024.1.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 241.0 — 242.*",
+        "DBE": "2024.1 — 2024.2.2",
+        "RUBYMINE": "2024.1 — 2024.2.6",
+        "IDEA": "2024.1 — 2024.2.6"
+      },
+      "file_id": 911424,
+      "downloads": 121423
+    },
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "",
+      "compatible_versions": {
+        "MPS": "2024.3+",
+        "PHPSTORM": "2024.3+",
+        "IDEA_COMMUNITY": "2024.3+",
+        "GOLAND": "2024.3+",
+        "PYCHARM": "2024.3+",
+        "WEBSTORM": "2024.3+",
+        "CWMGUEST": "1.0+",
+        "RIDER": "2024.3+",
+        "PYCHARM_COMMUNITY": "2024.3+",
+        "CLION": "2024.3+",
+        "DATASPELL": "2024.3+",
+        "RUST": "2024.3+",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1+",
+        "JBCLIENT": "1.0+",
+        "DBE": "2024.3+",
+        "RUBYMINE": "2024.3+",
+        "IDEA": "2024.3+"
+      },
+      "file_id": 911423,
+      "downloads": 1056931
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

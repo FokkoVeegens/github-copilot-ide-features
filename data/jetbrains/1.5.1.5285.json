@@ -1,0 +1,45 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.1.5285",
+  "release_date": "2024-03-26",
+  "title": "GitHub Copilot for JetBrains 1.5.1.5285",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Changed chat conversations persistence path from .idea/copilot/chatSessions to ~/.config/github-copilot/IDE\\_CODE/chat-sessions/PROJECT\\_ID.\n* Added ability to select multiple files at once in the chat file reference dialog.\n* Fixed an off by one edge case when rendering markdown chat responses.",
+  "body_html": "<ul><li>Changed chat conversations persistence path from .idea/copilot/chatSessions to ~/.config/github-copilot/IDE_CODE/chat-sessions/PROJECT_ID.\n</li><li>Added ability to select multiple files at once in the chat file reference dialog.\n</li><li>Fixed an off by one edge case when rendering markdown chat responses.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Changed chat conversations persistence path from .idea/copilot/chatSessions to ~/.config/github-copilot/IDE\\_CODE/chat-sessions/PROJECT\\_ID."
+  ],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "231.0",
+      "until": "241.*",
+      "compatible_versions": {
+        "MPS": "2023.2 — 2024.1.6",
+        "PHPSTORM": "2023.1 — 2024.1.7",
+        "IDEA_COMMUNITY": "2023.1 — 2024.1.7",
+        "GOLAND": "2023.1 — 2024.1.6",
+        "PYCHARM": "2023.1 — 2024.1.7",
+        "WEBSTORM": "2023.1 — 2024.1.7",
+        "CWMGUEST": "build 231.0 — 241.*",
+        "RIDER": "2023.1 — 2024.1.7",
+        "APPCODE": "2023.1 — 2023.1.5",
+        "PYCHARM_COMMUNITY": "2023.1 — 2024.1.7",
+        "CLION": "2023.1 — 2024.1.6",
+        "DATASPELL": "2023.1 — 2024.1.4",
+        "RUST": "2024.1 — 2024.1.8",
+        "ANDROID_STUDIO": "Hedgehog | 2023.1.1 — Koala Feature Drop | 2024.1.2 Patch 1",
+        "JBCLIENT": "build 231.0 — 241.*",
+        "DBE": "2023.1 — 2024.1.5",
+        "RUBYMINE": "2023.1 — 2024.1.7",
+        "IDEA": "2023.1 — 2024.1.7"
+      },
+      "file_id": 512366,
+      "downloads": 137542
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

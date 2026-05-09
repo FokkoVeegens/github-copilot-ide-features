@@ -1,0 +1,68 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.34",
+  "release_date": "2025-02-18",
+  "title": "GitHub Copilot for JetBrains 1.5.34",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **Added**: Support for inline completion model selection\n* **Added**: Support **Gemini 2.0 Flash (Preview)** in chat\n* **Fixed**: Login issue for GitHub Enterprise Cloud with data residency",
+  "body_html": "<ul><li><strong>Added</strong>: Support for inline completion model selection\n</li><li><strong>Added</strong>: Support <strong>Gemini 2.0 Flash (Preview)</strong> in chat\n</li><li><strong>Fixed</strong>: Login issue for GitHub Enterprise Cloud with data residency</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": "241",
+      "since": "241.0",
+      "until": "241.*",
+      "compatible_versions": {
+        "MPS": "2024.1 — 2024.1.6",
+        "PHPSTORM": "2024.1 — 2024.1.7",
+        "IDEA_COMMUNITY": "2024.1 — 2024.1.7",
+        "GOLAND": "2024.1 — 2024.1.6",
+        "PYCHARM": "2024.1 — 2024.1.7",
+        "WEBSTORM": "2024.1 — 2024.1.7",
+        "CWMGUEST": "build 241.0 — 241.*",
+        "RIDER": "2024.1 — 2024.1.7",
+        "PYCHARM_COMMUNITY": "2024.1 — 2024.1.7",
+        "CLION": "2024.1 — 2024.1.6",
+        "DATASPELL": "2024.1 — 2024.1.4",
+        "RUST": "2024.1 — 2024.1.8",
+        "ANDROID_STUDIO": "Koala | 2024.1.1 — Koala Feature Drop | 2024.1.2 Patch 1",
+        "JBCLIENT": "build 241.0 — 241.*",
+        "DBE": "2024.1 — 2024.1.5",
+        "RUBYMINE": "2024.1 — 2024.1.7",
+        "IDEA": "2024.1 — 2024.1.7"
+      },
+      "file_id": 683010,
+      "downloads": 3516
+    },
+    {
+      "ide_build": "242",
+      "since": "242.0",
+      "until": "251.*",
+      "compatible_versions": {
+        "MPS": "2024.3 — 2025.1.2",
+        "PHPSTORM": "2024.2 — 2025.1.7.1",
+        "IDEA_COMMUNITY": "2024.2 — 2025.1.7.1",
+        "GOLAND": "2024.2 — 2025.1.7.1",
+        "PYCHARM": "2024.2 — 2025.1.6.1",
+        "WEBSTORM": "2024.2 — 2025.1.7.1",
+        "CWMGUEST": "build 242.0 — 251.*",
+        "RIDER": "2024.2 — 2025.1.9",
+        "PYCHARM_COMMUNITY": "2024.2 — 2025.1.6.1",
+        "CLION": "2024.2 — 2025.1.7.1",
+        "DATASPELL": "2024.2 — 2025.1.2.2",
+        "RUST": "2024.2 — 2025.1.5.1",
+        "ANDROID_STUDIO": "Ladybug | 2024.2.1 — Narwhal 4 Feature Drop | 2025.1.4",
+        "JBCLIENT": "build 242.0 — 251.*",
+        "DBE": "2024.2 — 2025.1.4.1",
+        "RUBYMINE": "2024.2 — 2025.1.7.1",
+        "IDEA": "2024.2 — 2025.1.7.1"
+      },
+      "file_id": 683009,
+      "downloads": 26722
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

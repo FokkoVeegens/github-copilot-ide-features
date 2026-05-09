@@ -1,0 +1,70 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.58",
+  "release_date": "2025-10-20",
+  "title": "GitHub Copilot for JetBrains 1.5.58",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Added: Coding agent, an autonomous AI developer you can assign to any developer task.\n* Added: Fold/unfold functionality for tools.\n* Added: mcp.json supports input placeholder for sensitive information.\n* Added: Support inline code review.\n* Added: Open file tool to the Copilot chat conversation agent.\n* Added: # context support for file/folder/tools.\n* Added: UI optimization for inline completion.\n* Added: UI optimization for tools management view.\n* Added: Support tool annotations and clientInfo for MCP servers.\n* Added: Update tool call result information.\n* Added: Security confirm for sensitive file edits.\n* Fixed: Mitigate syntax lagging.\n* Fixed: Specify default model for api.",
+  "body_html": "<ul><li>Added: Coding agent, an autonomous AI developer you can assign to any developer task.\n</li><li>Added: Fold/unfold functionality for tools.\n</li><li>Added: mcp.json supports input placeholder for sensitive information.\n</li><li>Added: Support inline code review.\n</li><li>Added: Open file tool to the Copilot chat conversation agent.\n</li><li>Added: # context support for file/folder/tools.\n</li><li>Added: UI optimization for inline completion.\n</li><li>Added: UI optimization for tools management view.\n</li><li>Added: Support tool annotations and clientInfo for MCP servers.\n</li><li>Added: Update tool call result information.\n</li><li>Added: Security confirm for sensitive file edits.\n</li><li>Fixed: Mitigate syntax lagging.\n</li><li>Fixed: Specify default model for api.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Added: Open file tool to the Copilot chat conversation agent."
+  ],
+  "builds": [
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "",
+      "compatible_versions": {
+        "MPS": "2024.3+",
+        "PHPSTORM": "2024.3+",
+        "IDEA_COMMUNITY": "2024.3+",
+        "GOLAND": "2024.3+",
+        "PYCHARM": "2024.3+",
+        "WEBSTORM": "2024.3+",
+        "CWMGUEST": "1.0+",
+        "RIDER": "2024.3+",
+        "PYCHARM_COMMUNITY": "2024.3+",
+        "CLION": "2024.3+",
+        "DATASPELL": "2024.3+",
+        "RUST": "2024.3+",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1+",
+        "JBCLIENT": "1.0+",
+        "DBE": "2024.3+",
+        "RUBYMINE": "2024.3+",
+        "IDEA": "2024.3+"
+      },
+      "file_id": 880279,
+      "downloads": 592485
+    },
+    {
+      "ide_build": "241",
+      "since": "241.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "2024.1 — 2024.1.6",
+        "PHPSTORM": "2024.1 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.1 — 2024.2.6",
+        "GOLAND": "2024.1 — 2024.2.5",
+        "PYCHARM": "2024.1 — 2024.2.6",
+        "WEBSTORM": "2024.1 — 2024.2.6",
+        "CWMGUEST": "build 241.0 — 242.*",
+        "RIDER": "2024.1 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.1 — 2024.2.6",
+        "CLION": "2024.1 — 2024.2.5",
+        "DATASPELL": "2024.1 — 2024.2.3",
+        "RUST": "2024.1 — 2024.2.5",
+        "ANDROID_STUDIO": "Koala | 2024.1.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 241.0 — 242.*",
+        "DBE": "2024.1 — 2024.2.2",
+        "RUBYMINE": "2024.1 — 2024.2.6",
+        "IDEA": "2024.1 — 2024.2.6"
+      },
+      "file_id": 880278,
+      "downloads": 43575
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

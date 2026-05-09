@@ -1,0 +1,45 @@
+{
+  "ide": "jetbrains",
+  "version": "1.1.22.1530",
+  "release_date": "2022-05-17",
+  "title": "GitHub Copilot for JetBrains 1.1.22.1530",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Fixed exception `Assertion failed: Please don't register startup activities for the default project: they won't ever be run`\n* Reliably dispose suggestion inlays of GitHub Copilot when moving the text caret using the keyboard\n* Fixed distorted suggestion inlays in the editor, e.g. after invoking the \"Delete Line\" action\n* Don't show \"Open Copilot\" intention at positions where suggestions of GitHub Copilot are unavailable\n* Improved insertion of suggestions by TAB on lines with non-empty prefix\n* Fixed exception `Detected document modification from DocumentListener`\n* Don't show suggestions for files larger than one megabyte",
+  "body_html": "<ul><li>Fixed exception <code>Assertion failed: Please don't register startup activities for the default project: they won't ever be run</code></li><li>Reliably dispose suggestion inlays of GitHub Copilot when moving the text caret using the keyboard</li><li>Fixed distorted suggestion inlays in the editor, e.g. after invoking the \"Delete Line\" action</li><li>Don't show \"Open Copilot\" intention at positions where suggestions of GitHub Copilot are unavailable</li><li>Improved insertion of suggestions by TAB on lines with non-empty prefix </li><li>Fixed exception <code>Detected document modification from DocumentListener</code></li><li>Don't show suggestions for files larger than one megabyte</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Reliably dispose suggestion inlays of GitHub Copilot when moving the text caret using the keyboard",
+    "* Don't show \"Open Copilot\" intention at positions where suggestions of GitHub Copilot are unavailable"
+  ],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "211.0",
+      "until": "221.*",
+      "compatible_versions": {
+        "MPS": "2021.1 — 2021.3.5",
+        "PHPSTORM": "2021.1 — 2022.1.4",
+        "IDEA_COMMUNITY": "2021.1 — 2022.1.4",
+        "GOLAND": "2021.1 — 2022.1.4",
+        "PYCHARM": "2021.1 — 2022.1.4",
+        "WEBSTORM": "2021.1 — 2022.1.4",
+        "CWMGUEST": "build 211.0 — 221.*",
+        "RIDER": "2021.1 — 2022.1.2",
+        "PYCHARM_COMMUNITY": "2021.1 — 2022.1.4",
+        "CLION": "2021.1 — 2022.1.3",
+        "DATASPELL": "2021.3 — 2022.1.4",
+        "RUST": "build 211.0 — 221.*",
+        "ANDROID_STUDIO": "Bumblebee | 2021.1.1 — Electric Eel | 2022.1.1 Patch 2",
+        "JBCLIENT": "build 211.0 — 221.*",
+        "DBE": "2021.1 — 2022.1.5",
+        "RUBYMINE": "2021.1 — 2022.1.4",
+        "IDEA": "2021.1 — 2022.1.4"
+      },
+      "file_id": 175432,
+      "downloads": 44474
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

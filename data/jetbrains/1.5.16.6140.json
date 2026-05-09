@@ -1,0 +1,43 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.16.6140",
+  "release_date": "2024-07-16",
+  "title": "GitHub Copilot for JetBrains 1.5.16.6140",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Fix up/down navigation in chat input\n* Fix some network timeout issues",
+  "body_html": "<ul><li>Fix up/down navigation in chat input\n</li><li>Fix some network timeout issues</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "231.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "2023.2 — 2024.1.6",
+        "PHPSTORM": "2023.1 — 2024.2.6",
+        "IDEA_COMMUNITY": "2023.1 — 2024.2.6",
+        "GOLAND": "2023.1 — 2024.2.5",
+        "PYCHARM": "2023.1 — 2024.2.6",
+        "WEBSTORM": "2023.1 — 2024.2.6",
+        "CWMGUEST": "build 231.0 — 242.*",
+        "RIDER": "2023.1 — 2024.2.9",
+        "APPCODE": "2023.1 — 2023.1.5",
+        "PYCHARM_COMMUNITY": "2023.1 — 2024.2.6",
+        "CLION": "2023.1 — 2024.2.5",
+        "DATASPELL": "2023.1 — 2024.2.3",
+        "RUST": "2024.1 — 2024.2.5",
+        "ANDROID_STUDIO": "Hedgehog | 2023.1.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 231.0 — 242.*",
+        "DBE": "2023.1 — 2024.2.2",
+        "RUBYMINE": "2023.1 — 2024.2.6",
+        "IDEA": "2023.1 — 2024.2.6"
+      },
+      "file_id": 572498,
+      "downloads": 101142
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

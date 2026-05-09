@@ -1,0 +1,45 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.8.5775",
+  "release_date": "2024-06-13",
+  "title": "GitHub Copilot for JetBrains 1.5.8.5775",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Fixed a context exclusion bug in Copilot standalone",
+  "body_html": "<ul><li>Fixed a context exclusion bug in Copilot standalone</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Fixed a context exclusion bug in Copilot standalone"
+  ],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "231.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "2023.2 — 2024.1.6",
+        "PHPSTORM": "2023.1 — 2024.2.6",
+        "IDEA_COMMUNITY": "2023.1 — 2024.2.6",
+        "GOLAND": "2023.1 — 2024.2.5",
+        "PYCHARM": "2023.1 — 2024.2.6",
+        "WEBSTORM": "2023.1 — 2024.2.6",
+        "CWMGUEST": "build 231.0 — 242.*",
+        "RIDER": "2023.1 — 2024.2.9",
+        "APPCODE": "2023.1 — 2023.1.5",
+        "PYCHARM_COMMUNITY": "2023.1 — 2024.2.6",
+        "CLION": "2023.1 — 2024.2.5",
+        "DATASPELL": "2023.1 — 2024.2.3",
+        "RUST": "2024.1 — 2024.2.5",
+        "ANDROID_STUDIO": "Hedgehog | 2023.1.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 231.0 — 242.*",
+        "DBE": "2023.1 — 2024.2.2",
+        "RUBYMINE": "2023.1 — 2024.2.6",
+        "IDEA": "2023.1 — 2024.2.6"
+      },
+      "file_id": 556037,
+      "downloads": 64390
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

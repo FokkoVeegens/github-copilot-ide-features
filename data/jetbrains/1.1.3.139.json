@@ -1,0 +1,47 @@
+{
+  "ide": "jetbrains",
+  "version": "1.1.3.139",
+  "release_date": "2021-12-06",
+  "title": "GitHub Copilot for JetBrains 1.1.3.139",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "### Added\n\n* Nightly builds.\n* New setting to define the update channel for the GitHub Copilot plugin.\n* New setting to define a set of languages, where completions are not shown automatically.\n* Added GitHub Copilot icon in the status bar to show the current status and to enable/disable completions.\n* New setting to show suggestions by Copilot and the IDE side-by-side. This is still experimental and turned off by default.\n\n### Fixed\n\n* Especially on macOS, GitHub Copilot was not remembering the GitHub authentication properly after a restart. If that's the case on your system, please use this version and login once again to GitHub to fix this.\n* Don't override shortcuts of IdeaVim plugin anymore.\n* Improve suggestions after whitespace tokens.",
+  "body_html": "<h3>Added</h3>\n<ul><li>Nightly builds.</li><li>New setting to define the update channel for the GitHub Copilot plugin.</li><li>New setting to define a set of languages, where completions are not shown automatically.</li><li>Added GitHub Copilot icon in the status bar to show the current status and to enable/disable completions.</li><li>New setting to show suggestions by Copilot and the IDE side-by-side. This is still experimental and turned off by default.</li></ul>\n\n<h3>Fixed</h3>\n<ul><li>Especially on macOS, GitHub Copilot was not remembering the GitHub authentication properly after a restart. If that's the case on your system, please use this version and login once again to GitHub to fix this.</li><li>Don't override shortcuts of IdeaVim plugin anymore.</li><li>Improve suggestions after whitespace tokens.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* New setting to define the update channel for the GitHub Copilot plugin.",
+    "* Added GitHub Copilot icon in the status bar to show the current status and to enable/disable completions.",
+    "* New setting to show suggestions by Copilot and the IDE side-by-side. This is still experimental and turned off by default.",
+    "* Especially on macOS, GitHub Copilot was not remembering the GitHub authentication properly after a restart. If that's the case on your system, please use this version and login once again to GitHub to fix this."
+  ],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "212.0",
+      "until": "213.*",
+      "compatible_versions": {
+        "MPS": "2021.2 — 2021.3.5",
+        "PHPSTORM": "2021.2 — 2021.3.3",
+        "IDEA_COMMUNITY": "2021.2 — 2021.3.3",
+        "GOLAND": "2021.2 — 2021.3.5",
+        "PYCHARM": "2021.2 — 2021.3.3",
+        "WEBSTORM": "2021.2 — 2021.3.3",
+        "CWMGUEST": "build 212.0 — 213.*",
+        "RIDER": "2021.2 — 2021.3.4",
+        "PYCHARM_COMMUNITY": "2021.2 — 2021.3.3",
+        "CLION": "2021.2 — 2021.3.4",
+        "DATASPELL": "2021.3 — 2021.3.3",
+        "RUST": "build 212.0 — 213.*",
+        "ANDROID_STUDIO": "Chipmunk | 2021.2.1 — Dolphin | 2021.3.1 Patch 1",
+        "JBCLIENT": "build 212.0 — 213.*",
+        "DBE": "2021.2 — 2021.3.4",
+        "RUBYMINE": "2021.2 — 2021.3.3",
+        "IDEA": "2021.2 — 2021.3.3"
+      },
+      "file_id": 148889,
+      "downloads": 15623
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

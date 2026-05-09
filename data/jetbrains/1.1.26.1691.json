@@ -1,0 +1,42 @@
+{
+  "ide": "jetbrains",
+  "version": "1.1.26.1691",
+  "release_date": "2022-06-16",
+  "title": "GitHub Copilot for JetBrains 1.1.26.1691",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Tweaks to icons",
+  "body_html": "<ul><li>Tweaks to icons</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": null,
+      "since": "211.0",
+      "until": "222.*",
+      "compatible_versions": {
+        "MPS": "2021.1 — 2022.2.4",
+        "PHPSTORM": "2021.1 — 2022.2.5",
+        "IDEA_COMMUNITY": "2021.1 — 2022.2.5",
+        "GOLAND": "2021.1 — 2022.2.6",
+        "PYCHARM": "2021.1 — 2022.2.5",
+        "WEBSTORM": "2021.1 — 2022.2.5",
+        "CWMGUEST": "build 211.0 — 222.*",
+        "RIDER": "2021.1 — 2022.2.4",
+        "PYCHARM_COMMUNITY": "2021.1 — 2022.2.5",
+        "CLION": "2021.1 — 2022.2.5",
+        "DATASPELL": "2021.3 — 2022.2.5",
+        "RUST": "build 211.0 — 222.*",
+        "ANDROID_STUDIO": "Bumblebee | 2021.1.1 — Flamingo | 2022.2.1 Patch 2",
+        "JBCLIENT": "build 211.0 — 222.*",
+        "DBE": "2021.1 — 2022.2.5",
+        "RUBYMINE": "2021.1 — 2022.2.5",
+        "IDEA": "2021.1 — 2022.2.5"
+      },
+      "file_id": 186225,
+      "downloads": 53534
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

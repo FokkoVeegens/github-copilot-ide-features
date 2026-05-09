@@ -1,0 +1,68 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.61",
+  "release_date": "2025-11-15",
+  "title": "GitHub Copilot for JetBrains 1.5.61",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Added: Support GPT-5.1 GPT-5.1-Codex GPT-5.1-Codex-Mini models (Preview).\n* Fixed: Agent mode acts as ask mode.\n* Fixed: Custom agent feature is missing.\n* Fixed: Code lens to edit custom agent tools.\n* Fixed: Cannot run subagent with auto model.\n* Fixed: Model picker switched to auto unexpectedly.\n* Fixed:​ Commands not in terminal-specific rules are now auto-approved by your general setting.",
+  "body_html": "<ul><li>Added: Support GPT-5.1 GPT-5.1-Codex GPT-5.1-Codex-Mini models (Preview).\n</li><li>Fixed: Agent mode acts as ask mode.\n</li><li>Fixed: Custom agent feature is missing.\n</li><li>Fixed: Code lens to edit custom agent tools.\n</li><li>Fixed: Cannot run subagent with auto model.\n</li><li>Fixed: Model picker switched to auto unexpectedly.\n</li><li>Fixed:​ Commands not in terminal-specific rules are now auto-approved by your general setting.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "",
+      "compatible_versions": {
+        "MPS": "2024.3+",
+        "PHPSTORM": "2024.3+",
+        "IDEA_COMMUNITY": "2024.3+",
+        "GOLAND": "2024.3+",
+        "PYCHARM": "2024.3+",
+        "WEBSTORM": "2024.3+",
+        "CWMGUEST": "1.0+",
+        "RIDER": "2024.3+",
+        "PYCHARM_COMMUNITY": "2024.3+",
+        "CLION": "2024.3+",
+        "DATASPELL": "2024.3+",
+        "RUST": "2024.3+",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1+",
+        "JBCLIENT": "1.0+",
+        "DBE": "2024.3+",
+        "RUBYMINE": "2024.3+",
+        "IDEA": "2024.3+"
+      },
+      "file_id": 893781,
+      "downloads": 1138548
+    },
+    {
+      "ide_build": "241",
+      "since": "241.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "2024.1 — 2024.1.6",
+        "PHPSTORM": "2024.1 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.1 — 2024.2.6",
+        "GOLAND": "2024.1 — 2024.2.5",
+        "PYCHARM": "2024.1 — 2024.2.6",
+        "WEBSTORM": "2024.1 — 2024.2.6",
+        "CWMGUEST": "build 241.0 — 242.*",
+        "RIDER": "2024.1 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.1 — 2024.2.6",
+        "CLION": "2024.1 — 2024.2.5",
+        "DATASPELL": "2024.1 — 2024.2.3",
+        "RUST": "2024.1 — 2024.2.5",
+        "ANDROID_STUDIO": "Koala | 2024.1.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 241.0 — 242.*",
+        "DBE": "2024.1 — 2024.2.2",
+        "RUBYMINE": "2024.1 — 2024.2.6",
+        "IDEA": "2024.1 — 2024.2.6"
+      },
+      "file_id": 893780,
+      "downloads": 162396
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}

@@ -1,0 +1,72 @@
+{
+  "ide": "jetbrains",
+  "version": "1.5.53",
+  "release_date": "2025-08-13",
+  "title": "GitHub Copilot for JetBrains 1.5.53",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* Added: Support for the new OpenAI GPT-5 model in chat.\n* Added: New setting to manage automatic approval of tool usage.\n* Added: Option to limit the number of Copilot Agent mode requests per turn.\n* Added: GitHub OAuth authentication support for remote MCP servers.\n* Added: Ability to disable MCP support via Copilot policies.\n* Added: Quick access to MCP settings directly from the log panel.\n* Added: Support \\*.instructions.md for project scoped customisation. You can now define a Markdown file with the .instructions.md suffix in the .github/instructions directory.\n* Changed: Removed support for TIFF and TIF image formats in Copilot Vision.\n* Fixed: Resolved issue with MCP remote server connectivity when behind a proxy.\n* Fixed: Bug where the Agent service failed to initialize in certain scenarios.\n* Fixed: Unexpected display of inline diff view when starting a new session or switching chat modes.\n* Fixed: Improved reliability of the run\\_in\\_terminal tool in Agent mode.\n* Fixed: Restricted the list\\_dir tool to only access files within workspace folders.",
+  "body_html": "<ul><li>Added: Support for the new OpenAI GPT-5 model in chat.\n</li><li>Added: New setting to manage automatic approval of tool usage.\n</li><li>Added: Option to limit the number of Copilot Agent mode requests per turn.\n</li><li>Added: GitHub OAuth authentication support for remote MCP servers.\n</li><li>Added: Ability to disable MCP support via Copilot policies.\n</li><li>Added: Quick access to MCP settings directly from the log panel.\n</li><li>Added: Support *.instructions.md for project scoped customisation. You can now define a Markdown file with the .instructions.md suffix in the .github/instructions directory.\n</li><li>Changed: Removed support for TIFF and TIF image formats in Copilot Vision.\n</li><li>Fixed: Resolved issue with MCP remote server connectivity when behind a proxy.\n</li><li>Fixed: Bug where the Agent service failed to initialize in certain scenarios.\n</li><li>Fixed: Unexpected display of inline diff view when starting a new session or switching chat modes.\n</li><li>Fixed: Improved reliability of the run_in_terminal tool in Agent mode.\n</li><li>Fixed: Restricted the list_dir tool to only access files within workspace folders.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Added: Option to limit the number of Copilot Agent mode requests per turn.",
+    "* Added: Ability to disable MCP support via Copilot policies.",
+    "* Changed: Removed support for TIFF and TIF image formats in Copilot Vision."
+  ],
+  "builds": [
+    {
+      "ide_build": "243",
+      "since": "243.0",
+      "until": "",
+      "compatible_versions": {
+        "MPS": "2024.3+",
+        "PHPSTORM": "2024.3+",
+        "IDEA_COMMUNITY": "2024.3+",
+        "GOLAND": "2024.3+",
+        "PYCHARM": "2024.3+",
+        "WEBSTORM": "2024.3+",
+        "CWMGUEST": "1.0+",
+        "RIDER": "2024.3+",
+        "PYCHARM_COMMUNITY": "2024.3+",
+        "CLION": "2024.3+",
+        "DATASPELL": "2024.3+",
+        "RUST": "2024.3+",
+        "ANDROID_STUDIO": "Meerkat | 2024.3.1+",
+        "JBCLIENT": "1.0+",
+        "DBE": "2024.3+",
+        "RUBYMINE": "2024.3+",
+        "IDEA": "2024.3+"
+      },
+      "file_id": 827394,
+      "downloads": 814374
+    },
+    {
+      "ide_build": "241",
+      "since": "241.0",
+      "until": "242.*",
+      "compatible_versions": {
+        "MPS": "2024.1 — 2024.1.6",
+        "PHPSTORM": "2024.1 — 2024.2.6",
+        "IDEA_COMMUNITY": "2024.1 — 2024.2.6",
+        "GOLAND": "2024.1 — 2024.2.5",
+        "PYCHARM": "2024.1 — 2024.2.6",
+        "WEBSTORM": "2024.1 — 2024.2.6",
+        "CWMGUEST": "build 241.0 — 242.*",
+        "RIDER": "2024.1 — 2024.2.9",
+        "PYCHARM_COMMUNITY": "2024.1 — 2024.2.6",
+        "CLION": "2024.1 — 2024.2.5",
+        "DATASPELL": "2024.1 — 2024.2.3",
+        "RUST": "2024.1 — 2024.2.5",
+        "ANDROID_STUDIO": "Koala | 2024.1.1 — Ladybug Feature Drop | 2024.2.2 Patch 2",
+        "JBCLIENT": "build 241.0 — 242.*",
+        "DBE": "2024.1 — 2024.2.2",
+        "RUBYMINE": "2024.1 — 2024.2.6",
+        "IDEA": "2024.1 — 2024.2.6"
+      },
+      "file_id": 827393,
+      "downloads": 140716
+    }
+  ],
+  "fetched_at": "2026-05-09T09:12:51Z",
+  "schema_version": 1
+}
