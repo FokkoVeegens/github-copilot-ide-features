@@ -2,7 +2,7 @@
 import re
 
 _VERSION_HEADING_RE = re.compile(
-    r"^##\s+(?:\[(?P<bracketed>v?\d+(?:\.\d+){1,3})\]|(?P<plain>v?\d+(?:\.\d+){1,3}))\b.*$",
+    r"^##\s+(?:\[(?P<bracketed>v?\d+(?:\.\d+){1,3})\]|(?P<plain>v?\d+(?:\.\d+){1,3}))(?=\s|$).*$",
     re.MULTILINE,
 )
 
