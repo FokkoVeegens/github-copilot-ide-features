@@ -25,7 +25,8 @@ def _parse_title(title: str) -> tuple[str, str]:
 
 def fetch(ide_config: dict) -> list[dict]:
     """Fetch all Copilot for Eclipse releases and return a list of release dicts."""
-    raw_releases = paginate_github_releases(_API_URL, get_json_fn=get_json)
+    releases_api_url = ide_config.get("source_url", _API_URL)
+    raw_releases = paginate_github_releases(releases_api_url, get_json_fn=get_json)
     results: list[dict] = []
 
     for item in raw_releases:

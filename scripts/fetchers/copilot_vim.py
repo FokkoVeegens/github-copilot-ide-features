@@ -25,10 +25,12 @@ _HEADING_RE = re.compile(r"^h[1-6]$")
 def fetch(ide_config: dict) -> list[dict]:
     source_url = ide_config.get("source_url", _FEATURE_MATRIX_URL)
     html = get_text(source_url, use_auth=False)
-    return _parse_feature_matrix(ide_config, html)
+    return _parse_feature_matrix(ide_config, html, source_url=source_url)
 
 
-def _parse_feature_matrix(ide_config: dict, html: str) -> list[dict]:
+def _parse_feature_matrix(
+    ide_config: dict, html: str, *, source_url: str = _FEATURE_MATRIX_URL
+) -> list[dict]:
     soup = BeautifulSoup(html, "lxml")
     results = []
 
@@ -43,7 +45,14 @@ def _parse_feature_matrix(ide_config: dict, html: str) -> list[dict]:
             print(f"  [warn] No table found after '{heading_text}'.")
             continue
 
-        records = _extract_plugin_versions(table, ide_config, heading_text, era_key, release_date)
+        records = _extract_plugin_versions(
+            table,
+            ide_config,
+            heading_text,
+            era_key,
+            release_date,
+            source_url=source_url,
+        )
         results.extend(records)
 
     return results
@@ -58,6 +67,8 @@ def _extract_plugin_versions(
     heading_text: str,
     era_key: str,
     release_date: str,
+    *,
+    source_url: str = _FEATURE_MATRIX_URL,
 ) -> list[dict]:
     """Return one record per plugin-version column found in the table header.
 
@@ -103,7 +114,7 @@ def _extract_plugin_versions(
                 "neovim_era": era_key,
                 "release_date": release_date,
                 "title": f"GitHub Copilot for Vim/Neovim {plugin_version} \u2013 {heading_text}",
-                "url": _FEATURE_MATRIX_URL,
+                "url": source_url,
                 "source": "html",
                 "body_markdown": body_markdown,
                 "body_html": None,

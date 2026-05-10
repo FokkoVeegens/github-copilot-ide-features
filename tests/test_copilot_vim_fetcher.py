@@ -255,3 +255,10 @@ class TestFetch:
         assert isinstance(results, list)
         assert len(results) > 0
         assert all(isinstance(r, dict) for r in results)
+
+    def test_result_urls_match_resolved_source_url(self):
+        config = {**_IDE_CONFIG, "source_url": "https://custom.example/matrix"}
+        with patch("scripts.fetchers.copilot_vim.get_text", return_value=_FAKE_HTML):
+            results = fetch(config)
+        assert results
+        assert all(r["url"] == "https://custom.example/matrix" for r in results)

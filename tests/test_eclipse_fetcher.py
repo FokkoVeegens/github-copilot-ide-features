@@ -132,3 +132,9 @@ class TestFetch:
     def test_empty_api_returns_empty_list(self):
         releases = self._run_fetch([[]])
         assert releases == []
+
+    def test_uses_source_url_from_config(self):
+        config = {**_IDE_CONFIG, "source_url": "https://custom.example/releases"}
+        with patch("scripts.fetchers.eclipse.get_json", side_effect=[[], []]) as mock_get_json:
+            fetch(config)
+        assert mock_get_json.call_args_list[0].args[0] == "https://custom.example/releases"

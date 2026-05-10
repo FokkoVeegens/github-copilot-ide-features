@@ -99,3 +99,13 @@ class TestFetch:
         ]
         releases = self._run_fetch([_FAKE_RELEASES, page2, []], _FAKE_CHANGELOG)
         assert {r["version"] for r in releases} == {"0.48.0", "0.49.0", "0.47.0"}
+
+    def test_uses_source_url_from_config(self):
+        config = {**_IDE_CONFIG, "source_url": "https://custom.example/releases"}
+
+        with patch("scripts.fetchers.xcode.get_text", return_value=_FAKE_CHANGELOG), patch(
+            "scripts.fetchers.xcode.get_json", side_effect=[[], []]
+        ) as mock_get_json:
+            fetch(config)
+
+        assert mock_get_json.call_args_list[0].args[0] == "https://custom.example/releases"

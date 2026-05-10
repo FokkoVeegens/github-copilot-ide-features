@@ -10,8 +10,9 @@ _RELEASES_API_URL = "https://api.github.com/repos/github/CopilotForXcode/release
 _CHANGELOG_URL = "https://raw.githubusercontent.com/github/CopilotForXcode/refs/heads/main/CHANGELOG.md"
 
 def fetch(ide_config: dict) -> list[dict]:
+    releases_api_url = ide_config.get("source_url", _RELEASES_API_URL)
     changelog_url = ide_config.get("changelog_url", _CHANGELOG_URL)
-    raw_releases = paginate_github_releases(_RELEASES_API_URL, get_json_fn=get_json)
+    raw_releases = paginate_github_releases(releases_api_url, get_json_fn=get_json)
     return map_releases_with_changelog(
         ide_config=ide_config,
         raw_releases=raw_releases,

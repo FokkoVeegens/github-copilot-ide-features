@@ -69,3 +69,4 @@ Each file under `data/<ide>/` follows the JSON schema defined in `scripts/common
 | `body_markdown` | Full release notes as Markdown |
 | `copilot_mentions` | Lines from the notes matching a Copilot/AI heuristic |
 | `source` | How the data was obtained (`api`, `feed`, `html`, …) |
+| `neovim_era` | Vim/Neovim-only era key (for example `neovim-latest`, `neovim-2024`) |
