@@ -9,23 +9,14 @@ from scripts.common.http import get_json, get_text
 _RELEASES_API_URL = "https://api.github.com/repos/github/copilot.vim/releases"
 _CHANGELOG_URL = "https://raw.githubusercontent.com/github/copilot.vim/refs/heads/release/CHANGELOG.md"
 
-
-def _parse_tag_version(tag: str) -> str:
-    return parse_tag_version(tag, error_label="Vim/Neovim")
-
-
-def _paginate_releases() -> list[dict]:
-    return paginate_github_releases(_RELEASES_API_URL, get_json_fn=get_json)
-
-
 def fetch(ide_config: dict) -> list[dict]:
     changelog_url = ide_config.get("changelog_url", _CHANGELOG_URL)
-    raw_releases = _paginate_releases()
+    raw_releases = paginate_github_releases(_RELEASES_API_URL, get_json_fn=get_json)
     return map_releases_with_changelog(
         ide_config=ide_config,
         raw_releases=raw_releases,
         changelog_url=changelog_url,
-        parse_tag_version_fn=_parse_tag_version,
+        parse_tag_version_fn=lambda tag: parse_tag_version(tag, error_label="Vim/Neovim"),
         warning_label="Vim/Neovim",
         default_title_prefix="GitHub Copilot for Vim/Neovim",
         get_text_fn=get_text,

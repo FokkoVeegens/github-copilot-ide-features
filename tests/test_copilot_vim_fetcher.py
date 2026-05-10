@@ -3,7 +3,8 @@ from unittest.mock import patch
 
 import pytest
 
-from scripts.fetchers.copilot_vim import _parse_tag_version, fetch
+from scripts.common.github_releases import parse_tag_version
+from scripts.fetchers.copilot_vim import fetch
 
 _IDE_CONFIG = {
     "id": "vim-neovim",
@@ -42,14 +43,14 @@ _FAKE_RELEASES = [
 
 class TestParseTagVersion:
     def test_strips_v_prefix(self):
-        assert _parse_tag_version("v1.59.0") == "1.59.0"
+        assert parse_tag_version("v1.59.0", error_label="Vim/Neovim") == "1.59.0"
 
     def test_accepts_plain_version(self):
-        assert _parse_tag_version("1.59.0") == "1.59.0"
+        assert parse_tag_version("1.59.0", error_label="Vim/Neovim") == "1.59.0"
 
     def test_invalid_tag_raises(self):
         with pytest.raises(ValueError):
-            _parse_tag_version("release-1.59.0")
+            parse_tag_version("release-1.59.0", error_label="Vim/Neovim")
 
 
 class TestFetch:
@@ -97,4 +98,3 @@ class TestFetch:
         ]
         releases = self._run_fetch([_FAKE_RELEASES, page2, []], _FAKE_CHANGELOG)
         assert {r["version"] for r in releases} == {"1.59.0", "1.60.0", "1.58.0"}
-

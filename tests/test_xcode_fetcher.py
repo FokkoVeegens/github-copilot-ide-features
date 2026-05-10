@@ -3,7 +3,8 @@ from unittest.mock import patch
 
 import pytest
 
-from scripts.fetchers.xcode import _parse_tag_version, fetch
+from scripts.common.github_releases import parse_tag_version
+from scripts.fetchers.xcode import fetch
 
 _IDE_CONFIG = {
     "id": "xcode",
@@ -42,14 +43,14 @@ _FAKE_RELEASES = [
 
 class TestParseTagVersion:
     def test_strips_v_prefix(self):
-        assert _parse_tag_version("v0.48.0") == "0.48.0"
+        assert parse_tag_version("v0.48.0", error_label="Xcode") == "0.48.0"
 
     def test_accepts_plain_version(self):
-        assert _parse_tag_version("0.48.0") == "0.48.0"
+        assert parse_tag_version("0.48.0", error_label="Xcode") == "0.48.0"
 
     def test_invalid_tag_raises(self):
         with pytest.raises(ValueError):
-            _parse_tag_version("release-0.48.0")
+            parse_tag_version("release-0.48.0", error_label="Xcode")
 
 
 class TestFetch:
@@ -98,4 +99,3 @@ class TestFetch:
         ]
         releases = self._run_fetch([_FAKE_RELEASES, page2, []], _FAKE_CHANGELOG)
         assert {r["version"] for r in releases} == {"0.48.0", "0.49.0", "0.47.0"}
-
