@@ -4,7 +4,6 @@ from typing import Callable
 
 from scripts.common.changelog import split_changelog_by_version
 from scripts.common.extract import extract_copilot_mentions
-from scripts.common.http import get_json, get_text
 
 _TAG_VERSION_RE = re.compile(r"^v?(?P<version>\d+(?:\.\d+){2,3}(?:[-+][0-9A-Za-z.-]+)?)$")
 
@@ -18,7 +17,7 @@ def parse_tag_version(tag: str, *, error_label: str) -> str:
 
 
 def paginate_github_releases(
-    releases_api_url: str, *, get_json_fn: Callable[..., object] = get_json
+    releases_api_url: str, *, get_json_fn: Callable[..., object]
 ) -> list[dict]:
     """Return all release entries from a paginated GitHub Releases endpoint."""
     releases: list[dict] = []
@@ -40,7 +39,7 @@ def map_releases_with_changelog(
     parse_tag_version_fn: Callable[[str], str],
     warning_label: str,
     default_title_prefix: str,
-    get_text_fn: Callable[..., str] = get_text,
+    get_text_fn: Callable[..., str],
 ) -> list[dict]:
     """Map GitHub releases to schema release records, preferring CHANGELOG sections."""
     changelog_sections = split_changelog_by_version(get_text_fn(changelog_url))
