@@ -8,7 +8,7 @@ Build a Python-based scraper toolkit driven by a single `config/ides.yml`, execu
 - **Visual Studio 2022 / 2026** — the `devblogs.microsoft.com/vsnews/feed` is stale (last item 2021). NOT usable. Instead scrape `https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes` (and `…/2026/…`) which is one large HTML page with `## Version 17.X.Y` sections covering every servicing release; must split by heading. There is also a per-major-version "history" page `…/release-history` we may need to follow for older majors (17.0–17.13).
 - **JetBrains** `https://plugins.jetbrains.com/api/plugins/17718/updates?page=N&size=100` — clean JSON. Each plugin release has multiple entries (one per IntelliJ build line, e.g. `1.8.2-242` and `1.8.2-243`); we will collapse on the semantic version (`1.8.2`) and store per-build compat info inside the file.
 - **Xcode** — official repo `github/CopilotForXcode`. GitHub Releases API: `https://api.github.com/repos/github/CopilotForXcode/releases?per_page=100&page=N`. ⚠️ Release body content is a one-line placeholder ("Release 0.48.0 of Copilot extension for Xcode"); the real changelog lives in `CHANGELOG.md` on the default branch. Plan: fetch the CHANGELOG via raw.githubusercontent.com and split per version; use Releases API to get the publish date + tag list.
-- **Vim/Neovim** — official repo `github/copilot.vim` (works for both Vim and Neovim). Releases atom exists with tags `v1.50.0`+, but body content is a placeholder ("Copilot.vim 1.59.0"). Same approach as Xcode: parse `CHANGELOG.md` from default branch, cross-reference tag dates from `https://api.github.com/repos/github/copilot.vim/releases` / `tags`.
+- **Vim/Neovim** — No useful changelog exists in `github/copilot.vim`. Data is sourced from the [GitHub Copilot feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=vimneovim) docs page, which lists supported features per Copilot extension version, organised into NeoVim era sections (latest, 2024, 2023, 2022, 2021). Produces one JSON record per plugin version (e.g. `1.18.0.json`); the NeoVim era is stored as a `neovim_era` property inside each file. `body_markdown` contains a bullet list of only the features that are supported (✓) or partially supported for that version — unsupported features (✗) are omitted. No GitHub API or authentication required.
 - **Eclipse** — official repo `microsoft/copilot-for-eclipse` (NOT `github/CopilotForEclipse` which 404s). GitHub Releases API: `https://api.github.com/repos/microsoft/copilot-for-eclipse/releases?per_page=100&page=N`. ⭐ Release body is rich HTML (Added/Changed/Fixed sections) — ready to use directly, no extra scraping needed. Earliest release `0.9.2 - 20250723`; copilot-for-eclipse first ships in ~2025.
 - **SQL Server Management Studio** — Copilot was introduced in SSMS 21 (May 2025). One large HTML page per major: `https://learn.microsoft.com/en-us/ssms/release-notes-22`, `…/release-notes-21`. Same structural pattern as Visual Studio: `### X.Y.Z` headings with "Release date: <date>" lines and `#### What's new in X.Y.Z` / `#### Bug fixes in X.Y.Z` subsections. Reuse the Visual Studio HTML splitter.
 
@@ -47,8 +47,10 @@ Build a Python-based scraper toolkit driven by a single `config/ides.yml`, execu
    - For each tag from the API, look up the matching CHANGELOG section; if missing (e.g. pre-release patch), fall back to the API release body.
    - Store `<version>.json` (e.g. `0.48.0.json`); record `prerelease` boolean from API.
 5. **vim-neovim fetcher** (`fetchers/copilot_vim.py`):
-   - Same pattern as Xcode but for `github/copilot.vim`. Primary source = `CHANGELOG.md`; tag dates from Releases API.
-   - `start_version: all` (or starting from earliest tag in CHANGELOG).
+   - HTML scraper of the [GitHub Copilot feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=vimneovim) docs page.
+   - Produces one JSON record per plugin version (e.g. `1.18.0.json`); the NeoVim era section (`neovim-latest`, `neovim-2024`, …) is stored as a `neovim_era` field inside each record.
+   - `body_markdown` = bullet list of supported features only; features marked ✗ are excluded. Features with partial support (P/C) are listed with their qualifier in parentheses.
+   - No GitHub API needed; `use_auth=False` for the docs page.
 6. **eclipse fetcher** (`fetchers/eclipse.py`):
    - Page through `GET https://api.github.com/repos/microsoft/copilot-for-eclipse/releases?per_page=100&page=N`.
    - Release body is already rich HTML (Added/Changed/Fixed) — store directly as `body_html`, convert to markdown for `body_markdown`.
@@ -176,19 +178,21 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 
 ---
 
-### MVP 3 — Xcode + Vim/Neovim fetchers (CHANGELOG.md pattern)
-**Why grouped:** identical pattern (GitHub Releases API for tag/date + raw `CHANGELOG.md` split by version heading). Build a shared helper once, use twice.
+### MVP 3 — Xcode + Vim/Neovim fetchers
+**Xcode** follows the CHANGELOG.md pattern (GitHub Releases API for tag/date + raw `CHANGELOG.md` split by version heading).
+**Vim/Neovim** uses a different approach: HTML scraping of the GitHub Copilot feature matrix docs page.
 
-- `scripts/common/changelog.py`: split markdown by `## [X.Y.Z]` / `## X.Y.Z`.
-- `scripts/fetchers/xcode.py` + `scripts/fetchers/copilot_vim.py` use it.
+- `scripts/common/changelog.py`: split markdown by `## [X.Y.Z]` / `## X.Y.Z` (used by Xcode).
+- `scripts/fetchers/xcode.py` uses the changelog helper.
+- `scripts/fetchers/copilot_vim.py` scrapes the feature matrix page (no GitHub API).
 
 **Test in isolation:**
 1. Run each → files in `data/xcode/` and `data/vim-neovim/`.
-2. Spot-check: a known version's `body_markdown` matches the CHANGELOG section (not the placeholder API body).
-3. Versions present in API but missing from CHANGELOG fall back to API body and set a flag (`source: "api_fallback"`).
+2. Xcode spot-check: a known version's `body_markdown` matches the CHANGELOG section (not the placeholder API body).
+3. Vim/Neovim spot-check: one file per plugin version (e.g. `1.18.0.json`) produced; each file has a `neovim_era` field and `body_markdown` containing only the supported features as a bullet list.
 4. Re-run idempotent.
 
-**Done when:** the CHANGELOG splitter is reusable and both IDEs produce clean data.
+**Done when:** Xcode CHANGELOG splitter is reusable; Vim/Neovim produces 5 clean era records.
 
 ---
 

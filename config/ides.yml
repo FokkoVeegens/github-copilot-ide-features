@@ -31,9 +31,7 @@ ides:
     name: GitHub Copilot for Vim/Neovim
     data_dir: data/vim-neovim
     fetcher: copilot_vim
-    start_version: all
-    source_url: https://api.github.com/repos/github/copilot.vim/releases
-    changelog_url: https://raw.githubusercontent.com/github/copilot.vim/refs/heads/release/CHANGELOG.md
+    source_url: https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=vimneovim
 
   # Real IDE entries will be added in subsequent MVPs:
   # - id: vs-code
