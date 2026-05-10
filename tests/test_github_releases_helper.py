@@ -29,4 +29,3 @@ def test_paginate_github_releases_raises_for_non_list_response():
             "https://api.github.com/repos/example/releases",
             get_json_fn=fake_get_json,
         )
-
