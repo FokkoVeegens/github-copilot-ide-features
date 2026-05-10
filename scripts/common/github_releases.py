@@ -24,6 +24,10 @@ def paginate_github_releases(
     page = 1
     while True:
         page_data = get_json_fn(releases_api_url, params={"per_page": 100, "page": page})
+        if not isinstance(page_data, list):
+            raise ValueError(
+                f"Expected list from GitHub releases API at page {page}, got {type(page_data).__name__}"
+            )
         if not page_data:
             break
         releases.extend(page_data)
