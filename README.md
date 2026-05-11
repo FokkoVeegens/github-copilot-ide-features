@@ -18,6 +18,9 @@ tests/                   – pytest test suite
 | ID | Name |
 |----|------|
 | `eclipse` | Copilot for Eclipse |
+| `jetbrains` | GitHub Copilot for JetBrains |
+| `xcode` | GitHub Copilot for Xcode |
+| `vim-neovim` | GitHub Copilot for Vim/Neovim |
 
 ## Running a fetcher locally
 
@@ -25,7 +28,7 @@ tests/                   – pytest test suite
 pip install -r requirements.txt
 
 # Fetch (or update) release notes for a single IDE:
-python -m scripts.run --ide eclipse
+python -m scripts.run --ide xcode
 
 # Set GITHUB_TOKEN for higher API rate limits (recommended):
 GITHUB_TOKEN=ghp_... python -m scripts.run --ide eclipse
@@ -35,7 +38,9 @@ Re-running the same command is safe: existing files are never overwritten (idemp
 
 ### GitHub token scopes
 
-The fetchers that call the GitHub REST API (Eclipse, and future IDEs: Xcode, Vim/Neovim) only read **public** repositories, so no specific OAuth scopes are required. Any of the following work:
+The fetchers that call the GitHub REST API (Eclipse, Xcode) only read **public** repositories, so no specific OAuth scopes are required. Any of the following work:
+
+> **Note:** The Vim/Neovim fetcher does not use the GitHub REST API. It scrapes the [GitHub Copilot feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=vimneovim) docs page, which is publicly accessible without authentication.
 
 | Token type | Required scopes |
 |-----------|----------------|
@@ -64,3 +69,4 @@ Each file under `data/<ide>/` follows the JSON schema defined in `scripts/common
 | `body_markdown` | Full release notes as Markdown |
 | `copilot_mentions` | Lines from the notes matching a Copilot/AI heuristic |
 | `source` | How the data was obtained (`api`, `feed`, `html`, …) |
+| `neovim_era` | Vim/Neovim-only era key (for example `neovim-latest`, `neovim-2024`) |
