@@ -1,0 +1,56 @@
+name: Fetch Xcode release notes
+
+on:
+  schedule:
+    # Daily at 06:37 UTC
+    - cron: '37 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch Xcode release notes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m scripts.run --ide xcode
+
+      - name: Commit new files
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/xcode/
+          if git diff --staged --quiet; then
+            echo "No new releases — nothing to commit."
+          else
+            git commit -m "chore(xcode): add new release notes [skip ci]"
+            git push
+          fi
+
+      - name: Simulate commit (non-default branch)
+        if: github.ref != 'refs/heads/main'
+        run: |
+          git add data/xcode/
+          if git diff --staged --quiet; then
+            echo "No new releases — nothing to commit."
+          else
+            echo "Running on non-default branch (${{ github.ref_name }}) — skipping commit."
+            echo "Files that would have been committed:"
+            git diff --staged --name-only
+          fi
