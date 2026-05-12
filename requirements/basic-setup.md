@@ -1,7 +1,7 @@
 # Plan: Automated IDE release-notes collection
 
 ## TL;DR
-Build a Python-based scraper toolkit driven by a single `config/ides.yml`, executed by per-IDE GitHub Actions workflows on a daily cron. Each IDE has a dedicated fetcher module that handles its source quirks (Atom feed + per-version page scrape, HTML release-notes page splitting, JetBrains Marketplace REST API). Each release becomes one JSON file at `data/<ide>/<version>.json`; presence of the file = "already processed", which makes incremental runs naturally idempotent. A `start_version` (or `start_date`) per IDE filters out pre-Copilot releases. Workflows commit new files via a PR or directly to main.
+Build a Python-based scraper toolkit driven by a single `config/ides.yml`, executed by per-IDE GitHub Actions workflows on a daily cron. Each IDE has a dedicated fetcher module that handles its source quirks (Atom feed + per-version page scrape, HTML release-notes page splitting, JetBrains Marketplace REST API). Each release becomes one JSON file at `data/<ide>/<version>.json`; presence of the file = "already processed", which makes incremental runs naturally idempotent. A `start_version` (or `start_date`) per IDE filters out pre-Copilot releases. Workflows commit new files via a PR with auto-merge (using `peter-evans/create-pull-request`), which respects branch protection while keeping the process fully automated.
 
 ## Sources — verified findings
 - **VS Code** `https://code.visualstudio.com/feed.xml` — Atom feed, no pagination, mixes "release" and "blog" `<category>` entries. Only ~30 most recent entries. To backfill to 1.75 we must construct URLs `https://code.visualstudio.com/updates/v1_<N>` directly (N from 75…current). Per-version page contains the full release notes HTML.
@@ -64,8 +64,9 @@ Build a Python-based scraper toolkit driven by a single `config/ides.yml`, execu
 ### Phase 4 — GitHub Actions workflows
 1. One workflow per IDE under `.github/workflows/`: `fetch-vs-code.yml`, `fetch-visual-studio-2022.yml`, `fetch-visual-studio-2026.yml`, `fetch-jetbrains.yml`, `fetch-xcode.yml`, `fetch-vim-neovim.yml`, `fetch-eclipse.yml`, `fetch-ssms.yml`. Each:
    - Triggers: `schedule: cron '17 6 * * *'` (daily, staggered minutes per IDE), and `workflow_dispatch` for manual backfills.
-   - Steps: checkout → setup-python 3.12 → `pip install -r requirements.txt` → `python -m scripts.run --ide <id>` → if new files, commit on `main` using `peter-evans/create-pull-request@v6` (PR-based, safer) OR `git commit && push` for direct mode (decide via Further Considerations #1).
-   - Permissions: `contents: write`, `pull-requests: write` (only if PR mode); GitHub API fetchers (Xcode, Vim, Eclipse) use the workflow's `GITHUB_TOKEN` for rate-limit headroom.
+   - Steps: checkout → setup-python 3.12 → `pip install -r requirements.txt` → `python -m scripts.run --ide <id>` → if new files and on `main`, open a PR via `peter-evans/create-pull-request` targeting `main`, then immediately enable auto-merge (`gh pr merge --auto --squash`) so it merges once branch protection checks pass with no manual review. On non-default branches, log the files that would be committed (simulate step) without pushing.
+   - Permissions: `contents: write`, `pull-requests: write`; GitHub API fetchers (Xcode, Vim, Eclipse) use the workflow's `GITHUB_TOKEN` for rate-limit headroom.
+   - Repository prerequisite: "Allow auto-merge" must be enabled in repository settings. If required PR reviews are configured, the GitHub Actions app must be added as a bypass actor so bot-opened PRs auto-merge without human approval.
 2. Optional `fetch-all.yml` that calls the others via `workflow_call` for ad-hoc full runs.
 
 ### Phase 5 — Hardening (after Phase 4 green)
@@ -98,13 +99,14 @@ Build a Python-based scraper toolkit driven by a single `config/ides.yml`, execu
 - Naming: `data/<ide>/<version>.json`; presence = processed.
 - Config: single `config/ides.yml`.
 - JetBrains source: Marketplace REST API only.
+- Commit strategy: PR-based via `peter-evans/create-pull-request` with auto-merge enabled (Decision B). Direct push to `main` is blocked by branch protection; PRs auto-merge once status checks pass. Required reviews must either be waived for this repository or the GitHub Actions app must be added as a bypass actor in the branch protection ruleset.
 - IDEs covered (7): VS Code, Visual Studio 2022, Visual Studio 2026, JetBrains, Xcode, Vim/Neovim (`copilot.vim`), Eclipse, SSMS.
 - Existing `data/` folders renamed where needed: keep `vs-code`, `visual-studio-2022`, `visual-studio-2026`, `jetbrains`, `eclipse`, `vim-neovim`, `sql-server-management-studio`. Add `xcode/`.
 
 ## Further Considerations
 1. **Commit strategy** — How should the workflows publish new files?
-   - A) Direct push to `main` (simplest, fastest) — *recommended* for a data-collection repo with low blast radius.
-   - B) Open a PR per IDE per day with `peter-evans/create-pull-request` (review gate, noisier).
+   - A) Direct push to `main` (simplest, fastest) — blocked by branch protection rules on this repository.
+   - B) ✅ **Chosen** — Open a PR per IDE per day via `peter-evans/create-pull-request` + enable auto-merge immediately. The PR merges automatically once branch protection status checks pass, with no manual review step. Maintains full auditability (all data changes appear as PRs) while remaining fully automated.
 2. **JetBrains: per-IDE-build vs. semver grouping** — current plan groups by semver (`1.8.2.json`) with a `builds[]` array. Alternative: one file per `version+build` (e.g. `1.8.2-242.json`, `1.8.2-243.json`). Grouping is cleaner for "Copilot release notes" since the notes text is identical across builds.
 3. **Visual Studio older majors (17.0–17.13)** — the current 17.14 page only contains 17.14.x entries. We need to also crawl `release-history` and per-major archived pages. Recommend a follow-up phase once 17.14 fetcher works, since the HTML structure may differ.
 4. **`start_version` semantics** — recommend `start_version` (string, semver-compared) for VS Code & JetBrains, and `start_date` (YYYY-MM-DD) as an alternative for HTML sources where parsing the version is unreliable. Both supported in config; fetcher picks whichever is set.
@@ -194,15 +196,15 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 
 **Done when:** Xcode CHANGELOG splitter is reusable; Vim/Neovim produces 5 clean era records.
 
-**Additional steps (CI):**
-- `.github/workflows/fetch-xcode.yml`: cron + `workflow_dispatch`, direct push to main (per Decision A).
-- `.github/workflows/fetch-vim-neovim.yml`: cron + `workflow_dispatch`, direct push to main.
-- Permissions: `contents: write`.
+**Additional steps (CI) — ⚠️ retrofit needed:**
+- `.github/workflows/fetch-xcode.yml` and `.github/workflows/fetch-vim-neovim.yml` were originally implemented with direct push to `main` (Decision A) and are currently failing due to branch protection. Both must be updated to use the PR-based approach (Decision B).
+- Updated pattern: cron + `workflow_dispatch` → run fetcher → on `main`, if new files, open a PR via `peter-evans/create-pull-request` and enable auto-merge; on non-default branches, simulate (log files that would be committed).
+- Permissions: `contents: write`, `pull-requests: write`.
 
 **Additional tests (CI):**
-5. Trigger each via `workflow_dispatch` on a branch — confirm green run.
-6. Delete one file per IDE, trigger again — confirm exactly that file is recommitted.
-7. Trigger again — confirm "no changes" (no empty commits).
+5. Trigger each via `workflow_dispatch` on a branch — confirm green run (simulate step logs files, no PR opened).
+6. Delete one file per IDE, trigger on `main` — confirm a PR is opened containing exactly that file and that it auto-merges.
+7. Trigger on `main` again with no new data — confirm "no changes" (no PR opened, no empty commits).
 
 ---
 
@@ -221,13 +223,13 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 **Done when:** all VS Code releases since 1.75 are captured.
 
 **Additional steps (CI):**
-- `.github/workflows/fetch-vs-code.yml`: cron + `workflow_dispatch`, direct push to main (per Decision A).
-- Permissions: `contents: write`.
+- `.github/workflows/fetch-vs-code.yml`: cron + `workflow_dispatch` → run fetcher → on `main`, if new files, open a PR via `peter-evans/create-pull-request` and enable auto-merge; on non-default branches, simulate.
+- Permissions: `contents: write`, `pull-requests: write`.
 
 **Additional tests (CI):**
-5. Trigger via `workflow_dispatch` on a branch — confirm green run.
-6. Delete one local file, trigger again — confirm exactly that file is recommitted.
-7. Trigger again — confirm "no changes" (no empty commits).
+5. Trigger via `workflow_dispatch` on a branch — confirm green run (simulate step, no PR opened).
+6. Delete one local file, trigger on `main` — confirm a PR is opened containing exactly that file and that it auto-merges.
+7. Trigger on `main` again with no new data — confirm "no changes" (no PR opened, no empty commits).
 
 ---
 
@@ -245,13 +247,13 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 **Done when:** the HTML splitter works on one real page, ready for reuse.
 
 **Additional steps (CI):**
-- `.github/workflows/fetch-visual-studio-2026.yml`: cron + `workflow_dispatch`, direct push to main (per Decision A).
-- Permissions: `contents: write`.
+- `.github/workflows/fetch-visual-studio-2026.yml`: cron + `workflow_dispatch` → run fetcher → on `main`, if new files, open a PR via `peter-evans/create-pull-request` and enable auto-merge; on non-default branches, simulate.
+- Permissions: `contents: write`, `pull-requests: write`.
 
 **Additional tests (CI):**
-4. Trigger via `workflow_dispatch` on a branch — confirm green run.
-5. Delete one local file, trigger again — confirm exactly that file is recommitted.
-6. Trigger again — confirm "no changes" (no empty commits).
+4. Trigger via `workflow_dispatch` on a branch — confirm green run (simulate step, no PR opened).
+5. Delete one local file, trigger on `main` — confirm a PR is opened containing exactly that file and that it auto-merges.
+6. Trigger on `main` again with no new data — confirm "no changes" (no PR opened, no empty commits).
 
 ---
 
@@ -268,13 +270,13 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 **Done when:** splitter is proven reusable; SSMS data complete.
 
 **Additional steps (CI):**
-- `.github/workflows/fetch-ssms.yml`: cron + `workflow_dispatch`, direct push to main (per Decision A).
-- Permissions: `contents: write`.
+- `.github/workflows/fetch-ssms.yml`: cron + `workflow_dispatch` → run fetcher → on `main`, if new files, open a PR via `peter-evans/create-pull-request` and enable auto-merge; on non-default branches, simulate.
+- Permissions: `contents: write`, `pull-requests: write`.
 
 **Additional tests (CI):**
-4. Trigger via `workflow_dispatch` on a branch — confirm green run.
-5. Delete one local file, trigger again — confirm exactly that file is recommitted.
-6. Trigger again — confirm "no changes" (no empty commits).
+4. Trigger via `workflow_dispatch` on a branch — confirm green run (simulate step, no PR opened).
+5. Delete one local file, trigger on `main` — confirm a PR is opened containing exactly that file and that it auto-merges.
+6. Trigger on `main` again with no new data — confirm "no changes" (no PR opened, no empty commits).
 
 ---
 
@@ -291,25 +293,25 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 **Done when:** full 2022 backfill present.
 
 **Additional steps (CI):**
-- `.github/workflows/fetch-visual-studio-2022.yml`: cron + `workflow_dispatch`, direct push to main (per Decision A).
-- Permissions: `contents: write`.
+- `.github/workflows/fetch-visual-studio-2022.yml`: cron + `workflow_dispatch` → run fetcher → on `main`, if new files, open a PR via `peter-evans/create-pull-request` and enable auto-merge; on non-default branches, simulate.
+- Permissions: `contents: write`, `pull-requests: write`.
 
 **Additional tests (CI):**
-4. Trigger via `workflow_dispatch` on a branch — confirm green run.
-5. Delete one local file, trigger again — confirm exactly that file is recommitted.
-6. Trigger again — confirm "no changes" (no empty commits).
+4. Trigger via `workflow_dispatch` on a branch — confirm green run (simulate step, no PR opened).
+5. Delete one local file, trigger on `main` — confirm a PR is opened containing exactly that file and that it auto-merges.
+6. Trigger on `main` again with no new data — confirm "no changes" (no PR opened, no empty commits).
 
 ---
 
 ### MVP 8 — JetBrains workflow + schema-lint CI
 **Note:** Workflows for all IDEs were added alongside their respective fetchers (MVPs 1–7). This MVP closes the gap and adds cross-IDE CI guardrails.
 
-- Add `.github/workflows/lint-schema.yml` running `jsonschema` over all `data/**/*.json` on PR.
+- Add `.github/workflows/lint-schema.yml` running `jsonschema` over all `data/**/*.json` on PRs — this also acts as the required status check that gates auto-merge for the bot-opened data PRs.
 - Optional `fetch-all.yml` via `workflow_call`.
 
 **Test in isolation:**
-1. Trigger `fetch-jetbrains.yml` via `workflow_dispatch` on a branch — confirm green run.
-2. Open a PR that adds a malformed JSON → lint fails.
+1. Trigger `fetch-jetbrains.yml` via `workflow_dispatch` on a branch — confirm green run (simulate step, no PR opened).
+2. Open a PR that adds a malformed JSON → lint fails, auto-merge is blocked.
 3. Manually dispatch `fetch-all.yml` — confirm all IDE workflows run.
 
 **Done when:** all 8 IDEs run on schedule and PRs are guarded by schema lint.
