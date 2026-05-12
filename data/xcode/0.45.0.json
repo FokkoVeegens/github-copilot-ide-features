@@ -1,0 +1,15 @@
+{
+  "ide": "xcode",
+  "version": "0.45.0",
+  "release_date": "2025-11-14",
+  "title": "Release 0.45.0",
+  "url": "https://github.com/github/CopilotForXcode/releases/tag/0.45.0",
+  "source": "api",
+  "body_markdown": "### Added\n- New models: GPT-5.1, GPT-5.1-Codex, GPT-5.1-Codex-Mini, Claude Haiku 4.5, and Auto (preview).\n- Added support for custom agents (preview).\n- Introduced the built-in Plan agent (preview).\n- Added support for subagent execution (preview).\n- Added support for Next Edit Suggestions (preview).\n\n### Changed\n- MCP servers now support dynamic OAuth setup for third-party authentication providers.\n- Added a setting to configure the maximum number of tool requests allowed.\n\n### Fixed\n- Fixed an issue that the terminal view in Agent conversation was clipped\n- Fixed an issue that the Chat panel failed to recognize newly created workspaces.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-05-12T16:48:39Z",
+  "schema_version": 1
+}

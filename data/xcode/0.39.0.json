@@ -1,0 +1,15 @@
+{
+  "ide": "xcode",
+  "version": "0.39.0",
+  "release_date": "2025-07-23",
+  "title": "Release 0.39.0",
+  "url": "https://github.com/github/CopilotForXcode/releases/tag/0.39.0",
+  "source": "api",
+  "body_markdown": "### Fixed\n- Performance: Fixed a freezing issue in 'Add Context' view when opening large projects.\n- Login failed due to insufficient permissions on the .config folder.\n- Fixed an issue that setting changes like proxy config did not take effect.\n- Increased the timeout for ask mode to prevent response failures due to timeout.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-05-12T16:48:39Z",
+  "schema_version": 1
+}

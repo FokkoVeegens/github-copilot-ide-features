@@ -1,0 +1,18 @@
+{
+  "ide": "xcode",
+  "version": "0.33.0",
+  "release_date": "2025-04-17",
+  "title": "Release 0.33.0",
+  "url": "https://github.com/github/CopilotForXcode/releases/tag/0.33.0",
+  "source": "api",
+  "body_markdown": "### Added\n- Added support for new models in Chat: Claude 3.7 Sonnet and GPT 4.5\n- Implemented @workspace context feature allowing questions about the entire codebase in Copilot Chat\n\n### Changed\n- Simplified access to Copilot Chat from the Copilot for Xcode app with a single click\n- Enhanced instructions for granting background permissions\n\n### Fixed\n- Resolved false alarms for sign-in and free plan limit notifications\n- Improved app launch performance\n- Fixed workspace and context update issues",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Implemented @workspace context feature allowing questions about the entire codebase in Copilot Chat",
+    "- Simplified access to Copilot Chat from the Copilot for Xcode app with a single click"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-05-12T16:48:39Z",
+  "schema_version": 1
+}

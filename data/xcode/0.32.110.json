@@ -1,0 +1,17 @@
+{
+  "ide": "xcode",
+  "version": "0.32.110",
+  "release_date": "2025-04-11",
+  "title": "Pre-release 0.32.110",
+  "url": "https://github.com/github/CopilotForXcode/releases/tag/0.32.110",
+  "source": "api_fallback",
+  "body_markdown": "Pre-release 0.32.110 of Copilot extension for Xcode",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "Pre-release 0.32.110 of Copilot extension for Xcode"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-05-12T16:48:39Z",
+  "schema_version": 1
+}
