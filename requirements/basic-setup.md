@@ -302,9 +302,8 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 ---
 
 ### MVP 8 — JetBrains workflow + schema-lint CI
-**Note:** Workflows for all IDEs except JetBrains were added alongside their respective fetchers (MVPs 1–7). This MVP closes the gap and adds cross-IDE CI guardrails.
+**Note:** Workflows for all IDEs were added alongside their respective fetchers (MVPs 1–7). This MVP closes the gap and adds cross-IDE CI guardrails.
 
-- `.github/workflows/fetch-jetbrains.yml`: cron + `workflow_dispatch`, direct push to main (per Decision A). Permissions: `contents: write`.
 - Add `.github/workflows/lint-schema.yml` running `jsonschema` over all `data/**/*.json` on PR.
 - Optional `fetch-all.yml` via `workflow_call`.
 
