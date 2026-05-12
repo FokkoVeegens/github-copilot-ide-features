@@ -194,6 +194,16 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 
 **Done when:** Xcode CHANGELOG splitter is reusable; Vim/Neovim produces 5 clean era records.
 
+**Additional steps (CI):**
+- `.github/workflows/fetch-xcode.yml`: cron + `workflow_dispatch`, direct push to main (per Decision A).
+- `.github/workflows/fetch-vim-neovim.yml`: cron + `workflow_dispatch`, direct push to main.
+- Permissions: `contents: write`.
+
+**Additional tests (CI):**
+5. Trigger each via `workflow_dispatch` on a branch — confirm green run.
+6. Delete one file per IDE, trigger again — confirm exactly that file is recommitted.
+7. Trigger again — confirm "no changes" (no empty commits).
+
 ---
 
 ### MVP 4 — VS Code fetcher (Atom feed + version-URL crawl)
@@ -210,6 +220,15 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 
 **Done when:** all VS Code releases since 1.75 are captured.
 
+**Additional steps (CI):**
+- `.github/workflows/fetch-vs-code.yml`: cron + `workflow_dispatch`, direct push to main (per Decision A).
+- Permissions: `contents: write`.
+
+**Additional tests (CI):**
+5. Trigger via `workflow_dispatch` on a branch — confirm green run.
+6. Delete one local file, trigger again — confirm exactly that file is recommitted.
+7. Trigger again — confirm "no changes" (no empty commits).
+
 ---
 
 ### MVP 5 — HTML splitter + Visual Studio 2026 (current-only)
@@ -225,6 +244,15 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 
 **Done when:** the HTML splitter works on one real page, ready for reuse.
 
+**Additional steps (CI):**
+- `.github/workflows/fetch-visual-studio-2026.yml`: cron + `workflow_dispatch`, direct push to main (per Decision A).
+- Permissions: `contents: write`.
+
+**Additional tests (CI):**
+4. Trigger via `workflow_dispatch` on a branch — confirm green run.
+5. Delete one local file, trigger again — confirm exactly that file is recommitted.
+6. Trigger again — confirm "no changes" (no empty commits).
+
 ---
 
 ### MVP 6 — SSMS fetcher (reuse splitter)
@@ -238,6 +266,15 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 3. Assert: `What's new` and `Bug fixes` subsections both appear in `body_markdown`.
 
 **Done when:** splitter is proven reusable; SSMS data complete.
+
+**Additional steps (CI):**
+- `.github/workflows/fetch-ssms.yml`: cron + `workflow_dispatch`, direct push to main (per Decision A).
+- Permissions: `contents: write`.
+
+**Additional tests (CI):**
+4. Trigger via `workflow_dispatch` on a branch — confirm green run.
+5. Delete one local file, trigger again — confirm exactly that file is recommitted.
+6. Trigger again — confirm "no changes" (no empty commits).
 
 ---
 
@@ -253,18 +290,30 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 
 **Done when:** full 2022 backfill present.
 
+**Additional steps (CI):**
+- `.github/workflows/fetch-visual-studio-2022.yml`: cron + `workflow_dispatch`, direct push to main (per Decision A).
+- Permissions: `contents: write`.
+
+**Additional tests (CI):**
+4. Trigger via `workflow_dispatch` on a branch — confirm green run.
+5. Delete one local file, trigger again — confirm exactly that file is recommitted.
+6. Trigger again — confirm "no changes" (no empty commits).
+
 ---
 
-### MVP 8 — Fan out workflows + schema-lint CI
-- Copy the MVP 1 workflow per IDE with staggered cron minutes.
+### MVP 8 — JetBrains workflow + schema-lint CI
+**Note:** Workflows for all IDEs except JetBrains were added alongside their respective fetchers (MVPs 1–7). This MVP closes the gap and adds cross-IDE CI guardrails.
+
+- `.github/workflows/fetch-jetbrains.yml`: cron + `workflow_dispatch`, direct push to main (per Decision A). Permissions: `contents: write`.
 - Add `.github/workflows/lint-schema.yml` running `jsonschema` over all `data/**/*.json` on PR.
 - Optional `fetch-all.yml` via `workflow_call`.
 
 **Test in isolation:**
-1. Open a PR that adds a malformed JSON → lint fails.
-2. Manually dispatch each workflow once for backfill.
+1. Trigger `fetch-jetbrains.yml` via `workflow_dispatch` on a branch — confirm green run.
+2. Open a PR that adds a malformed JSON → lint fails.
+3. Manually dispatch `fetch-all.yml` — confirm all IDE workflows run.
 
-**Done when:** all 7 IDEs run on schedule and PRs are guarded by schema lint.
+**Done when:** all 8 IDEs run on schedule and PRs are guarded by schema lint.
 
 ---
 
@@ -278,11 +327,13 @@ Each MVP is independently runnable, locally verifiable, and additive (later MVPs
 ### MVP dependency graph
 
 ```
-MVP 0 ──┬─► MVP 1 (Eclipse + CI) ──► MVP 8 (fan out) ──► MVP 9
+MVP 0 ──┬─► MVP 1 (Eclipse + CI)
         ├─► MVP 2 (JetBrains)
-        ├─► MVP 3 (Xcode + Vim)
-        └─► MVP 4 (VS Code) ──► MVP 5 (VS 2026 + splitter) ──┬─► MVP 6 (SSMS)
-                                                              └─► MVP 7 (VS 2022 history)
+        ├─► MVP 3 (Xcode + Vim + CI)
+        └─► MVP 4 (VS Code + CI) ──► MVP 5 (VS 2026 + CI) ──┬─► MVP 6 (SSMS + CI)
+                                                             └─► MVP 7 (VS 2022 + CI)
+
+All of MVP 1–7 ──► MVP 8 (JetBrains CI + schema-lint) ──► MVP 9
 ```
 
 MVPs 1–4 are mutually independent after MVP 0 — easy to parallelize across contributors.
