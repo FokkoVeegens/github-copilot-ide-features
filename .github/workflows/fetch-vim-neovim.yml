@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   fetch:
@@ -30,16 +31,22 @@ jobs:
 
       - name: Commit new files
         if: github.ref == 'refs/heads/main'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/vim-neovim/
-          if git diff --staged --quiet; then
-            echo "No new releases — nothing to commit."
-          else
-            git commit -m "chore(vim-neovim): add new release notes [skip ci]"
-            git push
-          fi
+        id: create-pr
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          add-paths: data/vim-neovim/
+          commit-message: "chore(vim-neovim): add new release notes"
+          branch: bot/fetch-vim-neovim
+          delete-branch: true
+          title: "chore(vim-neovim): add new release notes"
+          body: "Automated update: new release notes fetched by the daily workflow."
+
+      - name: Enable auto-merge
+        if: github.ref == 'refs/heads/main' && steps.create-pr.outputs.pull-request-number != ''
+        run: gh pr merge --auto --squash ${{ steps.create-pr.outputs.pull-request-number }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Simulate commit (non-default branch)
         if: github.ref != 'refs/heads/main'
