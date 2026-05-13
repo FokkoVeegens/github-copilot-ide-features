@@ -1,0 +1,16 @@
+{
+  "ide": "visual-studio-2026",
+  "version": "18.4.3",
+  "release_date": "2026-03-31",
+  "title": "Version 18.4.3",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+  "source": "html",
+  "body_markdown": "Released on **March 31, 2026**.\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Copilot chat fails with invalid\\_request\\_body: github\\_push\\_files schema requires additionalProperties=false | [Feedback ticket](https://developercommunity.visualstudio.com/t/Copilot-chat-fails-with-invalid_request_/11051069) |\n| Fix to Visual Studio crash when VS project is loaded |  |",
+  "body_html": "<p>Released on <strong>March 31, 2026</strong>.</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Copilot chat fails with invalid_request_body: github_push_files schema requires additionalProperties=false</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Copilot-chat-fails-with-invalid_request_/11051069\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Fix to Visual Studio crash when VS project is loaded</td>\n<td style=\"text-align: right;\"></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [
+    "| Copilot chat fails with invalid\\_request\\_body: github\\_push\\_files schema requires additionalProperties=false | [Feedback ticket](https://developercommunity.visualstudio.com/t/Copilot-chat-fails-with-invalid_request_/11051069) |"
+  ],
+  "fetched_at": "2026-05-13T19:29:11Z",
+  "schema_version": 1
+}

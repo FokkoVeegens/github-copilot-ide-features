@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2026",
+  "version": "18.0.2",
+  "release_date": "2025-11-24",
+  "title": "Version 18.0.2",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+  "source": "html",
+  "body_markdown": "Released on **November 24, 2025**.\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Fixed a crash that affected C++ programs using OpenMP. | [Feedback ticket](https://developercommunity.visualstudio.com/t/Calling-omp_set_dynamic-before-pragma-o/10973188) |\n| Visual Studio 2026 Insiders DataTips unreadable | [Feedback ticket](https://developercommunity.visualstudio.com/t/Visual-Studio-2026-Insiders-DataTips-unr/10969940) |\n| Source control plugin change gives pop-up | [Feedback ticket](https://developercommunity.visualstudio.com/t/Source-control-plugin-change-gives-pop-u/10989658) |\n| Computing rename information message gets stuck on screen | [Feedback ticket](https://developercommunity.visualstudio.com/t/Computing-rename-information-message-get/10965106) |\n\n---",
+  "body_html": "<p>Released on <strong>November 24, 2025</strong>.</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Fixed a crash that affected C++ programs using OpenMP.</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Calling-omp_set_dynamic-before-pragma-o/10973188\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Visual Studio 2026 Insiders DataTips unreadable</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Visual-Studio-2026-Insiders-DataTips-unr/10969940\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Source control plugin change gives pop-up</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Source-control-plugin-change-gives-pop-u/10989658\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Computing rename information message gets stuck on screen</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Computing-rename-information-message-get/10965106\">Feedback ticket</a></td>\n</tr>\n</tbody>\n</table>\n<hr/>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-13T19:29:11Z",
+  "schema_version": 1
+}

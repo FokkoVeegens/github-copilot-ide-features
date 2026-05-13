@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2026",
+  "version": "18.3.2",
+  "release_date": "2026-02-24",
+  "title": "Version 18.3.2",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+  "source": "html",
+  "body_markdown": "Released on **February 24, 2026**.\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Compiler optimization codegen causing access violation introduced with v145 toolset | [Feedback ticket](https://developercommunity.visualstudio.com/t/v1950-x64-optimizer-generates-incorrec/11012713) |\n| Bug fix in MSVC optimizer that causes bad assembly code generation |  |",
+  "body_html": "<p>Released on <strong>February 24, 2026</strong>.</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Compiler optimization codegen causing access violation introduced with v145 toolset</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/v1950-x64-optimizer-generates-incorrec/11012713\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Bug fix in MSVC optimizer that causes bad assembly code generation</td>\n<td style=\"text-align: right;\"></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-13T19:29:11Z",
+  "schema_version": 1
+}
