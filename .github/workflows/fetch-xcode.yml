@@ -27,8 +27,6 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Fetch Xcode release notes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python -m scripts.run --ide xcode
 
       - name: Commit new files

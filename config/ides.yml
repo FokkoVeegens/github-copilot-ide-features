@@ -24,8 +24,7 @@ ides:
     data_dir: data/xcode
     fetcher: xcode
     start_version: all
-    source_url: https://api.github.com/repos/github/CopilotForXcode/releases
-    changelog_url: https://raw.githubusercontent.com/github/CopilotForXcode/refs/heads/main/CHANGELOG.md
+    source_url: https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=xcode
 
   - id: vim-neovim
     name: GitHub Copilot for Vim/Neovim

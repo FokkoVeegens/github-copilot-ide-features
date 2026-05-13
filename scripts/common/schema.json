@@ -82,6 +82,10 @@
       "type": "string",
       "description": "Vim/Neovim-specific section key from the feature matrix page."
     },
+    "xcode_era": {
+      "type": "string",
+      "description": "Xcode-specific era section key from the feature matrix page."
+    },
     "fetched_at": {
       "type": "string",
       "description": "ISO-8601 datetime when the record was written."
