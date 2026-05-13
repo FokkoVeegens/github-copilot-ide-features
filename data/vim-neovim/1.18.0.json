@@ -1,0 +1,16 @@
+{
+  "ide": "vim-neovim",
+  "version": "1.18.0",
+  "neovim_era": "neovim-latest",
+  "release_date": "2026-01-01",
+  "title": "GitHub Copilot for Vim/Neovim 1.18.0 – NeoVim latest releases",
+  "url": "https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=vimneovim",
+  "source": "html",
+  "body_markdown": "- Code completion",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-05-13T07:46:13Z",
+  "schema_version": 1
+}
