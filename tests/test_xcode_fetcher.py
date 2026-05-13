@@ -237,6 +237,23 @@ class TestParseFeatureMatrix:
         assert results == []
 
 
+class TestSchemaValidation:
+    def test_xcode_record_passes_schema_validation(self):
+        import datetime as _dt
+        import json
+        import pathlib
+
+        import jsonschema
+
+        schema = json.loads(pathlib.Path("scripts/common/schema.json").read_text())
+        results = _parse_feature_matrix(_IDE_CONFIG, _FAKE_HTML)
+        for r in results:
+            r["fetched_at"] = _dt.datetime.now(_dt.timezone.utc).isoformat()
+            r["schema_version"] = 1
+        for r in results:
+            jsonschema.validate(r, schema)  # raises if invalid
+
+
 class TestFetch:
     def test_uses_source_url_from_config(self):
         config = {**_IDE_CONFIG, "source_url": "https://custom.example/matrix"}
