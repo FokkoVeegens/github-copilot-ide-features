@@ -30,5 +30,8 @@ jobs:
       - name: Check Python syntax
         run: python -m compileall scripts tests
 
+      - name: Run linting
+        run: ruff check scripts tests
+
       - name: Run test suite
         run: pytest
