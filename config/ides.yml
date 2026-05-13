@@ -32,8 +32,14 @@ ides:
     fetcher: copilot_vim
     source_url: https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=vimneovim
 
+  - id: vs-code
+    name: GitHub Copilot for VS Code
+    data_dir: data/vs-code
+    fetcher: vs_code
+    start_version: "1.75.0"
+    source_url: https://code.visualstudio.com/feed.xml
+
   # Real IDE entries will be added in subsequent MVPs:
-  # - id: vs-code
   # - id: visual-studio-2022
   # - id: visual-studio-2026
   # - id: sql-server-management-studio
