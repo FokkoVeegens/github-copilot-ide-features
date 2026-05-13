@@ -1,0 +1,18 @@
+{
+  "ide": "xcode",
+  "version": "0.38.0",
+  "release_date": "2025-06-30",
+  "title": "Release 0.38.0",
+  "url": "https://github.com/github/CopilotForXcode/releases/tag/0.38.0",
+  "source": "api",
+  "body_markdown": "### Added\n- Support for Claude 4 in Chat.\n- Support for Copilot Vision (image attachments).\n- Support for remote MCP servers.\n\n### Changed\n- Automatically suggests a title for conversations created in agent mode.\n- Improved restoration of MCP tool status after Copilot restarts.\n- Reduced duplication of MCP server instances.\n\n### Fixed\n- Switching accounts now correctly refreshes the auth token and models.\n- Fixed file create/edit issues in agent mode.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Support for Copilot Vision (image attachments).",
+    "- Improved restoration of MCP tool status after Copilot restarts."
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-05-12T16:48:39Z",
+  "schema_version": 1
+}

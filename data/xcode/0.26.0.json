@@ -1,0 +1,17 @@
+{
+  "ide": "xcode",
+  "version": "0.26.0",
+  "release_date": "2024-10-21",
+  "title": "Release 0.26.0",
+  "url": "https://github.com/github/CopilotForXcode/releases/tag/0.26.0",
+  "source": "api_fallback",
+  "body_markdown": "Release 0.26.0 of Copilot extension for Xcode",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "Release 0.26.0 of Copilot extension for Xcode"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-05-12T16:48:39Z",
+  "schema_version": 1
+}

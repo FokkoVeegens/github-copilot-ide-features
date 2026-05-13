@@ -1,0 +1,17 @@
+{
+  "ide": "xcode",
+  "version": "0.37.0",
+  "release_date": "2025-06-18",
+  "title": "Release 0.37.0",
+  "url": "https://github.com/github/CopilotForXcode/releases/tag/0.37.0",
+  "source": "api",
+  "body_markdown": "### Added\n- **Advanced** settings: Added option to configure **Custom Instructions** for GitHub Copilot during chat sessions.\n- **Advanced** settings: Added option to keep the chat window automatically attached to Xcode.\n\n### Changed\n- Enabled support for dragging-and-dropping files into the chat panel to provide context.\n\n### Fixed\n- \"Add Context\" menu didn’t show files in workspaces organized with Xcode’s group feature.\n- Chat didn’t respond when the workspace was in a system folder (like Desktop, Downloads, or Documents) and access permission hadn’t been granted.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- **Advanced** settings: Added option to configure **Custom Instructions** for GitHub Copilot during chat sessions."
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-05-12T16:48:39Z",
+  "schema_version": 1
+}
