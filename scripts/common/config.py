@@ -17,3 +17,12 @@ def get_ide_config(ide_id: str, config_path: pathlib.Path = _CONFIG_PATH) -> dic
         if ide["id"] == ide_id:
             return ide
     raise ValueError(f"IDE '{ide_id}' not found in {config_path}")
+
+
+def require_config_value(ide_config: dict, key: str) -> str:
+    """Return a required non-empty config value for an IDE."""
+    value = ide_config.get(key)
+    if value is None or (isinstance(value, str) and not value.strip()):
+        ide_id = ide_config.get("id", "<unknown>")
+        raise ValueError(f"IDE '{ide_id}' is missing required config value '{key}'")
+    return value

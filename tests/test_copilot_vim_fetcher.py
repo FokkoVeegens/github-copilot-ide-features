@@ -1,10 +1,10 @@
 """Tests for scripts/fetchers/copilot_vim.py."""
 from unittest.mock import patch
 
+import pytest
 from bs4 import BeautifulSoup
 
 from scripts.fetchers.copilot_vim import (
-    _FEATURE_MATRIX_URL,
     _extract_plugin_versions,
     _find_next_table,
     _find_section_heading,
@@ -18,6 +18,7 @@ _IDE_CONFIG = {
     "name": "GitHub Copilot for Vim/Neovim",
     "data_dir": "data/vim-neovim",
     "fetcher": "copilot_vim",
+    "source_url": "https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=vimneovim",
 }
 
 # Minimal HTML that mirrors the real docs page structure.
@@ -244,10 +245,12 @@ class TestFetch:
             fetch(config)
         mock_get.assert_called_once_with("https://custom.example/matrix", use_auth=False)
 
-    def test_falls_back_to_default_url(self):
-        with patch("scripts.fetchers.copilot_vim.get_text", return_value=_FAKE_HTML) as mock_get:
-            fetch(_IDE_CONFIG)
-        mock_get.assert_called_once_with(_FEATURE_MATRIX_URL, use_auth=False)
+    def test_missing_source_url_raises(self):
+        config = dict(_IDE_CONFIG)
+        config.pop("source_url")
+        with patch("scripts.fetchers.copilot_vim.get_text"):
+            with pytest.raises(ValueError, match="missing required config value 'source_url'"):
+                fetch(config)
 
     def test_returns_list_of_dicts(self):
         with patch("scripts.fetchers.copilot_vim.get_text", return_value=_FAKE_HTML):

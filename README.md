@@ -13,6 +13,8 @@ scripts/fetchers/        – one module per IDE
 tests/                   – pytest test suite
 ```
 
+Fetcher endpoints are configured centrally in [config/ides.yml](config/ides.yml), including `source_url` and any per-IDE URL templates or canonical plugin URLs needed by a fetcher.
+
 ## Supported IDEs
 
 | ID | Name |
@@ -21,6 +23,8 @@ tests/                   – pytest test suite
 | `jetbrains` | GitHub Copilot for JetBrains |
 | `xcode` | GitHub Copilot for Xcode |
 | `vim-neovim` | GitHub Copilot for Vim/Neovim |
+| `vs-code` | GitHub Copilot for VS Code |
+| `visual-studio-2026` | Visual Studio 2026 |
 
 ## Running a fetcher locally
 

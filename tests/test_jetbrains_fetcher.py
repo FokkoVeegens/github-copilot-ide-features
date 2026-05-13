@@ -11,6 +11,8 @@ _IDE_CONFIG = {
     "data_dir": "data/jetbrains",
     "fetcher": "jetbrains",
     "start_version": "all",
+    "source_url": "https://plugins.jetbrains.com/api/plugins/17718/updates",
+    "plugin_url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
 }
 
 # Fake API update entries (two builds for 1.5.62, one for 1.5.63)
@@ -257,6 +259,17 @@ class TestFetch:
     def test_empty_api_returns_empty_list(self):
         releases = self._run_fetch([[]])
         assert releases == []
+
+    def test_result_url_comes_from_config(self):
+        releases = self._run_fetch([_FAKE_UPDATES_PAGE1, []])
+        assert all(r["url"] == _IDE_CONFIG["plugin_url"] for r in releases)
+
+    def test_missing_plugin_url_raises(self):
+        config = dict(_IDE_CONFIG)
+        config.pop("plugin_url")
+        with pytest.raises(ValueError, match="missing required config value 'plugin_url'"):
+            with patch("scripts.fetchers.jetbrains.get_json", return_value=[]):
+                fetch(config)
 
     def test_builds_contain_since_and_until(self):
         releases = self._run_fetch([_FAKE_UPDATES_PAGE1, []])

@@ -19,11 +19,10 @@ from datetime import datetime
 import feedparser
 from bs4 import BeautifulSoup
 
+from scripts.common.config import require_config_value
 from scripts.common.extract import extract_copilot_mentions, html_to_markdown
 from scripts.common.http import get_text
 
-_FEED_URL = "https://code.visualstudio.com/feed.xml"
-_RELEASE_URL_TEMPLATE = "https://code.visualstudio.com/updates/v1_{n}"
 # Matches the minor version in VS Code release-notes URLs (/updates/v1_75).
 _RELEASE_URL_RE = re.compile(r"/updates/v1_(\d+)")
 
@@ -114,8 +113,9 @@ def fetch(ide_config: dict) -> list[dict]:
     Returns a list of release dicts conforming to the shared JSON schema.
     Pages that return an HTTP error are warned about and skipped.
     """
-    feed_url = ide_config.get("source_url", _FEED_URL)
-    start_version = ide_config.get("start_version", "1.75.0")
+    feed_url = require_config_value(ide_config, "source_url")
+    release_url_template = require_config_value(ide_config, "release_url_template")
+    start_version = require_config_value(ide_config, "start_version")
     start_minor = _parse_minor_from_start_version(start_version)
 
     feed_xml = get_text(feed_url, use_auth=False)
@@ -124,7 +124,7 @@ def fetch(ide_config: dict) -> list[dict]:
     results: list[dict] = []
     for n in range(start_minor, latest_minor + 1):
         version = f"1.{n}.0"
-        page_url = _RELEASE_URL_TEMPLATE.format(n=n)
+        page_url = release_url_template.format(n=n)
 
         try:
             html = get_text(page_url, use_auth=False)
