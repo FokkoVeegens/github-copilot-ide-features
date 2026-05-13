@@ -17,6 +17,7 @@ _IDE_CONFIG = {
     "fetcher": "vs_code",
     "start_version": "1.75.0",
     "source_url": "https://code.visualstudio.com/feed.xml",
+    "release_url_template": "https://code.visualstudio.com/updates/v1_{n}",
 }
 
 # Minimal Atom feed XML with two release entries and one blog entry.
@@ -294,6 +295,27 @@ class TestFetch:
             results = fetch(custom_config)
 
         assert len(results) == 2
+
+    def test_uses_custom_release_url_template(self):
+        custom_config = {
+            **_IDE_CONFIG,
+            "release_url_template": "https://custom.example.com/updates/v1_{n}",
+        }
+        pages = {
+            "https://code.visualstudio.com/feed.xml": _FAKE_FEED_XML,
+            "https://custom.example.com/updates/v1_75": _FAKE_PAGE_HTML_75,
+            "https://custom.example.com/updates/v1_76": _FAKE_PAGE_HTML_76,
+        }
+        with patch("scripts.fetchers.vs_code.get_text", side_effect=self._make_get_text_side_effect(pages)):
+            results = fetch(custom_config)
+
+        assert len(results) == 2
+
+    def test_missing_release_url_template_raises(self):
+        config = dict(_IDE_CONFIG)
+        config.pop("release_url_template")
+        with pytest.raises(ValueError, match="missing required config value 'release_url_template'"):
+            fetch(config)
 
     def test_start_version_respected(self):
         """Only versions >= start_version are fetched."""

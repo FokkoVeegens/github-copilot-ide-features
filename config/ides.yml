@@ -18,6 +18,7 @@ ides:
     fetcher: jetbrains
     start_version: all
     source_url: https://plugins.jetbrains.com/api/plugins/17718/updates
+    plugin_url: https://plugins.jetbrains.com/plugin/17718-github-copilot/versions
 
   - id: xcode
     name: GitHub Copilot for Xcode
@@ -38,8 +39,15 @@ ides:
     fetcher: vs_code
     start_version: "1.75.0"
     source_url: https://code.visualstudio.com/feed.xml
+    release_url_template: https://code.visualstudio.com/updates/v1_{n}
+
+  - id: visual-studio-2026
+    name: Visual Studio 2026
+    data_dir: data/visual-studio-2026
+    fetcher: visual_studio
+    start_version: "17.14.0"
+    source_url: https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes
 
   # Real IDE entries will be added in subsequent MVPs:
   # - id: visual-studio-2022
-  # - id: visual-studio-2026
   # - id: sql-server-management-studio

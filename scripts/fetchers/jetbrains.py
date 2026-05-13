@@ -14,15 +14,14 @@ We group them into one JSON file per semver with a `builds[]` array.
 import re
 from datetime import datetime, timezone
 
+from scripts.common.config import require_config_value
 from scripts.common.extract import extract_copilot_mentions, html_to_markdown
 from scripts.common.http import get_json
 
-_API_URL = "https://plugins.jetbrains.com/api/plugins/17718/updates"
 # Matches "X.Y.Z-NNN" or "X.Y.Z.NNNN-NNN" (3-part or 4-part + build suffix).
 _VERSION_RE = re.compile(r"^(?P<semver>\d+(?:\.\d+){2,3})-(?P<build>\d+)$")
 # Matches "X.Y.Z..." (3 or more parts, no build suffix — legacy universal releases).
 _VERSION_NO_BUILD_RE = re.compile(r"^(?P<semver>\d+(?:\.\d+){2,})$")
-_PLUGIN_URL = "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions"
 
 
 def _parse_version(version_str: str) -> tuple[str, str | None]:
@@ -44,7 +43,7 @@ def _parse_version(version_str: str) -> tuple[str, str | None]:
     raise ValueError(f"Unrecognised JetBrains version string: {version_str!r}")
 
 
-def _paginate_updates() -> list[dict]:
+def _paginate_updates(api_url: str) -> list[dict]:
     """Return all plugin update objects from the JetBrains Marketplace API.
 
     Deduplicates by entry ``id`` because the API can return the same entry on
@@ -54,7 +53,7 @@ def _paginate_updates() -> list[dict]:
     updates: list[dict] = []
     page = 0
     while True:
-        page_data = get_json(_API_URL, params={"size": 100, "page": page}, use_auth=False)
+        page_data = get_json(api_url, params={"size": 100, "page": page}, use_auth=False)
         if not page_data:
             break
         for item in page_data:
@@ -73,7 +72,9 @@ def fetch(ide_config: dict) -> list[dict]:
     ``1.5.62``) and contains a ``builds[]`` sub-array with per-IDE-build
     compatibility metadata.
     """
-    raw_updates = _paginate_updates()
+    api_url = require_config_value(ide_config, "source_url")
+    plugin_url = require_config_value(ide_config, "plugin_url")
+    raw_updates = _paginate_updates(api_url)
 
     # Group raw update entries by semantic version.
     groups: dict[str, list[dict]] = {}
@@ -124,7 +125,7 @@ def fetch(ide_config: dict) -> list[dict]:
                 "version": semver,
                 "release_date": release_date,
                 "title": f"GitHub Copilot for JetBrains {semver}",
-                "url": _PLUGIN_URL,
+                "url": plugin_url,
                 "source": "api",
                 "body_markdown": notes_markdown,
                 "body_html": notes_html,

@@ -3,12 +3,9 @@ import re
 
 from bs4 import BeautifulSoup, Tag
 
+from scripts.common.config import require_config_value
 from scripts.common.extract import extract_copilot_mentions
 from scripts.common.http import get_text
-
-_FEATURE_MATRIX_URL = (
-    "https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=vimneovim"
-)
 
 # (heading text on the page, version key for the JSON file, approximate release date)
 _SECTIONS: list[tuple[str, str, str]] = [
@@ -23,14 +20,15 @@ _HEADING_RE = re.compile(r"^h[1-6]$")
 
 
 def fetch(ide_config: dict) -> list[dict]:
-    source_url = ide_config.get("source_url", _FEATURE_MATRIX_URL)
+    source_url = require_config_value(ide_config, "source_url")
     html = get_text(source_url, use_auth=False)
     return _parse_feature_matrix(ide_config, html, source_url=source_url)
 
 
 def _parse_feature_matrix(
-    ide_config: dict, html: str, *, source_url: str = _FEATURE_MATRIX_URL
+    ide_config: dict, html: str, *, source_url: str | None = None
 ) -> list[dict]:
+    source_url = source_url or require_config_value(ide_config, "source_url")
     soup = BeautifulSoup(html, "lxml")
     results = []
 
@@ -68,13 +66,14 @@ def _extract_plugin_versions(
     era_key: str,
     release_date: str,
     *,
-    source_url: str = _FEATURE_MATRIX_URL,
+    source_url: str | None = None,
 ) -> list[dict]:
     """Return one record per plugin-version column found in the table header.
 
     Only features whose cell value is not ✗ (i.e. supported or partially
     supported) are included in the record's body_markdown.
     """
+    source_url = source_url or require_config_value(ide_config, "source_url")
     rows = table.find_all("tr")
     if not rows:
         return []

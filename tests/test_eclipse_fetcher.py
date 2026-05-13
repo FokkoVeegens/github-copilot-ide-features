@@ -11,6 +11,7 @@ _IDE_CONFIG = {
     "data_dir": "data/eclipse",
     "fetcher": "eclipse",
     "start_version": "all",
+    "source_url": "https://api.github.com/repos/microsoft/copilot-for-eclipse/releases",
 }
 
 _FAKE_RELEASES = [
@@ -138,3 +139,9 @@ class TestFetch:
         with patch("scripts.fetchers.eclipse.get_json", side_effect=[[], []]) as mock_get_json:
             fetch(config)
         assert mock_get_json.call_args_list[0].args[0] == "https://custom.example/releases"
+
+    def test_missing_source_url_raises(self):
+        config = dict(_IDE_CONFIG)
+        config.pop("source_url")
+        with pytest.raises(ValueError, match="missing required config value 'source_url'"):
+            fetch(config)

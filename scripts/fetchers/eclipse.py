@@ -5,11 +5,11 @@ Title format: "0.16.0 - 20260403"  →  version=0.16.0, release_date=2026-04-03
 """
 import re
 
+from scripts.common.config import require_config_value
 from scripts.common.extract import extract_copilot_mentions, html_to_markdown
 from scripts.common.github_releases import paginate_github_releases
 from scripts.common.http import get_json
 
-_API_URL = "https://api.github.com/repos/microsoft/copilot-for-eclipse/releases"
 _TITLE_RE = re.compile(r"^(?P<version>\d+\.\d+\.\d+)\s*-\s*(?P<date>\d{8})$")
 
 
@@ -25,7 +25,7 @@ def _parse_title(title: str) -> tuple[str, str]:
 
 def fetch(ide_config: dict) -> list[dict]:
     """Fetch all Copilot for Eclipse releases and return a list of release dicts."""
-    releases_api_url = ide_config.get("source_url", _API_URL)
+    releases_api_url = require_config_value(ide_config, "source_url")
     raw_releases = paginate_github_releases(releases_api_url, get_json_fn=get_json)
     results: list[dict] = []
 
