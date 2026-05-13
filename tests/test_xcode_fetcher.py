@@ -247,7 +247,7 @@ class TestSchemaValidation:
         schema = json.loads(pathlib.Path("scripts/common/schema.json").read_text())
         results = _parse_feature_matrix(_IDE_CONFIG, _FAKE_HTML)
         for r in results:
-            r["fetched_at"] = datetime.datetime.now(datetime.timezone.utc).isoformat()
+            r["fetched_at"] = datetime.datetime.now(datetime.UTC).isoformat()
             r["schema_version"] = 1
         for r in results:
             jsonschema.validate(r, schema)  # raises if invalid
@@ -263,9 +263,10 @@ class TestFetch:
     def test_missing_source_url_raises(self):
         config = dict(_IDE_CONFIG)
         config.pop("source_url")
-        with patch("scripts.fetchers.xcode.get_text"):
-            with pytest.raises(ValueError, match="missing required config value 'source_url'"):
-                fetch(config)
+        with patch("scripts.fetchers.xcode.get_text"), pytest.raises(
+            ValueError, match="missing required config value 'source_url'"
+        ):
+            fetch(config)
 
     def test_returns_list_of_dicts(self):
         with patch("scripts.fetchers.xcode.get_text", return_value=_FAKE_HTML):

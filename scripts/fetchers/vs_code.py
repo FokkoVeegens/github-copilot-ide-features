@@ -128,7 +128,7 @@ def fetch(ide_config: dict) -> list[dict]:
 
         try:
             html = get_text(page_url, use_auth=False)
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             print(f"  [warn] Failed to fetch {page_url}: {exc}")
             continue
 

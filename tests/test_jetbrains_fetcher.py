@@ -1,4 +1,5 @@
 """Tests for scripts/fetchers/jetbrains.py"""
+from typing import ClassVar
 from unittest.mock import patch
 
 import pytest
@@ -267,9 +268,10 @@ class TestFetch:
     def test_missing_plugin_url_raises(self):
         config = dict(_IDE_CONFIG)
         config.pop("plugin_url")
-        with pytest.raises(ValueError, match="missing required config value 'plugin_url'"):
-            with patch("scripts.fetchers.jetbrains.get_json", return_value=[]):
-                fetch(config)
+        with patch("scripts.fetchers.jetbrains.get_json", return_value=[]), pytest.raises(
+            ValueError, match="missing required config value 'plugin_url'"
+        ):
+            fetch(config)
 
     def test_builds_contain_since_and_until(self):
         releases = self._run_fetch([_FAKE_UPDATES_PAGE1, []])
@@ -321,7 +323,7 @@ class TestFetch:
 class TestFetchLegacyVersions:
     """Tests for legacy 4-part no-build-suffix versions (e.g. 1.5.29.7524)."""
 
-    _FAKE_LEGACY = [
+    _FAKE_LEGACY: ClassVar[list[dict]] = [
         {
             "id": 5001,
             "version": "1.5.29.7524",
@@ -385,7 +387,7 @@ class TestFetchLegacyVersions:
         releases = self._run_fetch([self._FAKE_LEGACY, []])
         # Add required fields that write_release would normally inject
         for r in releases:
-            r["fetched_at"] = _dt.datetime.now(_dt.timezone.utc).isoformat()
+            r["fetched_at"] = _dt.datetime.now(_dt.UTC).isoformat()
             r["schema_version"] = 1
         for r in releases:
             jsonschema.validate(r, schema)  # raises if invalid

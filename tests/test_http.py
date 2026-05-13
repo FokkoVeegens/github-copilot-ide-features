@@ -2,11 +2,10 @@
 import os
 from unittest.mock import MagicMock, patch
 
-import pytest
 import requests
 
 import scripts.common.http as http_module
-from scripts.common.http import get_session, get_text, _build_session
+from scripts.common.http import _build_session, get_session, get_text
 
 
 class TestBuildSession:

@@ -1,5 +1,4 @@
 """Tests for scripts/common/extract.py"""
-import pytest
 
 from scripts.common.extract import extract_copilot_mentions, html_to_markdown
 

@@ -141,9 +141,8 @@ def _find_next_table(heading: Tag) -> Tag | None:
     for element in heading.next_siblings:
         if not isinstance(element, Tag):
             continue
-        if _HEADING_RE.match(element.name or ""):
-            if int(element.name[1]) <= heading_level:
-                break
+        if _HEADING_RE.match(element.name or "") and int(element.name[1]) <= heading_level:
+            break
         if element.name == "table":
             return element
         nested = element.find("table")

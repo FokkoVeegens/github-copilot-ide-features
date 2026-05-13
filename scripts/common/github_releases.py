@@ -1,6 +1,6 @@
 """Shared helpers for GitHub Releases based fetchers."""
 import re
-from typing import Callable
+from collections.abc import Callable
 
 from scripts.common.changelog import split_changelog_by_version
 from scripts.common.extract import extract_copilot_mentions

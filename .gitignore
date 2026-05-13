@@ -37,6 +37,7 @@ ENV/
 
 # pytest
 .pytest_cache/
+.ruff_cache/
 
 # Data (exclude test/dummy data only; real IDE data is tracked)
 data/dummy/
