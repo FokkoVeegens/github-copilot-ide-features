@@ -248,9 +248,10 @@ class TestFetch:
     def test_missing_source_url_raises(self):
         config = dict(_IDE_CONFIG)
         config.pop("source_url")
-        with patch("scripts.fetchers.copilot_vim.get_text"):
-            with pytest.raises(ValueError, match="missing required config value 'source_url'"):
-                fetch(config)
+        with patch("scripts.fetchers.copilot_vim.get_text"), pytest.raises(
+            ValueError, match="missing required config value 'source_url'"
+        ):
+            fetch(config)
 
     def test_returns_list_of_dicts(self):
         with patch("scripts.fetchers.copilot_vim.get_text", return_value=_FAKE_HTML):

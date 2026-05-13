@@ -79,6 +79,7 @@ class TestFetch:
     def test_missing_source_url_raises(self):
         config = dict(_IDE_CONFIG)
         config.pop("source_url")
-        with patch("scripts.fetchers.visual_studio.get_text"):
-            with pytest.raises(ValueError, match="missing required config value 'source_url'"):
-                fetch(config)
+        with patch("scripts.fetchers.visual_studio.get_text"), pytest.raises(
+            ValueError, match="missing required config value 'source_url'"
+        ):
+            fetch(config)

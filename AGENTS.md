@@ -17,8 +17,11 @@ GITHUB_TOKEN=<your-token> python -m scripts.run --ide eclipse
 
 ```bash
 pip install -r requirements.txt
+ruff check scripts tests
 pytest
 ```
+
+Both `ruff` and `pytest` must pass before committing. Run them together as the local verification step.
 
 ## Repository layout
 

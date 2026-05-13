@@ -12,7 +12,7 @@ Each semver maps to multiple build-line entries (e.g. -241, -242, -243).
 We group them into one JSON file per semver with a `builds[]` array.
 """
 import re
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from scripts.common.config import require_config_value
 from scripts.common.extract import extract_copilot_mentions, html_to_markdown
@@ -95,7 +95,7 @@ def fetch(ide_config: dict) -> list[dict]:
         earliest_cdate = min(cdate_values)
         if earliest_cdate:
             release_date = datetime.fromtimestamp(
-                earliest_cdate / 1000, tz=timezone.utc
+                earliest_cdate / 1000, tz=UTC
             ).strftime("%Y-%m-%d")
         else:
             release_date = "1970-01-01"
