@@ -61,6 +61,8 @@ pip install -r requirements.txt
 pytest
 ```
 
+GitHub Actions CI runs the same test suite on pushes to `main`, pull requests, and manual dispatches. It also runs `python -m compileall scripts tests` as a fast syntax check before `pytest`.
+
 ## Output format
 
 Each file under `data/<ide>/` follows the JSON schema defined in `scripts/common/schema.json`. Key fields:
