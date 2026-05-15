@@ -24,6 +24,7 @@ Fetcher endpoints are configured centrally in [config/ides.yml](config/ides.yml)
 | `xcode` | GitHub Copilot for Xcode |
 | `vim-neovim` | GitHub Copilot for Vim/Neovim |
 | `vs-code` | GitHub Copilot for VS Code |
+| `visual-studio-2022` | Visual Studio 2022 |
 | `visual-studio-2026` | Visual Studio 2026 |
 
 ## Running a fetcher locally
@@ -58,6 +59,7 @@ Without a token the API allows **60 requests per hour per IP address**. Any auth
 
 ```bash
 pip install -r requirements.txt
+ruff check scripts tests
 pytest
 ```
 

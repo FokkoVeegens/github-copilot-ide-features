@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.11.3",
+  "release_date": "2024-09-10",
+  "title": "Version 17.11.3",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.11",
+  "source": "html",
+  "body_markdown": "*Released September 10th, 2024*\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Can't Publish .Net Framework Applications After 17.11.0 Update. | [Feedback ticket](https://developercommunity.visualstudio.com/t/Cant-Publish-Net-Framework-Application/10724847) |\n| Cannot pair to Mac after Visual Studio 17.11.0 update. | [Feedback ticket](https://developercommunity.visualstudio.com/t/Cannot-pair-to-Mac-after-Visual-Studio-1/10722624) |\n| [17.11.0 Error output breaks tests.](https://github.com/microsoft/vstest/issues/5184) |  |\n\n| Security advisories addressed | CVE |\n| --- | --- |\n| SQL Server Native Client OLE DB Provider Remote Code Execution Vulnerability | [**CVE-2024-35272**](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-35272) |",
+  "body_html": "<p><em>Released September 10<sup>th</sup>, 2024</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Can't Publish .Net Framework Applications After 17.11.0 Update.</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Cant-Publish-Net-Framework-Application/10724847\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Cannot pair to Mac after Visual Studio 17.11.0 update.</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Cannot-pair-to-Mac-after-Visual-Studio-1/10722624\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://github.com/microsoft/vstest/issues/5184\">17.11.0 Error output breaks tests.</a></td>\n<td style=\"text-align: right;\"></td>\n</tr>\n</tbody>\n</table>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Security advisories addressed</th>\n<th style=\"text-align: right;\">CVE</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">SQL Server Native Client OLE DB Provider Remote Code Execution Vulnerability</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-35272\"><strong>CVE-2024-35272</strong></a></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-15T18:39:28Z",
+  "schema_version": 1
+}

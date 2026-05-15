@@ -1,0 +1,16 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.14.27",
+  "release_date": "2026-02-18",
+  "title": "Version 17.14.27",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes",
+  "source": "html",
+  "body_markdown": "*Released February 18th, 2026*\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Analyze with Copilot response stopped abruptly mid stream | [Feedback ticket](https://developercommunity.visualstudio.com/t/Analyze-with-Copilot-response-stopped-ab/10973664) |\n| Updating the installer to include the latest servicing release of the 10.0.26100 Windows SDK (10.0.26100.7705) | [Feedback ticket](https://developercommunity.visualstudio.com/t/Latest-December-update-v171422-fails-b/11014457) |\n| Bug fix in MSVC optimizer that causes bad assembly code generation |  |",
+  "body_html": "<p><em>Released February 18<sup>th</sup>, 2026</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Analyze with Copilot response stopped abruptly mid stream</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Analyze-with-Copilot-response-stopped-ab/10973664\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Updating the installer to include the latest servicing release of the 10.0.26100 Windows SDK (10.0.26100.7705)</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Latest-December-update-v171422-fails-b/11014457\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Bug fix in MSVC optimizer that causes bad assembly code generation</td>\n<td style=\"text-align: right;\"></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [
+    "| Analyze with Copilot response stopped abruptly mid stream | [Feedback ticket](https://developercommunity.visualstudio.com/t/Analyze-with-Copilot-response-stopped-ab/10973664) |"
+  ],
+  "fetched_at": "2026-05-15T18:39:28Z",
+  "schema_version": 1
+}

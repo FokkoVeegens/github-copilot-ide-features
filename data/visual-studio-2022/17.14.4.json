@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.14.4",
+  "release_date": "2025-06-03",
+  "title": "Version 17.14.4",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes",
+  "source": "html",
+  "body_markdown": "*Released June 3rd, 2025*\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Type or Namespace Can't Be Found Error on the Razor's PageModel | [Feedback ticket](https://developercommunity.visualstudio.com/t/Type-or-Namespace-Cant-Be-Found-Error-o/10913740) |\n| VS 2022 17.14 p1.1 cannot complete a build. \"error D8040: error creating or communicating with child process.\" | [Feedback ticket](https://developercommunity.visualstudio.com/t/VS-2022-1714-p11-cannot-complete-a-bui/10864784) |\n| #include completion no longer suggests files or folders in path | [Feedback ticket](https://developercommunity.visualstudio.com/t/include-completion-no-longer-suggests-f/10906044) |\n| Visual Studio kept on asking me to re-enter credential [expansion.microsoft.com tenant blocked] | [Feedback ticket](https://developercommunity.visualstudio.com/t/Visual-Studio-kept-on-asking-me-to-re-en/10879939) |\n\n---",
+  "body_html": "<p><em>Released June 3<sup>rd</sup>, 2025</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Type or Namespace Can't Be Found Error on the Razor's PageModel</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Type-or-Namespace-Cant-Be-Found-Error-o/10913740\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">VS 2022 17.14 p1.1 cannot complete a build. \"error D8040: error creating or communicating with child process.\"</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/VS-2022-1714-p11-cannot-complete-a-bui/10864784\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">#include completion no longer suggests files or folders in path</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/include-completion-no-longer-suggests-f/10906044\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Visual Studio kept on asking me to re-enter credential [expansion.microsoft.com tenant blocked]</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Visual-Studio-kept-on-asking-me-to-re-en/10879939\">Feedback ticket</a></td>\n</tr>\n</tbody>\n</table>\n<hr/>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-15T18:39:28Z",
+  "schema_version": 1
+}

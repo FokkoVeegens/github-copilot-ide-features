@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.9.1",
+  "release_date": "2024-02-21",
+  "title": "Visual Studio 2022 version 17.9.1",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.9",
+  "source": "html",
+  "body_markdown": "*released Feb 21st, 2024*\n\n### Summary of What's New in this Release of Visual Studio 2022 version 17.9.1\n\n* Updated the 16.11 MSVC toolset to 16.11.34 (14.29.30154.0) for customers who use the 16.11 C++ toolset with VS 17.9.\n* Fixed a bug where the libconcrt.lib used when static linking could contain an SSE 4.2 instruction that was illegal on older X64 systems.\n* Added support for char8\\_t as a built-in type for C++20 with /clr.\n\n### Developer Community\n\n* [.sql Files cannot be opened](https://developercommunity.visualstudio.com/t/sql-Files-cannot-be-opened/10584835)\n\n---",
+  "body_html": "<p><em>released Feb 21st, 2024</em></p>\n<h3 id=\"summary-of-whats-new-in-this-release-of-visual-studio-2022-version-1791\">Summary of What's New in this Release of Visual Studio 2022 version 17.9.1</h3>\n<ul>\n<li>Updated the 16.11 MSVC toolset to 16.11.34 (14.29.30154.0) for customers who use the 16.11 C++ toolset with VS 17.9.</li>\n<li>Fixed a bug where the libconcrt.lib used when static linking could contain an SSE 4.2 instruction that was illegal on older X64 systems.</li>\n<li>Added support for char8_t as a built-in type for C++20 with /clr.</li>\n</ul>\n<h3 id=\"developer-community-5\">Developer Community</h3>\n<ul>\n<li><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/sql-Files-cannot-be-opened/10584835\">.sql Files cannot be opened</a></li>\n</ul>\n<hr/>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-15T18:39:28Z",
+  "schema_version": 1
+}

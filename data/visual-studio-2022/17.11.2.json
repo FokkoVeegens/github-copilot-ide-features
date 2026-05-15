@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.11.2",
+  "release_date": "2024-08-27",
+  "title": "Version 17.11.2",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.11",
+  "source": "html",
+  "body_markdown": "*Released August 27th, 2024*\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Fixed Visual Studio Installer failure when installing PackageId:AndroidPlatformMAUI2. |  |",
+  "body_html": "<p><em>Released August 27<sup>th</sup>, 2024</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Fixed Visual Studio Installer failure when installing PackageId:AndroidPlatformMAUI2.</td>\n<td style=\"text-align: right;\"></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-15T18:39:28Z",
+  "schema_version": 1
+}

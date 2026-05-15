@@ -25,6 +25,15 @@ class TestNormalizeHumanDate:
     def test_handles_typo_like_21th(self):
         assert normalize_human_date("April 21th, 2026") == "2026-04-21"
 
+    def test_handles_abbreviated_month_without_comma(self):
+        assert normalize_human_date("Nov 14th 2023") == "2023-11-14"
+
+    def test_handles_split_ordinal_suffix(self):
+        assert normalize_human_date("May 13 th , 2025") == "2025-05-13"
+
+    def test_handles_common_month_typo(self):
+        assert normalize_human_date("Novemeber 12th, 2024") == "2024-11-12"
+
 
 class TestSplitVersionSections:
     def test_returns_one_section_per_matching_heading(self):

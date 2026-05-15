@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.10.21",
+  "release_date": "2025-11-11",
+  "title": "Visual Studio 2022 version 17.10.21",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.10",
+  "source": "html",
+  "body_markdown": "*released November 11th, 2025*\n\n### What's New in this release\n\n### Developer Community\n\n* [New Visual Studio 2022 Updates Include LibCurl Library that Breaks Git](https://developercommunity.visualstudio.com/t/New-Visual-Studio-2022-Updates-Include-L/10965826)\n\n---",
+  "body_html": "<p><em>released November 11th, 2025</em></p>\n<h3 id=\"whats-new-in-this-release\">What's New in this release</h3>\n<h3 id=\"developer-community\">Developer Community</h3>\n<ul>\n<li><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/New-Visual-Studio-2022-Updates-Include-L/10965826\">New Visual Studio 2022 Updates Include LibCurl Library that Breaks Git</a></li>\n</ul>\n<hr/>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-15T18:39:28Z",
+  "schema_version": 1
+}

@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.13.2",
+  "release_date": "2025-02-26",
+  "title": "Version 17.13.2",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.13",
+  "source": "html",
+  "body_markdown": "*Released February 26th, 2025*\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Fixed a hang during VS shutdown when the /setup command line parameter is specified. | [Feedback ticket](https://developercommunity.visualstudio.com/t/After-VSIXExtension-installation-deven/10841757) |\n| \"Windows Principal functionality is not supported on this platform.\" on Docker ComposeBuild in 17.13.0 | [Feedback ticket](https://developercommunity.visualstudio.com/t/Windows-Principal-functionality-is-not-/10846779) |\n| MSBuild script fails after upgrade to 17.13.0 | [Feedback ticket](https://developercommunity.visualstudio.com/t/MSBuild-script-fails-after-upgrade-to-17/10851447) |",
+  "body_html": "<p><em>Released February 26<sup>th</sup>, 2025</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Fixed a hang during VS shutdown when the /setup command line parameter is specified.</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/After-VSIXExtension-installation-deven/10841757\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">\"Windows Principal functionality is not supported on this platform.\" on Docker ComposeBuild in 17.13.0</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Windows-Principal-functionality-is-not-/10846779\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">MSBuild script fails after upgrade to 17.13.0</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/MSBuild-script-fails-after-upgrade-to-17/10851447\">Feedback ticket</a></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-15T18:39:28Z",
+  "schema_version": 1
+}

@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.14.23",
+  "release_date": "2025-12-16",
+  "title": "Version 17.14.23",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes",
+  "source": "html",
+  "body_markdown": "*Released December 16th, 2025*\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Search is broken in the MCP Registries window | [Feedback ticket](https://developercommunity.visualstudio.com/t/Search-is-broken-in-the-MCP-Registries-w/10996717) |\n| Updated vcpkg to [2025-11-19](https://github.com/microsoft/vcpkg-tool/releases/tag/2025-11-19) |  |\n\n---",
+  "body_html": "<p><em>Released December 16<sup>th</sup>, 2025</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Search is broken in the MCP Registries window</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Search-is-broken-in-the-MCP-Registries-w/10996717\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Updated vcpkg to <a data-linktype=\"external\" href=\"https://github.com/microsoft/vcpkg-tool/releases/tag/2025-11-19\">2025-11-19</a></td>\n<td style=\"text-align: right;\"></td>\n</tr>\n</tbody>\n</table>\n<hr/>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-15T18:39:28Z",
+  "schema_version": 1
+}
