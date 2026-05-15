@@ -35,12 +35,24 @@ def _parse_minor_from_start_version(start_version: str) -> int:
     return int(parts[1])
 
 
+def _entry_is_insiders(entry) -> bool:
+    """Return True when a feed entry is for the rolling Insiders notes page."""
+    text_parts = [entry.get("title", ""), entry.get("summary", ""), entry.get("subtitle", "")]
+    for content in entry.get("content", []):
+        if isinstance(content, dict):
+            text_parts.append(content.get("value", ""))
+        else:
+            text_parts.append(str(content))
+    return any("insiders" in str(text).lower() for text in text_parts)
+
+
 def _parse_feed(feed_xml: str) -> tuple[int, dict[int, str]]:
     """Parse the Atom feed XML and return (latest_minor, {minor: date}).
 
     Only entries whose tags include ``release`` and whose link matches the
     ``/updates/v1_N`` pattern are considered.  Blog or other entries are
-    silently skipped.
+    silently skipped. Rolling Insiders entries are also excluded so we only
+    track stable releases.
 
     Returns:
         latest_minor: the highest minor N found in the feed.
@@ -55,6 +67,8 @@ def _parse_feed(feed_xml: str) -> tuple[int, dict[int, str]]:
     for entry in parsed.entries:
         tags = [t.get("term", "") for t in getattr(entry, "tags", [])]
         if "release" not in tags:
+            continue
+        if _entry_is_insiders(entry):
             continue
         link = entry.get("link", "")
         m = _RELEASE_URL_RE.search(link)
@@ -72,6 +86,16 @@ def _parse_feed(feed_xml: str) -> tuple[int, dict[int, str]]:
         raise ValueError("No release entries found in the VS Code Atom feed.")
 
     return max(feed_dates.keys()), feed_dates
+
+
+def _page_is_insiders(soup: BeautifulSoup) -> bool:
+    """Return True when the fetched page is the rolling Insiders release notes."""
+    current_entry = soup.select_one("#docs-navbar li.active a")
+    if current_entry and current_entry.get_text(" ", strip=True).lower() == "insiders":
+        return True
+
+    selected_option = soup.select_one("#small-nav-dropdown option[selected]")
+    return bool(selected_option) and selected_option.get_text(" ", strip=True).lower() == "insiders"
 
 
 def _extract_date_from_html(html: str) -> str | None:
@@ -134,6 +158,9 @@ def fetch(ide_config: dict) -> list[dict]:
 
         # Extract <main> for body content (falls back to full body if absent).
         soup = BeautifulSoup(html, "lxml")
+        if _page_is_insiders(soup):
+            print(f"  [warn] Skipping VS Code Insiders page for {version}.")
+            continue
         main_tag = soup.find("main") or soup.find("article") or soup.body
         body_html = str(main_tag) if main_tag else html
 
