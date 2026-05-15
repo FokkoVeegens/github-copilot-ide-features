@@ -1,10 +1,14 @@
 """Tests for scripts/fetchers/vs_code.py"""
 from unittest.mock import patch
 
+import feedparser
 import pytest
+from bs4 import BeautifulSoup
 
 from scripts.fetchers.vs_code import (
+    _entry_is_insiders,
     _extract_date_from_html,
+    _page_is_insiders,
     _parse_feed,
     _parse_minor_from_start_version,
     fetch,
@@ -37,6 +41,15 @@ _FAKE_FEED_XML = """\
     <link rel="alternate" href="https://code.visualstudio.com/updates/v1_75"/>
     <category term="release"/>
     <updated>2023-02-01T00:00:00Z</updated>
+  </entry>
+  <entry>
+    <title>VS Code 1.77</title>
+    <link rel="alternate" href="https://code.visualstudio.com/updates/v1_77"/>
+    <category term="release"/>
+    <updated>2023-03-08T00:00:00Z</updated>
+    <content type="html">
+      &lt;p&gt;Learn what's new in Visual Studio Code 1.77 (Insiders)&lt;/p&gt;
+    </content>
   </entry>
   <entry>
     <title>A blog post</title>
@@ -92,6 +105,28 @@ _FAKE_PAGE_HTML_NO_DATE = """\
 </html>
 """
 
+_FAKE_PAGE_HTML_INSIDERS = """\
+<!DOCTYPE html>
+<html>
+<body>
+  <aside>
+    <nav id="docs-navbar">
+      <ul>
+        <li class="active"><a aria-label="Current Page: Insiders" href="/updates/v1_77">Insiders</a></li>
+      </ul>
+    </nav>
+    <select id="small-nav-dropdown">
+      <option selected="" value="/updates/v1_77">Insiders</option>
+    </select>
+  </aside>
+  <main>
+    <h1>Visual Studio Code 1.77</h1>
+    <p>Welcome to the latest rolling release.</p>
+  </main>
+</body>
+</html>
+"""
+
 
 class TestParseMinorFromStartVersion:
     def test_three_part_version(self):
@@ -125,6 +160,11 @@ class TestParseFeed:
         # No entry for a blog URL should appear (blog entry has no /updates/v1_N link)
         assert len(feed_dates) == 2
 
+    def test_insiders_entries_are_excluded(self):
+        latest_minor, feed_dates = _parse_feed(_FAKE_FEED_XML)
+        assert latest_minor == 76
+        assert 77 not in feed_dates
+
     def test_no_release_entries_raises(self):
         blog_only_feed = """\
 <?xml version="1.0"?>
@@ -154,6 +194,17 @@ class TestParseFeed:
         latest, dates = _parse_feed(feed_with_updated_only)
         assert latest == 80
         assert dates[80] == "2023-08-01"
+
+
+class TestInsidersDetection:
+    def test_feed_entry_insiders_detected_from_content(self):
+        parsed = feedparser.parse(_FAKE_FEED_XML)
+        insiders_entry = next(entry for entry in parsed.entries if entry.get("link", "").endswith("v1_77"))
+        assert _entry_is_insiders(insiders_entry) is True
+
+    def test_page_is_insiders_detected_from_active_navigation(self):
+        soup = BeautifulSoup(_FAKE_PAGE_HTML_INSIDERS, "lxml")
+        assert _page_is_insiders(soup) is True
 
 
 class TestExtractDateFromHtml:
@@ -329,3 +380,15 @@ class TestFetch:
 
         assert len(results) == 1
         assert results[0]["version"] == "1.76.0"
+
+    def test_insiders_page_is_skipped(self):
+        pages = {
+            "https://code.visualstudio.com/feed.xml": _FAKE_FEED_XML,
+            "https://code.visualstudio.com/updates/v1_75": _FAKE_PAGE_HTML_75,
+            "https://code.visualstudio.com/updates/v1_76": _FAKE_PAGE_HTML_76,
+        }
+        with patch("scripts.fetchers.vs_code.get_text", side_effect=self._make_get_text_side_effect(pages)):
+            results = fetch(_IDE_CONFIG)
+
+        versions = {r["version"] for r in results}
+        assert versions == {"1.75.0", "1.76.0"}
