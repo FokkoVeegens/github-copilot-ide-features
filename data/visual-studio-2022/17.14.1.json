@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.14.1",
+  "release_date": "2025-05-21",
+  "title": "Version 17.14.1",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes",
+  "source": "html",
+  "body_markdown": "*Released May 21th, 2025*\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Feature 'xxx' is currently unavailable due to an internal error. System.NotSupportedException : The given path's format is not supported. | [Feedback ticket](https://developercommunity.visualstudio.com/t/Feature-xxx-is-currently-unavailable-d/10899992) |\n| Fixed an issue that occurs when creating an upload package for the Microsoft Store. | [Feedback ticket](https://developercommunity.visualstudio.com/t/While-creating-package-facing-error-Rem/10830082) |\n| Fixed an issue with the Razor source generator that could cause it to fail to run with a `System.ArgumentOutOfRangeException`. |  |\n| Fixed an issue that addresses a hang that occurred when closing a resource file editor before it completed initialization. |  |",
+  "body_html": "<p><em>Released May 21<sup>th</sup>, 2025</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Feature 'xxx' is currently unavailable due to an internal error. System.NotSupportedException : The given path's format is not supported.</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Feature-xxx-is-currently-unavailable-d/10899992\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Fixed an issue that occurs when creating an upload package for the Microsoft Store.</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/While-creating-package-facing-error-Rem/10830082\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Fixed an issue with the Razor source generator that could cause it to fail to run with a <code>System.ArgumentOutOfRangeException</code>.</td>\n<td style=\"text-align: right;\"></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Fixed an issue that addresses a hang that occurred when closing a resource file editor before it completed initialization.</td>\n<td style=\"text-align: right;\"></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-15T19:10:40Z",
+  "schema_version": 1
+}

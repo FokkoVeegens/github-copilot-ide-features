@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.12.18",
+  "release_date": "2026-03-10",
+  "title": "Version 17.12.18",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.12",
+  "source": "html",
+  "body_markdown": "*Released March 10th, 2026*\n\n| Security advisories addressed | CVE | Descritpion |\n| --- | --- | --- |\n| .NET Denial of Service Vulnerability | [**CVE-2026-26130**](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26130) | A denial of service vulnerability exists in ASP.NET Core due to uncontrolled resource consumption. |\n| .NET Elevation of Privilege Vulnerability | [**CVE-2026-26131**](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26131) | An elevation of privilege vulnerability exists in .NET due to improper authorization. |\n| Visual Studio Information Disclosure Vulnerability | [**CVE-2025-66413**](https://www.cve.org/CVERecord?id=CVE-2025-66413) | An information disclosure vulnerability exists in MinGit due to NTLM hash leak to untrusted server. |",
+  "body_html": "<p><em>Released March 10<sup>th</sup>, 2026</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Security advisories addressed</th>\n<th style=\"text-align: left;\">CVE</th>\n<th style=\"text-align: left;\">Descritpion</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">.NET Denial of Service Vulnerability</td>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26130\"><strong>CVE-2026-26130</strong></a></td>\n<td style=\"text-align: left;\">A denial of service vulnerability exists in ASP.NET Core due to uncontrolled resource consumption.</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">.NET Elevation of Privilege Vulnerability</td>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26131\"><strong>CVE-2026-26131</strong></a></td>\n<td style=\"text-align: left;\">An elevation of privilege vulnerability exists in .NET due to improper authorization.</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Visual Studio Information Disclosure Vulnerability</td>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://www.cve.org/CVERecord?id=CVE-2025-66413\"><strong>CVE-2025-66413</strong></a></td>\n<td style=\"text-align: left;\">An information disclosure vulnerability exists in MinGit due to NTLM hash leak to untrusted server.</td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-15T19:10:40Z",
+  "schema_version": 1
+}

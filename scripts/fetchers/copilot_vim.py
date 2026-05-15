@@ -1,10 +1,21 @@
 """Vim/Neovim fetcher — feature matrix from GitHub Copilot docs."""
-import re
 
 from bs4 import BeautifulSoup, Tag
 
 from scripts.common.config import require_config_value
 from scripts.common.extract import extract_copilot_mentions
+from scripts.common.feature_matrix import (
+    find_next_table as _find_next_table,
+)
+from scripts.common.feature_matrix import (
+    find_section_heading as _find_section_heading,
+)
+from scripts.common.feature_matrix import (
+    parse_feature_table,
+)
+from scripts.common.feature_matrix import (
+    table_to_markdown as _shared_table_to_markdown,
+)
 from scripts.common.http import get_text
 
 # (heading text on the page, version key for the JSON file, approximate release date)
@@ -15,9 +26,6 @@ _SECTIONS: list[tuple[str, str, str]] = [
     ("NeoVim 2022 releases", "neovim-2022", "2022-01-01"),
     ("NeoVim 2021 releases", "neovim-2021", "2021-01-01"),
 ]
-
-_HEADING_RE = re.compile(r"^h[1-6]$")
-
 
 def fetch(ide_config: dict) -> list[dict]:
     source_url = require_config_value(ide_config, "source_url")
@@ -74,24 +82,9 @@ def _extract_plugin_versions(
     supported) are included in the record's body_markdown.
     """
     source_url = source_url or require_config_value(ide_config, "source_url")
-    rows = table.find_all("tr")
-    if not rows:
+    plugin_versions, data_rows = parse_feature_table(table)
+    if not plugin_versions:
         return []
-
-    header_cells = rows[0].find_all(["th", "td"])
-    if len(header_cells) < 2:
-        return []
-
-    plugin_versions = [c.get_text(strip=True) for c in header_cells[1:]]
-
-    data_rows: list[tuple[str, list[str]]] = []
-    for row in rows[1:]:
-        cells = row.find_all(["th", "td"])
-        if not cells:
-            continue
-        feature = cells[0].get_text(strip=True)
-        values = [c.get_text(strip=True) for c in cells[1:]]
-        data_rows.append((feature, values))
 
     results = []
     for col_idx, plugin_version in enumerate(plugin_versions):
@@ -126,46 +119,5 @@ def _extract_plugin_versions(
     return results
 
 
-def _find_section_heading(soup: BeautifulSoup, text: str) -> Tag | None:
-    """Find a heading element whose text content matches *text* (case-insensitive)."""
-    text_lower = text.lower()
-    for tag in soup.find_all(_HEADING_RE):
-        if tag.get_text(strip=True).lower() == text_lower:
-            return tag
-    return None
-
-
-def _find_next_table(heading: Tag) -> Tag | None:
-    """Return the first <table> after *heading*, stopping before the next same-or-higher heading."""
-    heading_level = int(heading.name[1])
-    for element in heading.next_siblings:
-        if not isinstance(element, Tag):
-            continue
-        if _HEADING_RE.match(element.name or "") and int(element.name[1]) <= heading_level:
-            break
-        if element.name == "table":
-            return element
-        nested = element.find("table")
-        if nested:
-            return nested
-    return None
-
-
 def _table_to_markdown(table: Tag) -> str:
-    """Convert a <table> element to a Markdown table string."""
-    rows = table.find_all("tr")
-    if not rows:
-        return ""
-
-    md_rows: list[str] = []
-    for i, row in enumerate(rows):
-        cells = [
-            c.get_text(strip=True).replace("|", "\\|") for c in row.find_all(["th", "td"])
-        ]
-        if not cells:
-            continue
-        md_rows.append("| " + " | ".join(cells) + " |")
-        if i == 0:
-            md_rows.append("| " + " | ".join(["---"] * len(cells)) + " |")
-
-    return "\n".join(md_rows)
+    return _shared_table_to_markdown(table)

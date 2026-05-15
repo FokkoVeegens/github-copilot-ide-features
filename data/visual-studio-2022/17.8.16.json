@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.8.16",
+  "release_date": "2024-11-12",
+  "title": "Visual Studio 2022 version 17.8.16",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.8",
+  "source": "html",
+  "body_markdown": "*released November 12th, 2024*\n\n### What's New in this release\n\n### Developer Community\n\n* [Incorrect codegen at /O2 in MSVC toolset v19.38 and up](https://developercommunity.visualstudio.com/t/Incorrect-codegen-at-O2-in-MSVC-toolset/10764869)\n\n### Security advisories addressed\n\n* [**CVE-2024-43498**](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43498).NET NrbfDecoder component Remote Code Execution Vulnerability\n* [**CVE-2024-43499**](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43499).NET NrbfDecoder component Denial of Service Vulnerability\n* [**CVE-2024-49044**](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-49044) Visual Studio Elevation of Privilege Vulnerability",
+  "body_html": "<p><em>released November 12th, 2024</em></p>\n<h3 id=\"whats-new-in-this-release-5\">What's New in this release</h3>\n<h3 id=\"developer-community-2\">Developer Community</h3>\n<ul>\n<li><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Incorrect-codegen-at-O2-in-MSVC-toolset/10764869\">Incorrect codegen at /O2 in MSVC toolset v19.38 and up</a></li>\n</ul>\n<h3 id=\"security-advisories-addressed-7\">Security advisories addressed</h3>\n<ul>\n<li><a data-linktype=\"external\" href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43498\"><strong>CVE-2024-43498</strong></a>.NET NrbfDecoder component Remote Code Execution Vulnerability</li>\n<li><a data-linktype=\"external\" href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43499\"><strong>CVE-2024-43499</strong></a>.NET NrbfDecoder component Denial of Service Vulnerability</li>\n<li><a data-linktype=\"external\" href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-49044\"><strong>CVE-2024-49044</strong></a> Visual Studio Elevation of Privilege Vulnerability</li>\n</ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-15T19:10:40Z",
+  "schema_version": 1
+}

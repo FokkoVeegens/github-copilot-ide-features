@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.7.2",
+  "release_date": "2023-08-22",
+  "title": "Visual Studio 2022 version 17.7.2",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.7",
+  "source": "html",
+  "body_markdown": "*released Aug 22nd, 2023*\n\n### Summary of What's New in this Release of Visual Studio 2022 version 17.7.2\n\n* Certain endpoint security and application control programs were inducing instability in Visual Studio. This has been addressed.\n* Fixed crashes experienced by some users of the \"Install WSL For Me\" experience.\n* Users who opened a folder containing a CMake project may have experienced an indefinite hang in Visual Studio. The race condition causing this hang has been identified and fixed.\n\n### Developer Community\n\n* [Remove Github actions from solution explorer](https://developercommunity.visualstudio.com/t/Remove-Github-actions-from-solution-expl/10433404)\n* [Diagnostic Suppressors are not taken into account in the QuickInfo tooltip with VS 2022 17.7](https://developercommunity.visualstudio.com/t/SuppressMessage-attribute-is-being-ign/10439130)",
+  "body_html": "<p><em>released Aug 22nd, 2023</em></p>\n<h3 id=\"summary-of-whats-new-in-this-release-of-visual-studio-2022-version-1772\">Summary of What's New in this Release of Visual Studio 2022 version 17.7.2</h3>\n<ul>\n<li>Certain endpoint security and application control programs were inducing instability in Visual Studio. This has been addressed.</li>\n<li>Fixed crashes experienced by some users of the \"Install WSL For Me\" experience.</li>\n<li>Users who opened a folder containing a CMake project may have experienced an indefinite hang in Visual Studio. The race condition causing this hang has been identified and fixed.</li>\n</ul>\n<h3 id=\"developer-community-4\">Developer Community</h3>\n<ul>\n<li><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Remove-Github-actions-from-solution-expl/10433404\">Remove Github actions from solution explorer</a></li>\n<li><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/SuppressMessage-attribute-is-being-ign/10439130\">Diagnostic Suppressors are not taken into account in the QuickInfo tooltip with VS 2022 17.7</a></li>\n</ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-15T19:10:40Z",
+  "schema_version": 1
+}

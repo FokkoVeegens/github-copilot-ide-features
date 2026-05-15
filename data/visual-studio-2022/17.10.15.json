@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.10.15",
+  "release_date": "2025-05-22",
+  "title": "Visual Studio 2022 version 17.10.15",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.10",
+  "source": "html",
+  "body_markdown": "*released May 22nd, 2025*\n\n### Security advisories addressed\n\n* Republishing [**CVE-2025-26646**](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-26646) .NET - Spoofing - Elevation of Privilege in msbuild's DownloadFile tasks default behaviors",
+  "body_html": "<p><em>released May 22nd, 2025</em></p>\n<h3 id=\"security-advisories-addressed-3\">Security advisories addressed</h3>\n<ul>\n<li>Republishing <a data-linktype=\"external\" href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-26646\"><strong>CVE-2025-26646</strong></a> .NET - Spoofing - Elevation of Privilege in msbuild's DownloadFile tasks default behaviors</li>\n</ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-15T19:10:40Z",
+  "schema_version": 1
+}

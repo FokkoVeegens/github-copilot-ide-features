@@ -108,3 +108,14 @@ class TestGetText:
 
         mock_get_session.assert_called_once()
         mock_no_auth.assert_not_called()
+
+    def test_explicit_encoding_decodes_response_content(self):
+        mock_response = MagicMock()
+        mock_response.content = "Markdown Mermaid\u200b".encode("utf-8")
+        mock_session = MagicMock()
+        mock_session.get.return_value = mock_response
+
+        with patch.object(http_module, "get_session_no_auth", return_value=mock_session):
+            result = get_text("https://example.com/data", use_auth=False, encoding="utf-8")
+
+        assert result == "Markdown Mermaid\u200b"

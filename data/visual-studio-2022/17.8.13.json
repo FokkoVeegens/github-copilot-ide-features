@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.8.13",
+  "release_date": "2024-08-13",
+  "title": "Visual Studio 2022 version 17.8.13",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.8",
+  "source": "html",
+  "body_markdown": "*released August 13th, 2024*\n\n### Summary of What's New in this release\n\n* Reduce ILK file size during incremental linking.\n\n### Security advisories addressed\n\n* [**CVE-2024-38167**](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38167) A vulnerability exists in .NET runtime TlsStream which may result in Information Disclosure.\n* [**CVE-2024-38168**](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38168) A vulnerability exists in .NET when an attacker through unauthenticated requests may trigger a Denial of Service in ASP.NET HTTP.sys web server. This is a windows OS only vulnerability.",
+  "body_html": "<p><em>released August 13th, 2024</em></p>\n<h3 id=\"summary-of-whats-new-in-this-release\">Summary of What's New in this release</h3>\n<ul>\n<li>Reduce ILK file size during incremental linking.</li>\n</ul>\n<h3 id=\"security-advisories-addressed-10\">Security advisories addressed</h3>\n<ul>\n<li><a data-linktype=\"external\" href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38167\"><strong>CVE-2024-38167</strong></a> A vulnerability exists in .NET runtime TlsStream which may result in Information Disclosure.</li>\n<li><a data-linktype=\"external\" href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38168\"><strong>CVE-2024-38168</strong></a> A vulnerability exists in .NET when an attacker through unauthenticated requests may trigger a Denial of Service in ASP.NET HTTP.sys web server. This is a windows OS only vulnerability.</li>\n</ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-15T19:10:40Z",
+  "schema_version": 1
+}

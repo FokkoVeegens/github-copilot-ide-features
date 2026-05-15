@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.8.1",
+  "release_date": "2023-11-21",
+  "title": "Visual Studio 2022 version 17.8.1",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.8",
+  "source": "html",
+  "body_markdown": "*released Nov 21st, 2023*\n\n### Summary of What's New in this Release of Visual Studio 2022 version 17.8.1\n\n* The updated version of IncrediBuild fixes an issue where building CMake projects using the standard build menu commands would incorrectly redirect the build to use IncrediBuild by default.\n\n### Developer Community\n\n* [Angular and ASP.NET Core template error: app.module.ts not found](https://developercommunity.visualstudio.com/t/Angular-and-ASPNET-Core-template-error:/10512806)",
+  "body_html": "<p><em>released Nov 21st, 2023</em></p>\n<h3 id=\"summary-of-whats-new-in-this-release-of-visual-studio-2022-version-1781\">Summary of What's New in this Release of Visual Studio 2022 version 17.8.1</h3>\n<ul>\n<li>The updated version of IncrediBuild fixes an issue where building CMake projects using the standard build menu commands would incorrectly redirect the build to use IncrediBuild by default.</li>\n</ul>\n<h3 id=\"developer-community-14\">Developer Community</h3>\n<ul>\n<li><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Angular-and-ASPNET-Core-template-error:/10512806\">Angular and ASP.NET Core template error: app.module.ts not found</a></li>\n</ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-15T19:10:40Z",
+  "schema_version": 1
+}

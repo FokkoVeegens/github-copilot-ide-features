@@ -84,7 +84,13 @@ def get_json(
     return response.json()
 
 
-def get_text(url: str, *, params: dict | None = None, use_auth: bool = True) -> str:
+def get_text(
+    url: str,
+    *,
+    params: dict | None = None,
+    use_auth: bool = True,
+    encoding: str | None = None,
+) -> str:
     """GET *url* and return the response body as text.
 
     Pass ``use_auth=False`` for third-party APIs that must not receive the
@@ -93,6 +99,8 @@ def get_text(url: str, *, params: dict | None = None, use_auth: bool = True) -> 
     session = get_session() if use_auth else get_session_no_auth()
     response = session.get(url, params=params, timeout=_DEFAULT_TIMEOUT)
     response.raise_for_status()
+    if encoding is not None:
+        return response.content.decode(encoding)
     return response.text
 
 

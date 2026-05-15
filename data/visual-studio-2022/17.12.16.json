@@ -1,0 +1,16 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.12.16",
+  "release_date": "2026-01-13",
+  "title": "Version 17.12.16",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.12",
+  "source": "html",
+  "body_markdown": "*Released January 13th, 2026*\n\n| Top bug fixes | From the community |\n| --- | --- |\n| GitHub Copilot: auth failure while using Auto model | [Feedback ticket](https://developercommunity.visualstudio.com/t/GitHub-Copilot:-There-was-a-problem-comp/11013317) |",
+  "body_html": "<p><em>Released January 13<sup>th</sup>, 2026</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">GitHub Copilot: auth failure while using Auto model</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/GitHub-Copilot:-There-was-a-problem-comp/11013317\">Feedback ticket</a></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [
+    "| GitHub Copilot: auth failure while using Auto model | [Feedback ticket](https://developercommunity.visualstudio.com/t/GitHub-Copilot:-There-was-a-problem-comp/11013317) |"
+  ],
+  "fetched_at": "2026-05-15T19:10:40Z",
+  "schema_version": 1
+}

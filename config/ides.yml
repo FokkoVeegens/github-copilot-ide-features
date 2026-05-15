@@ -48,6 +48,12 @@ ides:
     start_version: "17.14.0"
     source_url: https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes
 
+  - id: visual-studio-2022
+    name: Visual Studio 2022
+    data_dir: data/visual-studio-2022
+    fetcher: visual_studio_2022
+    start_version: "17.7"
+    source_url: https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-history
+
   # Real IDE entries will be added in subsequent MVPs:
-  # - id: visual-studio-2022
   # - id: sql-server-management-studio

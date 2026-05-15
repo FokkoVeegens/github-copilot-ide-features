@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.10.18",
+  "release_date": "2025-08-12",
+  "title": "Visual Studio 2022 version 17.10.18",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.10",
+  "source": "html",
+  "body_markdown": "*released August 12th, 2025*\n\n### What's New in this release\n\nThe following Windows SDK versions have been removed from the Visual Studio 2022 installer:\n\n* 10.0.18362.0\n* 10.0.20348.0\n* 10.0.22000.0\n\nIf you previously installed one of these versions of the SDK using Visual Studio it will be uninstalled when you update. If your project targets any of these SDKs you may encounter a build error such as:\n*The Windows SDK version 10.0.22000.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting \"Retarget solution\".*\n\nTo resolve this, we recommend retargeting your project to 10.0.22621.0, or an earlier supported version if necessary. For a complete list of supported SDK versions please visit: <https://developer.microsoft.com/windows/downloads/sdk-archive/>. If you need to install an unsupported version of the SDK, you can find it here: <https://developer.microsoft.com/windows/downloads/sdk-archive/index-legacy/>.",
+  "body_html": "<p><em>released August 12th, 2025</em></p>\n<h3 id=\"whats-new-in-this-release-3\">What's New in this release</h3>\n<p>The following Windows SDK versions have been removed from the Visual Studio 2022 installer:</p>\n<ul>\n<li>10.0.18362.0</li>\n<li>10.0.20348.0</li>\n<li>10.0.22000.0</li>\n</ul>\n<p>If you previously installed one of these versions of the SDK using Visual Studio it will be uninstalled when you update.  If your project targets any of these SDKs you may encounter a build error such as:\n<em>The Windows SDK version 10.0.22000.0 was not found.  Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting \"Retarget solution\".</em></p>\n<p>To resolve this, we recommend retargeting your project to 10.0.22621.0, or an earlier supported version if necessary.  For a complete list of supported SDK versions please visit: <a data-linktype=\"external\" href=\"https://developer.microsoft.com/windows/downloads/sdk-archive/\">https://developer.microsoft.com/windows/downloads/sdk-archive/</a>.  If you need to install an unsupported version of the SDK, you can find it here: <a data-linktype=\"external\" href=\"https://developer.microsoft.com/windows/downloads/sdk-archive/index-legacy/\">https://developer.microsoft.com/windows/downloads/sdk-archive/index-legacy/</a>.</p>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-15T19:10:40Z",
+  "schema_version": 1
+}
