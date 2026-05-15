@@ -9,6 +9,6 @@
   "body_html": "<p><em>Released February 10<sup>th</sup>, 2026</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Security advisories addressed</th>\n<th style=\"text-align: left;\">CVE</th>\n<th style=\"text-align: left;\">Descritpion</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">.NET Security Feature Bypass Vulnerability</td>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21218\"><strong>CVE-2026-21218</strong></a></td>\n<td style=\"text-align: left;\">This security update addresses a vulnerability where improper handling of missing special element in .NET and Visual Studio allows an authorized attacker to perform spoofing over a network.</td>\n</tr>\n</tbody>\n</table>",
   "categories": [],
   "copilot_mentions": [],
-  "fetched_at": "2026-05-15T18:39:28Z",
+  "fetched_at": "2026-05-15T19:10:40Z",
   "schema_version": 1
 }

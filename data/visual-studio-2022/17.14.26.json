@@ -12,6 +12,6 @@
     "| Github Copilot and Visual Studio Remote Code Execution Vulnerability | [**CVE-2026-21256**](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21256) | This security update addresses a vulnerability where Improper neutralization of special elements used in a command ('command injection') in GitHub Copilot and Visual Studio allows an unauthorized attacker to execute code over a network. |",
     "| Github Copilot and Visual Studio Security Feature Bypass Vulnerability | [**CVE-2026-21257**](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21257) | This security update addresses a vulnerability where improper neutralization of special elements used in a command ('command injection') in GitHub Copilot and Visual Studio allows an authorized attacker to elevate privileges over a network. |"
   ],
-  "fetched_at": "2026-05-15T18:39:28Z",
+  "fetched_at": "2026-05-15T19:10:40Z",
   "schema_version": 1
 }

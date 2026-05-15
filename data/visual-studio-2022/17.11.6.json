@@ -9,6 +9,6 @@
   "body_html": "<p><em>Released November 12<sup>th</sup>, 2024</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Security advisories addressed</th>\n<th style=\"text-align: right;\">CVE</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">.NET Remote Code Execution Vulnerability</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43498\"><strong>CVE-2024-43498</strong></a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">.NET Denial of Service Vulnerability</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43499\"><strong>CVE-2024-43499</strong></a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Visual Studio Elevation of Privilege</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-49044\"><strong>CVE-2024-49044</strong></a></td>\n</tr>\n</tbody>\n</table>",
   "categories": [],
   "copilot_mentions": [],
-  "fetched_at": "2026-05-15T18:39:28Z",
+  "fetched_at": "2026-05-15T19:10:40Z",
   "schema_version": 1
 }

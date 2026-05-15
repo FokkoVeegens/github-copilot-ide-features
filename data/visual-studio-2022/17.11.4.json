@@ -11,6 +11,6 @@
   "copilot_mentions": [
     "| This fix addresses the scenario where the addition of a GitHub account without copilot license puts copilot into an error state, which causes copilot to be unavailable for use. | [Feedback ticket](https://developercommunity.visualstudio.com/t/After-update-to-Visual-Studio-1711-Copi/10730664) |"
   ],
-  "fetched_at": "2026-05-15T18:39:28Z",
+  "fetched_at": "2026-05-15T19:10:40Z",
   "schema_version": 1
 }

@@ -9,6 +9,6 @@
   "body_html": "<p><em>Released August 27<sup>th</sup>, 2024</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Fixed Visual Studio Installer failure when installing PackageId:AndroidPlatformMAUI2.</td>\n<td style=\"text-align: right;\"></td>\n</tr>\n</tbody>\n</table>",
   "categories": [],
   "copilot_mentions": [],
-  "fetched_at": "2026-05-15T18:39:28Z",
+  "fetched_at": "2026-05-15T19:10:40Z",
   "schema_version": 1
 }

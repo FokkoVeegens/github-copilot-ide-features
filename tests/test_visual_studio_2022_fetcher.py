@@ -50,6 +50,10 @@ _FAKE_17_14_HTML = """\
   <h2>Version 17.14.1</h2>
   <p>Released April 8th, 2025</p>
   <div><p>Servicing fixes.</p></div>
+  <hr />
+  <p>From our entire team, thank you for choosing Visual Studio!</p>
+  <p><strong>Happy coding!</strong></p>
+  <div class="NOTE"><p>This update may include new third-party software that is licensed separately, as set out in the 3rd Party Notices.</p></div>
 </body>
 </html>
 """
@@ -107,8 +111,9 @@ class TestFetch:
             "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.7": _FAKE_17_7_HTML,
         }
 
-        def fake_get_text(url: str, *, use_auth: bool) -> str:
+        def fake_get_text(url: str, *, use_auth: bool, encoding: str | None = None) -> str:
             assert use_auth is False
+            assert encoding == "utf-8"
             return responses[url]
 
         with patch("scripts.fetchers.visual_studio_2022.get_text", side_effect=fake_get_text):
@@ -126,6 +131,8 @@ class TestFetch:
         by_version = {record["version"]: record for record in results}
         assert by_version["17.14.2"]["url"].endswith("release-notes")
         assert "prompt files" in by_version["17.14.2"]["body_markdown"].lower()
+        assert "Happy coding!" not in by_version["17.14.1"]["body_markdown"]
+        assert "3rd Party Notices" not in by_version["17.14.1"]["body_markdown"]
         assert any("Copilot" in line for line in by_version["17.7"]["copilot_mentions"])
 
 
@@ -138,8 +145,9 @@ class TestSchemaValidation:
             "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes-v17.7": _FAKE_17_7_HTML,
         }
 
-        def fake_get_text(url: str, *, use_auth: bool) -> str:
+        def fake_get_text(url: str, *, use_auth: bool, encoding: str | None = None) -> str:
             assert use_auth is False
+            assert encoding == "utf-8"
             return responses[url]
 
         schema = json.loads(pathlib.Path("scripts/common/schema.json").read_text())

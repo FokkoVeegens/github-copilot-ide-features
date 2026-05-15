@@ -11,6 +11,6 @@
   "copilot_mentions": [
     "| The Copilot indexer process no longer locks files. | [Feedback ticket](https://developercommunity.visualstudio.com/t/MIDL2212:-error-while-writing-to-file-r/10730561) |"
   ],
-  "fetched_at": "2026-05-15T18:39:28Z",
+  "fetched_at": "2026-05-15T19:10:40Z",
   "schema_version": 1
 }

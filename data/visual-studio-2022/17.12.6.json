@@ -11,6 +11,6 @@
   "copilot_mentions": [
     "| Fixed an issue in C# inline rename where the entire identifier was selected when rename suggestions were available. This would override the developer's selection and could lead to mistyping, especially if the developer moved the caret within the inline rename interface. Now, Copilot rename suggestions will not alter the selection within the inline rename interface. | [Feedback ticket](https://developercommunity.visualstudio.com/t/Copilot-destroys-text-selection-state-in/10823584) |"
   ],
-  "fetched_at": "2026-05-15T18:39:28Z",
+  "fetched_at": "2026-05-15T19:10:40Z",
   "schema_version": 1
 }

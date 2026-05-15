@@ -9,6 +9,6 @@
   "body_html": "<p><em>Released November 11<sup>th</sup>, 2025</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">New Visual Studio 2022 Updates Include LibCurl Library that Breaks Git</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/New-Visual-Studio-2022-Updates-Include-L/10965826\">Feedback ticket</a></td>\n</tr>\n</tbody>\n</table>",
   "categories": [],
   "copilot_mentions": [],
-  "fetched_at": "2026-05-15T18:39:28Z",
+  "fetched_at": "2026-05-15T19:10:40Z",
   "schema_version": 1
 }

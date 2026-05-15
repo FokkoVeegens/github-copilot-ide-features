@@ -5,12 +5,12 @@
   "title": "Version 17.14.19",
   "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes",
   "source": "html",
-  "body_markdown": "*Released October 27th, 2025*\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Copilot Language Server recognized as a threat by McAfee antivirus | [Feedback ticket](https://developercommunity.visualstudio.com/t/Copilot-Language-Server-recognized-as-a-/10982999) |\n\n---",
-  "body_html": "<p><em>Released October 27<sup>th</sup>, 2025</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Copilot Language Server recognized as a threat by McAfee antivirus</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Copilot-Language-Server-recognized-as-a-/10982999\">Feedback ticket</a></td>\n</tr>\n</tbody>\n</table>\n<hr/>",
+  "body_markdown": "*Released October 27th, 2025*\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Copilot Language Server recognized as a threat by McAfee antivirus | [Feedback ticket](https://developercommunity.visualstudio.com/t/Copilot-Language-Server-recognized-as-a-/10982999) |",
+  "body_html": "<p><em>Released October 27<sup>th</sup>, 2025</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Copilot Language Server recognized as a threat by McAfee antivirus</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Copilot-Language-Server-recognized-as-a-/10982999\">Feedback ticket</a></td>\n</tr>\n</tbody>\n</table>",
   "categories": [],
   "copilot_mentions": [
     "| Copilot Language Server recognized as a threat by McAfee antivirus | [Feedback ticket](https://developercommunity.visualstudio.com/t/Copilot-Language-Server-recognized-as-a-/10982999) |"
   ],
-  "fetched_at": "2026-05-15T18:39:28Z",
+  "fetched_at": "2026-05-15T19:10:40Z",
   "schema_version": 1
 }

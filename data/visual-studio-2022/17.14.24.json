@@ -5,12 +5,12 @@
   "title": "Version 17.14.24",
   "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes",
   "source": "html",
-  "body_markdown": "*Released January 13th, 2026*\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Visual Studio 2022 doesn't update through the Extension manager fails for our WPF Extension. | [Feedback ticket](https://developercommunity.visualstudio.com/t/Visual-Studio-2022-doesnt-update-throug/11016589) |\n| Cannot change Copilot settings | [Feedback ticket](https://developercommunity.visualstudio.com/t/Cannot-change-Copilot-settings/11003871) |\n\n---",
-  "body_html": "<p><em>Released January 13<sup>th</sup>, 2026</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Visual Studio 2022 doesn't update through the Extension manager fails for our WPF Extension.</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Visual-Studio-2022-doesnt-update-throug/11016589\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Cannot change Copilot settings</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Cannot-change-Copilot-settings/11003871\">Feedback ticket</a></td>\n</tr>\n</tbody>\n</table>\n<hr/>",
+  "body_markdown": "*Released January 13th, 2026*\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Visual Studio 2022 doesn't update through the Extension manager fails for our WPF Extension. | [Feedback ticket](https://developercommunity.visualstudio.com/t/Visual-Studio-2022-doesnt-update-throug/11016589) |\n| Cannot change Copilot settings | [Feedback ticket](https://developercommunity.visualstudio.com/t/Cannot-change-Copilot-settings/11003871) |",
+  "body_html": "<p><em>Released January 13<sup>th</sup>, 2026</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Visual Studio 2022 doesn't update through the Extension manager fails for our WPF Extension.</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Visual-Studio-2022-doesnt-update-throug/11016589\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Cannot change Copilot settings</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Cannot-change-Copilot-settings/11003871\">Feedback ticket</a></td>\n</tr>\n</tbody>\n</table>",
   "categories": [],
   "copilot_mentions": [
     "| Cannot change Copilot settings | [Feedback ticket](https://developercommunity.visualstudio.com/t/Cannot-change-Copilot-settings/11003871) |"
   ],
-  "fetched_at": "2026-05-15T18:39:28Z",
+  "fetched_at": "2026-05-15T19:10:40Z",
   "schema_version": 1
 }
