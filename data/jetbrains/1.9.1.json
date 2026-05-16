@@ -1,0 +1,44 @@
+{
+  "ide": "jetbrains",
+  "version": "1.9.1",
+  "release_date": "2026-05-15",
+  "title": "GitHub Copilot for JetBrains 1.9.1",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **New Features**\n\n* Added /remote command to control Copilot CLI sessions, allowing you to view and steer from GitHub.com and the GitHub mobile app. Enable from Settings > Tools > GitHub Copilot > Chat > Enable Copilot CLI Remote.\n* Added internal support for upcoming usage-based billing, including billing updates for the usage panel, usage notifications, and model picker. This will be visible to the user once usage-based billing rolls out.\n\n* **Changed**\n\n* MCP Registry (Experimental) is available without the Editor Preview feature flag\n* MCP Allowlist (Experimental) is available without the Editor Preview feature flag",
+  "body_html": "<ul><li><strong>New Features</strong>\n</li></ul>\n<ul><li>Added /remote command to control Copilot CLI sessions, allowing you to view and steer from GitHub.com and the GitHub mobile app. Enable from Settings &gt; Tools &gt; GitHub Copilot &gt; Chat &gt; Enable Copilot CLI Remote.\n</li><li>Added internal support for upcoming usage-based billing, including billing updates for the usage panel, usage notifications, and model picker. This will be visible to the user once usage-based billing rolls out.\n\n</li></ul>\n<ul><li><strong>Changed</strong>\n</li></ul>\n<ul><li>MCP Registry (Experimental) is available without the Editor Preview feature flag\n</li><li>MCP Allowlist (Experimental) is available without the Editor Preview feature flag</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Added /remote command to control Copilot CLI sessions, allowing you to view and steer from GitHub.com and the GitHub mobile app. Enable from Settings > Tools > GitHub Copilot > Chat > Enable Copilot CLI Remote."
+  ],
+  "builds": [
+    {
+      "ide_build": "251",
+      "since": "251.0",
+      "until": "",
+      "compatible_versions": {
+        "WEBSTORM": "2025.1+",
+        "IDEA": "2025.1+",
+        "ANDROID_STUDIO": "Narwhal | 2025.1.1+",
+        "CLION": "2025.1+",
+        "MPS": "2025.1+",
+        "PYCHARM": "2025.1+",
+        "PYCHARM_COMMUNITY": "2025.1+",
+        "DBE": "2025.1+",
+        "RUBYMINE": "2025.1+",
+        "CWMGUEST": "1.0+",
+        "RIDER": "2025.1+",
+        "JBCLIENT": "1.0+",
+        "RUST": "2025.1+",
+        "DATASPELL": "2025.1+",
+        "GOLAND": "2025.1+",
+        "PHPSTORM": "2025.1+",
+        "IDEA_COMMUNITY": "2025.1+"
+      },
+      "file_id": 1048241,
+      "downloads": 99939
+    }
+  ],
+  "fetched_at": "2026-05-16T07:10:39Z",
+  "schema_version": 1
+}
