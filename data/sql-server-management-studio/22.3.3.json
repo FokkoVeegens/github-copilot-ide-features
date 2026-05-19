@@ -1,0 +1,14 @@
+{
+  "ide": "sql-server-management-studio",
+  "version": "22.3.3",
+  "release_date": "2026-03-10",
+  "title": "22.3.3",
+  "url": "https://learn.microsoft.com/en-us/ssms/release-notes-22",
+  "source": "html",
+  "body_markdown": "* Release number: 22.3.3\n* Release date: March 10, 2026\n\n#### What's new in 22.3.3\n\n| Feature | Details |\n| --- | --- |\n| Visual Studio | Updated to Visual Studio 18.3.3 [11527.330]. |",
+  "body_html": "<ul>\n<li>Release number: 22.3.3</li>\n<li>Release date: March 10, 2026</li>\n</ul>\n<h4 id=\"whats-new-in-2233\">What's new in 22.3.3</h4>\n<table>\n<thead>\n<tr>\n<th>Feature</th>\n<th>Details</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Visual Studio</td>\n<td>Updated to Visual Studio 18.3.3 [11527.330].</td>\n</tr>\n</tbody>\n</table>\n<p><a id=\"22.3.2\"></a></p>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-19T14:27:20Z",
+  "schema_version": 1
+}
