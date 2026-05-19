@@ -26,9 +26,12 @@ def _normalize_aliases(raw_aliases: object, ide_id: str) -> list[str]:
     if isinstance(raw_aliases, str):
         return [raw_aliases]
     if isinstance(raw_aliases, list):
-        if not all(isinstance(alias, str) for alias in raw_aliases):
-            raise ValueError(f"IDE '{ide_id}' has invalid 'aliases'; expected list[str]")
-        return raw_aliases
+        aliases: list[str] = []
+        for alias in raw_aliases:
+            if not isinstance(alias, str):
+                raise ValueError(f"IDE '{ide_id}' has invalid 'aliases'; expected list[str]")
+            aliases.append(alias)
+        return aliases
     raise ValueError(f"IDE '{ide_id}' has invalid 'aliases'; expected list[str] or string")
 
 
