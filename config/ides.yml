@@ -55,5 +55,13 @@ ides:
     start_version: "17.7"
     source_url: https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-history
 
-  # Real IDE entries will be added in subsequent MVPs:
-  # - id: sql-server-management-studio
+  - id: sql-server-management-studio
+    name: SQL Server Management Studio
+    aliases:
+      - ssms
+    data_dir: data/sql-server-management-studio
+    fetcher: ssms
+    start_version: "22.0.0"
+    source_urls:
+      - https://learn.microsoft.com/en-us/ssms/release-notes-22
+      - https://learn.microsoft.com/en-us/ssms/release-notes-21
