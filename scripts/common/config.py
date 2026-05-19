@@ -14,10 +14,22 @@ def load_config(config_path: pathlib.Path = _CONFIG_PATH) -> dict:
 def get_ide_config(ide_id: str, config_path: pathlib.Path = _CONFIG_PATH) -> dict:
     config = load_config(config_path)
     for ide in config.get("ides", []):
-        aliases = ide.get("aliases") or []
+        aliases = _normalize_aliases(ide.get("aliases"), ide["id"])
         if ide["id"] == ide_id or ide_id in aliases:
             return ide
     raise ValueError(f"IDE '{ide_id}' not found in {config_path}")
+
+
+def _normalize_aliases(raw_aliases: object, ide_id: str) -> list[str]:
+    if raw_aliases is None:
+        return []
+    if isinstance(raw_aliases, str):
+        return [raw_aliases]
+    if isinstance(raw_aliases, list):
+        if not all(isinstance(alias, str) for alias in raw_aliases):
+            raise ValueError(f"IDE '{ide_id}' has invalid 'aliases'; expected list[str]")
+        return raw_aliases
+    raise ValueError(f"IDE '{ide_id}' has invalid 'aliases'; expected list[str] or string")
 
 
 def require_config_value(ide_config: dict, key: str) -> str:
