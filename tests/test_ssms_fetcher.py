@@ -11,7 +11,7 @@ _IDE_CONFIG = {
     "name": "SQL Server Management Studio",
     "data_dir": "data/sql-server-management-studio",
     "fetcher": "ssms",
-    "start_version": "21.0.0",
+    "start_version": "22.0.0",
     "source_urls": [
         "https://learn.microsoft.com/en-us/ssms/release-notes-22",
         "https://learn.microsoft.com/en-us/ssms/release-notes-21",
@@ -56,10 +56,10 @@ _FAKE_HTML_21 = """\
 
 class TestStartVersionFilter:
     def test_version_equal_to_floor_is_included(self):
-        assert _is_at_or_above_start_version("21.0.0", "21.0.0") is True
+        assert _is_at_or_above_start_version("22.0.0", "22.0.0") is True
 
     def test_version_below_floor_is_excluded(self):
-        assert _is_at_or_above_start_version("20.2.9", "21.0.0") is False
+        assert _is_at_or_above_start_version("21.6.17", "22.0.0") is False
 
 
 class TestFetch:
@@ -82,7 +82,7 @@ class TestFetch:
 
         versions = [record["version"] for record in results]
         assert "20.2.9" not in versions
-        assert "21.0.0" in versions
+        assert "21.0.0" not in versions
         assert "22.0.1" in versions
 
     def test_includes_whats_new_and_bug_fixes_in_body_markdown(self):
@@ -92,9 +92,9 @@ class TestFetch:
         ):
             results = fetch(_IDE_CONFIG)
 
-        record = next(item for item in results if item["version"] == "21.0.0")
-        assert "What's new in 21.0.0" in record["body_markdown"]
-        assert "Bug fixes in 21.0.0" in record["body_markdown"]
+        record = next(item for item in results if item["version"] == "22.0.1")
+        assert "What's new in 22.0.1" in record["body_markdown"]
+        assert "Bug fixes in 22.0.1" in record["body_markdown"]
 
     def test_parses_release_date_and_populates_required_fields(self):
         with patch(

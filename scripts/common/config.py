@@ -14,7 +14,8 @@ def load_config(config_path: pathlib.Path = _CONFIG_PATH) -> dict:
 def get_ide_config(ide_id: str, config_path: pathlib.Path = _CONFIG_PATH) -> dict:
     config = load_config(config_path)
     for ide in config.get("ides", []):
-        if ide["id"] == ide_id:
+        aliases = ide.get("aliases") or []
+        if ide["id"] == ide_id or ide_id in aliases:
             return ide
     raise ValueError(f"IDE '{ide_id}' not found in {config_path}")
 
