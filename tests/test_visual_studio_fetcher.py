@@ -57,36 +57,36 @@ class TestStartVersionFilter:
 
 
 class TestFetch:
-  def test_returns_one_record_per_matching_section_at_or_above_start_version(self):
-    with patch("scripts.fetchers.visual_studio.get_text", return_value=_FAKE_HTML):
-      results = fetch(_IDE_CONFIG)
+    def test_returns_one_record_per_matching_section_at_or_above_start_version(self):
+        with patch("scripts.fetchers.visual_studio.get_text", return_value=_FAKE_HTML):
+            results = fetch(_IDE_CONFIG)
 
-    assert [record["version"] for record in results] == ["17.14.0", "17.14.1", "17.14.31"]
+        assert [record["version"] for record in results] == ["17.14.0", "17.14.1", "17.14.31"]
 
-  def test_record_fields_are_populated(self):
-    with patch("scripts.fetchers.visual_studio.get_text", return_value=_FAKE_HTML):
-      results = fetch(_IDE_CONFIG)
+    def test_record_fields_are_populated(self):
+        with patch("scripts.fetchers.visual_studio.get_text", return_value=_FAKE_HTML):
+            results = fetch(_IDE_CONFIG)
 
-    record = next(item for item in results if item["version"] == "17.14.31")
-    assert record["ide"] == "visual-studio-2026"
-    assert record["release_date"] == "2026-04-21"
-    assert record["title"] == "Version 17.14.31"
-    assert record["url"] == _IDE_CONFIG["source_url"]
-    assert record["source"] == "html"
-    assert "GitHub Copilot chat fixes" in record["body_markdown"]
-    assert len(record["copilot_mentions"]) == 1
+        record = next(item for item in results if item["version"] == "17.14.31")
+        assert record["ide"] == "visual-studio-2026"
+        assert record["release_date"] == "2026-04-21"
+        assert record["title"] == "Version 17.14.31"
+        assert record["url"] == _IDE_CONFIG["source_url"]
+        assert record["source"] == "html"
+        assert "GitHub Copilot chat fixes" in record["body_markdown"]
+        assert len(record["copilot_mentions"]) == 1
 
-  def test_uses_source_url_from_config(self):
-    config = {**_IDE_CONFIG, "source_url": "https://example.test/visual-studio-2026"}
-    with patch("scripts.fetchers.visual_studio.get_text", return_value=_FAKE_HTML) as mock_get_text:
-      fetch(config)
+    def test_uses_source_url_from_config(self):
+        config = {**_IDE_CONFIG, "source_url": "https://example.test/visual-studio-2026"}
+        with patch("scripts.fetchers.visual_studio.get_text", return_value=_FAKE_HTML) as mock_get_text:
+            fetch(config)
 
-    assert mock_get_text.call_args.args[0] == "https://example.test/visual-studio-2026"
+        assert mock_get_text.call_args.args[0] == "https://example.test/visual-studio-2026"
 
-  def test_missing_source_url_raises(self):
-    config = dict(_IDE_CONFIG)
-    config.pop("source_url")
-    with patch("scripts.fetchers.visual_studio.get_text"), pytest.raises(
-      ValueError, match="missing required config value 'source_url'"
-    ):
-      fetch(config)
+    def test_missing_source_url_raises(self):
+        config = dict(_IDE_CONFIG)
+        config.pop("source_url")
+        with patch("scripts.fetchers.visual_studio.get_text"), pytest.raises(
+            ValueError, match="missing required config value 'source_url'"
+        ):
+            fetch(config)
