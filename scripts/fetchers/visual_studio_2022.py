@@ -228,7 +228,11 @@ def _extract_major_blog_section(
 
     try:
         blog_html = get_text(blog_url, use_auth=False, encoding="utf-8")
-    except Exception:
+    except Exception as exc:
+        print(
+            f"[warn] Failed to fetch Visual Studio 2022 blog content for "
+            f"minor {minor} from {blog_url} (release page: {release_url}): {exc}"
+        )
         return None
 
     blog_soup = BeautifulSoup(blog_html, "lxml")
