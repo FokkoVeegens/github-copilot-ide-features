@@ -23,6 +23,13 @@ _FAKE_HTML = """\
     <p>Released on December 12th, 2025.</p>
   <div><p>Older content.</p></div>
 
+  <h2>March Update 17.14.0</h2>
+    <p>Released on January 8th, 2026.</p>
+  <div>
+    <h3>GitHub Copilot</h3>
+    <p>Major feature wave for the 17.14 baseline release.</p>
+  </div>
+
   <h2>Version 17.14.1</h2>
     <p>Released on January 15th, 2026.</p>
   <div>
@@ -54,7 +61,7 @@ class TestFetch:
         with patch("scripts.fetchers.visual_studio.get_text", return_value=_FAKE_HTML):
             results = fetch(_IDE_CONFIG)
 
-        assert [record["version"] for record in results] == ["17.14.1", "17.14.31"]
+        assert [record["version"] for record in results] == ["17.14.0", "17.14.1", "17.14.31"]
 
     def test_record_fields_are_populated(self):
         with patch("scripts.fetchers.visual_studio.get_text", return_value=_FAKE_HTML):
