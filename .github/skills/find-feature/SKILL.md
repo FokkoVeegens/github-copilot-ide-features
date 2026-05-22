@@ -17,12 +17,15 @@ Every IDE has a different support for GitHub Copilot features, and the availabil
 
 ## Output format
 
-Generate a markdown table with the following columns:
-| IDE | Version Introduced | Feature Description |
-| --- | --- | --- |
+Generate a markdown table with the following columns, where every IDE where the feature is present, is represented as a row:
+
+| IDE | Version Introduced (Preview/beta/insiders) | Version Introduced (GA/stable) | Feature Description |
+| --- | --- | --- | --- |
+
 Where:
 - **IDE**: The name of the Integrated Development Environment (IDE) that supports the feature.
-- **Version Introduced**: The version of GitHub Copilot in which the feature was first introduced for that IDE.
+- **Version Introduced (Preview/beta/insiders)**: The version of the IDE in which the feature was first introduced for that IDE where the feature was in preview, or in beta or in the insiders version of that IDE. If none can be found, leave empty.
+- **Version Introduced (GA/stable)**: The version of the IDE in which the feature became part of the GA or stable version of the IDE. It can also the feature was never part of the Preview/beta/insiders, then it should be mentioned in this column only.
 - **Feature Description**: A brief description of the feature, as provided in the release notes.
 
 ## Important notes
