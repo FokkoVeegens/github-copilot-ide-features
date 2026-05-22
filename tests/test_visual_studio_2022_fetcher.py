@@ -227,7 +227,7 @@ class TestFetch:
             "17.13.0",
             "17.13.1",
             "17.7.1",
-            "17.7",
+            "17.7.0",
         ]
 
         by_version = {record["version"]: record for record in results}
@@ -236,7 +236,7 @@ class TestFetch:
         assert "Happy coding!" not in by_version["17.14.1"]["body_markdown"]
         assert "3rd Party Notices" not in by_version["17.14.1"]["body_markdown"]
         assert "copilot free" in by_version["17.13.0"]["body_markdown"].lower()
-        assert any("Copilot" in line for line in by_version["17.7"]["copilot_mentions"])
+        assert any("Copilot" in line for line in by_version["17.7.0"]["copilot_mentions"])
 
     def test_features_section_does_not_duplicate_explicit_baseline(self):
         responses = {
