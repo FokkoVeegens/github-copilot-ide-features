@@ -9,7 +9,15 @@ from scripts.common.extract import extract_copilot_mentions, html_to_markdown
 from scripts.common.html_split import split_version_sections
 from scripts.common.http import get_text
 
-_RELEASE_SECTION_VERSION_RE = r"^(?:Version|.+\s+Update)\s+(?P<version>\d+\.\d+\.\d+)$"
+_RELEASE_SECTION_VERSION_RE = (
+    r"^(?:Version|.+\s+Update)\s+(?P<version>\d+\.\d+(?:\.\d+)?)$"
+)
+
+
+def _normalize_version(version: str) -> str:
+    if version.count(".") == 1:
+        return f"{version}.0"
+    return version
 
 
 def _is_at_or_above_start_version(version: str, start_version: str | None) -> bool:
@@ -26,14 +34,14 @@ def fetch(ide_config: dict) -> list[dict]:
     html = get_text(source_url, use_auth=False)
     sections = split_version_sections(
         html,
-        heading_tags=("h2",),
+        heading_tags=("h2", "h3"),
         version_pattern=_RELEASE_SECTION_VERSION_RE,
         date_pattern=r"Released(?:\s+on)?\s+(?P<date>[A-Za-z]+\s+\d{1,2}(?:st|nd|rd|th)?,\s+\d{4})",
     )
 
     results: list[dict] = []
     for section in sections:
-        version = section["version"]
+        version = _normalize_version(section["version"])
         if not _is_at_or_above_start_version(version, start_version):
             continue
 

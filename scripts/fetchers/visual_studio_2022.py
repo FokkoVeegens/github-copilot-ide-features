@@ -38,6 +38,12 @@ _FOOTER_TEXT_SNIPPETS = (
 )
 
 
+def _normalize_version(version: str) -> str:
+    if version.count(".") == 1:
+        return f"{version}.0"
+    return version
+
+
 def fetch(ide_config: dict) -> list[dict]:
     history_url = require_config_value(ide_config, "source_url")
     start_minor = ide_config.get("start_version", "17.7")
@@ -69,7 +75,7 @@ def _fetch_release_note_records(
             date_pattern=_RELEASE_SECTION_DATE_RE,
         )
 
-        discovered_versions = {section["version"] for section in sections}
+        discovered_versions = {_normalize_version(section["version"]) for section in sections}
         minor = _extract_page_minor(page_html, sections=sections)
         major_section = _extract_major_release_section(
             page_html,
@@ -96,12 +102,13 @@ def _fetch_release_note_records(
             )
 
         for section in sections:
+            version = _normalize_version(section["version"])
             body_html = _trim_release_section_html(section["body_html"])
             body_markdown = html_to_markdown(body_html)
             results.append(
                 {
                     "ide": ide_config["id"],
-                    "version": section["version"],
+                    "version": version,
                     "release_date": section["release_date"],
                     "title": section["title"],
                     "url": release_url,
