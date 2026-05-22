@@ -2,6 +2,14 @@
 
 This repository collects release notes for GitHub Copilot features across different IDEs. Scheduled GitHub Actions workflows collect the release notes from the official IDEs and IDE extensions/plugins and store these in json files.
 
+## Usage
+
+The repository contains a **Skill** that can be used along with GitHub Copilot or another AI coding assistant to query the collected release notes data. For example, you can ask:
+
+`/find-feature Next Edit Suggestions (NES)`
+
+It would then return a summary of the release notes for that feature across all IDEs, including which IDEs versions support it. The repository data is updated daily by scheduled GitHub Actions workflows, so you can be confident that the information is up to date. Do recent pulls of this repository to get the latest data before asking the Skill.
+
 ## Repository layout
 
 ```
