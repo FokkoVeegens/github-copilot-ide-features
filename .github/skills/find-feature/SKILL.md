@@ -1,6 +1,6 @@
 ---
 name: find-feature
-description: Use the release notes in the data folder of this repository to determine from which version on for every IDE a specific feature is available.
+description: Use the release notes in the data folder of this repository to determine from which version onwards for every IDE a specific feature is available.
 argument-hint: "Name or description of the feature"
 ---
 
@@ -13,7 +13,7 @@ GitHub Copilot is an AI coding assistant, supported in the following IDEs:
 - Xcode
 - SQL Server Management Studio (SSMS)
 
-Every IDE has a different support for GitHub Copilot features, and the availability of features may vary across versions. To determine from which version on a specific feature is available for each IDE, you can refer to the release notes in the data folder of this repository. The release notes contain detailed information about the features introduced in each version of GitHub Copilot for different IDEs. By reviewing these notes, you can identify when a particular feature was added and which IDEs support it.
+Every IDE has a different support for GitHub Copilot features, and the availability of features may vary across versions. To determine from which version onwards a specific feature is available for each IDE, you can refer to the release notes in the data folder of this repository. The release notes contain detailed information about the features introduced in each version of GitHub Copilot for different IDEs. By reviewing these notes, you can identify when a particular feature was added and which IDEs support it.
 
 ## Output format
 
