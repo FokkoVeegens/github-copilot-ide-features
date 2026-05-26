@@ -8,7 +8,7 @@ The repository contains a **Skill** that can be used along with GitHub Copilot o
 
 `/find-feature Next Edit Suggestions (NES)`
 
-It would then return a summary of the release notes for that feature across all IDEs, including which IDEs versions support it. The repository data is updated daily by scheduled GitHub Actions workflows, so you can be confident that the information is up to date. Do recent pulls of this repository to get the latest data before asking the Skill.
+It would then return a summary of the release notes for that feature across all IDEs, including which IDE versions support it. The repository data is updated daily by scheduled GitHub Actions workflows, so you can be confident that the information is up to date. Pull the latest changes in this repository before asking the Skill so you have the latest data.
 
 ## Repository layout
 
