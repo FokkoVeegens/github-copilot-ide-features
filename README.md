@@ -1,5 +1,7 @@
 # GitHub Copilot features per IDE
 
+[![CI](https://github.com/FokkoVeegens/github-copilot-ide-features/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/FokkoVeegens/github-copilot-ide-features/actions/workflows/ci.yml)
+
 This repository collects release notes for GitHub Copilot features across different IDEs. Scheduled GitHub Actions workflows collect the release notes from the official IDEs and IDE extensions/plugins and store these in json files.
 
 ## Usage
