@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2026",
+  "version": "18.6.2",
+  "release_date": "2026-05-27",
+  "title": "Version 18.6.2",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+  "source": "html",
+  "body_markdown": "Released on **May 27, 2026**.\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Web Deploy publish fails in Visual Studio Community 2026 Insiders for legacy ASP.NET project | [Feedback ticket](https://developercommunity.visualstudio.com/t/Web-Deploy-publish-fails-in-Visual-Studi/11076157) |\n| Fixing error for Claude Opus 4.5 agent unexpected error: Unhandled exception in AskInConversationAsync: StreamJsonRpc.RemoteInvocationException: Illegal characters in path | [Feedback ticket](https://developercommunity.visualstudio.com/t/Claude-Opus-45-agent-unexpected-error/11051184) |\n| Addressing build failures for compiler - Macros with nested parentheses inside a *VA\\_OPT* not correctly materialized when imported from a header unit |  |",
+  "body_html": "<p>Released on <strong>May 27, 2026</strong>.</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: left;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Web Deploy publish fails in Visual Studio Community 2026 Insiders for legacy ASP.NET project</td>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Web-Deploy-publish-fails-in-Visual-Studi/11076157\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Fixing error for Claude Opus 4.5 agent unexpected error: Unhandled exception in AskInConversationAsync: StreamJsonRpc.RemoteInvocationException: Illegal characters in path</td>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Claude-Opus-45-agent-unexpected-error/11051184\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Addressing build failures for compiler - Macros with nested parentheses inside a <em>VA_OPT</em> not correctly materialized when imported from a header unit</td>\n<td style=\"text-align: left;\"></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-05-29T08:02:37Z",
+  "schema_version": 1
+}
