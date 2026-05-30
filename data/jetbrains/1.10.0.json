@@ -1,0 +1,50 @@
+{
+  "ide": "jetbrains",
+  "version": "1.10.0",
+  "release_date": "2026-05-29",
+  "title": "GitHub Copilot for JetBrains 1.10.0",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **New Features**\n* Added: Agent picker support for Copilot CLI sessions, with Agent (default), Ask, Plan, and Custom agent modes.\n* Added: Support MCP configuration for Copilot CLI sessions.\n* Added: Support BYOK for Copilot CLI sessions.\n* Added: /compact slash command for Copilot CLI sessions.\n* Added: /chronicle slash command for Copilot CLI sessions.\n* Added: /plan slash command for Copilot CLI sessions.\n* Added: Agent debug panel in public preview.\n* Added: Cloud Agent integrated into the unified sessions view.\n* Added: Thinking effort configuration for supported models.\n* Added: Agent customizations editor.\n* Added: More sign-in choices with Google and Apple.\n* **User Experience**\n* Improved: Smoother NES experience with improved trigger strategy and detection logic.\n* Improved: Unified session views with improved layout and readability.\n* Improved: Account/session isolation between different editors.\n* **Bug Fixes**\n* Resolved: An issue where the stop button was missing during CLI agent execution.\n* Improved: Unified session persistence and state management.\n* Improved: Overall UI freeze handling and stability.\n* **Changed**\n* Agent skills are generally available.\n* Agent hooks are generally available.\n* Prompt files are generally available.\n* Anthropic Thinking is generally available.\n* BYOK is available without the Editor Preview feature flag, and availability for Copilot Business and Enterprise is controlled by GitHub policy.",
+  "body_html": "<ul><li><strong>New Features</strong></li><li>Added: Agent picker support for Copilot CLI sessions, with Agent (default), Ask, Plan, and Custom agent modes.</li><li>Added: Support MCP configuration for Copilot CLI sessions.</li><li>Added: Support BYOK for Copilot CLI sessions.</li><li>Added: /compact slash command for Copilot CLI sessions.</li><li>Added: /chronicle slash command for Copilot CLI sessions.</li><li>Added: /plan slash command for Copilot CLI sessions.</li><li>Added: Agent debug panel in public preview.</li><li>Added: Cloud Agent integrated into the unified sessions view.</li><li>Added: Thinking effort configuration for supported models.</li><li>Added: Agent customizations editor.</li><li>Added: More sign-in choices with Google and Apple.</li><li><strong>User Experience</strong></li><li>Improved: Smoother NES experience with improved trigger strategy and detection logic.</li><li>Improved: Unified session views with improved layout and readability.</li><li>Improved: Account/session isolation between different editors.</li><li><strong>Bug Fixes</strong></li><li>Resolved: An issue where the stop button was missing during CLI agent execution.</li><li>Improved: Unified session persistence and state management.</li><li>Improved: Overall UI freeze handling and stability.</li><li><strong>Changed</strong></li><li>Agent skills are generally available. </li><li>Agent hooks are generally available.</li><li>Prompt files are generally available.</li><li>Anthropic Thinking is generally available.</li><li>BYOK is available without the Editor Preview feature flag, and availability for Copilot Business and Enterprise is controlled by GitHub policy.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Added: Agent picker support for Copilot CLI sessions, with Agent (default), Ask, Plan, and Custom agent modes.",
+    "* Added: Support MCP configuration for Copilot CLI sessions.",
+    "* Added: Support BYOK for Copilot CLI sessions.",
+    "* Added: /compact slash command for Copilot CLI sessions.",
+    "* Added: /chronicle slash command for Copilot CLI sessions.",
+    "* Added: /plan slash command for Copilot CLI sessions.",
+    "* BYOK is available without the Editor Preview feature flag, and availability for Copilot Business and Enterprise is controlled by GitHub policy."
+  ],
+  "builds": [
+    {
+      "ide_build": "251",
+      "since": "251.25410",
+      "until": "",
+      "compatible_versions": {
+        "ANDROID_STUDIO": "Narwhal | 2025.1.1+",
+        "PYCHARM_COMMUNITY": "2025.1.1+",
+        "CLION": "2025.1.1+",
+        "JBCLIENT": "1.0+",
+        "GOLAND": "2025.1.1+",
+        "RUST": "2025.1.2+",
+        "MPS": "2025.1.1+",
+        "PYCHARM": "2025.1.1+",
+        "PHPSTORM": "2025.1.1+",
+        "IDEA": "2025.1.1+",
+        "IDEA_COMMUNITY": "2025.1.1+",
+        "RIDER": "2025.1.2+",
+        "WEBSTORM": "2025.1.1+",
+        "DATASPELL": "2025.1.1+",
+        "RUBYMINE": "2025.1.1+",
+        "CWMGUEST": "1.0+",
+        "DBE": "2025.1.1+"
+      },
+      "file_id": 1060135,
+      "downloads": 38257
+    }
+  ],
+  "fetched_at": "2026-05-30T07:24:59Z",
+  "schema_version": 1
+}
