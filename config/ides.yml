@@ -12,6 +12,13 @@ ides:
     start_version: all
     source_url: https://api.github.com/repos/microsoft/copilot-for-eclipse/releases
 
+  - id: copilot-cli
+    name: GitHub Copilot CLI
+    data_dir: data/copilot-cli
+    fetcher: copilot_cli
+    start_version: all
+    source_url: https://api.github.com/repos/github/copilot-cli/releases
+
   - id: jetbrains
     name: GitHub Copilot for JetBrains
     data_dir: data/jetbrains
