@@ -15,15 +15,32 @@ It would then return a summary of the release notes for that feature across all 
 ## Repository layout
 
 ```
-config/ides.yml          – single source of truth for IDE configuration
-data/<ide>/<version>.json – one JSON file per release; presence = already processed
-scripts/run.py           – CLI entry point
-scripts/common/          – shared utilities (config, HTTP, extraction, I/O)
-scripts/fetchers/        – one module per IDE
-tests/                   – pytest test suite
+config/ides.yml              – single source of truth for IDE configuration
+data/<ide>/<version>.json    – one JSON file per release; presence = already processed
+data/<ide>/index.json        – auto-generated index of all versions with metadata
+scripts/run.py               – CLI entry point
+scripts/common/              – shared utilities (config, HTTP, extraction, I/O)
+scripts/fetchers/            – one module per IDE
+tests/                       – pytest test suite
 ```
 
 Fetcher endpoints are configured centrally in [config/ides.yml](config/ides.yml), including `source_url` and any per-IDE URL templates or canonical plugin URLs needed by a fetcher.
+
+### Index files
+
+Each IDE directory contains an automatically-generated `index.json` file that provides a quick reference to all available versions. The index contains an array of objects with the following properties:
+
+```json
+[
+  {
+    "version": "1.122.0",
+    "release_date": "2026-05-28",
+    "filename": "1.122.0.json"
+  }
+]
+```
+
+The index is sorted by `release_date` in descending order (newest first) and is regenerated each time the fetch workflow runs.
 
 ## Supported IDEs
 

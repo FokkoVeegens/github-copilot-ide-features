@@ -28,6 +28,7 @@ Both `ruff` and `pytest` must pass before committing. Run them together as the l
 ```
 config/ides.yml              – IDE configuration (id, fetcher, data_dir, source_url)
 data/<ide>/<version>.json    – one JSON file per release; presence = already processed
+data/<ide>/index.json        – auto-generated index of all versions with the release date and filename
 scripts/run.py               – CLI entry point: --ide <id>
 scripts/common/              – shared utilities (config, HTTP, JSON schema, extraction, I/O)
 scripts/fetchers/            – one module per IDE (eclipse.py, dummy.py, …)

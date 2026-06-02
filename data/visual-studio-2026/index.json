@@ -1,0 +1,122 @@
+[
+  {
+    "version": "18.6.2",
+    "release_date": "2026-05-27",
+    "filename": "18.6.2.json"
+  },
+  {
+    "version": "18.6.1",
+    "release_date": "2026-05-20",
+    "filename": "18.6.1.json"
+  },
+  {
+    "version": "18.5.3",
+    "release_date": "2026-05-12",
+    "filename": "18.5.3.json"
+  },
+  {
+    "version": "18.6.0",
+    "release_date": "2026-05-12",
+    "filename": "18.6.0.json"
+  },
+  {
+    "version": "18.5.2",
+    "release_date": "2026-04-28",
+    "filename": "18.5.2.json"
+  },
+  {
+    "version": "18.5.1",
+    "release_date": "2026-04-21",
+    "filename": "18.5.1.json"
+  },
+  {
+    "version": "18.4.4",
+    "release_date": "2026-04-14",
+    "filename": "18.4.4.json"
+  },
+  {
+    "version": "18.5.0",
+    "release_date": "2026-04-14",
+    "filename": "18.5.0.json"
+  },
+  {
+    "version": "18.4.3",
+    "release_date": "2026-03-31",
+    "filename": "18.4.3.json"
+  },
+  {
+    "version": "18.4.2",
+    "release_date": "2026-03-24",
+    "filename": "18.4.2.json"
+  },
+  {
+    "version": "18.4.1",
+    "release_date": "2026-03-17",
+    "filename": "18.4.1.json"
+  },
+  {
+    "version": "18.3.3",
+    "release_date": "2026-03-10",
+    "filename": "18.3.3.json"
+  },
+  {
+    "version": "18.4.0",
+    "release_date": "2026-03-10",
+    "filename": "18.4.0.json"
+  },
+  {
+    "version": "18.3.2",
+    "release_date": "2026-02-24",
+    "filename": "18.3.2.json"
+  },
+  {
+    "version": "18.3.1",
+    "release_date": "2026-02-18",
+    "filename": "18.3.1.json"
+  },
+  {
+    "version": "18.2.2",
+    "release_date": "2026-02-10",
+    "filename": "18.2.2.json"
+  },
+  {
+    "version": "18.3.0",
+    "release_date": "2026-02-10",
+    "filename": "18.3.0.json"
+  },
+  {
+    "version": "18.2.1",
+    "release_date": "2026-01-20",
+    "filename": "18.2.1.json"
+  },
+  {
+    "version": "18.2.0",
+    "release_date": "2026-01-13",
+    "filename": "18.2.0.json"
+  },
+  {
+    "version": "18.1.1",
+    "release_date": "2025-12-16",
+    "filename": "18.1.1.json"
+  },
+  {
+    "version": "18.1.0",
+    "release_date": "2025-12-09",
+    "filename": "18.1.0.json"
+  },
+  {
+    "version": "18.0.2",
+    "release_date": "2025-11-24",
+    "filename": "18.0.2.json"
+  },
+  {
+    "version": "18.0.1",
+    "release_date": "2025-11-19",
+    "filename": "18.0.1.json"
+  },
+  {
+    "version": "18.0.0",
+    "release_date": "2025-11-11",
+    "filename": "18.0.0.json"
+  }
+]
