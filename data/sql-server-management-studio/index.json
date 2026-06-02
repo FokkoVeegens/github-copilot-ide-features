@@ -1,0 +1,52 @@
+[
+  {
+    "version": "22.6.0",
+    "release_date": "2026-05-12",
+    "filename": "22.6.0.json"
+  },
+  {
+    "version": "22.5.2",
+    "release_date": "2026-04-28",
+    "filename": "22.5.2.json"
+  },
+  {
+    "version": "22.5.0",
+    "release_date": "2026-04-14",
+    "filename": "22.5.0.json"
+  },
+  {
+    "version": "22.4.1",
+    "release_date": "2026-03-18",
+    "filename": "22.4.1.json"
+  },
+  {
+    "version": "22.3.3",
+    "release_date": "2026-03-10",
+    "filename": "22.3.3.json"
+  },
+  {
+    "version": "22.3.2",
+    "release_date": "2026-02-24",
+    "filename": "22.3.2.json"
+  },
+  {
+    "version": "22.3.0",
+    "release_date": "2026-02-10",
+    "filename": "22.3.0.json"
+  },
+  {
+    "version": "22.2.1",
+    "release_date": "2026-01-21",
+    "filename": "22.2.1.json"
+  },
+  {
+    "version": "22.1.0",
+    "release_date": "2025-12-09",
+    "filename": "22.1.0.json"
+  },
+  {
+    "version": "22.0.0",
+    "release_date": "2025-11-11",
+    "filename": "22.0.0.json"
+  }
+]

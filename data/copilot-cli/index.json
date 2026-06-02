@@ -1,0 +1,1602 @@
+[
+  {
+    "version": "1.0.58",
+    "release_date": "2026-06-02",
+    "filename": "1.0.58.json"
+  },
+  {
+    "version": "1.0.57-5",
+    "release_date": "2026-06-01",
+    "filename": "1.0.57-5.json"
+  },
+  {
+    "version": "1.0.57",
+    "release_date": "2026-06-01",
+    "filename": "1.0.57.json"
+  },
+  {
+    "version": "1.0.57-4",
+    "release_date": "2026-05-31",
+    "filename": "1.0.57-4.json"
+  },
+  {
+    "version": "1.0.57-1",
+    "release_date": "2026-05-30",
+    "filename": "1.0.57-1.json"
+  },
+  {
+    "version": "1.0.57-2",
+    "release_date": "2026-05-30",
+    "filename": "1.0.57-2.json"
+  },
+  {
+    "version": "1.0.57-3",
+    "release_date": "2026-05-30",
+    "filename": "1.0.57-3.json"
+  },
+  {
+    "version": "1.0.56-1",
+    "release_date": "2026-05-29",
+    "filename": "1.0.56-1.json"
+  },
+  {
+    "version": "1.0.56-2",
+    "release_date": "2026-05-29",
+    "filename": "1.0.56-2.json"
+  },
+  {
+    "version": "1.0.56",
+    "release_date": "2026-05-29",
+    "filename": "1.0.56.json"
+  },
+  {
+    "version": "1.0.57-0",
+    "release_date": "2026-05-29",
+    "filename": "1.0.57-0.json"
+  },
+  {
+    "version": "1.0.55",
+    "release_date": "2026-05-28",
+    "filename": "1.0.55.json"
+  },
+  {
+    "version": "1.0.56-0",
+    "release_date": "2026-05-28",
+    "filename": "1.0.56-0.json"
+  },
+  {
+    "version": "1.0.55-2",
+    "release_date": "2026-05-27",
+    "filename": "1.0.55-2.json"
+  },
+  {
+    "version": "1.0.55-3",
+    "release_date": "2026-05-27",
+    "filename": "1.0.55-3.json"
+  },
+  {
+    "version": "1.0.55-4",
+    "release_date": "2026-05-27",
+    "filename": "1.0.55-4.json"
+  },
+  {
+    "version": "1.0.55-5",
+    "release_date": "2026-05-27",
+    "filename": "1.0.55-5.json"
+  },
+  {
+    "version": "1.0.55-6",
+    "release_date": "2026-05-27",
+    "filename": "1.0.55-6.json"
+  },
+  {
+    "version": "1.0.55-7",
+    "release_date": "2026-05-27",
+    "filename": "1.0.55-7.json"
+  },
+  {
+    "version": "1.0.55-1",
+    "release_date": "2026-05-26",
+    "filename": "1.0.55-1.json"
+  },
+  {
+    "version": "1.0.55-0",
+    "release_date": "2026-05-25",
+    "filename": "1.0.55-0.json"
+  },
+  {
+    "version": "1.0.53-0",
+    "release_date": "2026-05-24",
+    "filename": "1.0.53-0.json"
+  },
+  {
+    "version": "1.0.53-1",
+    "release_date": "2026-05-24",
+    "filename": "1.0.53-1.json"
+  },
+  {
+    "version": "1.0.53-2",
+    "release_date": "2026-05-24",
+    "filename": "1.0.53-2.json"
+  },
+  {
+    "version": "1.0.53",
+    "release_date": "2026-05-24",
+    "filename": "1.0.53.json"
+  },
+  {
+    "version": "1.0.54",
+    "release_date": "2026-05-24",
+    "filename": "1.0.54.json"
+  },
+  {
+    "version": "1.0.52",
+    "release_date": "2026-05-23",
+    "filename": "1.0.52.json"
+  },
+  {
+    "version": "1.0.52-1",
+    "release_date": "2026-05-22",
+    "filename": "1.0.52-1.json"
+  },
+  {
+    "version": "1.0.52-2",
+    "release_date": "2026-05-22",
+    "filename": "1.0.52-2.json"
+  },
+  {
+    "version": "1.0.52-4",
+    "release_date": "2026-05-22",
+    "filename": "1.0.52-4.json"
+  },
+  {
+    "version": "1.0.52-0",
+    "release_date": "2026-05-21",
+    "filename": "1.0.52-0.json"
+  },
+  {
+    "version": "1.0.51-2",
+    "release_date": "2026-05-20",
+    "filename": "1.0.51-2.json"
+  },
+  {
+    "version": "1.0.51-3",
+    "release_date": "2026-05-20",
+    "filename": "1.0.51-3.json"
+  },
+  {
+    "version": "1.0.51",
+    "release_date": "2026-05-20",
+    "filename": "1.0.51.json"
+  },
+  {
+    "version": "1.0.49",
+    "release_date": "2026-05-19",
+    "filename": "1.0.49.json"
+  },
+  {
+    "version": "1.0.51-1",
+    "release_date": "2026-05-19",
+    "filename": "1.0.51-1.json"
+  },
+  {
+    "version": "1.0.49-6",
+    "release_date": "2026-05-18",
+    "filename": "1.0.49-6.json"
+  },
+  {
+    "version": "1.0.49-0",
+    "release_date": "2026-05-15",
+    "filename": "1.0.49-0.json"
+  },
+  {
+    "version": "1.0.49-1",
+    "release_date": "2026-05-15",
+    "filename": "1.0.49-1.json"
+  },
+  {
+    "version": "1.0.48-1",
+    "release_date": "2026-05-14",
+    "filename": "1.0.48-1.json"
+  },
+  {
+    "version": "1.0.48-2",
+    "release_date": "2026-05-14",
+    "filename": "1.0.48-2.json"
+  },
+  {
+    "version": "1.0.48",
+    "release_date": "2026-05-14",
+    "filename": "1.0.48.json"
+  },
+  {
+    "version": "1.0.47-0",
+    "release_date": "2026-05-13",
+    "filename": "1.0.47-0.json"
+  },
+  {
+    "version": "1.0.47",
+    "release_date": "2026-05-13",
+    "filename": "1.0.47.json"
+  },
+  {
+    "version": "1.0.48-0",
+    "release_date": "2026-05-13",
+    "filename": "1.0.48-0.json"
+  },
+  {
+    "version": "1.0.46",
+    "release_date": "2026-05-12",
+    "filename": "1.0.46.json"
+  },
+  {
+    "version": "1.0.45",
+    "release_date": "2026-05-11",
+    "filename": "1.0.45.json"
+  },
+  {
+    "version": "1.0.44-3",
+    "release_date": "2026-05-08",
+    "filename": "1.0.44-3.json"
+  },
+  {
+    "version": "1.0.44",
+    "release_date": "2026-05-08",
+    "filename": "1.0.44.json"
+  },
+  {
+    "version": "1.0.44-0",
+    "release_date": "2026-05-07",
+    "filename": "1.0.44-0.json"
+  },
+  {
+    "version": "1.0.44-1",
+    "release_date": "2026-05-07",
+    "filename": "1.0.44-1.json"
+  },
+  {
+    "version": "1.0.44-2",
+    "release_date": "2026-05-07",
+    "filename": "1.0.44-2.json"
+  },
+  {
+    "version": "1.0.42",
+    "release_date": "2026-05-06",
+    "filename": "1.0.42.json"
+  },
+  {
+    "version": "1.0.43-0",
+    "release_date": "2026-05-06",
+    "filename": "1.0.43-0.json"
+  },
+  {
+    "version": "1.0.43",
+    "release_date": "2026-05-06",
+    "filename": "1.0.43.json"
+  },
+  {
+    "version": "1.0.41-1",
+    "release_date": "2026-05-05",
+    "filename": "1.0.41-1.json"
+  },
+  {
+    "version": "1.0.41",
+    "release_date": "2026-05-05",
+    "filename": "1.0.41.json"
+  },
+  {
+    "version": "1.0.42-0",
+    "release_date": "2026-05-05",
+    "filename": "1.0.42-0.json"
+  },
+  {
+    "version": "1.0.41-0",
+    "release_date": "2026-05-04",
+    "filename": "1.0.41-0.json"
+  },
+  {
+    "version": "1.0.40",
+    "release_date": "2026-05-01",
+    "filename": "1.0.40.json"
+  },
+  {
+    "version": "1.0.40-1",
+    "release_date": "2026-04-30",
+    "filename": "1.0.40-1.json"
+  },
+  {
+    "version": "1.0.40-2",
+    "release_date": "2026-04-30",
+    "filename": "1.0.40-2.json"
+  },
+  {
+    "version": "1.0.40-3",
+    "release_date": "2026-04-30",
+    "filename": "1.0.40-3.json"
+  },
+  {
+    "version": "1.0.40-0",
+    "release_date": "2026-04-29",
+    "filename": "1.0.40-0.json"
+  },
+  {
+    "version": "1.0.39-0",
+    "release_date": "2026-04-28",
+    "filename": "1.0.39-0.json"
+  },
+  {
+    "version": "1.0.39",
+    "release_date": "2026-04-28",
+    "filename": "1.0.39.json"
+  },
+  {
+    "version": "1.0.37",
+    "release_date": "2026-04-27",
+    "filename": "1.0.37.json"
+  },
+  {
+    "version": "1.0.36-0",
+    "release_date": "2026-04-24",
+    "filename": "1.0.36-0.json"
+  },
+  {
+    "version": "1.0.36-1",
+    "release_date": "2026-04-24",
+    "filename": "1.0.36-1.json"
+  },
+  {
+    "version": "1.0.36",
+    "release_date": "2026-04-24",
+    "filename": "1.0.36.json"
+  },
+  {
+    "version": "1.0.35-5",
+    "release_date": "2026-04-23",
+    "filename": "1.0.35-5.json"
+  },
+  {
+    "version": "1.0.35-6",
+    "release_date": "2026-04-23",
+    "filename": "1.0.35-6.json"
+  },
+  {
+    "version": "1.0.35",
+    "release_date": "2026-04-23",
+    "filename": "1.0.35.json"
+  },
+  {
+    "version": "1.0.35-3",
+    "release_date": "2026-04-22",
+    "filename": "1.0.35-3.json"
+  },
+  {
+    "version": "1.0.35-4",
+    "release_date": "2026-04-22",
+    "filename": "1.0.35-4.json"
+  },
+  {
+    "version": "1.0.35-0",
+    "release_date": "2026-04-21",
+    "filename": "1.0.35-0.json"
+  },
+  {
+    "version": "1.0.35-1",
+    "release_date": "2026-04-21",
+    "filename": "1.0.35-1.json"
+  },
+  {
+    "version": "1.0.35-2",
+    "release_date": "2026-04-21",
+    "filename": "1.0.35-2.json"
+  },
+  {
+    "version": "1.0.33-0",
+    "release_date": "2026-04-20",
+    "filename": "1.0.33-0.json"
+  },
+  {
+    "version": "1.0.33",
+    "release_date": "2026-04-20",
+    "filename": "1.0.33.json"
+  },
+  {
+    "version": "1.0.34-0",
+    "release_date": "2026-04-20",
+    "filename": "1.0.34-0.json"
+  },
+  {
+    "version": "1.0.34",
+    "release_date": "2026-04-20",
+    "filename": "1.0.34.json"
+  },
+  {
+    "version": "1.0.32-0",
+    "release_date": "2026-04-17",
+    "filename": "1.0.32-0.json"
+  },
+  {
+    "version": "1.0.32-1",
+    "release_date": "2026-04-17",
+    "filename": "1.0.32-1.json"
+  },
+  {
+    "version": "1.0.32",
+    "release_date": "2026-04-17",
+    "filename": "1.0.32.json"
+  },
+  {
+    "version": "1.0.28",
+    "release_date": "2026-04-16",
+    "filename": "1.0.28.json"
+  },
+  {
+    "version": "1.0.29",
+    "release_date": "2026-04-16",
+    "filename": "1.0.29.json"
+  },
+  {
+    "version": "1.0.30",
+    "release_date": "2026-04-16",
+    "filename": "1.0.30.json"
+  },
+  {
+    "version": "1.0.31",
+    "release_date": "2026-04-16",
+    "filename": "1.0.31.json"
+  },
+  {
+    "version": "1.0.27",
+    "release_date": "2026-04-15",
+    "filename": "1.0.27.json"
+  },
+  {
+    "version": "1.0.26-0",
+    "release_date": "2026-04-14",
+    "filename": "1.0.26-0.json"
+  },
+  {
+    "version": "1.0.26",
+    "release_date": "2026-04-14",
+    "filename": "1.0.26.json"
+  },
+  {
+    "version": "1.0.25",
+    "release_date": "2026-04-13",
+    "filename": "1.0.25.json"
+  },
+  {
+    "version": "1.0.23",
+    "release_date": "2026-04-10",
+    "filename": "1.0.23.json"
+  },
+  {
+    "version": "1.0.24-0",
+    "release_date": "2026-04-10",
+    "filename": "1.0.24-0.json"
+  },
+  {
+    "version": "1.0.24",
+    "release_date": "2026-04-10",
+    "filename": "1.0.24.json"
+  },
+  {
+    "version": "1.0.22",
+    "release_date": "2026-04-09",
+    "filename": "1.0.22.json"
+  },
+  {
+    "version": "1.0.22-0",
+    "release_date": "2026-04-08",
+    "filename": "1.0.22-0.json"
+  },
+  {
+    "version": "1.0.20-0",
+    "release_date": "2026-04-07",
+    "filename": "1.0.20-0.json"
+  },
+  {
+    "version": "1.0.20-1",
+    "release_date": "2026-04-07",
+    "filename": "1.0.20-1.json"
+  },
+  {
+    "version": "1.0.20",
+    "release_date": "2026-04-07",
+    "filename": "1.0.20.json"
+  },
+  {
+    "version": "1.0.21",
+    "release_date": "2026-04-07",
+    "filename": "1.0.21.json"
+  },
+  {
+    "version": "1.0.19-0",
+    "release_date": "2026-04-06",
+    "filename": "1.0.19-0.json"
+  },
+  {
+    "version": "1.0.19",
+    "release_date": "2026-04-06",
+    "filename": "1.0.19.json"
+  },
+  {
+    "version": "1.0.18",
+    "release_date": "2026-04-04",
+    "filename": "1.0.18.json"
+  },
+  {
+    "version": "1.0.17",
+    "release_date": "2026-04-03",
+    "filename": "1.0.17.json"
+  },
+  {
+    "version": "1.0.16-1",
+    "release_date": "2026-04-02",
+    "filename": "1.0.16-1.json"
+  },
+  {
+    "version": "1.0.16",
+    "release_date": "2026-04-02",
+    "filename": "1.0.16.json"
+  },
+  {
+    "version": "1.0.15-1",
+    "release_date": "2026-04-01",
+    "filename": "1.0.15-1.json"
+  },
+  {
+    "version": "1.0.15-2",
+    "release_date": "2026-04-01",
+    "filename": "1.0.15-2.json"
+  },
+  {
+    "version": "1.0.15",
+    "release_date": "2026-04-01",
+    "filename": "1.0.15.json"
+  },
+  {
+    "version": "1.0.16-0",
+    "release_date": "2026-04-01",
+    "filename": "1.0.16-0.json"
+  },
+  {
+    "version": "1.0.14",
+    "release_date": "2026-03-31",
+    "filename": "1.0.14.json"
+  },
+  {
+    "version": "1.0.15-0",
+    "release_date": "2026-03-31",
+    "filename": "1.0.15-0.json"
+  },
+  {
+    "version": "1.0.13-2",
+    "release_date": "2026-03-30",
+    "filename": "1.0.13-2.json"
+  },
+  {
+    "version": "1.0.13",
+    "release_date": "2026-03-30",
+    "filename": "1.0.13.json"
+  },
+  {
+    "version": "1.0.14-0",
+    "release_date": "2026-03-30",
+    "filename": "1.0.14-0.json"
+  },
+  {
+    "version": "1.0.13-0",
+    "release_date": "2026-03-27",
+    "filename": "1.0.13-0.json"
+  },
+  {
+    "version": "1.0.13-1",
+    "release_date": "2026-03-27",
+    "filename": "1.0.13-1.json"
+  },
+  {
+    "version": "1.0.12-2",
+    "release_date": "2026-03-26",
+    "filename": "1.0.12-2.json"
+  },
+  {
+    "version": "1.0.12",
+    "release_date": "2026-03-26",
+    "filename": "1.0.12.json"
+  },
+  {
+    "version": "1.0.12-0",
+    "release_date": "2026-03-25",
+    "filename": "1.0.12-0.json"
+  },
+  {
+    "version": "1.0.12-1",
+    "release_date": "2026-03-25",
+    "filename": "1.0.12-1.json"
+  },
+  {
+    "version": "1.0.11-0",
+    "release_date": "2026-03-23",
+    "filename": "1.0.11-0.json"
+  },
+  {
+    "version": "1.0.11-1",
+    "release_date": "2026-03-23",
+    "filename": "1.0.11-1.json"
+  },
+  {
+    "version": "1.0.11",
+    "release_date": "2026-03-23",
+    "filename": "1.0.11.json"
+  },
+  {
+    "version": "1.0.10-0",
+    "release_date": "2026-03-20",
+    "filename": "1.0.10-0.json"
+  },
+  {
+    "version": "1.0.10-1",
+    "release_date": "2026-03-20",
+    "filename": "1.0.10-1.json"
+  },
+  {
+    "version": "1.0.10",
+    "release_date": "2026-03-20",
+    "filename": "1.0.10.json"
+  },
+  {
+    "version": "1.0.9",
+    "release_date": "2026-03-19",
+    "filename": "1.0.9.json"
+  },
+  {
+    "version": "1.0.8-0",
+    "release_date": "2026-03-18",
+    "filename": "1.0.8-0.json"
+  },
+  {
+    "version": "1.0.8",
+    "release_date": "2026-03-18",
+    "filename": "1.0.8.json"
+  },
+  {
+    "version": "1.0.7-0",
+    "release_date": "2026-03-17",
+    "filename": "1.0.7-0.json"
+  },
+  {
+    "version": "1.0.7",
+    "release_date": "2026-03-17",
+    "filename": "1.0.7.json"
+  },
+  {
+    "version": "1.0.6-0",
+    "release_date": "2026-03-16",
+    "filename": "1.0.6-0.json"
+  },
+  {
+    "version": "1.0.6-1",
+    "release_date": "2026-03-16",
+    "filename": "1.0.6-1.json"
+  },
+  {
+    "version": "1.0.6-2",
+    "release_date": "2026-03-16",
+    "filename": "1.0.6-2.json"
+  },
+  {
+    "version": "1.0.6",
+    "release_date": "2026-03-16",
+    "filename": "1.0.6.json"
+  },
+  {
+    "version": "1.0.5",
+    "release_date": "2026-03-13",
+    "filename": "1.0.5.json"
+  },
+  {
+    "version": "1.0.5-0",
+    "release_date": "2026-03-12",
+    "filename": "1.0.5-0.json"
+  },
+  {
+    "version": "1.0.4-1",
+    "release_date": "2026-03-11",
+    "filename": "1.0.4-1.json"
+  },
+  {
+    "version": "1.0.4-2",
+    "release_date": "2026-03-11",
+    "filename": "1.0.4-2.json"
+  },
+  {
+    "version": "1.0.4-3",
+    "release_date": "2026-03-11",
+    "filename": "1.0.4-3.json"
+  },
+  {
+    "version": "1.0.4",
+    "release_date": "2026-03-11",
+    "filename": "1.0.4.json"
+  },
+  {
+    "version": "1.0.4-0",
+    "release_date": "2026-03-10",
+    "filename": "1.0.4-0.json"
+  },
+  {
+    "version": "1.0.3-0",
+    "release_date": "2026-03-09",
+    "filename": "1.0.3-0.json"
+  },
+  {
+    "version": "1.0.3-1",
+    "release_date": "2026-03-09",
+    "filename": "1.0.3-1.json"
+  },
+  {
+    "version": "1.0.3-2",
+    "release_date": "2026-03-09",
+    "filename": "1.0.3-2.json"
+  },
+  {
+    "version": "1.0.3",
+    "release_date": "2026-03-09",
+    "filename": "1.0.3.json"
+  },
+  {
+    "version": "0.0.423",
+    "release_date": "2026-03-06",
+    "filename": "0.0.423.json"
+  },
+  {
+    "version": "1.0.2",
+    "release_date": "2026-03-06",
+    "filename": "1.0.2.json"
+  },
+  {
+    "version": "0.0.422-1",
+    "release_date": "2026-03-05",
+    "filename": "0.0.422-1.json"
+  },
+  {
+    "version": "0.0.422",
+    "release_date": "2026-03-05",
+    "filename": "0.0.422.json"
+  },
+  {
+    "version": "0.0.422-0",
+    "release_date": "2026-03-04",
+    "filename": "0.0.422-0.json"
+  },
+  {
+    "version": "0.0.421-2",
+    "release_date": "2026-03-03",
+    "filename": "0.0.421-2.json"
+  },
+  {
+    "version": "0.0.421",
+    "release_date": "2026-03-03",
+    "filename": "0.0.421.json"
+  },
+  {
+    "version": "0.0.421-0",
+    "release_date": "2026-03-02",
+    "filename": "0.0.421-0.json"
+  },
+  {
+    "version": "0.0.421-1",
+    "release_date": "2026-03-02",
+    "filename": "0.0.421-1.json"
+  },
+  {
+    "version": "0.0.419",
+    "release_date": "2026-02-27",
+    "filename": "0.0.419.json"
+  },
+  {
+    "version": "0.0.420-0",
+    "release_date": "2026-02-27",
+    "filename": "0.0.420-0.json"
+  },
+  {
+    "version": "0.0.420",
+    "release_date": "2026-02-27",
+    "filename": "0.0.420.json"
+  },
+  {
+    "version": "0.0.419-1",
+    "release_date": "2026-02-26",
+    "filename": "0.0.419-1.json"
+  },
+  {
+    "version": "0.0.417",
+    "release_date": "2026-02-25",
+    "filename": "0.0.417.json"
+  },
+  {
+    "version": "0.0.418-0",
+    "release_date": "2026-02-25",
+    "filename": "0.0.418-0.json"
+  },
+  {
+    "version": "0.0.418",
+    "release_date": "2026-02-25",
+    "filename": "0.0.418.json"
+  },
+  {
+    "version": "0.0.419-0",
+    "release_date": "2026-02-25",
+    "filename": "0.0.419-0.json"
+  },
+  {
+    "version": "0.0.416",
+    "release_date": "2026-02-24",
+    "filename": "0.0.416.json"
+  },
+  {
+    "version": "0.0.415-0",
+    "release_date": "2026-02-23",
+    "filename": "0.0.415-0.json"
+  },
+  {
+    "version": "0.0.415-1",
+    "release_date": "2026-02-23",
+    "filename": "0.0.415-1.json"
+  },
+  {
+    "version": "0.0.415",
+    "release_date": "2026-02-23",
+    "filename": "0.0.415.json"
+  },
+  {
+    "version": "0.0.414",
+    "release_date": "2026-02-21",
+    "filename": "0.0.414.json"
+  },
+  {
+    "version": "0.0.413-0",
+    "release_date": "2026-02-20",
+    "filename": "0.0.413-0.json"
+  },
+  {
+    "version": "0.0.413",
+    "release_date": "2026-02-20",
+    "filename": "0.0.413.json"
+  },
+  {
+    "version": "0.0.412-2",
+    "release_date": "2026-02-19",
+    "filename": "0.0.412-2.json"
+  },
+  {
+    "version": "0.0.412",
+    "release_date": "2026-02-19",
+    "filename": "0.0.412.json"
+  },
+  {
+    "version": "0.0.412-0",
+    "release_date": "2026-02-18",
+    "filename": "0.0.412-0.json"
+  },
+  {
+    "version": "0.0.412-1",
+    "release_date": "2026-02-18",
+    "filename": "0.0.412-1.json"
+  },
+  {
+    "version": "0.0.411-1",
+    "release_date": "2026-02-17",
+    "filename": "0.0.411-1.json"
+  },
+  {
+    "version": "0.0.411",
+    "release_date": "2026-02-17",
+    "filename": "0.0.411.json"
+  },
+  {
+    "version": "0.0.411-0",
+    "release_date": "2026-02-16",
+    "filename": "0.0.411-0.json"
+  },
+  {
+    "version": "0.0.410",
+    "release_date": "2026-02-14",
+    "filename": "0.0.410.json"
+  },
+  {
+    "version": "0.0.410-0",
+    "release_date": "2026-02-13",
+    "filename": "0.0.410-0.json"
+  },
+  {
+    "version": "0.0.410-1",
+    "release_date": "2026-02-13",
+    "filename": "0.0.410-1.json"
+  },
+  {
+    "version": "0.0.408",
+    "release_date": "2026-02-12",
+    "filename": "0.0.408.json"
+  },
+  {
+    "version": "0.0.409",
+    "release_date": "2026-02-12",
+    "filename": "0.0.409.json"
+  },
+  {
+    "version": "0.0.407",
+    "release_date": "2026-02-11",
+    "filename": "0.0.407.json"
+  },
+  {
+    "version": "0.0.407-0",
+    "release_date": "2026-02-10",
+    "filename": "0.0.407-0.json"
+  },
+  {
+    "version": "0.0.407-1",
+    "release_date": "2026-02-10",
+    "filename": "0.0.407-1.json"
+  },
+  {
+    "version": "0.0.406",
+    "release_date": "2026-02-07",
+    "filename": "0.0.406.json"
+  },
+  {
+    "version": "0.0.406-0",
+    "release_date": "2026-02-06",
+    "filename": "0.0.406-0.json"
+  },
+  {
+    "version": "0.0.406-1",
+    "release_date": "2026-02-06",
+    "filename": "0.0.406-1.json"
+  },
+  {
+    "version": "0.0.403",
+    "release_date": "2026-02-05",
+    "filename": "0.0.403.json"
+  },
+  {
+    "version": "0.0.404-0",
+    "release_date": "2026-02-05",
+    "filename": "0.0.404-0.json"
+  },
+  {
+    "version": "0.0.404",
+    "release_date": "2026-02-05",
+    "filename": "0.0.404.json"
+  },
+  {
+    "version": "0.0.405",
+    "release_date": "2026-02-05",
+    "filename": "0.0.405.json"
+  },
+  {
+    "version": "0.0.401",
+    "release_date": "2026-02-03",
+    "filename": "0.0.401.json"
+  },
+  {
+    "version": "0.0.402-0",
+    "release_date": "2026-02-03",
+    "filename": "0.0.402-0.json"
+  },
+  {
+    "version": "0.0.402",
+    "release_date": "2026-02-03",
+    "filename": "0.0.402.json"
+  },
+  {
+    "version": "0.0.401-0",
+    "release_date": "2026-02-02",
+    "filename": "0.0.401-0.json"
+  },
+  {
+    "version": "0.0.401-1",
+    "release_date": "2026-02-02",
+    "filename": "0.0.401-1.json"
+  },
+  {
+    "version": "0.0.400-0",
+    "release_date": "2026-01-30",
+    "filename": "0.0.400-0.json"
+  },
+  {
+    "version": "0.0.400",
+    "release_date": "2026-01-30",
+    "filename": "0.0.400.json"
+  },
+  {
+    "version": "0.0.399-0",
+    "release_date": "2026-01-29",
+    "filename": "0.0.399-0.json"
+  },
+  {
+    "version": "0.0.399",
+    "release_date": "2026-01-29",
+    "filename": "0.0.399.json"
+  },
+  {
+    "version": "0.0.397",
+    "release_date": "2026-01-28",
+    "filename": "0.0.397.json"
+  },
+  {
+    "version": "0.0.398",
+    "release_date": "2026-01-28",
+    "filename": "0.0.398.json"
+  },
+  {
+    "version": "0.0.396-0",
+    "release_date": "2026-01-27",
+    "filename": "0.0.396-0.json"
+  },
+  {
+    "version": "0.0.396",
+    "release_date": "2026-01-27",
+    "filename": "0.0.396.json"
+  },
+  {
+    "version": "0.0.395",
+    "release_date": "2026-01-26",
+    "filename": "0.0.395.json"
+  },
+  {
+    "version": "0.0.394",
+    "release_date": "2026-01-24",
+    "filename": "0.0.394.json"
+  },
+  {
+    "version": "0.0.393",
+    "release_date": "2026-01-23",
+    "filename": "0.0.393.json"
+  },
+  {
+    "version": "0.0.389",
+    "release_date": "2026-01-22",
+    "filename": "0.0.389.json"
+  },
+  {
+    "version": "0.0.390",
+    "release_date": "2026-01-22",
+    "filename": "0.0.390.json"
+  },
+  {
+    "version": "0.0.392",
+    "release_date": "2026-01-22",
+    "filename": "0.0.392.json"
+  },
+  {
+    "version": "0.0.389-1",
+    "release_date": "2026-01-21",
+    "filename": "0.0.389-1.json"
+  },
+  {
+    "version": "0.0.387",
+    "release_date": "2026-01-20",
+    "filename": "0.0.387.json"
+  },
+  {
+    "version": "0.0.388-0",
+    "release_date": "2026-01-20",
+    "filename": "0.0.388-0.json"
+  },
+  {
+    "version": "0.0.388-1",
+    "release_date": "2026-01-20",
+    "filename": "0.0.388-1.json"
+  },
+  {
+    "version": "0.0.388",
+    "release_date": "2026-01-20",
+    "filename": "0.0.388.json"
+  },
+  {
+    "version": "0.0.389-0",
+    "release_date": "2026-01-20",
+    "filename": "0.0.389-0.json"
+  },
+  {
+    "version": "0.0.385",
+    "release_date": "2026-01-19",
+    "filename": "0.0.385.json"
+  },
+  {
+    "version": "0.0.386",
+    "release_date": "2026-01-19",
+    "filename": "0.0.386.json"
+  },
+  {
+    "version": "0.0.384",
+    "release_date": "2026-01-16",
+    "filename": "0.0.384.json"
+  },
+  {
+    "version": "0.0.382",
+    "release_date": "2026-01-14",
+    "filename": "0.0.382.json"
+  },
+  {
+    "version": "0.0.378-2",
+    "release_date": "2026-01-13",
+    "filename": "0.0.378-2.json"
+  },
+  {
+    "version": "0.0.380",
+    "release_date": "2026-01-13",
+    "filename": "0.0.380.json"
+  },
+  {
+    "version": "0.0.381",
+    "release_date": "2026-01-13",
+    "filename": "0.0.381.json"
+  },
+  {
+    "version": "0.0.382-0",
+    "release_date": "2026-01-13",
+    "filename": "0.0.382-0.json"
+  },
+  {
+    "version": "0.0.378-1",
+    "release_date": "2026-01-12",
+    "filename": "0.0.378-1.json"
+  },
+  {
+    "version": "0.0.378-0",
+    "release_date": "2026-01-09",
+    "filename": "0.0.378-0.json"
+  },
+  {
+    "version": "0.0.376",
+    "release_date": "2026-01-08",
+    "filename": "0.0.376.json"
+  },
+  {
+    "version": "0.0.377",
+    "release_date": "2026-01-08",
+    "filename": "0.0.377.json"
+  },
+  {
+    "version": "0.0.375-2",
+    "release_date": "2026-01-07",
+    "filename": "0.0.375-2.json"
+  },
+  {
+    "version": "0.0.375",
+    "release_date": "2026-01-07",
+    "filename": "0.0.375.json"
+  },
+  {
+    "version": "0.0.375-1",
+    "release_date": "2026-01-06",
+    "filename": "0.0.375-1.json"
+  },
+  {
+    "version": "0.0.375-0",
+    "release_date": "2026-01-05",
+    "filename": "0.0.375-0.json"
+  },
+  {
+    "version": "0.0.374",
+    "release_date": "2026-01-02",
+    "filename": "0.0.374.json"
+  },
+  {
+    "version": "0.0.373-3",
+    "release_date": "2025-12-30",
+    "filename": "0.0.373-3.json"
+  },
+  {
+    "version": "0.0.373",
+    "release_date": "2025-12-30",
+    "filename": "0.0.373.json"
+  },
+  {
+    "version": "0.0.373-2",
+    "release_date": "2025-12-29",
+    "filename": "0.0.373-2.json"
+  },
+  {
+    "version": "0.0.372",
+    "release_date": "2025-12-19",
+    "filename": "0.0.372.json"
+  },
+  {
+    "version": "0.0.370-7",
+    "release_date": "2025-12-18",
+    "filename": "0.0.370-7.json"
+  },
+  {
+    "version": "0.0.370",
+    "release_date": "2025-12-18",
+    "filename": "0.0.370.json"
+  },
+  {
+    "version": "0.0.371-0",
+    "release_date": "2025-12-18",
+    "filename": "0.0.371-0.json"
+  },
+  {
+    "version": "0.0.371",
+    "release_date": "2025-12-18",
+    "filename": "0.0.371.json"
+  },
+  {
+    "version": "0.0.370-5",
+    "release_date": "2025-12-17",
+    "filename": "0.0.370-5.json"
+  },
+  {
+    "version": "0.0.370-6",
+    "release_date": "2025-12-17",
+    "filename": "0.0.370-6.json"
+  },
+  {
+    "version": "0.0.370-1",
+    "release_date": "2025-12-15",
+    "filename": "0.0.370-1.json"
+  },
+  {
+    "version": "0.0.370-0",
+    "release_date": "2025-12-12",
+    "filename": "0.0.370-0.json"
+  },
+  {
+    "version": "0.0.369-0",
+    "release_date": "2025-12-11",
+    "filename": "0.0.369-0.json"
+  },
+  {
+    "version": "0.0.369",
+    "release_date": "2025-12-11",
+    "filename": "0.0.369.json"
+  },
+  {
+    "version": "0.0.368-4",
+    "release_date": "2025-12-10",
+    "filename": "0.0.368-4.json"
+  },
+  {
+    "version": "0.0.368",
+    "release_date": "2025-12-10",
+    "filename": "0.0.368.json"
+  },
+  {
+    "version": "0.0.368-2",
+    "release_date": "2025-12-09",
+    "filename": "0.0.368-2.json"
+  },
+  {
+    "version": "0.0.368-3",
+    "release_date": "2025-12-09",
+    "filename": "0.0.368-3.json"
+  },
+  {
+    "version": "0.0.368-1",
+    "release_date": "2025-12-08",
+    "filename": "0.0.368-1.json"
+  },
+  {
+    "version": "0.0.367",
+    "release_date": "2025-12-05",
+    "filename": "0.0.367.json"
+  },
+  {
+    "version": "0.0.368-0",
+    "release_date": "2025-12-05",
+    "filename": "0.0.368-0.json"
+  },
+  {
+    "version": "0.0.367-0",
+    "release_date": "2025-12-04",
+    "filename": "0.0.367-0.json"
+  },
+  {
+    "version": "0.0.366-9",
+    "release_date": "2025-12-03",
+    "filename": "0.0.366-9.json"
+  },
+  {
+    "version": "0.0.366",
+    "release_date": "2025-12-03",
+    "filename": "0.0.366.json"
+  },
+  {
+    "version": "0.0.366-6",
+    "release_date": "2025-12-02",
+    "filename": "0.0.366-6.json"
+  },
+  {
+    "version": "0.0.366-7",
+    "release_date": "2025-12-02",
+    "filename": "0.0.366-7.json"
+  },
+  {
+    "version": "0.0.366-8",
+    "release_date": "2025-12-02",
+    "filename": "0.0.366-8.json"
+  },
+  {
+    "version": "0.0.366-3",
+    "release_date": "2025-12-01",
+    "filename": "0.0.366-3.json"
+  },
+  {
+    "version": "0.0.366-5",
+    "release_date": "2025-12-01",
+    "filename": "0.0.366-5.json"
+  },
+  {
+    "version": "0.0.366-2",
+    "release_date": "2025-11-28",
+    "filename": "0.0.366-2.json"
+  },
+  {
+    "version": "0.0.366-1",
+    "release_date": "2025-11-27",
+    "filename": "0.0.366-1.json"
+  },
+  {
+    "version": "0.0.365",
+    "release_date": "2025-11-26",
+    "filename": "0.0.365.json"
+  },
+  {
+    "version": "0.0.366-0",
+    "release_date": "2025-11-26",
+    "filename": "0.0.366-0.json"
+  },
+  {
+    "version": "0.0.364-0",
+    "release_date": "2025-11-25",
+    "filename": "0.0.364-0.json"
+  },
+  {
+    "version": "0.0.364",
+    "release_date": "2025-11-25",
+    "filename": "0.0.364.json"
+  },
+  {
+    "version": "0.0.363-1",
+    "release_date": "2025-11-24",
+    "filename": "0.0.363-1.json"
+  },
+  {
+    "version": "0.0.363-2",
+    "release_date": "2025-11-24",
+    "filename": "0.0.363-2.json"
+  },
+  {
+    "version": "0.0.363",
+    "release_date": "2025-11-24",
+    "filename": "0.0.363.json"
+  },
+  {
+    "version": "0.0.363-0",
+    "release_date": "2025-11-21",
+    "filename": "0.0.363-0.json"
+  },
+  {
+    "version": "0.0.362-1",
+    "release_date": "2025-11-20",
+    "filename": "0.0.362-1.json"
+  },
+  {
+    "version": "0.0.362",
+    "release_date": "2025-11-20",
+    "filename": "0.0.362.json"
+  },
+  {
+    "version": "0.0.360",
+    "release_date": "2025-11-18",
+    "filename": "0.0.360.json"
+  },
+  {
+    "version": "0.0.361-0",
+    "release_date": "2025-11-18",
+    "filename": "0.0.361-0.json"
+  },
+  {
+    "version": "0.0.361",
+    "release_date": "2025-11-18",
+    "filename": "0.0.361.json"
+  },
+  {
+    "version": "0.0.362-0",
+    "release_date": "2025-11-18",
+    "filename": "0.0.362-0.json"
+  },
+  {
+    "version": "0.0.359-0",
+    "release_date": "2025-11-17",
+    "filename": "0.0.359-0.json"
+  },
+  {
+    "version": "0.0.359",
+    "release_date": "2025-11-17",
+    "filename": "0.0.359.json"
+  },
+  {
+    "version": "0.0.357-0",
+    "release_date": "2025-11-14",
+    "filename": "0.0.357-0.json"
+  },
+  {
+    "version": "0.0.357",
+    "release_date": "2025-11-14",
+    "filename": "0.0.357.json"
+  },
+  {
+    "version": "0.0.358-0",
+    "release_date": "2025-11-14",
+    "filename": "0.0.358-0.json"
+  },
+  {
+    "version": "0.0.358-1",
+    "release_date": "2025-11-14",
+    "filename": "0.0.358-1.json"
+  },
+  {
+    "version": "0.0.358",
+    "release_date": "2025-11-14",
+    "filename": "0.0.358.json"
+  },
+  {
+    "version": "0.0.356-0",
+    "release_date": "2025-11-13",
+    "filename": "0.0.356-0.json"
+  },
+  {
+    "version": "0.0.356",
+    "release_date": "2025-11-13",
+    "filename": "0.0.356.json"
+  },
+  {
+    "version": "0.0.355-37",
+    "release_date": "2025-11-12",
+    "filename": "0.0.355-37.json"
+  },
+  {
+    "version": "0.0.355",
+    "release_date": "2025-11-12",
+    "filename": "0.0.355.json"
+  },
+  {
+    "version": "0.0.354",
+    "release_date": "2025-11-03",
+    "filename": "0.0.354.json"
+  },
+  {
+    "version": "0.0.353",
+    "release_date": "2025-10-28",
+    "filename": "0.0.353.json"
+  },
+  {
+    "version": "0.0.352",
+    "release_date": "2025-10-27",
+    "filename": "0.0.352.json"
+  },
+  {
+    "version": "0.0.350",
+    "release_date": "2025-10-24",
+    "filename": "0.0.350.json"
+  },
+  {
+    "version": "0.0.351",
+    "release_date": "2025-10-24",
+    "filename": "0.0.351.json"
+  },
+  {
+    "version": "0.0.348",
+    "release_date": "2025-10-22",
+    "filename": "0.0.348.json"
+  },
+  {
+    "version": "0.0.349",
+    "release_date": "2025-10-22",
+    "filename": "0.0.349.json"
+  },
+  {
+    "version": "0.0.347",
+    "release_date": "2025-10-21",
+    "filename": "0.0.347.json"
+  },
+  {
+    "version": "0.0.346",
+    "release_date": "2025-10-19",
+    "filename": "0.0.346.json"
+  },
+  {
+    "version": "0.0.344",
+    "release_date": "2025-10-18",
+    "filename": "0.0.344.json"
+  },
+  {
+    "version": "0.0.345",
+    "release_date": "2025-10-18",
+    "filename": "0.0.345.json"
+  },
+  {
+    "version": "0.0.342",
+    "release_date": "2025-10-16",
+    "filename": "0.0.342.json"
+  },
+  {
+    "version": "0.0.343",
+    "release_date": "2025-10-16",
+    "filename": "0.0.343.json"
+  },
+  {
+    "version": "0.0.341",
+    "release_date": "2025-10-15",
+    "filename": "0.0.341.json"
+  },
+  {
+    "version": "0.0.340",
+    "release_date": "2025-10-13",
+    "filename": "0.0.340.json"
+  },
+  {
+    "version": "0.0.339",
+    "release_date": "2025-10-10",
+    "filename": "0.0.339.json"
+  },
+  {
+    "version": "0.0.338",
+    "release_date": "2025-10-09",
+    "filename": "0.0.338.json"
+  },
+  {
+    "version": "0.0.337",
+    "release_date": "2025-10-08",
+    "filename": "0.0.337.json"
+  },
+  {
+    "version": "0.0.336",
+    "release_date": "2025-10-07",
+    "filename": "0.0.336.json"
+  },
+  {
+    "version": "0.0.335",
+    "release_date": "2025-10-06",
+    "filename": "0.0.335.json"
+  },
+  {
+    "version": "0.0.334",
+    "release_date": "2025-10-03",
+    "filename": "0.0.334.json"
+  },
+  {
+    "version": "0.0.333",
+    "release_date": "2025-10-02",
+    "filename": "0.0.333.json"
+  },
+  {
+    "version": "0.0.331",
+    "release_date": "2025-10-01",
+    "filename": "0.0.331.json"
+  },
+  {
+    "version": "0.0.332",
+    "release_date": "2025-10-01",
+    "filename": "0.0.332.json"
+  },
+  {
+    "version": "0.0.329",
+    "release_date": "2025-09-29",
+    "filename": "0.0.329.json"
+  },
+  {
+    "version": "0.0.330",
+    "release_date": "2025-09-29",
+    "filename": "0.0.330.json"
+  },
+  {
+    "version": "0.0.328",
+    "release_date": "2025-09-26",
+    "filename": "0.0.328.json"
+  }
+]

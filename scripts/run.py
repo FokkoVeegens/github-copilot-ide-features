@@ -5,7 +5,7 @@ import pathlib
 import sys
 
 from scripts.common.config import get_ide_config
-from scripts.common.io import write_release
+from scripts.common.io import generate_ide_index, write_release
 
 _REPO_ROOT = pathlib.Path(__file__).parents[1]
 
@@ -32,6 +32,10 @@ def main() -> None:
         else:
             skipped += 1
             print(f"  [skip] {release['version']}")
+
+    # Generate/update index.json for this IDE
+    generate_ide_index(data_dir)
+    print("  [gen]  index.json")
 
     print(f"\nDone — {written} new, {skipped} skipped.")
     if written == 0 and skipped == 0:
