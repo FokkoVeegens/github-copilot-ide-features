@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.57-0",
+  "release_date": "2026-05-29",
+  "title": "1.0.57-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.57-0",
+  "source": "api",
+  "body_markdown": "**Improved**\n- /diff defaults to branch diff when there are no unstaged changes\n\n**Fixed**\n- Surface the underlying reason (e.g. GitHub API rate limit) when SDK auth-token validation fails, instead of the misleading \"Session was not created with authentication info or custom provider\" message.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

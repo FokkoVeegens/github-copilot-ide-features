@@ -1,0 +1,23 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.335",
+  "release_date": "2025-10-06",
+  "title": "0.0.335",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.335",
+  "source": "api",
+  "body_markdown": "- Improved visibility into file edits by showing file diffs in the timeline by default, without the need to Ctrl+R\r\n- Improved slash command input by showing argument hints in the input box\r\n- Improved the display of the interface in windows less than 80 columns wide\r\n- Reduced the number of colors and improved the spacing of Markdown rendering\r\n- Added a warning when attempting to use proxy support in an environment where it won't work (Node <24, required environment variables not set) (A more permanent fix for https://github.com/github/copilot-cli/issues/41 is coming ~tomorrow)\r\n- Updated the context truncation message's color from an error color to a warning color\r\n- Fixed a bug where `copilot` logs might not have been properly created on Windows\r\n- Fixed a bug where Powershell users with custom profiles might have had issues running commands (Fixes https://github.com/github/copilot-cli/issues/196)\r\n- Fixed a bug where prompts were truncated after pasting and other edge cases (Fixes https://github.com/github/copilot-cli/issues/208, https://github.com/github/copilot-cli/issues/218)\r\n- Fixed a bug where users would see a login prompt on startup despite being logged in (fixes https://github.com/github/copilot-cli/issues/202)\r\n- Fixed a bug where some SSH users in certain environments were unable to get the OAuth login link and had their processes hang trying to open a browser (fixes https://github.com/github/copilot-cli/issues/89)\r\n\r\nRun `npm install -g @github/copilot@latest` to update!",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Added a warning when attempting to use proxy support in an environment where it won't work (Node <24, required environment variables not set) (A more permanent fix for https://github.com/github/copilot-cli/issues/41 is coming ~tomorrow)",
+    "- Fixed a bug where `copilot` logs might not have been properly created on Windows",
+    "- Fixed a bug where Powershell users with custom profiles might have had issues running commands (Fixes https://github.com/github/copilot-cli/issues/196)",
+    "- Fixed a bug where prompts were truncated after pasting and other edge cases (Fixes https://github.com/github/copilot-cli/issues/208, https://github.com/github/copilot-cli/issues/218)",
+    "- Fixed a bug where users would see a login prompt on startup despite being logged in (fixes https://github.com/github/copilot-cli/issues/202)",
+    "- Fixed a bug where some SSH users in certain environments were unable to get the OAuth login link and had their processes hang trying to open a browser (fixes https://github.com/github/copilot-cli/issues/89)",
+    "Run `npm install -g @github/copilot@latest` to update!"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

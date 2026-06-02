@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.357",
+  "release_date": "2025-11-14",
+  "title": "0.0.357",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.357",
+  "source": "api",
+  "body_markdown": "## 0.0.357 - 2025-11-13\r\n\r\nRecovery release to fix an issue with image resizing.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

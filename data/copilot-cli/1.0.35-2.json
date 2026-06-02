@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.35-2",
+  "release_date": "2026-04-21",
+  "title": "1.0.35-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.35-2",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add continueOnAutoMode config option to automatically switch to auto model on rate limit instead of pausing\n\n**Fixed**\n- Auto mode no longer fails with an error when switching to a model that doesn't support the configured reasoning effort\n- Pattern-specific instruction files (.github/instructions/*.instructions.md) no longer include their full body in the system prompt on every session\n- Extension shutdown errors no longer appear as error-level log noise on every session exit\n- LSP refactoring tools now register correctly on the first turn when LSP configs are present",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.20",
+  "release_date": "2026-04-07",
+  "title": "1.0.20",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.20",
+  "source": "api",
+  "body_markdown": "2026-04-07\n\n- Add `copilot help monitoring` topic with OpenTelemetry configuration details and examples\n- Spinner stays active until background agents and shell commands finish, and user input remains available throughout\n- Azure OpenAI BYOK defaults to the GA versionless v1 route when no API version is configured\n- Reduce UI sluggishness during live response streaming\n- /yolo and --yolo now behave identically and /yolo state persists across /restart",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Add `copilot help monitoring` topic with OpenTelemetry configuration details and examples"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

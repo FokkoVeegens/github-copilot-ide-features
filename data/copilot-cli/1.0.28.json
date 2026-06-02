@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.28",
+  "release_date": "2026-04-16",
+  "title": "1.0.28",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.28",
+  "source": "api",
+  "body_markdown": "2026-04-16\r\n\r\n- Permission prompts show correct repository path when working inside git submodules\r\n- Background agent completion notifications are not sent redundantly when read_agent is already waiting for the result\r\n- MCP migration hint now links to documentation with platform-specific instructions instead of embedding shell commands inline\r\n- Azure resource IDs no longer trigger false path security warnings when running az CLI commands\r\n- Rewind picker navigation simplified to arrow keys and Enter, removing the confusing 1-9 quick-select shortcut\r\n- A clear error message is displayed when the configured editor cannot be launched\r\n- Mascot plays a short blink sequence on startup instead of blinking continuously\r\n- Connect to CLI remote control sessions from the —resume picker\r\n- Support COPILOT_DISABLE_TERMINAL_TITLE environment variable to opt out of terminal title updates\r\n- Custom instructions and skills refresh from disk after /clear or /new",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,20 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.332",
+  "release_date": "2025-10-01",
+  "title": "0.0.332",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.332",
+  "source": "api",
+  "body_markdown": "## 0.0.332 - 2025-10-01\r\n\r\n- Switched to using per-subscription Copilot API endpoints in accordance with [GitHub's docs](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/manage-network-access) (fixes https://github.com/github/copilot-cli/issues/76)\r\n- Fixed a bug where `/user [list | show | swtich]` did not include users signed in from all authentication modes (fixes https://github.com/github/copilot-cli/issues/58)\r\n- Fixed a bug where switching to another user with `/user switch` did not take effect in the GitHub MCP server\r\n- Improved the screenreader experience by disabling the scrollbar in the `@` file picker, the `--resume` session picker, and the `/` command picker\r\n- Improved the polish of the scrollbar container (increased the width, reduced the opacity of the gutter)\r\n- Minor visual improvements to the input area (moved the current model indicator to the right so it's not cramped with the CWD, improved the positioning of the file picker's \"indexing\" indicator, improved hint formatting in completion menus)\r\n- Improved Markdown legibility by excluding `#` prefixes in headings\r\n- Improved how we extract paths from shell commands for permission handling (might fix https://github.com/github/copilot-cli/issues/159, https://github.com/github/copilot-cli/issues/67)\r\n\r\nRun `npm install -g @github/copilot@latest` to update!",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Switched to using per-subscription Copilot API endpoints in accordance with [GitHub's docs](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/manage-network-access) (fixes https://github.com/github/copilot-cli/issues/76)",
+    "- Fixed a bug where `/user [list | show | swtich]` did not include users signed in from all authentication modes (fixes https://github.com/github/copilot-cli/issues/58)",
+    "- Improved how we extract paths from shell commands for permission handling (might fix https://github.com/github/copilot-cli/issues/159, https://github.com/github/copilot-cli/issues/67)",
+    "Run `npm install -g @github/copilot@latest` to update!"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

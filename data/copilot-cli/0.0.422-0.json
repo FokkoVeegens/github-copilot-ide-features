@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.422-0",
+  "release_date": "2026-03-04",
+  "title": "0.0.422-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.422-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Load personal hooks from ~/.copilot/hooks in addition to repo-level .github/hooks\n- Support enabledPlugins in config for automatic plugin installation at startup\n- Session usage metrics (requests, tokens, code changes) are now persisted to events.jsonl after each session ends\n\n**Improved**\n- Show a clear, actionable error message when git is not installed and a remote plugin or marketplace is used\n- Links in alt-screen mode are rendered with underline styling for better visibility\n- /delegate prompts for a target remote in multi-remote repositories and clarifies confirmation text\n- Hide noisy todo bookkeeping queries and show dependency details in timeline\n- Rename `launch_messages` config setting to `companyAnnouncements`\n- Show a waiting message when the terminal is handed to an external editor\n- Rename repository config from `.github/copilot/config.json` to `settings.json`\n\n**Fixed**\n- Plugin cache automatically recovers from a corrupted or incomplete clone without manual intervention\n- Opening links on Windows correctly handles URLs with & query parameters\n- Colons in inline code render correctly inside markdown tables\n- Ctrl+K joins lines when cursor is at end of line, matching standard Emacs/terminal behavior",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Load personal hooks from ~/.copilot/hooks in addition to repo-level .github/hooks",
+    "- Rename repository config from `.github/copilot/config.json` to `settings.json`"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

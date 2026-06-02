@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.347",
+  "release_date": "2025-10-21",
+  "title": "0.0.347",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.347",
+  "source": "api",
+  "body_markdown": "## 0.0.347 - 2025-10-20\r\n\r\n- Fixed more bugs where incorrect PRU consumption stats were displayed on the frontend\r\n  For more information, see https://github.com/github/copilot-cli/issues/351#issuecomment-3423735333\r\n- Fixed a bug where pasted input content that was backspaced away was still sent to the model\r\n- Improved line wrapping and alignment when rendering file diffs",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "For more information, see https://github.com/github/copilot-cli/issues/351#issuecomment-3423735333"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

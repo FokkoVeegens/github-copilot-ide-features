@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.22-0",
+  "release_date": "2026-04-08",
+  "title": "1.0.22-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.22-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add sub-agent depth and concurrency limits to prevent runaway agent spawning\n- Warn when resuming a session that is already in use by another CLI or application\n\n**Fixed**\n- CLI no longer crashes on systems affected by a V8 engine bug in grapheme segmentation\n- sessionStart and sessionEnd hooks fire once per session in interactive mode instead of once per prompt\n- Plugin agents respect the model specified in their frontmatter",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

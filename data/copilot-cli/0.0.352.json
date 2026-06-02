@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.352",
+  "release_date": "2025-10-27",
+  "title": "0.0.352",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.352",
+  "source": "api",
+  "body_markdown": "## 0.0.352 - 2025-10-27\r\n\r\n- Improve handling of MCP tools containing slashes\r\n- Improve error message from `/model <model>` command when using an unsupported model",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

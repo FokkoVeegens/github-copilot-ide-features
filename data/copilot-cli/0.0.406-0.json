@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.406-0",
+  "release_date": "2026-02-06",
+  "title": "0.0.406-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.406-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Display warning when user has no Copilot subscription\n- Commands from plugins are now translated into skills\n\n**Improved**\n- `/mcp show` displays enabled/disabled status for MCP tools\n- MCP tool responses now include structured content (images, resources) for richer UI display in VS Code",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Display warning when user has no Copilot subscription"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

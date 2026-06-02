@@ -1,0 +1,20 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.350",
+  "release_date": "2025-10-24",
+  "title": "0.0.350",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.350",
+  "source": "api",
+  "body_markdown": "## 0.0.350 - 2025-10-23\r\n\r\n- To conserve context window space, we've limited the list of tools available to the default GitHub MCP server. In our tests, the model will use the [GitHub CLI, `gh`](https://github.com/cli/cli) (if installed) in lieu of missing MCP tools. We added an `--enable-all-github-mcp-tools` if you wish to turn on all available tools. \r\nDefault available tools are:\r\n\t- Code & Repo navigation\r\n\t\t- get_file_contents\r\n\t\t- search_code\r\n\t\t- search_repositories\r\n\t\t- list_branches\r\n\t\t- list_commits\r\n\t\t- get_commit\r\n\t- Issue Management\r\n\t\t- get_issue\r\n\t\t- list_issues\r\n\t\t- get_issue_comments\r\n\t\t- search_issues\r\n\t- PR Management\r\n\t\t- pull_request_read\r\n\t\t- list_pull_requests\r\n\t\t- search_pull_requests\r\n\t- Workflow Info\r\n\t\t- list_workflows\r\n\t\t- list_workflow_runs\r\n\t\t- get_workflow_run\r\n\t\t- get_job_logs\r\n\t\t- get_workflow_run_logs\r\n\t- Misc search\r\n\t\t- user_search\r\n- Bundled `sharp` dependency into the CLI package -- we're one step closer to implementing https://github.com/github/copilot-cli/issues/16, and this fixes some startup blockers on Windows (fixes https://github.com/github/copilot-cli/issues/309 & https://github.com/github/copilot-cli/issues/287)\r\n- Fixed a bug where input tokens were not tracked properly (Fixes https://github.com/github/copilot-cli/issues/337)\r\n- Fixed a bug where MCP tools with arguments would fail with streaming enabled\r\n- Added additional debug logging that will help us investigate https://github.com/github/copilot-cli/issues/346\r\n\r\nRun `npm install -g @github/copilot@latest` to update!",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Bundled `sharp` dependency into the CLI package -- we're one step closer to implementing https://github.com/github/copilot-cli/issues/16, and this fixes some startup blockers on Windows (fixes https://github.com/github/copilot-cli/issues/309 & https://github.com/github/copilot-cli/issues/287)",
+    "- Fixed a bug where input tokens were not tracked properly (Fixes https://github.com/github/copilot-cli/issues/337)",
+    "- Added additional debug logging that will help us investigate https://github.com/github/copilot-cli/issues/346",
+    "Run `npm install -g @github/copilot@latest` to update!"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.411",
+  "release_date": "2026-02-17",
+  "title": "0.0.411",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.411",
+  "source": "api",
+  "body_markdown": "2026-02-17\n\n- Improve error messaging and guidance when access denied by policy\n- Custom agents use `disable-model-invocation` instead of `infer` (backward compatible)\n- Add support for Claude Sonnet 4.6 model\n- Memory storage shows subject, fact, and citations in timeline\n- Tab completion respects the highlighted slash command selection\n- Support MCP servers from Windows On-Device Registry\n- Text selection now works in footer area in alt-screen mode\n- Support `--alt-screen on` and `--alt-screen off` syntax\n- Add `include_coauthor` config option to disable Co-authored-by trailer in git commits\n- SDK APIs for plan mode, autopilot, fleet, and workspace files\n- Autopilot mode and /fleet command now available to all users\n- Alt-screen viewport auto-scrolls when dragging selection to edge\n- Interactive shell commands complete on all versions of Windows\n- Reduce memory usage in alt-screen mode during long sessions\n- Session picker no longer flashes when using --resume in alt-screen mode\n- Terminal bell rings once when agent finishes, not on every tool completion\n- Custom instruction files are recognized regardless of casing\n- PowerShell commands with syntax errors no longer hang\n- Improve text selection responsiveness in --alt-screen mode\n- Cursor shows when suspending and hides when resuming",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

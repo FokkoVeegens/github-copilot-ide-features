@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.367",
+  "release_date": "2025-12-05",
+  "title": "0.0.367",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.367",
+  "source": "api",
+  "body_markdown": "2025-12-04\n\n- GPT-5.1-Codex-Max is now available in GitHub Copilot CLI",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- GPT-5.1-Codex-Max is now available in GitHub Copilot CLI"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

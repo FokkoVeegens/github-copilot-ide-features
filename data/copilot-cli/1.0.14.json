@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.14",
+  "release_date": "2026-03-31",
+  "title": "1.0.14",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.14",
+  "source": "api",
+  "body_markdown": "2026-03-31\n\n- Images are correctly sent to Anthropic models when using BYOM\n- Model picker selection correctly overrides the --model flag for the current session\n- Terminal output no longer clears or jumps on error exit\n- Shift+Enter inserts a newline in terminals with Kitty keyboard protocol support\n- Show underlying error details when a Git marketplace URL fails to clone\n- Temp file operations no longer trigger unnecessary permission prompts on macOS\n- Allow SDK session participants to respond to elicitation requests via handlePendingElicitation API\n- Shell processes are cleaned up properly when a session ends\n- SDK exit_plan_mode.requested event is now always emitted, regardless of whether a direct callback is configured\n- MCP servers using Microsoft Entra ID authentication no longer show the consent screen on every login\n- Grep and glob search results return promptly when a timeout is reached\n- Keystrokes are no longer dropped when typing quickly in elicitation dialogs\n- Clipboard copy on native Windows no longer includes a stray U+FEFF character at the start of pasted text\n- Fixed --config-dir being ignored when resuming a session, causing paths to silently fall back to ~/.copilot\n- MCP servers blocked by allowlist policy are now hidden from /mcp show\n- Reasoning effort setting now applies correctly when using Bring Your Own Model (BYOM) providers\n- Ensure clear error messaging when using classic PATs\n- grep tool handles large files and long lines without running out of memory\n- MCP server OAuth authentication works when the CLI runs in ACP mode\n- Split $BROWSER on spaces\n- Pasted text is no longer corrupted when mouse support is active\n- Uninstalling a marketplace plugin removes its cached data from disk\n- Reduce CPU usage during streaming by optimizing spinner rendering and task polling\n- Reduce CLI startup time by running terminal detection, auth, and git operations in parallel\n- MCP registry lookups are more reliable with automatic retries and request timeouts\n- CLI starts faster due to V8 compile cache reducing parse and compile time on repeated invocations\n- Remove support for gemini-3-pro-preview model",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Fixed --config-dir being ignored when resuming a session, causing paths to silently fall back to ~/.copilot"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

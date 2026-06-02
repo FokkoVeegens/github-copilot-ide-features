@@ -1,0 +1,21 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.337",
+  "release_date": "2025-10-08",
+  "title": "0.0.337",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.337",
+  "source": "api",
+  "body_markdown": "## 0.0.337 - 2025-10-08\r\n\r\n- Added validation for MCP server names (fixes https://github.com/github/copilot-cli/issues/110)\r\n- Added support for Ctrl+B and Ctrl+F for moving cursor back and forward (fixes https://github.com/github/copilot-cli/issues/214)\r\n- Added support for multi-line input for terminals that support the [Kitty protocol](https://sw.kovidgoyal.net/kitty/keyboard-protocol/) (partially fixes https://github.com/github/copilot-cli/issues/14 -- broader terminal support coming soon!)\r\n- Updated the OAuth login UI to begin polling as soon as the device code is generated (this will _more solidly_ fix SSH edge-cases as described in https://github.com/github/copilot-cli/issues/89)\r\n\r\nRun `npm install -g @github/copilot@latest` to update!",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Added validation for MCP server names (fixes https://github.com/github/copilot-cli/issues/110)",
+    "- Added support for Ctrl+B and Ctrl+F for moving cursor back and forward (fixes https://github.com/github/copilot-cli/issues/214)",
+    "- Added support for multi-line input for terminals that support the [Kitty protocol](https://sw.kovidgoyal.net/kitty/keyboard-protocol/) (partially fixes https://github.com/github/copilot-cli/issues/14 -- broader terminal support coming soon!)",
+    "- Updated the OAuth login UI to begin polling as soon as the device code is generated (this will _more solidly_ fix SSH edge-cases as described in https://github.com/github/copilot-cli/issues/89)",
+    "Run `npm install -g @github/copilot@latest` to update!"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

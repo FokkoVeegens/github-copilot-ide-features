@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.412-0",
+  "release_date": "2026-02-18",
+  "title": "0.0.412-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.412-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add cross-session memory: ask about past work, files, and PRs across sessions (experimental)\n- Add `--bash-env` flag to source BASH_ENV in shell sessions\n- Restore `ctrl+x /` as alternate shortcut to run commands while preserving input\n\n**Fixed**\n- /clear preserves agent mode (autopilot, plan, or interactive)\n- MCP error messages include the server name\n- Text selection in timeline no longer spills into prompt area when dragging",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

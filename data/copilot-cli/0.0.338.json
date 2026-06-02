@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.338",
+  "release_date": "2025-10-09",
+  "title": "0.0.338",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.338",
+  "source": "api",
+  "body_markdown": "## 0.0.338 - 2025-10-09\r\n\r\n- Moved Kitty protocol support behind the `COPILOT_KITTY` environment variable due to observed regressions (https://github.com/github/copilot-cli/issues/257, https://github.com/github/copilot-cli/issues/259)\r\n- Fixed a wrapping issue in multi-line prompts with empty lines\r\n\r\nRun `npm install -g @github/copilot@latest` to update!",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Moved Kitty protocol support behind the `COPILOT_KITTY` environment variable due to observed regressions (https://github.com/github/copilot-cli/issues/257, https://github.com/github/copilot-cli/issues/259)",
+    "Run `npm install -g @github/copilot@latest` to update!"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.399",
+  "release_date": "2026-01-29",
+  "title": "0.0.399",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.399",
+  "source": "api",
+  "body_markdown": "2026-01-29\r\n\r\n- Compaction messages show clearer command hints to view checkpoint summaries\r\n- Press Ctrl+X then / to run slash commands without losing your input\r\n- Improve `/diff` command with better visual indicators and scroll acceleration\r\n- Add `/allow-all` and `/yolo` commands to auto-approve all permissions during a session\r\n- Add Copilot option for agent creation wizard to generate name, description, and instructions based on initial agent description\r\n- Add LSP (Language Server Protocol) tool for code intelligence (requires staff flag)\r\n- Sessions get AI-generated names from first message\r\n- Skills remain effective after conversation history is compacted\r\n- /usage now includes token consumption from sub-agents (e.g., the general-purpose agent)\r\n- Support `.claude/commands/` single-file commands as simpler alternative to skills\r\n- Skills load correctly on Windows\r\n- Add `/diff` command to review session changes\r\n- Undo/rewind to previous states with double-Esc",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Add Copilot option for agent creation wizard to generate name, description, and instructions based on initial agent description"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.404",
+  "release_date": "2026-02-05",
+  "title": "0.0.404",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.404",
+  "source": "api",
+  "body_markdown": "2026-02-05\n\n- Add support for claude-opus-4.6 model\n- `/allow-all` and `/yolo` execute immediately\n- MCP servers shut down concurrently for improved performance\n- Cancel --resume session picker to start a new session\n- MCP server configurations default to all tools when tools parameter not specified\n- Add `/tasks` command to view and manage background tasks\n- Enable background agents for all users\n- Simplify and clarify `/delegate` command messaging\n- GITHUB_TOKEN environment variable now accessible in agent shell sessions",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

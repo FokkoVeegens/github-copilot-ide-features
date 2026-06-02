@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.33-0",
+  "release_date": "2026-04-20",
+  "title": "1.0.33-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.33-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add /bug, /continue, /release-notes, /export, and /reset as command aliases\n- Slash command picker suggests similar commands when you type an unrecognized or misspelled slash command\n- Add /upgrade as an alias for the /update command\n\n**Improved**\n- ctrl+t to toggle reasoning display is now listed in the /help and ? overlay\n- Sub-agents in auto mode now inherit the session model\n- Show usage limit warnings at 50% and 95% capacity, giving earlier notice before hitting rate limits\n- Use j/k for vim-style navigation and x to kill tasks in the tasks dialog\n\n**Fixed**\n- Grep no longer times out on large repositories when content exclusion policies are enabled\n- Non-interactive mode waits for all background agents to finish before exiting\n- Skill picker correctly truncates CJK/Japanese descriptions and long skill names without wrapping\n- Slash command picker selects the highlighted command when pressing Enter",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

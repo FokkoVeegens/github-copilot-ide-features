@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.53",
+  "release_date": "2026-05-24",
+  "title": "1.0.53",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.53",
+  "source": "api",
+  "body_markdown": "2026-05-24\n\n- Multiline prompts display fully without content clipping or selection offset\n- /skills picker now correctly honors --config-dir when saving skill preferences\n- Bash shell sessions no longer hang when PS0 or PROMPT_COMMAND is set in the environment",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

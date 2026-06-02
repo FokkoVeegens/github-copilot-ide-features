@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.9",
+  "release_date": "2026-03-19",
+  "title": "1.0.9",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.9",
+  "source": "api",
+  "body_markdown": "2026-03-19\n\n- Spurious I/O error messages (ENOTCONN, EIO) no longer appear in the timeline during SSH disconnects or terminal closes\n- Add include_gitignored config option to include gitignored files in @ file search\n- Copying text on WSL correctly preserves CJK and other non-ASCII characters\n- Marketplace and plugin installs from shortened URLs (e.g., aka.ms links) now work correctly",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

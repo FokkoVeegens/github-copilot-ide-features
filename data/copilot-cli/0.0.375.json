@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.375",
+  "release_date": "2026-01-07",
+  "title": "0.0.375",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.375",
+  "source": "api",
+  "body_markdown": "2026-01-07\n\n- Add Ctrl+T to toggle reasoning summaries for supported models\n- Add --share and --share-gist flags for session sharing in non-interactive mode\n- File edits no longer hang when approving multiple concurrent edits\n- Responses with reasoning no longer cause duplicate assistant messages\n- Shutdown MCP servers after subagent execution completes\n- SVG files are now treated as text files instead of binary images\n- Fix 'Connection Error' issues due to subscription-based route used in chat completions",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.56-0",
+  "release_date": "2026-05-28",
+  "title": "1.0.56-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.56-0",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Trusted folder confirmation message clarifies that permissions may be remembered for the session\n\n**Fixed**\n- Context window tier selection now persists durably in session events and survives SDK-only resume paths so tier-derived limits are reapplied to request, compaction, and truncation logic without app-level repair\n- Remote session URL correctly uses the repository owner/name instead of literal 'copilot'",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Remote session URL correctly uses the repository owner/name instead of literal 'copilot'"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

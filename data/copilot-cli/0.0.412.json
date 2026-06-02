@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.412",
+  "release_date": "2026-02-19",
+  "title": "0.0.412",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.412",
+  "source": "api",
+  "body_markdown": "2026-02-19\n\n- Improve quick help accessibility: screen reader-friendly tab labels, reordered layout, and grouped `help commands` output\n- Hide custom agents with `user-invocable: false` from the `/agents` picker\n- Config file syntax errors now show a warning instead of silently crashing\n- Sign Windows native prebuilds with Authenticode to prevent antivirus quarantine of native modules\n- Allow `/reset-allowed-tools` to run during agent execution\n- MCP servers with invalid tool schemas no longer lose all tools\n- Alt-screen mode no longer consumes increasing memory over long sessions\n- Add `/mcp reload` command to reload MCP configuration\n- Skills support `disable-model-invocation` frontmatter field\n- /fleet orchestrator validates subagent work\n- Deprecate gpt-5 model\n- Windows slash flags (e.g., `xcopy /E /I`) are no longer treated as file paths\n- Show a warning in the timeline when skills fail to load at startup, with a prompt to run /skills for details\n- Eliminate banner character flash on startup when banner is disabled\n- Edit plan in terminal editor with ctrl+y\n- Terminal editor is now supported on Windows\n- Configure LSP server request timeouts in lsp.json\n- Add `/update` command to view changelog and update instructions\n- Add exit_plan_mode tool with plan approval dialog for reviewing and accepting plans\n- Support ~/.copilot/instructions/\\*.instructions.md files for user-level instructions across all repositories\n- Add double-click word and triple-click line selection in alt-screen text selection\n- Edit the prompt in your preferred terminal editor with ctrl+x ctrl+e\n- Prevents spurious error messages from appearing in terminal on Windows\n- Typing `?` in an AskUser prompt no longer triggers the quick help overlay\n- Improve SQL tool timeline entries\n- Reduce memory usage in alt-screen mode during long sessions\n- /fleet mode dispatches more subagents in parallel for faster execution\n- Instructions picker opens as a full-screen alt-screen view when alt-screen mode is enabled\n- Skills picker opens as a full-screen alt-screen view when alt-screen mode is enabled\n- Command files no longer require YAML frontmatter — plain markdown files work with name and description derived automatically\n- Session picker opens instantly without a loading flash when multiple sessions exist\n- Mouse event coordinate fragments no longer appear in input field\n- Add cross-session memory: ask about past work, files, and PRs across sessions (experimental)\n- Add `--bash-env` flag to source BASH_ENV in shell sessions\n- Restore `ctrl+x /` as alternate shortcut to run commands while preserving input\n- /clear preserves agent mode (autopilot, plan, or interactive)\n- MCP error messages include the server name\n- Text selection in timeline no longer spills into prompt area when dragging",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Support ~/.copilot/instructions/\\*.instructions.md files for user-level instructions across all repositories"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

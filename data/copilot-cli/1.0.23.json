@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.23",
+  "release_date": "2026-04-10",
+  "title": "1.0.23",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.23",
+  "source": "api",
+  "body_markdown": "2026-04-10\n\n- Add --mode, --autopilot, and --plan flags to start the CLI directly in a specific agent mode\n- Agent no longer hangs on the first turn when the memory backend is unavailable\n- Bazel/Buck build target labels (e.g. //package:target) no longer misidentified as file paths\n- Ctrl+L clears the terminal screen without clearing the conversation session\n- Slash command picker shows full skill descriptions and a refined scrollbar\n- /diff, /agent, /feedback, /ide, and /tuikit work while the agent is running\n- Display reasoning token usage in the per-model token breakdown when nonzero\n- Remote tab correctly shows Copilot coding agent tasks and supports steering via the Tasks API\n- Shell output with BEL characters no longer causes repeated terminal beeping\n- Migration notice for .vscode/mcp.json now includes a jq command to migrate your config to .mcp.json",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Remote tab correctly shows Copilot coding agent tasks and supports steering via the Tasks API"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

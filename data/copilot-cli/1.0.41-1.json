@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.41-1",
+  "release_date": "2026-05-05",
+  "title": "1.0.41-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.41-1",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Slash command picker searches command descriptions and underlines matched characters\n- Memory tool confirmation prompt now shows the scope (repository or user) when requesting permission to store a memory\n- SQL todo timeline entries display more accurately for INSERT OR IGNORE/REPLACE and blocked status updates\n- Streaming text and shimmer animations stay smooth on slow or busy hosts\n\n**Fixed**\n- Extensions now load in prompt mode (-p). User extensions load by default; project extensions alnd management tools require GITHUB_COPILOT_PROMPT_MODE_EXTENSIONS=true.\n- Assistant responses no longer contain spurious system notification XML tags\n- Large output guidance correctly references the configured grep tool name\n- Adding a plugin marketplace using a git SSH URL (e.g. git@github.com:owner/repo) now works correctly",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

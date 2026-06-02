@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.37",
+  "release_date": "2026-04-27",
+  "title": "1.0.37",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.37",
+  "source": "api",
+  "body_markdown": "2026-04-27\n\n- Location-based permission persistence is now enabled by default, so approvals carry over across sessions for the same directory\n- Add `copilot completion <bash|zsh|fish>` subcommand to generate static shell completion scripts for subcommands, flags, and known choice values\n- Press `s` in the session picker to cycle sort order: relevance, last used, created, or name\n- ACP model config options now include description and metadata for clients using the configOptions API\n- Model and effort change notification no longer appears when re-selecting the same model or effort level\n- Clipboard write no longer leaks X11 handles on Linux\n- Pending message indicator displays correctly alongside prompt frames\n- Fix detached HEAD detection always returning false after switch to git branch --show-current\n- Skill picker list stays fully visible when skills have errors or warnings\n- /ask responses now render markdown, including tables and formatted links",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Add `copilot completion <bash|zsh|fish>` subcommand to generate static shell completion scripts for subcommands, flags, and known choice values"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

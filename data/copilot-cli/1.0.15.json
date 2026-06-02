@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.15",
+  "release_date": "2026-04-01",
+  "title": "1.0.15",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.15",
+  "source": "api",
+  "body_markdown": "2026-04-01\r\n\r\n- Remove support for gpt-5.1-codex, gpt-5.1-codex-mini, and gpt-5.1-codex-max models\r\n- Copilot mascot now blinks with subtle eye animations in interactive mode\r\n- User switcher and `/user list` display accounts in alphabetical order\r\n- Add mcp.config.list, mcp.config.add, mcp.config.update, and mcp.config.remove server RPCs for managing persistent MCP server configuration\r\n- Add device code flow (RFC 8628) as a fallback for MCP OAuth in headless and CI environments\r\n- Add `/mcp auth` command and re-authentication UI for MCP OAuth servers with account switching support\r\n- Add postToolUseFailure hooks for tool errors and make postToolUse run only after successful tool calls\r\n- Add /share html command to export sessions and research reports as self-contained interactive HTML files\r\n- Autopilot no longer continues after pressing Escape or Ctrl+C to cancel\r\n- Keystrokes typed while the CLI is loading are no longer lost\r\n- Large tool output preview shows correct character count and up to 500 characters\r\n- Add Home/End and Page Up/Page Down navigation to the diff viewer\r\n- CLI exits immediately after a session ends instead of waiting up to 10 seconds\r\n- Config settings askUser, autoUpdate, storeTokenPlaintext, logLevel, skillDirectories, and disabledSkills now use camelCase names (snake_case still accepted)\r\n- Many settings keys now prefer camelCase names (snake_case names still work)\r\n- Ctrl+D no longer queues a message; use Ctrl+Q or Ctrl+Enter to queue\r\n- MCP servers that are slow to connect no longer block the agent from starting\r\n- Pasting images from the Windows clipboard now works in WSL environments\r\n- Text selection now requires ctrl+c or right-click to copy instead of copying on select\r\n- Timeline entries redesigned for easily scanning and less verbose output\r\n- Add default option to custom agent picker to deselect the current agent\r\n- View tool shows total file line count in truncation messages for easier navigation\r\n- Large tool output saved to temp files is pretty-printed when it contains JSON\r\n- Improved performance of expand/collapse (ctrl+e, ctrl+o) in alt-screen mode for long sessions\r\n- Add branch diff toggle to /diff mode for viewing full branch changes vs merge-base\r\n- MCP tools with long names no longer cause model API errors due to exceeding the 64-character limit\r\n- Fix shell command detection hanging on some Windows machines due to ConPTY space-padding\r\n- Suppress spurious MCP server failure warnings from concurrent startup attempts\r\n- Fixed exit_plan_mode tool being available outside of plan mode due to race conditions during mode transitions\r\n- Replace nonstandard XDG variables with COPILOT_HOME, and migrate data",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Copilot mascot now blinks with subtle eye animations in interactive mode"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.407-1",
+  "release_date": "2026-02-10",
+  "title": "0.0.407-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.407-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add `/instructions` command to view and toggle custom instruction files\n\n**Improved**\n- Show agent type and description in read_agent timeline entries\n- Ctrl-b and ctrl-f cursor movement now available on all platforms\n\n**Fixed**\n- Subagents fall back to session model when default model blocked by policy\n- Editing MCP servers shows existing configuration values",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

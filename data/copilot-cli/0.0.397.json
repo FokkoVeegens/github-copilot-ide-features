@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.397",
+  "release_date": "2026-01-28",
+  "title": "0.0.397",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.397",
+  "source": "api",
+  "body_markdown": "2026-01-28\n\n- `/mcp show <server-name>` displays server details and available tools\n- Header layout adapts better to narrow terminal widths\n- Plan mode input text is more readable\n- Content pasted into the prompt over 30 KB is automatically saved to workspace files\n- Homebrew tools work correctly on macOS with zsh as default shell\n- Add --acp flag to start as Agent Client Protocol server\n- Directories now appear in @mention autocomplete\n- Session summary displays accurate line counts",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

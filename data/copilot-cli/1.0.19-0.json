@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.19-0",
+  "release_date": "2026-04-06",
+  "title": "1.0.19-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.19-0",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Skip IDE auto-connect when session is already in use by another client\n- Slash command timeline entries now include the command name (e.g., \"Review\", \"Plan\") for better context\n\n**Fixed**\n- Plugin hook scripts with missing execute permissions now run correctly on macOS\n- Custom agent is properly restored when resuming a session where the agent display name differs from its filename",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

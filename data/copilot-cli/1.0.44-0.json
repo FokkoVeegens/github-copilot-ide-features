@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.44-0",
+  "release_date": "2026-05-07",
+  "title": "1.0.44-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.44-0",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Timeline shows the resolved model for rubber-duck sub-agents (e.g. Rubber-duck(claude-opus-4.7))\n\n**Fixed**\n- Quota display correctly shows remaining usage for Free users instead of always showing 100% used\n- Tool permissions granted in autopilot mode are preserved after /clear\n- Effort level applies correctly when switching models via the /model picker\n- Pressing Ctrl+C while a permission prompt is pending no longer causes the CLI to hang\n- Project info remains visible in slash command picker when no results match\n- Invalid URL entries in settings.json no longer crash CLI startup and are skipped with a warning",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

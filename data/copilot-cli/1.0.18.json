@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.18",
+  "release_date": "2026-04-04",
+  "title": "1.0.18",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.18",
+  "source": "api",
+  "body_markdown": "2026-04-04\n\n- New Critic agent automatically reviews plans and complex implementations using a complementary model to catch errors early (available in experimental mode for Claude models)\n- Session resume picker correctly groups sessions by branch and repository on first use\n- preToolUse hook permissionDecision 'allow' now suppresses the tool approval prompt\n- Add notification hook event that fires asynchronously on shell completion, permission prompts, elicitation dialogs, and agent completion",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

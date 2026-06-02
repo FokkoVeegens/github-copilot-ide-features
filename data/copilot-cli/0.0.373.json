@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.373",
+  "release_date": "2025-12-30",
+  "title": "0.0.373",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.373",
+  "source": "api",
+  "body_markdown": "2025-12-30\n\n- Tab completion for path arguments in slash commands like `/cwd` and `/add-dir`\n- Enable Copilot Spaces tools in GitHub MCP Server\n- GitHub URL resolves correctly for GHE\n- Kill command filtering now allows commands when 'kill' appears as an argument\n- Device code authorization polling begins immediately instead of waiting for clipboard and browser",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Enable Copilot Spaces tools in GitHub MCP Server"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

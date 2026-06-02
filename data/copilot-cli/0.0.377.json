@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.377",
+  "release_date": "2026-01-08",
+  "title": "0.0.377",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.377",
+  "source": "api",
+  "body_markdown": "2026-01-08\n\n- Large file messages now encourage incremental reading with view_range instead of discouraging all reading",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

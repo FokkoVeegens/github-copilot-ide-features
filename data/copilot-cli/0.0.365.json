@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.365",
+  "release_date": "2025-11-26",
+  "title": "0.0.365",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.365",
+  "source": "api",
+  "body_markdown": "2025-11-25\r\n\r\n- Add `--silent` option to suppress stats output for scripting",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.415",
+  "release_date": "2026-02-23",
+  "title": "0.0.415",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.415",
+  "source": "api",
+  "body_markdown": "2026-02-23\n\n- Skill files saved with a UTF-8 BOM (common on Windows editors) now load correctly instead of failing with a frontmatter parse error\n- Custom agents support the `model` field to specify which model to use, and unknown fields now warn instead of blocking agent load\n- Plan approval menu shows model-curated actions with a recommended option highlighted first, including autopilot+fleet for parallelizable work\n- Env loading indicator no longer hangs indefinitely on MCP startup error or session resume\n- Add show_file tool for presenting code and diffs to the user\n- Add env loading indicator showing skills, MCPs, plugins, ... being loaded\n- MCP tool results with giant single lines are truncated correctly\n- /plugin marketplace add and /plugin install support local paths containing spaces\n- `/mcp show` groups servers into User, Workspace, Plugins, and Built-in sections and makes all servers navigable\n- Agent now knows which model is powering it when asked\n- Ctrl+A/E cycle through visual lines in wrapped input; Home/End navigate within a visual line; Ctrl+Home/End jump to text boundaries",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

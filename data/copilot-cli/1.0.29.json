@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.29",
+  "release_date": "2026-04-16",
+  "title": "1.0.29",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.29",
+  "source": "api",
+  "body_markdown": "2026-04-16\n\n- Remote MCP server config now allows omitting the type field, defaulting to http\n- Blinking cursor maintains stable width so text does not shift during blink\n- Add --list-env flag to log loaded plugins, agents, skills, and MCP servers when running in prompt mode, helping verify environment configuration in CI pipelines\n- Add support for Claude Opus 4.7\n- Shell commands and MCP servers now receive COPILOT_AGENT_SESSION_ID as an environment variable\n- Agent correctly identifies repository owner from git remote URL rather than local username\n- Terminal state correctly restored after a crash exit on Windows",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

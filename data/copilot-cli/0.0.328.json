@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.328",
+  "release_date": "2025-09-26",
+  "title": "0.0.328",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.328",
+  "source": "api",
+  "body_markdown": "## 0.0.328 - 2025-09-26\r\n\r\n- Improved error message received when Copilot CLI is blocked by organization policy (fixes https://github.com/github/copilot-cli/issues/18 )\r\n- Improved the error message received when using a PAT that is missing the \"Copilot Requests\" permission (fixes https://github.com/github/copilot-cli/issues/46 )\r\n- Improved the output of `/user list` to make it clearer which is the current user\r\n- Improved PowerShell parsing of `ForEach-Object` and detection of command name expressions (e.g.,`& $someCommand`)\r\n\r\nRun `npm install -g @github/copilot@latest` to update!",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Improved error message received when Copilot CLI is blocked by organization policy (fixes https://github.com/github/copilot-cli/issues/18 )",
+    "- Improved the error message received when using a PAT that is missing the \"Copilot Requests\" permission (fixes https://github.com/github/copilot-cli/issues/46 )",
+    "Run `npm install -g @github/copilot@latest` to update!"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.410-0",
+  "release_date": "2026-02-13",
+  "title": "0.0.410-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.410-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add repo-level settings to disable individual validation tools\n- ACP server supports loading existing sessions\n- Page Up/Page Down keyboard scrolling in alt-screen mode\n- Support tilde (~) expansion in MCP server cwd configuration\n- Support ctrl+n and ctrl+p as arrow key alternatives\n- Exit CLI with ctrl+d on empty prompt\n\n**Improved**\n- Shell mode removed from Shift+Tab cycle, accessed only via `!`\n- Improve /tasks dialog with consistent icons and typography\n- MCP server errors and loading issues surface in timeline\n- Reduce input jitter with frame coalescing and smoother alt-screen animations\n\n**Fixed**\n- Fix unknown option '--no-warnings' error\n- Shift+Enter inserts newlines in terminals with kitty keyboard protocol",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.358",
+  "release_date": "2025-11-14",
+  "title": "0.0.358",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.358",
+  "source": "api",
+  "body_markdown": "## 0.0.358 - 2025-11-14\r\n\r\nRecovery release to fix availability of GPT-5.1, GPT-5.1-Codex, and GPT-5.1-Codex-Mini models.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

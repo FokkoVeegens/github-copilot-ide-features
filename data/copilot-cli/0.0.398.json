@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.398",
+  "release_date": "2026-01-28",
+  "title": "0.0.398",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.398",
+  "source": "api",
+  "body_markdown": "2026-01-28\n\n- Fix a regression that caused \"Invalid session id\" errors for agent shell calls\n- CLI header uses middle-truncation for paths in narrow terminals, preserving first and last folders\n- Skills from parent directories are now invocable and work in non-git directories",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.2",
+  "release_date": "2026-03-06",
+  "title": "1.0.2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.2",
+  "source": "api",
+  "body_markdown": "2026-03-06\n\nTo commemorate GitHub Copilot CLI reaching general availability last week, we're incrementing the major version to 1.0!\n\n- Type 'exit' as a bare command to close the CLI\n- Ask_user form now submits with Enter key and allows custom responses in enum fields\n- Support 'command' field as cross-platform alias for bash/powershell in hook configs\n- Hook configurations now accept timeout as alias for timeoutSec\n- Fix handling of meta with control keys (including shift+enter from /terminal-setup)",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "To commemorate GitHub Copilot CLI reaching general availability last week, we're incrementing the major version to 1.0!"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

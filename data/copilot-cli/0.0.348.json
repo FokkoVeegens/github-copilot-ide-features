@@ -1,0 +1,24 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.348",
+  "release_date": "2025-10-22",
+  "title": "0.0.348",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.348",
+  "source": "api",
+  "body_markdown": "## 0.0.348 - 2025-10-21\r\n\r\n- Copilot's output now streams in token-by-token! This can be disabled with `--stream off`\r\n- Made improvements to the memory footprint of Copilot CLI, especially when dealing with shell commands that produce very large outputs\r\n- Ensured we preserve comments in VSCode config files when using `/terminal-setup` (fixes https://github.com/github/copilot-cli/issues/325)\r\n- Bundled `node-pty` into the CLI package -- we're one step closer to implementing https://github.com/github/copilot-cli/issues/16\r\n- Fixed an issue where local tool calling broke sessions (fixes https://github.com/github/copilot-cli/issues/365, https://github.com/github/copilot-cli/issues/364, https://github.com/github/copilot-cli/issues/366)\r\n- Added our LICENSE.md to our Node package (fixes https://github.com/github/copilot-cli/issues/371)\r\n- Added debug logging to authentication status changes to get to the bottom of https://github.com/github/copilot-cli/issues/346\r\n\r\nRun `npm install -g @github/copilot@latest` to update!",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Copilot's output now streams in token-by-token! This can be disabled with `--stream off`",
+    "- Made improvements to the memory footprint of Copilot CLI, especially when dealing with shell commands that produce very large outputs",
+    "- Ensured we preserve comments in VSCode config files when using `/terminal-setup` (fixes https://github.com/github/copilot-cli/issues/325)",
+    "- Bundled `node-pty` into the CLI package -- we're one step closer to implementing https://github.com/github/copilot-cli/issues/16",
+    "- Fixed an issue where local tool calling broke sessions (fixes https://github.com/github/copilot-cli/issues/365, https://github.com/github/copilot-cli/issues/364, https://github.com/github/copilot-cli/issues/366)",
+    "- Added our LICENSE.md to our Node package (fixes https://github.com/github/copilot-cli/issues/371)",
+    "- Added debug logging to authentication status changes to get to the bottom of https://github.com/github/copilot-cli/issues/346",
+    "Run `npm install -g @github/copilot@latest` to update!"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

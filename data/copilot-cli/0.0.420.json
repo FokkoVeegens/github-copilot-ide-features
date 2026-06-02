@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.420",
+  "release_date": "2026-02-27",
+  "title": "0.0.420",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.420",
+  "source": "api",
+  "body_markdown": "2026-02-27\n\n- Auto-update now also updates the binary executable, not just the JS package\n- Plugin and marketplace git repos update correctly after force-pushes and tag-based installs\n- 502 bad gateway errors are retried automatically and no longer crash the session with raw HTML output\n- Copy hint shows cmd+c in Ghostty on macOS and right-click as an alternative for all terminals\n- Type # to reference GitHub issues, pull requests and discussions",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.390",
+  "release_date": "2026-01-22",
+  "title": "0.0.390",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.390",
+  "source": "api",
+  "body_markdown": "2026-01-22\n\n- Preserve extended thinking after compaction\n- Custom agents with MCP servers avoid unnecessary restarts\n- Enable steering during plan mode",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

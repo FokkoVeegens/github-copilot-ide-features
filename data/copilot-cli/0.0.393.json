@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.393",
+  "release_date": "2026-01-23",
+  "title": "0.0.393",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.393",
+  "source": "api",
+  "body_markdown": "2026-01-23\n\n- Show conversation compaction status as timeline messages instead of header indicator\n- Memory loading no longer warns when outside a Git repository\n- Add support for GHE Cloud (\\*.ghe.com) remote custom agents\n- Plugin uninstall now works correctly\n- Expose MCP server and tool names in tool.execution_start events for better error handling\n- Add Esc-Esc to undo file changes to any previous snapshot",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

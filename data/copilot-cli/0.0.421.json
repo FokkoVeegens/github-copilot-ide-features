@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.421",
+  "release_date": "2026-03-03",
+  "title": "0.0.421",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.421",
+  "source": "api",
+  "body_markdown": "2026-03-03\n\n- Autopilot permission dialog appears on first prompt submission instead of on mode switch\n- AUTO theme now reads your terminal's ANSI color palette and uses it directly, so colors match your terminal theme\n- Add structured form input for the ask_user tool using MCP Elicitations (experimental)\n- Plugin commands read extraKnownMarketplaces from project-level .claude/settings.json for Claude compatibility\n- Git hooks can detect Copilot CLI subprocesses via the COPILOT_CLI=1 environment variable to skip interactive prompts\n- Spurious \"write EIO\" error entries no longer appear in the timeline during session resume or terminal state transitions\n- Python-based MCP servers no longer time out due to buffered stdout\n- Error when --model flag specifies an unavailable model\n- MCP server availability correctly updates after signing in, switching accounts, or signing out\n- Display clickable PR reference next to branch name in the status bar\n- Add --plugin-dir flag to load a plugin from a local directory\n- Mouse text selection is automatically copied to the Linux primary selection buffer (middle-click to paste)\n- Fix VS Code shift+enter and ctrl+enter keybindings for multiline input\n- Use consistent ~/.copilot/pkg path for auto-update instead of XDG_STATE_HOME\n- ACP clients can configure reasoning effort via session config options\n- Click links in the terminal to open them in your default browser\n- Support repo-level config via .github/copilot/config.json for shared project settings like marketplaces and launch messages\n- Streaming output no longer truncates when running in alt-screen mode\n- Right-click paste no longer produces garbled text on Windows\n- Shell command output on Windows no longer renders as \"No changes detected\" in the timeline\n- GitHub API errors no longer appear as raw HTTP messages in the terminal when using the # reference picker\n- Markdown tables render with proper column widths, word wrap, and Unicode borders that adapt to terminal width\n- MCP elicitation form displays taller multi-line text input, hides tab bar for single-field forms, and fixes error flashing on field navigation",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Git hooks can detect Copilot CLI subprocesses via the COPILOT_CLI=1 environment variable to skip interactive prompts",
+    "- Use consistent ~/.copilot/pkg path for auto-update instead of XDG_STATE_HOME",
+    "- Support repo-level config via .github/copilot/config.json for shared project settings like marketplaces and launch messages"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

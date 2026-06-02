@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.58",
+  "release_date": "2026-06-02",
+  "title": "1.0.58",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.58",
+  "source": "api",
+  "body_markdown": "- Rubber Duck is now enabled by default\r\n- Remote JSON RPC is now enabled by default\r\n- `/experimental` schedule prompts with `/every` and `/after` \r\n- `/experimental` new GitHub `/theme`\r\n- `/experimental` new UI with easy access to issues, pull requests, and gists\r\n\r\n> [!NOTE]\r\n> Turn `/experimental on` to see the Scheduled Prompts, new theme, and new UI.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

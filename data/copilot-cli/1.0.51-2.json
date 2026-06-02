@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.51-2",
+  "release_date": "2026-05-20",
+  "title": "1.0.51-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.51-2",
+  "source": "api",
+  "body_markdown": "**Improved**\n- `/memory show` displays documentation links for learning about and managing Copilot Memory\n\n**Fixed**\n- Session naming works correctly for usage-based billing users\n- Pressing Enter on a highlighted subcommand completion inserts the selection instead of submitting the partial command\n- Use default release notes when publishing a release with no changelog entries\n- Editor launched with Ctrl+G no longer steals keystrokes or requires double keypresses",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- `/memory show` displays documentation links for learning about and managing Copilot Memory"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

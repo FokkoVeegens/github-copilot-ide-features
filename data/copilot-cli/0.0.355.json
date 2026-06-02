@@ -1,0 +1,24 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.355",
+  "release_date": "2025-11-12",
+  "title": "0.0.355",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.355",
+  "source": "api",
+  "body_markdown": "## 0.0.355 - 2025-11-12\r\n\r\n- Enabled the CLI agent to read its own `/help` and README to answer questions about its capabilities\r\n- Improved parsing of VSCode-formatted custom agents with the `.agent.md` suffix\r\n- Sanitize tool names to fix issues like https://github.com/github/copilot-cli/issues/456\r\n- Bundled `ripgrep` and added `grep` and `glob` tools for more performant searching of codebases\r\n- Fixed malformed tool call handling before it reaches the UI (partially addresses https://github.com/github/copilot-cli/issues/393)\r\n- Prevent double line wraps in markdown messages\r\n- Fixed a bug where the file selector was used in multi-line input that led to unexpected up/down arrow behavior (fixes https://github.com/github/copilot-cli/issues/350)\r\n- Fixed a bug where remote MCP server configuration in custom agents was not fetched properly\r\n- Added more detail and improved the styling of the `/session` command's output\r\n- Removed the internal `NODE_ENV` variable from the shell tool's environment (fixes https://github.com/github/copilot-cli/issues/151)\r\n- Fixed a memory leak when using the interactive shell tool\r\n- Improved line number formatting in file view output (fixes https://github.com/github/copilot-cli/issues/471)\r\n- Lowered the default shell tool timeout and updated prompt language to not imply that timeout means failure\r\n- Ensured that we query the terminal background color before rendering (fixes https://github.com/github/copilot-cli/issues/36)\r\n- Ensured that the agent won't run `pkill` on its own PID\r\n- Fixed a bug where `copilot` would not quit after an abort signal (fixes https://github.com/github/copilot-cli/issues/529)\r\n- Ensure `!` commands on Windows use PowerShell when available (fixes https://github.com/github/copilot-cli/issues/504)\r\n- Fixed a bug in Windows Terminal where keyboard input was not accepted",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Sanitize tool names to fix issues like https://github.com/github/copilot-cli/issues/456",
+    "- Fixed malformed tool call handling before it reaches the UI (partially addresses https://github.com/github/copilot-cli/issues/393)",
+    "- Fixed a bug where the file selector was used in multi-line input that led to unexpected up/down arrow behavior (fixes https://github.com/github/copilot-cli/issues/350)",
+    "- Removed the internal `NODE_ENV` variable from the shell tool's environment (fixes https://github.com/github/copilot-cli/issues/151)",
+    "- Improved line number formatting in file view output (fixes https://github.com/github/copilot-cli/issues/471)",
+    "- Ensured that we query the terminal background color before rendering (fixes https://github.com/github/copilot-cli/issues/36)",
+    "- Fixed a bug where `copilot` would not quit after an abort signal (fixes https://github.com/github/copilot-cli/issues/529)",
+    "- Ensure `!` commands on Windows use PowerShell when available (fixes https://github.com/github/copilot-cli/issues/504)"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

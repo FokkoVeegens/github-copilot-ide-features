@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.16-0",
+  "release_date": "2026-04-01",
+  "title": "1.0.16-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.16-0",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- MCP servers load correctly after login, user switch, and /mcp reload\n- BYOK Anthropic provider now respects the configured maxOutputTokens limit\n\n**Removed**\n- Remove deprecated `marketplaces` repository setting (use `extraKnownMarketplaces` instead)",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

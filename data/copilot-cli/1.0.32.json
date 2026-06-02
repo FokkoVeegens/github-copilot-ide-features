@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.32",
+  "release_date": "2026-04-17",
+  "title": "1.0.32",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.32",
+  "source": "api",
+  "body_markdown": "2026-04-17\n\n- Allow short session ID prefixes (7+ hex chars) with --resume and /resume instead of the full ID\n- /feedback saves the bundle to TEMP when the working directory is not writable\n- Select `auto` as your model to let Copilot automatically pick the best available model for each session\n- Add --print-debug-info flag to display version, terminal capabilities, and environment variables\n- Show warnings when approaching 75% and 90% of your weekly usage limit\n- Attach supported document files to prompts for the agent to read and reason about\n- Add --connect flag to directly connect to a remote session by ID\n- copilot login --host now correctly authenticates with GitHub Enterprise Cloud (GHE) instances\n- Current date and time in agent context now includes local timezone offset\n- Terminal progress indicator stays visible while the agent is thinking\n- Status line no longer shows stray Unicode glyphs in terminals like Neovim after /clear\n- Rewind works correctly after using /cd to change directories\n- Multiline input is preserved when using /plan and plan mode\n- Backspace correctly exits shell mode only when the input is empty\n- Mouse wheel scrolling works correctly in the /ask dialog\n- Rate-limited sessions now pause queued messages and automatically retry instead of dropping them\n- Tables render with correct column widths, emoji support, and stable borders during terminal resize\n- Rate limit error messages now show specific context based on the type of limit reached\n- Session idle timeout is now configurable via --session-idle-timeout; disabled by default\n- Skills that exceed the token limit are still discoverable and invocable by name",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Select `auto` as your model to let Copilot automatically pick the best available model for each session",
+    "- copilot login --host now correctly authenticates with GitHub Enterprise Cloud (GHE) instances"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

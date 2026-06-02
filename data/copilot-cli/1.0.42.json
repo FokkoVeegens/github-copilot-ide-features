@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.42",
+  "release_date": "2026-05-06",
+  "title": "1.0.42",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.42",
+  "source": "api",
+  "body_markdown": "2026-05-06\n\n- MCP server failure warning now suggests a directly runnable `/mcp show` command when the server name contains whitespace\n- MCP server failure warnings include stderr output to help diagnose connection errors\n- Add -C <directory> flag to change working directory before starting, similar to git -C\n- Exit message resume command shows session ID instead of auto-generated name when session has not been renamed\n- Remote session export now supports non-GitHub repositories and repo-less directories\n- Resuming a session no longer shows a false \"session in use\" warning after choosing \"Go back\"\n- Enter key no longer gets permanently stuck after cancelling a request\n- Suppress the exit summary when the session has no user messages and no saved session to resume\n- CLI updates on Windows no longer fail with ENOENT when a transient EPERM occurs during package extraction\n- Add rubber-duck agent for GPT sessions, powered by Claude (available in /experimental)",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

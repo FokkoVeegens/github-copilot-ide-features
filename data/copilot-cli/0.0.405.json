@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.405",
+  "release_date": "2026-02-05",
+  "title": "0.0.405",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.405",
+  "source": "api",
+  "body_markdown": "2026-02-05\n\n- Plugin and marketplace names support uppercase letters\n- `/experimental` shows help screen listing experimental features\n- Fix SQL tool disconnects\n- Plugins can bundle LSP server configurations",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

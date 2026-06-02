@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.52-1",
+  "release_date": "2026-05-22",
+  "title": "1.0.52-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.52-1",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Status line command supports plain shell commands in addition to executable script paths\n- Automatically prune old process log files from ~/.copilot/logs/ at startup to prevent unbounded disk growth\n- Polish /statusline picker with cleaner item descriptions and better spacing\n- Picker checkboxes now use a single-cell ▣/▢ glyph for tighter, more consistent rows across pickers\n\n**Fixed**\n- Sessions containing events with non-URL strings in URL/URI fields resume without a 'Session file is corrupted' error\n- Requests that time out due to an HTTP/2 upload stall automatically retry over HTTP/1.1\n- Sessions no longer fail to load on Windows when a process exits with a high-bit exit code (e.g., .NET unhandled exceptions)\n- Timeline entry connector color matches surrounding elements when expanded\n- Gray background bar no longer appears behind user messages on terminals without truecolor support",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Automatically prune old process log files from ~/.copilot/logs/ at startup to prevent unbounded disk growth"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.10-1",
+  "release_date": "2026-03-20",
+  "title": "1.0.10-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.10-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- /copy writes formatted HTML to clipboard on Windows for pasting into Word, Outlook, and Teams",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

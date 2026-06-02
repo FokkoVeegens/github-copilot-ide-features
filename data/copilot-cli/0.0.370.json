@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.370",
+  "release_date": "2025-12-18",
+  "title": "0.0.370",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.370",
+  "source": "api",
+  "body_markdown": "2025-12-18\n\n- Disabled MCP servers are now properly ignored when using --disable-mcp-server\n- Shared sessions correctly render nested markdown codeblocks\n- Log levels now output all messages of that level and higher severity\n- Load CA certificates from system and environment variables\n- Improve `/model` error messages to show available and unavailable models\n- Model picker uses two-column layout with aligned multipliers and clearer visual indicators\n- Add STDIO type as synonymous for Local for MCP servers in CLI configuration UI\n- Diff display uses your configured git pager (delta, diff-so-fancy)\n- Use platform-specific executable from npm install when available\n- Publish SHA256 checksums for CLI executables in releases\n- Add --available-tools and --excluded-tools to filter which tools the model can use\n- Ensure animated or non-animated banner is displayed based on banner and screen reader preferences\n- Fix truncation logic for codex models",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

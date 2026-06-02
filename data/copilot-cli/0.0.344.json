@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.344",
+  "release_date": "2025-10-18",
+  "title": "0.0.344",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.344",
+  "source": "api",
+  "body_markdown": "## 0.0.344 - 2025-10-17\r\n\r\n- Enabled GitHub MCP server in prompt mode\r\n- Added support to the bash tool for executing detached processes\r\n- Added list of supported models as part of `copilot help config` text\r\n- Fixed session abort handling to properly clean up orphaned tool call when pressing <kbd>Esc</kbd> or force-quitting\r\n- Enforced minimum Node version requirement at launch\r\n- Simplified messaging for `/terminal-setup`",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Added list of supported models as part of `copilot help config` text"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

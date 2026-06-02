@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.8",
+  "release_date": "2026-03-18",
+  "title": "1.0.8",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.8",
+  "source": "api",
+  "body_markdown": "2026-03-18\n\n- Agent mode labels and borders display correct colors on non-truecolor terminals (tmux, SSH, screen)\n- Alternate screen buffer is now enabled by default for a cleaner terminal experience\n- Exit plan mode tool remains available when an extension subprocess joins an active session\n- Repo-level hooks are loaded only after folder trust is confirmed, not before the trust dialog is shown\n- Idle subagents no longer clutter the /tasks view — they are hidden after 2 minutes of inactivity\n- Add extension mode setting to control extensibility\n- MCP servers can be validated against configured registries using the experimental MCP_ALLOWLIST feature flag\n- Allow --resume to accept a task ID in addition to a session ID\n- Support defining hooks in settings.json, settings.local.json, and config.json\n- Scroll works correctly in macOS Terminal.app and other terminals that don't support SGR mouse encoding\n- Mouse scroll works correctly in tmux after returning from an external editor\n- Ctrl-C in prompt mode now exits immediately instead of waiting for the request to complete\n- Spinner animation no longer delays visible output from appearing in the timeline\n- Dialog titles display consistently inside all dialog boxes",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.55-7",
+  "release_date": "2026-05-27",
+  "title": "1.0.55-7",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.55-7",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- The exit_plan_mode tool is only offered to the model while the session is in plan mode\n- Native binary crash (e.g. SIGSEGV) now falls through to the JavaScript fallback instead of silently exiting",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

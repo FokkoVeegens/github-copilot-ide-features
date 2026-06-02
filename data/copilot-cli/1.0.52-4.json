@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.52-4",
+  "release_date": "2026-05-22",
+  "title": "1.0.52-4",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.52-4",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add vertical scrollbar with mouse drag support to the main conversation view\n\n**Fixed**\n- Switching to Autopilot mode no longer triggers unexpected permission prompts for tool, path, or URL access\n- copilot --continue from a session's saved directory now refreshes the saved branch and git context instead of leaving them stale\n- Kill command safety filter no longer rejects valid commands that contain shell redirection like `kill -0 <PID> 2>/dev/null`.\n- Sessions now resume in their saved working directory; pass -C <dir> to override. Flags whose values are relative paths (e.g. --attachment, --log-dir) resolve from the saved cwd.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- copilot --continue from a session's saved directory now refreshes the saved branch and git context instead of leaving them stale"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.345",
+  "release_date": "2025-10-18",
+  "title": "0.0.345",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.345",
+  "source": "api",
+  "body_markdown": "## 0.0.345 - 2025-10-18\r\n\r\n- Fixed a bug where premium requests were being overcounted for some users (https://github.com/github/copilot-cli/issues/351). If you were affected, we are working on refunding your overcharged premium requests!",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Fixed a bug where premium requests were being overcounted for some users (https://github.com/github/copilot-cli/issues/351). If you were affected, we are working on refunding your overcharged premium requests!"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

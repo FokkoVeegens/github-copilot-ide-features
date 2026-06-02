@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.43-0",
+  "release_date": "2026-05-06",
+  "title": "1.0.43-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.43-0",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Show download progress when running the update command\n\n**Fixed**\n- MCP server child processes (e.g. started via npx or uvx) are now fully terminated when a session ends",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

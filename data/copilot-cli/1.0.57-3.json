@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.57-3",
+  "release_date": "2026-05-30",
+  "title": "1.0.57-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.57-3",
+  "source": "api",
+  "body_markdown": "**Improved**\n- High-contrast diff backgrounds use darker colors to improve text readability\n\n**Fixed**\n- Session resume works correctly after a crash that left partial data in the session log",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

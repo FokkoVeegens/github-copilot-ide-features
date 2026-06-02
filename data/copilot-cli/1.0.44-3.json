@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.44-3",
+  "release_date": "2026-05-08",
+  "title": "1.0.44-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.44-3",
+  "source": "api",
+  "body_markdown": "**Added**\n- userPromptSubmitted hooks can now handle requests directly, bypassing the LLM and returning a response without making a model call\n\n**Improved**\n- Faster /user list and /user switch for multi-account users",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

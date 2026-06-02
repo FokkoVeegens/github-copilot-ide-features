@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.381",
+  "release_date": "2026-01-13",
+  "title": "0.0.381",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.381",
+  "source": "api",
+  "body_markdown": "2026-01-13\n\n- Add --allow-all and --yolo flags to enable all permissions at once\n- Ghost text and tab completion show correct alias when typing slash commands like '/q' for '/quit'\n- Add `/new` as an alias for `/clear` command\n- Shell mode history navigation now filters by prefix - typing `!git` and pressing up arrow cycles only through previous git commands",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

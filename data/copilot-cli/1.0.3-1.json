@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.3-1",
+  "release_date": "2026-03-09",
+  "title": "1.0.3-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.3-1",
+  "source": "api",
+  "body_markdown": "**New**\n- Extensions are now available as an experimental feature — ask Copilot to write custom tools and hooks for itself using @github/copilot-sdk\n\n**Added**\n- Document GH_HOST, HTTP_PROXY, HTTPS_PROXY, NO_COLOR, and NO_PROXY environment variables in help\n- Read MCP server configuration from .devcontainer/devcontainer.json\n- Add --binary-version flag to query the CLI binary version without launching\n- Background task notifications display in timeline with expandable detail\n- Type 'quit' to exit the CLI, in addition to 'exit'\n- Add Windows Terminal support to /terminal-setup command\n\n**Improved**\n- Retry status messages now display to show progress during server error recovery\n- Show loading spinner in diff mode while fetching changes\n- Suppress unknown field warnings in skill and command frontmatter\n\n**Fixed**\n- /reset-allowed-tools now fully undoes /allow-all and re-triggers the autopilot permission dialog\n- Login flow no longer hangs on Ubuntu when system keyring is unresponsive\n- Terminal is properly reset when CLI crashes unexpectedly\n- Table disables borders in screen reader mode to prevent announcing decorative characters\n- MCP servers with non-conforming outputSchema are now accessible\n- /plugin update now works for GitHub-installed plugins\n- /add-dir directories persist across session changes like /clear and /resume\n- Prevent env command from being treated as safe to allow without approval\n- /plugin update now works with marketplaces defined in project settings",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Extensions are now available as an experimental feature — ask Copilot to write custom tools and hooks for itself using @github/copilot-sdk"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

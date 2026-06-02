@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.354",
+  "release_date": "2025-11-03",
+  "title": "0.0.354",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.354",
+  "source": "api",
+  "body_markdown": "2025-11-03\r\n\r\n- Exit with nonzero code when `-p` mode fails due to LLM backend errors (auth failures, quota exhaustion, network issues)\r\n- Support for MCP server tool notifications\r\n- Support for `COPILOT_GITHUB_TOKEN` environment variable for authentication (takes precedence over `GH_TOKEN`)\r\n- Improved shell command safety with better heredoc handling outside of commands\r\n- Diff hunk lines now properly fill the width of the diff box\r\n- MCP servers in GitHub Actions environments automatically use `GITHUB_WORKSPACE` as working directory\r\n- `/delegate` command now works correctly when no local changes exist\r\n- Custom agents with special characters in filenames no longer fail\r\n- Better error messages when using unsupported models with `/model` command",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

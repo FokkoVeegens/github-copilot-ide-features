@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.24",
+  "release_date": "2026-04-10",
+  "title": "1.0.24",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.24",
+  "source": "api",
+  "body_markdown": "2026-04-10\n\n- preToolUse hooks now respect modifiedArgs/updatedInput, and additionalContext fields\n- Custom agent model field now accepts display names and vendor suffixes from VS Code (e.g., \"Claude Sonnet 4.5\", \"GPT-5.4 (copilot)\")\n- Terminal state (alt screen, cursor, raw mode) is restored correctly after CLI crashes like OOM or segfaults\n- The --remote flag is respected when the session sync prompt appears on first run in a GitHub repo\n- Redesign exit screen with Copilot mascot and cleaner usage summary layout",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Custom agent model field now accepts display names and vendor suffixes from VS Code (e.g., \"Claude Sonnet 4.5\", \"GPT-5.4 (copilot)\")",
+    "- Redesign exit screen with Copilot mascot and cleaner usage summary layout"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

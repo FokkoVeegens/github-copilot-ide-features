@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.48",
+  "release_date": "2026-05-14",
+  "title": "1.0.48",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.48",
+  "source": "api",
+  "body_markdown": "2026-05-14\n\n- Model picker displays actual token prices instead of dot indicators for token-based billing users\n- Instruction files with unquoted glob patterns in applyTo frontmatter (e.g. applyTo: \\*_/_.ts) are now applied correctly\n- Input text with CJK characters or emoji renders without blank gaps between lines\n- /context shows correct token limits for all models instead of always showing 128k\n- Auto-disable the built-in github-mcp-server in Azure DevOps-only workspaces when running in prompt/headless mode, matching interactive mode behavior\n- Terminal cursor positions correctly on the input field instead of on decorative elements like the selected tab\n- ACP clients receive updated config options when the active model is changed\n- /ask dialog no longer prompts for follow-up replies it cannot receive\n- Skill content injected to the model no longer includes YAML frontmatter metadata",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

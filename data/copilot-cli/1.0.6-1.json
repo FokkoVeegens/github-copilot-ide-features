@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.6-1",
+  "release_date": "2026-03-16",
+  "title": "1.0.6-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.6-1",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Improve streaming and tool-output memory usage\n\n**Fixed**\n- Remaining requests widget no longer shows inaccurate quota data for Copilot Free users\n- Resolve session crashes caused by HTTP/2 connection pool race conditions when sub-agents are active\n- CLI loads the latest version of itself after an auto-update\n- Kill command validation no longer incorrectly blocks some legitimate commands. e.g. p.kill() in a python script\n- Instruction file frontmatter applyTo field accepts both string and array values",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Remaining requests widget no longer shows inaccurate quota data for Copilot Free users"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}
