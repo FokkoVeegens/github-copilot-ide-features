@@ -54,7 +54,7 @@ Re-running the same command is safe: existing files are never overwritten (idemp
 
 ### GitHub token scopes
 
-The fetchers that call the GitHub REST API (Eclipse, GitHub Copilot CLI) only read **public** repositories, so no specific OAuth scopes are required. Any of the following work:
+The fetchers that call the GitHub REST API (Eclipse, Xcode, GitHub Copilot CLI) only read **public** repositories, so no specific OAuth scopes are required. Any of the following work:
 
 > **Note:** The Vim/Neovim fetcher does not use the GitHub REST API. It scrapes the [GitHub Copilot feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=vimneovim) docs page, which is publicly accessible without authentication.
 
