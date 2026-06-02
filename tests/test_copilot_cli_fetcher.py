@@ -79,7 +79,7 @@ class TestFetch:
         releases = self._run_fetch([bad_release, []])
         assert releases == []
         captured = capsys.readouterr()
-        assert "warn" in captured.out.lower() or "Skipping" in captured.out
+        assert "warn" in captured.out.lower() or "skipping" in captured.out.lower()
 
     def test_missing_published_date_falls_back_to_epoch(self):
         no_date_release = [
