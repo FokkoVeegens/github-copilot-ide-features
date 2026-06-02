@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.403",
+  "release_date": "2026-02-05",
+  "title": "0.0.403",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.403",
+  "source": "api",
+  "body_markdown": "2026-02-04\n\n- Windows Task Manager displays correct application name\n- Introduce security check preventing use of modules outside of application bundle\n- ACP model info includes usage multiplier and enablement status\n- Fix logic checking user organization membership\n- Stop MCP servers before updating plugins\n- Detached shell processes work on vanilla macOS installations\n- Escape key consistently aborts permission dialogs regardless of selection\n- Plugin skills work in prompt mode\n- Config files preserve custom fields when CLI updates them\n- Reasoning summaries enabled by default for supporting models\n- Support comma-separated tools in custom agent frontmatter\n- Skills with unknown frontmatter fields now load with warnings instead of being silently skipped",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

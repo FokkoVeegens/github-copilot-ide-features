@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.12-0",
+  "release_date": "2026-03-25",
+  "title": "1.0.12-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.12-0",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Read .claude/settings.json and .claude/settings.local.json as additional repo config sources\n- Model picker opens in full-screen view with inline reasoning effort adjustment using ← / → arrow keys\n- OTEL hook executions are now recorded as span events instead of child spans, reducing trace clutter\n- User prompt appears in the conversation immediately after pressing Enter\n- /allow-all (/yolo) now supports on, off, and show subcommands to enable, disable, or check allow-all mode\n- Ctrl+Y in plan mode opens the most recent research report when no plan exists yet\n\n**Fixed**\n- @ file picker no longer shows .git directory contents\n- Scroll position stays in place when the terminal is resized\n- /yolo path permissions persist after using /clear to start a new session\n- Emoji characters are selected and highlighted correctly in terminal text selection\n- Sessions with active work are no longer cleaned up by the stale session reaper\n- Resume session restores the previously selected custom agent\n- CLI no longer crashes with out-of-memory errors when running shell commands that produce high-volume output\n- Pressing Escape multiple times during autopilot cancellation no longer leaves the session stuck",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

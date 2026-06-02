@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.5-0",
+  "release_date": "2026-03-12",
+  "title": "1.0.5-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.5-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add /version command to display CLI version and check for updates from within the session\n- Add experimental embedding-based dynamic retrieval of MCP and skill instructions per turn\n- Syntax highlighting in /diff with support for 17 programming languages\n- Add preCompact hook to run commands before context compaction starts\n\n**Improved**\n- /changelog supports `last <N>`, `since <version>`, and `summarize` to browse and summarize multiple release notes at once\n- Hooks config files that omit the version field are now accepted by the CLI\n\n**Fixed**\n- Request ID from the API now appears in the timeline when errors occur after retries are exhausted\n- PR descriptions with backtick-formatted code render correctly on Windows/PowerShell\n- Show a helpful error message when a file path is passed as a CLI command\n- Session reports an authentication error instead of hanging when the token is invalid or expired\n- View tool shows partial content for large single-line files (e.g. minified JS, large JSON blobs) instead of empty output",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

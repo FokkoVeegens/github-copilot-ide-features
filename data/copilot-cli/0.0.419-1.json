@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.419-1",
+  "release_date": "2026-02-26",
+  "title": "0.0.419-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.419-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add Ctrl+F/Ctrl+B as page down/up shortcuts for scrolling in alt-screen views\n- Add --mouse/--no-mouse flag and mouse config to disable mouse mode in alt screen\n- Home and End keys jump to the top and bottom of the alt-screen scroll buffer\n- Add Ctrl+G keyboard shortcut for editing prompts in external editor and dismissing UI elements\n\n**Improved**\n- AUTO theme now uses the terminal's actual ANSI color palette for more accurate colors on any terminal theme\n- MCP server env vars referenced in command, args, or cwd fields are automatically included in the server environment\n- /diagnose shows a helpful message when no session has been started yet\n- MCP server names now support dots, slashes, and @ characters, enabling npm-style names like @modelcontextprotocol/server and io.github/server\n\n**Fixed**\n- /mcp enable works for built-in servers that were auto-disabled before configuration\n- CLI spinner stops and final agent response is visible after agent finishes work",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

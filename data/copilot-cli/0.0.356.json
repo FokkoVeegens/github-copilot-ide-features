@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.356",
+  "release_date": "2025-11-13",
+  "title": "0.0.356",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.356",
+  "source": "api",
+  "body_markdown": "## 0.0.356 - 2025-11-13\r\n\r\n- GPT-5.1, GPT-5.1-Codex, and GPT-5.1-Codex-Mini are now available in GitHub Copilot CLI. See the [GitHub Changelog](https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/) for more details",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- GPT-5.1, GPT-5.1-Codex, and GPT-5.1-Codex-Mini are now available in GitHub Copilot CLI. See the [GitHub Changelog](https://github.blog/changelog/2025-11-13-openais-gpt-5-1-gpt-5-1-codex-and-gpt-5-1-codex-mini-are-now-in-public-preview-for-github-copilot/) for more details"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

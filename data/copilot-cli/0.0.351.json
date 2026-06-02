@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.351",
+  "release_date": "2025-10-24",
+  "title": "0.0.351",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.351",
+  "source": "api",
+  "body_markdown": "## 0.0.351 - 2025-10-24\r\n\r\n- Improved our path detection heuristic to avoid various annoying, unnecessary permissions requests:\r\n\t- Running many standard bash/PowerShell commands that are known to be readonly\r\n\t- Commands like `npm test -- --something` in PowerShell\r\n\t- Shell redirections like `> some_file.txt` in paths you've already granted write permissions, `> /dev/null`, and `2>&1` (Fixes https://github.com/github/copilot-cli/issues/211)\r\n\t- Arguments to `gh api` like `gh api /repos/user/repo/ec` (Fixes https://github.com/github/copilot-cli/issues/216)\r\n\t- Code comments including `/`\r\n- Improved prompting for Sonnet 4.5 to reduce the number of intermediate markdown files left in the workspace\r\n- 👀 ...see you at [GitHub Universe](https://githubuniverse.com/)!\r\n\r\n\r\nRun `npm install -g @github/copilot@latest` to update!",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Shell redirections like `> some_file.txt` in paths you've already granted write permissions, `> /dev/null`, and `2>&1` (Fixes https://github.com/github/copilot-cli/issues/211)",
+    "- Arguments to `gh api` like `gh api /repos/user/repo/ec` (Fixes https://github.com/github/copilot-cli/issues/216)",
+    "Run `npm install -g @github/copilot@latest` to update!"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

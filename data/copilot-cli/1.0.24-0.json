@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.24-0",
+  "release_date": "2026-04-10",
+  "title": "1.0.24-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.24-0",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Redesign exit screen with Copilot mascot and cleaner usage summary layout\n\n**Fixed**\n- The --remote flag is respected when the session sync prompt appears on first run in a GitHub repo",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Redesign exit screen with Copilot mascot and cleaner usage summary layout"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

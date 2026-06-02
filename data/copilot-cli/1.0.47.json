@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.47",
+  "release_date": "2026-05-13",
+  "title": "1.0.47",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.47",
+  "source": "api",
+  "body_markdown": "2026-05-13\n\n- /fork accepts an optional name and forked sessions display their origin in the sessions dialog\n- Copilot Max subscribers see the correct models available to their subscription tier\n- Support j/k keys for up/down navigation in the /diff view\n- --resume supports Copilot cloud agent sessions where the agent hasn't pushed any changes to its branch",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Copilot Max subscribers see the correct models available to their subscription tier",
+    "- --resume supports Copilot cloud agent sessions where the agent hasn't pushed any changes to its branch"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.402-0",
+  "release_date": "2026-02-03",
+  "title": "0.0.402-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.402-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Plugins can provide hooks for session lifecycle events\n\n**Improved**\n- Agent creation wizard styling improvements\n- Custom agents with unknown fields load with warnings instead of errors\n\n**Fixed**\n- MCP configuration applies to ACP mode\n- Custom agents receive environment context when run as subagents\n- Plugin update command works for direct plugins and handles Windows file locks\n- Stop MCP servers when uninstalling plugins",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

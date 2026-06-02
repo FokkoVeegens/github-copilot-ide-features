@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.52-2",
+  "release_date": "2026-05-22",
+  "title": "1.0.52-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.52-2",
+  "source": "api",
+  "body_markdown": "**Added**\n- Context window tier selection (default ~200K vs 1M tokens) is now enforced end-to-end, so picking a tier actually constrains compaction, truncation, and token display\n\n**Improved**\n- Reasoning tokens display as a parenthetical on output token count in the token usage summary\n\n**Fixed**\n- AI Credits usage correctly displays after sessions using the Responses API\n- Rendering no longer stutters when using tmux on Cygwin or mintty\n- Slash command picker keeps (experimental) and (staff) labels orange when the row is selected",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.341",
+  "release_date": "2025-10-15",
+  "title": "0.0.341",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.341",
+  "source": "api",
+  "body_markdown": "## 0.0.341 - 2025-10-14\r\n\r\n- Added `/terminal-setup` command to set up multi-line input on terminals not implementing the kitty protocol\r\n- Fixed a bug where rejecting an MCP tool call would reject all future tool calls (fixes https://github.com/github/copilot-cli/issues/290)\r\n- Fixed a regression where calling `/model` with an argument did not work properly\r\n- Added each model's premium request multiplier to the `/model` list (currently, all our supported models are 1x)\r\n\r\nRun `npm install -g @github/copilot@latest` to update!",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Fixed a bug where rejecting an MCP tool call would reject all future tool calls (fixes https://github.com/github/copilot-cli/issues/290)",
+    "Run `npm install -g @github/copilot@latest` to update!"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

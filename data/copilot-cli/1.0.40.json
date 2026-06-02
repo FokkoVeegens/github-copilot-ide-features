@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.40",
+  "release_date": "2026-05-01",
+  "title": "1.0.40",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.40",
+  "source": "api",
+  "body_markdown": "2026-05-01\n\n- PR branch decoration displays correctly in the footer regardless of model name length\n- /clear and /new reset the active custom agent selection\n- Assistant responses stream with smoother text output\n- `copilot plugin list` shows the correct version after running `copilot plugin update`\n- Add support for `client_credentials` OAuth grant type for MCP servers, enabling fully headless authentication without a browser\n- Subagents correctly evaluate tool search support for their own model instead of inheriting the parent session's settings\n- Switching sessions with /new or /resume no longer carries over pending messages to the new session\n- CLI no longer hangs at 100% CPU when sending a large file attachment\n- Resume session picker no longer shows duplicate entries for the same Mission Control-backed session\n- Session resume selector displays summaries on a single line, truncated to fit the column width\n- Print \"Exiting…\" to stderr immediately on Ctrl+C during prompt mode so shutdown progress is visible\n- /research uses an orchestrator/subagent model for more thorough and reliable deep research results\n- Autopilot mode now limits continuation messages to 5 by default (configurable with --max-autopilot-continues)\n- Automatically clean up old CLI package versions from disk during auto-update\n- Remote session statusline shows the remote working directory and branch instead of local context\n- /update no longer re-submits the original -i prompt after restarting\n- Detect Azure DevOps repositories and auto-disable the GitHub MCP server\n- Session history, file tracking, and the /chronicle command are now available to all users\n- Skills are available as slash commands in ACP clients, matching the CLI experience\n- Resuming a session no longer falsely reports it as in use after a previous CLI process exited unexpectedly\n- --config-dir now propagates correctly to plugin subcommands; --config-dir is deprecated in favor of COPILOT_HOME\n- Mouse selection works while the /ask response dialog is open, so its content can be highlighted and copied\n- Improve CLI startup speed by loading custom CA certificates asynchronously\n- Remote control link shows the full URL in the timeline instead of 'Open in browser'\n- ACP clients (e.g. Zed) now display the agent's live plan as it works through multi-step tasks\n- Add toggle for custom statusLine.command visibility in the statusline picker\n- ACP clients can now list and switch custom agents via the agent config option\n- MCP OAuth tokens cache correctly when multiple servers share the same URL but use different static OAuth client IDs\n- MCP tool names with dots or other invalid characters are now sanitized correctly\n- Ctrl+C and double-Esc remove pending queued messages one at a time instead of all at once\n- Slash command suggestions rank prefix matches above fuzzy matches\n- Prompt mode (-p) now gates repo hooks and workspace MCP behind opt-in env vars (GITHUB_COPILOT_PROMPT_MODE_REPO_HOOKS and GITHUB_COPILOT_PROMPT_MODE_WORKSPACE_MCP) for secure-by-default behavior",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- `copilot plugin list` shows the correct version after running `copilot plugin update`"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

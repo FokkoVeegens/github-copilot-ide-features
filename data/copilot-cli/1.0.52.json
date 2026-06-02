@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.52",
+  "release_date": "2026-05-23",
+  "title": "1.0.52",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.52",
+  "source": "api",
+  "body_markdown": "2026-05-23\n\n- Non-interactive subcommands (plugin list, mcp list, help, version) no longer consume stdin\n- Add vertical scrollbar with mouse drag support to the main conversation view\n- Switching to Autopilot mode no longer triggers unexpected permission prompts for tool, path, or URL access\n- copilot --continue from a session's saved directory now refreshes the saved branch and git context instead of leaving them stale\n- Kill command safety filter no longer rejects valid commands that contain shell redirection like `kill -0 <PID> 2>/dev/null`.\n- Sessions now resume in their saved working directory; pass -C <dir> to override. Flags whose values are relative paths (e.g. --attachment, --log-dir) resolve from the saved cwd.\n- Context window tier selection (default ~200K vs 1M tokens) is now enforced end-to-end, so picking a tier actually constrains compaction, truncation, and token display\n- AI Credits usage correctly displays after sessions using the Responses API\n- Rendering no longer stutters when using tmux on Cygwin or mintty\n- Slash command picker keeps (experimental) and (staff) labels orange when the row is selected\n- Reasoning tokens display as a parenthetical on output token count in the token usage summary\n- Sessions containing events with non-URL strings in URL/URI fields resume without a 'Session file is corrupted' error\n- Requests that time out due to an HTTP/2 upload stall automatically retry over HTTP/1.1\n- Sessions no longer fail to load on Windows when a process exits with a high-bit exit code (e.g., .NET unhandled exceptions)\n- Timeline entry connector color matches surrounding elements when expanded\n- Gray background bar no longer appears behind user messages on terminals without truecolor support\n- Status line command supports plain shell commands in addition to executable script paths\n- Automatically prune old process log files from ~/.copilot/logs/ at startup to prevent unbounded disk growth\n- Polish /statusline picker with cleaner item descriptions and better spacing\n- Picker checkboxes now use a single-cell ▣/▢ glyph for tighter, more consistent rows across pickers\n- Custom agents support opt-in deferred tool loading via `deferred-tool-loading` in agent frontmatter, enabling tool-search discovery for agents with large tool lists\n- Exit summary displays `AI Credits` label with correct spacing before the value\n- /restart and /update preserve the current session ID after restarting\n- Legacy nested `oauth.clientId` and `oauth.callbackPort` keys in MCP server configs are now migrated to the supported `oauthClientId` and `auth.redirectPort` keys instead of being silently dropped\n- MCP OAuth re-authentication honors the configured redirectPort\n- PowerShell division operator no longer triggers false 'Allow directory access' prompts on Windows\n- /compact accepts optional focus instructions to shape the compaction summary\n- General-purpose subagents use GPT-5.4 or GPT-5.5 when available\n- /usage shows quota progress bars for session and weekly limits\n- AI credits error messages updated with clearer language and a Manage budget link",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- copilot --continue from a session's saved directory now refreshes the saved branch and git context instead of leaving them stale",
+    "- Automatically prune old process log files from ~/.copilot/logs/ at startup to prevent unbounded disk growth"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.13-2",
+  "release_date": "2026-03-30",
+  "title": "1.0.13-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.13-2",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Reduce CLI startup time by running terminal detection, auth, and git operations in parallel\n\n**Fixed**\n- MCP servers using Microsoft Entra ID authentication no longer show the consent screen on every login\n- Grep and glob search results return promptly when a timeout is reached\n- Keystrokes are no longer dropped when typing quickly in elicitation dialogs\n- Clipboard copy on native Windows no longer includes a stray U+FEFF character at the start of pasted text\n- Fixed --config-dir being ignored when resuming a session, causing paths to silently fall back to ~/.copilot",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Fixed --config-dir being ignored when resuming a session, causing paths to silently fall back to ~/.copilot"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

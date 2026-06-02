@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.346",
+  "release_date": "2025-10-19",
+  "title": "0.0.346",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.346",
+  "source": "api",
+  "body_markdown": "## 0.0.346 - 2025-10-19\r\n\r\n- Fixed a bug where model sourced from configuration file was not accounted for correctly in estimating premium request usage\r\n  For more information, see https://github.com/github/copilot-cli/issues/351#issuecomment-3419045411",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "For more information, see https://github.com/github/copilot-cli/issues/351#issuecomment-3419045411"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

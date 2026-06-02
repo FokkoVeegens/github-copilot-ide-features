@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.40-0",
+  "release_date": "2026-04-29",
+  "title": "1.0.40-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.40-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- ACP clients can now list and switch custom agents via the agent config option\n\n**Improved**\n- Ctrl+C and double-Esc remove pending queued messages one at a time instead of all at once\n- Slash command suggestions rank prefix matches above fuzzy matches\n- Prompt mode (-p) now gates repo hooks and workspace MCP behind opt-in env vars (GITHUB_COPILOT_PROMPT_MODE_REPO_HOOKS and GITHUB_COPILOT_PROMPT_MODE_WORKSPACE_MCP) for secure-by-default behavior\n\n**Fixed**\n- MCP OAuth tokens cache correctly when multiple servers share the same URL but use different static OAuth client IDs\n- MCP tool names with dots or other invalid characters are now sanitized correctly",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

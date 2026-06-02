@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.35-0",
+  "release_date": "2026-04-21",
+  "title": "1.0.35-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.35-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add HTTP hook support, allowing hooks to POST JSON payloads to a configured URL instead of running a local command\n\n**Improved**\n- grep and glob tools now accept multiple search paths\n\n**Fixed**\n- Hide subagent thinking from the timeline\n- Custom agent name is now visible in the statusline footer and can be toggled via /statusline\n- Pressing Escape on startup dialogs no longer causes race conditions",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

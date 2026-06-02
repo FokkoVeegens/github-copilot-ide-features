@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.49-0",
+  "release_date": "2026-05-15",
+  "title": "1.0.49-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.49-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Experimental: /mcp search command to search and install MCP servers from registry\n- Experimental: Tool search with deferred loading for MCP and external tools\n- Add \"None\" reasoning effort option to disable model reasoning in the reasoning effort picker\n- Add COPILOT_PLUGIN_DIR_ONLY environment variable to disable automatic plugin discovery, enabling deterministic plugin sets when using --plugin-dir\n\n**Improved**\n- Memory permission prompts now name who can see a stored memory: user scope or the specific `owner/repo` for repository scope. Timeline entries also show the scope (`(for user)` / `(shared with repository collaborators)`).\n- Reduce PowerShell syntax errors on Windows by avoiding && chaining instructions when using legacy PowerShell 5.x\n\n**Fixed**\n- Copying text from the scroll view joins soft-wrapped lines without extra newlines or indentation\n- Cursor positioning in input fields works correctly with wide characters (CJK, emoji)\n- Hooks (preToolUse, postToolUse, subagentStart, subagentStop) now fire correctly for sub-agent tool calls\n- Plugins loaded via --plugin-dir now correctly register their agents as available task(agent_type=...) subagents in prompt mode\n- Memory storage correctly limits available scopes when no repository context is present\n- --plugin-dir and --additional-mcp-config now work in --server / --headless mode\n- Content-filtered model responses now display an explanation instead of a blank assistant turn\n- PromptFrame UI now renders inside tmux when the outer terminal is ghostty, WezTerm, or kitty (detected via `tmux list-clients`).\n- MCP OAuth token lookups are correctly scoped to the active session",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,20 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.349",
+  "release_date": "2025-10-22",
+  "title": "0.0.349",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.349",
+  "source": "api",
+  "body_markdown": "## 0.0.349 - 2025-10-22\r\n\r\n- The model can now call multiple tools in parallel. Each tool must be confirmed in advance. This behavior can be disabled with the `--disable-parallel-tools-execution` flag\r\n- Added `/quit` as an alias of `/exit`  (fixes https://github.com/github/copilot-cli/issues/357)\r\n- Fixed a bug where every streamed output chunk was sent back to the model as part of the conversation (fixes https://github.com/github/copilot-cli/issues/379)\r\n- Ensure that environment variables are expanded before running path permission checks\r\n- Fixed a bug where Ctrl+K deleted to the end of the visual line in the input box rather than the logical line\r\n- Added the temp directory to the paths that the model has access to by default. This can be disabled with the `--disallow-temp-dir` flag (fixes https://github.com/github/copilot-cli/issues/306)\r\n\r\nRun `npm install -g @github/copilot@latest` to update!",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Added `/quit` as an alias of `/exit`  (fixes https://github.com/github/copilot-cli/issues/357)",
+    "- Fixed a bug where every streamed output chunk was sent back to the model as part of the conversation (fixes https://github.com/github/copilot-cli/issues/379)",
+    "- Added the temp directory to the paths that the model has access to by default. This can be disabled with the `--disallow-temp-dir` flag (fixes https://github.com/github/copilot-cli/issues/306)",
+    "Run `npm install -g @github/copilot@latest` to update!"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

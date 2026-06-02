@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.396",
+  "release_date": "2026-01-27",
+  "title": "0.0.396",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.396",
+  "source": "api",
+  "body_markdown": "2026-01-27\n\n- Skill names can include uppercase letters\n- Ctrl+E moves cursor to end of line when typing without expanding timeline\n- `/skills add` works with directories that contain SKILL.md directly\n- Subagent timeline entries display with bold, capitalized names\n- Timeline entries show filled circle for success status\n- Improve horizontal alignment of UI elements\n- Simplify compaction timeline entries\n- Create custom agents through interactive CLI wizard\n- Tool filtering flags now apply to subagents\n- Error messages consistently reference /login and /logout commands\n- Add `copilot version` and `copilot update` commands\n- preToolUse hooks can deny tool execution and modify arguments\n- Fix PTY leak in bash session handling\n- `/plugin install` supports GitHub repos, URLs, and local paths\n- Add `/experimental` command and `--experimental` flag to opt into experimental features\n- Add `/init` command to generate Copilot instructions\n- Reorder model picker list for better organization\n- Plugins can provide custom agents\n- Open plan files in VS Code on WSL and devcontainers\n- /diff shows changes from entire repository when run from subdirectory\n- /skills add correctly counts skills when directory path has trailing slash\n- Undo/rewind shows accurate count of affected files\n- Pre-releases on GitHub now show detailed changelog notes",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Add `copilot version` and `copilot update` commands",
+    "- Add `/init` command to generate Copilot instructions"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

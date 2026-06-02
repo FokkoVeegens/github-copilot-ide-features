@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.15-1",
+  "release_date": "2026-04-01",
+  "title": "1.0.15-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.15-1",
+  "source": "api",
+  "body_markdown": "**New**\n- Add mcp.config.list, mcp.config.add, mcp.config.update, and mcp.config.remove server RPCs for managing persistent MCP server configuration\n\n**Added**\n- Add device code flow (RFC 8628) as a fallback for MCP OAuth in headless and CI environments\n- Add `/mcp auth` command and re-authentication UI for MCP OAuth servers with account switching support\n- Add postToolUseFailure hooks for tool errors and make postToolUse run only after successful tool calls\n- Add /share html command to export sessions and research reports as self-contained interactive HTML files\n\n**Improved**\n- Add Home/End and Page Up/Page Down navigation to the diff viewer\n- CLI exits immediately after a session ends instead of waiting up to 10 seconds\n- Config settings askUser, autoUpdate, storeTokenPlaintext, logLevel, skillDirectories, and disabledSkills now use camelCase names (snake_case still accepted)\n- Many settings keys now prefer camelCase names (snake_case names still work)\n\n**Fixed**\n- Autopilot no longer continues after pressing Escape or Ctrl+C to cancel\n- Keystrokes typed while the CLI is loading are no longer lost\n- Large tool output preview shows correct character count and up to 500 characters\n\n**Removed**\n- Ctrl+D no longer queues a message; use Ctrl+Q or Ctrl+Enter to queue",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

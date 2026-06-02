@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.372",
+  "release_date": "2025-12-19",
+  "title": "0.0.372",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.372",
+  "source": "api",
+  "body_markdown": "2025-12-19\n\n- Enable disabled models directly in CLI when selecting or specifying them\n- Add `/context` command to visualize token usage\n- Add `--resume` flag to continue remote sessions locally\n- Add URL permission controls which affect common shell commands which access the web\n- Long commands no longer show duplicate intention headers when wrapping",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

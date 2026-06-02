@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.36-0",
+  "release_date": "2026-04-24",
+  "title": "1.0.36-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.36-0",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Claude Opus 4.6 now uses medium reasoning effort by default\n\n**Fixed**\n- Saving debug logs or feedback bundles no longer overwrites existing archive files\n- Custom agents, skills, and commands from ~/.claude/ are no longer loaded by the Copilot CLI",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Custom agents, skills, and commands from ~/.claude/ are no longer loaded by the Copilot CLI"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

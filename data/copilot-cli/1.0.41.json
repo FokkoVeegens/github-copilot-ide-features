@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.41",
+  "release_date": "2026-05-05",
+  "title": "1.0.41",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.41",
+  "source": "api",
+  "body_markdown": "2026-05-05\n\n- CLI starts faster by rendering the UI immediately while authentication resolves in the background\n- Shell completions (bash, zsh, fish) are automatically installed on first run and updated after `copilot update`\n- Tab-completing slash commands that accept arguments now adds a trailing space automatically\n- Package extraction no longer crashes on Windows when antivirus or filesystem locks cause transient EPERM errors\n- Remote session connection errors show your logged-in account and tailored remediation steps\n- Markdown formatting renders in ask user prompt questions\n- Add experimental MCP Tasks support: MCP tools with `taskSupport: \"required\"` run as non-blocking background agents trackable via `list_agents` and `read_agent` (available when experimental mode is enabled, e.g. via `/experimental on` or the `--experimental` flag)\n- Extensions now load in prompt mode (-p). User extensions load by default; project extensions alnd management tools require GITHUB_COPILOT_PROMPT_MODE_EXTENSIONS=true.\n- Assistant responses no longer contain spurious system notification XML tags\n- Large output guidance correctly references the configured grep tool name\n- Adding a plugin marketplace using a git SSH URL (e.g. git@github.com:owner/repo) now works correctly\n- Slash command picker searches command descriptions and underlines matched characters\n- Memory tool confirmation prompt now shows the scope (repository or user) when requesting permission to store a memory\n- SQL todo timeline entries display more accurately for INSERT OR IGNORE/REPLACE and blocked status updates\n- Streaming text and shimmer animations stay smooth on slow or busy hosts\n- Add --attachment flag in non-interactive (-p/--prompt) mode to attach files (images or native documents) to the initial prompt\n- @-mention completion works for ./ paths, no longer adds trailing space on directories, and shows project files before workspace roots\n- Improve stability on Windows by working around a V8 crash in Node 24.x\n- Session files containing Unicode line separator characters load correctly\n- Reasoning effort picker hint text displays \"Esc to cancel\" with correct spacing\n- Improve reliability of file edits by better recovering from fuzzy or misaligned edit blocks",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Shell completions (bash, zsh, fish) are automatically installed on first run and updated after `copilot update`"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

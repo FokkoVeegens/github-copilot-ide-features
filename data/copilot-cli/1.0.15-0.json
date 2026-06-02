@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.15-0",
+  "release_date": "2026-03-31",
+  "title": "1.0.15-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.15-0",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- MCP servers that are slow to connect no longer block the agent from starting\n- Pasting images from the Windows clipboard now works in WSL environments",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

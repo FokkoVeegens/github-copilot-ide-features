@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.35-5",
+  "release_date": "2026-04-23",
+  "title": "1.0.35-5",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.35-5",
+  "source": "api",
+  "body_markdown": "**Added**\n- Support COPILOT_GH_HOST environment variable for GitHub hostname, taking precedence over GH_HOST\n- Press Ctrl+Y (in addition to Tab) to accept the highlighted option in completion popups (@-mentions, path completions, slash commands)\n- Add /session delete, delete <id>, and delete-all subcommands, and x-to-delete in the session picker\n\n**Improved**\n- --continue prefers resuming sessions from the current working directory instead of the most recently touched session\n- Status line script now includes context window fields that match the model badge and /context output\n- User settings are now stored in ~/.copilot/settings.json, separate from internal state in config.json\n\n**Fixed**\n- MCP server names with spaces and special characters are now supported\n- Skill slash commands (e.g. /skill-name) passed as the initial prompt via -i are recognized correctly on startup\n- Shell completion notifications are not duplicated when read_bash already returned the result",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- User settings are now stored in ~/.copilot/settings.json, separate from internal state in config.json"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

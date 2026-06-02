@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.46",
+  "release_date": "2026-05-12",
+  "title": "1.0.46",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.46",
+  "source": "api",
+  "body_markdown": "2026-05-12\n\n- Display a warning when the CLI version is deprecated and premium model access may be lost\n- PowerShell starts correctly when pwsh is installed as a .NET global tool shim\n- Long lines in diff view wrap at terminal width instead of being truncated\n- Read-only gh CLI commands (list, view, status, diff, etc.) are auto-approved without prompting for user confirmation\n- Sessions no longer crash mid-turn with ERR_HTTP2_INVALID_SESSION errors",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

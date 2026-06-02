@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.400-0",
+  "release_date": "2026-01-30",
+  "title": "0.0.400-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.400-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add MCP server instructions support\n- Add theme picker with `/theme` command and GitHub Dark/Light themes\n- ACP server supports changing models during a session\n- Show progress indicator in terminal tab when thinking\n- Add fuzzy search to model picker\n\n**Improved**\n- CLI now sends DELETE requests to remove MCP servers when shutting down\n- Markdown table headers display in bold\n- Better support for UNIX keyboard bindings (Ctrl+A/E/W/U/K, Alt+arrows) and multiline content in various text inputs\n\n**Fixed**\n- Ordered lists display with numbers instead of dashes\n- Fix support for pasting large content on Windows Terminal\n- Freeform text input in list pickers works correctly\n- The Code Review tool handles large changesets by ignoring build artifacts and limiting to 100 files",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.55-3",
+  "release_date": "2026-05-27",
+  "title": "1.0.55-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.55-3",
+  "source": "api",
+  "body_markdown": "**Added**\n- Hook progress streaming shows real-time status messages from long-running hooks in the timeline\n- pluginDirectories on session.create and session.resume RPC: SDK clients can mount Open Plugins-format directories per session.\n- Delete remote sessions directly from the session picker\n\n**Improved**\n- Support owner/repo#ref syntax when adding plugins from the marketplace\n- Feedback dialog and /skills help text use Copilot-consistent log paths and terminology\n- Progress indicators integrate natively with tmux 3.6b pane progress state\n- --plugin-dir skills now take precedence over personal-home (~/.copilot, ~/.agents) skills with the same name. Order is now project > plugin-dir > personal > custom.\n- Show a helpful message when remote controlled sessions are disabled by organization policy\n- Reasoning token count now shown in session token summary for all users\n\n**Fixed**\n- Schedule manager hint bar text no longer wraps over dialog borders when entries are added\n- `copilot update` and `copilot version` authenticate release API requests to avoid rate limit errors in shared-NAT environments\n- Diff view keyboard shortcut hints display correctly when toggling between unstaged and branch diff modes\n- Clipboard paste works correctly on Wayland compositors that do not support wlr-data-control (e.g. GNOME/Mutter)\n- Interactive shell tool preserves parent terminal color settings so diff tools and other programs render with full color\n- Canvas tools with optional object input schemas open correctly without validation errors\n- Extension subprocesses no longer fail with \"Invalid command format\" when forked from an older CLI version\n- Settings migration preserves user data when legacy snake_case keys exist from older CLI versions",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Feedback dialog and /skills help text use Copilot-consistent log paths and terminology",
+    "- --plugin-dir skills now take precedence over personal-home (~/.copilot, ~/.agents) skills with the same name. Order is now project > plugin-dir > personal > custom.",
+    "- `copilot update` and `copilot version` authenticate release API requests to avoid rate limit errors in shared-NAT environments"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

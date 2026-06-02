@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.7-0",
+  "release_date": "2026-03-17",
+  "title": "1.0.7-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.7-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add experimental SDK session APIs to list and manage skills, MCP servers, and plugins, with optional config auto-discovery from the working directory\n- Add subagentStart hook that fires when a subagent is spawned, with support for injecting additional context into the subagent's prompt\n\n**Fixed**\n- Pro and trial users now see all models they are entitled to in the model picker\n- CLI restart no longer re-sends the -i/--interactive prompt to the new session\n- Resolve an edge case where auto-update could leave an incomplete package on Windows",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.414",
+  "release_date": "2026-02-21",
+  "title": "0.0.414",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.414",
+  "source": "api",
+  "body_markdown": "2026-02-21\n\n- Explore agent can now use GitHub MCP tools when available\n- Show permission elevation dialog when accepting a plan with autopilot to prevent auto-denied tool errors",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

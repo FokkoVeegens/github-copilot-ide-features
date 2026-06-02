@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.4-0",
+  "release_date": "2026-03-10",
+  "title": "1.0.4-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.4-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add --reasoning-effort CLI flag to set reasoning effort level\n- Hooks can now request user confirmation before tool execution with 'ask' permission decision\n- Add configure-copilot sub-agent for managing MCP servers, custom agents, and skills via the task tool\n\n**Improved**\n- Faster shell commands on Windows by skipping PowerShell profile loading\n- Improve CLI help documentation to use standard --option=value format and comma-separated list syntax\n\n**Fixed**\n- Interactive shell initialization no longer times out on slow machines",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Add configure-copilot sub-agent for managing MCP servers, custom agents, and skills via the task tool"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

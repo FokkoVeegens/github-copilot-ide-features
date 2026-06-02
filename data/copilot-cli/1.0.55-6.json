@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.55-6",
+  "release_date": "2026-05-27",
+  "title": "1.0.55-6",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.55-6",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add /autopilot <objective> to keep autopilot focused, with /goal as an alias\n\n**Improved**\n- Cell-based terminal renderer is now enabled for all users by default\n- Show a warning when remote controlled sessions are disabled by organization policy\n- Extension log files are now captured per extension and surfaced in the extensions_manage tool to help diagnose failures\n- Project extensions in .github/extensions are now discovered in non-git (folder-backed) workspaces\n- Allow /statusline and /theme commands to run while the agent is executing\n\n**Fixed**\n- Detect PowerShell 7 correctly when pwsh.exe is installed as a Microsoft Store App Execution Alias\n- Sessions with zero-sized CAPI billing batches resume correctly",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

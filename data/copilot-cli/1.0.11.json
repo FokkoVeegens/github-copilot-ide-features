@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.11",
+  "release_date": "2026-03-23",
+  "title": "1.0.11",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.11",
+  "source": "api",
+  "body_markdown": "2026-03-23\n\n- Ensure models appear in picker correctly, display model names where possible\n- Show a warning when MCP servers are blocked by policy (e.g. allowlist enforcement)\n- Organization policy for third-party MCP servers is now enforced for all users\n- Add ~/.agents/skills/ as a personal skill discovery directory, aligning with VS Code's GHCP4A extension default\n- Extension hooks from multiple extensions now merge instead of overwriting each other or hooks from hooks.json\n- sessionStart hook additionalContext is now injected into the conversation\n- /clear now abandons the current session entirely, while /new starts a fresh conversation (keeping the old session backgrounded)\n- GitHub MCP server user configuration is respected when connecting to remote hosts\n- Terminal screen redraws correctly after process suspend and resume (Ctrl+Z / fg)\n- MCP OAuth authentication works with MCP servers like the Atlassian Rovo MCP Server which support Dynamic Client Registration but host authorization metadata at a non-standard URL\n- /cd keeps a separate working directory per session, restored when switching sessions\n- Custom instructions, MCP servers, skills, and agents are now discovered at every directory level from the working directory up to the git root, enabling full monorepo support\n- Startup 'Environment loaded' message now shows the number of loaded hooks\n- Background agent progress (current intent and tool calls completed) now surfaces in read_agent and task timeout responses\n- statusLine.command path now supports ~ and environment variables (e.g. $HOME, ${VAR:-default})\n- /new and /clear commands accept an optional prompt to start the new session with a first message",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

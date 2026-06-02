@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.422-1",
+  "release_date": "2026-03-05",
+  "title": "0.0.422-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.422-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Load personal hooks from ~/.copilot/hooks in addition to repo-level .github/hooks\n- Add copy_on_select config option to auto-copy selected text to clipboard in alt screen mode\n- Add exitPlanMode.request protocol method for SDK plan approval support\n- Automatic notifications when background shell commands and agents complete\n- Press Ctrl+R to search command history with reverse incremental search (like Bash)\n- Add startup prompt hooks to auto-submit prompts or slash commands when a session starts\n- Support enabledPlugins in config for automatic plugin installation at startup\n- Support installing plugins from ssh:// URLs\n- Session usage metrics (requests, tokens, code changes) are now persisted to events.jsonl after each session ends\n\n**Improved**\n- Show a clear, actionable error message when git is not installed and a remote plugin or marketplace is used\n- Text selection persists after copying to clipboard in alt screen\n- Reduce memory usage in alt-screen mode for long sessions\n- @-mention file completion always reflects the current state of the working directory\n- Links in alt-screen mode are rendered with underline styling for better visibility\n- /delegate prompts for a target remote in multi-remote repositories and clarifies confirmation text\n- Hide noisy todo bookkeeping queries and show dependency details in timeline\n- Rename `launch_messages` config setting to `companyAnnouncements`\n- Show a waiting message when the terminal is handed to an external editor\n- Rename repository config from `.github/copilot/config.json` to `settings.json`\n\n**Fixed**\n- Plugin cache automatically recovers from a corrupted or incomplete clone without manual intervention\n- IME candidate windows appear at correct cursor position in CJK input\n- Opening links on Windows correctly handles URLs with & query parameters\n- ESC key to cancel works correctly in tmux and other non-kitty terminals\n- GitHub MCP server stays enabled in repositories that have both Azure DevOps and GitHub remotes\n- Colons in inline code render correctly inside markdown tables\n- Plugin-contributed LSP servers are now loaded, started, and shown in /lsp show\n- Pressing Enter in required enum field now selects the highlighted option\n- CLI no longer hangs for minutes when working in a directory with a large number of files\n- GitHub MCP server connection status is accurately tracked and counted in the status indicator\n- Ctrl+K joins lines when cursor is at end of line, matching standard Emacs/terminal behavior\n- Escape sequences split across input chunks no longer leak into text input",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Load personal hooks from ~/.copilot/hooks in addition to repo-level .github/hooks",
+    "- Rename repository config from `.github/copilot/config.json` to `settings.json`"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

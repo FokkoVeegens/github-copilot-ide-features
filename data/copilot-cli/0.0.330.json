@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.330",
+  "release_date": "2025-09-29",
+  "title": "0.0.330",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.330",
+  "source": "api",
+  "body_markdown": "## 0.0.330 - 2025-09-29\r\n\r\n- Changed the default model back to Sonnet 4 since Sonnet 4.5 hasn't rolled out to all users yet. Sonnet 4.5 is still available from the `/model` slash command\r\n\r\nThis is our second release today -- be sure to check out [the list of changes in 0.0.329](https://github.com/github/copilot-cli/releases/tag/v0.0.329) if you haven't already!",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "This is our second release today -- be sure to check out [the list of changes in 0.0.329](https://github.com/github/copilot-cli/releases/tag/v0.0.329) if you haven't already!"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

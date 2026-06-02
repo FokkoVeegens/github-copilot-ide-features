@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.413-0",
+  "release_date": "2026-02-20",
+  "title": "0.0.413-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.413-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- ctrl+insert can now be used to copy selected text in the alt-screen view\n- Support remote plugin sources (GitHub repos and git URLs) in marketplace.json plugin entries\n\n**Improved**\n- Improve code search speed in large repos\n- Automatically migrate users from claude-sonnet-4.5 to the current default model on startup\n\n**Fixed**\n- Fix issue where Copilot API URL wasn't respected\n- Fixed alt-screen timeline entries not updating when tool calls complete (particularly sub-agent calls)\n- Fix read_bash, write_bash, and stop_bash in-progress icon showing filled dot instead of empty circle\n- Skill files with YAML array syntax for allowed-tools now load correctly\n- Ctrl+A, Ctrl+E, and Ctrl+U navigate to logical line boundaries (newlines) instead of visual wrap boundaries",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Fix issue where Copilot API URL wasn't respected"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

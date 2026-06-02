@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.376",
+  "release_date": "2026-01-08",
+  "title": "0.0.376",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.376",
+  "source": "api",
+  "body_markdown": "2026-01-08\n\n- Loading remote sessions using GraphQL ID or session picker\n- Task tool subagents can now process images\n- Downgrading CLI version no longer requires manually clearing downloaded packages\n- Large tool outputs are written to disk and models are encouraged to use efficient search tools",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

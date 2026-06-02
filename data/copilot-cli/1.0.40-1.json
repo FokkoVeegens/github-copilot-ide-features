@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.40-1",
+  "release_date": "2026-04-30",
+  "title": "1.0.40-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.40-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Detect Azure DevOps repositories and auto-disable the GitHub MCP server\n- Session history, file tracking, and the /chronicle command are now available to all users\n- Skills are available as slash commands in ACP clients, matching the CLI experience\n\n**Improved**\n- Improve CLI startup speed by loading custom CA certificates asynchronously\n- Remote control link shows the full URL in the timeline instead of 'Open in browser'\n- ACP clients (e.g. Zed) now display the agent's live plan as it works through multi-step tasks\n- Add toggle for custom statusLine.command visibility in the statusline picker\n\n**Fixed**\n- Resuming a session no longer falsely reports it as in use after a previous CLI process exited unexpectedly\n- --config-dir now propagates correctly to plugin subcommands; --config-dir is deprecated in favor of COPILOT_HOME\n- Mouse selection works while the /ask response dialog is open, so its content can be highlighted and copied",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

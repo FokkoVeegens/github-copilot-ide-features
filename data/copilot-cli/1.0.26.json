@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.26",
+  "release_date": "2026-04-14",
+  "title": "1.0.26",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.26",
+  "source": "api",
+  "body_markdown": "2026-04-14\r\n\r\n- Escape key reliably dismisses ask_user and elicitation prompts without getting stuck\r\n- Spurious directory access prompts no longer appear for arguments inside find -exec blocks\r\n- Agent sessions no longer fail with unrecoverable errors when context compaction splits a tool call across a checkpoint boundary\r\n- Single-segment slash-prefixed tokens (e.g. /help, /start) no longer treated as file paths in bash commands\r\n- Anthropic BYOM correctly includes image data when viewing image files\r\n- Permission prompt notification hook only fires when a prompt is actually shown to the user\r\n- ctrl+o now expands all timeline entries, same as ctrl+e\r\n- Remote tab correctly shows Copilot coding agent tasks and supports steering without requiring a pull request\r\n- Rename \"steering\" to \"remote control\" in --remote flag and /remote command help text\r\n- Avoid sending duplicate custom instruction files (e.g. copilot-instructions.md and CLAUDE.md with identical content) to reduce wasted tokens per turn\r\n- Plugin hooks receive PLUGIN_ROOT, COPILOT_PLUGIN_ROOT, and CLAUDE_PLUGIN_ROOT env vars with the plugin's installation directory\r\n- ACP server binds to localhost only, preventing unintended network exposure\r\n- Installing a plugin named 'git' from a marketplace no longer fails due to incorrect URL parsing\r\n- Enterprise login accepts hostnames without a URL scheme (e.g. 'github.example.com')\r\n- LSP language servers correctly initialize on Windows using proper file URI paths\r\n- Relative paths in file edit operations resolve against the session working directory\r\n- Session scope selector in sync prompt is now more prominent and keyboard-navigable with left/right arrow keys\r\n- Instruction files with specific applyTo patterns are consolidated into a table instead of inlining full content, reducing context window usage\r\n- Deprecation warning when installing plugins from repos, URLs, or local paths",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Remote tab correctly shows Copilot coding agent tasks and supports steering without requiring a pull request",
+    "- Avoid sending duplicate custom instruction files (e.g. copilot-instructions.md and CLAUDE.md with identical content) to reduce wasted tokens per turn"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

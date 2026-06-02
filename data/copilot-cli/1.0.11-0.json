@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.11-0",
+  "release_date": "2026-03-23",
+  "title": "1.0.11-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.11-0",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Custom instructions, MCP servers, skills, and agents are now discovered at every directory level from the working directory up to the git root, enabling full monorepo support\n- Startup 'Environment loaded' message now shows the number of loaded hooks\n- Background agent progress (current intent and tool calls completed) now surfaces in read_agent and task timeout responses\n- statusLine.command path now supports ~ and environment variables (e.g. $HOME, ${VAR:-default})\n- /new and /clear commands accept an optional prompt to start the new session with a first message\n\n**Fixed**\n- GitHub MCP server user configuration is respected when connecting to remote hosts\n- Terminal screen redraws correctly after process suspend and resume (Ctrl+Z / fg)\n- MCP OAuth authentication works with MCP servers like the Atlassian Rovo MCP Server which support Dynamic Client Registration but host authorization metadata at a non-standard URL\n- /cd keeps a separate working directory per session, restored when switching sessions",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

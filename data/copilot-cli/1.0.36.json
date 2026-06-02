@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.36",
+  "release_date": "2026-04-24",
+  "title": "1.0.36",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.36",
+  "source": "api",
+  "body_markdown": "2026-04-24\n\n- Subcommand picker shows a selection indicator (❯) next to the highlighted item\n- Clearer error message with a direct link when multiple Copilot licenses are detected\n- Fixed an issue where preToolUse.matcher was ignored. After upgrade, hooks with matcher run only for tool names that fully match the regex.\n- `/keep-alive` is available without experimental mode to prevent system sleep while Copilot CLI is active\n- /remote command shows current status and supports /remote on and /remote off to toggle remote control\n- Disabled skills no longer appear in the slash command list\n- Add a 'changes' statusline toggle to show added/removed line counts for the session\n- Custom instruction files in .gitignored directories (e.g., .github/instructions/) now load correctly\n- Require double Esc to cancel in-flight work, preventing accidental interruptions\n- Saving debug logs or feedback bundles no longer overwrites existing archive files\n- Custom agents, skills, and commands from ~/.claude/ are no longer loaded by the Copilot CLI\n- Claude Opus 4.6 now uses medium reasoning effort by default",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Clearer error message with a direct link when multiple Copilot licenses are detected",
+    "- `/keep-alive` is available without experimental mode to prevent system sleep while Copilot CLI is active",
+    "- Custom agents, skills, and commands from ~/.claude/ are no longer loaded by the Copilot CLI"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

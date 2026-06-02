@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.13-1",
+  "release_date": "2026-03-27",
+  "title": "1.0.13-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.13-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- /rewind and double-Esc now open a timeline picker that can roll back to any point in conversation history, not just the previous snapshot\n\n**Improved**\n- MCP registry lookups are more reliable with automatic retries and request timeouts\n- CLI starts faster due to V8 compile cache reducing parse and compile time on repeated invocations",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

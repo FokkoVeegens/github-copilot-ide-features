@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.412-2",
+  "release_date": "2026-02-19",
+  "title": "0.0.412-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.412-2",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add `/update` command to view changelog and update instructions\n- Add exit_plan_mode tool with plan approval dialog for reviewing and accepting plans\n- Support ~/.copilot/instructions/*.instructions.md files for user-level instructions across all repositories\n- Add double-click word and triple-click line selection in alt-screen text selection\n- Edit the prompt in your preferred terminal editor with ctrl+x ctrl+e\n\n**Improved**\n- Improve SQL tool timeline entries\n- Reduce memory usage in alt-screen mode during long sessions\n- /fleet mode dispatches more subagents in parallel for faster execution\n- Instructions picker opens as a full-screen alt-screen view when alt-screen mode is enabled\n- Skills picker opens as a full-screen alt-screen view when alt-screen mode is enabled\n- Command files no longer require YAML frontmatter — plain markdown files work with name and description derived automatically\n- Session picker opens instantly without a loading flash when multiple sessions exist\n\n**Fixed**\n- Prevents spurious error messages from appearing in terminal on Windows\n- Typing `?` in an AskUser prompt no longer triggers the quick help overlay",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Support ~/.copilot/instructions/*.instructions.md files for user-level instructions across all repositories"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

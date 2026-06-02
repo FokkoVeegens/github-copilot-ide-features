@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.384",
+  "release_date": "2026-01-16",
+  "title": "0.0.384",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.384",
+  "source": "api",
+  "body_markdown": "2026-01-16\r\n\r\n- Add `&` prefix shortcut for delegating prompts to run in background (equivalent to `/delegate`)\r\n- Tab completion cycles correctly based on typed prefix, not completed text\r\n- Allow users to configure the reasoning effort for gpt models\r\n- MCP servers now start correctly for custom agents\r\n- Shell commands now display error output when they fail\r\n- Fixed bug causing model call failures after compaction in some scenarios\r\n- Login flow respects OAuth slow_down interval and includes debug logging\r\n- Custom agent discovery now follows symbolic links to agent definition files\r\n- Add additional prompting for custom agent delegation\r\n- Add `/cd` as an alias for `/cwd` command\r\n- Files created by the CLI are available for @-mention\r\n- Enable extended thinking for Anthropic Claude models\r\n- Screen reader mode shows static text instead of animated spinners during login\r\n- Selecting 'approve for session' now auto-approves pending parallel permission requests of the same type\r\n- Reasoning view setting persists across sessions\r\n- Provide clearer error messages when repository is not found or access is denied\r\n- Inject repo memories in the prompt and add memory storage tool to remember facts across sessions\r\n- Show delay time when Copilot reads shell output with a delay\r\n- Support proxy URLs without scheme (e.g., localhost:9999)",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Show delay time when Copilot reads shell output with a delay"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

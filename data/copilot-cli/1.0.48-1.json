@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.48-1",
+  "release_date": "2026-05-14",
+  "title": "1.0.48-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.48-1",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Input text with CJK characters or emoji renders without blank gaps between lines\n- /context shows correct token limits for all models instead of always showing 128k",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

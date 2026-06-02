@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.407-0",
+  "release_date": "2026-02-10",
+  "title": "0.0.407-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.407-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add support for gpt-5.3-codex\n- Add workspace-local MCP configuration via `.vscode/mcp.json`\n\n**Improved**\n- MCP servers using Microsoft OAuth configure automatically without manual client ID setup\n- Tab cycles modes forward, Shift+Tab backward; shell is now a mode\n- Ctrl+P runs slash commands while preserving input (replaces Ctrl+X → /)\n- Terminal title works on all TTY terminals, not just select few\n- Help text notes auto-update is disabled in CI environments by default\n- Terminal tab shows session title when idle\n- ask_user tool asks one question at a time for clearer interaction\n\n**Fixed**\n- Skill changes from `/skills` commands take effect immediately\n- /session usage string only shows available subcommands\n- Slash commands which take prompts now work when immediately followed by a new-line\n- Remove unintended characters from status bar\n- Autopilot mode works with custom agents that specify explicit tools\n- Updated node-pty to fix file descriptor leaks\n- Windows slash flags (e.g., `dir /B`) are no longer treated as file paths\n- Diff mode no longer flickers when navigating files\n- /mcp disable and /mcp enable show clear error when server name doesn't exist",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.22",
+  "release_date": "2026-04-09",
+  "title": "1.0.22",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.22",
+  "source": "api",
+  "body_markdown": "2026-04-09\r\n\r\n- MCP tools with non-standard JSON schemas are now sanitized for compatibility with all model providers\r\n- Better handling of large images from MCP and extension tools\r\n- Improved rendering performance with a new simplified inline renderer\r\n- Show a clear message to contact your organization administrator when remote sessions are blocked by policy\r\n- Sub-agent activity no longer shows duplicated tool names (e.g. \"view view the file...\")\r\n- Permission checks and other hooks now work correctly when using Anthropic models via BYOM/BYOK configuration\r\n- Slash command picker appears above the text input for a more stable layout\r\n- Custom agents can now declare a `skills` field to eagerly load skill content into agent context at startup\r\n- Plugins can now display a post-install message with setup instructions after installation\r\n- Remove .vscode/mcp.json and .devcontainer/devcontainer.json as MCP server config sources; CLI now only reads .mcp.json. A migration hint appears when .vscode/mcp.json is detected without .mcp.json.\r\n- Plugins remain enabled across sessions and auto-install on startup based on user config\r\n- Add sub-agent depth and concurrency limits to prevent runaway agent spawning\r\n- Warn when resuming a session that is already in use by another CLI or application\r\n- CLI no longer crashes on systems affected by a V8 engine bug in grapheme segmentation\r\n- sessionStart and sessionEnd hooks fire once per session in interactive mode instead of once per prompt\r\n- Plugin agents respect the model specified in their frontmatter\r\n- Support bearer token authentication for BYOK Anthropic models",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

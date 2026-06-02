@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.400",
+  "release_date": "2026-01-30",
+  "title": "0.0.400",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.400",
+  "source": "api",
+  "body_markdown": "2026-01-30\n\n- Add MCP server instructions support\n- Timeline displays user responses to `ask_user` tool prompts with username\n- Ordered lists display with numbers instead of dashes\n- Add theme picker with `/theme` command and GitHub Dark/Light themes\n- Fix support for pasting large content on Windows Terminal\n- Better handle large results from grep and glob tools to avoid memory issues\n- CLI now sends DELETE requests to remove MCP servers when shutting down\n- Fix not being able to arrow key out of text inputs in select lists\n- ACP server supports changing models during a session\n- ACP server support permission flags: --yolo, --allow-all, etc. and permissions config\n- Show progress indicator in terminal tab when thinking\n- Remove bundled LSP servers (TypeScript, Python)\n- Improve compatibility with remote MCP servers that use OAuth\n- Markdown table headers display in bold\n- Add autopilot mode for autonomous task completion (experimental)\n- Add fuzzy search to model picker\n- Freeform text input in list pickers works correctly\n- Add `copilot plugin` subcommand for non-interactive plugin management\n- CLI is more responsive in sessions with many messages\n- Shell path detection more accurately handles spaces, quotes, and Windows switches\n- Diff mode file list uses carousel navigation, showing up to 5 files at a time\n- Holding backspace continues deleting text\n- Better support for UNIX keyboard bindings (Ctrl+A/E/W/U/K, Alt+arrows) and multiline content in various text inputs\n- Add `launch_messages` config for startup announcements\n- The Code Review tool handles large changesets by ignoring build artifacts and limiting to 100 files",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Add `copilot plugin` subcommand for non-interactive plugin management"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

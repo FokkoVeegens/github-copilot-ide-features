@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.385",
+  "release_date": "2026-01-19",
+  "title": "0.0.385",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.385",
+  "source": "api",
+  "body_markdown": "2026-01-19\n\n- The store_memory tool is only included when memory is enabled for the user\n- Input placeholder now says \"Type\" instead of \"Enter\" to avoid confusion with Enter key\n- Cursor now correctly positioned at end of line when navigating history with down arrow\n- The new memory feature gracefully handles Copilot running without a repository\n- Control-C message now displays for 5 seconds instead of 1 second\n- Display current intent in terminal tab title\n- Combine all custom instruction files instead of using priority-based fallbacks\n- Enable infinite sessions with automatic long-running context management through compaction checkpoints\n- MCP server management when swapping between custom agents with /agent\n- Press Escape to cancel manual `/compact` command\n- Model switching from Codex to Opus preserves conversation history correctly",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- The new memory feature gracefully handles Copilot running without a repository"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

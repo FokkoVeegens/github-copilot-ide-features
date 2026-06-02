@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.4-1",
+  "release_date": "2026-03-11",
+  "title": "1.0.4-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.4-1",
+  "source": "api",
+  "body_markdown": "**New**\n- Enables OpenTelemetry instrumentation for observability into agent sessions, LLM calls, and tool executions\n\n**Added**\n- Extensions can now be written as CommonJS modules (extension.cjs)\n- Show loaded extensions count in the Environment loaded startup message\n- Support disableAllHooks flag to disable all hooks from a configuration file\n- Support Azure DevOps repository identification in session logs\n\n**Improved**\n- Only show reasoning headers when it's the only reasoning text available.\n- Terminal properly resets when CLI crashes, preventing shell corruption\n- /update command automatically restarts to apply updates instead of requiring manual exit\n- OAuth authentication now handles Microsoft Entra ID and other OIDC servers reliably with proper resource indicators and refresh token support\n- Show individual instruction file names in /instructions picker with [external] labels for injected files\n- Path permission dialog offers a one-time approval option in addition to adding the path to the allowed list\n\n**Fixed**\n- Session export header renders each field on its own line in shared gists\n- Auto-update now retries without authentication token on SAML enforcement errors\n- Autopilot mode stops continuing after API errors instead of looping indefinitely\n- Status line context window percentage no longer inflates across turns by using the last call's input and output tokens instead of cumulative totals\n- Kitty keyboard protocol is properly disabled on suspend when using alternate screen",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

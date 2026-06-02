@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.31",
+  "release_date": "2026-04-16",
+  "title": "1.0.31",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.31",
+  "source": "api",
+  "body_markdown": "2026-04-16\n\n- Prompt frame no longer causes rendering issues on Windows and Ubuntu terminals",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

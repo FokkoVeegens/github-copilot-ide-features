@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.30",
+  "release_date": "2026-04-16",
+  "title": "1.0.30",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.30",
+  "source": "api",
+  "body_markdown": "2026-04-16\n\n- Feedback form links to the correct GitHub repository\n- /undo shows an explanatory message when rewind is unavailable (e.g., not in a git repository or no commits yet)\n- Plugin skills and commands are correctly discovered when using skills.discover\n- Add /statusline command (with /footer alias) to customize which items appear in the status bar (directory, branch, effort, context window, quota)\n- Remove --list-env flag that logged loaded plugins, agents, skills, and MCP servers in prompt mode\n- Image paste from clipboard works again after regression in bracketed paste handling\n- Both Ctrl+V and Meta+V trigger image paste on all platforms",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.21",
+  "release_date": "2026-04-07",
+  "title": "1.0.21",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.21",
+  "source": "api",
+  "body_markdown": "2026-04-07\n\n- Add `copilot mcp` command for managing MCP servers\n- Spinner no longer appears stuck when a long-running async shell command is active\n- Enterprise GitHub URL input in the login flow now accepts keyboard input and submits on Enter\n- Slash command picker no longer flickers or shifts the input while filtering\n- Timeline no longer goes blank when content shrinks (e.g., after cancelling or tool completion)\n- Plan mode timeline display shows user text without a redundant \"Plan\" prefix\n- Reduce memory usage by automatically shutting down shell sessions that are no longer needed\n- Hooks configured with PascalCase event names now receive VS Code-compatible snake_case payloads with hook_event_name, session_id, and ISO 8601 timestamps",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Add `copilot mcp` command for managing MCP servers"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

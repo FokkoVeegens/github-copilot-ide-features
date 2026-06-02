@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.25",
+  "release_date": "2026-04-13",
+  "title": "1.0.25",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.25",
+  "source": "api",
+  "body_markdown": "2026-04-13\n\n- Install MCP servers from the registry with guided configuration directly in the CLI\n- Esc key works correctly after a failed /resume session lookup\n- Persist resolved model in session history and defer model changes during active turns\n- ACP clients can now provide MCP servers (stdio, HTTP, SSE) when starting or loading sessions\n- The --config-dir flag is now respected when selecting the active model\n- Add /env command to show loaded environment details (instructions, MCP servers, skills, agents, plugins)\n- /share appends the correct file extension (.md or .html) when a custom output path is given without one\n- /add-dir accepts relative paths (e.g. ./src, ../sibling) and resolves them to absolute paths\n- Custom instruction files preserve special characters like & and <placeholders>\n- Skill picker list scrolls correctly when the list exceeds the terminal height\n- MCP client reports the correct CLI version during server handshake\n- /logout shows a warning when signed in via gh CLI, PAT, API key, or environment variable, since /logout only manages OAuth sessions\n- Alt+D now deletes the word in front of the cursor in text input\n- /share html shows a file:// URL and supports Ctrl+X O to open the file directly\n- Skill instructions persist correctly across conversation turns\n- You can now remote control your CLI sessions using --remote or /remote\n- MCP remote server connections automatically retry on transient network failures\n- Share Research TOC sidebar anchor links navigate correctly within the page",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

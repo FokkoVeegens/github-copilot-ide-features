@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.40-3",
+  "release_date": "2026-04-30",
+  "title": "1.0.40-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.40-3",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add support for `client_credentials` OAuth grant type for MCP servers, enabling fully headless authentication without a browser\n\n**Improved**\n- Print \"Exiting…\" to stderr immediately on Ctrl+C during prompt mode so shutdown progress is visible\n- /research uses an orchestrator/subagent model for more thorough and reliable deep research results\n- Autopilot mode now limits continuation messages to 5 by default (configurable with --max-autopilot-continues)\n- Automatically clean up old CLI package versions from disk during auto-update\n- Remote session statusline shows the remote working directory and branch instead of local context\n\n**Fixed**\n- Subagents correctly evaluate tool search support for their own model instead of inheriting the parent session's settings\n- Switching sessions with /new or /resume no longer carries over pending messages to the new session\n- CLI no longer hangs at 100% CPU when sending a large file attachment\n- Resume session picker no longer shows duplicate entries for the same Mission Control-backed session\n- Session resume selector displays summaries on a single line, truncated to fit the column width",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

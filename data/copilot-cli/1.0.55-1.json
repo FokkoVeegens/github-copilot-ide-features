@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.55-1",
+  "release_date": "2026-05-26",
+  "title": "1.0.55-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.55-1",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Increase selection background contrast across all color themes for better visibility\n- /env now shows loaded extensions with their status and source\n\n**Fixed**\n- Terminal bell no longer sounds on turn completion unless explicitly enabled via config\n- /resume picker no longer shows blank rows for sessions closed before sending a message\n- Aborting a session no longer leaves the UI stuck in a Cancelling state when Task tool agents are running\n- vote_memory tool calls are throttled per response and per interaction to prevent runaway voting bursts\n- Upward auto-scroll now engages when dragging mouse selection past the top of the timeline\n- Clipboard correctly copies CJK and supplementary-plane Unicode characters on Windows",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

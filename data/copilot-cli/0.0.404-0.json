@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.404-0",
+  "release_date": "2026-02-05",
+  "title": "0.0.404-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.404-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add `/tasks` command to view and manage background tasks\n- Enable background agents for all users\n\n**Improved**\n- Simplify and clarify `/delegate` command messaging\n- GITHUB_TOKEN environment variable now accessible in agent shell sessions",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

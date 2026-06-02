@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.395",
+  "release_date": "2026-01-26",
+  "title": "0.0.395",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.395",
+  "source": "api",
+  "body_markdown": "2026-01-26\n\n- Select escape item shows blinking cursor to indicate text input\n- `/mcp show` displays all configured MCP servers including defaults and servers from additional configuration.\n- `/mcp show` displays servers from installed plugins\n- Rewind shows clear warning in non-git repos or repos without commits\n- Cursor hides when terminal loses focus\n- Formatted text and links display correctly when wrapping\n- Load local shell configuration in agent sessions\n- Plugin skills are now usable by the agent\n- CLI handles missing tree-sitter files gracefully instead of crashing\n- Completed tool calls display in prompt mode\n- Add commenting to /diff mode for line-specific feedback",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

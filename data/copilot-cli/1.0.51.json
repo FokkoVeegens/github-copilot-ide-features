@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.51",
+  "release_date": "2026-05-20",
+  "title": "1.0.51",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.51",
+  "source": "api",
+  "body_markdown": "2026-05-20\r\n\r\n- `--session-id=<id>` resumes known sessions or tasks, and starts new sessions with a specific UUID\r\n- /remote commands now respect organization remote control and view from cloud policy and show a clear error when disabled\r\n- /remote command can now be used while the agent is working\r\n- Customizable status line in the terminal footer displays session info such as model, context window, git branch, and more\r\n- MCP tool loading at startup is faster for users with many HTTP-based MCP servers\r\n- Settings file no longer accumulates unrelated config keys when settings are updated\r\n- Add /security-review slash command to review code changes for security vulnerabilities (experimental)\r\n- Add preMcpToolCall hook for hook providers to control outgoing MCP request metadata\r\n- Add /chronicle cost-tips subcommand for personalized token usage and cost reduction recommendations\r\n- MCP servers using OAuth stay connected when authentication was performed in a separate session\r\n- GFM tables and blockquotes inside list items render correctly without a floating top border\r\n- Experimental mode indicator now appears persistently in the app header instead of as a one-time notification\r\n- Loading indicator color matches the active mode (plan, autopilot, shell)\r\n- Session naming works correctly for usage-based billing users\r\n- Pressing Enter on a highlighted subcommand completion inserts the selection instead of submitting the partial command\r\n- Use default release notes when publishing a release with no changelog entries\r\n- Editor launched with Ctrl+G no longer steals keystrokes or requires double keypresses\r\n- `/memory show` displays documentation links for learning about and managing Copilot Memory\r\n- Add `terminalProgress` setting to enable or disable OSC 9;4 terminal progress indicators\r\n- postToolUse hooks can now inject additionalContext into successful tool results\r\n- Only show remote session startup failure when remote mode is explicitly requested via --remote or enabled in user configuration\r\n- Shell tool calls succeed even when the model omits the `description` parameter\r\n- Ensure input token usage includes cached, update token formatting to clarify\r\n- Login prompt more clearly warns when token storage falls back to insecure plain text config file\r\n- GitHub MCP web search tool is available immediately without requiring tool search\r\n- Secret scanning now covers commit messages and PR descriptions, redacting secrets before they are published\r\n- Input area grows responsively with terminal height instead of capping at 3 lines",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- `/memory show` displays documentation links for learning about and managing Copilot Memory"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

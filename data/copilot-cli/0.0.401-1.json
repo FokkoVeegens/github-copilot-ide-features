@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.401-1",
+  "release_date": "2026-02-02",
+  "title": "0.0.401-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.401-1",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- ACP terminal-auth passes correct arguments to login\n- Arrow and special keys work reliably when held down\n- Slash command ghost text appends correctly",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

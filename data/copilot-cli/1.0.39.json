@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.39",
+  "release_date": "2026-04-28",
+  "title": "1.0.39",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.39",
+  "source": "api",
+  "body_markdown": "2026-04-28\n\n- Allow ACP clients to toggle allow-all permission mode via session configuration\n- Add /compact, /context, /usage, and /env slash commands for ACP sessions\n- Press ctrl+x → b to move the current running task or shell command to the background\n- Transient pipe errors on child process stdio streams no longer cause crashes or trigger false crash reports\n- `/remote` status output now shows actionable hints for each connection state\n- Improve --resume session picker with better tab layout, status display, and progressive loading\n- Slash command argument picker opens immediately at exact command boundaries without requiring a trailing space",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

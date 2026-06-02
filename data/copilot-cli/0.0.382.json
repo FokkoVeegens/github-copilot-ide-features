@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.382",
+  "release_date": "2026-01-14",
+  "title": "0.0.382",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.382",
+  "source": "api",
+  "body_markdown": "2026-01-14\n\n- Add support for GPT-5.2-Codex model\n- Add `--config-dir` flag to override default configuration directory location",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.51-3",
+  "release_date": "2026-05-20",
+  "title": "1.0.51-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.51-3",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add /security-review slash command to review code changes for security vulnerabilities\n- Add preMcpToolCall hook for hook providers to control outgoing MCP request metadata\n- Add /chronicle cost-tips subcommand for personalized token usage and cost reduction recommendations\n\n**Improved**\n- Experimental mode indicator now appears persistently in the app header instead of as a one-time notification\n- Loading indicator color matches the active mode (plan, autopilot, shell)\n\n**Fixed**\n- MCP servers using OAuth stay connected when authentication was performed in a separate session\n- GFM tables and blockquotes inside list items render correctly without a floating top border",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

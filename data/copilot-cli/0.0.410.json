@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.410",
+  "release_date": "2026-02-14",
+  "title": "0.0.410",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.410",
+  "source": "api",
+  "body_markdown": "2026-02-14\r\n\r\n- Fixed high memory usage caused by rapid logging\r\n- Shell mode pastes raw text instead of paste tokens\r\n- Reduce memory usage from encoding streaming chunks\r\n- Fix alt-screen and timeline URL rendering to preserve long links without truncation\r\n- Reduced memory growth in long sessions by evicting transient events after compaction\r\n- Fixed high memory usage when loading large sessions\r\n- Fixed high memory usage during shell commands with rapid output\r\n- Add `/init suppress` to control init suggestions per repository\r\n- Show IDE file selection indicator in the status bar when connected to an IDE\r\n- Add repo-level settings to disable individual validation tools\r\n- ACP server supports loading existing sessions\r\n- Page Up/Page Down keyboard scrolling in alt-screen mode\r\n- Add Ctrl+Z suspend/resume support on Unix platforms\r\n- Support tilde (~) expansion in MCP server cwd configuration\r\n- Support ctrl+n and ctrl+p as arrow key alternatives\r\n- Exit CLI with ctrl+d on empty prompt\r\n- Fix unknown option '--no-warnings' error\r\n- Shift+Enter inserts newlines in terminals with kitty keyboard protocol\r\n- MCP server list selection adjusts correctly after deletion\r\n- Shell mode removed from Shift+Tab cycle, accessed only via `!`\r\n- Improve /tasks dialog with consistent icons and typography\r\n- Exit from alt-screen no longer replays full session history\r\n- MCP server errors and loading issues surface in timeline\r\n- Reduce input jitter with frame coalescing and smoother alt-screen animations\r\n- Extend skill name validation to support underscores, dots, and spaces; make name and description optional in skill frontmatter with sensible fallbacks\r\n- Add Copilot co-authored by trailer to git commits created",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Add Copilot co-authored by trailer to git commits created"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

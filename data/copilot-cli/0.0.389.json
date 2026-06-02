@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.389",
+  "release_date": "2026-01-22",
+  "title": "0.0.389",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.389",
+  "source": "api",
+  "body_markdown": "2026-01-22\r\n\r\n- Improve `/session` command visual hierarchy and colors\r\n- Subagents receive correct tools when using different models\r\n- grep and glob tools now find hidden files and dotfiles\r\n- Add MSI installer for Windows\r\n- Remove Node version requirement from npm package\r\n- MCP servers can now authenticate using OAuth 2.0 with automatic token management and refresh\r\n- Display progress messages from MCP tools in timeline\r\n- Plugins can bundle MCP servers that load automatically when installed\r\n- Invoke skills using slash commands like /skill-name\r\n- Add `/diff` command to review changes made during the current session\r\n- Show warning when repository memory fails to load\r\n- Subagents no longer hang on user input requests\r\n- Rate limit errors now show retry timing in user-friendly messages\r\n- Messages sent during `/compact` are automatically queued\r\n- Add `/models` as alias for `/model` command\r\n- Reduce padding in welcome header\r\n- Shell commands (!) can run in parallel while agent is working",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

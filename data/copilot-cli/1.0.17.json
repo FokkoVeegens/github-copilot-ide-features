@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.17",
+  "release_date": "2026-04-03",
+  "title": "1.0.17",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.17",
+  "source": "api",
+  "body_markdown": "2026-04-03\n\n- Built-in skills are now included with the CLI, starting with a guide for customizing Copilot cloud agent's environment\n- MCP OAuth flows now support HTTPS redirect URIs via a self-signed certificate fallback, improving compatibility with OAuth providers that require HTTPS (e.g., Slack)\n- /resume session picker loads significantly faster, especially with large session histories",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Built-in skills are now included with the CLI, starting with a guide for customizing Copilot cloud agent's environment"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

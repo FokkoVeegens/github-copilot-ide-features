@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.36-1",
+  "release_date": "2026-04-24",
+  "title": "1.0.36-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.36-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add a 'changes' statusline toggle to show added/removed line counts for the session\n\n**Improved**\n- Require double Esc to cancel in-flight work, preventing accidental interruptions\n\n**Fixed**\n- Custom instruction files in .gitignored directories (e.g., .github/instructions/) now load correctly",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

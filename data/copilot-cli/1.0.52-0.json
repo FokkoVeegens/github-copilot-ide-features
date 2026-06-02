@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.52-0",
+  "release_date": "2026-05-21",
+  "title": "1.0.52-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.52-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Custom agents support opt-in deferred tool loading via `deferred-tool-loading` in agent frontmatter, enabling tool-search discovery for agents with large tool lists\n\n**Improved**\n- /compact accepts optional focus instructions to shape the compaction summary\n- General-purpose subagents use GPT-5.4 or GPT-5.5 when available\n- /usage shows quota progress bars for session and weekly limits\n- AI credits error messages updated with clearer language and a Manage budget link\n\n**Fixed**\n- Exit summary displays `AI Credits` label with correct spacing before the value\n- /restart and /update preserve the current session ID after restarting\n- Legacy nested `oauth.clientId` and `oauth.callbackPort` keys in MCP server configs are now migrated to the supported `oauthClientId` and `auth.redirectPort` keys instead of being silently dropped\n- MCP OAuth re-authentication honors the configured redirectPort\n- PowerShell division operator no longer triggers false 'Allow directory access' prompts on Windows",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

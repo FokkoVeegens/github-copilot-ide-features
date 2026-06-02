@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.421-2",
+  "release_date": "2026-03-03",
+  "title": "0.0.421-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.421-2",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add structured form input for the ask_user tool using MCP Elicitations (experimental)\n- Add --plugin-dir flag to load a plugin from a local directory\n- Mouse text selection is automatically copied to the Linux primary selection buffer (middle-click to paste)\n\n**Improved**\n- Autopilot permission dialog appears on first prompt submission instead of on mode switch\n- AUTO theme now reads your terminal's ANSI color palette and uses it directly, so colors match your terminal theme\n- Plugin commands read extraKnownMarketplaces from project-level .claude/settings.json for Claude compatibility\n- Use consistent ~/.copilot/pkg path for auto-update instead of XDG_STATE_HOME\n\n**Fixed**\n- Git hooks can detect Copilot CLI subprocesses via the COPILOT_CLI=1 environment variable to skip interactive prompts\n- Spurious \"write EIO\" error entries no longer appear in the timeline during session resume or terminal state transitions\n- Python-based MCP servers no longer time out due to buffered stdout\n- MCP server availability correctly updates after signing in, switching accounts, or signing out\n- Fix VS Code shift+enter and ctrl+enter keybindings for multiline input",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Use consistent ~/.copilot/pkg path for auto-update instead of XDG_STATE_HOME",
+    "- Git hooks can detect Copilot CLI subprocesses via the COPILOT_CLI=1 environment variable to skip interactive prompts"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

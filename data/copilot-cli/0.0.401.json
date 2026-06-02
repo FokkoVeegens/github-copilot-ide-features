@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.401",
+  "release_date": "2026-02-03",
+  "title": "0.0.401",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.401",
+  "source": "api",
+  "body_markdown": "2026-02-03\n\n- Support `.agents/skills` directory for auto-loading skills\n- Improve handling of chat history when switching between model families\n- MCP tools returning structuredContent now display correctly in CLI\n- Support Claude-style .mcp.json format without mcpServers wrapper\n- Inserting new line with shift+enter keybinding in VS Code integrated terminal\n- Large multi-line pastes work correctly\n- ACP terminal-auth passes correct arguments to login\n- Arrow and special keys work reliably when held down\n- Slash command ghost text appends correctly\n- Add `copilot login` subcommand and support ACP terminal-auth\n- Add agentStop and subagentStop hooks to control agent completion\n- CLI handles unknown keypresses gracefully\n- /diff displays accurate line numbers with dual column layout",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Add `copilot login` subcommand and support ACP terminal-auth"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.363",
+  "release_date": "2025-11-24",
+  "title": "0.0.363",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.363",
+  "source": "api",
+  "body_markdown": "2025-11-24\n\n- Opus 4.5, GPT-4.1 and GPT-5-Mini are now available in GitHub Copilot CLI\n- Image data paste now prioritizes pasting contents of image files instead of their file icons.\n- Improved timeline rendering of shell tool names\n- Add support for GITHUB_ASKPASS environment variable for authentication\n- MCP servers work in `--prompt` mode",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Opus 4.5, GPT-4.1 and GPT-5-Mini are now available in GitHub Copilot CLI"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

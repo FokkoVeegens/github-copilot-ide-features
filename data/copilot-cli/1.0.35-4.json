@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.35-4",
+  "release_date": "2026-04-22",
+  "title": "1.0.35-4",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.35-4",
+  "source": "api",
+  "body_markdown": "**Added**\n- Name sessions with --name and resume them by name with --resume=<name>\n\n**Improved**\n- LSP server entries in lsp.json support configurable spawn, initialization, and warmup timeouts\n- Context window indicator in the statusline is now hidden by default\n- Move MCP OAuth into the shared runtime flow and clear associated OAuth state when removing an MCP server.\n\n**Fixed**\n- Configure Copilot agent now has shell access on Windows\n- Show a helpful error message with install instructions when clipboard utilities (wl-clipboard or xclip) are missing on Linux",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Configure Copilot agent now has shell access on Windows"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.27",
+  "release_date": "2026-04-15",
+  "title": "1.0.27",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.27",
+  "source": "api",
+  "body_markdown": "2026-04-15\n\n- Show a clear message when Copilot Pro trial is paused instead of a generic policy error\n- Status bar shows @files and #issues hints while typing, and /help hint when the slash command picker is open\n- Clipboard copy on WSL no longer leaks an invisible BOM character into pasted text\n- Add /ask command to ask a quick question without affecting conversation history\n- Add `copilot plugin marketplace update` command to refresh plugin catalogs",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Show a clear message when Copilot Pro trial is paused instead of a generic policy error",
+    "- Add `copilot plugin marketplace update` command to refresh plugin catalogs"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

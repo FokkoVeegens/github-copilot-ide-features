@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.34-0",
+  "release_date": "2026-04-20",
+  "title": "1.0.34-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.34-0",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Rate limit error message now says \"session rate limit\" instead of \"global rate limit\"",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

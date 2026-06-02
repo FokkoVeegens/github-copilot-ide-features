@@ -1,0 +1,22 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.343",
+  "release_date": "2025-10-16",
+  "title": "0.0.343",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.343",
+  "source": "api",
+  "body_markdown": "## 0.0.343 - 2025-10-16\r\n\r\n- ```\r\n  Added new model:\r\n  Run slash model to equip\r\n  Haiku 4.5.\r\n  ```\r\n- Added a flag to augment MCP server configuration to temporarily add or override server configuration per session:  `--additional-mcp-config` (fixes https://github.com/github/copilot-cli/issues/288)\r\n\t- You can pass MCP server configuration in two ways:\r\n\t\t- Inline JSON: `copilot --additional-mcp-config '{\"mcpServers\": {\"my-tool\": {...}}}'`\r\n\t\t- From a file (prefix with @): `copilot --additional-mcp-config @/path/to/config.json`\r\n\t- You can also pass the flag multiple times (later values override earlier ones): `copilot --additional-mcp-config @base.json --additional-mcp-config @overrides.json`\r\n- Improved our prompts to ensure the agent uses Windows-style paths on Windows (fixes https://github.com/github/copilot-cli/issues/261)\r\n- Added a prompt for users to run `/terminal-setup` if needed to enable multi-line input\r\n- Various visual improvements:\r\n\t- Added a shimmer effect to the \"Thinking...\" indicator\r\n\t- Removed the box around user messages in the timeline\r\n\t- Increased the contrast of removed intraline highlights in diffs\r\n\t- Allow cycling through slash commands (from the bottom of the list back to the top)\r\n\t- Aligned permission/confirmation prompts to ensure all use the same visual style\r\n\r\nRun `npm install -g @github/copilot@latest` to update!",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Added a flag to augment MCP server configuration to temporarily add or override server configuration per session:  `--additional-mcp-config` (fixes https://github.com/github/copilot-cli/issues/288)",
+    "- Inline JSON: `copilot --additional-mcp-config '{\"mcpServers\": {\"my-tool\": {...}}}'`",
+    "- From a file (prefix with @): `copilot --additional-mcp-config @/path/to/config.json`",
+    "- You can also pass the flag multiple times (later values override earlier ones): `copilot --additional-mcp-config @base.json --additional-mcp-config @overrides.json`",
+    "- Improved our prompts to ensure the agent uses Windows-style paths on Windows (fixes https://github.com/github/copilot-cli/issues/261)",
+    "Run `npm install -g @github/copilot@latest` to update!"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

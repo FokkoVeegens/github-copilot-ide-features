@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.416",
+  "release_date": "2026-02-24",
+  "title": "0.0.416",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.416",
+  "source": "api",
+  "body_markdown": "2026-02-24\n\n- Expand `--help` content with descriptions, examples, and sorted flags\n- Block third-party MCP servers when the Copilot MCP policy does not allow them\n- Streaming response size counter updates continuously during tool calls and reasoning, and resets between requests\n- Status line automatically switches to a two-line layout on narrow terminals, keeping CWD, branch, and model info readable at any terminal width\n- Undo operations now always require confirmation",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Block third-party MCP servers when the Copilot MCP policy does not allow them"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

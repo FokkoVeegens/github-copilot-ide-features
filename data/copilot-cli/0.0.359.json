@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "0.0.359",
+  "release_date": "2025-11-17",
+  "title": "0.0.359",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v0.0.359",
+  "source": "api",
+  "body_markdown": "2025-11-17\n\n- Support adding images to context via drag & dropping and pasting paths to image files. Improved how image slugs are rendered in the input box\n- Add `/share` command to save session as markdown file or GitHub gist\n- Fix a bug where cached tokens were displaying as zero at the end of the session\n- Enable `USE_BUILTIN_RIPGREP` environment variable to optionally use ripgrep from PATH\n- Fix an issue where sourcing custom agents from the remote repository's default branch led to confusions about whether the local copy of the agent was being used\n- Fix custom agents configuration issues\n- Improve `Ctrl+C` performance\n- Improve tool argument parsing safety\n- Distinguish tool names from paths and improve tool success/error icons\n- `copilot -p` will no longer interactively prompt for permission requests\n- Remove unnecessary whitespace from tool descriptions",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- `copilot -p` will no longer interactively prompt for permission requests"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

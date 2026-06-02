@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.57-4",
+  "release_date": "2026-05-31",
+  "title": "1.0.57-4",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.57-4",
+  "source": "api",
+  "body_markdown": "**Added**\n- Click a diff line with the mouse to select it in diff mode\n\n**Improved**\n- preToolUse hook errors now deny the tool call instead of silently allowing execution\n\n**Fixed**\n- Ctrl+C and other modified keys work correctly inside tmux\n- @-mention file search matches files regardless of query letter casing\n- `copilot plugin marketplace list` now honors repo-level `extraKnownMarketplaces` settings from `.github/copilot/settings.json`\n- Queued prompts in the footer are capped to a single line, preventing them from pushing session messages off screen\n- MCP servers configured with npx --registry are no longer incorrectly blocked by policy\n- Session no longer hangs indefinitely after an error occurs during internal event processing\n- Installed plugins no longer include the .git directory from the plugin source repository\n- New reasoning after tool calls appears at the bottom of the timeline instead of above earlier output\n- Pasting text copied from a browser, editor, or terminal no longer leaves a stray empty line, broken box-drawing lines, or a misplaced cursor in the prompt",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- `copilot plugin marketplace list` now honors repo-level `extraKnownMarketplaces` settings from `.github/copilot/settings.json`"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}

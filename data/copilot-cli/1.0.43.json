@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.43",
+  "release_date": "2026-05-06",
+  "title": "1.0.43",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.43",
+  "source": "api",
+  "body_markdown": "2026-05-06\r\n\r\n- Add username toggle to /statusline picker to display the active account in the footer\r\n- Auto mode uses server-side model routing for improved real-time model selection\r\n- Resume prompt shows correct session name when multiple sessions are active\r\n- Protect against RCE from malicious bare repositories nested inside a project _(for more information, https://github.com/github/copilot-cli/security/advisories/GHSA-9ccr-r5hg-74gf)_\r\n- MCP server child processes (e.g. started via npx or uvx) are now fully terminated when a session ends\r\n- Show download progress when running the update command",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Protect against RCE from malicious bare repositories nested inside a project _(for more information, https://github.com/github/copilot-cli/security/advisories/GHSA-9ccr-r5hg-74gf)_"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-02T17:01:24Z",
+  "schema_version": 1
+}
