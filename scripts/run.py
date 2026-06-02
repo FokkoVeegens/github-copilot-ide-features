@@ -35,7 +35,8 @@ def main() -> None:
 
     # Generate/update index.json for this IDE
     generate_ide_index(data_dir)
-    print("  [gen]  index.json")
+    if (data_dir / "index.json").exists():
+        print("  [gen]  index.json")
 
     print(f"\nDone — {written} new, {skipped} skipped.")
     if written == 0 and skipped == 0:
