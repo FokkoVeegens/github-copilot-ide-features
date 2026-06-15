@@ -1,0 +1,42 @@
+{
+  "ide": "jetbrains",
+  "version": "1.10.1",
+  "release_date": "2026-06-08",
+  "title": "GitHub Copilot for JetBrains 1.10.1",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **Bug Fixes**\n* Resolved: An issue where Plan mode (in Local agent) could modify files instead of staying read-only.",
+  "body_html": "<ul><li><strong>Bug Fixes</strong></li><li>Resolved: An issue where Plan mode (in Local agent) could modify files instead of staying read-only.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": "251",
+      "since": "251.25410",
+      "until": "",
+      "compatible_versions": {
+        "PHPSTORM": "2025.1.1+",
+        "DBE": "2025.1.1+",
+        "MPS": "2025.1.1+",
+        "CWMGUEST": "1.0+",
+        "JBCLIENT": "1.0+",
+        "IDEA": "2025.1.1+",
+        "PYCHARM": "2025.1.1+",
+        "IDEA_COMMUNITY": "2025.1.1+",
+        "PYCHARM_COMMUNITY": "2025.1.1+",
+        "CLION": "2025.1.1+",
+        "GOLAND": "2025.1.1+",
+        "RUBYMINE": "2025.1.1+",
+        "RIDER": "2025.1.2+",
+        "WEBSTORM": "2025.1.1+",
+        "ANDROID_STUDIO": "Narwhal | 2025.1.1+",
+        "DATASPELL": "2025.1.1+",
+        "RUST": "2025.1.2+"
+      },
+      "file_id": 1069346,
+      "downloads": 423674
+    }
+  ],
+  "fetched_at": "2026-06-15T08:32:17Z",
+  "schema_version": 1
+}
