@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.63",
+  "release_date": "2026-06-16",
+  "title": "1.0.63",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.63",
+  "source": "api",
+  "body_markdown": "2026-06-15\n\n- Blocked image attachments now explain what to do — enable vision via the \"Editor preview features\" policy, switch to a vision-capable model, or try a different image — instead of showing a confusing error.\n- Options in `--help` output sort alphabetically, including options that have two long flags\n- Auth validation errors (e.g., VPN or IP allowlist failures) are now shown in the sign-in banner with guidance to check network access\n- Show fork-based pull requests in /pr and the branch PR badge\n- Resume remote sessions when the local and remote repository names differ only by case\n- Show the spill file path when read_bash output is too large\n- Include recent local sessions in /chronicle standup\n- Restore /responses WebSocket connections\n- Retry transient 401 auth failures in HMAC and OAuth modes\n- Press w in /diff to hide whitespace-only changes\n- Add deferTools option to MCP server config to keep a server's tools always available, even when tool search is enabled\n- Agent mode is tracked per session, so it no longer carries over when you create, clear, or switch sessions\n- Pressing Enter opens the highlighted issue details\n- Plan review menus work on strict OpenAI-compatible backends\n- Prevent Windows crashes when the native runtime addon loads in a corrupted host process heap\n- Recover from unreadable native document attachments by falling back to file-path uploads\n- Keep reverse search aligned in the input footer while you search command history\n- PostToolUse hook matchers (e.g. `Edit|Write`) are now honored instead of silently dropped, so formatters and linters run only after the tools they target\n- Improve reliability of OpenAI, Anthropic, and Azure OpenAI requests\n- Experimental: /rewind no longer requires git and restores only the files Copilot changed (leaving your own edits intact), with a conversation-only or conversation + files choice",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Experimental: /rewind no longer requires git and restores only the files Copilot changed (leaving your own edits intact), with a conversation-only or conversation + files choice"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-06-16T09:06:44Z",
+  "schema_version": 1
+}
