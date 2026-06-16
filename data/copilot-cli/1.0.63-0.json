@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.63-0",
+  "release_date": "2026-06-15",
+  "title": "1.0.63-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.63-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Press w in /diff to hide whitespace-only changes\n- Add deferTools option to MCP server config to keep a server's tools always available, even when tool search is enabled\n\n**Improved**\n- Improve reliability of OpenAI, Anthropic, and Azure OpenAI requests\n- Experimental: /rewind no longer requires git and restores only the files Copilot changed (leaving your own edits intact), with a conversation-only or conversation + files choice\n\n**Fixed**\n- Agent mode is tracked per session, so it no longer carries over when you create, clear, or switch sessions\n- Pressing Enter opens the highlighted issue details\n- Plan review menus work on strict OpenAI-compatible backends\n- Prevent Windows crashes when the native runtime addon loads in a corrupted host process heap\n- Recover from unreadable native document attachments by falling back to file-path uploads\n- Keep reverse search aligned in the input footer while you search command history\n- PostToolUse hook matchers (e.g. `Edit|Write`) are now honored instead of silently dropped, so formatters and linters run only after the tools they target",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Experimental: /rewind no longer requires git and restores only the files Copilot changed (leaving your own edits intact), with a conversation-only or conversation + files choice"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-16T09:06:44Z",
+  "schema_version": 1
+}
