@@ -1,0 +1,45 @@
+{
+  "ide": "jetbrains",
+  "version": "1.11.1",
+  "release_date": "2026-06-17",
+  "title": "GitHub Copilot for JetBrains 1.11.1",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **New Features**\n* Added: added support for Add\n  to\n  Queue, Steer\n  with\n  Message, and Stop\n  and\n  Send options in CLI sessions\n* Added: support for organization and enterprise agents from GitHub\n* Added: Agent debug logs summary view\n* Added: Claude Agent in public preview\n* Added: /migrate slash command to migrate Local sessions to CLI sessions\n* Added: /models slash command to open the model picker, with support for both Copilot CLI and Claude Agent\n* Added: per-turn AI credits indicator in Local, CLI and Claude Agent sessions\n* Added: support for selecting larger context window from model picker\n* Added: recently used model section in the Local agent model picker\n* **User Experience**\n* Improved: chat input layout for better reliability\n* Improved: inline chat experience by ensuring state resets when closed during a response\n* Improved: code block rendering performance\n* Improved: NES by adding richer code diagnostic information for better suggestions\n* **Bug Fixes**\n* Fixed: an issue where diff views would open for every agent edit\n* Fixed: an issue that could cause no completion models to be shown in settings\n* Fixed: multiple UI freeze issues\n* **Changed**\n* Cloud agent is generally available",
+  "body_html": "<ul><li><strong>New Features</strong></li><li>Added: added support for Add\nto\nQueue, Steer\nwith\nMessage, and Stop\nand\nSend options in CLI sessions </li><li>Added: support for organization and enterprise agents from GitHub</li><li>Added: Agent debug logs summary view </li><li>Added: Claude Agent in public preview </li><li>Added: /migrate slash command to migrate Local sessions to CLI sessions </li><li>Added: /models slash command to open the model picker, with support for both Copilot CLI and Claude Agent  </li><li>Added: per-turn AI credits indicator in Local, CLI and Claude Agent sessions</li><li>Added: support for selecting larger context window from model picker</li><li>Added: recently used model section in the Local agent model picker</li><li><strong>User Experience</strong></li><li>Improved: chat input layout for better reliability </li><li>Improved: inline chat experience by ensuring state resets when closed during a response</li><li>Improved: code block rendering performance</li><li>Improved: NES by adding richer code diagnostic information for better suggestions</li><li><strong>Bug Fixes</strong></li><li>Fixed: an issue where diff views would open for every agent edit</li><li>Fixed: an issue that could cause no completion models to be shown in settings</li><li>Fixed: multiple UI freeze issues</li><li><strong>Changed</strong></li><li>Cloud agent is generally available</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Added: /models slash command to open the model picker, with support for both Copilot CLI and Claude Agent",
+    "* Improved: inline chat experience by ensuring state resets when closed during a response"
+  ],
+  "builds": [
+    {
+      "ide_build": "251",
+      "since": "251.25410",
+      "until": "",
+      "compatible_versions": {
+        "IDEA": "2025.1.1+",
+        "RUST": "2025.1.2+",
+        "GOLAND": "2025.1.1+",
+        "PYCHARM_COMMUNITY": "2025.1.1+",
+        "ANDROID_STUDIO": "Narwhal | 2025.1.1+",
+        "CWMGUEST": "1.0+",
+        "MPS": "2025.1.1+",
+        "JBCLIENT": "1.0+",
+        "RIDER": "2025.1.2+",
+        "RUBYMINE": "2025.1.1+",
+        "WEBSTORM": "2025.1.1+",
+        "DBE": "2025.1.1+",
+        "CLION": "2025.1.1+",
+        "PYCHARM": "2025.1.1+",
+        "DATASPELL": "2025.1.1+",
+        "IDEA_COMMUNITY": "2025.1.1+",
+        "PHPSTORM": "2025.1.1+"
+      },
+      "file_id": 1079575,
+      "downloads": 302425
+    }
+  ],
+  "fetched_at": "2026-06-19T08:18:21Z",
+  "schema_version": 1
+}
