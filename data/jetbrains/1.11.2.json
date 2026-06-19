@@ -1,0 +1,42 @@
+{
+  "ide": "jetbrains",
+  "version": "1.11.2",
+  "release_date": "2026-06-18",
+  "title": "GitHub Copilot for JetBrains 1.11.2",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **Bug Fixes**\n* Resolved: An issue that block user to sign in.",
+  "body_html": "<ul><li><strong>Bug Fixes</strong></li><li>Resolved: An issue that block user to sign in.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": "251",
+      "since": "251.25410",
+      "until": "",
+      "compatible_versions": {
+        "IDEA": "2025.1.1+",
+        "RUST": "2025.1.2+",
+        "GOLAND": "2025.1.1+",
+        "PYCHARM_COMMUNITY": "2025.1.1+",
+        "ANDROID_STUDIO": "Narwhal | 2025.1.1+",
+        "CWMGUEST": "1.0+",
+        "MPS": "2025.1.1+",
+        "JBCLIENT": "1.0+",
+        "RIDER": "2025.1.2+",
+        "RUBYMINE": "2025.1.1+",
+        "WEBSTORM": "2025.1.1+",
+        "DBE": "2025.1.1+",
+        "CLION": "2025.1.1+",
+        "PYCHARM": "2025.1.1+",
+        "DATASPELL": "2025.1.1+",
+        "IDEA_COMMUNITY": "2025.1.1+",
+        "PHPSTORM": "2025.1.1+"
+      },
+      "file_id": 1080680,
+      "downloads": 2
+    }
+  ],
+  "fetched_at": "2026-06-19T08:18:21Z",
+  "schema_version": 1
+}
