@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.64-0",
+  "release_date": "2026-06-17",
+  "title": "1.0.64-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.64-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add /diagnose command to analyze session logs\n- Add /mcp registry installation for browsing and installing MCP servers\n- Make `/security-review` available to all users without --experimental\n- Discover MCP servers provided by installed plugins\n- Add CSV output support for MCP tools\n- Add /loop alias for the /every command\n\n**Improved**\n- Slash-command picker name column widened from 25 to 35 characters so fewer long skill names are truncated\n- Wrap long lines in /diff view so content no longer truncates\n- Improve /diff hotkey labels for branch, whitespace, and tree navigation\n\n**Fixed**\n- Remove bogus Ctrl+Enter VS Code keybinding created by old /terminal-setup\n- Images returned by tools stay visible to the model across later turns and after resuming a session\n- Preserve Markdown blockquotes in /share exports\n- Filter long streamed results correctly when content exclusion is enabled\n- Show a friendly message when additional usage limit is reached\n- Search tools handle Windows-style glob patterns correctly\n- Prevent kill self-protection from flagging quoted pipes and paths ending in kill\n- Azure CLI, PowerShell, and Developer CLI credentials work again for Azure auth\n\n**Removed**\n- Remove the legacy intent-reporting tool from the CLI",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-19T08:54:39Z",
+  "schema_version": 1
+}
