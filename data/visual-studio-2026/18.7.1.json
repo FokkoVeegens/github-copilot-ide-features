@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2026",
+  "version": "18.7.1",
+  "release_date": "2026-06-16",
+  "title": "Version 18.7.1",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+  "source": "html",
+  "body_markdown": "Released on **June 16, 2026**.\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Fix poor contrast of datatip text in light theme | [Feedback ticket](https://developercommunity.visualstudio.com/t/Poor-readability-of-variable-hover-toolt/11079233) |\n| Fix an issue with certain ambiguous qualified-ids not being diagnosed |  |",
+  "body_html": "<p>Released on <strong>June 16, 2026</strong>.</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: left;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Fix poor contrast of datatip text in light theme</td>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Poor-readability-of-variable-hover-toolt/11079233\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Fix an issue with certain ambiguous qualified-ids not being diagnosed</td>\n<td style=\"text-align: left;\"></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-06-19T08:33:10Z",
+  "schema_version": 1
+}
