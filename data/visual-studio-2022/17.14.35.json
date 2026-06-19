@@ -1,0 +1,16 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.14.35",
+  "release_date": "2026-06-16",
+  "title": "Version 17.14.35",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes",
+  "source": "html",
+  "body_markdown": "*Released June 16th, 2026*\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Improves messaging to better reflect additional Copilot usage and plan limits under usage-based billing |  |\n| Updated localize content to provide customers with the latest localized experience across supported languages |  |",
+  "body_html": "<p><em>Released June 16<sup>th</sup>, 2026</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Improves messaging to better reflect additional Copilot usage and plan limits under usage-based billing</td>\n<td style=\"text-align: right;\"></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Updated localize content to provide customers with the latest localized experience across supported languages</td>\n<td style=\"text-align: right;\"></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [
+    "| Improves messaging to better reflect additional Copilot usage and plan limits under usage-based billing |  |"
+  ],
+  "fetched_at": "2026-06-19T08:35:38Z",
+  "schema_version": 1
+}
