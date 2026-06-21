@@ -1,5 +1,10 @@
 [
   {
+    "version": "1.0.64-1",
+    "release_date": "2026-06-19",
+    "filename": "1.0.64-1.json"
+  },
+  {
     "version": "1.0.64-0",
     "release_date": "2026-06-17",
     "filename": "1.0.64-0.json"
