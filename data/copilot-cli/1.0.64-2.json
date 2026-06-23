@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.64-2",
+  "release_date": "2026-06-22",
+  "title": "1.0.64-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.64-2",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add a setting to hide the conversation scrollbar\n- Add inline image rendering in the CLI\n- Add argument-hint frontmatter support for skills\n- OpenTelemetry: chat spans after a successful compaction carry gen_ai.conversation.compacted=true, and the summary is emitted as a CompactionPart in gen_ai.input.messages\n\n**Improved**\n- Show --remote-export and --no-remote-export in --help output\n- Wrap expanded compact timeline shell entries so long commands and descriptions stay visible\n- Make links in markdown tables clickable\n- Show per-model token totals in /usage and speed up large history scans\n- OpenTelemetry GenAI chat spans emit `gen_ai.request.reasoning.level` for the configured reasoning effort\n- Autopilot mode now returns to interactive mode after the agent calls task_complete, so you aren't left in autopilot for your next prompt\n\n**Fixed**\n- PowerShell cmdlets (Select-String, Where-Object, ForEach-Object) no longer trigger spurious directory access prompts\n- Non-interactive prompt output now stays at column 1\n- Clear queued tool images when vision is disabled\n- Changing the model now waits until the new model is applied\n- Treat 2>/dev/null redirects as read-only in shell safety prompts\n- Normalize edited text to LF when opening prompts in an external editor\n- Skip computer-use consent prompts in full allow-all sessions\n- Remote export keeps running after /clear and /session info keeps the task URL\n- Keep the cursor on the adjacent session after deleting one in the session selector\n- Use the correct Linux libc target when resolving and auto-updating SEA packages on musl hosts\n- Allow required multi-select prompts to submit an empty selection when minItems is not set\n- Keep the home session timeline visible after attaching and restoring\n- The /settings search field supports readline editing keys and cursor movement\n- OpenTelemetry GenAI spans now emit `gen_ai.usage.cache_read.input_tokens`, `gen_ai.usage.cache_creation.input_tokens`, and `gen_ai.usage.reasoning.output_tokens` per the GenAI semantic conventions spec (previously used incorrect underscore-separated names)\n- Fix mouse wheel scrolling being broken in the terminal after the CLI exits by tearing down terminal modes in reverse order (mouse tracking is now disabled before leaving the alt screen)\n- Fix the /rewind file-restore confirmation dialog being clipped at the bottom when it opens above a scrolled timeline; it now shows at full height once the file list loads",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-23T08:21:47Z",
+  "schema_version": 1
+}
