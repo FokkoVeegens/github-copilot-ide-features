@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.64-3",
+  "release_date": "2026-06-22",
+  "title": "1.0.64-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.64-3",
+  "source": "api",
+  "body_markdown": "**Added**\n- Set an HTTP(S) proxy with a user setting\n\n**Fixed**\n- Resume sessions by name even when the name contains spaces\n- Hide unsupported slash commands in remote-hosted sessions",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-23T08:21:47Z",
+  "schema_version": 1
+}
