@@ -1,0 +1,16 @@
+{
+  "ide": "visual-studio-2026",
+  "version": "18.7.2",
+  "release_date": "2026-06-23",
+  "title": "Version 18.7.2",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+  "source": "html",
+  "body_markdown": "Released on **June 23, 2026**.\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Fixed an issue where Copilot chat fails to open due to a RemoteInvocationException | [Feedback ticket](https://developercommunity.visualstudio.com/t/Visual-Studio-Copilot-chat-window-fails-/11110158) |\n| Fixed a std::regex regression where a repeated pattern with a lookahead assertion would throw an exception instead of being properly handled. | [Feedback ticket](https://developercommunity.visualstudio.com/t/STL-regex-regression-in-MSVC-1450-thr/11103649) |",
+  "body_html": "<p>Released on <strong>June 23, 2026</strong>.</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: left;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Fixed an issue where Copilot chat fails to open due to a RemoteInvocationException</td>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Visual-Studio-Copilot-chat-window-fails-/11110158\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Fixed a std::regex regression where a repeated pattern with a lookahead assertion would throw an exception instead of being properly handled.</td>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/STL-regex-regression-in-MSVC-1450-thr/11103649\">Feedback ticket</a></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [
+    "| Fixed an issue where Copilot chat fails to open due to a RemoteInvocationException | [Feedback ticket](https://developercommunity.visualstudio.com/t/Visual-Studio-Copilot-chat-window-fails-/11110158) |"
+  ],
+  "fetched_at": "2026-06-24T07:53:58Z",
+  "schema_version": 1
+}
