@@ -1,0 +1,18 @@
+{
+  "ide": "sql-server-management-studio",
+  "version": "22.7.2",
+  "release_date": "2026-06-23",
+  "title": "22.7.2",
+  "url": "https://learn.microsoft.com/en-us/ssms/release-notes-22",
+  "source": "html",
+  "body_markdown": "**[Download SQL Server Management Studio (SSMS) 22](https://aka.ms/ssms/22/release/vs_SSMS.exe)**\n\n* Release number: 22.7.2\n* Release date: June 23, 2026\n\n#### Bug fixes in 22.7.2\n\n| Feature | Description |\n| --- | --- |\n| GitHub Copilot | Fixed an HTTP 401 request error that occurred when the access token became stale. |\n| GitHub Copilot in SSMS | Fixed an issue where GitHub Copilot fails to open with a RemoteInvocationException error. See [Copilot window fails to open in SSMS with StreamJsonRpc.RemoteInvocationException](https://developercommunity.visualstudio.com/t/Copilot-window-fails-to-open-in-SSMS-wit/11103423). |\n| GitHub Copilot in SSMS Agent Mode (preview) | Fixed an issue where the Syntax Validation Tool could incorrectly execute a query. |\n| Visual Studio | Updated to Visual Studio 18.7.2 [11919.86] |",
+  "body_html": "<p><strong><a data-linktype=\"external\" href=\"https://aka.ms/ssms/22/release/vs_SSMS.exe\">Download SQL Server Management Studio (SSMS) 22</a></strong></p>\n<ul>\n<li>Release number: 22.7.2</li>\n<li>Release date: June 23, 2026</li>\n</ul>\n<h4 id=\"bug-fixes-in-2272\">Bug fixes in 22.7.2</h4>\n<table>\n<thead>\n<tr>\n<th>Feature</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>GitHub Copilot</td>\n<td>Fixed an HTTP 401 request error that occurred when the access token became stale.</td>\n</tr>\n<tr>\n<td>GitHub Copilot in SSMS</td>\n<td>Fixed an issue where GitHub Copilot fails to open with a RemoteInvocationException error. See <a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Copilot-window-fails-to-open-in-SSMS-wit/11103423\">Copilot window fails to open in SSMS with StreamJsonRpc.RemoteInvocationException</a>.</td>\n</tr>\n<tr>\n<td>GitHub Copilot in SSMS Agent Mode (preview)</td>\n<td>Fixed an issue where the Syntax Validation Tool could incorrectly execute a query.</td>\n</tr>\n<tr>\n<td>Visual Studio</td>\n<td>Updated to Visual Studio 18.7.2 [11919.86]</td>\n</tr>\n</tbody>\n</table>\n<p><a id=\"22.7.1\"></a></p>",
+  "categories": [],
+  "copilot_mentions": [
+    "| GitHub Copilot | Fixed an HTTP 401 request error that occurred when the access token became stale. |",
+    "| GitHub Copilot in SSMS | Fixed an issue where GitHub Copilot fails to open with a RemoteInvocationException error. See [Copilot window fails to open in SSMS with StreamJsonRpc.RemoteInvocationException](https://developercommunity.visualstudio.com/t/Copilot-window-fails-to-open-in-SSMS-wit/11103423). |",
+    "| GitHub Copilot in SSMS Agent Mode (preview) | Fixed an issue where the Syntax Validation Tool could incorrectly execute a query. |"
+  ],
+  "fetched_at": "2026-06-24T08:00:18Z",
+  "schema_version": 1
+}
