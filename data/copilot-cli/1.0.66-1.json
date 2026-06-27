@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.66-1",
+  "release_date": "2026-06-26",
+  "title": "1.0.66-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.66-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Configure subagent concurrency and depth limits in /settings (usage-based billing users)\n- Add `/chronicle skills review` for reviewing proposed draft skill changes, with options to accept, reject, or defer each draft\n- Add desktop notifications for attention prompts and idle sessions\n- Make /share use Mission Control links for session sharing\n\n**Improved**\n- Search inputs match queries that have leading or trailing whitespace\n- Keep idle agents available after you cancel a turn\n- Show sandbox-bypass warnings and label bypassed commands\n- /pr auto now starts a self-paced loop that fixes one thing per run and paces itself around CI to drive the PR to green; /pr automerge keeps going until the PR is merged. Manage or stop it from /loop or /every.\n- Enable /rename in remote-hosted (cloud and relay) sessions\n\n**Fixed**\n- Snapshot creation retries transient HEAD lookup failures instead of crashing\n- Keep `/chronicle reindex` responsive and show progress in the timeline\n- Return to the last open GitHub issue, pull request, or gist view when switching tabs\n- Resolve package argument placeholders when installing MCP registry entries\n- Keep queued messages from getting stuck behind background work\n- Retry managed settings fetch after transient connection-pool errors\n- Stop showing broken-pipe errors when a sandboxed MCP server exits mid-request\n- Properly recover MCP host-delegated connections when OAuth tokens expire or need broader scopes\n- CLI git checks skip optional locks so status and branch lookups keep working in busy repositories\n- Collapse multi-line sub-items into one inline line in compact timeline rows\n- Inline hook settings now handle nested Claude-style hook groups correctly\n- Keep the CLI responsive during secret filtering",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-06-27T08:06:56Z",
+  "schema_version": 1
+}
