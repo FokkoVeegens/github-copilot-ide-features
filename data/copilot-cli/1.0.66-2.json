@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.66-2",
+  "release_date": "2026-06-29",
+  "title": "1.0.66-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.66-2",
+  "source": "api",
+  "body_markdown": "**Added**\n- Allow skills with the same name from different plugins to coexist\n- Let integrations read and write CLI user settings\n- View LSP server logs in /lsp logs and read_agent\n- Prompt to install gh CLI when it is missing in GitHub repositories\n- Add GitHub attachment variants to prompt rendering\n\n**Improved**\n- Perform tokenizer warmup in parallel on a background thread for better startup performance\n- Show submit times next to user prompts in the timeline\n- Improve /share to manage synced session visibility\n- Expand @-style imports in AGENTS.md, CLAUDE.md, and Copilot instruction files\n- Make /pr auto keep working through CI, review, and merge queue\n- Clicking to expand a compact timeline entry holds it in place and reveals its content downward\n\n**Fixed**\n- Extension toggles preserve the selected mode\n- Return to the prompt after cancelling attached shell commands\n- Keep background git status checks from disrupting concurrent git commands\n- Recover corrupted session history on load\n- Preserve newlines in /after and /every scheduled prompts\n- Keep multi-line /worktree tasks intact when starting them\n- Make /cd path completion keep Enter, Escape, and Tab behavior in sync\n- Keep session-store searches and context lookups responsive\n- Show desktop notifications on macOS from the CLI\n- Paste WSL images when Windows env vars are unavailable\n- Keep selection on the adjacent task after removing one\n- read_agent since_turn: 0 now correctly returns all turns including turn 0\n- Filter non-JSON stdout lines from MCP servers during startup",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Expand @-style imports in AGENTS.md, CLAUDE.md, and Copilot instruction files"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-06-30T08:22:09Z",
+  "schema_version": 1
+}
