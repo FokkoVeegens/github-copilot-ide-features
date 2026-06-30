@@ -1,0 +1,47 @@
+{
+  "ide": "jetbrains",
+  "version": "1.12.1",
+  "release_date": "2026-06-26",
+  "title": "GitHub Copilot for JetBrains 1.12.1",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **New Features**\n* Added: Codex as Agent Provider in public preview.\n* Added: Hooks support for Agent Customizations editor.\n* Added: Create customization files enhancements, including manual creation capabilities and new slash commands.\n* Added: Enhanced MCP Server management with workspace-level support and richer configuration options.\n* Added: Support for custom models in JetBrains IDEs (configured by GitHub Copilot Business and Enterprise administrators in GitHub settings).\n* Added: Approval settings for Copilot CLI sessions.\n* Added: PermissionMode selection in Claude Code agent sessions.\n* Added: Agent debug log support for Claude sessions.\n* Added: Model view management support.\n* **User Experience**\n* Improved: Added best practice tips for usage-based billing.\n* Improved: Stability and performance when loading the panel.\n* Improved: Added NES suggestion caching and improved performance.\n* Improved: File watcher performance and reduced memory usage.\n* **Bug Fixes**\n* Fixed: an issue where BYOK sessions could trigger Copilot subagents and consume Copilot usage. The subagent logic now respects the active BYOK provider.\n* Fixed: Multiple UI freeze issues.\n* **Changed**\n* Inline chat is generally available.",
+  "body_html": "<ul><li><strong>New Features</strong></li><li>Added: Codex as Agent Provider in public preview.</li><li>Added: Hooks support for Agent Customizations editor.</li><li>Added: Create customization files enhancements, including manual creation capabilities and new slash commands.</li><li>Added: Enhanced MCP Server management with workspace-level support and richer configuration options.</li><li>Added: Support for custom models in JetBrains IDEs (configured by GitHub Copilot Business and Enterprise administrators in GitHub settings).</li><li>Added: Approval settings for Copilot CLI sessions.</li><li>Added: PermissionMode selection in Claude Code agent sessions.</li><li>Added: Agent debug log support for Claude sessions.</li><li>Added: Model view management support.</li><li><strong>User Experience</strong></li><li>Improved: Added best practice tips for usage-based billing.</li><li>Improved: Stability and performance when loading the panel.</li><li>Improved: Added NES suggestion caching and improved performance.</li><li>Improved: File watcher performance and reduced memory usage.</li><li><strong>Bug Fixes</strong></li><li>Fixed: an issue where BYOK sessions could trigger Copilot subagents and consume Copilot usage. The subagent logic now respects the active BYOK provider.</li><li>Fixed: Multiple UI freeze issues.</li><li><strong>Changed</strong></li><li>Inline chat is generally available.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Added: Support for custom models in JetBrains IDEs (configured by GitHub Copilot Business and Enterprise administrators in GitHub settings).",
+    "* Added: Approval settings for Copilot CLI sessions.",
+    "* Fixed: an issue where BYOK sessions could trigger Copilot subagents and consume Copilot usage. The subagent logic now respects the active BYOK provider.",
+    "* Inline chat is generally available."
+  ],
+  "builds": [
+    {
+      "ide_build": "251",
+      "since": "251.25410",
+      "until": "",
+      "compatible_versions": {
+        "JBCLIENT": "1.0+",
+        "DBE": "2025.1.1+",
+        "RUST": "2025.1.2+",
+        "PHPSTORM": "2025.1.1+",
+        "MPS": "2025.1.1+",
+        "GOLAND": "2025.1.1+",
+        "IDEA_COMMUNITY": "2025.1.1+",
+        "CWMGUEST": "1.0+",
+        "DATASPELL": "2025.1.1+",
+        "RUBYMINE": "2025.1.1+",
+        "WEBSTORM": "2025.1.1+",
+        "IDEA": "2025.1.1+",
+        "ANDROID_STUDIO": "Narwhal | 2025.1.1+",
+        "PYCHARM_COMMUNITY": "2025.1.1+",
+        "RIDER": "2025.1.2+",
+        "CLION": "2025.1.1+",
+        "PYCHARM": "2025.1.1+"
+      },
+      "file_id": 1088134,
+      "downloads": 239252
+    }
+  ],
+  "fetched_at": "2026-06-30T07:40:45Z",
+  "schema_version": 1
+}
