@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.67",
+  "release_date": "2026-06-30",
+  "title": "1.0.67",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.67",
+  "source": "api",
+  "body_markdown": "2026-06-30\n\n- Disabling the sandbox for the rest of the session now takes effect immediately, so shell and search commands stop re-prompting to bypass it mid-turn\n- Subagent sessions keep parent tool restrictions\n- Show warnings and errors when host custom agents fail to load\n- Require session limits to be at least 30 AI credits\n- Add Claude Sonnet 5 as a supported model\n- Allow tool calls to continue when hooks time out\n- Ctrl+Q now enqueues the highlighted slash-command argument completion\n- MCP OAuth against Microsoft Entra servers behind a tenant vanity domain (e.g. Copilot Studio) no longer fails to refresh or re-authenticate (AADSTS9010010 / AADSTS90023)\n- Prompt mode exit summary shows a resume hint to continue the session",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- MCP OAuth against Microsoft Entra servers behind a tenant vanity domain (e.g. Copilot Studio) no longer fails to refresh or re-authenticate (AADSTS9010010 / AADSTS90023)"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-07-02T08:15:21Z",
+  "schema_version": 1
+}

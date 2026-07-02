@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.68",
+  "release_date": "2026-07-01",
+  "title": "1.0.68",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.68",
+  "source": "api",
+  "body_markdown": "2026-07-01\n\n- Add support for the kimi-k2.7-code model\n- The focused field in the /mcp config form is marked with a \"❯ \" chevron, not color alone\n- Keep IDE tools available during transient IDE disconnects, returning a clear error while disconnected and recovering automatically when the IDE reconnects\n- Tab completion shows slash command aliases inline (e.g. /pr automerge|agentmerge)\n- Stop hooks from erroring and denying every tool when a session's working directory or git worktree has been deleted\n- Keep the footer model status in sync when reasoning effort or context tier changes\n- Avoid duplicate skill and command parse errors from symlinked scan roots\n- Update the Sessions sidebar branch after /cd and /worktree\n- Find agents and instructions under Win32 extended-length paths on Windows\n- Show descriptions for slash-command input choices\n- Prevent terminal corruption when copying selected timeline text on macOS\n- Fold symlinked sandbox paths into a single row\n- Browse, resume, and switch between sessions from the agents screen\n- Code review retries transient git failures when gathering changes\n- Skip malformed plugin manifests and keep loading valid plugins\n- Show plan budget details in the statusline and /usage for supported plans\n- Render Thai and Devanagari text correctly in clipped output\n- Keep file edits and patches within the sandbox filesystem policy\n- Preserve wrapped OSC 8 hyperlink IDs in terminal output\n- Let device-managed settings override server-managed settings\n- Keep embedded /skill tokens in skill prompt context\n- Let git commands work from repo subdirectories in the sandbox\n- PowerShell variable references no longer trigger content-policy refusals\n- Tell the agent when the working directory changes between turns so it uses the new directory for commands and relative paths\n- Default to a steady vertical-bar cursor in interactive sessions\n- Disable cursor blinking at startup without changing cursor shape\n- Reject sandbox path edits that conflict with symlinks in other lists\n- Keep the status line visible when the slash-command picker opens\n- Custom agents keep their tool filters in nested subagents\n- Preserve multibyte characters (emoji, accents, non-Latin text) in the /diagnose session log excerpt",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-07-02T08:15:21Z",
+  "schema_version": 1
+}
