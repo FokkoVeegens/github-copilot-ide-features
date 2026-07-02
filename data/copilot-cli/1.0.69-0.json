@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.69-0",
+  "release_date": "2026-07-02",
+  "title": "1.0.69-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.69-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add file and folder completion to /sandbox path entries\n\n**Fixed**\n- Update a backgrounded session's branch label in the Sessions split view when its working directory changes\n- Skip unnecessary MCP reloads when returning to an already-loaded session\n- Prevent the tgrep indexer from running out of memory on large monorepos, and fall back to ripgrep if the indexer is killed instead of repeatedly restarting it",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-07-02T08:15:21Z",
+  "schema_version": 1
+}
