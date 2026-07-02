@@ -1,0 +1,17 @@
+{
+  "ide": "visual-studio-2026",
+  "version": "18.7.3",
+  "release_date": "2026-06-30",
+  "title": "Version 18.7.3",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+  "source": "html",
+  "body_markdown": "Released on **June 30, 2026**.\n\n| Top bug fixes | From the community |\n| --- | --- |\n| VSCopilot ChatError: Cannot find an instance of the Microsoft.VisualStudio.Copilot.ICopilotInteractionService service. | [Feedback ticket](https://developercommunity.visualstudio.com/t/VSCopilot-ChatError:-Cannot-find-an-inst/11095387) |\n| Copilot Chat window fails to initialize with NullReferenceException in ThreadsViewModel.AddThreadInternalAsync | [Feedback ticket](https://developercommunity.visualstudio.com/t/Copilot-Chat-window-fails-to-initialize-/11095352) |",
+  "body_html": "<p>Released on <strong>June 30, 2026</strong>.</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: left;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">VSCopilot ChatError: Cannot find an instance of the Microsoft.VisualStudio.Copilot.ICopilotInteractionService service.</td>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/VSCopilot-ChatError:-Cannot-find-an-inst/11095387\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Copilot Chat window fails to initialize with NullReferenceException in ThreadsViewModel.AddThreadInternalAsync</td>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Copilot-Chat-window-fails-to-initialize-/11095352\">Feedback ticket</a></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [
+    "| VSCopilot ChatError: Cannot find an instance of the Microsoft.VisualStudio.Copilot.ICopilotInteractionService service. | [Feedback ticket](https://developercommunity.visualstudio.com/t/VSCopilot-ChatError:-Cannot-find-an-inst/11095387) |",
+    "| Copilot Chat window fails to initialize with NullReferenceException in ThreadsViewModel.AddThreadInternalAsync | [Feedback ticket](https://developercommunity.visualstudio.com/t/Copilot-Chat-window-fails-to-initialize-/11095352) |"
+  ],
+  "fetched_at": "2026-07-02T07:49:22Z",
+  "schema_version": 1
+}
