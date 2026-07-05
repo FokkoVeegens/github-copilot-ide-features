@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.69-1",
+  "release_date": "2026-07-04",
+  "title": "1.0.69-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.69-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add /mcp list to show attached MCP servers and their status, and allow /mcp list and /plugin list to run while the agent is working\n- Allow opening the /mcp manager while the agent is working to enable or disable servers mid-turn; add, edit, delete, and re-auth stay paused until the turn finishes\n- Add auto allow-all mode that auto-approves requests an LLM judge evaluates as acceptable\n- Add a `stayInAutopilot` setting (default false) that keeps the CLI in autopilot mode after an autopilot task completes\n\n**Improved**\n- Browse and filter models more easily in the CLI model picker\n- Resume sessions faster by removing quadratic work when rebuilding the timeline\n- Warn when static context uses most of the prompt budget and block requests when little conversation room remains\n- Improve CLI responsiveness when reading and writing session databases\n- Improve slash-command and theme picker option descriptions\n\n**Fixed**\n- Pinned prompts keep their full frame aligned while scrolling\n- Suppress macOS pasteboard stderr during clipboard reads and writes\n- Keep colons intact in rendered markdown output\n- Warn when multiple plugins define the same MCP server\n- Collect debug logs without truncating large files or dropping multiline secrets\n- Find PRs from worktree branches when the local branch name differs from the PR head ref\n- Skip the autopilot permission prompt when bypass mode is disabled by policy\n- Allow WSL UNC paths for local files in the CLI\n- Apply --reasoning-effort reliably when the CLI starts\n- Keep slash-command picker rows intact in tab-expanding terminals\n- Keep model switches working when tool call IDs include punctuation\n- Double-press Esc now interrupts the running main turn (flushing queued messages), or stops background agents when the main agent is idle\n- Prevent benign Windows crash reports when the CLI exits\n- Wrap clipboard writes in tmux passthrough so copy reaches the outer terminal\n- OAuth-gated MCP servers now register their tools after reconnect\n- Keep CLI authentication working in one-shot sessions\n- Ctrl+C dismisses ask_user and elicitation prompts like Escape\n- Show Authenticate for cancelled MCP OAuth requests\n- Keep /help from listing rewind/undo twice\n- Keep MCP servers in needs-auth after OAuth cancellation\n- Hide staff-only commands from pre-auth help and self-documentation\n- Surface skill loading errors and warnings in `skill list`\n\n**Removed**\n- Remove inert sandbox host lists and the Clear policy on exit toggle",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-07-05T09:45:42Z",
+  "schema_version": 1
+}
