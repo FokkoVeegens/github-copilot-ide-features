@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.69-2",
+  "release_date": "2026-07-06",
+  "title": "1.0.69-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.69-2",
+  "source": "api",
+  "body_markdown": "**Added**\n- Show /rubber-duck in pre-auth help and self-documentation\n\n**Improved**\n- Sign in to MCP servers through the CLI OAuth callback flow\n- Reveal the full /user switch picker when the timeline is full so its hint bar is no longer clipped below the terminal\n\n**Fixed**\n- Include files inside new untracked directories in /diff local edits\n- A prompt taller than the screen stays scrollable when its top scrolls off, instead of collapsing to a pinned header\n- Require Copilot login before ACP authenticate returns success\n- Show the full assistant response in prompt mode when --stream is off\n- Disconnect a repo-scoped plugin's MCP server when the repo disables it or the session leaves the declaring repository\n- Prevent `copilot init` from hanging in non-interactive mode\n- Reject empty --session-id= values instead of ignoring them\n- Reject empty --resume= values instead of starting a new session\n- Preserve emoji in truncated timeline tool arguments\n- Show plain Shift+Enter in /terminal-setup output\n- Keep session resume working when token timing includes fractional milliseconds\n- Complete @-mentions for files whose names start with [DIR]",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Require Copilot login before ACP authenticate returns success",
+    "- Prevent `copilot init` from hanging in non-interactive mode"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-07-07T10:30:37Z",
+  "schema_version": 1
+}
