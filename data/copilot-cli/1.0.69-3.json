@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.69-3",
+  "release_date": "2026-07-07",
+  "title": "1.0.69-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.69-3",
+  "source": "api",
+  "body_markdown": "**Added**\n- Let built-in file edits bypass the sandbox when you approve it\n- web_fetch now follows the active sandbox network policy (denying outbound or local targets the policy blocks) and, when the host opts in via sandbox.allowBypass, lets you approve a one-time bypass from the fetch prompt\n- Show exact local assistant usage in Chronicle and session SQL\n\n**Improved**\n- Improve /sandbox add-path suggestions so they open only when you ask for them\n- Improve /chronicle cost-tips with more precise evidence-backed recommendations\n- Hold Alt (Option on macOS) while scrolling to move one line at a time\n- Resume and switch large sessions faster\n- Speed up /diff rendering and scrolling on large diffs\n- Keep the full /model picker on screen when the timeline is full, re-snapping as its details banner grows so the search box and hint bar are no longer clipped below the terminal\n- Hide transient console windows when the CLI starts helper processes on Windows\n- Auto-approval timeline entries now include the request subject, such as the command, path, URL, or tool name\n\n**Fixed**\n- Confirm before resuming a remote session from a different repository\n- Delay read-only remote session creation until you send the first message\n- Display reasoning-effort labels in the CLI footer\n- Show descriptions for sandbox userPolicy settings in /settings\n- Reject explicitly empty --name= values when starting a session\n- Create delegate PRs against the current branch by default, with /delegate --base to choose another PR target branch\n- Make /copy fall back to wl-copy on Wayland\n\n**Removed**\n- /allow-all auto now requires experimental mode (/experimental on or --experimental) instead of the AUTO_APPROVAL env var or feature flag",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-07-08T09:31:42Z",
+  "schema_version": 1
+}
