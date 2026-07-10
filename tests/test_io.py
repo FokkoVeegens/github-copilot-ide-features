@@ -34,21 +34,35 @@ def test_write_release_creates_file() -> None:
 
 
 def test_write_release_idempotent() -> None:
-    """Test that write_release doesn't overwrite existing files."""
+    """Test that write_release never overwrites an existing file.
+
+    This behaviour is load-bearing for historical backfills: some IDE data
+    files (e.g. the Xcode 0.31-0.46 era) were written by a one-time manual
+    backfill script that enriched them with correct release dates and
+    per-release changelog notes sourced from CopilotForXcode/CHANGELOG.md.
+    Those files must NOT be overwritten by future scheduled workflow runs; otherwise manual corrections
+    (and any future regressions in fetcher output) could be lost.
+
+    If this test fails after a change to write_release, verify that the
+    idempotency guarantee is still upheld before merging, otherwise the
+    next workflow run will silently discard manually backfilled data.
+    """
     with tempfile.TemporaryDirectory() as tmpdir:
         data_dir = pathlib.Path(tmpdir)
         release = {
             "version": "1.0.0",
             "release_date": "2026-01-01",
         }
-        
+
         # First write should succeed
         result1 = write_release(data_dir, release)
         assert result1 is True
-        
-        # Second write should be skipped
-        result2 = write_release(data_dir, release)
+
+        # Second write must be skipped — the file on disk must not change
+        original_content = (data_dir / "1.0.0.json").read_text(encoding="utf-8")
+        result2 = write_release(data_dir, {**release, "release_date": "2099-12-31"})
         assert result2 is False
+        assert (data_dir / "1.0.0.json").read_text(encoding="utf-8") == original_content
 
 
 def test_generate_ide_index_creates_index() -> None:

@@ -2,15 +2,17 @@
   "ide": "xcode",
   "version": "0.31.0",
   "xcode_era": "xcode-2025",
-  "release_date": "2025-01-01",
+  "release_date": "2025-02-11",
   "title": "GitHub Copilot for Xcode 0.31.0 – Xcode 2025 releases",
   "url": "https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=xcode",
   "source": "html",
-  "body_markdown": "- Chat (P)\n- Code completion",
+  "body_markdown": "### Added\n- Added Copilot Chat support\n- Added GitHub Freeplan support\n- Implemented conversation and chat history management across multiple Xcode instances\n- Introduced multi-file context support for comprehensive code understanding\n- Added slash commands for specialized operations\n\n### Supported features\n- Chat (P)\n- Code completion",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "- Added Copilot Chat support"
+  ],
   "prerelease": false,
-  "fetched_at": "2026-05-13T10:28:45Z",
+  "fetched_at": "2026-07-10T12:13:00Z",
   "schema_version": 1
 }

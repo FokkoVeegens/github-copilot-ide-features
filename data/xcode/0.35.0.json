@@ -2,15 +2,17 @@
   "ide": "xcode",
   "version": "0.35.0",
   "xcode_era": "xcode-2025",
-  "release_date": "2025-01-01",
+  "release_date": "2025-05-19",
   "title": "GitHub Copilot for Xcode 0.35.0 – Xcode 2025 releases",
   "url": "https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=xcode",
   "source": "html",
-  "body_markdown": "- Agent mode (P)\n- Chat\n- Code completion\n- MCP (P)",
+  "body_markdown": "### Added\n- Launched Agent Mode. Copilot will automatically use multiple requests to edit files, run terminal commands, and fix errors.\n- Introduced Model Context Protocol (MCP) support in Agent Mode, allowing you to configure MCP tools to extend capabilities.\n\n### Changed\n- Added a button to enable/disable referencing current file in conversations\n- Added an animated progress icon in the response section\n- Refined onboarding experience with updated instruction screens and welcome views\n- Improved conversation reliability with extended timeout limits for agent requests\n\n### Fixed\n- Addressed critical error handling issues in core functionality\n- Resolved UI inconsistencies with chat interface padding adjustments\n- Implemented custom certificate handling using system environment variables `NODE_EXTRA_CA_CERTS` and `NODE_TLS_REJECT_UNAUTHORIZED`, fixing network access issues\n\n### Supported features\n- Agent mode (P)\n- Chat\n- Code completion\n- MCP (P)",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "- Launched Agent Mode. Copilot will automatically use multiple requests to edit files, run terminal commands, and fix errors."
+  ],
   "prerelease": false,
-  "fetched_at": "2026-05-13T10:28:45Z",
+  "fetched_at": "2026-07-10T12:13:00Z",
   "schema_version": 1
 }
