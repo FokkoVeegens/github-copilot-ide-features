@@ -9,9 +9,13 @@ import pytest
 from bs4 import BeautifulSoup
 
 from scripts.fetchers.xcode import (
+    _SECTIONS,
+    _era_for_date,
+    _extract_changelog_dates,
     _extract_plugin_versions,
     _find_next_table,
     _find_section_heading,
+    _merge_changelog,
     _parse_feature_matrix,
     _table_to_markdown,
     fetch,
@@ -24,6 +28,25 @@ _IDE_CONFIG = {
     "fetcher": "xcode",
     "source_url": "https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=xcode",
 }
+
+_FAKE_CHANGELOG = """\
+# Changelog
+
+## 0.48.0 - April 23, 2026
+### Added
+- Context window usage details in chat.
+
+### Changed
+- Custom agents are now generally available.
+
+## 0.40.0 - July 24, 2025
+### Added
+- Support disabling Agent mode when disabled by policy.
+
+## 0.31.0 - February 11, 2025 (Public Preview)
+### Added
+- Added Copilot Chat support.
+"""
 
 # Minimal HTML that mirrors the real docs page structure.
 _FAKE_HTML = """\
@@ -280,4 +303,154 @@ class TestFetch:
         with patch("scripts.fetchers.xcode.get_text", return_value=_FAKE_HTML):
             results = fetch(config)
         assert all(r["url"] == "https://custom.example/matrix" for r in results)
+
+
+class TestExtractChangelogDates:
+    def test_parses_dates_per_version(self):
+        dates = _extract_changelog_dates(_FAKE_CHANGELOG)
+        assert dates["0.48.0"] == "2026-04-23"
+        assert dates["0.40.0"] == "2025-07-24"
+
+    def test_ignores_trailing_heading_text(self):
+        dates = _extract_changelog_dates(_FAKE_CHANGELOG)
+        # "## 0.31.0 - February 11, 2025 (Public Preview)"
+        assert dates["0.31.0"] == "2025-02-11"
+
+    def test_parses_bracketed_version_headings(self):
+        changelog = (
+            "# Changelog\n\n"
+            "## [0.48.0] - April 23, 2026\n"
+            "### Added\n- Something.\n\n"
+            "## [v0.40.0] - July 24, 2025\n"
+            "### Added\n- Something else.\n"
+        )
+        dates = _extract_changelog_dates(changelog)
+        assert dates["0.48.0"] == "2026-04-23"
+        assert dates["0.40.0"] == "2025-07-24"
+
+    def test_returns_empty_for_no_dates(self):
+        assert _extract_changelog_dates("## 1.0.0\nNo date here.") == {}
+
+
+class TestEraForDate:
+    def test_2026_is_latest(self):
+        assert _era_for_date("2026-04-23") == ("xcode-latest", "Xcode latest releases")
+
+    def test_2025(self):
+        assert _era_for_date("2025-07-24") == ("xcode-2025", "Xcode 2025 releases")
+
+    def test_2024_and_older(self):
+        assert _era_for_date("2024-01-05") == ("xcode-2024", "Xcode 2024 releases")
+
+    def test_missing_date_defaults_to_latest(self):
+        assert _era_for_date(None) == ("xcode-latest", "Xcode latest releases")
+
+    def test_sections_ordered_newest_first(self):
+        # _era_for_date relies on _SECTIONS being sorted by start date, newest first.
+        start_dates = [start_date for _, _, start_date in _SECTIONS]
+        assert start_dates == sorted(start_dates, reverse=True)
+
+    def test_section_start_dates_are_iso_format(self):
+        # _era_for_date compares dates lexicographically, which requires ISO YYYY-MM-DD.
+        for _, _, start_date in _SECTIONS:
+            datetime.datetime.strptime(start_date, "%Y-%m-%d")
+
+
+class TestMergeChangelog:
+    def test_matrix_record_gets_real_release_date(self):
+        results = _parse_feature_matrix(
+            _IDE_CONFIG, _FAKE_HTML, changelog_markdown=_FAKE_CHANGELOG
+        )
+        record = next(r for r in results if r["version"] == "0.48.0")
+        assert record["release_date"] == "2026-04-23"
+
+    def test_matrix_record_keeps_supported_features(self):
+        results = _parse_feature_matrix(
+            _IDE_CONFIG, _FAKE_HTML, changelog_markdown=_FAKE_CHANGELOG
+        )
+        record = next(r for r in results if r["version"] == "0.48.0")
+        assert "### Supported features" in record["body_markdown"]
+        assert "Code completion" in record["body_markdown"]
+
+    def test_matrix_record_includes_changelog_notes(self):
+        results = _parse_feature_matrix(
+            _IDE_CONFIG, _FAKE_HTML, changelog_markdown=_FAKE_CHANGELOG
+        )
+        record = next(r for r in results if r["version"] == "0.48.0")
+        assert "Context window usage details" in record["body_markdown"]
+
+    def test_version_without_changelog_is_unchanged(self):
+        results = _parse_feature_matrix(
+            _IDE_CONFIG, _FAKE_HTML, changelog_markdown=_FAKE_CHANGELOG
+        )
+        # 0.47.0 is in the matrix but not the fake changelog.
+        record = next(r for r in results if r["version"] == "0.47.0")
+        assert "### Supported features" not in record["body_markdown"]
+        assert record["release_date"] == "2026-01-01"
+
+    def test_changelog_only_version_is_added(self):
+        results = _parse_feature_matrix(
+            _IDE_CONFIG, _FAKE_HTML, changelog_markdown=_FAKE_CHANGELOG
+        )
+        versions = {r["version"] for r in results}
+        # 0.31.0 is only in the changelog, not the matrix.
+        assert "0.31.0" in versions
+        record = next(r for r in results if r["version"] == "0.31.0")
+        assert record["xcode_era"] == "xcode-2025"
+        assert record["release_date"] == "2025-02-11"
+        assert "Copilot Chat support" in record["body_markdown"]
+
+    def test_changelog_only_url_points_to_changelog(self):
+        results = _merge_changelog(
+            [],
+            _IDE_CONFIG,
+            _FAKE_CHANGELOG,
+            changelog_url="https://example.test/CHANGELOG.md",
+        )
+        record = next(r for r in results if r["version"] == "0.48.0")
+        assert record["url"] == "https://example.test/CHANGELOG.md"
+
+    def test_changelog_url_falls_back_to_config_when_not_passed(self):
+        # A direct caller supplies changelog_markdown but omits changelog_url;
+        # the config's changelog_url must be used, not the feature-matrix source_url.
+        config = {**_IDE_CONFIG, "changelog_url": "https://example.test/CHANGELOG.md"}
+        results = _parse_feature_matrix(
+            config, _FAKE_HTML, changelog_markdown=_FAKE_CHANGELOG
+        )
+        # 0.31.0 is changelog-only, so its url comes from the changelog_url fallback.
+        record = next(r for r in results if r["version"] == "0.31.0")
+        assert record["url"] == "https://example.test/CHANGELOG.md"
+
+    def test_merged_records_pass_schema_validation(self):
+        schema = json.loads(pathlib.Path("scripts/common/schema.json").read_text())
+        results = _parse_feature_matrix(
+            _IDE_CONFIG, _FAKE_HTML, changelog_markdown=_FAKE_CHANGELOG
+        )
+        for r in results:
+            r["fetched_at"] = datetime.datetime.now(datetime.UTC).isoformat()
+            r["schema_version"] = 1
+            jsonschema.validate(r, schema)
+
+
+class TestFetchWithChangelog:
+    def test_fetches_changelog_without_auth(self):
+        config = {**_IDE_CONFIG, "changelog_url": "https://example.test/CHANGELOG.md"}
+
+        def fake_get_text(url, *, use_auth):
+            assert use_auth is False
+            return _FAKE_CHANGELOG if url.endswith("CHANGELOG.md") else _FAKE_HTML
+
+        with patch("scripts.fetchers.xcode.get_text", side_effect=fake_get_text):
+            results = fetch(config)
+
+        versions = {r["version"] for r in results}
+        assert "0.31.0" in versions  # changelog-only version present
+        record = next(r for r in results if r["version"] == "0.48.0")
+        assert record["release_date"] == "2026-04-23"
+
+    def test_without_changelog_url_only_calls_source_once(self):
+        with patch("scripts.fetchers.xcode.get_text", return_value=_FAKE_HTML) as mock_get:
+            fetch(_IDE_CONFIG)
+        mock_get.assert_called_once()
+
 

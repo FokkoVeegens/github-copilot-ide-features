@@ -33,6 +33,7 @@ ides:
     fetcher: xcode
     start_version: all
     source_url: https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=xcode
+    changelog_url: https://raw.githubusercontent.com/github/CopilotForXcode/main/CHANGELOG.md
 
   - id: vim-neovim
     name: GitHub Copilot for Vim/Neovim
