@@ -104,11 +104,12 @@ def _parse_feature_matrix(
         results.extend(records)
 
     if changelog_markdown:
+        effective_changelog_url = changelog_url or ide_config.get("changelog_url") or source_url
         results = _merge_changelog(
             results,
             ide_config,
             changelog_markdown,
-            changelog_url=changelog_url or source_url,
+            changelog_url=effective_changelog_url,
         )
 
     return results

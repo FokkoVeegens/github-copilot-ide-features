@@ -387,6 +387,17 @@ class TestMergeChangelog:
         record = next(r for r in results if r["version"] == "0.48.0")
         assert record["url"] == "https://example.test/CHANGELOG.md"
 
+    def test_changelog_url_falls_back_to_config_when_not_passed(self):
+        # A direct caller supplies changelog_markdown but omits changelog_url;
+        # the config's changelog_url must be used, not the feature-matrix source_url.
+        config = {**_IDE_CONFIG, "changelog_url": "https://example.test/CHANGELOG.md"}
+        results = _parse_feature_matrix(
+            config, _FAKE_HTML, changelog_markdown=_FAKE_CHANGELOG
+        )
+        # 0.31.0 is changelog-only, so its url comes from the changelog_url fallback.
+        record = next(r for r in results if r["version"] == "0.31.0")
+        assert record["url"] == "https://example.test/CHANGELOG.md"
+
     def test_merged_records_pass_schema_validation(self):
         schema = json.loads(pathlib.Path("scripts/common/schema.json").read_text())
         results = _parse_feature_matrix(
