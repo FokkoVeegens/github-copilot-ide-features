@@ -64,7 +64,8 @@ jobs:
           python -m scripts.build_search_index --output _site
 
       - name: Validate built index
-        run: python -c "import json; d=json.load(open('_site/search-index.json')); assert d, 'empty index'; print(f'Index valid: {len(d)} records')"
+        run: |
+          python -c "import json; d=json.load(open('_site/search-index.json')); assert d, 'empty index'; print(f'Index valid: {len(d)} records')"
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@64bcae51e2e00e1e7d4a0213e8af113bcb1da546 # v3.0.1
