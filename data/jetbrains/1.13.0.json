@@ -1,0 +1,41 @@
+{
+  "ide": "jetbrains",
+  "version": "1.13.0",
+  "release_date": "2026-07-10",
+  "title": "GitHub Copilot for JetBrains 1.13.0",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **New Features**\n* Added BYOK custom provider support.\n* Added support for exporting agent debug logs for Copilot CLI sessions.\n* Added support for Claude agent customization.\n* Added plugin and plugin marketplace management in the customization panel (Preview).\n* Added support for local sandboxing (Preview).\n* Added agent-driven debugger skill for Copilot CLI sessions (Preview).\n* **UX Improvements**\n* Improved model picker controls in chat and inline chat.\n* Improved readability for Copilot CLI thinking and ask-user cards.\n* Improved UI clarity for custom agents, customization, and provider settings.\n* Improved authentication UX messaging.\n* **Bug Fixes**\n* Fixed auth recovery for token reuse failures.\n* Fixed provider and session persistence regressions.\n* Fixed BYOK degraded-model warnings, pending-save refresh races, provider-add gating when mappings were missing, and disabled-model retention.\n* Fixed MCP customization stability and trust behavior.\n* Fixed stability issues in editor and chat flows.\n* Fixed workspace-trust enforcement for prompts and hooks.\n* Fixed a regression where plugins were omitted in list conversation mode.\n* Fixed custom-agent validation handling.\n* **Changed**\n* Copilot CLI agent harness now remain available regardless of the enterprise Copilot CLI policy.\n* Changed model availability by plan.\n* Changed model controls to support Gemini thinking-effort configuration.",
+  "body_html": "<ul><li><strong>New Features</strong></li><li>Added BYOK custom provider support.</li><li>Added support for exporting agent debug logs for Copilot CLI sessions.</li><li>Added support for Claude agent customization.</li><li>Added plugin and plugin marketplace management in the customization panel (Preview).</li><li>Added support for local sandboxing (Preview).</li><li>Added agent-driven debugger skill for Copilot CLI sessions (Preview).</li><li><strong>UX Improvements</strong></li><li>Improved model picker controls in chat and inline chat.</li><li>Improved readability for Copilot CLI thinking and ask-user cards.</li><li>Improved UI clarity for custom agents, customization, and provider settings.</li><li>Improved authentication UX messaging.</li><li><strong>Bug Fixes</strong></li><li>Fixed auth recovery for token reuse failures.</li><li>Fixed provider and session persistence regressions.</li><li>Fixed BYOK degraded-model warnings, pending-save refresh races, provider-add gating when mappings were missing, and disabled-model retention.</li><li>Fixed MCP customization stability and trust behavior.</li><li>Fixed stability issues in editor and chat flows.</li><li>Fixed workspace-trust enforcement for prompts and hooks.</li><li>Fixed a regression where plugins were omitted in list conversation mode.</li><li>Fixed custom-agent validation handling.</li><li><strong>Changed</strong></li><li>Copilot CLI agent harness now remain available regardless of the enterprise Copilot CLI policy.</li><li>Changed model availability by plan.</li><li>Changed model controls to support Gemini thinking-effort configuration.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Added support for exporting agent debug logs for Copilot CLI sessions.",
+    "* Added agent-driven debugger skill for Copilot CLI sessions (Preview).",
+    "* Improved model picker controls in chat and inline chat.",
+    "* Improved readability for Copilot CLI thinking and ask-user cards.",
+    "* Copilot CLI agent harness now remain available regardless of the enterprise Copilot CLI policy."
+  ],
+  "builds": [
+    {
+      "ide_build": "251",
+      "since": "251.25410",
+      "until": "",
+      "compatible_versions": {
+        "DBE": "2025.1.1+",
+        "GOLAND": "2025.1.1+",
+        "RUBYMINE": "2025.1.1+",
+        "CLION": "2025.1.1+",
+        "RIDER": "2025.1.2+",
+        "WEBSTORM": "2025.1.1+",
+        "RUST": "2025.1.2+",
+        "PHPSTORM": "2025.1.1+",
+        "PYCHARM_PRO": "2025.1.1+",
+        "IDEA_PRO": "2025.1.1+"
+      },
+      "file_id": 1103496,
+      "downloads": 0
+    }
+  ],
+  "fetched_at": "2026-07-10T09:56:36Z",
+  "schema_version": 1
+}
