@@ -315,6 +315,18 @@ class TestExtractChangelogDates:
         # "## 0.31.0 - February 11, 2025 (Public Preview)"
         assert dates["0.31.0"] == "2025-02-11"
 
+    def test_parses_bracketed_version_headings(self):
+        changelog = (
+            "# Changelog\n\n"
+            "## [0.48.0] - April 23, 2026\n"
+            "### Added\n- Something.\n\n"
+            "## [v0.40.0] - July 24, 2025\n"
+            "### Added\n- Something else.\n"
+        )
+        dates = _extract_changelog_dates(changelog)
+        assert dates["0.48.0"] == "2026-04-23"
+        assert dates["0.40.0"] == "2025-07-24"
+
     def test_returns_empty_for_no_dates(self):
         assert _extract_changelog_dates("## 1.0.0\nNo date here.") == {}
 
