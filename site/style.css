@@ -1,0 +1,316 @@
+/**
+ * Styling for the GitHub Copilot Feature Matrix website.
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+header {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #0366d6;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Main content */
+main {
+  margin-bottom: 2rem;
+}
+
+.search-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Search input */
+.search-container {
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #0366d6;
+  box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.1);
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+/* Hint */
+.hint {
+  background: #f0f4f8;
+  border-left: 4px solid #0366d6;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.hint p {
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.hint ul {
+  margin-left: 1.5rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.hint li {
+  margin-bottom: 0.25rem;
+}
+
+/* Error message */
+.error-message {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.error-message strong {
+  font-weight: 600;
+}
+
+/* Results */
+.results {
+  margin-top: 1.5rem;
+}
+
+.summary-section {
+  background: #f0f7ff;
+  border-left: 4px solid #0366d6;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.summary-section h3 {
+  font-size: 1rem;
+  color: #0366d6;
+  margin-bottom: 0.5rem;
+}
+
+.summary-section ul {
+  margin-left: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.summary-section li {
+  margin-bottom: 0.25rem;
+  color: #555;
+}
+
+/* Matrix table */
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.matrix-table thead {
+  background: #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.matrix-table th,
+.matrix-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.matrix-table th {
+  font-weight: 600;
+  color: #333;
+  background: #f9f9f9;
+}
+
+.matrix-table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+.snippet-cell {
+  font-weight: 500;
+  color: #333;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+.snippet-text {
+  display: block;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.match-cell {
+  background: #f0f7ff;
+  text-align: center;
+  min-width: 120px;
+  position: relative;
+}
+
+.match-cell a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.earliest-badge {
+  display: inline-block;
+  background: #0366d6;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.all-versions {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.no-match-cell {
+  text-align: center;
+  color: #999;
+}
+
+/* Footer */
+footer {
+  background: white;
+  border-top: 1px solid #e0e0e0;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .search-section {
+    padding: 1.5rem;
+  }
+
+  .matrix-table {
+    font-size: 0.85rem;
+  }
+
+  .matrix-table th,
+  .matrix-table td {
+    padding: 0.5rem;
+  }
+
+  .snippet-cell {
+    max-width: 150px;
+    font-size: 0.9rem;
+  }
+
+  .match-cell {
+    min-width: 100px;
+  }
+
+  .earliest-badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .search-input {
+    padding: 0.5rem;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .matrix-table {
+    font-size: 0.75rem;
+  }
+
+  .matrix-table th,
+  .matrix-table td {
+    padding: 0.35rem;
+  }
+
+  .snippet-cell {
+    max-width: 100px;
+    font-size: 0.8rem;
+  }
+}
