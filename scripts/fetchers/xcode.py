@@ -41,7 +41,7 @@ _SECTIONS: list[tuple[str, str, str]] = [
 ]
 
 # Fallback release date for changelog-only records whose heading has no parseable date.
-_DEFAULT_ERA_DATE = "2026-01-01"
+_DEFAULT_ERA_DATE = next(date for _, key, date in _SECTIONS if key == "xcode-latest")
 
 # Matches changelog headings like "## 0.50.0 - May 20, 2026" (hyphen or en-dash separator).
 _CHANGELOG_DATE_RE = re.compile(
