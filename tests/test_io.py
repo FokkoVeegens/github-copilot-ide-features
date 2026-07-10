@@ -40,9 +40,8 @@ def test_write_release_idempotent() -> None:
     files (e.g. the Xcode 0.31-0.46 era) were written by a one-time manual
     backfill script that enriched them with correct release dates and
     per-release changelog notes sourced from CopilotForXcode/CHANGELOG.md.
-    Those files must NOT be overwritten by future scheduled workflow runs,
-    which only know about the feature-matrix page and would produce inferior
-    data (wrong dates, no changelog notes).
+    Those files must NOT be overwritten by future scheduled workflow runs; otherwise manual corrections
+    (and any future regressions in fetcher output) could be lost.
 
     If this test fails after a change to write_release, verify that the
     idempotency guarantee is still upheld before merging, otherwise the
