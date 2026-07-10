@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.70-0",
+  "release_date": "2026-07-09",
+  "title": "1.0.70-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.70-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Pin plugins to an exact commit SHA using the `sha` field in plugin source configuration\n- Add --sandbox and --no-sandbox flags to turn the OS-level shell sandbox on or off for the current session only, without changing your saved sandbox setting (useful with -p)\n- Add /refine to rewrite a rough, stream-of-consciousness prompt into a clear one\n- Add --repo and --local flags to /settings and /model\n- Add a setting to show or hide timeline timestamps\n- Let a trusted repository pin the model, effort level, and context tier and extend the URL/MCP/skill deny lists via .github/copilot/settings.json\n- Expose SDK APIs to manage live MCP servers in running sessions\n\n**Improved**\n- Improve GPT-5.6 commentary guidance for tool-driven progress updates\n- Highlight the sidebar toggle hint in the input footer\n- Make markdown links and bare URLs in the timeline and tool output clickable\n- Reclaim the blank line under the home tab bar: the timeline (and Sessions+Current split) sits flush under the tabs when a prompt is pinned, keeping one breathing line only while nothing is pinned\n- Press Tab to switch the context window in /model\n- Long-running sessions refresh enterprise managed settings hourly\n- Mark locally-spawned MCP servers that run inside the sandbox in `/mcp list` (e.g. `connected (sandboxed)`)\n\n**Fixed**\n- Show the active user's models after /user switch\n- Declining an extension's permission prompt no longer disables tool approvals for the rest of the session\n- Avoid redundant background agent notifications after a blocking read_agent returns its result\n- Startup auth errors recommend the real `copilot login` command\n- Keep merge-semantics settings editable in /settings\n- Re-sync managed plugins when their cache is missing or empty\n- Copy the last assistant response even after command echoes\n- Persist the last-logged-in user on every login so a restarted runtime client stays authenticated\n- Hide /agent picker navigation hints when there is nothing to select\n- Open the plan file or research report with Ctrl+Y in any mode\n- Keep terminal color scheme changes in sync over SSH and remote shells\n- Prefill /chronicle search so it can accept a query\n- Show a distinct scrollbar thumb glyph in the /model picker on the no-color path (--no-color, non-color terminals) so the scroll position stays visible\n- Skip launching a browser in remote terminals\n- Arrow keys in /search and reverse search stay in search instead of switching tabs\n- Restore tool event ordering so permission prompts appear after tool start\n- Show only one cancellation message when streaming is aborted\n- Keep /pr tables aligned in compact timeline view\n- Show clear validation errors for empty or non-ASCII skill and command names\n- Keep footer selection highlights aligned when the session bar is open\n- Fail fast when marketplace plugin git auth needs a terminal prompt\n- Dismiss other pending read and fetch sandbox-bypass prompts after you disable the sandbox\n- Fix a crash on Windows triggered by desktop toast notifications",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Let a trusted repository pin the model, effort level, and context tier and extend the URL/MCP/skill deny lists via .github/copilot/settings.json",
+    "- Startup auth errors recommend the real `copilot login` command"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-07-10T10:28:41Z",
+  "schema_version": 1
+}
