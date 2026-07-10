@@ -1,0 +1,16 @@
+{
+  "ide": "xcode",
+  "version": "0.47.0",
+  "xcode_era": "xcode-latest",
+  "release_date": "2026-02-04",
+  "title": "GitHub Copilot for Xcode 0.47.0 – Xcode latest releases",
+  "url": "https://raw.githubusercontent.com/github/CopilotForXcode/main/CHANGELOG.md",
+  "source": "html",
+  "body_markdown": "### Added\n- Auto approval for MCP tools, sensitive files, and terminal commands.\n- MCP registry and allowlist are now available (requires editor preview feature flag).\n\n### Changed\n- Improved UI for MCP tool call details.\n- Improved UI for working set header.\n\n### Fixed\n- Fixed toolcall layout issue.\n- Fixed NES display issue.\n- Fixed error message for SSL certificate errors.\n- Fixed several performance issues.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-07-10T11:35:08Z",
+  "schema_version": 1
+}

@@ -1,0 +1,18 @@
+{
+  "ide": "xcode",
+  "version": "0.49.0",
+  "xcode_era": "xcode-latest",
+  "release_date": "2026-05-15",
+  "title": "GitHub Copilot for Xcode 0.49.0 – Xcode latest releases",
+  "url": "https://raw.githubusercontent.com/github/CopilotForXcode/main/CHANGELOG.md",
+  "source": "html",
+  "body_markdown": "### Added\n- Native Anthropic Messages API (`/v1/messages`) endpoint support.\n- Thinking support in chat for reasoning-capable models.\n- Enhanced rate limit notifications and error messages.\n\n### Changed\n- Refined tool call item UI in agent progress: removed border and divider, repositioned chevron, and adjusted spacing for better readability.\n- Updated Copilot language server to 1.465.5.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Updated Copilot language server to 1.465.5."
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-07-10T11:35:08Z",
+  "schema_version": 1
+}
