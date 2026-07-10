@@ -132,18 +132,21 @@ def _extract_changelog_dates(changelog_markdown: str) -> dict[str, str]:
 
 
 def _era_for_date(iso_date: str | None) -> tuple[str, str]:
-    """Return the ``(era_key, heading_text)`` for a changelog-only version."""
-    year: int | None = None
-    if iso_date:
-        try:
-            year = int(iso_date[:4])
-        except ValueError:
-            year = None
-    if year is None or year >= 2026:
-        return "xcode-latest", "Xcode latest releases"
-    if year == 2025:
-        return "xcode-2025", "Xcode 2025 releases"
-    return "xcode-2024", "Xcode 2024 releases"
+    """Return the ``(era_key, heading_text)`` for a changelog-only version.
+
+    Derives the era from ``_SECTIONS`` start dates (ordered newest-first) so it
+    stays in sync when sections are added or changed.
+    """
+    if not iso_date or not re.match(r"^\d{4}-\d{2}-\d{2}$", iso_date):
+        heading_text, era_key, _ = _SECTIONS[0]
+        return era_key, heading_text
+
+    for heading_text, era_key, start_date in _SECTIONS:
+        if iso_date >= start_date:
+            return era_key, heading_text
+
+    heading_text, era_key, _ = _SECTIONS[-1]
+    return era_key, heading_text
 
 
 def _compose_body(changelog_body: str, feature_body: str) -> str:

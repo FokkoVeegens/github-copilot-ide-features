@@ -9,6 +9,7 @@ import pytest
 from bs4 import BeautifulSoup
 
 from scripts.fetchers.xcode import (
+    _SECTIONS,
     _era_for_date,
     _extract_changelog_dates,
     _extract_plugin_versions,
@@ -343,6 +344,16 @@ class TestEraForDate:
 
     def test_missing_date_defaults_to_latest(self):
         assert _era_for_date(None) == ("xcode-latest", "Xcode latest releases")
+
+    def test_sections_ordered_newest_first(self):
+        # _era_for_date relies on _SECTIONS being sorted by start date, newest first.
+        start_dates = [start_date for _, _, start_date in _SECTIONS]
+        assert start_dates == sorted(start_dates, reverse=True)
+
+    def test_section_start_dates_are_iso_format(self):
+        # _era_for_date compares dates lexicographically, which requires ISO YYYY-MM-DD.
+        for _, _, start_date in _SECTIONS:
+            datetime.datetime.strptime(start_date, "%Y-%m-%d")
 
 
 class TestMergeChangelog:
