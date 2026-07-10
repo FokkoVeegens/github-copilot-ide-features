@@ -2,17 +2,18 @@
   "ide": "xcode",
   "version": "0.41.0",
   "xcode_era": "xcode-2025",
-  "release_date": "2025-01-01",
+  "release_date": "2025-08-14",
   "title": "GitHub Copilot for Xcode 0.41.0 – Xcode 2025 releases",
   "url": "https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=xcode",
   "source": "html",
-  "body_markdown": "- Agent mode\n- Chat\n- Code completion\n- Copilot code review\n- Custom instructions (P)\n- MCP\n- Vision (P)",
+  "body_markdown": "### Added\n- Code review feature.\n- Chat: Support for new model GPT-5.\n- Agent mode: Added support for new tool to read web URL contents.\n- Support disabling MCP when it's disabled by policy.\n- Support for opening MCP logs directly from the MCP settings page.\n- OAuth support for remote GitHub MCP server.\n\n### Changed\n- Performance: Improved instant-apply speed for edit_file tool.\n\n### Fixed\n- Chat Agent repeatedly reverts its own changes when editing the same file.\n- Performance: Avoid chat panel being stuck when sending a large text for chat.\n\n### Supported features\n- Agent mode\n- Chat\n- Code completion\n- Copilot code review\n- Custom instructions (P)\n- MCP\n- Vision (P)",
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "- Chat Agent repeatedly reverts its own changes when editing the same file.",
     "- Copilot code review"
   ],
   "prerelease": false,
-  "fetched_at": "2026-05-13T10:28:45Z",
+  "fetched_at": "2026-07-10T12:13:00Z",
   "schema_version": 1
 }

@@ -2,17 +2,17 @@
   "ide": "xcode",
   "version": "0.42.0",
   "xcode_era": "xcode-latest",
-  "release_date": "2026-01-01",
+  "release_date": "2025-09-03",
   "title": "GitHub Copilot for Xcode 0.42.0 – Xcode latest releases",
   "url": "https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=xcode",
   "source": "html",
-  "body_markdown": "- Agent mode\n- BYOK (P)\n- Chat\n- Code completion\n- Copilot code review\n- Custom instructions (P)\n- MCP\n- Prompt files (P)\n- Vision (P)",
+  "body_markdown": "### Added\n- Support for Bring Your Own Keys (BYOK) with model providers including Azure, OpenAI, Anthropic, Gemini, Groq, and OpenRouter. See [BYOK.md](https://github.com/github/CopilotForXcode/blob/0.42.0/Docs/BYOK.md).\n- Use the current selection as chat context.\n- Add folders as chat context.\n- Shortcut to quickly fix errors in Xcode.\n- Support for custom instruction files at `.github/instructions/*.instructions.md`. See [CustomInstructions.md](https://github.com/github/CopilotForXcode/blob/0.42.0/Docs/CustomInstructions.md).\n- Support for prompt files at `.github/prompts/*.prompt.md`. See [PromptFiles.md](https://github.com/github/CopilotForXcode/blob/0.42.0/Docs/PromptFiles.md).\n- Use ↑/↓ keys to reuse previous chat context in the chat view.\n\n### Changed\n- Default chat mode is now set to \"Agent\".\n\n### Fixed\n- Cannot copy url from Safari browser to chat view.\n\n### Supported features\n- Agent mode\n- BYOK (P)\n- Chat\n- Code completion\n- Copilot code review\n- Custom instructions (P)\n- MCP\n- Prompt files (P)\n- Vision (P)",
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
     "- Copilot code review"
   ],
   "prerelease": false,
-  "fetched_at": "2026-05-13T10:28:45Z",
+  "fetched_at": "2026-07-10T12:13:00Z",
   "schema_version": 1
 }

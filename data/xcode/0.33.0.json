@@ -2,15 +2,18 @@
   "ide": "xcode",
   "version": "0.33.0",
   "xcode_era": "xcode-2025",
-  "release_date": "2025-01-01",
+  "release_date": "2025-04-17",
   "title": "GitHub Copilot for Xcode 0.33.0 – Xcode 2025 releases",
   "url": "https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=xcode",
   "source": "html",
-  "body_markdown": "- Chat\n- Code completion",
+  "body_markdown": "### Added\n- Added support for new models in Chat: Claude 3.7 Sonnet and GPT 4.5\n- Implemented @workspace context feature allowing questions about the entire codebase in Copilot Chat\n\n### Changed\n- Simplified access to Copilot Chat from the Copilot for Xcode app with a single click\n- Enhanced instructions for granting background permissions\n\n### Fixed\n- Resolved false alarms for sign-in and free plan limit notifications\n- Improved app launch performance\n- Fixed workspace and context update issues\n\n### Supported features\n- Chat\n- Code completion",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "- Implemented @workspace context feature allowing questions about the entire codebase in Copilot Chat",
+    "- Simplified access to Copilot Chat from the Copilot for Xcode app with a single click"
+  ],
   "prerelease": false,
-  "fetched_at": "2026-05-13T10:28:45Z",
+  "fetched_at": "2026-07-10T12:13:00Z",
   "schema_version": 1
 }

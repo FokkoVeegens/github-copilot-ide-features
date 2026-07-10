@@ -2,15 +2,15 @@
   "ide": "xcode",
   "version": "0.39.0",
   "xcode_era": "xcode-2025",
-  "release_date": "2025-01-01",
+  "release_date": "2025-07-23",
   "title": "GitHub Copilot for Xcode 0.39.0 – Xcode 2025 releases",
   "url": "https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=xcode",
   "source": "html",
-  "body_markdown": "- Agent mode\n- Chat\n- Code completion\n- Custom instructions (P)\n- MCP (P)\n- Vision (P)",
+  "body_markdown": "### Fixed\n- Performance: Fixed a freezing issue in 'Add Context' view when opening large projects.\n- Login failed due to insufficient permissions on the .config folder.\n- Fixed an issue that setting changes like proxy config did not take effect.\n- Increased the timeout for ask mode to prevent response failures due to timeout.\n\n### Supported features\n- Agent mode\n- Chat\n- Code completion\n- Custom instructions (P)\n- MCP (P)\n- Vision (P)",
   "body_html": null,
   "categories": [],
   "copilot_mentions": [],
   "prerelease": false,
-  "fetched_at": "2026-05-13T10:28:45Z",
+  "fetched_at": "2026-07-10T12:13:00Z",
   "schema_version": 1
 }

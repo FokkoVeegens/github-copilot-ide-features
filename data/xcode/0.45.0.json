@@ -2,17 +2,17 @@
   "ide": "xcode",
   "version": "0.45.0",
   "xcode_era": "xcode-latest",
-  "release_date": "2026-01-01",
+  "release_date": "2025-11-14",
   "title": "GitHub Copilot for Xcode 0.45.0 – Xcode latest releases",
   "url": "https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=xcode",
   "source": "html",
-  "body_markdown": "- Agent mode\n- BYOK (P)\n- Chat\n- Checkpoints\n- Code completion\n- Copilot code review\n- Custom agents (P)\n- Custom instructions (P)\n- MCP\n- Next edit suggestions (P)\n- Prompt files (P)\n- Vision (P)",
+  "body_markdown": "### Added\n- New models: GPT-5.1, GPT-5.1-Codex, GPT-5.1-Codex-Mini, Claude Haiku 4.5, and Auto (preview).\n- Added support for custom agents (preview).\n- Introduced the built-in Plan agent (preview).\n- Added support for subagent execution (preview).\n- Added support for Next Edit Suggestions (preview).\n\n### Changed\n- MCP servers now support dynamic OAuth setup for third-party authentication providers.\n- Added a setting to configure the maximum number of tool requests allowed.\n\n### Fixed\n- Fixed an issue that the terminal view in Agent conversation was clipped\n- Fixed an issue that the Chat panel failed to recognize newly created workspaces.\n\n### Supported features\n- Agent mode\n- BYOK (P)\n- Chat\n- Checkpoints\n- Code completion\n- Copilot code review\n- Custom agents (P)\n- Custom instructions (P)\n- MCP\n- Next edit suggestions (P)\n- Prompt files (P)\n- Vision (P)",
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
     "- Copilot code review"
   ],
   "prerelease": false,
-  "fetched_at": "2026-05-13T10:28:45Z",
+  "fetched_at": "2026-07-10T12:13:00Z",
   "schema_version": 1
 }

@@ -2,17 +2,20 @@
   "ide": "xcode",
   "version": "0.44.0",
   "xcode_era": "xcode-latest",
-  "release_date": "2026-01-01",
+  "release_date": "2025-10-15",
   "title": "GitHub Copilot for Xcode 0.44.0 – Xcode latest releases",
   "url": "https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=xcode",
   "source": "html",
-  "body_markdown": "- Agent mode\n- BYOK (P)\n- Chat\n- Checkpoints\n- Code completion\n- Copilot code review\n- Custom instructions (P)\n- MCP\n- Prompt files (P)\n- Vision (P)",
+  "body_markdown": "### Added\n- Added support for new models in Chat: Grok Code Fast 1, Claude Sonnet 4.5, Claude Opus 4, Claude Opus 4.1 and GPT-5 mini.\n- Added support for restoring to a saved checkpoint snapshot.\n- Added support for tool selection in agent mode.\n- Added the ability to adjust the chat panel font size.\n- Added the ability to edit a previous chat message and resend it.\n- Introduced a new setting to disable the Copilot \"Fix Error\" button.\n- Added support for custom instructions in the Code Review feature.\n\n### Changed\n- Switched authentication to a new OAuth app \"GitHub Copilot IDE Plugin\".\n- Updated the chat layout to a messenger-style conversation view (user messages on the right, responses on the left).\n- Now shows a clearer, more user-friendly message when Copilot finishes responding.\n- Added support for skipping a tool call without ending the conversation.\n\n### Fixed\n- Fixed a command injection vulnerability when opening referenced chat files.\n- Resolved display issues in the chat view on macOS 26.\n\n### Supported features\n- Agent mode\n- BYOK (P)\n- Chat\n- Checkpoints\n- Code completion\n- Copilot code review\n- Custom instructions (P)\n- MCP\n- Prompt files (P)\n- Vision (P)",
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "- Introduced a new setting to disable the Copilot \"Fix Error\" button.",
+    "- Switched authentication to a new OAuth app \"GitHub Copilot IDE Plugin\".",
+    "- Now shows a clearer, more user-friendly message when Copilot finishes responding.",
     "- Copilot code review"
   ],
   "prerelease": false,
-  "fetched_at": "2026-05-13T10:28:45Z",
+  "fetched_at": "2026-07-10T12:13:00Z",
   "schema_version": 1
 }

@@ -2,15 +2,15 @@
   "ide": "xcode",
   "version": "0.32.0",
   "xcode_era": "xcode-2025",
-  "release_date": "2025-01-01",
+  "release_date": "2025-03-11",
   "title": "GitHub Copilot for Xcode 0.32.0 – Xcode 2025 releases",
   "url": "https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=xcode",
   "source": "html",
-  "body_markdown": "- Chat\n- Code completion",
+  "body_markdown": "### Added\n- Implemented model picker for selecting LLM model in chat\n- Introduced new `/releaseNotes` slash command for accessing release information\n\n### Changed\n- Improved focus handling with automatic switching between chat text field and file search bar\n- Enhanced keyboard navigation support for file picker in chat context\n- Refined instructions for granting accessibility and extension permissions\n- Enhanced accessibility compliance for the chat window\n- Redesigned notification and status bar menu styles for better usability\n\n### Fixed\n- Resolved compatibility issues with macOS 12/13/14\n- Fixed handling of invalid workspace switch event '/'\n- Corrected chat attachment file picker to respect workspace scope\n- Improved icon display consistency across different themes\n- Added support for previously unsupported file types (.md, .txt) in attachments\n- Adjusted incorrect margins in chat window UI\n\n### Supported features\n- Chat\n- Code completion",
   "body_html": null,
   "categories": [],
   "copilot_mentions": [],
   "prerelease": false,
-  "fetched_at": "2026-05-13T10:28:45Z",
+  "fetched_at": "2026-07-10T12:13:00Z",
   "schema_version": 1
 }
