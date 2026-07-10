@@ -75,6 +75,8 @@ The fetchers that call the GitHub REST API (Eclipse, GitHub Copilot CLI) only re
 
 > **Note:** The Vim/Neovim fetcher does not use the GitHub REST API. It scrapes the [GitHub Copilot feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=vimneovim) docs page, which is publicly accessible without authentication.
 
+> **Note:** The Xcode fetcher combines two sources: the [GitHub Copilot feature matrix](https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=xcode) (which features each version supports) and the [CopilotForXcode `CHANGELOG.md`](https://github.com/github/CopilotForXcode/blob/main/CHANGELOG.md) (what changed in each release, plus the real release date). Changelog notes are merged into the matching feature-matrix records under a **Supported features** heading, and changelog-only versions are added as extra records. Both sources are fetched without the GitHub token.
+
 | Token type | Required scopes |
 |-----------|----------------|
 | Personal access token (classic) | *(none — leave all scopes unchecked)* |
