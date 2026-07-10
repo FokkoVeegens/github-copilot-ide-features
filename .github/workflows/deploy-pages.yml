@@ -1,0 +1,87 @@
+name: Test and deploy Pages site
+
+on:
+  push:
+    branches: [main]
+    paths: ['data/**', 'site/**', 'scripts/**', 'config/ides.yml']
+  pull_request:
+    paths: ['data/**', 'site/**', 'scripts/**', 'config/ides.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run linting
+        run: ruff check scripts tests
+
+      - name: Run Python tests
+        run: pytest
+
+      - name: Set up Node.js
+        uses: actions/setup-node@60edb5dd545a775178fac7f3a11177f28df5beac # v4.0.2
+        with:
+          node-version: '20'
+
+      - name: Run JavaScript tests
+        run: node --test site/search.test.mjs
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build search index into _site
+        run: |
+          mkdir -p _site
+          cp site/*.html site/*.css site/*.js _site/
+          python -m scripts.build_search_index --output _site
+
+      - name: Validate built index
+        run: python -c "import json; d=json.load(open('_site/search-index.json')); assert d, 'empty index'; print(f'Index valid: {len(d)} records')"
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@64bcae51e2e00e1e7d4a0213e8af113bcb1da546 # v3.0.1
+        with:
+          path: _site
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@d6db90164dcc165427c6c948c117e991cbbe14b8 # v4.0.5
