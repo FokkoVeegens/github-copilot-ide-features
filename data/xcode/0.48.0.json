@@ -1,0 +1,16 @@
+{
+  "ide": "xcode",
+  "version": "0.48.0",
+  "xcode_era": "xcode-latest",
+  "release_date": "2026-04-23",
+  "title": "GitHub Copilot for Xcode 0.48.0 – Xcode latest releases",
+  "url": "https://raw.githubusercontent.com/github/CopilotForXcode/main/CHANGELOG.md",
+  "source": "html",
+  "body_markdown": "### Added\n- Context window usage details in chat, including a token breakdown for system instructions, messages, attached files, and tool results.\n- Auto Compress setting to compact conversation history and save context tokens.\n- Install flow for Xcode's built-in MCP server from settings.\n\n### Changed\n- Custom agents and the Auto model are now generally available.\n- Removed support for macOS 12.\n- Improved UI for model picker tooltips.\n\n### Fixed\n- Fixed an issue where GPT-5.4 requests could return a 400 error.\n- Fixed an issue where the MCP allowlist did not work correctly.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-07-10T11:35:08Z",
+  "schema_version": 1
+}

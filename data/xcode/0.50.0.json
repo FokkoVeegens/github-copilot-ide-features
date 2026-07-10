@@ -1,0 +1,16 @@
+{
+  "ide": "xcode",
+  "version": "0.50.0",
+  "xcode_era": "xcode-latest",
+  "release_date": "2026-05-20",
+  "title": "GitHub Copilot for Xcode 0.50.0 – Xcode latest releases",
+  "url": "https://raw.githubusercontent.com/github/CopilotForXcode/main/CHANGELOG.md",
+  "source": "html",
+  "body_markdown": "### Added\n- Reasoning effort control for supported models: Low, Medium, or High from the model picker to balance response speed and quality.\n- Added internal support for upcoming usage-based billing, including billing updates for the usage panel, usage notifications, and model picker. This will be visible to the user once usage-based billing rolls out.\n\n### Changed\n- Bring Your Own Key (BYOK) is now generally available.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-07-10T11:35:08Z",
+  "schema_version": 1
+}
