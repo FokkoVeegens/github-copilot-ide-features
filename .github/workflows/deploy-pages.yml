@@ -2,7 +2,7 @@ name: Test and deploy Pages site
 
 on:
   push:
-    branches: [main, add-github-pages-site]
+    branches: [main]
     paths: ['data/**', 'site/**', 'scripts/**', 'config/ides.yml']
   pull_request:
     paths: ['data/**', 'site/**', 'scripts/**', 'config/ides.yml']
@@ -73,7 +73,7 @@ jobs:
           path: _site
 
   deploy:
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/add-github-pages-site'
+    if: github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     permissions:
