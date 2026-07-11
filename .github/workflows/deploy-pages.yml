@@ -73,7 +73,7 @@ jobs:
           path: _site
 
   deploy:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/add-github-pages-site'
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -85,4 +85,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@d6db90164dcc165427c6c948c117e991cbbe14b8 # v4.0.5
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
