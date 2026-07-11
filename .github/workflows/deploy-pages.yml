@@ -2,7 +2,7 @@ name: Test and deploy Pages site
 
 on:
   push:
-    branches: [main]
+    branches: [main, add-github-pages-site]
     paths: ['data/**', 'site/**', 'scripts/**', 'config/ides.yml']
   pull_request:
     paths: ['data/**', 'site/**', 'scripts/**', 'config/ides.yml']
