@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.71-0",
+  "release_date": "2026-07-10",
+  "title": "1.0.71-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.71-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add a pinned prompts setting in /settings to control prompt pinning\n- Add Repo and Repo (local) scope tabs to the /settings dashboard\n\n**Improved**\n- Use targeted validation commands and lighter install guidance by default\n- Use ctrl+x → x to close a session and ctrl+x → h to hide the split sidebar\n\n**Fixed**\n- Interactive shell commands now fail with a retryable \"reconfiguring\" message instead of an \"unknown shellManager handle\" error after the shell manager is disposed, and a detached command's completion notification is no longer lost when the shell context is reconfigured while a read is in progress\n- Reject custom-agent names that would create hidden files\n- Reject malformed --allow-tool and --deny-tool patterns with an error message\n- Show retained shell output in /tasks Shell Details for finished tasks\n- Remove duplicate Error: prefixes from plugin command failures\n- Shell completions stop suggesting subcommands as flag values\n- Show singular message counts in /usage activity graph\n- Keep /cd from switching to files or inaccessible directories\n- Dismissing the quick-help overlay with ? no longer leaves a stray ? in the prompt\n- --sandbox and --no-sandbox now show their \"ignored\" warning during interactive startup when the sandbox feature is unavailable (previously it was only visible in non-interactive mode)\n- Show the full command with its arguments (not just the wrapper) in the /mcp server detail view\n- Hide the inert navigate and view-log hints in the empty /lsp logs (LSP Services) panel\n- Exit non-interactive prompt runs with a failure code when a prompt is blocked before responding\n- Show the Auto discount in the redesigned inline model picker\n- New sessions start in the default directory instead of the active session's cwd\n- Fish completion only offers enum values for closed-choice flags",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-07-13T10:34:14Z",
+  "schema_version": 1
+}
