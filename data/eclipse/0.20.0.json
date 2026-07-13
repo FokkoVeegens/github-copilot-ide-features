@@ -1,0 +1,23 @@
+{
+  "ide": "eclipse",
+  "version": "0.20.0",
+  "release_date": "2026-07-13",
+  "title": "0.20.0 - 20260713",
+  "url": "https://github.com/microsoft/copilot-for-eclipse/releases/tag/0.20.0",
+  "source": "api",
+  "body_markdown": "### Added\n- Support organization-enabled custom (BYOK) models automatically in the model picker. [PR#333](https://github.com/microsoft/copilot-for-eclipse/pull/333)\n### Changed\n- Move Copilot Menu to the left of the Help menu. [#287](https://github.com/microsoft/copilot-for-eclipse/issues/287)\n### Fixed\n- Chat cannot be scrolled down to see the newest messages in long conversations. [#63](https://github.com/microsoft/copilot-for-eclipse/issues/63)\n- Copilot asks read permission for a global skill file. [#318](https://github.com/microsoft/copilot-for-eclipse/issues/318)\n- Detailed model information on dropdown hover is cropped on Linux. [#113](https://github.com/microsoft/copilot-for-eclipse/issues/113), contributed by [@travkin79](https://github.com/travkin79)\n- Automatically scroll the chat view to prompts requiring user action (e.g. \"Continue\") in Agent mode. [#120](https://github.com/microsoft/copilot-for-eclipse/issues/120), contributed by [@raghucssit](https://github.com/raghucssit)\n- Agents become extremely slow due to expensive chat view re-layout on every streamed chunk. [#259](https://github.com/microsoft/copilot-for-eclipse/issues/259)\n- UI freezes on editor switch when the Chat view has a long conversation. [#335](https://github.com/microsoft/copilot-for-eclipse/issues/335)",
+  "body_html": "### Added\r\n- Support organization-enabled custom (BYOK) models automatically in the model picker. [PR#333](https://github.com/microsoft/copilot-for-eclipse/pull/333)\r\n\r\n### Changed\r\n- Move Copilot Menu to the left of the Help menu. [#287](https://github.com/microsoft/copilot-for-eclipse/issues/287)\r\n\r\n### Fixed\r\n- Chat cannot be scrolled down to see the newest messages in long conversations. [#63](https://github.com/microsoft/copilot-for-eclipse/issues/63)\r\n- Copilot asks read permission for a global skill file. [#318](https://github.com/microsoft/copilot-for-eclipse/issues/318)\r\n- Detailed model information on dropdown hover is cropped on Linux. [#113](https://github.com/microsoft/copilot-for-eclipse/issues/113), contributed by [@travkin79](https://github.com/travkin79)\r\n- Automatically scroll the chat view to prompts requiring user action (e.g. \"Continue\") in Agent mode. [#120](https://github.com/microsoft/copilot-for-eclipse/issues/120), contributed by [@raghucssit](https://github.com/raghucssit)\r\n- Agents become extremely slow due to expensive chat view re-layout on every streamed chunk. [#259](https://github.com/microsoft/copilot-for-eclipse/issues/259)\r\n- UI freezes on editor switch when the Chat view has a long conversation. [#335](https://github.com/microsoft/copilot-for-eclipse/issues/335)",
+  "categories": [],
+  "copilot_mentions": [
+    "- Support organization-enabled custom (BYOK) models automatically in the model picker. [PR#333](https://github.com/microsoft/copilot-for-eclipse/pull/333)",
+    "- Move Copilot Menu to the left of the Help menu. [#287](https://github.com/microsoft/copilot-for-eclipse/issues/287)",
+    "- Chat cannot be scrolled down to see the newest messages in long conversations. [#63](https://github.com/microsoft/copilot-for-eclipse/issues/63)",
+    "- Copilot asks read permission for a global skill file. [#318](https://github.com/microsoft/copilot-for-eclipse/issues/318)",
+    "- Detailed model information on dropdown hover is cropped on Linux. [#113](https://github.com/microsoft/copilot-for-eclipse/issues/113), contributed by [@travkin79](https://github.com/travkin79)",
+    "- Automatically scroll the chat view to prompts requiring user action (e.g. \"Continue\") in Agent mode. [#120](https://github.com/microsoft/copilot-for-eclipse/issues/120), contributed by [@raghucssit](https://github.com/raghucssit)",
+    "- Agents become extremely slow due to expensive chat view re-layout on every streamed chunk. [#259](https://github.com/microsoft/copilot-for-eclipse/issues/259)",
+    "- UI freezes on editor switch when the Chat view has a long conversation. [#335](https://github.com/microsoft/copilot-for-eclipse/issues/335)"
+  ],
+  "fetched_at": "2026-07-13T09:48:24Z",
+  "schema_version": 1
+}
