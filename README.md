@@ -24,7 +24,14 @@ The repository hosts a **searchable feature matrix** on GitHub Pages at [https:/
 
 ### Running the site locally
 
+In VS Code, use **Run and Debug** with the `Open Website` launch configuration, or run the `Run website locally` task from **Tasks: Run Task**. This installs Python requirements, rebuilds the search index, and serves the site at [http://localhost:8000/](http://localhost:8000/).
+
+To run the same steps manually:
+
 ```bash
+# Install Python dependencies
+python -m pip install -r requirements.txt
+
 # Build the search index
 python -m scripts.build_search_index --output site
 

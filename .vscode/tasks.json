@@ -1,0 +1,73 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install Python requirements",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "requirements.txt"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build website search index",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "scripts.build_search_index",
+        "--output",
+        "site"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Serve website",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "-m",
+        "http.server",
+        "-d",
+        "site",
+        "8000"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "python",
+        "pattern": {
+          "regexp": "."
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^Serving HTTP on",
+          "endsPattern": "^Serving HTTP on"
+        }
+      }
+    },
+    {
+      "label": "Run website locally",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Install Python requirements",
+        "Build website search index",
+        "Serve website"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
