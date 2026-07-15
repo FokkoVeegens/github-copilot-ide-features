@@ -1,0 +1,35 @@
+{
+  "ide": "jetbrains",
+  "version": "1.13.1",
+  "release_date": "2026-07-15",
+  "title": "GitHub Copilot for JetBrains 1.13.1",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "* **Bug Fixes**\n* Fixed an auth issue\n* Fixed a few minor UI issues",
+  "body_html": "<ul><li><strong>Bug Fixes</strong></li><li>Fixed an auth issue</li><li>Fixed a few minor UI issues</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": "251",
+      "since": "251.25410",
+      "until": "",
+      "compatible_versions": {
+        "RIDER": "2025.1.2+",
+        "RUBYMINE": "2025.1.1+",
+        "GOLAND": "2025.1.1+",
+        "PHPSTORM": "2025.1.1+",
+        "RUST": "2025.1.2+",
+        "DBE": "2025.1.1+",
+        "WEBSTORM": "2025.1.1+",
+        "CLION": "2025.1.1+",
+        "PYCHARM_PRO": "2025.1.1+",
+        "IDEA_PRO": "2025.1.1+"
+      },
+      "file_id": 1107620,
+      "downloads": 0
+    }
+  ],
+  "fetched_at": "2026-07-15T08:39:20Z",
+  "schema_version": 1
+}
