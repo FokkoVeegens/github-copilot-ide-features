@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.71-2",
+  "release_date": "2026-07-15",
+  "title": "1.0.71-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.71-2",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add /voice devices to choose and persist the microphone for voice mode\n- Limit which built-in agents are available to tasks and subagents\n- Add canvas support in the CLI for extension-driven interactions\n\n**Improved**\n- Improve /chronicle cost-tips recommendations with richer cost profiles\n- Highlight standalone hex colors inline in Markdown\n\n**Fixed**\n- Enforce the sandbox filesystem policy on LSP file reads and rename edits\n- Allow empty owner and author emails in marketplace metadata\n- Keep all MCP Server Type options visible on short terminals\n- Mark disabled skills in `copilot skill list` and its JSON output\n- Plan mode now hard-blocks built-in tool calls that would modify the workspace, so the agent can no longer edit files or run mutating shell commands while planning (built-in mutators like opening a pull request are blocked; MCP and external tools are still allowed)",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Mark disabled skills in `copilot skill list` and its JSON output"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-07-15T09:19:05Z",
+  "schema_version": 1
+}
