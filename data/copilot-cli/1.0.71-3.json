@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.71-3",
+  "release_date": "2026-07-15",
+  "title": "1.0.71-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.71-3",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- On startup, an invalid settings.json now shows a warning identifying the offending value instead of silently ignoring your settings\n- /terminal-setup no longer skips setup on terminals without real kitty keyboard support",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-07-16T09:23:13Z",
+  "schema_version": 1
+}
