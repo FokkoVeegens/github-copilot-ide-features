@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.72-0",
+  "release_date": "2026-07-16",
+  "title": "1.0.72-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.72-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Multi-turn subagents are always enabled, so you can send follow-up messages to running agents\n- Enable tool search for Claude Haiku 4.5+\n\n**Improved**\n- Deliver scheduled prompts as steering messages when the agent is busy\n\n**Fixed**\n- Emoji shortcodes like :tada: no longer render with a spurious trailing space in printed and PR/issue/gist output",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-07-19T09:12:10Z",
+  "schema_version": 1
+}

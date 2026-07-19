@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.72-1",
+  "release_date": "2026-07-17",
+  "title": "1.0.72-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.72-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add --plugin, --mcp, and --skill flags for plugin mutations\n- Add skill removal support to `copilot plugins remove --skill`\n\n**Improved**\n- Reveal full file paths when expanding compact editing rows\n- Make the plan-approval menu deterministic across models\n- Keep /add-dir directories visible in the agent context across turns\n\n**Fixed**\n- Wrap ask-user and elicitation inputs in the split-pane chat view\n- Modified vim keys (Ctrl+K, uppercase J/K) no longer move the selection in tool-permission prompts and other text-input select menus; only unmodified j/k, the arrow keys, and Ctrl+P/Ctrl+N navigate.\n- `/terminal-setup` now refuses to modify a VS Code keybindings.json that contains a JSON syntax error (instead of rewriting it and reporting success), matching its documented invalid-JSON handling.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Add skill removal support to `copilot plugins remove --skill`"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-07-19T09:12:10Z",
+  "schema_version": 1
+}
