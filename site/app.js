@@ -2,7 +2,7 @@
  * DOM wiring for the feature matrix search application.
  * Fetches search-index.json, handles user input, and renders results.
  */
-import { validateQuery, searchIndex, buildMatrix, formatIdeName } from './search.js';
+import { validateQuery, searchIndex, buildMatrix, formatIdeName, buildSnippetExcerpt } from './search.js';
 
 let searchIndexData = [];
 
@@ -82,13 +82,13 @@ function handleSearch(event) {
   }
 
   const matrix = buildMatrix(matches);
-  renderMatrix(matrix);
+  renderMatrix(matrix, validQuery);
 }
 
 /**
  * Render the feature matrix table.
  */
-function renderMatrix(matrix) {
+function renderMatrix(matrix, query) {
   const resultsDiv = document.getElementById('results');
 
   // Build summary row
@@ -113,10 +113,12 @@ function renderMatrix(matrix) {
   `;
 
   for (const snippet of matrix.snippets) {
+    const excerpt = buildSnippetExcerpt(snippet, query);
+    const snippetPreviewHtml = highlightMatch(excerpt, query);
     tableHtml += `
       <tr>
         <td class="snippet-cell">
-          <span class="snippet-text">${escapeHtml(snippet)}</span>
+          <span class="snippet-text" tabindex="0" title="${escapeHtml(snippet)}">${snippetPreviewHtml}</span>
         </td>
     `;
 
@@ -172,6 +174,38 @@ function escapeHtml(text) {
     "'": '&#39;',
   };
   return String(text).replace(/[&<>"']/g, char => map[char]);
+}
+
+/**
+ * Escape text for use inside a RegExp.
+ */
+function escapeRegExp(text) {
+  return String(text).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * Highlight all query matches in an excerpt.
+ */
+function highlightMatch(text, query) {
+  const source = String(text || '');
+  const keyword = String(query || '').trim();
+  if (!source || !keyword) {
+    return escapeHtml(source);
+  }
+
+  const regex = new RegExp(escapeRegExp(keyword), 'gi');
+  let html = '';
+  let lastIndex = 0;
+  let match = regex.exec(source);
+
+  while (match) {
+    html += escapeHtml(source.slice(lastIndex, match.index));
+    html += `<mark class="snippet-match">${escapeHtml(match[0])}</mark>`;
+    lastIndex = match.index + match[0].length;
+    match = regex.exec(source);
+  }
+  html += escapeHtml(source.slice(lastIndex));
+  return html;
 }
 
 // Initialize on page load

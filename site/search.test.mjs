@@ -4,7 +4,7 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert';
-import { validateQuery, searchIndex, buildMatrix, formatIdeName } from './search.js';
+import { validateQuery, searchIndex, buildMatrix, formatIdeName, buildSnippetExcerpt } from './search.js';
 
 test('validateQuery rejects empty string', () => {
   assert.strictEqual(validateQuery(''), null);
@@ -56,6 +56,31 @@ test('searchIndex finds multiple matches', () => {
   
   const results = searchIndex(index, 'chat');
   assert.strictEqual(results.length, 2);
+});
+
+test('buildSnippetExcerpt centers around matching term with ellipses', () => {
+  const snippet = 'This is a very long description where Copilot Chat appears in the middle with additional details for context and clarity.';
+  const excerpt = buildSnippetExcerpt(snippet, 'Copilot Chat', 20);
+
+  assert(excerpt.includes('Copilot Chat'));
+  assert(excerpt.startsWith('... '));
+  assert(excerpt.endsWith(' ...'));
+});
+
+test('buildSnippetExcerpt clips text when no match is found', () => {
+  const snippet = 'A long descriptive text without the searched phrase but still needing clipping for compact display in the table.';
+  const excerpt = buildSnippetExcerpt(snippet, 'nonexistent-term', 18);
+
+  assert(excerpt.endsWith(' ...'));
+  assert(excerpt.length < snippet.length);
+});
+
+test('buildSnippetExcerpt keeps the full match visible instead of clipping it at line start', () => {
+  const snippet = 'With this preview, we are excited to release a new preview feature, **Copilot Next Edit Suggestions (Preview)**, that improves flow.';
+  const excerpt = buildSnippetExcerpt(snippet, 'next edit suggestions', 90);
+
+  assert(excerpt.includes('Next Edit Suggestions'));
+  assert(!excerpt.includes('... **Copilot Next...'));
 });
 
 test('buildMatrix returns expected structure', () => {

@@ -40,6 +40,52 @@ export function searchIndex(index, keyword) {
 }
 
 /**
+ * Build a compact snippet excerpt around the first keyword match.
+ * @param {string} snippet - Full feature description
+ * @param {string} keyword - Search keyword
+ * @param {number} contextChars - Approximate max chars when clipping fallback text
+ * @returns {string} Excerpt with optional ellipses
+ */
+export function buildSnippetExcerpt(snippet, keyword, contextChars = 90) {
+  const normalized = String(snippet || '').replace(/\s+/g, ' ').trim();
+  if (!normalized) return '';
+
+  const trimmedKeyword = String(keyword || '').trim();
+  if (!trimmedKeyword) {
+    return clipText(normalized, contextChars);
+  }
+
+  const match = findBestMatch(normalized, trimmedKeyword);
+  if (!match) {
+    return clipText(normalized, contextChars);
+  }
+
+  const words = getWordsWithOffsets(normalized);
+  if (words.length === 0) {
+    return clipText(normalized, contextChars);
+  }
+
+  const matchStartWord = findWordIndexAtOffset(words, match.start);
+  const matchEndWord = findWordIndexAtOffset(words, Math.max(match.end - 1, match.start));
+
+  const beforeWords = 3;
+  const afterWords = 8;
+  const excerptStartWord = Math.max(0, matchStartWord - beforeWords);
+  const excerptEndWord = Math.min(words.length - 1, matchEndWord + afterWords);
+
+  const start = words[excerptStartWord].start;
+  const end = words[excerptEndWord].end;
+
+  let excerpt = normalized.slice(start, end);
+
+  const prefix = start > 0 ? '... ' : '';
+  const suffix = end < normalized.length ? ' ...' : '';
+  excerpt = `${prefix}${excerpt}${suffix}`;
+
+  return clipText(excerpt, contextChars + 25);
+}
+
+/**
  * Strip "GitHub Copilot" from IDE name for display.
  * @param {string} ideName - Full IDE name
  * @returns {string} Shortened IDE name
@@ -203,4 +249,90 @@ function compareVersions(a, b) {
     if (aPart > bPart) return 1;
   }
   return 0;
+}
+
+/**
+ * Clip plain text to a max length, preserving whole words when possible.
+ * @param {string} text
+ * @param {number} maxChars
+ * @returns {string}
+ */
+function clipText(text, maxChars) {
+  if (text.length <= maxChars) {
+    return text;
+  }
+  const clipped = text.slice(0, maxChars);
+  const splitAt = clipped.lastIndexOf(' ');
+  if (splitAt > 0) {
+    return `${clipped.slice(0, splitAt)} ...`;
+  }
+  return `${clipped} ...`;
+}
+
+/**
+ * Find the best matching region in text for the query.
+ * Prefers an exact phrase; falls back to the first matching query term.
+ * @param {string} text
+ * @param {string} query
+ * @returns {{start: number, end: number} | null}
+ */
+function findBestMatch(text, query) {
+  const lowerText = text.toLowerCase();
+  const lowerQuery = query.toLowerCase();
+
+  const exactStart = lowerText.indexOf(lowerQuery);
+  if (exactStart !== -1) {
+    return { start: exactStart, end: exactStart + lowerQuery.length };
+  }
+
+  const terms = lowerQuery
+    .split(/\s+/)
+    .map(term => term.trim())
+    .filter(term => term.length >= 3);
+
+  for (const term of terms) {
+    const termStart = lowerText.indexOf(term);
+    if (termStart !== -1) {
+      return { start: termStart, end: termStart + term.length };
+    }
+  }
+  return null;
+}
+
+/**
+ * Get all non-whitespace tokens and their offsets.
+ * @param {string} text
+ * @returns {Array<{text: string, start: number, end: number}>}
+ */
+function getWordsWithOffsets(text) {
+  const matches = text.matchAll(/\S+/g);
+  const words = [];
+  for (const match of matches) {
+    words.push({
+      text: match[0],
+      start: match.index,
+      end: match.index + match[0].length,
+    });
+  }
+  return words;
+}
+
+/**
+ * Find token index that contains the provided text offset.
+ * @param {Array<{start: number, end: number}>} words
+ * @param {number} offset
+ * @returns {number}
+ */
+function findWordIndexAtOffset(words, offset) {
+  for (let i = 0; i < words.length; i++) {
+    if (offset >= words[i].start && offset < words[i].end) {
+      return i;
+    }
+  }
+
+  if (offset <= words[0].start) {
+    return 0;
+  }
+
+  return words.length - 1;
 }

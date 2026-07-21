@@ -185,14 +185,24 @@ main {
 .snippet-cell {
   font-weight: 500;
   color: #333;
-  max-width: 300px;
+  max-width: 360px;
   word-wrap: break-word;
 }
 
 .snippet-text {
-  display: block;
+  display: inline-block;
   word-wrap: break-word;
   white-space: normal;
+  line-height: 1.35;
+  position: relative;
+  cursor: help;
+}
+
+.snippet-match {
+  background: #fff3bf;
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 0.1em;
 }
 
 .match-cell {
