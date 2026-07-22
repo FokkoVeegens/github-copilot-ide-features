@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.73",
+  "release_date": "2026-07-21",
+  "title": "1.0.73",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.73",
+  "source": "api",
+  "body_markdown": "2026-07-20\n\n- Anthropic subagents continue working when additional directories are configured\n- Resolve relative links in custom agent instructions from the agent file location",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-07-22T09:34:16Z",
+  "schema_version": 1
+}
