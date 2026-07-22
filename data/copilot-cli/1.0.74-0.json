@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.74-0",
+  "release_date": "2026-07-21",
+  "title": "1.0.74-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.74-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add `/model plan` (or `/model --plan`) to pick a model used while in plan mode; pass a model id, `off` to clear, or no id to open the picker. Reverts to the session model when you leave plan mode.\n\n**Improved**\n- Resume search matches session titles even when whitespace differs",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-07-22T09:34:16Z",
+  "schema_version": 1
+}
