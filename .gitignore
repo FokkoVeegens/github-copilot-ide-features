@@ -42,6 +42,9 @@ ENV/
 # Data (exclude test/dummy data only; real IDE data is tracked)
 data/dummy/
 
+# Generated site output
+site/meta.json
+
 # Temporary files
 *.tmp
 *.log
