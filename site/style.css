@@ -82,6 +82,35 @@ main {
   color: #999;
 }
 
+/* Launch-announcements filter */
+.filter-container {
+  margin: -0.75rem 0 1.5rem;
+}
+
+.filter-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.filter-note {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* IDE logo headers */
+.ide-logo {
+  width: 28px;
+  height: 28px;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
 /* Hint */
 .hint {
   background: #f0f4f8;

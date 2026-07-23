@@ -61,6 +61,7 @@ jobs:
         run: |
           mkdir -p _site
           cp site/*.html site/*.css site/*.js _site/
+          cp -r site/images _site/images
           python -m scripts.build_search_index --output _site
 
       - name: Validate built index

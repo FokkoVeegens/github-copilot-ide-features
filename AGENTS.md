@@ -37,6 +37,7 @@ scripts/build_search_index.py – Build search index for the GitHub Pages site
 scripts/common/              – shared utilities (config, HTTP, JSON schema, extraction, I/O)
 scripts/fetchers/            – one module per IDE (eclipse.py, dummy.py, …)
 site/                        – static GitHub Pages site (index.html, app.js, search.js, style.css)
+site/images/                 – IDE logo images used as matrix column headers
 site/search.test.mjs         – JavaScript tests for site/search.js
 tests/                       – pytest test suite
 .github/workflows/           – GitHub Actions workflows (fetch-*.yml, deploy-pages.yml, ci.yml)
