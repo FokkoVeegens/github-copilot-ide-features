@@ -2,9 +2,37 @@
  * DOM wiring for the feature matrix search application.
  * Fetches search-index.json, handles user input, and renders results.
  */
-import { validateQuery, searchIndex, buildMatrix, formatIdeName, buildSnippetExcerpt } from './search.js';
+import { validateQuery, searchIndex, buildMatrix, formatIdeName, buildSnippetExcerpt, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames } from './search.js';
 
 let searchIndexData = [];
+
+/** Logo image per IDE id. IDEs without a logo fall back to a text header. */
+const IDE_LOGOS = {
+  'vs-code': './images/vs-code.svg',
+  'copilot-cli': './images/copilot-cli.svg',
+  'visual-studio-2022': './images/visual-studio-2022.svg',
+  'visual-studio-2026': './images/visual-studio-2026.svg',
+  'jetbrains': './images/jetbrains.svg',
+  'xcode': './images/xcode.svg',
+  'eclipse': './images/eclipse.svg',
+  'vim-neovim': './images/vim-neovim.svg',
+  'sql-server-management-studio': './images/sql-server-management-studio.png',
+};
+
+/** Map from IDE display name to IDE id, built from the search index. */
+let ideIdByName = new Map();
+
+/**
+ * Build the header cell for an IDE: logo image with tooltip, or text fallback.
+ */
+function buildIdeHeader(ideName) {
+  const displayName = formatIdeName(ideName);
+  const logo = IDE_LOGOS[ideIdByName.get(ideName)];
+  if (logo) {
+    return `<img class="ide-logo" src="${escapeHtml(logo)}" alt="${escapeHtml(displayName)}" title="${escapeHtml(displayName)}" />`;
+  }
+  return `<span title="${escapeHtml(displayName)}">${escapeHtml(displayName)}</span>`;
+}
 
 /**
  * Initialize the application.
@@ -15,6 +43,7 @@ async function init() {
     const response = await fetch('./search-index.json');
     if (!response.ok) throw new Error(`Failed to fetch search-index.json: ${response.status}`);
     searchIndexData = await response.json();
+    ideIdByName = new Map(searchIndexData.map(r => [r.ide_name || r.ide || '', r.ide]));
   } catch (error) {
     document.getElementById('error-message').innerHTML = `
       <strong>Error loading search index:</strong> ${error.message}
@@ -37,6 +66,11 @@ async function init() {
   // Set up event listeners
   const searchInput = document.getElementById('search-input');
   searchInput.addEventListener('input', debounce(handleSearch, 300));
+
+  const launchOnlyFilter = document.getElementById('launch-only-filter');
+  launchOnlyFilter.addEventListener('change', () => {
+    handleSearch({ target: searchInput });
+  });
 
   // Show initial hint
   document.getElementById('hint').style.display = 'block';
@@ -74,22 +108,36 @@ function handleSearch(event) {
   }
 
   hint.style.display = 'none';
-  const matches = searchIndex(searchIndexData, validQuery);
+  const allMatches = searchIndex(searchIndexData, validQuery);
+  const launchOnly = document.getElementById('launch-only-filter')?.checked ?? false;
+  const matches = launchOnly
+    ? dedupeByIdeVersion(filterLaunchAnnouncements(allMatches))
+    : allMatches;
 
   if (matches.length === 0) {
-    results.innerHTML = '<p style="padding: 1rem; color: #666;">No matching features found.</p>';
+    if (launchOnly && allMatches.length > 0) {
+      results.innerHTML = `<p style="padding: 1rem; color: #666;">No launch announcements found for this feature (${allMatches.length} other mention${allMatches.length === 1 ? '' : 's'} hidden). Uncheck “Only launch announcements” to see all results.</p>`;
+    } else {
+      results.innerHTML = '<p style="padding: 1rem; color: #666;">No matching features found.</p>';
+    }
     return;
   }
 
-  const matrix = buildMatrix(matches);
-  renderMatrix(matrix, validQuery);
+  const matrix = buildMatrix(matches, collectIdeNames(searchIndexData));
+  renderMatrix(matrix, validQuery, launchOnly ? allMatches.length - matches.length : 0);
 }
 
 /**
  * Render the feature matrix table.
  */
-function renderMatrix(matrix, query) {
+function renderMatrix(matrix, query, hiddenCount = 0) {
   const resultsDiv = document.getElementById('results');
+
+  // Note about filtered-out results
+  let filterNoteHtml = '';
+  if (hiddenCount > 0) {
+    filterNoteHtml = `<p class="filter-note">${hiddenCount} mention${hiddenCount === 1 ? '' : 's'} without launch keywords hidden. Uncheck “Only launch announcements” to see all results.</p>`;
+  }
 
   // Build summary row
   let summaryHtml = '<div class="summary-section"><h3>First appearance by IDE</h3><ul>';
@@ -106,7 +154,7 @@ function renderMatrix(matrix, query) {
       <thead>
         <tr>
           <th>Feature / Snippet</th>
-          ${matrix.ides.map(ide => `<th>${escapeHtml(formatIdeName(ide))}</th>`).join('')}
+          ${matrix.ides.map(ide => `<th>${buildIdeHeader(ide)}</th>`).join('')}
         </tr>
       </thead>
       <tbody>
@@ -148,7 +196,7 @@ function renderMatrix(matrix, query) {
     </table>
   `;
 
-  resultsDiv.innerHTML = summaryHtml + tableHtml;
+  resultsDiv.innerHTML = filterNoteHtml + summaryHtml + tableHtml;
 }
 
 /**

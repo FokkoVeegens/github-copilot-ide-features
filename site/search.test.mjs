@@ -4,7 +4,7 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert';
-import { validateQuery, searchIndex, buildMatrix, formatIdeName, buildSnippetExcerpt } from './search.js';
+import { validateQuery, searchIndex, buildMatrix, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames } from './search.js';
 
 test('validateQuery rejects empty string', () => {
   assert.strictEqual(validateQuery(''), null);
@@ -81,6 +81,150 @@ test('buildSnippetExcerpt keeps the full match visible instead of clipping it at
 
   assert(excerpt.includes('Next Edit Suggestions'));
   assert(!excerpt.includes('... **Copilot Next...'));
+});
+
+test('isLaunchAnnouncement matches launch keywords', () => {
+  assert(isLaunchAnnouncement('Copilot Next Edit Suggestions (Preview) is now available'));
+  assert(isLaunchAnnouncement('We released a new agent mode'));
+  assert(isLaunchAnnouncement('Agent mode is generally available'));
+  assert(isLaunchAnnouncement('Introducing Copilot Vision'));
+  assert(isLaunchAnnouncement('Next Edit Suggestions reaches general availability'));
+  assert(isLaunchAnnouncement('Copilot Chat is GA'));
+  assert(isLaunchAnnouncement('Launched agent skills for everyone'));
+  assert(isLaunchAnnouncement('Copilot now supports MCP servers'));
+  assert(isLaunchAnnouncement('Added support for custom instructions'));
+});
+
+test('isLaunchAnnouncement rejects incremental change notes', () => {
+  assert(!isLaunchAnnouncement('Fixed a bug in Next Edit Suggestions'));
+  assert(!isLaunchAnnouncement('Improved performance of Next Edit Suggestions'));
+  assert(!isLaunchAnnouncement('Next Edit Suggestions no longer flickers when typing'));
+  assert(!isLaunchAnnouncement('Updated the ga tracking pixel')); // lowercase "ga" must not match GA
+  assert(!isLaunchAnnouncement(''));
+  assert(!isLaunchAnnouncement(null));
+});
+
+test('filterLaunchAnnouncements drops non-launch records when launches exist', () => {
+  const results = [
+    { ide: 'vscode', snippet: 'Next Edit Suggestions is now available in preview', version: '1.0.0', release_date: '2025-01-01' },
+    { ide: 'vscode', snippet: 'Fixed flickering in Next Edit Suggestions', version: '1.1.0', release_date: '2025-02-01' },
+    { ide: 'vscode', snippet: 'Next Edit Suggestions is generally available', version: '1.2.0', release_date: '2025-03-01' },
+  ];
+
+  const filtered = filterLaunchAnnouncements(results);
+  assert.strictEqual(filtered.length, 2);
+  assert.strictEqual(filtered[0].version, '1.0.0');
+  assert.strictEqual(filtered[1].version, '1.2.0');
+});
+
+test('filterLaunchAnnouncements falls back to earliest version for IDEs without launch keywords', () => {
+  const results = [
+    // Eclipse launch note without any launch keyword
+    { ide: 'eclipse', snippet: 'Support Next Edit Suggestion (NES).', version: '0.13.0', release_date: '2025-05-01' },
+    { ide: 'eclipse', snippet: 'Fixed NES rendering glitch', version: '0.14.0', release_date: '2025-06-01' },
+    { ide: 'vscode', snippet: 'Next Edit Suggestions (preview) released', version: '1.97.0', release_date: '2025-01-01' },
+    { ide: 'vscode', snippet: 'NES now uses less memory', version: '1.100.0', release_date: '2025-04-01' },
+  ];
+
+  const filtered = filterLaunchAnnouncements(results);
+  assert.strictEqual(filtered.length, 2);
+  assert(filtered.some(r => r.ide === 'eclipse' && r.version === '0.13.0'));
+  assert(filtered.some(r => r.ide === 'vscode' && r.version === '1.97.0'));
+});
+
+test('dedupeByIdeVersion keeps one record per IDE + version, preferring the shortest snippet', () => {
+  const results = [
+    { ide: 'vscode', snippet: 'GitHub Copilot code completions are great at autocomplete, and we are excited to release Next Edit Suggestions', version: '1.97.0' },
+    { ide: 'vscode', snippet: 'Copilot Next Edit Suggestions (Preview)', version: '1.97.0' },
+    { ide: 'vscode', snippet: 'Next Edit Suggestions (preview) - Copilot predicts the next edit.', version: '1.97.0' },
+    { ide: 'vscode', snippet: 'Next Edit Suggestions (preview) - Copilot predicts the next edit.', version: '1.98.0' },
+    { ide: 'eclipse', snippet: 'Support Next Edit Suggestion (NES).', version: '0.13.0' },
+  ];
+
+  const deduped = dedupeByIdeVersion(results);
+  assert.strictEqual(deduped.length, 3);
+  const vscode197 = deduped.filter(r => r.ide === 'vscode' && r.version === '1.97.0');
+  assert.strictEqual(vscode197.length, 1);
+  assert.strictEqual(vscode197[0].snippet, 'Copilot Next Edit Suggestions (Preview)');
+  assert(deduped.some(r => r.ide === 'vscode' && r.version === '1.98.0'));
+  assert(deduped.some(r => r.ide === 'eclipse' && r.version === '0.13.0'));
+});
+
+test('dedupeByIdeVersion handles invalid input', () => {
+  assert.deepStrictEqual(dedupeByIdeVersion(null), []);
+  assert.deepStrictEqual(dedupeByIdeVersion(undefined), []);
+  assert.deepStrictEqual(dedupeByIdeVersion([]), []);
+});
+
+test('collectIdeNames returns unique IDE names from the index', () => {
+  const index = [
+    { ide_name: 'GitHub Copilot for VS Code', snippet: 'a' },
+    { ide_name: 'GitHub Copilot for Xcode', snippet: 'b' },
+    { ide_name: 'GitHub Copilot for VS Code', snippet: 'c' },
+    { ide: 'eclipse', snippet: 'd' },
+  ];
+
+  const names = collectIdeNames(index);
+  assert.strictEqual(names.length, 3);
+  assert(names.includes('GitHub Copilot for VS Code'));
+  assert(names.includes('GitHub Copilot for Xcode'));
+  assert(names.includes('eclipse'));
+});
+
+test('collectIdeNames handles invalid input', () => {
+  assert.deepStrictEqual(collectIdeNames(null), []);
+  assert.deepStrictEqual(collectIdeNames(undefined), []);
+});
+
+test('buildMatrix includes IDEs without matches as empty columns when allIdes is given', () => {
+  const results = [
+    {
+      snippet: 'Next Edit Suggestions (preview)',
+      ide: 'vscode',
+      ide_name: 'GitHub Copilot for VS Code',
+      version: '1.97.0',
+      release_date: '2025-01-01',
+      url: 'https://example.com/1.97.0',
+    },
+  ];
+  const allIdes = [
+    'GitHub Copilot for VS Code',
+    'GitHub Copilot for Xcode',
+    'GitHub Copilot for Vim/Neovim',
+    'GitHub Copilot for Eclipse',
+  ];
+
+  const matrix = buildMatrix(results, allIdes);
+  assert.strictEqual(matrix.ides.length, 4);
+  assert(matrix.ides.includes('GitHub Copilot for Xcode'));
+  assert(matrix.ides.includes('GitHub Copilot for Vim/Neovim'));
+  assert(matrix.ides.includes('GitHub Copilot for Eclipse'));
+  // Empty IDEs have no cells and no summary entry
+  assert.strictEqual(matrix.cells['Next Edit Suggestions (preview)']['GitHub Copilot for Xcode'], undefined);
+  assert.strictEqual(matrix.summary.length, 1);
+  assert.strictEqual(matrix.summary[0].ide, 'GitHub Copilot for VS Code');
+});
+
+test('buildMatrix without allIdes only shows IDEs present in results', () => {
+  const results = [
+    {
+      snippet: 'Agent mode released',
+      ide: 'vscode',
+      ide_name: 'GitHub Copilot for VS Code',
+      version: '1.99.0',
+      release_date: '2025-04-01',
+      url: 'https://example.com/1.99.0',
+    },
+  ];
+
+  const matrix = buildMatrix(results);
+  assert.deepStrictEqual(matrix.ides, ['GitHub Copilot for VS Code']);
+});
+
+test('filterLaunchAnnouncements handles invalid input', () => {
+  assert.deepStrictEqual(filterLaunchAnnouncements(null), []);
+  assert.deepStrictEqual(filterLaunchAnnouncements(undefined), []);
+  assert.deepStrictEqual(filterLaunchAnnouncements([]), []);
 });
 
 test('buildMatrix returns expected structure', () => {
@@ -287,10 +431,11 @@ test('buildMatrix sorts snippets by alphabetically when IDEs showed features at 
   assert.deepStrictEqual(matrix.snippets, ['Zebra feature', 'Apple feature']);
 });
 
-test('formatIdeName removes "GitHub Copilot" prefix', () => {
-  assert.strictEqual(formatIdeName('GitHub Copilot for VS Code'), 'for VS Code');
+test('formatIdeName removes "GitHub Copilot" and "Copilot for" prefixes', () => {
+  assert.strictEqual(formatIdeName('GitHub Copilot for VS Code'), 'VS Code');
   assert.strictEqual(formatIdeName('GitHub Copilot CLI'), 'CLI');
-  assert.strictEqual(formatIdeName('GitHub Copilot for JetBrains'), 'for JetBrains');
+  assert.strictEqual(formatIdeName('GitHub Copilot for JetBrains'), 'JetBrains');
+  assert.strictEqual(formatIdeName('Copilot for Eclipse'), 'Eclipse');
 });
 
 test('formatIdeName handles IDE names without prefix', () => {

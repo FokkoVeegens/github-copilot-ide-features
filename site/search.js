@@ -15,12 +15,124 @@ export function validateQuery(q) {
 }
 
 /**
- * Strip "GitHub Copilot" prefix from IDE name for display.
+ * Strip "GitHub Copilot" / "Copilot for" prefixes from IDE name for display,
+ * leaving only the real IDE name (e.g. "VS Code", "Eclipse", "CLI").
  * @param {string} ideName - Full IDE name
  * @returns {string} Shortened IDE name
  */
 export function formatIdeName(ideName) {
-  return String(ideName || '').replace(/^GitHub Copilot\s+/, '');
+  return String(ideName || '').replace(/^(?:GitHub\s+)?Copilot\s+(?:for\s+)?/i, '');
+}
+
+/**
+ * Patterns that indicate a snippet announces a feature launch
+ * (as opposed to an incremental change, fix, or improvement).
+ * Matching is fuzzy: case-insensitive with common word variants.
+ */
+const LAUNCH_PATTERNS = [
+  /\breleas(?:e[ds]?|ing)\b/i,          // release, released, releases, releasing
+  /\bpreview\b/i,                        // preview, public preview, (Preview)
+  /\bgenerally available\b/i,
+  /\bgeneral availability\b/i,
+  /\bGA\b/,                              // GA (case-sensitive to avoid false hits)
+  /\bnow available\b/i,
+  /\bavailable (?:in|for|to)\b/i,
+  /\bintroduc(?:e[ds]?|ing)\b/i,         // introduce, introduced, introducing
+  /\blaunch(?:e[ds]|ing)?\b/i,           // launch, launched, launching
+  /\brolling out\b/i,
+  /\bnow supports?\b/i,
+  /\badded support\b/i,
+  /\bnew feature\b/i,
+  /\benabled by default\b/i,
+];
+
+/**
+ * Check whether a snippet looks like a feature launch announcement.
+ * @param {string} snippet - Feature description text
+ * @returns {boolean} True if the snippet contains a launch-indicating phrase
+ */
+export function isLaunchAnnouncement(snippet) {
+  const text = String(snippet || '');
+  return LAUNCH_PATTERNS.some(pattern => pattern.test(text));
+}
+
+/**
+ * Filter search results down to launch announcements only.
+ * Per IDE: keeps records whose snippet contains a launch keyword.
+ * If an IDE has no keyword matches at all, its earliest-version records
+ * are kept instead, since the first mention marks when the feature appeared.
+ * @param {Array<Object>} results - Results from searchIndex()
+ * @returns {Array<Object>} Launch announcements (or earliest mention) per IDE
+ */
+export function filterLaunchAnnouncements(results) {
+  if (!Array.isArray(results)) return [];
+
+  // Group records per IDE
+  const byIde = new Map();
+  for (const record of results) {
+    const ide = record.ide_name || record.ide || '';
+    if (!byIde.has(ide)) byIde.set(ide, []);
+    byIde.get(ide).push(record);
+  }
+
+  const kept = new Set();
+  for (const records of byIde.values()) {
+    const launches = records.filter(r => isLaunchAnnouncement(r.snippet));
+    if (launches.length > 0) {
+      for (const r of launches) kept.add(r);
+    } else {
+      // No launch keywords for this IDE: keep its earliest version instead
+      let earliest = records[0].version;
+      for (const r of records) {
+        if (compareVersions(r.version, earliest) < 0) earliest = r.version;
+      }
+      for (const r of records) {
+        if (compareVersions(r.version, earliest) === 0) kept.add(r);
+      }
+    }
+  }
+
+  // Preserve original result order
+  return results.filter(record => kept.has(record));
+}
+
+/**
+ * Deduplicate results so each IDE + version combination appears once.
+ * When a release mentions the same feature in multiple notes, the
+ * shortest (most headline-like) snippet is kept.
+ * @param {Array<Object>} results - Results from searchIndex()
+ * @returns {Array<Object>} At most one record per IDE + version
+ */
+export function dedupeByIdeVersion(results) {
+  if (!Array.isArray(results)) return [];
+
+  const best = new Map(); // "ide|version" -> record
+  for (const record of results) {
+    const key = `${record.ide_name || record.ide || ''}|${record.version || ''}`;
+    const current = best.get(key);
+    if (!current || String(record.snippet || '').length < String(current.snippet || '').length) {
+      best.set(key, record);
+    }
+  }
+
+  const kept = new Set(best.values());
+  // Preserve original result order
+  return results.filter(record => kept.has(record));
+}
+
+/**
+ * Collect the unique IDE names present in a search index.
+ * @param {Array<Object>} index - Full search index records
+ * @returns {Array<string>} Unique IDE names
+ */
+export function collectIdeNames(index) {
+  if (!Array.isArray(index)) return [];
+  const names = new Set();
+  for (const record of index) {
+    const ide = record.ide_name || record.ide || '';
+    if (ide) names.add(ide);
+  }
+  return Array.from(names);
 }
 
 /**
@@ -123,15 +235,17 @@ function getIdeOrderPriority(ideName) {
  * Build a feature matrix from search results.
  * Pivots results into: rows = matched snippets, columns = IDEs.
  * @param {Array<Object>} results - Results from searchIndex()
+ * @param {Array<string>} [allIdes] - Optional full list of IDE names to always
+ *   show as columns, even when they have no matching results
  * @returns {Object} Matrix with shape: { snippets: [...], ides: [...], cells: {...} }
  */
-export function buildMatrix(results) {
+export function buildMatrix(results, allIdes = null) {
   if (!Array.isArray(results) || results.length === 0) {
     return { snippets: [], ides: [], cells: {}, summary: [] };
   }
 
   // Collect unique IDEs and snippets
-  const ideSet = new Set();
+  const ideSet = new Set(Array.isArray(allIdes) ? allIdes.filter(Boolean) : []);
   const snippetMap = new Map(); // snippet -> { ide_names, versions, earliest_date }
 
   for (const record of results) {
