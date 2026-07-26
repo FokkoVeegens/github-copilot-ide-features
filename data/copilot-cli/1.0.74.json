@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.74",
+  "release_date": "2026-07-23",
+  "title": "1.0.74",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.74",
+  "source": "api",
+  "body_markdown": "2026-07-23\n\n- Typing `?` while the /search bar is open enters it as text instead of opening quick help\n- Add support for Open Plugin Spec v1 plugin manifests and mcp.json configuration\n- IDE integration reconnects reliably when the CLI reloads MCP servers or changes directory\n- Multi-turn subagent timelines show every prompt and response in the correct order after reopening /tasks\n- Subagent timelines identify whether prompts came from the main agent or another subagent\n- Show a first-run splash to opt into the default sandbox\n- Adding support for gemini-3.6-flash\n- The `/mcp add` and `/mcp edit` wizard now preserves `=` characters in environment variable values (such as base64 padding), so secrets and tokens are stored correctly.\n- Remote session uploads stop retrying permanent Mission Control 400/404 responses\n- Show Tab in /settings footer to switch scope tabs\n- Downscale oversized tool-result images so CAPI Responses requests continue\n- When multiplexing sessions, a session's open dialog no longer leaks into another session; eligible pickers reopen when you switch back\n- The `$` interactive shell shortcut now opens a shell even while the agent is working\n- Fully honor the skill disable-model-invocation flag\n- Warn when a participating language server reports a different symbol than the one requested\n- Steering interrupts shell output waits without stopping the running command\n- Increase the Responses request size limit\n- Plan mode now allows session-folder planning artifacts while still blocking clear file mutations outside the session folder.\n- Add `/model plan` (or `/model --plan`) to pick a model used while in plan mode; pass a model id, `off` to clear, or no id to open the picker. Reverts to the session model when you leave plan mode.\n- Resume search matches session titles even when whitespace differs",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-07-26T09:21:16Z",
+  "schema_version": 1
+}

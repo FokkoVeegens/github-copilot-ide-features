@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.74-4",
+  "release_date": "2026-07-23",
+  "title": "1.0.74-4",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.74-4",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add support for Open Plugin Spec v1 plugin manifests and mcp.json configuration\n\n**Improved**\n- Subagent timelines identify whether prompts came from the main agent or another subagent\n\n**Fixed**\n- IDE integration reconnects reliably when the CLI reloads MCP servers or changes directory\n- Multi-turn subagent timelines show every prompt and response in the correct order after reopening /tasks",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-07-26T09:21:16Z",
+  "schema_version": 1
+}
