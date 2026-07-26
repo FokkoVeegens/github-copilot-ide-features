@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2026",
+  "version": "18.8.1",
+  "release_date": "2026-07-22",
+  "title": "Version 18.8.1",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+  "source": "html",
+  "body_markdown": "Released on **July 22, 2026**.\n\n| Top bug fixes | From the community |\n| --- | --- |\n| ASP.NET .NET Framework 4.8 scaffolding no longer offers views/controllers | [Feedback ticket](https://developercommunity.visualstudio.com/t/ASPNET-NET-Framework-48-scaffolding-n/11106119) |",
+  "body_html": "<p>Released on <strong>July 22, 2026</strong>.</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: left;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">ASP.NET .NET Framework 4.8 scaffolding no longer offers views/controllers</td>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/ASPNET-NET-Framework-48-scaffolding-n/11106119\">Feedback ticket</a></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-07-26T08:59:47Z",
+  "schema_version": 1
+}

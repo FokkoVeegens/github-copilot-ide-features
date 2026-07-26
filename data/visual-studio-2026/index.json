@@ -1,8 +1,18 @@
 [
   {
+    "version": "18.8.1",
+    "release_date": "2026-07-22",
+    "filename": "18.8.1.json"
+  },
+  {
     "version": "18.7.4",
     "release_date": "2026-07-14",
     "filename": "18.7.4.json"
+  },
+  {
+    "version": "18.8.0",
+    "release_date": "2026-07-14",
+    "filename": "18.8.0.json"
   },
   {
     "version": "18.7.3",
