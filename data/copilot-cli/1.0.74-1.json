@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.74-1",
+  "release_date": "2026-07-22",
+  "title": "1.0.74-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.74-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Show a first-run splash to opt into the default sandbox\n- Adding support for gemini-3.6-flash\n\n**Improved**\n- When multiplexing sessions, a session's open dialog no longer leaks into another session; eligible pickers reopen when you switch back\n- The `$` interactive shell shortcut now opens a shell even while the agent is working\n- Fully honor the skill disable-model-invocation flag\n- Warn when a participating language server reports a different symbol than the one requested\n- Steering interrupts shell output waits without stopping the running command\n- Increase the Responses request size limit\n- Plan mode now allows session-folder planning artifacts while still blocking clear file mutations outside the session folder.\n\n**Fixed**\n- The `/mcp add` and `/mcp edit` wizard now preserves `=` characters in environment variable values (such as base64 padding), so secrets and tokens are stored correctly.\n- Remote session uploads stop retrying permanent Mission Control 400/404 responses\n- Show Tab in /settings footer to switch scope tabs\n- Downscale oversized tool-result images so CAPI Responses requests continue",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-07-26T09:21:16Z",
+  "schema_version": 1
+}

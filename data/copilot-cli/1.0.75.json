@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.75",
+  "release_date": "2026-07-24",
+  "title": "1.0.75",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.75",
+  "source": "api",
+  "body_markdown": "2026-07-24\n\n- Add support for Claude Opus 5",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": false,
+  "fetched_at": "2026-07-26T09:21:16Z",
+  "schema_version": 1
+}
