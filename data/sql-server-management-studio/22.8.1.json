@@ -1,0 +1,14 @@
+{
+  "ide": "sql-server-management-studio",
+  "version": "22.8.1",
+  "release_date": "2026-07-22",
+  "title": "22.8.1",
+  "url": "https://learn.microsoft.com/en-us/ssms/release-notes-22",
+  "source": "html",
+  "body_markdown": "**[Download SQL Server Management Studio (SSMS) 22](https://aka.ms/ssms/22/release/vs_SSMS.exe)**\n\n* Release number: 22.8.1\n* Release date: July 22, 2026\n\n#### What's new in 22.8.1\n\n| Feature | Details |\n| --- | --- |\n| Visual Studio | Updated to Visual Studio 18.8.0 [12016.197]. |",
+  "body_html": "<p><strong><a data-linktype=\"external\" href=\"https://aka.ms/ssms/22/release/vs_SSMS.exe\">Download SQL Server Management Studio (SSMS) 22</a></strong></p>\n<ul>\n<li>Release number: 22.8.1</li>\n<li>Release date: July 22, 2026</li>\n</ul>\n<h4 id=\"whats-new-in-2281\">What's new in 22.8.1</h4>\n<table>\n<thead>\n<tr>\n<th>Feature</th>\n<th>Details</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Visual Studio</td>\n<td>Updated to Visual Studio 18.8.0 [12016.197].</td>\n</tr>\n</tbody>\n</table>\n<p><a id=\"22.8.0\"></a></p>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-07-26T09:02:49Z",
+  "schema_version": 1
+}
