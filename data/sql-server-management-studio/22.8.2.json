@@ -1,0 +1,16 @@
+{
+  "ide": "sql-server-management-studio",
+  "version": "22.8.2",
+  "release_date": "2026-07-28",
+  "title": "22.8.2",
+  "url": "https://learn.microsoft.com/en-us/ssms/release-notes-22",
+  "source": "html",
+  "body_markdown": "**[Download SQL Server Management Studio (SSMS) 22](https://aka.ms/ssms/22/release/vs_SSMS.exe)**\n\n* Release number: 22.8.2\n* Release date: July 28, 2026\n\n#### What's new in 22.8.2\n\n| Feature | Details |\n| --- | --- |\n| Visual Studio | Updated to Visual Studio 18.8.2 [12023.21]. |\n\n#### Bug fixes\n\n| Feature | Description |\n| --- | --- |\n| GitHub Copilot in SSMS | Fixed an issue that caused inline chat to fail with the error `There was a problem completing your request. Please try again.` |",
+  "body_html": "<p><strong><a data-linktype=\"external\" href=\"https://aka.ms/ssms/22/release/vs_SSMS.exe\">Download SQL Server Management Studio (SSMS) 22</a></strong></p>\n<ul>\n<li>Release number: 22.8.2</li>\n<li>Release date: July 28, 2026</li>\n</ul>\n<h4 id=\"whats-new-in-2282\">What's new in 22.8.2</h4>\n<table>\n<thead>\n<tr>\n<th>Feature</th>\n<th>Details</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Visual Studio</td>\n<td>Updated to Visual Studio 18.8.2 [12023.21].</td>\n</tr>\n</tbody>\n</table>\n<h4 id=\"bug-fixes\">Bug fixes</h4>\n<table>\n<thead>\n<tr>\n<th>Feature</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>GitHub Copilot in SSMS</td>\n<td>Fixed an issue that caused inline chat to fail with the error <code>There was a problem completing your request. Please try again.</code></td>\n</tr>\n</tbody>\n</table>\n<p><a id=\"22.8.1\"></a></p>",
+  "categories": [],
+  "copilot_mentions": [
+    "| GitHub Copilot in SSMS | Fixed an issue that caused inline chat to fail with the error `There was a problem completing your request. Please try again.` |"
+  ],
+  "fetched_at": "2026-08-03T10:27:56Z",
+  "schema_version": 1
+}
