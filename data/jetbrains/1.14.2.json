@@ -1,0 +1,37 @@
+{
+  "ide": "jetbrains",
+  "version": "1.14.2",
+  "release_date": "2026-07-28",
+  "title": "GitHub Copilot for JetBrains 1.14.2",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "### Bug Fixes\n\n* Fixed a model support issue.",
+  "body_html": "<h3>Bug Fixes</h3>\n\n<ul><li>Fixed a model support issue.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "builds": [
+    {
+      "ide_build": "251",
+      "since": "251.25410",
+      "until": "253.*",
+      "compatible_versions": {
+        "RUBYMINE": "2025.1.1 — 2025.3.6.1",
+        "RIDER": "2025.1.2 — 2025.3.5",
+        "RUST": "2025.1.2 — 2025.3.7",
+        "ANDROID_STUDIO": "Narwhal | 2025.1.1 — Panda 4 | 2025.3.4 Patch 1",
+        "CLION": "2025.1.1 — 2025.3.6.1",
+        "DBE": "2025.1.1 — 2025.3.6",
+        "DATASPELL": "2025.1.1 — 2025.3.2.1",
+        "GOLAND": "2025.1.1 — 2025.3.5.1",
+        "PHPSTORM": "2025.1.1 — 2025.3.6.1",
+        "WEBSTORM": "2025.1.1 — 2025.3.6.1",
+        "PYCHARM_PRO": "2025.1.1 — 2025.3.6.1",
+        "IDEA_PRO": "2025.1.1 — 2025.3.6.1"
+      },
+      "file_id": 1118432,
+      "downloads": 62724
+    }
+  ],
+  "fetched_at": "2026-08-03T10:10:04Z",
+  "schema_version": 1
+}
