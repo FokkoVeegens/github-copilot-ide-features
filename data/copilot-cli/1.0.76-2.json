@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.76-2",
+  "release_date": "2026-07-29",
+  "title": "1.0.76-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.76-2",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add a directable queue manager (staff) to reorder, edit, remove, repeat, and immediately send queued messages\n- New Sessions sidebar for managing multiple concurrent sessions: switch between them, spawn new ones, and see their status at a glance. Turn it on with experimental mode (`/experimental on`).\n- Enterprise administrators can enforce a restrictive sandbox floor: managed settings tighten (but never loosen) the user's sandbox policy, and the `/sandbox` dialog surfaces the org-configured managed values with locked fields and managed filesystem paths so admins can confirm what is enforced.\n\n**Improved**\n- Sandboxed searches now offer an immediate bypass prompt and avoid duplicate bypass prompts.\n\n**Fixed**\n- Sessions no longer fail every turn with \"Holder terminated during creation\" after a subagent finishes\n- Startup tips only suggest /init in repositories that don't already have Copilot instructions\n- A `userPromptSubmitted` hook returning a non-string value for `modifiedPrompt`, `modifiedTransformedPrompt`, or a handled `responseContent` no longer corrupts the session; the value is ignored, a type-only warning naming the field is logged, an empty-string replacement is rejected instead of blanking the model-facing content, a hook that sets `handled` without a usable `responseContent` is now diagnosed instead of silently falling through to the model, and a `null` `additionalContext` is treated as absent instead of being injected as the literal text `null`; hook output is also bounded at 10 MiB per invocation, so an HTTP or command hook returning an unbounded response can no longer exhaust memory or leave an oversized session behind\n- Show recent shell output for large commands that write to a file\n- The /instructions picker now respects --no-custom-instructions.\n- Render inline images in Rio terminals that support Kitty graphics",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Startup tips only suggest /init in repositories that don't already have Copilot instructions"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-08-03T10:50:18Z",
+  "schema_version": 1
+}

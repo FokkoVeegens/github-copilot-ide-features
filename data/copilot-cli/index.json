@@ -1,5 +1,60 @@
 [
   {
+    "version": "1.0.78-2",
+    "release_date": "2026-08-01",
+    "filename": "1.0.78-2.json"
+  },
+  {
+    "version": "1.0.78-0",
+    "release_date": "2026-07-31",
+    "filename": "1.0.78-0.json"
+  },
+  {
+    "version": "1.0.76",
+    "release_date": "2026-07-30",
+    "filename": "1.0.76.json"
+  },
+  {
+    "version": "1.0.77-0",
+    "release_date": "2026-07-30",
+    "filename": "1.0.77-0.json"
+  },
+  {
+    "version": "1.0.77",
+    "release_date": "2026-07-30",
+    "filename": "1.0.77.json"
+  },
+  {
+    "version": "1.0.76-2",
+    "release_date": "2026-07-29",
+    "filename": "1.0.76-2.json"
+  },
+  {
+    "version": "1.0.76-3",
+    "release_date": "2026-07-29",
+    "filename": "1.0.76-3.json"
+  },
+  {
+    "version": "1.0.76-4",
+    "release_date": "2026-07-29",
+    "filename": "1.0.76-4.json"
+  },
+  {
+    "version": "1.0.76-5",
+    "release_date": "2026-07-29",
+    "filename": "1.0.76-5.json"
+  },
+  {
+    "version": "1.0.76-1",
+    "release_date": "2026-07-28",
+    "filename": "1.0.76-1.json"
+  },
+  {
+    "version": "1.0.76-0",
+    "release_date": "2026-07-27",
+    "filename": "1.0.76-0.json"
+  },
+  {
     "version": "1.0.75",
     "release_date": "2026-07-24",
     "filename": "1.0.75.json"

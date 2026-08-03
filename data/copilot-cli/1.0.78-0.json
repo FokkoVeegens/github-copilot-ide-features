@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.78-0",
+  "release_date": "2026-07-31",
+  "title": "1.0.78-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.78-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add /permissions to switch between approval modes.\n- ACP mode supports closing sessions with the closeSession request.\n\n**Improved**\n- New sandbox setting `allowDevToolCaches` (on by default): grants sandboxed builds access to toolchain caches, registries, and installs so builds work without extra setup. Set false to opt out.\n- Honor explicit GitHub MCP toolset/tool config: keep gh-overlap tools and stop steering to the gh CLI when you opt in\n- Warn on startup about unknown top-level keys in user settings.json (e.g. a misspelled setting) instead of silently ignoring them\n- Shell completion for --model now suggests auto and supported model names\n- Render long session transcripts progressively to keep scrolling responsive\n- Resuming a long session is dramatically faster and far lighter on memory, because its history is now read once at startup (in parallel, across CPU cores) instead of being re-read in full for every check the CLI runs before it can paint. In our benchmark a 230MB, 74k-event transcript came back in well under a second instead of about ten, at roughly a quarter of the peak memory; the exact gain depends on your machine's core count and disk\n\n**Fixed**\n- Ctrl+Q now enqueues the highlighted mid-text skill completion instead of the partial token\n- Switching sessions no longer restarts MCP servers or rebuilds hook state, so a turn running in another session is never halted with a stale-hook error\n- Refresh deferred MCP tools after OAuth authentication\n\n**Removed**\n- The /allow-all auto safety-judge model is no longer user-configurable; the judge model is now selected automatically.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-08-03T10:50:18Z",
+  "schema_version": 1
+}

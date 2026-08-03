@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.76-3",
+  "release_date": "2026-07-29",
+  "title": "1.0.76-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.76-3",
+  "source": "api",
+  "body_markdown": "**Improved**\n- When an update is auto-downloaded, the notification suggests /restart and drops the warning color\n- /diff scrolls and syntax-highlights large multi-file diffs faster\n- Split-view sidebar: hover-to-focus is now off by default (opt in with `sidebar.hoverFocus`), the active session card is accented by default (opt out with `sidebar.accentActiveSession`), and the closed-state `open sidebar` hint always renders in the neutral hint color\n- `web_fetch` now follows HTTP redirects instead of failing, asking permission for the redirect target when it is on a different origin and showing where the redirect came from\n\n**Fixed**\n- Unsent prompt text now stays with the session it was typed for (for the rest of the CLI session) instead of following you to the session you switch to\n- Resuming a session now restores its autopilot or plan mode instead of reverting to interactive, so the autopilot-only `task_complete` tool stays available and the mode matches the session you left\n- URL permission prompts now keep their sandbox-bypass warning and the model's reason when a host integration rebuilds the prompt, so an elevated fetch is no longer shown as an ordinary one",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-08-03T10:50:18Z",
+  "schema_version": 1
+}

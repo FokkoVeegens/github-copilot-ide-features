@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.76-5",
+  "release_date": "2026-07-29",
+  "title": "1.0.76-5",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.76-5",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add enable/disable controls in /plugins for plugins, instructions, agents, LSP servers, and hooks\n- Add support for the grok-4.5 model",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-08-03T10:50:18Z",
+  "schema_version": 1
+}

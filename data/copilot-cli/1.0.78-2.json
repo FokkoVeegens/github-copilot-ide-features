@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.78-2",
+  "release_date": "2026-08-01",
+  "title": "1.0.78-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.78-2",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Split-view sidebar: the red close confirmation now reads `x again to close` (or `x again to exit CLI` on the last session) instead of `x close`, so a second press is clearly what closes\n\n**Fixed**\n- Extension slash commands run their handler exactly once per invocation when several extensions are loaded\n- Inline images no longer render with their first row repeated down the whole picture after the timeline scrolls\n- A run whose prompt is piped over stdin now treats its `sessionEnd` hook the same way `-p` does: the hook fires once per completed agent turn with `reason` `complete` (or `error` if the turn failed), instead of once at shutdown with `user_exit`. As with `-p`, a piped run that exits before completing a turn fires no `sessionEnd` hook",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-08-03T10:50:18Z",
+  "schema_version": 1
+}
