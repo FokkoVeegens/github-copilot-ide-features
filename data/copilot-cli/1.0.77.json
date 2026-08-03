@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.77",
+  "release_date": "2026-07-30",
+  "title": "1.0.77",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.77",
+  "source": "api",
+  "body_markdown": "2026-07-30\n\n- Unconditional autopilot approval now disables sandbox for the current session when bypass is allowed\n- Ctrl+G opens your editor to edit ask_user freeform answers without closing the prompt\n- Add a browser-based (web) OAuth login flow, now the default for `copilot login` on local interactive terminals (device code remains the default on remote/headless terminals). Use `--web-flow`/`--device-code` to force a mode, or pick one in the interactive `/login` command\n- Support enforcing managed sandbox policy via macOS and Windows native MDM settings\n- Allow reasoning effort to be omitted so the server can select the default",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Add a browser-based (web) OAuth login flow, now the default for `copilot login` on local interactive terminals (device code remains the default on remote/headless terminals). Use `--web-flow`/`--device-code` to force a mode, or pick one in the interactive `/login` command"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-08-03T10:50:18Z",
+  "schema_version": 1
+}
