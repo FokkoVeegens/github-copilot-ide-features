@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.79-3",
+  "release_date": "2026-08-05",
+  "title": "1.0.79-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.79-3",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Use `/worktree new` to start a new session in a new worktree",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-08-06T09:47:08Z",
+  "schema_version": 1
+}

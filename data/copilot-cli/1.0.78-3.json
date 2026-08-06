@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.78-3",
+  "release_date": "2026-08-03",
+  "title": "1.0.78-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.78-3",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add the experimental /new-worktree command to create a new worktree and start a new conversation in it\n\n**Improved**\n- Interactive shell shortcut now launches on Enter and shows an inline hint when \"$\" is armed\n\n**Fixed**\n- Copilot login now defaults to the browser flow for local desktop subprocesses without a TTY, including IDE integrations, while remote and headless environments continue using device code",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Copilot login now defaults to the browser flow for local desktop subprocesses without a TTY, including IDE integrations, while remote and headless environments continue using device code"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-08-06T09:47:08Z",
+  "schema_version": 1
+}
