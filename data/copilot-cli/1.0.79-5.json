@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.79-5",
+  "release_date": "2026-08-06",
+  "title": "1.0.79-5",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.79-5",
+  "source": "api",
+  "body_markdown": "**Added**\n- Manage multiple concurrent sessions from the Sessions tab and sidebar\n\n**Improved**\n- Prompt pinning is off by default; set pinnedPrompts to true to enable it.\n\n**Fixed**\n- Sandboxed wrapper builds (make and friends) get the dev tool caches their recipes need, based on the build manifests in the working directory",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-08-06T09:47:08Z",
+  "schema_version": 1
+}
