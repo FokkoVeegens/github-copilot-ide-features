@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.79-9",
+  "release_date": "2026-08-07",
+  "title": "1.0.79-9",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.79-9",
+  "source": "api",
+  "body_markdown": "**Improved**\n- The /sandbox configuration dialog shows where sandbox settings are stored in settings.json",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-08-11T08:13:35Z",
+  "schema_version": 1
+}

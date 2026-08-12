@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.79-8",
+  "release_date": "2026-08-07",
+  "title": "1.0.79-8",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.79-8",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add support for enterprise allow-auto-only policy so /allow-all auto works while full allow-all remains blocked.\n- Allow enterprise-managed sandbox policy to enforce a proxy URL while credentials remain user-controlled\n\n**Improved**\n- The /sandbox configuration dialog groups the git, gh, and (on macOS) keychain settings under a new Auth tab, and the settings keys moved from `sandbox.gitAuth`/`sandbox.ghAuth` to `sandbox.auth.git`/`sandbox.auth.gh`. There is no migration: the old keys are ignored in settings files, and SDK requests that still send them are rejected as invalid rather than ignored\n- Added a `worktreeBaseRef` setting that controls whether `/worktree`, `/worktree new`, and `--worktree` start from HEAD or the remote default branch. All three now default to HEAD; previously `--worktree` started from the remote default branch.\n- Model picker groups models into Recent, Recommended, New, and other sections, and Shift+Tab switches grouping views.\n- Large monorepos now use tgrep ([trigram-indexed grep for fast regex search in large codebases](https://github.com/microsoft/tgrep)) instead of ripgrep\n\n**Fixed**\n- A tool directory inside your workspace that is on PATH (.venv/bin, node_modules/.bin, an in-repo GOPATH) no longer turns that part of the workspace read-only in the sandbox",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-08-11T08:13:35Z",
+  "schema_version": 1
+}
