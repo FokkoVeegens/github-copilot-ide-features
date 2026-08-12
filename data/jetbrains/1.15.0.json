@@ -1,0 +1,45 @@
+{
+  "ide": "jetbrains",
+  "version": "1.15.0",
+  "release_date": "2026-08-07",
+  "title": "GitHub Copilot for JetBrains 1.15.0",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "### New Features\n\n* Added Ollama as a BYOK provider across backend and JetBrains UI flows, including provider wiring and model handling.\n* Added Copilot CLI auto-install support in JetBrains IDE integrated terminals on macOS, Linux, and Windows.\n* Added support for server-based Enterprise Managed Policy:\n  + plugin settings: enabledPlugins, extraKnownMarketplaces, strictKnownMarketplaces\n  + MCP settings: allowedMcpServers and deniedMcpServers\n  + permission setting: permissions.disableBypassPermissionsMode\n  + OpenTelemetry settings: telemetry\n* Added Codex-focused capabilities, including session visibility in Agent Debug Logs, permission-mode catalog updates, and customization support for instructions and skills.\n* Added Copilot Memory support in the Copilot CLI chat experience to persist and recall information across sessions, managed via toggle in the Copilot settings portal.\n\n### UX Improvements\n\n* Improved account management flows by supporting account switch/removal and polishing account-deletion interactions.\n* Improved model and settings usability by capping long model-name width in the model picker and refining model view/todo list panel behavior.\n* Improved background-agent workflows with drag-and-drop support, copy-agent-message support, and clearer autopilot completion summaries.\n* Restored file and folder `#` references in Copilot, Claude, and Codex chat inputs.\n\n### Bug Fixes\n\n* Fixed MCP execution and approval issues, including preserving gateway refreshes after CLS restart and correcting auto-approve behavior for Copilot-only servers.\n* Fixed terminal and command-output issues, including ANSI escape rendering, deterministic scrollbar reservation, and terminal auto-approve/reset behavior in Chat.\n* Fixed customization and cloud-agent reliability issues.\n* Fixed diff/edit stability issues.\n\n### Changed\n\n* Changed user-facing naming from “Copilot CLI” to “Copilot” in product strings.\n* Changed support permission requests and permission modes selection for Codex.",
+  "body_html": "<h3>New Features</h3>\n\n<ul><li>Added Ollama as a BYOK provider across backend and JetBrains UI flows, including provider wiring and model handling.</li><li>Added Copilot CLI auto-install support in JetBrains IDE integrated terminals on macOS, Linux, and Windows.</li><li>Added support for server-based Enterprise Managed Policy:<ul><li>plugin settings: enabledPlugins, extraKnownMarketplaces, strictKnownMarketplaces</li><li>MCP settings: allowedMcpServers and deniedMcpServers</li><li>permission setting: permissions.disableBypassPermissionsMode</li><li>OpenTelemetry settings: telemetry</li></ul></li><li>Added Codex-focused capabilities, including session visibility in Agent Debug Logs, permission-mode catalog updates, and customization support for instructions and skills.</li><li>Added Copilot Memory support in the Copilot CLI chat experience to persist and recall information across sessions, managed via toggle in the Copilot settings portal.</li></ul>\n\n<h3>UX Improvements</h3>\n\n<ul><li>Improved account management flows by supporting account switch/removal and polishing account-deletion interactions.</li><li>Improved model and settings usability by capping long model-name width in the model picker and refining model view/todo list panel behavior.</li><li>Improved background-agent workflows with drag-and-drop support, copy-agent-message support, and clearer autopilot completion summaries.</li><li>Restored file and folder <code>#</code> references in Copilot, Claude, and Codex chat inputs.</li></ul>\n\n<h3>Bug Fixes</h3>\n\n<ul><li>Fixed MCP execution and approval issues, including preserving gateway refreshes after CLS restart and correcting auto-approve behavior for Copilot-only servers.</li><li>Fixed terminal and command-output issues, including ANSI escape rendering, deterministic scrollbar reservation, and terminal auto-approve/reset behavior in Chat.</li><li>Fixed customization and cloud-agent reliability issues.</li><li>Fixed diff/edit stability issues.</li></ul>\n\n<h3>Changed</h3>\n\n<ul><li>Changed user-facing naming from “Copilot CLI” to “Copilot” in product strings.</li><li>Changed support permission requests and permission modes selection for Codex.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Added Copilot CLI auto-install support in JetBrains IDE integrated terminals on macOS, Linux, and Windows.",
+    "* Added Copilot Memory support in the Copilot CLI chat experience to persist and recall information across sessions, managed via toggle in the Copilot settings portal.",
+    "* Restored file and folder `#` references in Copilot, Claude, and Codex chat inputs.",
+    "* Fixed MCP execution and approval issues, including preserving gateway refreshes after CLS restart and correcting auto-approve behavior for Copilot-only servers.",
+    "* Changed user-facing naming from “Copilot CLI” to “Copilot” in product strings."
+  ],
+  "builds": [
+    {
+      "ide_build": "251",
+      "since": "251.25410",
+      "until": "253.*",
+      "compatible_versions": {
+        "ANDROID_STUDIO": "Narwhal | 2025.1.1 — Panda 4 | 2025.3.4 Patch 1",
+        "RIDER": "2025.1.2 — 2025.3.5",
+        "GOLAND": "2025.1.1 — 2025.3.5.1",
+        "CLION": "2025.1.1 — 2025.3.6.1",
+        "DBE": "2025.1.1 — 2025.3.6",
+        "PYCHARM_COMMUNITY": "2025.1.1 — 2025.3",
+        "RUBYMINE": "2025.1.1 — 2025.3.6.1",
+        "IDEA_COMMUNITY": "2025.1.1 — 2025.3",
+        "WEBSTORM": "2025.1.1 — 2025.3.6.1",
+        "IDEA": "2025.1.1 — 2025.3.6.1",
+        "DATASPELL": "2025.1.1 — 2025.3.3",
+        "PHPSTORM": "2025.1.1 — 2025.3.6.1",
+        "RUST": "2025.1.2 — 2025.3.7",
+        "PYCHARM": "2025.1.1 — 2025.3.6.1"
+      },
+      "file_id": 1128708,
+      "downloads": 46516
+    }
+  ],
+  "fetched_at": "2026-08-11T07:43:23Z",
+  "schema_version": 1
+}
