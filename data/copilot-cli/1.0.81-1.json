@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.81-1",
+  "release_date": "2026-08-18",
+  "title": "1.0.81-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add support for Gemini 3.7 Flash\n- Add Ctrl+E in /sandbox to open settings.json in your editor\n- Add per-agent usage metrics to --usage-output-file JSON output\n\n**Improved**\n- Use x to remove scheduled /every and /after prompts in Schedule Manager\n\n**Fixed**\n- Turning allow-all off from an ACP client now reaches the permission engine whenever there is a runtime override or auto-approval to revoke, so the setting can no longer report success while permissions stay enabled (a baseline granted by --allow-all-* launch flags is still deliberately left intact)\n- A failed tool call no longer stacks its `(MCP: server)` label one character per line down the timeline — the label and the error now share the row, with the longer side truncating\n- Agents, skills and MCP servers contributed by installed plugins are no longer dropped in non-interactive (-p) runs, so --agent <plugin>:<agent> works headlessly without --plugin-dir\n- Typing `$` and pressing Enter opens the interactive shell again, instead of clearing the prompt and doing nothing\n- The prompt frame now renders in terminals it previously skipped, such as foot and alacritty, instead of a fixed list\n- A prompt queued while the agent is working stays visible instead of vanishing when you send another one\n- The sessions sidebar's keyboard cursor is visible again, and selected rows in the Select family, the diff viewer and custom picker rows now pair the selection fill with the text color derived for it.\n- Keys sent to an unfocused terminal pane are no longer dropped: Enter and other keystrokes are handled even after a terminal focus-out report, so tmux and agent multiplexers can drive a background pane",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-08-23T07:42:27Z",
+  "schema_version": 1
+}

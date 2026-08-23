@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.81-5",
+  "release_date": "2026-08-19",
+  "title": "1.0.81-5",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-5",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- A prompt sent while the agent is working no longer leaves a second copy of itself stuck as `(pending)` at the bottom of the transcript after it has been answered",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-08-23T07:42:27Z",
+  "schema_version": 1
+}
