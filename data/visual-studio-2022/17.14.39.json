@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.14.39",
+  "release_date": "2026-08-18",
+  "title": "Version 17.14.39",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes",
+  "source": "html",
+  "body_markdown": "*Released August 18th, 2026*\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Visual Studio 2022 closes with ServiceHub.DataWarehouseHost.exe fail-fast popup | [Feedback Ticket](https://developercommunity.visualstudio.com/t/Visual-Studio-2022-closes-with-ServiceHu/11125516) |",
+  "body_html": "<p><em>Released August 18<sup>th</sup>, 2026</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Visual Studio 2022 closes with ServiceHub.DataWarehouseHost.exe fail-fast popup</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Visual-Studio-2022-closes-with-ServiceHu/11125516\">Feedback Ticket</a></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-08-23T07:19:23Z",
+  "schema_version": 1
+}
