@@ -1,0 +1,21 @@
+{
+  "ide": "xcode",
+  "version": "0.51.0",
+  "xcode_era": "xcode-latest",
+  "release_date": "2026-08-12",
+  "title": "GitHub Copilot for Xcode 0.51.0 – Xcode latest releases",
+  "url": "https://raw.githubusercontent.com/github/CopilotForXcode/main/CHANGELOG.md",
+  "source": "html",
+  "body_markdown": "### Added\n- Support for Kimi K3 through the updated Copilot language server.\n- Agent Client Protocol (ACP) plugin metadata for GitHub Copilot.\n\n### Changed\n- Updated the Copilot language server from 1.488.0 to 1.523.3.\n- Updated the ACP plugin to use Copilot CLI 1.0.78.\n\n### Fixed\n- Fixed model pricing tooltips for the latest token pricing metadata.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Support for Kimi K3 through the updated Copilot language server.",
+    "- Agent Client Protocol (ACP) plugin metadata for GitHub Copilot.",
+    "- Updated the Copilot language server from 1.488.0 to 1.523.3.",
+    "- Updated the ACP plugin to use Copilot CLI 1.0.78."
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-08-23T07:17:32Z",
+  "schema_version": 1
+}
