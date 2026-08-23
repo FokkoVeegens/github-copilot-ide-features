@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.81-6",
+  "release_date": "2026-08-20",
+  "title": "1.0.81-6",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-6",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add defaultMode and defaultPermissionMode settings to choose startup mode and approval behavior for new interactive sessions\n- Add --with-token to copilot login to read an auth token from stdin\n\n**Improved**\n- ACP clients receive subagent IDs, raw event subscriptions, and live title, mode, command, and plan updates\n- Show each user instruction file separately in /instructions\n- Managed settings now win per entry for enabledPlugins and extraKnownMarketplaces, so a plugin or marketplace your organization pins can't be overridden locally\n\n**Fixed**\n- Canvas windows open and refresh in the background instead of stealing focus from your terminal",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Add --with-token to copilot login to read an auth token from stdin"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-08-23T07:42:27Z",
+  "schema_version": 1
+}

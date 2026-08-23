@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.81-7",
+  "release_date": "2026-08-21",
+  "title": "1.0.81-7",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-7",
+  "source": "api",
+  "body_markdown": "**Added**\n- Startup now offers to restore sessions that were still open when their CLI went away, so a crash or a machine restart no longer means reopening each terminal by hand\n- models.list now includes service-published infoMessages and warningMessages per model\n- Add `copilot app` to open the GitHub Copilot app in the current directory\n\n**Improved**\n- Use Ctrl+Space to toggle voice dictation.\n- A session sandboxed by an enterprise managed policy now says so on the timeline, including when the policy arrives mid-session, instead of leaving the footer's sandbox chip as the only hint that commands are being restricted\n- forceRemoteSettingsRefresh now fails closed: when set, the cached managed-settings policy is never served or used as a fetch-failure fallback (skipping both the 1h fast path and the 24h stale fallback), so a failed startup fetch blocks on the unconfirmed policy instead of reverting to a possibly-stale cached one. Concretely, until a fresh policy is fetched the session applies the restrictive undetermined-policy posture: non-default MCP servers are blocked, bypass-permissions mode cannot be enabled, and policy-gated plugin install/update mutations are blocked\n\n**Fixed**\n- An enterprise managed-settings policy is no longer rejected when `permissions.disableBypassPermissionsMode` carries an unrecognized value; it is now logged and enforced as `disable`.\n- Sandboxed builds on Windows create their scratch caches on first run, so cargo, go, Gradle, and ccache work without a warm cache\n- On macOS and Linux, shell commands resolve the same tools a bash login shell does, including project environments activated from a profile",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Add `copilot app` to open the GitHub Copilot app in the current directory"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-08-23T07:42:27Z",
+  "schema_version": 1
+}
