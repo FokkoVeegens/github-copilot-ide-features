@@ -1,0 +1,16 @@
+{
+  "ide": "visual-studio-2026",
+  "version": "18.9.1",
+  "release_date": "2026-08-18",
+  "title": "Version 18.9.1",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+  "source": "html",
+  "body_markdown": "Released on **August 18, 2026**\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Copilot Command preview dialog is not scrollable, blocking allow or deny actions | [Feedback Ticket](https://developercommunity.visualstudio.com/t/Copilot-Command-preview-dialog-is-not-sc/11121447) |\n| Fix to Test Agent in 18.9.0 |  |",
+  "body_html": "<p>Released on <strong>August 18, 2026</strong></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Copilot Command preview dialog is not scrollable, blocking allow or deny actions</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Copilot-Command-preview-dialog-is-not-sc/11121447\">Feedback Ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Fix to Test Agent in 18.9.0</td>\n<td style=\"text-align: right;\"></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [
+    "| Copilot Command preview dialog is not scrollable, blocking allow or deny actions | [Feedback Ticket](https://developercommunity.visualstudio.com/t/Copilot-Command-preview-dialog-is-not-sc/11121447) |"
+  ],
+  "fetched_at": "2026-08-23T07:18:39Z",
+  "schema_version": 1
+}
