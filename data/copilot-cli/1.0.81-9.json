@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.81-9",
+  "release_date": "2026-08-24",
+  "title": "1.0.81-9",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-9",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Show model data retention warnings with links in the /model picker",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-08-25T07:53:18Z",
+  "schema_version": 1
+}

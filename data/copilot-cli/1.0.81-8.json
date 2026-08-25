@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.81-8",
+  "release_date": "2026-08-23",
+  "title": "1.0.81-8",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-8",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add xhigh reasoning effort support for Grok 4.6\n\n**Improved**\n- Path-sourced plugins in a local (directory-source) marketplace now load live from their real directory, so editing one takes effect on `/restart` or a new session — no `/plugin update`\n- Skills and custom agents are discovered from directories added with --add-dir\n\n**Fixed**\n- Signing out of an account now clears its cached enterprise managed settings, so signing back in generally re-fetches the policy rather than re-applying the one cached before sign-out",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-08-25T07:53:18Z",
+  "schema_version": 1
+}
