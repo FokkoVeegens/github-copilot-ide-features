@@ -1,0 +1,46 @@
+{
+  "ide": "jetbrains",
+  "version": "1.16.0",
+  "release_date": "2026-08-21",
+  "title": "GitHub Copilot for JetBrains 1.16.0",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "### New Features\n\n* Added built-in JetBrains MCP server support (Preview).\n* Added post-update release discovery by showing a **What's New** tab after plugin updates.\n* Added Copilot harness `/review` integrations in JetBrains.\n* Added plugin support in Claude agent flows.\n\n### UX Improvements\n\n* Improved model-management usability with stronger search behavior, a clear action in search, resizable **Language Models** table columns, and promo ordering refinements.\n* Improved debug-log exploration with event-time sorting, token-usage filters, refined layout behavior.\n* Improved chat ergonomics by scrolling long tool output, adding review-plan-card scrolling, and adding shortcuts for send options.\n* Improved customization handling in multi-root workspaces by discovering customizations across all folders and honoring client-provided customization locations.\n\n### Bug Fixes\n\n* Fixed account and sign-in reliability issues, including account-state detection, account ordering in picker flows, and sign-in settings-page interaction issues.\n* Fixed MCP reliability issues, including invalid registry-schema handling, stale tool checks after account switches, and UI freezes during auto-enable flows.\n* Fixed BYOK and model-refresh reliability issues.\n* Fixed Copilot Agent continuity issues, including model switching after resume and complete model-info propagation for resumed sessions.\n* Fixed editor and message-rendering defects.\n* Fixed Worktree sessions failing to start for projects opened from WSL.\n* Restored file and folder `#` references in Copilot, Claude, and Codex chat inputs.\n* Fixed MCP tool auto-approve configuration for servers running only in Copilot.\n\n### Changed\n\n* Copilot harness is now GA.\n* Plugins support is now GA.\n* Autopilot is now GA.\n* Changed routing for reasoning-capable BYOK OpenAI models to use the Responses API.\n* Changed Copilot harness `/review` availability so it is limited to agent mode.",
+  "body_html": "<h3>New Features</h3>\n\n<ul><li>Added built-in JetBrains MCP server support (Preview).</li><li>Added post-update release discovery by showing a <strong>What's New</strong> tab after plugin updates.</li><li>Added Copilot harness <code>/review</code> integrations in JetBrains.</li><li>Added plugin support in Claude agent flows.</li></ul>\n\n<h3>UX Improvements</h3>\n\n<ul><li>Improved model-management usability with stronger search behavior, a clear action in search, resizable <strong>Language Models</strong> table columns, and promo ordering refinements.</li><li>Improved debug-log exploration with event-time sorting, token-usage filters, refined layout behavior.</li><li>Improved chat ergonomics by scrolling long tool output, adding review-plan-card scrolling, and adding shortcuts for send options.</li><li>Improved customization handling in multi-root workspaces by discovering customizations across all folders and honoring client-provided customization locations.</li></ul>\n\n<h3>Bug Fixes</h3>\n\n<ul><li>Fixed account and sign-in reliability issues, including account-state detection, account ordering in picker flows, and sign-in settings-page interaction issues.</li><li>Fixed MCP reliability issues, including invalid registry-schema handling, stale tool checks after account switches, and UI freezes during auto-enable flows.</li><li>Fixed BYOK and model-refresh reliability issues.</li><li>Fixed Copilot Agent continuity issues, including model switching after resume and complete model-info propagation for resumed sessions.</li><li>Fixed editor and message-rendering defects.</li><li>Fixed Worktree sessions failing to start for projects opened from WSL.</li><li>Restored file and folder <code>#</code> references in Copilot, Claude, and Codex chat inputs.</li><li>Fixed MCP tool auto-approve configuration for servers running only in Copilot.</li></ul>\n\n<h3>Changed</h3>\n\n<ul><li>Copilot harness is now GA.</li><li>Plugins support is now GA.</li><li>Autopilot is now GA.</li><li>Changed routing for reasoning-capable BYOK OpenAI models to use the Responses API.</li><li>Changed Copilot harness <code>/review</code> availability so it is limited to agent mode.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Added Copilot harness `/review` integrations in JetBrains.",
+    "* Fixed Copilot Agent continuity issues, including model switching after resume and complete model-info propagation for resumed sessions.",
+    "* Restored file and folder `#` references in Copilot, Claude, and Codex chat inputs.",
+    "* Fixed MCP tool auto-approve configuration for servers running only in Copilot.",
+    "* Copilot harness is now GA.",
+    "* Changed Copilot harness `/review` availability so it is limited to agent mode."
+  ],
+  "builds": [
+    {
+      "ide_build": "251",
+      "since": "251.25410",
+      "until": "253.*",
+      "compatible_versions": {
+        "CLION": "2025.1.1 — 2025.3.6.1",
+        "DATASPELL": "2025.1.1 — 2025.3.3",
+        "IDEA": "2025.1.1 — 2025.3.6.1",
+        "GOLAND": "2025.1.1 — 2025.3.5.1",
+        "DBE": "2025.1.1 — 2025.3.6",
+        "WEBSTORM": "2025.1.1 — 2025.3.6.1",
+        "RUBYMINE": "2025.1.1 — 2025.3.6.1",
+        "ANDROID_STUDIO": "Narwhal | 2025.1.1 — Panda 4 | 2025.3.4 Patch 1",
+        "RUST": "2025.1.2 — 2025.3.7",
+        "PYCHARM": "2025.1.1 — 2025.3.6.1",
+        "PHPSTORM": "2025.1.1 — 2025.3.6.1",
+        "IDEA_COMMUNITY": "2025.1.1 — 2025.3",
+        "RIDER": "2025.1.2 — 2025.3.5",
+        "PYCHARM_COMMUNITY": "2025.1.1 — 2025.3"
+      },
+      "file_id": 1146054,
+      "downloads": 21
+    }
+  ],
+  "fetched_at": "2026-08-28T18:51:23Z",
+  "schema_version": 1
+}
