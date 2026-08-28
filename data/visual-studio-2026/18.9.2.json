@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2026",
+  "version": "18.9.2",
+  "release_date": "2026-08-25",
+  "title": "Version 18.9.2",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+  "source": "html",
+  "body_markdown": "Released on **August 25, 2026**.\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Includes additional platform hardening and secure-development improvements |  |\n| Normal Paste in Solution Explorer now creates a physical copy of files copied from Windows File Explorer instead of adding them as linked items |  |",
+  "body_html": "<p>Released on <strong>August 25, 2026</strong>.</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Includes additional platform hardening and secure-development improvements</td>\n<td style=\"text-align: right;\"></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Normal Paste in Solution Explorer now creates a physical copy of files copied from Windows File Explorer instead of adding them as linked items</td>\n<td style=\"text-align: right;\"></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-08-28T18:59:17Z",
+  "schema_version": 1
+}
