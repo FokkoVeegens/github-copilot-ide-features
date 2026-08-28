@@ -1,0 +1,42 @@
+{
+  "ide": "jetbrains",
+  "version": "1.16.1",
+  "release_date": "2026-08-25",
+  "title": "GitHub Copilot for JetBrains 1.16.1",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "### New Features\n\n* Show guided onboarding tips for Copilot users without prior sessions.\n\n### Bug Fixes\n\n* Fixed Copilot UI panels failing to open since JetBrains IDE `2026.2.2 Preview`.",
+  "body_html": "<h3>New Features</h3>\n\n<ul><li>Show guided onboarding tips for Copilot users without prior sessions.</li></ul>\n\n<h3>Bug Fixes</h3>\n\n<ul><li>Fixed Copilot UI panels failing to open since JetBrains IDE <code>2026.2.2 Preview</code>.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Show guided onboarding tips for Copilot users without prior sessions.",
+    "* Fixed Copilot UI panels failing to open since JetBrains IDE `2026.2.2 Preview`."
+  ],
+  "builds": [
+    {
+      "ide_build": "251",
+      "since": "251.25410",
+      "until": "253.*",
+      "compatible_versions": {
+        "CLION": "2025.1.1 — 2025.3.6.1",
+        "DATASPELL": "2025.1.1 — 2025.3.3",
+        "IDEA": "2025.1.1 — 2025.3.6.1",
+        "GOLAND": "2025.1.1 — 2025.3.5.1",
+        "DBE": "2025.1.1 — 2025.3.6",
+        "WEBSTORM": "2025.1.1 — 2025.3.6.1",
+        "RUBYMINE": "2025.1.1 — 2025.3.6.1",
+        "ANDROID_STUDIO": "Narwhal | 2025.1.1 — Panda 4 | 2025.3.4 Patch 1",
+        "RUST": "2025.1.2 — 2025.3.7",
+        "PYCHARM": "2025.1.1 — 2025.3.6.1",
+        "PHPSTORM": "2025.1.1 — 2025.3.6.1",
+        "IDEA_COMMUNITY": "2025.1.1 — 2025.3",
+        "RIDER": "2025.1.2 — 2025.3.5",
+        "PYCHARM_COMMUNITY": "2025.1.1 — 2025.3"
+      },
+      "file_id": 1150255,
+      "downloads": 61437
+    }
+  ],
+  "fetched_at": "2026-08-28T18:51:23Z",
+  "schema_version": 1
+}
