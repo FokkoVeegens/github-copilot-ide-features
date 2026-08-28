@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.81-14",
+  "release_date": "2026-08-27",
+  "title": "1.0.81-14",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-14",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Resume large sessions faster by showing recent history first while older messages load.\n\n**Fixed**\n- Repeated read_agent calls now consistently return the full turn history unless since_turn is provided",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-08-28T19:23:42Z",
+  "schema_version": 1
+}
