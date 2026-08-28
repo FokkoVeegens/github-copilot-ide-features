@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.81-11",
+  "release_date": "2026-08-26",
+  "title": "1.0.81-11",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-11",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- An MCP server blocked by an enterprise policy now shows as blocked in /mcp instead of spinning as pending forever",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-08-28T19:23:42Z",
+  "schema_version": 1
+}

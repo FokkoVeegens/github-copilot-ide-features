@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.81-13",
+  "release_date": "2026-08-27",
+  "title": "1.0.81-13",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.81-13",
+  "source": "api",
+  "body_markdown": "**Added**\n- Hooks can now receive the current OpenTelemetry trace context and emit correlated spans: inputs gain `traceparent` (plus `tracestate` when the span has vendor state); command hooks also get env vars.\n\n**Fixed**\n- Hook lifecycle events (`hook.start`/`hook.end`) from hooks inside a subagent are now recorded on that subagent's session and re-emitted on its parent, instead of being dropped on an internal session.\n\n**Removed**\n- Removed the `PLUGINS_DASHBOARD` opt-out and the legacy skills picker it kept alive. `/skills`, bare `/mcp`, and `/mcp show` (with no server name) always open the dashboard; `/mcp config` still opens the dedicated MCP wizard.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-08-28T19:23:42Z",
+  "schema_version": 1
+}
