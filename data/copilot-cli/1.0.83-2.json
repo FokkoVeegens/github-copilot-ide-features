@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.83-2",
+  "release_date": "2026-09-02",
+  "title": "1.0.83-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.83-2",
+  "source": "api",
+  "body_markdown": "**Added**\n- Custom agents can list several models in `model`, tried in order until one is available to you, and `model-policy: required` keeps model changes on that list\n- Adding support for claude-fable-5.1\n\n**Improved**\n- Linux sandboxes now restrict network egress to the configured proxy; proxy mode requires slirp4netns, util-linux 2.35+, iptables, and /dev/net/tun access",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-09-02T12:04:20Z",
+  "schema_version": 1
+}
