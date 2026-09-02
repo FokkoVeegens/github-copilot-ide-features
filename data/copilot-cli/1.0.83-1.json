@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.83-1",
+  "release_date": "2026-09-01",
+  "title": "1.0.83-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.83-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add Recent, Created, Name, and classic None sorting to the split Sessions sidebar, with the selected order saved across restarts\n- Enterprise admins can pin sign-in to approved GitHub organizations with the forceLoginOrgs managed setting\n\n**Improved**\n- `/mcp config` and the MCP add/edit/authenticate forms now open in the plugins dashboard instead of a separate MCP manager, so closing a form returns to the server list.\n- File path autocomplete stays fast in large repositories\n- Plugin list commands and /plugin now show bundled built-in plugins.\n- Improve sandboxed Bazel and Bazelisk runs by granting required cache and output paths; macOS requires a future Bazel release or additional sandbox capabilities\n- The collapsed autopilot goal panel now reads as a single-line pinned prompt, keeping the frame it shares with a pinned prompt instead of compressing into a bare band wedged against the chrome above it\n\n**Fixed**\n- A relative `--add-dir` or `--plugin-dir` path now resolves against the session's working directory under `--resume=<id>` and `--worktree`, instead of the directory the CLI was launched from. Relative values are also resolved after `-C` is applied, so `-C` no longer has to precede either option on the command line\n- MCP servers contributed by a plugin are no longer labelled \"User\" in the MCP dashboard, and a server from a bundled plugin is now shown as built-in and names the plugin it came from.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-09-02T12:04:20Z",
+  "schema_version": 1
+}

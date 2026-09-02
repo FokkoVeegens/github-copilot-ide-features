@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.83-0",
+  "release_date": "2026-08-31",
+  "title": "1.0.83-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.83-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add automatic HTTPS proxy mTLS client certificate support for model and web requests\n- Detect the herdr terminal multiplexer instead of mistaking it for tmux, so the Kitty keyboard protocol, color scheme following, terminal progress, `/copy` and notifications work in herdr panes\n\n**Improved**\n- Improve /sandbox policy by grouping path grants by source and showing detected developer tools\n\n**Fixed**\n- The newest line of output stays visible above the input box instead of hiding behind it, except while a prompt is pinned to the top of the transcript\n- Exporting a resumed session with --share or --share-gist writes the whole transcript instead of only the latest run",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-09-02T12:04:20Z",
+  "schema_version": 1
+}
