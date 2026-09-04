@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.83-4",
+  "release_date": "2026-09-03",
+  "title": "1.0.83-4",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.83-4",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add Client ID Metadata Document (CIMD) support for MCP OAuth sign-in\n\n**Improved**\n- CLI starts without the interrupted-session restore prompt by default.\n- Resuming large sessions keeps the input prompt responsive sooner.\n\n**Fixed**\n- Sandboxed file tools now read the same developer-tool paths as sandboxed shell commands, including token-bearing registry config such as ~/.npmrc; set sandbox.allowDevToolAccess to false to turn these grants off\n- Stopping a timed-out shell command now lets queued messages run and sessions return to idle\n- A follow-up prompt typed while autopilot is running no longer disappears from the timeline\n- Restart provides clearer update guidance when automatic restart cannot be completed\n- MCP servers configured by your agent stay available after built-in sub-agent turns.\n- Anthropic sessions continue after temporary fallback instead of failing on invalid thinking signatures\n- Long-running sessions on Linux return freed memory to the system instead of holding gigabytes of it\n- Enterprise-denied MCP servers can no longer start before the managed allow/deny policy resolves; server startup now waits for the managed-settings fetch instead of racing it\n- Host-provided plugin customizations can be read without redundant path permission prompts\n\n**Removed**\n- Remove retired Claude and Gemini models from /model picker results",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-09-04T12:05:32Z",
+  "schema_version": 1
+}
