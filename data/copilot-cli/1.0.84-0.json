@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.84-0",
+  "release_date": "2026-09-04",
+  "title": "1.0.84-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.84-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Managed sandbox sessions can now be disabled for the rest of the session from an approved bypass prompt.\n\n**Fixed**\n- A PowerShell write the sandbox blocks offers to run the command outside the sandbox\n- When you have more than one GitHub account in your credential store, a sandboxed gh command now acts as the account gh is logged in as instead of an arbitrary one.\n- The `/rubber-duck` command is hidden after a model refresh removes its compatible critic\n- Sandboxed runs now use relocated developer-tool caches from env vars and tool config files\n- On Windows, a sandboxed command that runs git without naming it — a hook, a build tool, or an npm install that clones over HTTPS — no longer dies inside the credential helper's MSYS2 shell.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-09-06T11:37:22Z",
+  "schema_version": 1
+}
