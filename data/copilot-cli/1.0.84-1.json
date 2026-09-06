@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.84-1",
+  "release_date": "2026-09-04",
+  "title": "1.0.84-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.84-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add support for GPT-6 Astra",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-09-06T11:37:22Z",
+  "schema_version": 1
+}
