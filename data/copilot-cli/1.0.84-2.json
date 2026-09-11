@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.84-2",
+  "release_date": "2026-09-08",
+  "title": "1.0.84-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.84-2",
+  "source": "api",
+  "body_markdown": "**New**\n- Vim mode is now available to everyone. Turn it on with `/vim` or by setting `editorMode` to `vim` for modal editing in the composer, with the current mode shown while you type.\n\n**Improved**\n- On supported Windows sandbox policies, interactive shell commands now record blocked accesses. One approved escalation retries with file and process restrictions recording instead of blocking while network policy remains active, then falls back to the disclosed full bypass only if still blocked\n- Speed up startup when resuming an existing local session by its exact UUID with `--resume`\n\n**Fixed**\n- `ctrl+h` no longer deletes a whole word in tmux, screen, and remote sessions that carry a Windows Terminal `WT_SESSION` from elsewhere. As an accepted tradeoff, `ctrl+backspace` now deletes a single character in those sessions — including a genuinely local Windows tmux or screen pane — where `ctrl+w` still deletes a word\n- MCP servers now see the same copilot-cli client identity when you add a server and when a session connects, carrying the shipped CLI version instead of 0.0.0\n- Interactive mode starts and submits the initial prompt when using --auth-token-env\n- Use /settings taskbarPresence false to disable Windows taskbar session status. Loader-managed sessions restart immediately; standalone sessions require a manual restart.\n- Pressing Escape once cancels MCP inference approval prompts once\n- MCP reload summary shows servers still starting after timeout\n- Initial prompts start immediately for Entra-authenticated sessions while token refresh runs in the background.\n- Choosing approve-for-location now persists tool approval to avoid repeat prompts\n- Large sessions resume without freezing the interface during context token counting\n- Configured hooks keep running after an extension restarts instead of silently stopping and later denying every tool call; the extension's own callback hooks resume once it re-registers\n- The `allowManagedHooksOnly` policy now also blocks extension-registered `preToolUse`, `postToolUse` and `postToolUseFailure` callbacks, which previously bypassed the managed-only lockdown that every other hook event already applied",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- MCP servers now see the same copilot-cli client identity when you add a server and when a session connects, carrying the shipped CLI version instead of 0.0.0"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-09-11T12:10:10Z",
+  "schema_version": 1
+}

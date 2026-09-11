@@ -1,0 +1,23 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.84-4",
+  "release_date": "2026-09-10",
+  "title": "1.0.84-4",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.84-4",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add `copilot instruction list` and `copilot lsp list`, replacing `copilot plugins list --kind instruction` and `--kind lsp`\n- Add `--json` to `copilot plugin list`, `copilot plugin marketplace list` and `copilot plugin marketplace browse`\n- Add `enable` and `disable` to `copilot plugin`, `copilot mcp` and `copilot skill`, replacing `copilot plugins enable/disable --plugin|--mcp|--skill`\n\n**Fixed**\n- Show when sandboxing is only enabled for the current session in /sandbox status and settings.\n- Interactive --yolo startup remains available before authentication when no managed policy evidence is present\n- Indexed search shows when enabled, works on Windows ReFS volumes, supports explicit cloud-sync overrides, and keeps refreshing on Linux when native file watches are exhausted.\n\n**Removed**\n- Replace `copilot plugins install --skill [--scope project]` with `copilot skill add [--project]`; the `--scope` spelling is gone\n- Remove the cross-kind `--kind`, `--scope`, `--mcp` and `--skill` flags from `copilot plugins`; use `copilot mcp` and `copilot skill`\n- `copilot plugins list --json` now emits a flat array of plugins instead of the cross-kind `{ plugins, errors }` object; scripts reading `.plugins` must be updated\n- `copilot plugins list` is now an alias of `copilot plugin list` and reports only plugins, no longer MCP servers, skills, instructions or LSP servers",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Add `copilot instruction list` and `copilot lsp list`, replacing `copilot plugins list --kind instruction` and `--kind lsp`",
+    "- Add `--json` to `copilot plugin list`, `copilot plugin marketplace list` and `copilot plugin marketplace browse`",
+    "- Add `enable` and `disable` to `copilot plugin`, `copilot mcp` and `copilot skill`, replacing `copilot plugins enable/disable --plugin|--mcp|--skill`",
+    "- Replace `copilot plugins install --skill [--scope project]` with `copilot skill add [--project]`; the `--scope` spelling is gone",
+    "- Remove the cross-kind `--kind`, `--scope`, `--mcp` and `--skill` flags from `copilot plugins`; use `copilot mcp` and `copilot skill`",
+    "- `copilot plugins list --json` now emits a flat array of plugins instead of the cross-kind `{ plugins, errors }` object; scripts reading `.plugins` must be updated",
+    "- `copilot plugins list` is now an alias of `copilot plugin list` and reports only plugins, no longer MCP servers, skills, instructions or LSP servers"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-09-11T12:10:10Z",
+  "schema_version": 1
+}
