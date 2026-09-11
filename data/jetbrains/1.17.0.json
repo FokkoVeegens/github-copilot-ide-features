@@ -1,0 +1,48 @@
+{
+  "ide": "jetbrains",
+  "version": "1.17.0",
+  "release_date": "2026-09-07",
+  "title": "GitHub Copilot for JetBrains 1.17.0",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "### New Features\n\n* Added support for adding global files and folders as chat context, making it faster to include broader project context in your prompts.\n* Added cross-file cursor jump in Next Edit Suggestions to navigate and apply coordinated code suggestions across related files.\n* Added support for enterprise-managed sandbox policies (Preview).\n* Added enterprise policy diagnostics support, allowing users to verify that enterprise policies are correctly detected and enforced on their device.\n* Added support for using IDE terminal environment variables and Python interpreter in Copilot shell commands.\n* Added support for activating the project-configured standard local Python venv in Copilot shell commands.\n* Added support for connecting terminal Copilot CLI sessions to JetBrains IDE context—including selections, diagnostics, and file references—using '/ide' in GitHub Copilot CLI (Preview)\n* Added support for selecting the session model used by built-in subagents in the Copilot agent harness.\n* Improved the plugin update reminder experience to make updates more user-friendly and discoverable.\n\n### UX Improvements\n\n* Improved the ask-user card in Copilot agent harness to better accommodate long questions.\n* Improved model and BYOK selection clarity by refining model picker grouping and interaction behavior.\n* Improved agent debug logs usability by adding section copy support for faster sharing and troubleshooting.\n* Improved MCP configuration navigation by opening MCP configuration in the originating project window.\n\n### Bug Fixes\n\n* Fixed blank local chat sessions after IDE scale changes.\n* Fixed incorrect change counts (such as +0 −0) in the Copilot agent working set.\n* Fixed working-set zoom and model picker close interactions to reduce UI friction.\n* Fixed local agent editing behavior for read-only files.\n* Fixed MCP reliability issues by preserving BYOK provider selection, OAuth challenge handling, and restored stopped-state binding.\n* Fixed GHE authority propagation in agent flows.\n* Fixed Claude plan stop-state behavior.\n* Prevented Copilot panel and worktree sessions from receiving misleading IDE diagnostics for files that have not been opened.\n* Fixed Agent Customizations showing stale global instruction content after the file was changed outside the IDE.\n* Improved chat reliability after automatic compaction, preventing sessions from getting stuck during user interactions.\n\n### Changed\n\n* OpenTelemetry Settings under \"GitHub Copilot - Chat\" are now Generally Available to all users.",
+  "body_html": "<h3>New Features</h3>\n\n<ul><li>Added support for adding global files and folders as chat context, making it faster to include broader project context in your prompts.</li><li>Added cross-file cursor jump in Next Edit Suggestions to navigate and apply coordinated code suggestions across related files.</li><li>Added support for enterprise-managed sandbox policies (Preview).</li><li>Added enterprise policy diagnostics support, allowing users to verify that enterprise policies are correctly detected and enforced on their device.</li><li>Added support for using IDE terminal environment variables and Python interpreter in Copilot shell commands.</li><li>Added support for activating the project-configured standard local Python venv in Copilot shell commands.</li><li>Added support for connecting terminal Copilot CLI sessions to JetBrains IDE context—including selections, diagnostics, and file references—using '/ide' in GitHub Copilot CLI (Preview)</li><li>Added support for selecting the session model used by built-in subagents in the Copilot agent harness.</li><li>Improved the plugin update reminder experience to make updates more user-friendly and discoverable. </li></ul>\n\n<h3>UX Improvements</h3>\n\n<ul><li>Improved the ask-user card in Copilot agent harness to better accommodate long questions.</li><li>Improved model and BYOK selection clarity by refining model picker grouping and interaction behavior.</li><li>Improved agent debug logs usability by adding section copy support for faster sharing and troubleshooting.</li><li>Improved MCP configuration navigation by opening MCP configuration in the originating project window.</li></ul>\n\n<h3>Bug Fixes</h3>\n\n<ul><li>Fixed blank local chat sessions after IDE scale changes.</li><li>Fixed incorrect change counts (such as +0 −0) in the Copilot agent working set.</li><li>Fixed working-set zoom and model picker close interactions to reduce UI friction.</li><li>Fixed local agent editing behavior for read-only files.</li><li>Fixed MCP reliability issues by preserving BYOK provider selection, OAuth challenge handling, and restored stopped-state binding.</li><li>Fixed GHE authority propagation in agent flows.</li><li>Fixed Claude plan stop-state behavior.</li><li>Prevented Copilot panel and worktree sessions from receiving misleading IDE diagnostics for files that have not been opened.</li><li>Fixed Agent Customizations showing stale global instruction content after the file was changed outside the IDE.</li><li>Improved chat reliability after automatic compaction, preventing sessions from getting stuck during user interactions.</li></ul>\n\n<h3>Changed</h3>\n\n<ul><li>OpenTelemetry Settings under \"GitHub Copilot - Chat\" are now Generally Available to all users.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Added support for using IDE terminal environment variables and Python interpreter in Copilot shell commands.",
+    "* Added support for activating the project-configured standard local Python venv in Copilot shell commands.",
+    "* Added support for connecting terminal Copilot CLI sessions to JetBrains IDE context—including selections, diagnostics, and file references—using '/ide' in GitHub Copilot CLI (Preview)",
+    "* Added support for selecting the session model used by built-in subagents in the Copilot agent harness.",
+    "* Improved the ask-user card in Copilot agent harness to better accommodate long questions.",
+    "* Fixed incorrect change counts (such as +0 −0) in the Copilot agent working set.",
+    "* Prevented Copilot panel and worktree sessions from receiving misleading IDE diagnostics for files that have not been opened.",
+    "* OpenTelemetry Settings under \"GitHub Copilot - Chat\" are now Generally Available to all users."
+  ],
+  "builds": [
+    {
+      "ide_build": "251",
+      "since": "251.25410",
+      "until": "253.*",
+      "compatible_versions": {
+        "IDEA_COMMUNITY": "2025.1.1 — 2025.3",
+        "PHPSTORM": "2025.1.1 — 2025.3.6.1",
+        "CLION": "2025.1.1 — 2025.3.6.2",
+        "RUST": "2025.1.2 — 2025.3.7",
+        "GOLAND": "2025.1.1 — 2025.3.5.1",
+        "ANDROID_STUDIO": "Narwhal | 2025.1.1 — Panda 4 | 2025.3.4 Patch 1",
+        "PYCHARM": "2025.1.1 — 2025.3.6.1",
+        "DATASPELL": "2025.1.1 — 2025.3.3",
+        "IDEA": "2025.1.1 — 2025.3.6.1",
+        "RUBYMINE": "2025.1.1 — 2025.3.6.1",
+        "PYCHARM_COMMUNITY": "2025.1.1 — 2025.3",
+        "RIDER": "2025.1.2 — 2025.3.5.2",
+        "WEBSTORM": "2025.1.1 — 2025.3.6.1",
+        "DBE": "2025.1.1 — 2025.3.6"
+      },
+      "file_id": 1163583,
+      "downloads": 69569
+    }
+  ],
+  "fetched_at": "2026-09-11T11:34:07Z",
+  "schema_version": 1
+}
