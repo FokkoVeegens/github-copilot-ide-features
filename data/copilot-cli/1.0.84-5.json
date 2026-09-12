@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.84-5",
+  "release_date": "2026-09-11",
+  "title": "1.0.84-5",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.84-5",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add session and memory import commands for the semantic JSONL interchange format\n\n**Improved**\n- Shell completions are generated from the same grammar the CLI parses with, so `copilot <TAB>` offers root flags alongside subcommands and each subcommand offers only its own options\n- Command-line parsing moved from Commander to a Rust grammar; error and help wording changed, `copilot login --host` now works, and `--max-autopilot-continues` no longer accepts scientific notation\n- Show /sandbox filesystem paths as absolute paths; typing ~/path still expands to your home directory\n- Move the /sandbox Filesystem paths into their own list, opened from a Paths row\n- Show trust status, tier, and eligibility details for online resource catalogue results\n- /usage shows per-model AI Credit consumption in usage breakdowns\n- Improve /sandbox guidance and show /sandbox policy in command help\n\n**Fixed**\n- Subagent launches honor explicit model, reasoning effort, and context tier preferences from applicable global and custom instructions\n- A failed command whose EPERM or EACCES diagnostic names a sandbox-blocked path now offers to run outside the sandbox, even when the command line never named that path\n- A write blocked by a read-only sandbox path, and a Node or Go network failure blocked by the sandbox, are now recognized as sandbox denials instead of surfacing as raw errors\n- Report in-memory MCP servers as memory instead of local in copilot mcp list\n- /compact no longer reports an empty model response when a valid summary was returned\n- Streaming responses preserve message chunk ordering before final output.\n- Retry responses keep the correct streamed message and reasoning after mid-stream model failures\n- Workspace .mcp.json servers load correctly after trusting a folder on startup\n- When image-heavy requests exceed model limits, user-provided images are prioritized over tool-generated images, newer messages are kept first, and the CLI reports any removals.\n- Plugin-contributed agents discovered by the CLI can now be selected and run.\n- Fixed same-turn MCP tool-list refresh after received change notifications, including modern subscription-based servers.\n- The remote session timeline entry now advertises ctrl+o to show or hide the QR code, matching the key that actually toggles it",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "- Shell completions are generated from the same grammar the CLI parses with, so `copilot <TAB>` offers root flags alongside subcommands and each subcommand offers only its own options",
+    "- Command-line parsing moved from Commander to a Rust grammar; error and help wording changed, `copilot login --host` now works, and `--max-autopilot-continues` no longer accepts scientific notation",
+    "- Report in-memory MCP servers as memory instead of local in copilot mcp list"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-09-12T11:34:44Z",
+  "schema_version": 1
+}
