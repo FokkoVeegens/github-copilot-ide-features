@@ -173,14 +173,17 @@ function renderMatrix(matrix, query, hiddenCount = 0) {
     for (const ide of matrix.ides) {
       const cell = matrix.cells[snippet][ide];
       if (cell) {
-        const versions = cell.versions.join(', ');
         const earliest = cell.earliest;
+        const laterVersions = cell.versions.filter(version => version !== earliest);
+        const laterVersionsHtml = laterVersions.length > 0
+          ? `<div class="all-versions">${escapeHtml(laterVersions.join(', '))}</div>`
+          : '';
         tableHtml += `
           <td class="match-cell" title="First in v${earliest}">
             <a href="${escapeHtml(cell.url)}" target="_blank" rel="noopener noreferrer">
               <span class="earliest-badge">v${escapeHtml(earliest)}</span>
             </a>
-            <div class="all-versions">${escapeHtml(versions)}</div>
+            ${laterVersionsHtml}
           </td>
         `;
       } else {
