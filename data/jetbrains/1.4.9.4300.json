@@ -8,7 +8,12 @@
   "body_markdown": "* Fixed an error with already disposed chat controls\n* Fixed a race condition with chat sessions\n* Fixed encoding of file reference paths\n* Improved token management",
   "body_html": "<ul><li>Fixed an error with already disposed chat controls\r</li><li>Fixed a race condition with chat sessions\r</li><li>Fixed encoding of file reference paths\r</li><li>Improved token management</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Fixed an error with already disposed chat controls",
+    "* Fixed a race condition with chat sessions",
+    "* Fixed encoding of file reference paths",
+    "* Improved token management"
+  ],
   "builds": [
     {
       "ide_build": null,

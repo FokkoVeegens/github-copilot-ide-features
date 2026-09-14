@@ -8,7 +8,12 @@
   "body_markdown": "* Fixed an issue when creating docs for TypeScript in chat\n* Focus message input when opening chat\n* Allow code blocks to scroll when selecting code in chat\n* Fixed an issue when cycling through chat history",
   "body_html": "<ul><li>Fixed an issue when creating docs for TypeScript in chat</li><li>Focus message input when opening chat</li><li>Allow code blocks to scroll when selecting code in chat</li><li>Fixed an issue when cycling through chat history</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Fixed an issue when creating docs for TypeScript in chat",
+    "* Focus message input when opening chat",
+    "* Allow code blocks to scroll when selecting code in chat",
+    "* Fixed an issue when cycling through chat history"
+  ],
   "builds": [
     {
       "ide_build": null,

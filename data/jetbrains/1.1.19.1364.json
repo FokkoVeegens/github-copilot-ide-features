@@ -8,7 +8,10 @@
   "body_markdown": "* Better support non-UTF-8 encoding\n* Improved error reporting",
   "body_html": "<ul><li>Better support non-UTF-8 encoding</li><li>Improved error reporting</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Better support non-UTF-8 encoding",
+    "* Improved error reporting"
+  ],
   "builds": [
     {
       "ide_build": null,

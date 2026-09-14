@@ -9,7 +9,10 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Redesign exit screen with Copilot mascot and cleaner usage summary layout"
+    "**Improved**",
+    "- Redesign exit screen with Copilot mascot and cleaner usage summary layout",
+    "**Fixed**",
+    "- The --remote flag is respected when the session sync prompt appears on first run in a GitHub repo"
   ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",

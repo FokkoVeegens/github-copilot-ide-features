@@ -9,6 +9,10 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "**Improved**",
+    "- Trusted folder confirmation message clarifies that permissions may be remembered for the session",
+    "**Fixed**",
+    "- Context window tier selection now persists durably in session events and survives SDK-only resume paths so tier-derived limits are reapplied to request, compaction, and truncation logic without app-level repair",
     "- Remote session URL correctly uses the repository owner/name instead of literal 'copilot'"
   ],
   "prerelease": true,

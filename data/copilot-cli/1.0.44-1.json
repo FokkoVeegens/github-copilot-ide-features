@@ -8,7 +8,10 @@
   "body_markdown": "**Improved**\n- Shell aliases and rc file settings now work in ! commands",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Shell aliases and rc file settings now work in ! commands"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

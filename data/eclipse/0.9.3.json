@@ -8,7 +8,10 @@
   "body_markdown": "### Fixed\n- Update CLS to 1.348.0.",
   "body_html": "### Fixed\n- Update CLS to 1.348.0.",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "### Fixed",
+    "- Update CLS to 1.348.0."
+  ],
   "fetched_at": "2026-05-05T19:53:39Z",
   "schema_version": 1
 }

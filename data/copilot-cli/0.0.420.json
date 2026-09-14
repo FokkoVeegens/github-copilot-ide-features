@@ -8,7 +8,14 @@
   "body_markdown": "2026-02-27\n\n- Auto-update now also updates the binary executable, not just the JS package\n- Plugin and marketplace git repos update correctly after force-pushes and tag-based installs\n- 502 bad gateway errors are retried automatically and no longer crash the session with raw HTML output\n- Copy hint shows cmd+c in Ghostty on macOS and right-click as an alternative for all terminals\n- Type # to reference GitHub issues, pull requests and discussions",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-02-27",
+    "- Auto-update now also updates the binary executable, not just the JS package",
+    "- Plugin and marketplace git repos update correctly after force-pushes and tag-based installs",
+    "- 502 bad gateway errors are retried automatically and no longer crash the session with raw HTML output",
+    "- Copy hint shows cmd+c in Ghostty on macOS and right-click as an alternative for all terminals",
+    "- Type # to reference GitHub issues, pull requests and discussions"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

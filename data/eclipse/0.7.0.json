@@ -9,7 +9,19 @@
   "body_html": "### Added\n- New billing support and user interface update.\n- Input history navigation.\n- A button shortcut to open the MCP configuration page.\n\n### Changed\n- Update CLS to 1.327.0.\n- Update Copilot status icon.\n\n### Fixed\n- Fix the memory leak issue that the document is not disconnected.\n- Document for URI could not be found.\n- No tools is displayed in MCP configuration page.\n- NPE when resolve menu bar handler.\n- Compare editor title cannot be rendered correctly.",
   "categories": [],
   "copilot_mentions": [
-    "- Update Copilot status icon."
+    "### Added",
+    "- New billing support and user interface update.",
+    "- Input history navigation.",
+    "- A button shortcut to open the MCP configuration page.",
+    "### Changed",
+    "- Update CLS to 1.327.0.",
+    "- Update Copilot status icon.",
+    "### Fixed",
+    "- Fix the memory leak issue that the document is not disconnected.",
+    "- Document for URI could not be found.",
+    "- No tools is displayed in MCP configuration page.",
+    "- NPE when resolve menu bar handler.",
+    "- Compare editor title cannot be rendered correctly."
   ],
   "fetched_at": "2026-05-05T19:53:39Z",
   "schema_version": 1

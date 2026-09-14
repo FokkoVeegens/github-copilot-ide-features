@@ -9,8 +9,16 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "## 0.0.336 - 2025-10-07",
     "- Enabled proxy support via HTTPS_PROXY/HTTP_PROXY environment variables regardless of Node version (Fixes https://github.com/github/copilot-cli/issues/41)",
+    "- Significantly reduced token consumption, round trips per problem, and time to result. We'll share more specific data in our weekly changelog on Friday!",
+    "- Improved file write performances (especially on Windows) by not relying on the shell to fetch the current working directory",
+    "- Fixed a bug where `/clear` did not properly reset the context truncation tracking state",
     "- Hid the \"Welcome to GitHub Copilot CLI\" welcome message on session resumption and `/clear` for a cleaner look",
+    "- Improved the alignment of tables where the scrollbar is present",
+    "- Improved the output of `--help` by making it more concise",
+    "- Added a prompt for users who launch with `--screen-reader` to persistently save this preference",
+    "- Potentially improved flickering in some cases; we're still working on this!",
     "Run `npm install -g @github/copilot@latest` to update!"
   ],
   "prerelease": false,

@@ -8,7 +8,9 @@
   "body_markdown": "* Network bug fixes",
   "body_html": "<ul><li>Network bug fixes</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Network bug fixes"
+  ],
   "builds": [
     {
       "ide_build": null,

@@ -8,7 +8,12 @@
   "body_markdown": "**Fixed**\n- ACP terminal-auth passes correct arguments to login\n- Arrow and special keys work reliably when held down\n- Slash command ghost text appends correctly",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- ACP terminal-auth passes correct arguments to login",
+    "- Arrow and special keys work reliably when held down",
+    "- Slash command ghost text appends correctly"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

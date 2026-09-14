@@ -8,7 +8,9 @@
   "body_markdown": "* Basic support for using a proxy server",
   "body_html": "<ul><li>Basic support for using a proxy server</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Basic support for using a proxy server"
+  ],
   "builds": [
     {
       "ide_build": null,

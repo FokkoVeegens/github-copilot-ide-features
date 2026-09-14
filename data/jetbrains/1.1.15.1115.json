@@ -8,7 +8,9 @@
   "body_markdown": "* Fixed several exceptions.",
   "body_html": "<ul><li>Fixed several exceptions.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Fixed several exceptions."
+  ],
   "builds": [
     {
       "ide_build": null,

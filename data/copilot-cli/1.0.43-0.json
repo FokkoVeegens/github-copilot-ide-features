@@ -8,7 +8,12 @@
   "body_markdown": "**Improved**\n- Show download progress when running the update command\n\n**Fixed**\n- MCP server child processes (e.g. started via npx or uvx) are now fully terminated when a session ends",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Show download progress when running the update command",
+    "**Fixed**",
+    "- MCP server child processes (e.g. started via npx or uvx) are now fully terminated when a session ends"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

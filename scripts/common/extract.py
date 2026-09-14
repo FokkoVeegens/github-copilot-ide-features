@@ -10,6 +10,10 @@ _COPILOT_PATTERN = re.compile(
     re.IGNORECASE,
 )
 
+# A bullet whose entire content is a bold section header (e.g. "* **New Features**")
+# rather than an actual feature description.
+_SECTION_HEADER_RE = re.compile(r"^[-*+]\s+\*\*[^*]+\*\*:?$")
+
 
 def html_to_markdown(html: str) -> str:
     """Convert *html* to Markdown using markdownify.
@@ -23,11 +27,22 @@ def html_to_markdown(html: str) -> str:
     return markdownify.markdownify(str(soup), heading_style="ATX").strip()
 
 
-def extract_copilot_mentions(markdown: str) -> list[str]:
-    """Return list of non-empty lines in *markdown* that match the Copilot heuristic."""
+def extract_copilot_mentions(markdown: str, require_keyword: bool = True) -> list[str]:
+    """Return list of non-empty lines in *markdown* that match the Copilot heuristic.
+
+    Set *require_keyword* to ``False`` for sources whose release notes are
+    entirely about a Copilot product (e.g. the JetBrains/Xcode/Eclipse Copilot
+    plugins, or the Copilot CLI). In that case every non-empty line is
+    considered relevant, since lines like "Agent skills are generally
+    available." don't literally mention "Copilot" but are still Copilot
+    features. Bullet-only section headers (e.g. "* **New Features**") are
+    still excluded since they carry no feature information on their own.
+    """
     mentions: list[str] = []
     for line in markdown.splitlines():
         stripped = line.strip()
-        if stripped and _COPILOT_PATTERN.search(stripped):
+        if not stripped or _SECTION_HEADER_RE.match(stripped):
+            continue
+        if not require_keyword or _COPILOT_PATTERN.search(stripped):
             mentions.append(stripped)
     return mentions

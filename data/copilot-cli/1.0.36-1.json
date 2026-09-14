@@ -8,7 +8,14 @@
   "body_markdown": "**Added**\n- Add a 'changes' statusline toggle to show added/removed line counts for the session\n\n**Improved**\n- Require double Esc to cancel in-flight work, preventing accidental interruptions\n\n**Fixed**\n- Custom instruction files in .gitignored directories (e.g., .github/instructions/) now load correctly",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add a 'changes' statusline toggle to show added/removed line counts for the session",
+    "**Improved**",
+    "- Require double Esc to cancel in-flight work, preventing accidental interruptions",
+    "**Fixed**",
+    "- Custom instruction files in .gitignored directories (e.g., .github/instructions/) now load correctly"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

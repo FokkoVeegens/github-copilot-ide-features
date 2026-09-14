@@ -8,7 +8,13 @@
   "body_markdown": "### Added\n\n* Allow to define a custom shortcut to accept completions. TAB is still the default shortcut.\n* Allow to define a custom shortcut to hide the completions in the editor. ESC is still the default shortcut.\n\n### Fixed\n\n* The IDE was incorrectly prompting to re-authenticate with GitHub.",
   "body_html": "<h3>Added</h3>\n<ul><li>Allow to define a custom shortcut to accept completions. TAB is still the default shortcut.</li><li>Allow to define a custom shortcut to hide the completions in the editor. ESC is still the default shortcut.</li></ul>\n\n<h3>Fixed</h3>\n<ul><li>The IDE was incorrectly prompting to re-authenticate with GitHub.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "### Added",
+    "* Allow to define a custom shortcut to accept completions. TAB is still the default shortcut.",
+    "* Allow to define a custom shortcut to hide the completions in the editor. ESC is still the default shortcut.",
+    "### Fixed",
+    "* The IDE was incorrectly prompting to re-authenticate with GitHub."
+  ],
   "builds": [
     {
       "ide_build": null,

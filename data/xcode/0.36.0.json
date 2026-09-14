@@ -10,7 +10,21 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Enabled support for custom instructions defined in _.github/copilot-instructions.md_ within your workspace."
+    "### Added",
+    "- Introduced a new chat setting \"**Response Language**\" under **Advanced** settings to customize the natural language used in chat replies.",
+    "- Enabled support for custom instructions defined in _.github/copilot-instructions.md_ within your workspace.",
+    "- Added support for premium request handling.",
+    "### Fixed",
+    "- Performance: Improved UI responsiveness by lazily restoring chat history.",
+    "- Performance: Fixed lagging issue when pasting large text into the chat input.",
+    "- Performance: Improved project indexing performance.",
+    "- Don't trigger / (slash) commands when pasting a file path into the chat input.",
+    "- Adjusted terminal text styling to align with Xcode's theme.",
+    "### Supported features",
+    "- Agent mode (P)",
+    "- Chat",
+    "- Code completion",
+    "- MCP (P)"
   ],
   "prerelease": false,
   "fetched_at": "2026-07-10T12:13:00Z",

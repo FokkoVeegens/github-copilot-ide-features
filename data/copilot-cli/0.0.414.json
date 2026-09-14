@@ -8,7 +8,11 @@
   "body_markdown": "2026-02-21\n\n- Explore agent can now use GitHub MCP tools when available\n- Show permission elevation dialog when accepting a plan with autopilot to prevent auto-denied tool errors",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-02-21",
+    "- Explore agent can now use GitHub MCP tools when available",
+    "- Show permission elevation dialog when accepting a plan with autopilot to prevent auto-denied tool errors"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

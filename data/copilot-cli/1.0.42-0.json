@@ -8,7 +8,10 @@
   "body_markdown": "**Added**\n- Add rubber-duck agent for GPT sessions, powered by Claude (available in /experimental)",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add rubber-duck agent for GPT sessions, powered by Claude (available in /experimental)"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

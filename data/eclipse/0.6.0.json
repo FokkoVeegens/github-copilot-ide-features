@@ -8,7 +8,10 @@
   "body_markdown": "### Added\n- Support agent mode with stdio mcp server integration in chat.",
   "body_html": "### Added\n- Support agent mode with stdio mcp server integration in chat.",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "### Added",
+    "- Support agent mode with stdio mcp server integration in chat."
+  ],
   "fetched_at": "2026-05-05T19:53:39Z",
   "schema_version": 1
 }

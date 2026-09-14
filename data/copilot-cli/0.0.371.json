@@ -9,6 +9,8 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "2025-12-18",
+    "- Normal text respects terminal's default foreground color",
     "- Update skills help text to reference correct ~/.copilot/skills/ directory"
   ],
   "prerelease": false,

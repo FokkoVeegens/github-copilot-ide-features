@@ -9,7 +9,20 @@
   "body_markdown": "### Fixed\n- Performance: Fixed a freezing issue in 'Add Context' view when opening large projects.\n- Login failed due to insufficient permissions on the .config folder.\n- Fixed an issue that setting changes like proxy config did not take effect.\n- Increased the timeout for ask mode to prevent response failures due to timeout.\n\n### Supported features\n- Agent mode\n- Chat\n- Code completion\n- Custom instructions (P)\n- MCP (P)\n- Vision (P)",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "### Fixed",
+    "- Performance: Fixed a freezing issue in 'Add Context' view when opening large projects.",
+    "- Login failed due to insufficient permissions on the .config folder.",
+    "- Fixed an issue that setting changes like proxy config did not take effect.",
+    "- Increased the timeout for ask mode to prevent response failures due to timeout.",
+    "### Supported features",
+    "- Agent mode",
+    "- Chat",
+    "- Code completion",
+    "- Custom instructions (P)",
+    "- MCP (P)",
+    "- Vision (P)"
+  ],
   "prerelease": false,
   "fetched_at": "2026-07-10T12:13:00Z",
   "schema_version": 1

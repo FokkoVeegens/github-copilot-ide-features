@@ -9,7 +9,9 @@
   "body_html": "<ul><li>Changed chat conversations persistence path from .idea/copilot/chatSessions to ~/.config/github-copilot/IDE_CODE/chat-sessions/PROJECT_ID.\n</li><li>Added ability to select multiple files at once in the chat file reference dialog.\n</li><li>Fixed an off by one edge case when rendering markdown chat responses.</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "* Changed chat conversations persistence path from .idea/copilot/chatSessions to ~/.config/github-copilot/IDE\\_CODE/chat-sessions/PROJECT\\_ID."
+    "* Changed chat conversations persistence path from .idea/copilot/chatSessions to ~/.config/github-copilot/IDE\\_CODE/chat-sessions/PROJECT\\_ID.",
+    "* Added ability to select multiple files at once in the chat file reference dialog.",
+    "* Fixed an off by one edge case when rendering markdown chat responses."
   ],
   "builds": [
     {

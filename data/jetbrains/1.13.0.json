@@ -9,11 +9,27 @@
   "body_html": "<ul><li><strong>New Features</strong></li><li>Added BYOK custom provider support.</li><li>Added support for exporting agent debug logs for Copilot CLI sessions.</li><li>Added support for Claude agent customization.</li><li>Added plugin and plugin marketplace management in the customization panel (Preview).</li><li>Added support for local sandboxing (Preview).</li><li>Added agent-driven debugger skill for Copilot CLI sessions (Preview).</li><li><strong>UX Improvements</strong></li><li>Improved model picker controls in chat and inline chat.</li><li>Improved readability for Copilot CLI thinking and ask-user cards.</li><li>Improved UI clarity for custom agents, customization, and provider settings.</li><li>Improved authentication UX messaging.</li><li><strong>Bug Fixes</strong></li><li>Fixed auth recovery for token reuse failures.</li><li>Fixed provider and session persistence regressions.</li><li>Fixed BYOK degraded-model warnings, pending-save refresh races, provider-add gating when mappings were missing, and disabled-model retention.</li><li>Fixed MCP customization stability and trust behavior.</li><li>Fixed stability issues in editor and chat flows.</li><li>Fixed workspace-trust enforcement for prompts and hooks.</li><li>Fixed a regression where plugins were omitted in list conversation mode.</li><li>Fixed custom-agent validation handling.</li><li><strong>Changed</strong></li><li>Copilot CLI agent harness now remain available regardless of the enterprise Copilot CLI policy.</li><li>Changed model availability by plan.</li><li>Changed model controls to support Gemini thinking-effort configuration.</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Added BYOK custom provider support.",
     "* Added support for exporting agent debug logs for Copilot CLI sessions.",
+    "* Added support for Claude agent customization.",
+    "* Added plugin and plugin marketplace management in the customization panel (Preview).",
+    "* Added support for local sandboxing (Preview).",
     "* Added agent-driven debugger skill for Copilot CLI sessions (Preview).",
     "* Improved model picker controls in chat and inline chat.",
     "* Improved readability for Copilot CLI thinking and ask-user cards.",
-    "* Copilot CLI agent harness now remain available regardless of the enterprise Copilot CLI policy."
+    "* Improved UI clarity for custom agents, customization, and provider settings.",
+    "* Improved authentication UX messaging.",
+    "* Fixed auth recovery for token reuse failures.",
+    "* Fixed provider and session persistence regressions.",
+    "* Fixed BYOK degraded-model warnings, pending-save refresh races, provider-add gating when mappings were missing, and disabled-model retention.",
+    "* Fixed MCP customization stability and trust behavior.",
+    "* Fixed stability issues in editor and chat flows.",
+    "* Fixed workspace-trust enforcement for prompts and hooks.",
+    "* Fixed a regression where plugins were omitted in list conversation mode.",
+    "* Fixed custom-agent validation handling.",
+    "* Copilot CLI agent harness now remain available regardless of the enterprise Copilot CLI policy.",
+    "* Changed model availability by plan.",
+    "* Changed model controls to support Gemini thinking-effort configuration."
   ],
   "builds": [
     {

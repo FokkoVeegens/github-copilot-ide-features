@@ -8,7 +8,10 @@
   "body_markdown": "**Improved**\n- Prompt mode (-p) automatically loads workspace MCP sources when the current folder is already trusted",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Prompt mode (-p) automatically loads workspace MCP sources when the current folder is already trusted"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

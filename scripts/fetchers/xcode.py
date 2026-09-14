@@ -176,7 +176,8 @@ def _merge_changelog(
         changelog_body = sections.get(version, "").strip()
         if changelog_body:
             record["body_markdown"] = _compose_body(changelog_body, record["body_markdown"])
-            record["copilot_mentions"] = extract_copilot_mentions(record["body_markdown"])
+            # Entire changelog is about the Copilot for Xcode extension, so keep every bullet.
+            record["copilot_mentions"] = extract_copilot_mentions(record["body_markdown"], require_keyword=False)
         if version in dates:
             record["release_date"] = dates[version]
 
@@ -198,7 +199,8 @@ def _merge_changelog(
                 "body_markdown": body_markdown,
                 "body_html": None,
                 "categories": [],
-                "copilot_mentions": extract_copilot_mentions(body_markdown),
+                # Entire changelog is about the Copilot for Xcode extension, so keep every bullet.
+                "copilot_mentions": extract_copilot_mentions(body_markdown, require_keyword=False),
                 "prerelease": False,
             }
         )
@@ -253,7 +255,8 @@ def _extract_plugin_versions(
                 "body_markdown": body_markdown,
                 "body_html": None,
                 "categories": [],
-                "copilot_mentions": extract_copilot_mentions(body_markdown),
+                # Feature-matrix rows are all Copilot features, so keep every bullet.
+                "copilot_mentions": extract_copilot_mentions(body_markdown, require_keyword=False),
                 "prerelease": False,
             }
         )

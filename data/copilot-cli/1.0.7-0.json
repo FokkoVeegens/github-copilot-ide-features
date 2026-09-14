@@ -8,7 +8,15 @@
   "body_markdown": "**Added**\n- Add experimental SDK session APIs to list and manage skills, MCP servers, and plugins, with optional config auto-discovery from the working directory\n- Add subagentStart hook that fires when a subagent is spawned, with support for injecting additional context into the subagent's prompt\n\n**Fixed**\n- Pro and trial users now see all models they are entitled to in the model picker\n- CLI restart no longer re-sends the -i/--interactive prompt to the new session\n- Resolve an edge case where auto-update could leave an incomplete package on Windows",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add experimental SDK session APIs to list and manage skills, MCP servers, and plugins, with optional config auto-discovery from the working directory",
+    "- Add subagentStart hook that fires when a subagent is spawned, with support for injecting additional context into the subagent's prompt",
+    "**Fixed**",
+    "- Pro and trial users now see all models they are entitled to in the model picker",
+    "- CLI restart no longer re-sends the -i/--interactive prompt to the new session",
+    "- Resolve an edge case where auto-update could leave an incomplete package on Windows"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

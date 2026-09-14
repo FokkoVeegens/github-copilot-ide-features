@@ -9,6 +9,9 @@
   "body_html": "<h3>Changed</h3>\n<ul><li>Notify when the <code>super-early-bird</code> plugin repository is still used.</li></ul>\n\n<h3>Fixed</h3>\n<ul><li>Several causes of <code>IndexOutOfBoundsException</code> when applying a solution of \"Open Copilot\" to the editor, which was changed in the meantime.</li><li><code>NullPointerException</code> when using GitHub Copilot in Jupyter Notebook files</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "### Changed",
+    "* Notify when the `super-early-bird` plugin repository is still used.",
+    "### Fixed",
     "* Several causes of `IndexOutOfBoundsException` when applying a solution of \"Open Copilot\" to the editor, which was changed in the meantime.",
     "* `NullPointerException` when using GitHub Copilot in Jupyter Notebook files"
   ],

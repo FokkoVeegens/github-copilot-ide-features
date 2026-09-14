@@ -9,7 +9,9 @@
   "body_html": "<h3>New Features</h3>\n\n<ul><li>Show guided onboarding tips for Copilot users without prior sessions.</li></ul>\n\n<h3>Bug Fixes</h3>\n\n<ul><li>Fixed Copilot UI panels failing to open since JetBrains IDE <code>2026.2.2 Preview</code>.</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "### New Features",
     "* Show guided onboarding tips for Copilot users without prior sessions.",
+    "### Bug Fixes",
     "* Fixed Copilot UI panels failing to open since JetBrains IDE `2026.2.2 Preview`."
   ],
   "builds": [

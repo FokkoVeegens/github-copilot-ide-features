@@ -8,7 +8,12 @@
   "body_markdown": "* Sign-In Issues: Resolved various sign-in problems to ensure a smoother login experience.\n* WSL Content Exclusion: Fixed issues related to content exclusion on Windows Subsystem for Linux (WSL).\n* Plugin Updates: Addressed and fixed problems occurring during plugin updates.\n* Accessibility and UI: Enhanced accessibility features and refined the UI for better user assistance.",
   "body_html": "<ul><li>Sign-In Issues: Resolved various sign-in problems to ensure a smoother login experience.\n</li><li>WSL Content Exclusion: Fixed issues related to content exclusion on Windows Subsystem for Linux (WSL).\n</li><li>Plugin Updates: Addressed and fixed problems occurring during plugin updates.\n</li><li>Accessibility and UI: Enhanced accessibility features and refined the UI for better user assistance.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Sign-In Issues: Resolved various sign-in problems to ensure a smoother login experience.",
+    "* WSL Content Exclusion: Fixed issues related to content exclusion on Windows Subsystem for Linux (WSL).",
+    "* Plugin Updates: Addressed and fixed problems occurring during plugin updates.",
+    "* Accessibility and UI: Enhanced accessibility features and refined the UI for better user assistance."
+  ],
   "builds": [
     {
       "ide_build": "242",

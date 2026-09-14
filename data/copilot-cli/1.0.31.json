@@ -8,7 +8,10 @@
   "body_markdown": "2026-04-16\n\n- Prompt frame no longer causes rendering issues on Windows and Ubuntu terminals",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-04-16",
+    "- Prompt frame no longer causes rendering issues on Windows and Ubuntu terminals"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

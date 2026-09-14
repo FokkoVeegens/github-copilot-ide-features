@@ -9,8 +9,14 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "## 0.0.332 - 2025-10-01",
     "- Switched to using per-subscription Copilot API endpoints in accordance with [GitHub's docs](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/manage-network-access) (fixes https://github.com/github/copilot-cli/issues/76)",
     "- Fixed a bug where `/user [list | show | swtich]` did not include users signed in from all authentication modes (fixes https://github.com/github/copilot-cli/issues/58)",
+    "- Fixed a bug where switching to another user with `/user switch` did not take effect in the GitHub MCP server",
+    "- Improved the screenreader experience by disabling the scrollbar in the `@` file picker, the `--resume` session picker, and the `/` command picker",
+    "- Improved the polish of the scrollbar container (increased the width, reduced the opacity of the gutter)",
+    "- Minor visual improvements to the input area (moved the current model indicator to the right so it's not cramped with the CWD, improved the positioning of the file picker's \"indexing\" indicator, improved hint formatting in completion menus)",
+    "- Improved Markdown legibility by excluding `#` prefixes in headings",
     "- Improved how we extract paths from shell commands for permission handling (might fix https://github.com/github/copilot-cli/issues/159, https://github.com/github/copilot-cli/issues/67)",
     "Run `npm install -g @github/copilot@latest` to update!"
   ],

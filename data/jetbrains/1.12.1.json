@@ -9,9 +9,21 @@
   "body_html": "<ul><li><strong>New Features</strong></li><li>Added: Codex as Agent Provider in public preview.</li><li>Added: Hooks support for Agent Customizations editor.</li><li>Added: Create customization files enhancements, including manual creation capabilities and new slash commands.</li><li>Added: Enhanced MCP Server management with workspace-level support and richer configuration options.</li><li>Added: Support for custom models in JetBrains IDEs (configured by GitHub Copilot Business and Enterprise administrators in GitHub settings).</li><li>Added: Approval settings for Copilot CLI sessions.</li><li>Added: PermissionMode selection in Claude Code agent sessions.</li><li>Added: Agent debug log support for Claude sessions.</li><li>Added: Model view management support.</li><li><strong>User Experience</strong></li><li>Improved: Added best practice tips for usage-based billing.</li><li>Improved: Stability and performance when loading the panel.</li><li>Improved: Added NES suggestion caching and improved performance.</li><li>Improved: File watcher performance and reduced memory usage.</li><li><strong>Bug Fixes</strong></li><li>Fixed: an issue where BYOK sessions could trigger Copilot subagents and consume Copilot usage. The subagent logic now respects the active BYOK provider.</li><li>Fixed: Multiple UI freeze issues.</li><li><strong>Changed</strong></li><li>Inline chat is generally available.</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Added: Codex as Agent Provider in public preview.",
+    "* Added: Hooks support for Agent Customizations editor.",
+    "* Added: Create customization files enhancements, including manual creation capabilities and new slash commands.",
+    "* Added: Enhanced MCP Server management with workspace-level support and richer configuration options.",
     "* Added: Support for custom models in JetBrains IDEs (configured by GitHub Copilot Business and Enterprise administrators in GitHub settings).",
     "* Added: Approval settings for Copilot CLI sessions.",
+    "* Added: PermissionMode selection in Claude Code agent sessions.",
+    "* Added: Agent debug log support for Claude sessions.",
+    "* Added: Model view management support.",
+    "* Improved: Added best practice tips for usage-based billing.",
+    "* Improved: Stability and performance when loading the panel.",
+    "* Improved: Added NES suggestion caching and improved performance.",
+    "* Improved: File watcher performance and reduced memory usage.",
     "* Fixed: an issue where BYOK sessions could trigger Copilot subagents and consume Copilot usage. The subagent logic now respects the active BYOK provider.",
+    "* Fixed: Multiple UI freeze issues.",
     "* Inline chat is generally available."
   ],
   "builds": [

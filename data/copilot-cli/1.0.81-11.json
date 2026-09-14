@@ -8,7 +8,10 @@
   "body_markdown": "**Fixed**\n- An MCP server blocked by an enterprise policy now shows as blocked in /mcp instead of spinning as pending forever",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- An MCP server blocked by an enterprise policy now shows as blocked in /mcp instead of spinning as pending forever"
+  ],
   "prerelease": true,
   "fetched_at": "2026-08-28T19:23:42Z",
   "schema_version": 1

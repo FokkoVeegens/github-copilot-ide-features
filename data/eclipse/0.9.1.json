@@ -8,7 +8,15 @@
   "body_markdown": "### Fixed\n- Reset history to avoid skipping the main section rendering.\n- Updated bundle version to fit 2024-03.\n- Fixed Linux rendering problem.\n- Async open chat after closing welcome page.\n- Use IPreferenceStore.getBoolean() to get the updated value.\n- Perspective logo should support dark mode.",
   "body_html": "### Fixed\n- Reset history to avoid skipping the main section rendering.\n- Updated bundle version to fit 2024-03.\n- Fixed Linux rendering problem.\n- Async open chat after closing welcome page.\n- Use IPreferenceStore.getBoolean() to get the updated value.\n- Perspective logo should support dark mode.",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "### Fixed",
+    "- Reset history to avoid skipping the main section rendering.",
+    "- Updated bundle version to fit 2024-03.",
+    "- Fixed Linux rendering problem.",
+    "- Async open chat after closing welcome page.",
+    "- Use IPreferenceStore.getBoolean() to get the updated value.",
+    "- Perspective logo should support dark mode."
+  ],
   "fetched_at": "2026-05-05T19:53:39Z",
   "schema_version": 1
 }

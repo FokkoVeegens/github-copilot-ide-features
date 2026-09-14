@@ -47,6 +47,21 @@ const LAUNCH_PATTERNS = [
 ];
 
 /**
+ * Patterns that unambiguously indicate a feature has reached General
+ * Availability, as opposed to merely being introduced or still in preview.
+ * Deliberately narrower than LAUNCH_PATTERNS: phrases like "now available"
+ * are too ambiguous (they also show up in preview announcements).
+ */
+const GA_PATTERNS = [
+  /\bgenerally available\b/i,
+  /\bgeneral availability\b/i,
+  /\bGA\b/,                              // GA (case-sensitive to avoid false hits)
+  /\bout of preview\b/i,
+  /\bno longer (?:in )?preview\b/i,
+  /\bgraduated? (?:from|out of) preview\b/i,
+];
+
+/**
  * Check whether a snippet looks like a feature launch announcement.
  * @param {string} snippet - Feature description text
  * @returns {boolean} True if the snippet contains a launch-indicating phrase
@@ -57,12 +72,28 @@ export function isLaunchAnnouncement(snippet) {
 }
 
 /**
- * Filter search results down to launch announcements only.
- * Per IDE: keeps records whose snippet contains a launch keyword.
- * If an IDE has no keyword matches at all, its earliest-version records
- * are kept instead, since the first mention marks when the feature appeared.
+ * Check whether a snippet unambiguously announces General Availability.
+ * @param {string} snippet - Feature description text
+ * @returns {boolean} True if the snippet contains a GA-indicating phrase
+ */
+export function isGaAnnouncement(snippet) {
+  const text = String(snippet || '');
+  return GA_PATTERNS.some(pattern => pattern.test(text));
+}
+
+/**
+ * Filter search results down to a single canonical record per IDE: the one
+ * that marks the feature's most meaningful "first appearance".
+ *
+ * Selection per IDE:
+ * - If any snippet unambiguously announces General Availability, the
+ *   earliest such GA record is kept (this "wins" over an earlier preview
+ *   mention, since GA is the more useful milestone to show).
+ * - Otherwise, the earliest record that matches any launch keyword is kept.
+ * - Otherwise (no launch keywords at all), the earliest record overall is
+ *   kept, since the first mention marks when the feature appeared.
  * @param {Array<Object>} results - Results from searchIndex()
- * @returns {Array<Object>} Launch announcements (or earliest mention) per IDE
+ * @returns {Array<Object>} At most one record per IDE
  */
 export function filterLaunchAnnouncements(results) {
   if (!Array.isArray(results)) return [];
@@ -77,19 +108,15 @@ export function filterLaunchAnnouncements(results) {
 
   const kept = new Set();
   for (const records of byIde.values()) {
-    const launches = records.filter(r => isLaunchAnnouncement(r.snippet));
-    if (launches.length > 0) {
-      for (const r of launches) kept.add(r);
-    } else {
-      // No launch keywords for this IDE: keep its earliest version instead
-      let earliest = records[0].version;
-      for (const r of records) {
-        if (compareVersions(r.version, earliest) < 0) earliest = r.version;
-      }
-      for (const r of records) {
-        if (compareVersions(r.version, earliest) === 0) kept.add(r);
-      }
+    const gaRecords = records.filter(r => isGaAnnouncement(r.snippet));
+    const launchRecords = records.filter(r => isLaunchAnnouncement(r.snippet));
+    const candidates = gaRecords.length > 0 ? gaRecords : (launchRecords.length > 0 ? launchRecords : records);
+
+    let earliest = candidates[0];
+    for (const r of candidates) {
+      if (compareVersions(r.version, earliest.version) < 0) earliest = r;
     }
+    kept.add(earliest);
   }
 
   // Preserve original result order

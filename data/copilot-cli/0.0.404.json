@@ -8,7 +8,18 @@
   "body_markdown": "2026-02-05\n\n- Add support for claude-opus-4.6 model\n- `/allow-all` and `/yolo` execute immediately\n- MCP servers shut down concurrently for improved performance\n- Cancel --resume session picker to start a new session\n- MCP server configurations default to all tools when tools parameter not specified\n- Add `/tasks` command to view and manage background tasks\n- Enable background agents for all users\n- Simplify and clarify `/delegate` command messaging\n- GITHUB_TOKEN environment variable now accessible in agent shell sessions",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-02-05",
+    "- Add support for claude-opus-4.6 model",
+    "- `/allow-all` and `/yolo` execute immediately",
+    "- MCP servers shut down concurrently for improved performance",
+    "- Cancel --resume session picker to start a new session",
+    "- MCP server configurations default to all tools when tools parameter not specified",
+    "- Add `/tasks` command to view and manage background tasks",
+    "- Enable background agents for all users",
+    "- Simplify and clarify `/delegate` command messaging",
+    "- GITHUB_TOKEN environment variable now accessible in agent shell sessions"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

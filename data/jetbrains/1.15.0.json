@@ -9,11 +9,29 @@
   "body_html": "<h3>New Features</h3>\n\n<ul><li>Added Ollama as a BYOK provider across backend and JetBrains UI flows, including provider wiring and model handling.</li><li>Added Copilot CLI auto-install support in JetBrains IDE integrated terminals on macOS, Linux, and Windows.</li><li>Added support for server-based Enterprise Managed Policy:<ul><li>plugin settings: enabledPlugins, extraKnownMarketplaces, strictKnownMarketplaces</li><li>MCP settings: allowedMcpServers and deniedMcpServers</li><li>permission setting: permissions.disableBypassPermissionsMode</li><li>OpenTelemetry settings: telemetry</li></ul></li><li>Added Codex-focused capabilities, including session visibility in Agent Debug Logs, permission-mode catalog updates, and customization support for instructions and skills.</li><li>Added Copilot Memory support in the Copilot CLI chat experience to persist and recall information across sessions, managed via toggle in the Copilot settings portal.</li></ul>\n\n<h3>UX Improvements</h3>\n\n<ul><li>Improved account management flows by supporting account switch/removal and polishing account-deletion interactions.</li><li>Improved model and settings usability by capping long model-name width in the model picker and refining model view/todo list panel behavior.</li><li>Improved background-agent workflows with drag-and-drop support, copy-agent-message support, and clearer autopilot completion summaries.</li><li>Restored file and folder <code>#</code> references in Copilot, Claude, and Codex chat inputs.</li></ul>\n\n<h3>Bug Fixes</h3>\n\n<ul><li>Fixed MCP execution and approval issues, including preserving gateway refreshes after CLS restart and correcting auto-approve behavior for Copilot-only servers.</li><li>Fixed terminal and command-output issues, including ANSI escape rendering, deterministic scrollbar reservation, and terminal auto-approve/reset behavior in Chat.</li><li>Fixed customization and cloud-agent reliability issues.</li><li>Fixed diff/edit stability issues.</li></ul>\n\n<h3>Changed</h3>\n\n<ul><li>Changed user-facing naming from “Copilot CLI” to “Copilot” in product strings.</li><li>Changed support permission requests and permission modes selection for Codex.</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "### New Features",
+    "* Added Ollama as a BYOK provider across backend and JetBrains UI flows, including provider wiring and model handling.",
     "* Added Copilot CLI auto-install support in JetBrains IDE integrated terminals on macOS, Linux, and Windows.",
+    "* Added support for server-based Enterprise Managed Policy:",
+    "+ plugin settings: enabledPlugins, extraKnownMarketplaces, strictKnownMarketplaces",
+    "+ MCP settings: allowedMcpServers and deniedMcpServers",
+    "+ permission setting: permissions.disableBypassPermissionsMode",
+    "+ OpenTelemetry settings: telemetry",
+    "* Added Codex-focused capabilities, including session visibility in Agent Debug Logs, permission-mode catalog updates, and customization support for instructions and skills.",
     "* Added Copilot Memory support in the Copilot CLI chat experience to persist and recall information across sessions, managed via toggle in the Copilot settings portal.",
+    "### UX Improvements",
+    "* Improved account management flows by supporting account switch/removal and polishing account-deletion interactions.",
+    "* Improved model and settings usability by capping long model-name width in the model picker and refining model view/todo list panel behavior.",
+    "* Improved background-agent workflows with drag-and-drop support, copy-agent-message support, and clearer autopilot completion summaries.",
     "* Restored file and folder `#` references in Copilot, Claude, and Codex chat inputs.",
+    "### Bug Fixes",
     "* Fixed MCP execution and approval issues, including preserving gateway refreshes after CLS restart and correcting auto-approve behavior for Copilot-only servers.",
-    "* Changed user-facing naming from “Copilot CLI” to “Copilot” in product strings."
+    "* Fixed terminal and command-output issues, including ANSI escape rendering, deterministic scrollbar reservation, and terminal auto-approve/reset behavior in Chat.",
+    "* Fixed customization and cloud-agent reliability issues.",
+    "* Fixed diff/edit stability issues.",
+    "### Changed",
+    "* Changed user-facing naming from “Copilot CLI” to “Copilot” in product strings.",
+    "* Changed support permission requests and permission modes selection for Codex."
   ],
   "builds": [
     {

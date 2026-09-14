@@ -8,7 +8,21 @@
   "body_markdown": "**Added**\n- MCP servers can request LLM inference (sampling) with user approval via a new review prompt\n\n**Fixed**\n- MCP servers blocked by allowlist policy are now hidden from /mcp show\n- Reasoning effort setting now applies correctly when using Bring Your Own Model (BYOM) providers\n- Ensure clear error messaging when using classic PATs\n- grep tool handles large files and long lines without running out of memory\n- MCP server OAuth authentication works when the CLI runs in ACP mode\n- Split $BROWSER on spaces\n- Pasted text is no longer corrupted when mouse support is active\n- Uninstalling a marketplace plugin removes its cached data from disk\n\n**Removed**\n- Remove support for gemini-3-pro-preview model",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- MCP servers can request LLM inference (sampling) with user approval via a new review prompt",
+    "**Fixed**",
+    "- MCP servers blocked by allowlist policy are now hidden from /mcp show",
+    "- Reasoning effort setting now applies correctly when using Bring Your Own Model (BYOM) providers",
+    "- Ensure clear error messaging when using classic PATs",
+    "- grep tool handles large files and long lines without running out of memory",
+    "- MCP server OAuth authentication works when the CLI runs in ACP mode",
+    "- Split $BROWSER on spaces",
+    "- Pasted text is no longer corrupted when mouse support is active",
+    "- Uninstalling a marketplace plugin removes its cached data from disk",
+    "**Removed**",
+    "- Remove support for gemini-3-pro-preview model"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

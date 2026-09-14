@@ -9,7 +9,10 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "2026-05-13",
+    "- /fork accepts an optional name and forked sessions display their origin in the sessions dialog",
     "- Copilot Max subscribers see the correct models available to their subscription tier",
+    "- Support j/k keys for up/down navigation in the /diff view",
     "- --resume supports Copilot cloud agent sessions where the agent hasn't pushed any changes to its branch"
   ],
   "prerelease": false,

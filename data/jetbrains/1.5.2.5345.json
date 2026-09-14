@@ -9,6 +9,7 @@
   "body_html": "<ul><li>Support for JetBrains platform 241 release IDEs.\n</li><li>Further enhanced securely rendering HTML and Markdown content in Copilot Chat.</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Support for JetBrains platform 241 release IDEs.",
     "* Further enhanced securely rendering HTML and Markdown content in Copilot Chat."
   ],
   "builds": [

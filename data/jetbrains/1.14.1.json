@@ -9,13 +9,23 @@
   "body_html": "<h3>New Features</h3>\n\n<ul><li>Added MCP and custom agent support in Claude agent flows.</li><li>Added OpenTelemetry export settings for agent workflows in JetBrains IDEs.</li><li>Added default token limits and support for configuring <code>maxInputTokens</code> and <code>maxOutputTokens</code> for BYOK and custom endpoints.</li><li>Added model-management controls to disable or enable all built-in Copilot models.</li><li>Added fork support to the Copilot CLI chat experience.</li><li>Added <code>/rubber-duck</code> command to the Copilot CLI chat experience.</li><li>Added todo list display in Copilot CLI chat experience.</li><li>Added the display of number of AI credits a user has consumed for users in organizations that don't set a <a href=\"https://docs.github.com/copilot/concepts/billing/budgets-for-usage-based-billing#user-level-budget\">User-level budget</a>.</li></ul>\n\n<h3>UX Improvements</h3>\n\n<ul><li>Improved model and action picker consistency.</li><li>Improved customization usability.</li><li>Improved session clarity by rendering ask-user questions as Markdown and adding explicit user attention notifications.</li><li>Improved inline chat and model-picker layout behavior.</li><li>Improved MCP diagnostics.</li><li>Improved bare URL rendering in Copilot CLI chat experience.</li></ul>\n\n<h3>Bug Fixes</h3>\n\n<ul><li>Fixed path-case preservation issues in Copilot CLI working-set and snapshot recording flows on macOS and Linux.</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "### New Features",
+    "* Added MCP and custom agent support in Claude agent flows.",
+    "* Added OpenTelemetry export settings for agent workflows in JetBrains IDEs.",
+    "* Added default token limits and support for configuring `maxInputTokens` and `maxOutputTokens` for BYOK and custom endpoints.",
     "* Added model-management controls to disable or enable all built-in Copilot models.",
     "* Added fork support to the Copilot CLI chat experience.",
     "* Added `/rubber-duck` command to the Copilot CLI chat experience.",
     "* Added todo list display in Copilot CLI chat experience.",
     "* Added the display of number of AI credits a user has consumed for users in organizations that don't set a [User-level budget](https://docs.github.com/copilot/concepts/billing/budgets-for-usage-based-billing#user-level-budget).",
+    "### UX Improvements",
+    "* Improved model and action picker consistency.",
+    "* Improved customization usability.",
+    "* Improved session clarity by rendering ask-user questions as Markdown and adding explicit user attention notifications.",
     "* Improved inline chat and model-picker layout behavior.",
+    "* Improved MCP diagnostics.",
     "* Improved bare URL rendering in Copilot CLI chat experience.",
+    "### Bug Fixes",
     "* Fixed path-case preservation issues in Copilot CLI working-set and snapshot recording flows on macOS and Linux."
   ],
   "builds": [

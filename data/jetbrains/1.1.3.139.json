@@ -9,10 +9,16 @@
   "body_html": "<h3>Added</h3>\n<ul><li>Nightly builds.</li><li>New setting to define the update channel for the GitHub Copilot plugin.</li><li>New setting to define a set of languages, where completions are not shown automatically.</li><li>Added GitHub Copilot icon in the status bar to show the current status and to enable/disable completions.</li><li>New setting to show suggestions by Copilot and the IDE side-by-side. This is still experimental and turned off by default.</li></ul>\n\n<h3>Fixed</h3>\n<ul><li>Especially on macOS, GitHub Copilot was not remembering the GitHub authentication properly after a restart. If that's the case on your system, please use this version and login once again to GitHub to fix this.</li><li>Don't override shortcuts of IdeaVim plugin anymore.</li><li>Improve suggestions after whitespace tokens.</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "### Added",
+    "* Nightly builds.",
     "* New setting to define the update channel for the GitHub Copilot plugin.",
+    "* New setting to define a set of languages, where completions are not shown automatically.",
     "* Added GitHub Copilot icon in the status bar to show the current status and to enable/disable completions.",
     "* New setting to show suggestions by Copilot and the IDE side-by-side. This is still experimental and turned off by default.",
-    "* Especially on macOS, GitHub Copilot was not remembering the GitHub authentication properly after a restart. If that's the case on your system, please use this version and login once again to GitHub to fix this."
+    "### Fixed",
+    "* Especially on macOS, GitHub Copilot was not remembering the GitHub authentication properly after a restart. If that's the case on your system, please use this version and login once again to GitHub to fix this.",
+    "* Don't override shortcuts of IdeaVim plugin anymore.",
+    "* Improve suggestions after whitespace tokens."
   ],
   "builds": [
     {

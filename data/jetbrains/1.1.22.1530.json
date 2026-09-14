@@ -9,8 +9,13 @@
   "body_html": "<ul><li>Fixed exception <code>Assertion failed: Please don't register startup activities for the default project: they won't ever be run</code></li><li>Reliably dispose suggestion inlays of GitHub Copilot when moving the text caret using the keyboard</li><li>Fixed distorted suggestion inlays in the editor, e.g. after invoking the \"Delete Line\" action</li><li>Don't show \"Open Copilot\" intention at positions where suggestions of GitHub Copilot are unavailable</li><li>Improved insertion of suggestions by TAB on lines with non-empty prefix </li><li>Fixed exception <code>Detected document modification from DocumentListener</code></li><li>Don't show suggestions for files larger than one megabyte</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Fixed exception `Assertion failed: Please don't register startup activities for the default project: they won't ever be run`",
     "* Reliably dispose suggestion inlays of GitHub Copilot when moving the text caret using the keyboard",
-    "* Don't show \"Open Copilot\" intention at positions where suggestions of GitHub Copilot are unavailable"
+    "* Fixed distorted suggestion inlays in the editor, e.g. after invoking the \"Delete Line\" action",
+    "* Don't show \"Open Copilot\" intention at positions where suggestions of GitHub Copilot are unavailable",
+    "* Improved insertion of suggestions by TAB on lines with non-empty prefix",
+    "* Fixed exception `Detected document modification from DocumentListener`",
+    "* Don't show suggestions for files larger than one megabyte"
   ],
   "builds": [
     {

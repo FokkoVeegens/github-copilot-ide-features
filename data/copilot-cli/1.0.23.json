@@ -9,7 +9,17 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Remote tab correctly shows Copilot coding agent tasks and supports steering via the Tasks API"
+    "2026-04-10",
+    "- Add --mode, --autopilot, and --plan flags to start the CLI directly in a specific agent mode",
+    "- Agent no longer hangs on the first turn when the memory backend is unavailable",
+    "- Bazel/Buck build target labels (e.g. //package:target) no longer misidentified as file paths",
+    "- Ctrl+L clears the terminal screen without clearing the conversation session",
+    "- Slash command picker shows full skill descriptions and a refined scrollbar",
+    "- /diff, /agent, /feedback, /ide, and /tuikit work while the agent is running",
+    "- Display reasoning token usage in the per-model token breakdown when nonzero",
+    "- Remote tab correctly shows Copilot coding agent tasks and supports steering via the Tasks API",
+    "- Shell output with BEL characters no longer causes repeated terminal beeping",
+    "- Migration notice for .vscode/mcp.json now includes a jq command to migrate your config to .mcp.json"
   ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",

@@ -9,7 +9,13 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Added list of supported models as part of `copilot help config` text"
+    "## 0.0.344 - 2025-10-17",
+    "- Enabled GitHub MCP server in prompt mode",
+    "- Added support to the bash tool for executing detached processes",
+    "- Added list of supported models as part of `copilot help config` text",
+    "- Fixed session abort handling to properly clean up orphaned tool call when pressing <kbd>Esc</kbd> or force-quitting",
+    "- Enforced minimum Node version requirement at launch",
+    "- Simplified messaging for `/terminal-setup`"
   ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",

@@ -8,7 +8,10 @@
   "body_markdown": "**Improved**\n- Session sync prompt uses clearer labels and explains GitHub.com cross-device sync",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Session sync prompt uses clearer labels and explains GitHub.com cross-device sync"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

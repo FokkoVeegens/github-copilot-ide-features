@@ -8,7 +8,15 @@
   "body_markdown": "### Added\n- Support chat feature\n- Support to create a new conversation\n- Support slash commands\n- Support to attach context files\n- Support cancel a conversation\n- Support model picker for chat",
   "body_html": "### Added\n- Support chat feature\n - Support to create a new conversation\n - Support slash commands\n - Support to attach context files\n - Support cancel a conversation\n - Support model picker for chat",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "### Added",
+    "- Support chat feature",
+    "- Support to create a new conversation",
+    "- Support slash commands",
+    "- Support to attach context files",
+    "- Support cancel a conversation",
+    "- Support model picker for chat"
+  ],
   "fetched_at": "2026-05-05T19:53:39Z",
   "schema_version": 1
 }

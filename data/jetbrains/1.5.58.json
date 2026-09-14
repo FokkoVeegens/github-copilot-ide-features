@@ -9,7 +9,19 @@
   "body_html": "<ul><li>Added: Coding agent, an autonomous AI developer you can assign to any developer task.\n</li><li>Added: Fold/unfold functionality for tools.\n</li><li>Added: mcp.json supports input placeholder for sensitive information.\n</li><li>Added: Support inline code review.\n</li><li>Added: Open file tool to the Copilot chat conversation agent.\n</li><li>Added: # context support for file/folder/tools.\n</li><li>Added: UI optimization for inline completion.\n</li><li>Added: UI optimization for tools management view.\n</li><li>Added: Support tool annotations and clientInfo for MCP servers.\n</li><li>Added: Update tool call result information.\n</li><li>Added: Security confirm for sensitive file edits.\n</li><li>Fixed: Mitigate syntax lagging.\n</li><li>Fixed: Specify default model for api.</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "* Added: Open file tool to the Copilot chat conversation agent."
+    "* Added: Coding agent, an autonomous AI developer you can assign to any developer task.",
+    "* Added: Fold/unfold functionality for tools.",
+    "* Added: mcp.json supports input placeholder for sensitive information.",
+    "* Added: Support inline code review.",
+    "* Added: Open file tool to the Copilot chat conversation agent.",
+    "* Added: # context support for file/folder/tools.",
+    "* Added: UI optimization for inline completion.",
+    "* Added: UI optimization for tools management view.",
+    "* Added: Support tool annotations and clientInfo for MCP servers.",
+    "* Added: Update tool call result information.",
+    "* Added: Security confirm for sensitive file edits.",
+    "* Fixed: Mitigate syntax lagging.",
+    "* Fixed: Specify default model for api."
   ],
   "builds": [
     {

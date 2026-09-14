@@ -9,6 +9,7 @@
   "body_html": "<h3>Fixed</h3>\n<ul><li>Sometimes the rendering of GitHub Copilot inlay overlapped elements outside the editor (<a href=\"https://github.com/github/feedback/discussions/8965\">bug report</a>).</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "### Fixed",
     "* Sometimes the rendering of GitHub Copilot inlay overlapped elements outside the editor ([bug report](https://github.com/github/feedback/discussions/8965))."
   ],
   "builds": [

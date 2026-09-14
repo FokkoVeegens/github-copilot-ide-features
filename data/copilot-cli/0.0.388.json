@@ -8,7 +8,16 @@
   "body_markdown": "2026-01-20\n\n- Add `/review` command to analyze code changes\n- Make session event messages more concise and visually clean\n- Clean up old package versions during auto-update check to free disk space\n- `--enable-all-github-mcp-tools` flag now enables read-write GitHub MCP tools\n- `/share gist` shows helpful error on GitHub Enterprise Cloud with data residency\n- Remove commit hash from CLI header\n- Redesign CLI header with branded mascot and streamlined welcome message",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-01-20",
+    "- Add `/review` command to analyze code changes",
+    "- Make session event messages more concise and visually clean",
+    "- Clean up old package versions during auto-update check to free disk space",
+    "- `--enable-all-github-mcp-tools` flag now enables read-write GitHub MCP tools",
+    "- `/share gist` shows helpful error on GitHub Enterprise Cloud with data residency",
+    "- Remove commit hash from CLI header",
+    "- Redesign CLI header with branded mascot and streamlined welcome message"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

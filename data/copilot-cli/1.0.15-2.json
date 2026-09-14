@@ -8,7 +8,10 @@
   "body_markdown": "**Improved**\n- User switcher and `/user list` display accounts in alphabetical order",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- User switcher and `/user list` display accounts in alphabetical order"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

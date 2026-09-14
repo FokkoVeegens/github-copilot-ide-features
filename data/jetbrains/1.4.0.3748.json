@@ -10,6 +10,14 @@
   "categories": [],
   "copilot_mentions": [
     "* Enable Copilot Chat private beta for accepted users.",
+    "* Chat can be used to generate code or answer questions related to your code.",
+    "* You can reference any file from your project. The open editor and recently opened files are referenced automatically.",
+    "* To save time, you can use `/` commands to perform tasks like:",
+    "+ generate tests",
+    "+ simplify code",
+    "+ fix problems",
+    "+ explain code",
+    "+ generate documentation",
     "* Chat can be used by opening the GitHub Copilot Chat tool window, hitting the `Ctrl+Shift+C` shortcut or directly via the Copilot context menu in your editor."
   ],
   "builds": [

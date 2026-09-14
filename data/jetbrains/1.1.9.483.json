@@ -9,7 +9,9 @@
   "body_html": "<h3>Added</h3>\n<ul><li>Show a context menu on suggestions shown by GitHub Copilot.</li></ul>\n\n<h3>Fixed</h3>\n<ul><li>Copilot suggestions are removed from the editor when the selection changed.</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "### Added",
     "* Show a context menu on suggestions shown by GitHub Copilot.",
+    "### Fixed",
     "* Copilot suggestions are removed from the editor when the selection changed."
   ],
   "builds": [

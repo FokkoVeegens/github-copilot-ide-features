@@ -8,7 +8,15 @@
   "body_markdown": "**Improved**\n- BREAKING: the sandbox setting `allowDevToolCaches` is renamed `allowDevToolAccess`, since it grants dev-tool config and registries too, not just caches. The old key is no longer read and is ignored silently, so an existing `false` opt-out reverts to the default (on). Rename it in settings.json and in any managed/MDM policy.\n\n**Fixed**\n- Compute /context attribution against the Auto-resolved model so token totals are accurate for Free/Student users\n- Disabling an extension no longer breaks elicitation, canvases, or tool permission prompts for other extensions\n- A prompt stashed with ctrl+s now stays with the session it was typed for, so switching away and back and pressing ctrl+s restores it instead of finding it gone\n- On Linux, searches and most shell commands blocked by the sandbox now offer to re-run outside it",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- BREAKING: the sandbox setting `allowDevToolCaches` is renamed `allowDevToolAccess`, since it grants dev-tool config and registries too, not just caches. The old key is no longer read and is ignored silently, so an existing `false` opt-out reverts to the default (on). Rename it in settings.json and in any managed/MDM policy.",
+    "**Fixed**",
+    "- Compute /context attribution against the Auto-resolved model so token totals are accurate for Free/Student users",
+    "- Disabling an extension no longer breaks elicitation, canvases, or tool permission prompts for other extensions",
+    "- A prompt stashed with ctrl+s now stays with the session it was typed for, so switching away and back and pressing ctrl+s restores it instead of finding it gone",
+    "- On Linux, searches and most shell commands blocked by the sandbox now offer to re-run outside it"
+  ],
   "prerelease": true,
   "fetched_at": "2026-08-06T09:47:08Z",
   "schema_version": 1

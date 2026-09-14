@@ -8,7 +8,10 @@
   "body_markdown": "* Fix up/down navigation in chat input\n* Fix some network timeout issues",
   "body_html": "<ul><li>Fix up/down navigation in chat input\n</li><li>Fix some network timeout issues</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Fix up/down navigation in chat input",
+    "* Fix some network timeout issues"
+  ],
   "builds": [
     {
       "ide_build": null,

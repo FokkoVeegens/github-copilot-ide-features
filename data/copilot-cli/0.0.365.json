@@ -8,7 +8,10 @@
   "body_markdown": "2025-11-25\r\n\r\n- Add `--silent` option to suppress stats output for scripting",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2025-11-25",
+    "- Add `--silent` option to suppress stats output for scripting"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

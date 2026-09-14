@@ -10,6 +10,12 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "### Added",
+    "- Native Anthropic Messages API (`/v1/messages`) endpoint support.",
+    "- Thinking support in chat for reasoning-capable models.",
+    "- Enhanced rate limit notifications and error messages.",
+    "### Changed",
+    "- Refined tool call item UI in agent progress: removed border and divider, repositioned chevron, and adjusted spacing for better readability.",
     "- Updated Copilot language server to 1.465.5."
   ],
   "prerelease": false,

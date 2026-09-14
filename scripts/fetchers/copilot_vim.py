@@ -111,7 +111,8 @@ def _extract_plugin_versions(
                 "body_markdown": body_markdown,
                 "body_html": None,
                 "categories": [],
-                "copilot_mentions": extract_copilot_mentions(body_markdown),
+                # Feature-matrix rows are all Copilot features, so keep every bullet.
+                "copilot_mentions": extract_copilot_mentions(body_markdown, require_keyword=False),
                 "prerelease": False,
             }
         )

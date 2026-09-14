@@ -8,7 +8,10 @@
   "body_markdown": "**Fixed**\n- A prompt sent while the agent is working no longer leaves a second copy of itself stuck as `(pending)` at the bottom of the transcript after it has been answered",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- A prompt sent while the agent is working no longer leaves a second copy of itself stuck as `(pending)` at the bottom of the transcript after it has been answered"
+  ],
   "prerelease": true,
   "fetched_at": "2026-08-23T07:42:27Z",
   "schema_version": 1

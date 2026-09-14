@@ -9,7 +9,13 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- copilot --continue from a session's saved directory now refreshes the saved branch and git context instead of leaving them stale"
+    "**Added**",
+    "- Add vertical scrollbar with mouse drag support to the main conversation view",
+    "**Fixed**",
+    "- Switching to Autopilot mode no longer triggers unexpected permission prompts for tool, path, or URL access",
+    "- copilot --continue from a session's saved directory now refreshes the saved branch and git context instead of leaving them stale",
+    "- Kill command safety filter no longer rejects valid commands that contain shell redirection like `kill -0 <PID> 2>/dev/null`.",
+    "- Sessions now resume in their saved working directory; pass -C <dir> to override. Flags whose values are relative paths (e.g. --attachment, --log-dir) resolve from the saved cwd."
   ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",

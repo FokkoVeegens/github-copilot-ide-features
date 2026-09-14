@@ -9,8 +9,15 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "## 0.0.351 - 2025-10-24",
+    "- Improved our path detection heuristic to avoid various annoying, unnecessary permissions requests:",
+    "- Running many standard bash/PowerShell commands that are known to be readonly",
+    "- Commands like `npm test -- --something` in PowerShell",
     "- Shell redirections like `> some_file.txt` in paths you've already granted write permissions, `> /dev/null`, and `2>&1` (Fixes https://github.com/github/copilot-cli/issues/211)",
     "- Arguments to `gh api` like `gh api /repos/user/repo/ec` (Fixes https://github.com/github/copilot-cli/issues/216)",
+    "- Code comments including `/`",
+    "- Improved prompting for Sonnet 4.5 to reduce the number of intermediate markdown files left in the workspace",
+    "- 👀 ...see you at [GitHub Universe](https://githubuniverse.com/)!",
     "Run `npm install -g @github/copilot@latest` to update!"
   ],
   "prerelease": false,

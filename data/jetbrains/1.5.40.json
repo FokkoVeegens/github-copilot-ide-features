@@ -8,7 +8,13 @@
   "body_markdown": "* **Added**: Drag-and-drop functionality for adding files in both Chat and Edits.\n* **Added**: Support for the Linux ARM64 architecture.\n* **Fixed**: Issue where the natural language setting for chat was not being honored.\n* **Fixed**: Bug causing Chat and Edits to get stuck on the initializing page.\n* **Fixed**: Various UI enhancements and improvements for multi-file edits.",
   "body_html": "<ul><li><strong>Added</strong>: Drag-and-drop functionality for adding files in both Chat and Edits.\n</li><li><strong>Added</strong>: Support for the Linux ARM64 architecture.\n</li><li><strong>Fixed</strong>: Issue where the natural language setting for chat was not being honored.\n</li><li><strong>Fixed</strong>: Bug causing Chat and Edits to get stuck on the initializing page.\n</li><li><strong>Fixed</strong>: Various UI enhancements and improvements for multi-file edits.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* **Added**: Drag-and-drop functionality for adding files in both Chat and Edits.",
+    "* **Added**: Support for the Linux ARM64 architecture.",
+    "* **Fixed**: Issue where the natural language setting for chat was not being honored.",
+    "* **Fixed**: Bug causing Chat and Edits to get stuck on the initializing page.",
+    "* **Fixed**: Various UI enhancements and improvements for multi-file edits."
+  ],
   "builds": [
     {
       "ide_build": "241",

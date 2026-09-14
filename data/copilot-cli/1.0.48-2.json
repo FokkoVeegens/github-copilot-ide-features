@@ -8,7 +8,10 @@
   "body_markdown": "**Fixed**\n- Instruction files with unquoted glob patterns in applyTo frontmatter (e.g. applyTo: **/*.ts) are now applied correctly",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Instruction files with unquoted glob patterns in applyTo frontmatter (e.g. applyTo: **/*.ts) are now applied correctly"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

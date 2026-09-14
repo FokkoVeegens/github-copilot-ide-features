@@ -9,6 +9,13 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "**Improved**",
+    "- Reduce CLI startup time by running terminal detection, auth, and git operations in parallel",
+    "**Fixed**",
+    "- MCP servers using Microsoft Entra ID authentication no longer show the consent screen on every login",
+    "- Grep and glob search results return promptly when a timeout is reached",
+    "- Keystrokes are no longer dropped when typing quickly in elicitation dialogs",
+    "- Clipboard copy on native Windows no longer includes a stray U+FEFF character at the start of pasted text",
     "- Fixed --config-dir being ignored when resuming a session, causing paths to silently fall back to ~/.copilot"
   ],
   "prerelease": true,

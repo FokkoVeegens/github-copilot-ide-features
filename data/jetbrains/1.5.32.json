@@ -8,7 +8,15 @@
   "body_markdown": "* **Added**: Generate commit messages.\n* **Added**: Chat with project context.\n* **Added**: Insert command lines from AI-generated code blocks into the terminal.\n* **Changed**: Order chat conversations by last modified time.\n* **Changed**: Use JetBrains inline completion API for a more native user experience.\n* **Fixed**: A bug where chat conversation history is lost after signing out.\n* **Fixed**: Wrong color display after switching system themes between dark and light.\n* **Other UX improvements and accessibility enhancements.**",
   "body_html": "<ul><li><strong>Added</strong>: Generate commit messages.\n</li><li><strong>Added</strong>: Chat with project context.\n</li><li><strong>Added</strong>: Insert command lines from AI-generated code blocks into the terminal.\n</li><li><strong>Changed</strong>: Order chat conversations by last modified time.\n</li><li><strong>Changed</strong>: Use JetBrains inline completion API for a more native user experience.\n</li><li><strong>Fixed</strong>: A bug where chat conversation history is lost after signing out.\n</li><li><strong>Fixed</strong>: Wrong color display after switching system themes between dark and light.\n</li><li><strong>Other UX improvements and accessibility enhancements.</strong></li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* **Added**: Generate commit messages.",
+    "* **Added**: Chat with project context.",
+    "* **Added**: Insert command lines from AI-generated code blocks into the terminal.",
+    "* **Changed**: Order chat conversations by last modified time.",
+    "* **Changed**: Use JetBrains inline completion API for a more native user experience.",
+    "* **Fixed**: A bug where chat conversation history is lost after signing out.",
+    "* **Fixed**: Wrong color display after switching system themes between dark and light."
+  ],
   "builds": [
     {
       "ide_build": "242",

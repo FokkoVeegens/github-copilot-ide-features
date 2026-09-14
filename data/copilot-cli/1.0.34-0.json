@@ -8,7 +8,10 @@
   "body_markdown": "**Improved**\n- Rate limit error message now says \"session rate limit\" instead of \"global rate limit\"",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Rate limit error message now says \"session rate limit\" instead of \"global rate limit\""
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

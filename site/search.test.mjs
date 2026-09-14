@@ -4,7 +4,7 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert';
-import { validateQuery, searchIndex, buildMatrix, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames } from './search.js';
+import { validateQuery, searchIndex, buildMatrix, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, isGaAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames } from './search.js';
 
 test('validateQuery rejects empty string', () => {
   assert.strictEqual(validateQuery(''), null);
@@ -104,7 +104,7 @@ test('isLaunchAnnouncement rejects incremental change notes', () => {
   assert(!isLaunchAnnouncement(null));
 });
 
-test('filterLaunchAnnouncements drops non-launch records when launches exist', () => {
+test('filterLaunchAnnouncements prefers the GA record over an earlier preview record', () => {
   const results = [
     { ide: 'vscode', snippet: 'Next Edit Suggestions is now available in preview', version: '1.0.0', release_date: '2025-01-01' },
     { ide: 'vscode', snippet: 'Fixed flickering in Next Edit Suggestions', version: '1.1.0', release_date: '2025-02-01' },
@@ -112,9 +112,20 @@ test('filterLaunchAnnouncements drops non-launch records when launches exist', (
   ];
 
   const filtered = filterLaunchAnnouncements(results);
-  assert.strictEqual(filtered.length, 2);
+  assert.strictEqual(filtered.length, 1);
+  assert.strictEqual(filtered[0].version, '1.2.0');
+});
+
+test('filterLaunchAnnouncements keeps the earliest launch record when no GA mention exists', () => {
+  const results = [
+    { ide: 'vscode', snippet: 'Next Edit Suggestions (preview) released', version: '1.0.0', release_date: '2025-01-01' },
+    { ide: 'vscode', snippet: 'Fixed flickering in Next Edit Suggestions', version: '1.1.0', release_date: '2025-02-01' },
+    { ide: 'vscode', snippet: 'Improved Next Edit Suggestions preview reliability', version: '1.2.0', release_date: '2025-03-01' },
+  ];
+
+  const filtered = filterLaunchAnnouncements(results);
+  assert.strictEqual(filtered.length, 1);
   assert.strictEqual(filtered[0].version, '1.0.0');
-  assert.strictEqual(filtered[1].version, '1.2.0');
 });
 
 test('filterLaunchAnnouncements falls back to earliest version for IDEs without launch keywords', () => {
@@ -130,6 +141,13 @@ test('filterLaunchAnnouncements falls back to earliest version for IDEs without 
   assert.strictEqual(filtered.length, 2);
   assert(filtered.some(r => r.ide === 'eclipse' && r.version === '0.13.0'));
   assert(filtered.some(r => r.ide === 'vscode' && r.version === '1.97.0'));
+});
+
+test('isGaAnnouncement only matches unambiguous GA phrases', () => {
+  assert(isGaAnnouncement('Next Edit Suggestions is now generally available'));
+  assert(isGaAnnouncement('NES has graduated from preview'));
+  assert(!isGaAnnouncement('Next Edit Suggestions is now available in preview'));
+  assert(!isGaAnnouncement('Updated the ga tracking pixel')); // lowercase "ga" must not match
 });
 
 test('dedupeByIdeVersion keeps one record per IDE + version, preferring the shortest snippet', () => {
