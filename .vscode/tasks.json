@@ -68,6 +68,15 @@
         "Serve website"
       ],
       "problemMatcher": []
+    },
+    {
+      "label": "Prepare website",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Install Python requirements",
+        "Build website search index"
+      ],
+      "problemMatcher": []
     }
   ]
 }

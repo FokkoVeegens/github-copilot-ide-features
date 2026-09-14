@@ -3,11 +3,16 @@
   "configurations": [
     {
       "name": "Open Website",
-      "type": "pwa-chrome",
+      "type": "node-terminal",
       "request": "launch",
-      "url": "http://localhost:8000/",
-      "webRoot": "${workspaceFolder}/site",
-      "preLaunchTask": "Run website locally"
+      "command": "python -m http.server -d site 8000",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Prepare website",
+      "serverReadyAction": {
+        "pattern": "Serving HTTP on .* port ([0-9]+)",
+        "uriFormat": "http://localhost:%s/",
+        "action": "openExternally"
+      }
     }
   ]
 }
