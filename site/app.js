@@ -146,7 +146,7 @@ function renderMatrix(matrix, query, hiddenCount = 0) {
   for (const entry of matrix.summary) {
     const dateStr = formatDate(entry.date);
     const displayName = formatIdeName(entry.ide);
-    summaryHtml += `<li><strong>${escapeHtml(displayName)}</strong>: v${entry.version} (${dateStr})</li>`;
+    summaryHtml += `<li><strong>${escapeHtml(displayName)}</strong>: v${escapeHtml(entry.version)} (${dateStr})</li>`;
   }
   summaryHtml += '</ul></div>';
 
