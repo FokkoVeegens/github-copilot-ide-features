@@ -45,9 +45,11 @@ async function init() {
     searchIndexData = await response.json();
     ideIdByName = new Map(searchIndexData.map(r => [r.ide_name || r.ide || '', r.ide]));
   } catch (error) {
-    document.getElementById('error-message').innerHTML = `
+    const errorMessage = document.getElementById('error-message');
+    errorMessage.innerHTML = `
       <strong>Error loading search index:</strong> ${error.message}
     `;
+    errorMessage.style.display = 'block';
     return;
   }
 
