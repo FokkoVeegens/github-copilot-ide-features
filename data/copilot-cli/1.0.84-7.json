@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.84-7",
+  "release_date": "2026-09-14",
+  "title": "1.0.84-7",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.84-7",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Fixed the thinking shape sent to Claude models classified as adaptive-only: they now stay adaptive instead of failing (turning thinking off lowers reasoning effort instead), and reasoning effort is capped at high whenever thinking is disabled\n- Run sessionEnd hooks when /clear closes an interactive session",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-09-15T12:37:27Z",
+  "schema_version": 1
+}
