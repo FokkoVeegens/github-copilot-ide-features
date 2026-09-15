@@ -9,7 +9,6 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "## 0.0.355 - 2025-11-12",
     "- Enabled the CLI agent to read its own `/help` and README to answer questions about its capabilities",
     "- Improved parsing of VSCode-formatted custom agents with the `.agent.md` suffix",
     "- Sanitize tool names to fix issues like https://github.com/github/copilot-cli/issues/456",

@@ -9,7 +9,6 @@
   "body_html": "<h3>Fixed</h3>\n<ul><li>Accepting a suggestion was sometimes incorrectly replacing the complete line in the editor.</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "### Fixed",
     "* Accepting a suggestion was sometimes incorrectly replacing the complete line in the editor."
   ],
   "builds": [

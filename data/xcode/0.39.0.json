@@ -10,12 +10,10 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "### Fixed",
     "- Performance: Fixed a freezing issue in 'Add Context' view when opening large projects.",
     "- Login failed due to insufficient permissions on the .config folder.",
     "- Fixed an issue that setting changes like proxy config did not take effect.",
     "- Increased the timeout for ask mode to prevent response failures due to timeout.",
-    "### Supported features",
     "- Agent mode",
     "- Chat",
     "- Code completion",

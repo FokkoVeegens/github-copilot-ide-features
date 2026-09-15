@@ -9,7 +9,6 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "## 0.0.333 - 2025-10-02",
     "- Added image support! `@`-mention files to add them as input to the model.",
     "- Improved proxy support for users on Node.JS v24+. See [this comment](https://github.com/github/copilot-cli/issues/41#issuecomment-3362444262) for more details (Fixes https://github.com/github/copilot-cli/issues/41)",
     "- Added support for directly executing shell commands and bypassing the model by prepending input with `!` (fixes https://github.com/github/copilot-cli/issues/186, https://github.com/github/copilot-cli/issues/12)",

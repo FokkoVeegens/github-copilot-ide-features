@@ -9,7 +9,6 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "## 0.0.358 - 2025-11-14",
     "Recovery release to fix availability of GPT-5.1, GPT-5.1-Codex, and GPT-5.1-Codex-Mini models."
   ],
   "prerelease": false,

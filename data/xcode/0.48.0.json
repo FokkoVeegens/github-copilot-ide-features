@@ -10,15 +10,12 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "### Added",
     "- Context window usage details in chat, including a token breakdown for system instructions, messages, attached files, and tool results.",
     "- Auto Compress setting to compact conversation history and save context tokens.",
     "- Install flow for Xcode's built-in MCP server from settings.",
-    "### Changed",
     "- Custom agents and the Auto model are now generally available.",
     "- Removed support for macOS 12.",
     "- Improved UI for model picker tooltips.",
-    "### Fixed",
     "- Fixed an issue where GPT-5.4 requests could return a 400 error.",
     "- Fixed an issue where the MCP allowlist did not work correctly."
   ],

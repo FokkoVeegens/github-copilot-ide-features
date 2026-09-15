@@ -9,7 +9,6 @@
   "body_html": "<h3>Fixed</h3>\n<ul><li>IdeaVim: Don't disable Copilot completion when IdeaVim is turned off using the status bar.</li><li>IdeaVim: Only show suggestions when IdeaVim is in insert or replace mode.</li><li>IdeaVim: Hide Copilot suggestions after ESC was pressed to leave insert mode of IdeaVim.</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "### Fixed",
     "* IdeaVim: Don't disable Copilot completion when IdeaVim is turned off using the status bar.",
     "* IdeaVim: Only show suggestions when IdeaVim is in insert or replace mode.",
     "* IdeaVim: Hide Copilot suggestions after ESC was pressed to leave insert mode of IdeaVim."

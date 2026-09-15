@@ -9,7 +9,6 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "## 0.0.344 - 2025-10-17",
     "- Enabled GitHub MCP server in prompt mode",
     "- Added support to the bash tool for executing detached processes",
     "- Added list of supported models as part of `copilot help config` text",

@@ -14,6 +14,10 @@ _COPILOT_PATTERN = re.compile(
 # rather than an actual feature description.
 _SECTION_HEADER_RE = re.compile(r"^[-*+]\s+\*\*[^*]+\*\*:?$")
 
+# An ATX heading / release-date banner (e.g. "### Added" or "## 0.0.334 - 2025-10-03")
+# — structural metadata rather than a feature description.
+_ATX_HEADING_RE = re.compile(r"^#{1,6}\s+")
+
 
 def html_to_markdown(html: str) -> str:
     """Convert *html* to Markdown using markdownify.
@@ -35,13 +39,15 @@ def extract_copilot_mentions(markdown: str, require_keyword: bool = True) -> lis
     plugins, or the Copilot CLI). In that case every non-empty line is
     considered relevant, since lines like "Agent skills are generally
     available." don't literally mention "Copilot" but are still Copilot
-    features. Bullet-only section headers (e.g. "* **New Features**") are
-    still excluded since they carry no feature information on their own.
+    features. Structural lines that carry no feature information on their own
+    are always excluded: bullet-only section headers (e.g. "* **New
+    Features**") and ATX headings / release-date banners (e.g. "### Added" or
+    "## 0.0.334 - 2025-10-03").
     """
     mentions: list[str] = []
     for line in markdown.splitlines():
         stripped = line.strip()
-        if not stripped or _SECTION_HEADER_RE.match(stripped):
+        if not stripped or _SECTION_HEADER_RE.match(stripped) or _ATX_HEADING_RE.match(stripped):
             continue
         if not require_keyword or _COPILOT_PATTERN.search(stripped):
             mentions.append(stripped)

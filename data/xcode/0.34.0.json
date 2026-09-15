@@ -10,14 +10,10 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "### Added",
     "- Added support for new models in Chat: OpenAI GPT-4.1, o3 and o4-mini, Gemini 2.5 Pro",
-    "### Changed",
     "- Switched default model to GPT-4.1 for new installations",
     "- Enhanced model selection interface",
-    "### Fixed",
     "- Resolved critical error handling issues",
-    "### Supported features",
     "- Chat",
     "- Code completion"
   ],

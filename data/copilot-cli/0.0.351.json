@@ -9,7 +9,6 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "## 0.0.351 - 2025-10-24",
     "- Improved our path detection heuristic to avoid various annoying, unnecessary permissions requests:",
     "- Running many standard bash/PowerShell commands that are known to be readonly",
     "- Commands like `npm test -- --something` in PowerShell",

@@ -10,9 +10,7 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "### Fixed",
     "- Cannot type non-Latin characters in the chat input field.",
-    "### Supported features",
     "- Agent mode",
     "- BYOK (P)",
     "- Chat",

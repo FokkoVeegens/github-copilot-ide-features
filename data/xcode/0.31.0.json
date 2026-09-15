@@ -10,13 +10,11 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "### Added",
     "- Added Copilot Chat support",
     "- Added GitHub Freeplan support",
     "- Implemented conversation and chat history management across multiple Xcode instances",
     "- Introduced multi-file context support for comprehensive code understanding",
     "- Added slash commands for specialized operations",
-    "### Supported features",
     "- Chat (P)",
     "- Code completion"
   ],

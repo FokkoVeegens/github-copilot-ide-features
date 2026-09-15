@@ -9,7 +9,6 @@
   "body_html": "### Fixed\n- Correct the bundle version requirement to align with Eclipse 2024-09.",
   "categories": [],
   "copilot_mentions": [
-    "### Fixed",
     "- Correct the bundle version requirement to align with Eclipse 2024-09."
   ],
   "fetched_at": "2026-05-05T19:53:39Z",

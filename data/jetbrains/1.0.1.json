@@ -9,9 +9,7 @@
   "body_html": "<h3>Added</h3>\n<ul><li>1.0.1, our first public release</li></ul>\n\n<h3>Fixed</h3>\n<ul><li>Completions appeared at the wrong position after accepting lookup items, which also modified the document before the cursor position.</li><li>Several causes of exception <code>NullPointerException</code>.</li><li>Fixed a possible cause of <code>ClassNotFoundException</code>.</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "### Added",
     "* 1.0.1, our first public release",
-    "### Fixed",
     "* Completions appeared at the wrong position after accepting lookup items, which also modified the document before the cursor position.",
     "* Several causes of exception `NullPointerException`.",
     "* Fixed a possible cause of `ClassNotFoundException`."

@@ -10,13 +10,10 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "### Added",
     "- Support for Kimi K3 through the updated Copilot language server.",
     "- Agent Client Protocol (ACP) plugin metadata for GitHub Copilot.",
-    "### Changed",
     "- Updated the Copilot language server from 1.488.0 to 1.523.3.",
     "- Updated the ACP plugin to use Copilot CLI 1.0.78.",
-    "### Fixed",
     "- Fixed model pricing tooltips for the latest token pricing metadata."
   ],
   "prerelease": false,

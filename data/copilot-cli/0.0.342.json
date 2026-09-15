@@ -9,7 +9,6 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "## 0.0.342 - 2025-10-15",
     "- Overhauled our session logging format:",
     "- Introduced a new session logging format that decouples how we store sessions from how we display them in the timeline. The new format is cleaner, more concise, and scalable, and will allow us to more easily implement new features down the line.",
     "- New sessions are stored in `~/.copilot/session-state`",

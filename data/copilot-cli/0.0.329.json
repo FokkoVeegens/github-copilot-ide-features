@@ -9,7 +9,6 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "## 0.0.329 - 2025-09-29",
     "- Added support for [Claude Sonnet 4.5](https://github.blog/changelog/2025-09-29-anthropic-claude-sonnet-4-5-is-in-public-preview-for-github-copilot/) and made it the default model",
     "- Added `/model` slash command to easily change the model (fixes https://github.com/github/copilot-cli/issues/10)",
     "- `/model` will open a picker to change the model",

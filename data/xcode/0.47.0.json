@@ -10,13 +10,10 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "### Added",
     "- Auto approval for MCP tools, sensitive files, and terminal commands.",
     "- MCP registry and allowlist are now available (requires editor preview feature flag).",
-    "### Changed",
     "- Improved UI for MCP tool call details.",
     "- Improved UI for working set header.",
-    "### Fixed",
     "- Fixed toolcall layout issue.",
     "- Fixed NES display issue.",
     "- Fixed error message for SSL certificate errors.",

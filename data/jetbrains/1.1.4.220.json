@@ -9,9 +9,7 @@
   "body_html": "<h3>Added</h3>\n<ul><li>New tool window \"GitHub Copilot\" to replace the split editor of the \"Open Copilot\" feature.</li></ul>\n\n<h3>Fixed</h3>\n<ul><li>Don't show completions when IdeaVIM is used and the editor is in normal mode.</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "### Added",
     "* New tool window \"GitHub Copilot\" to replace the split editor of the \"Open Copilot\" feature.",
-    "### Fixed",
     "* Don't show completions when IdeaVIM is used and the editor is in normal mode."
   ],
   "builds": [

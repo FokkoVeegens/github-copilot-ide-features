@@ -9,7 +9,6 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "## 0.0.357 - 2025-11-13",
     "Recovery release to fix an issue with image resizing."
   ],
   "prerelease": false,

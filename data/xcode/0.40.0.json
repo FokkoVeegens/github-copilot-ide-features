@@ -10,9 +10,7 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "### Added",
     "- Support disabling Agent mode when it's disabled by policy.",
-    "### Supported features",
     "- Agent mode",
     "- Chat",
     "- Code completion",

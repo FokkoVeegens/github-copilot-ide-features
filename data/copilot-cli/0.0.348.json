@@ -9,7 +9,6 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "## 0.0.348 - 2025-10-21",
     "- Copilot's output now streams in token-by-token! This can be disabled with `--stream off`",
     "- Made improvements to the memory footprint of Copilot CLI, especially when dealing with shell commands that produce very large outputs",
     "- Ensured we preserve comments in VSCode config files when using `/terminal-setup` (fixes https://github.com/github/copilot-cli/issues/325)",

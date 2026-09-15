@@ -9,7 +9,6 @@
   "body_html": "### Added\n- Support chat feature\n - Support to create a new conversation\n - Support slash commands\n - Support to attach context files\n - Support cancel a conversation\n - Support model picker for chat",
   "categories": [],
   "copilot_mentions": [
-    "### Added",
     "- Support chat feature",
     "- Support to create a new conversation",
     "- Support slash commands",

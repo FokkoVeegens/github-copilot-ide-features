@@ -9,7 +9,6 @@
   "body_html": "<h3>Fixed</h3>\n<ul><li>Pressing TAB was over-eager to insert Copilot's suggestions to the editor.</li><li>Turn off GitHub Copilot if <a href=\"https://www.jetbrains.com/help/idea/lightedit-mode.html\">light edit mode</a> is enabled.</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "### Fixed",
     "* Pressing TAB was over-eager to insert Copilot's suggestions to the editor.",
     "* Turn off GitHub Copilot if [light edit mode](https://www.jetbrains.com/help/idea/lightedit-mode.html) is enabled."
   ],
