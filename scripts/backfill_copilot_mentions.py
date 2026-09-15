@@ -49,7 +49,8 @@ def backfill(config_path: pathlib.Path | None = None, data_root: pathlib.Path | 
     for ide_config in config.get("ides", []):
         if ide_config["id"] not in REQUIRE_KEYWORD_FALSE_IDES:
             continue
-        data_dir = repo_root / ide_config["data_dir"]
+        ide_rel_path = ide_config["data_dir"]
+        data_dir = data_root / ide_rel_path.removeprefix("./").removeprefix("/")
         if not data_dir.exists():
             continue
 

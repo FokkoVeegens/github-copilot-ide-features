@@ -5,6 +5,7 @@ import pathlib
 
 import pytest
 
+from scripts.backfill_copilot_mentions import backfill
 from scripts.build_search_index import (
     _extract_snippets,
     _normalize_snippet,
@@ -272,3 +273,32 @@ def test_build_search_index_skips_files_missing_required_fields(tmp_config: tupl
     result = build_search_index(config_path, data_root)
     # Should be empty since the release is missing 'version'
     assert len(result["records"]) == 0
+
+
+def test_backfill_respects_custom_data_root(tmp_path: pathlib.Path) -> None:
+    config_path = tmp_path / "ides.yml"
+    data_root = tmp_path / "custom-data"
+    eclipse_dir = data_root / "eclipse"
+    eclipse_dir.mkdir(parents=True, exist_ok=True)
+
+    config_path.write_text(
+        "ides:\n"
+        "  - id: eclipse\n"
+        "    name: Copilot for Eclipse\n"
+        "    data_dir: eclipse\n"
+        "    fetcher: eclipse\n",
+        encoding="utf-8",
+    )
+
+    release = {
+        "version": "1.0.0",
+        "body_markdown": "### Added\n- New feature\n### Fixed\n- Bug fix\n",
+        "copilot_mentions": [],
+    }
+    (eclipse_dir / "1.0.0.json").write_text(json.dumps(release), encoding="utf-8")
+
+    updated = backfill(config_path, data_root)
+
+    assert updated == 1
+    backfilled = json.loads((eclipse_dir / "1.0.0.json").read_text(encoding="utf-8"))
+    assert backfilled["copilot_mentions"] == ["- New feature", "- Bug fix"]
