@@ -9,6 +9,7 @@
   "body_html": "<ul><li>Fix for recent intermittent login failures</li><li>Improved messaging when Copilot is disabled</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Fix for recent intermittent login failures",
     "* Improved messaging when Copilot is disabled"
   ],
   "builds": [

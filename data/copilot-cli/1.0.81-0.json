@@ -8,7 +8,10 @@
   "body_markdown": "**Improved**\n- Update model configurations",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Update model configurations"
+  ],
   "prerelease": true,
   "fetched_at": "2026-08-23T07:42:27Z",
   "schema_version": 1

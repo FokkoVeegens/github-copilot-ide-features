@@ -8,7 +8,10 @@
   "body_markdown": "2025-12-11\n\n- Add support for GPT-5.2",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2025-12-11",
+    "- Add support for GPT-5.2"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

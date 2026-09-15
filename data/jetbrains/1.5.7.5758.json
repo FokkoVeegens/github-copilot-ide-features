@@ -8,7 +8,9 @@
   "body_markdown": "* add support for 242 EAP IDEs",
   "body_html": "<ul><li>add support for 242 EAP IDEs</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* add support for 242 EAP IDEs"
+  ],
   "builds": [
     {
       "ide_build": null,

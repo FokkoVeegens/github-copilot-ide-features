@@ -9,7 +9,20 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- `copilot plugin marketplace list` now honors repo-level `extraKnownMarketplaces` settings from `.github/copilot/settings.json`"
+    "**Added**",
+    "- Click a diff line with the mouse to select it in diff mode",
+    "**Improved**",
+    "- preToolUse hook errors now deny the tool call instead of silently allowing execution",
+    "**Fixed**",
+    "- Ctrl+C and other modified keys work correctly inside tmux",
+    "- @-mention file search matches files regardless of query letter casing",
+    "- `copilot plugin marketplace list` now honors repo-level `extraKnownMarketplaces` settings from `.github/copilot/settings.json`",
+    "- Queued prompts in the footer are capped to a single line, preventing them from pushing session messages off screen",
+    "- MCP servers configured with npx --registry are no longer incorrectly blocked by policy",
+    "- Session no longer hangs indefinitely after an error occurs during internal event processing",
+    "- Installed plugins no longer include the .git directory from the plugin source repository",
+    "- New reasoning after tool calls appears at the bottom of the timeline instead of above earlier output",
+    "- Pasting text copied from a browser, editor, or terminal no longer leaves a stray empty line, broken box-drawing lines, or a misplaced cursor in the prompt"
   ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",

@@ -8,7 +8,9 @@
   "body_markdown": "Pre-release 1.0.79-4",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "Pre-release 1.0.79-4"
+  ],
   "prerelease": true,
   "fetched_at": "2026-08-06T09:47:08Z",
   "schema_version": 1

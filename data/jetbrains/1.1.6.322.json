@@ -10,6 +10,8 @@
   "categories": [],
   "copilot_mentions": [
     "* New tool window \"GitHub Copilot\" to replace the split editor of the \"Open Copilot\" feature.",
+    "* Completions should be successfully displayed for more files now.",
+    "* Several causes of exceptions in the editor and the new tool window.",
     "* Dispose Copilot inlays after \"Cut Line\" action."
   ],
   "builds": [

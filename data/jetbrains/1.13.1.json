@@ -8,7 +8,10 @@
   "body_markdown": "* **Bug Fixes**\n* Fixed an auth issue\n* Fixed a few minor UI issues",
   "body_html": "<ul><li><strong>Bug Fixes</strong></li><li>Fixed an auth issue</li><li>Fixed a few minor UI issues</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Fixed an auth issue",
+    "* Fixed a few minor UI issues"
+  ],
   "builds": [
     {
       "ide_build": "251",

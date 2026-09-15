@@ -8,7 +8,10 @@
   "body_markdown": "2026-06-02\r\n\r\n- Add the /voice command to dictate prompts using local speech-to-text models",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-06-02",
+    "- Add the /voice command to dictate prompts using local speech-to-text models"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-03T08:48:32Z",
   "schema_version": 1

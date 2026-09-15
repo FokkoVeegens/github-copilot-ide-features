@@ -8,7 +8,12 @@
   "body_markdown": "**Added**\n- Add `session.shell.exec` and `session.shell.kill` RPC methods for executing shell commands with streaming stdout/stderr output\n\n**Fixed**\n- Custom agents from --plugin-dir plugins now load correctly in ACP mode",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add `session.shell.exec` and `session.shell.kill` RPC methods for executing shell commands with streaming stdout/stderr output",
+    "**Fixed**",
+    "- Custom agents from --plugin-dir plugins now load correctly in ACP mode"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

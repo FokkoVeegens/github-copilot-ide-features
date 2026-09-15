@@ -8,7 +8,9 @@
   "body_markdown": "* Added option for localization for chat: en, fr, it, de, es, ru, zh, ja, ko, cs, pt, tr, pl",
   "body_html": "<ul><li>Added option for localization for chat: en, fr, it, de, es, ru, zh, ja, ko, cs, pt, tr, pl</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Added option for localization for chat: en, fr, it, de, es, ru, zh, ja, ko, cs, pt, tr, pl"
+  ],
   "builds": [
     {
       "ide_build": null,

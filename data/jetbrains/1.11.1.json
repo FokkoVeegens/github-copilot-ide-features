@@ -9,8 +9,29 @@
   "body_html": "<ul><li><strong>New Features</strong></li><li>Added: added support for Add\nto\nQueue, Steer\nwith\nMessage, and Stop\nand\nSend options in CLI sessions </li><li>Added: support for organization and enterprise agents from GitHub</li><li>Added: Agent debug logs summary view </li><li>Added: Claude Agent in public preview </li><li>Added: /migrate slash command to migrate Local sessions to CLI sessions </li><li>Added: /models slash command to open the model picker, with support for both Copilot CLI and Claude Agent  </li><li>Added: per-turn AI credits indicator in Local, CLI and Claude Agent sessions</li><li>Added: support for selecting larger context window from model picker</li><li>Added: recently used model section in the Local agent model picker</li><li><strong>User Experience</strong></li><li>Improved: chat input layout for better reliability </li><li>Improved: inline chat experience by ensuring state resets when closed during a response</li><li>Improved: code block rendering performance</li><li>Improved: NES by adding richer code diagnostic information for better suggestions</li><li><strong>Bug Fixes</strong></li><li>Fixed: an issue where diff views would open for every agent edit</li><li>Fixed: an issue that could cause no completion models to be shown in settings</li><li>Fixed: multiple UI freeze issues</li><li><strong>Changed</strong></li><li>Cloud agent is generally available</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Added: added support for Add",
+    "to",
+    "Queue, Steer",
+    "with",
+    "Message, and Stop",
+    "and",
+    "Send options in CLI sessions",
+    "* Added: support for organization and enterprise agents from GitHub",
+    "* Added: Agent debug logs summary view",
+    "* Added: Claude Agent in public preview",
+    "* Added: /migrate slash command to migrate Local sessions to CLI sessions",
     "* Added: /models slash command to open the model picker, with support for both Copilot CLI and Claude Agent",
-    "* Improved: inline chat experience by ensuring state resets when closed during a response"
+    "* Added: per-turn AI credits indicator in Local, CLI and Claude Agent sessions",
+    "* Added: support for selecting larger context window from model picker",
+    "* Added: recently used model section in the Local agent model picker",
+    "* Improved: chat input layout for better reliability",
+    "* Improved: inline chat experience by ensuring state resets when closed during a response",
+    "* Improved: code block rendering performance",
+    "* Improved: NES by adding richer code diagnostic information for better suggestions",
+    "* Fixed: an issue where diff views would open for every agent edit",
+    "* Fixed: an issue that could cause no completion models to be shown in settings",
+    "* Fixed: multiple UI freeze issues",
+    "* Cloud agent is generally available"
   ],
   "builds": [
     {

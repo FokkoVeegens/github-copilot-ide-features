@@ -8,7 +8,12 @@
   "body_markdown": "**Added**\n- Windows: remote MCP servers protected by Microsoft Entra ID can now sign in through the OS authentication broker (WAM), usually with no prompt at all. Other platforms, `--device-code`, and machines without the broker library keep the existing browser flow.\n\n**Fixed**\n- Repeatedly resuming the same session no longer crashes while telemetry is being replaced",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Windows: remote MCP servers protected by Microsoft Entra ID can now sign in through the OS authentication broker (WAM), usually with no prompt at all. Other platforms, `--device-code`, and machines without the broker library keep the existing browser flow.",
+    "**Fixed**",
+    "- Repeatedly resuming the same session no longer crashes while telemetry is being replaced"
+  ],
   "prerelease": true,
   "fetched_at": "2026-08-28T19:23:42Z",
   "schema_version": 1

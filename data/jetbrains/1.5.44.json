@@ -8,7 +8,13 @@
   "body_markdown": "* Fixed: Included the current branch name as context when generating commit messages.\n* Fixed: Addressed an issue where re-authorization was required, but the Authorize button was not working.\n* Fixed: Mitigated potential memory leaks causing the IDE to freeze.\n* Fixed: Enhanced the user experience for the model selector.\n* Update: Agent mode is now available in **nightly** builds. While still in development, you can test it out and provide early feedback to help improve it further.",
   "body_html": "<ul><li>Fixed: Included the current branch name as context when generating commit messages.\n</li><li>Fixed: Addressed an issue where re-authorization was required, but the Authorize button was not working.\n</li><li>Fixed: Mitigated potential memory leaks causing the IDE to freeze.\n</li><li>Fixed: Enhanced the user experience for the model selector.\n</li><li>Update: Agent mode is now available in <strong>nightly</strong> builds. While still in development, you can test it out and provide early feedback to help improve it further.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Fixed: Included the current branch name as context when generating commit messages.",
+    "* Fixed: Addressed an issue where re-authorization was required, but the Authorize button was not working.",
+    "* Fixed: Mitigated potential memory leaks causing the IDE to freeze.",
+    "* Fixed: Enhanced the user experience for the model selector.",
+    "* Update: Agent mode is now available in **nightly** builds. While still in development, you can test it out and provide early feedback to help improve it further."
+  ],
   "builds": [
     {
       "ide_build": "241",

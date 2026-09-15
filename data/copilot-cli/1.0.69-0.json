@@ -8,7 +8,14 @@
   "body_markdown": "**Added**\n- Add file and folder completion to /sandbox path entries\n\n**Fixed**\n- Update a backgrounded session's branch label in the Sessions split view when its working directory changes\n- Skip unnecessary MCP reloads when returning to an already-loaded session\n- Prevent the tgrep indexer from running out of memory on large monorepos, and fall back to ripgrep if the indexer is killed instead of repeatedly restarting it",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add file and folder completion to /sandbox path entries",
+    "**Fixed**",
+    "- Update a backgrounded session's branch label in the Sessions split view when its working directory changes",
+    "- Skip unnecessary MCP reloads when returning to an already-loaded session",
+    "- Prevent the tgrep indexer from running out of memory on large monorepos, and fall back to ripgrep if the indexer is killed instead of repeatedly restarting it"
+  ],
   "prerelease": true,
   "fetched_at": "2026-07-02T08:15:21Z",
   "schema_version": 1

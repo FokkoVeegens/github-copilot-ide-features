@@ -9,7 +9,18 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- `copilot -p` will no longer interactively prompt for permission requests"
+    "2025-11-17",
+    "- Support adding images to context via drag & dropping and pasting paths to image files. Improved how image slugs are rendered in the input box",
+    "- Add `/share` command to save session as markdown file or GitHub gist",
+    "- Fix a bug where cached tokens were displaying as zero at the end of the session",
+    "- Enable `USE_BUILTIN_RIPGREP` environment variable to optionally use ripgrep from PATH",
+    "- Fix an issue where sourcing custom agents from the remote repository's default branch led to confusions about whether the local copy of the agent was being used",
+    "- Fix custom agents configuration issues",
+    "- Improve `Ctrl+C` performance",
+    "- Improve tool argument parsing safety",
+    "- Distinguish tool names from paths and improve tool success/error icons",
+    "- `copilot -p` will no longer interactively prompt for permission requests",
+    "- Remove unnecessary whitespace from tool descriptions"
   ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",

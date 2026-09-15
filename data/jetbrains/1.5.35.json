@@ -8,7 +8,9 @@
   "body_markdown": "* **Fixed**: Resolved a known issue in the completion model settings to support future models.",
   "body_html": "<ul><li><strong>Fixed</strong>: Resolved a known issue in the completion model settings to support future models.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* **Fixed**: Resolved a known issue in the completion model settings to support future models."
+  ],
   "builds": [
     {
       "ide_build": "241",

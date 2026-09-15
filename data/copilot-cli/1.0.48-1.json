@@ -8,7 +8,11 @@
   "body_markdown": "**Fixed**\n- Input text with CJK characters or emoji renders without blank gaps between lines\n- /context shows correct token limits for all models instead of always showing 128k",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Input text with CJK characters or emoji renders without blank gaps between lines",
+    "- /context shows correct token limits for all models instead of always showing 128k"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

@@ -8,7 +8,14 @@
   "body_markdown": "* Add support for more languages for completions\n* Show chat progress when processing messages\n* Expose editor networking via settings. This can be used e.g. when facing HTTP(S) proxy issues.\n* Fix issues when cancelling chat messages\n* Fix invalid thread access when performing some network requests\n* Several prompt improvements",
   "body_html": "<ul><li>Add support for more languages for completions\n</li><li>Show chat progress when processing messages\n</li><li>Expose editor networking via settings. This can be used e.g. when facing HTTP(S) proxy issues.\n</li><li>Fix issues when cancelling chat messages\n</li><li>Fix invalid thread access when performing some network requests\n</li><li>Several prompt improvements</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Add support for more languages for completions",
+    "* Show chat progress when processing messages",
+    "* Expose editor networking via settings. This can be used e.g. when facing HTTP(S) proxy issues.",
+    "* Fix issues when cancelling chat messages",
+    "* Fix invalid thread access when performing some network requests",
+    "* Several prompt improvements"
+  ],
   "builds": [
     {
       "ide_build": null,

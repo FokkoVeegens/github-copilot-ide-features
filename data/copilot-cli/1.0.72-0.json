@@ -8,7 +8,15 @@
   "body_markdown": "**Added**\n- Multi-turn subagents are always enabled, so you can send follow-up messages to running agents\n- Enable tool search for Claude Haiku 4.5+\n\n**Improved**\n- Deliver scheduled prompts as steering messages when the agent is busy\n\n**Fixed**\n- Emoji shortcodes like :tada: no longer render with a spurious trailing space in printed and PR/issue/gist output",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Multi-turn subagents are always enabled, so you can send follow-up messages to running agents",
+    "- Enable tool search for Claude Haiku 4.5+",
+    "**Improved**",
+    "- Deliver scheduled prompts as steering messages when the agent is busy",
+    "**Fixed**",
+    "- Emoji shortcodes like :tada: no longer render with a spurious trailing space in printed and PR/issue/gist output"
+  ],
   "prerelease": true,
   "fetched_at": "2026-07-19T09:12:10Z",
   "schema_version": 1

@@ -8,7 +8,10 @@
   "body_markdown": "* Show correct empty text after the panel is opened the first time.\n* Fixed problems when opening UML diagram editors.",
   "body_html": "<ul><li>Show correct empty text after the panel is opened the first time.</li><li>Fixed problems when opening UML diagram editors.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Show correct empty text after the panel is opened the first time.",
+    "* Fixed problems when opening UML diagram editors."
+  ],
   "builds": [
     {
       "ide_build": null,

@@ -9,7 +9,10 @@
   "body_html": "<ul><li><strong>Added</strong>: Support for disabling Agent mode when it’s disabled by policy.\n</li><li><strong>Added</strong>: New button in Inline Chat to open proposed changes in a separate tab.\n</li><li><strong>Fixed</strong>: Auto-scrolling is now temporarily disabled when users manually scroll up in Agent mode, improving usability.\n</li><li><strong>Fixed</strong>: Layout adjustments for a more refined user experience.</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "* **Added**: New button in Inline Chat to open proposed changes in a separate tab."
+    "* **Added**: Support for disabling Agent mode when it’s disabled by policy.",
+    "* **Added**: New button in Inline Chat to open proposed changes in a separate tab.",
+    "* **Fixed**: Auto-scrolling is now temporarily disabled when users manually scroll up in Agent mode, improving usability.",
+    "* **Fixed**: Layout adjustments for a more refined user experience."
   ],
   "builds": [
     {

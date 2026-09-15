@@ -104,7 +104,8 @@ def fetch(ide_config: dict) -> list[dict]:
         first_item = build_list[0]["item"]
         notes_html: str = first_item.get("notes") or ""
         notes_markdown = html_to_markdown(notes_html) if notes_html else ""
-        copilot_mentions = extract_copilot_mentions(notes_markdown)
+        # Entire changelog is about the Copilot plugin, so keep every bullet.
+        copilot_mentions = extract_copilot_mentions(notes_markdown, require_keyword=False)
 
         # Per-build compatibility metadata.
         builds = [

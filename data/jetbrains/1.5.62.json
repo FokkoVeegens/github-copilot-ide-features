@@ -9,6 +9,19 @@
   "body_html": "<ul><li><strong>New Features</strong>\n</li><li>Added: MCP registry – browse, install, or uninstall MCP servers from the registry.\n</li><li>Added: MCP allowlist controls – administrators can configure which MCP servers developers are allowed to discover and use.\n</li><li>Added: Slash command update for /clear and support for /clearFileContext.\n</li><li>Added: CVE Remediator subagent – detects and fixes security vulnerabilities in project dependencies while keeping the build functional.\n</li><li>Added: Continue subagent execution when max request limit reached\n</li><li><strong>User Experience</strong>\n</li><li>Fixed: Context consistency in Agent Mode, Edit Mode and Ask Mode.\n</li><li>Fixed: Incorrect mode display when switching from Edit Mode back to Agent Mode.\n</li><li><strong>Performance and reliability</strong>\n</li><li>Fixed: Long initialization time when opening a new session.\n</li><li>Fixed: Specific files opening unexpectedly when starting a new session.\n</li><li>Fixed: Various startup and stability issues.\n</li><li><strong>MCP</strong>\n</li><li>Fixed: Code completion for mcp.json incorrectly appearing in other JSON files.\n</li><li><strong>Custom Instructions &amp; Models</strong>\n</li><li>Fixed: applyTo field not working in instruction files.\n</li><li>Fixed: Selected model not remembered after restart.\n</li><li>Fixed: Workspace-level Copilot Instruction and Git Commit Instruction files opening the wrong file when multiple IDE windows are open.</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Added: MCP registry – browse, install, or uninstall MCP servers from the registry.",
+    "* Added: MCP allowlist controls – administrators can configure which MCP servers developers are allowed to discover and use.",
+    "* Added: Slash command update for /clear and support for /clearFileContext.",
+    "* Added: CVE Remediator subagent – detects and fixes security vulnerabilities in project dependencies while keeping the build functional.",
+    "* Added: Continue subagent execution when max request limit reached",
+    "* Fixed: Context consistency in Agent Mode, Edit Mode and Ask Mode.",
+    "* Fixed: Incorrect mode display when switching from Edit Mode back to Agent Mode.",
+    "* Fixed: Long initialization time when opening a new session.",
+    "* Fixed: Specific files opening unexpectedly when starting a new session.",
+    "* Fixed: Various startup and stability issues.",
+    "* Fixed: Code completion for mcp.json incorrectly appearing in other JSON files.",
+    "* Fixed: applyTo field not working in instruction files.",
+    "* Fixed: Selected model not remembered after restart.",
     "* Fixed: Workspace-level Copilot Instruction and Git Commit Instruction files opening the wrong file when multiple IDE windows are open."
   ],
   "builds": [

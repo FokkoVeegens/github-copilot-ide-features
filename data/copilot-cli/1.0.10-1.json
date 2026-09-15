@@ -8,7 +8,10 @@
   "body_markdown": "**Added**\n- /copy writes formatted HTML to clipboard on Windows for pasting into Word, Outlook, and Teams",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- /copy writes formatted HTML to clipboard on Windows for pasting into Word, Outlook, and Teams"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

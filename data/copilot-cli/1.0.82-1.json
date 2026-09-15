@@ -8,7 +8,10 @@
   "body_markdown": "**Fixed**\n- Show the specific authentication failure (such as 401 Bad credentials) instead of only the /login prompt",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Show the specific authentication failure (such as 401 Bad credentials) instead of only the /login prompt"
+  ],
   "prerelease": true,
   "fetched_at": "2026-08-28T19:23:42Z",
   "schema_version": 1

@@ -8,7 +8,11 @@
   "body_markdown": "* Improved completions in TextMate files.\n* Fixed a few more issues with language handling.\n* Squashed a few bugs.",
   "body_html": "<ul><li>Improved completions in TextMate files.</li><li>Fixed a few more issues with language handling.</li><li>Squashed a few bugs.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Improved completions in TextMate files.",
+    "* Fixed a few more issues with language handling.",
+    "* Squashed a few bugs."
+  ],
   "builds": [
     {
       "ide_build": null,

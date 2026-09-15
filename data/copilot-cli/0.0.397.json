@@ -8,7 +8,17 @@
   "body_markdown": "2026-01-28\n\n- `/mcp show <server-name>` displays server details and available tools\n- Header layout adapts better to narrow terminal widths\n- Plan mode input text is more readable\n- Content pasted into the prompt over 30 KB is automatically saved to workspace files\n- Homebrew tools work correctly on macOS with zsh as default shell\n- Add --acp flag to start as Agent Client Protocol server\n- Directories now appear in @mention autocomplete\n- Session summary displays accurate line counts",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-01-28",
+    "- `/mcp show <server-name>` displays server details and available tools",
+    "- Header layout adapts better to narrow terminal widths",
+    "- Plan mode input text is more readable",
+    "- Content pasted into the prompt over 30 KB is automatically saved to workspace files",
+    "- Homebrew tools work correctly on macOS with zsh as default shell",
+    "- Add --acp flag to start as Agent Client Protocol server",
+    "- Directories now appear in @mention autocomplete",
+    "- Session summary displays accurate line counts"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

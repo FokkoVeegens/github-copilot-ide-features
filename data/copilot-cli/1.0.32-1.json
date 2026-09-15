@@ -8,7 +8,10 @@
   "body_markdown": "**Fixed**\n- /feedback saves the bundle to TEMP when the working directory is not writable",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- /feedback saves the bundle to TEMP when the working directory is not writable"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

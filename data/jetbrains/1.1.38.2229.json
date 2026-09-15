@@ -8,7 +8,9 @@
   "body_markdown": "* Improve error handling",
   "body_html": "<ul><li>Improve error handling</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Improve error handling"
+  ],
   "builds": [
     {
       "ide_build": null,

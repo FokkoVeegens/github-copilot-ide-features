@@ -10,7 +10,16 @@
   "categories": [],
   "copilot_mentions": [
     "* Added: Refined copilot settings page",
-    "* Added: Inline Chat UI refinement"
+    "* Added: Inline Chat UI refinement",
+    "* Added: Inline Diff: Respect user edits, bug fixing and other UX improvements",
+    "* Added: Support customizing location for pkg temp files",
+    "* Added: Chat UI refinement on collapsing and expanding files",
+    "* Fixed: Open settings not in EDT issue",
+    "* Fixed: UI improvements in undo and keep button",
+    "* Fixed: UI improvement for Working Set Panel",
+    "* Fixed: tool will overwrite existing files issue",
+    "* Fixed: Copy button is not enabled for error messages of agent's responses issue",
+    "* Fixed: Double empty lines when creating new file"
   ],
   "builds": [
     {

@@ -8,7 +8,14 @@
   "body_markdown": "**Added**\n- Add show_file tool for presenting code and diffs to the user\n\n**Improved**\n- Agent now knows which model is powering it when asked\n\n**Fixed**\n- /plugin marketplace add and /plugin install support local paths containing spaces",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add show_file tool for presenting code and diffs to the user",
+    "**Improved**",
+    "- Agent now knows which model is powering it when asked",
+    "**Fixed**",
+    "- /plugin marketplace add and /plugin install support local paths containing spaces"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

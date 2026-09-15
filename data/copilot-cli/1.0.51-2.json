@@ -9,7 +9,13 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- `/memory show` displays documentation links for learning about and managing Copilot Memory"
+    "**Improved**",
+    "- `/memory show` displays documentation links for learning about and managing Copilot Memory",
+    "**Fixed**",
+    "- Session naming works correctly for usage-based billing users",
+    "- Pressing Enter on a highlighted subcommand completion inserts the selection instead of submitting the partial command",
+    "- Use default release notes when publishing a release with no changelog entries",
+    "- Editor launched with Ctrl+G no longer steals keystrokes or requires double keypresses"
   ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",

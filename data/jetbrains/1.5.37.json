@@ -9,7 +9,13 @@
   "body_html": "<ul><li><strong>Added</strong>: Code referencing in both completion and chat.\n</li><li><strong>Added</strong>: Unified diff view in inline chat.\n</li><li><strong>Added</strong>: Support <strong>Claude 3.7 Sonnet</strong> models in chat.\n</li><li><strong>Changed</strong>: Migration to inline completion API for IDE integration.\n</li><li><strong>Fixed</strong>: Improved code block syntax highlighting.\n</li><li><strong>Fixed</strong>: Simplified login process.\n</li><li><strong>Fixed</strong>: Enhanced UI and system stability.</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "* **Added**: Unified diff view in inline chat."
+    "* **Added**: Code referencing in both completion and chat.",
+    "* **Added**: Unified diff view in inline chat.",
+    "* **Added**: Support **Claude 3.7 Sonnet** models in chat.",
+    "* **Changed**: Migration to inline completion API for IDE integration.",
+    "* **Fixed**: Improved code block syntax highlighting.",
+    "* **Fixed**: Simplified login process.",
+    "* **Fixed**: Enhanced UI and system stability."
   ],
   "builds": [
     {

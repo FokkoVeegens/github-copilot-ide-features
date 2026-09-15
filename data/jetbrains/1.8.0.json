@@ -8,7 +8,21 @@
   "body_markdown": "* **New Features**\n\n* Added: Inline agent mode (preview).\n* Added: Next Edit Suggestions enhancements, including inline edit previews and far-away edits.\n* Added: Global auto‑approve and granular controls for terminal commands and file edits.\n\n* **User Experience**\n\n* Improved: Chat context resets automatically after sending messages.\n* Improved: Chat history rendering performance for large conversations.\n* Improved: Stability and quality of chat code blocks.\n* Improved: Inline code review panel supports automatic resizing.\n* Improved: Refined login experience with a smoother device code flow.\n* Improved: UX enhancements across sign‑in, tooltips, and focus behavior.\n\n* **Bug Fixes**\n\n* Fixed: Chat spinner hanging during responses.\n* Fixed: Esc key failing to dismiss selections and IDE popups.\n* Fixed: Improved state handling in the Configure Tools window.\n* Fixed: Multiple UI freeze issues.",
   "body_html": "<ul><li><strong>New Features</strong>\n</li></ul>\n<ul><li>Added: Inline agent mode (preview).\n</li><li>Added: Next Edit Suggestions enhancements, including inline edit previews and far-away edits.\n</li><li>Added: Global auto‑approve and granular controls for terminal commands and file edits.\n\n</li></ul>\n<ul><li><strong>User Experience</strong>\n</li></ul>\n<ul><li>Improved: Chat context resets automatically after sending messages.\n</li><li>Improved: Chat history rendering performance for large conversations.\n</li><li>Improved: Stability and quality of chat code blocks.\n</li><li>Improved: Inline code review panel supports automatic resizing.\n</li><li>Improved: Refined login experience with a smoother device code flow.\n</li><li>Improved: UX enhancements across sign‑in, tooltips, and focus behavior.\n\n</li></ul>\n<ul><li><strong>Bug Fixes</strong>\n</li></ul>\n<ul><li>Fixed: Chat spinner hanging during responses.\n</li><li>Fixed: Esc key failing to dismiss selections and IDE popups.\n</li><li>Fixed: Improved state handling in the Configure Tools window.\n</li><li>Fixed: Multiple UI freeze issues.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Added: Inline agent mode (preview).",
+    "* Added: Next Edit Suggestions enhancements, including inline edit previews and far-away edits.",
+    "* Added: Global auto‑approve and granular controls for terminal commands and file edits.",
+    "* Improved: Chat context resets automatically after sending messages.",
+    "* Improved: Chat history rendering performance for large conversations.",
+    "* Improved: Stability and quality of chat code blocks.",
+    "* Improved: Inline code review panel supports automatic resizing.",
+    "* Improved: Refined login experience with a smoother device code flow.",
+    "* Improved: UX enhancements across sign‑in, tooltips, and focus behavior.",
+    "* Fixed: Chat spinner hanging during responses.",
+    "* Fixed: Esc key failing to dismiss selections and IDE popups.",
+    "* Fixed: Improved state handling in the Configure Tools window.",
+    "* Fixed: Multiple UI freeze issues."
+  ],
   "builds": [
     {
       "ide_build": "243",

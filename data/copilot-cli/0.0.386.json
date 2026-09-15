@@ -8,7 +8,11 @@
   "body_markdown": "2026-01-19\n\n- Background compaction preserves tool call sequences correctly\n- Add `/resume` command to switch sessions",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-01-19",
+    "- Background compaction preserves tool call sequences correctly",
+    "- Add `/resume` command to switch sessions"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

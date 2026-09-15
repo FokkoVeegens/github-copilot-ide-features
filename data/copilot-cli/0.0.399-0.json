@@ -8,7 +8,16 @@
   "body_markdown": "**Added**\n- Press Ctrl+X then / to run slash commands without losing your input\n- Add LSP (Language Server Protocol) tool for code intelligence (requires experimental flag)\n- Add `/diff` command to review session changes\n\n**Improved**\n- Compaction messages show clearer command hints to view checkpoint summaries\n\n**Fixed**\n- /usage now includes token consumption from sub-agents (e.g., the general-purpose agent)",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Press Ctrl+X then / to run slash commands without losing your input",
+    "- Add LSP (Language Server Protocol) tool for code intelligence (requires experimental flag)",
+    "- Add `/diff` command to review session changes",
+    "**Improved**",
+    "- Compaction messages show clearer command hints to view checkpoint summaries",
+    "**Fixed**",
+    "- /usage now includes token consumption from sub-agents (e.g., the general-purpose agent)"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

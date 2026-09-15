@@ -8,7 +8,9 @@
   "body_markdown": "* Fixed: incomplete code snippets in chat",
   "body_html": "<ul><li>Fixed: incomplete code snippets in chat</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Fixed: incomplete code snippets in chat"
+  ],
   "builds": [
     {
       "ide_build": "242",

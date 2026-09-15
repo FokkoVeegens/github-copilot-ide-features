@@ -8,7 +8,11 @@
   "body_markdown": "* Support for 2024.3 EAP\n* Authentication bug fixes\n* UI/Accessibility bug fixes",
   "body_html": "<ul><li>Support for 2024.3 EAP\n</li><li>Authentication bug fixes\n</li><li>UI/Accessibility bug fixes</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Support for 2024.3 EAP",
+    "* Authentication bug fixes",
+    "* UI/Accessibility bug fixes"
+  ],
   "builds": [
     {
       "ide_build": null,

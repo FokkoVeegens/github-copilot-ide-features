@@ -8,7 +8,11 @@
   "body_markdown": "**Fixed**\n- A message typed while /worktree or /move is preparing the worktree no longer breaks the switch into it\n- Ctrl+E expands the plan approval card to show the full plan again",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- A message typed while /worktree or /move is preparing the worktree no longer breaks the switch into it",
+    "- Ctrl+E expands the plan approval card to show the full plan again"
+  ],
   "prerelease": true,
   "fetched_at": "2026-09-02T12:04:20Z",
   "schema_version": 1

@@ -8,7 +8,10 @@
   "body_markdown": "* Improve navigation in chat input box\n* Performance improvements",
   "body_html": "<ul><li>Improve navigation in chat input box\n</li><li>Performance improvements</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Improve navigation in chat input box",
+    "* Performance improvements"
+  ],
   "builds": [
     {
       "ide_build": null,

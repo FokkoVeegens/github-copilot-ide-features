@@ -9,6 +9,8 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "- Overhauled our session logging format:",
+    "- Introduced a new session logging format that decouples how we store sessions from how we display them in the timeline. The new format is cleaner, more concise, and scalable, and will allow us to more easily implement new features down the line.",
     "- New sessions are stored in `~/.copilot/session-state`",
     "- Legacy sessions are stored in `~/.copilot/history-session-state` -- these will be migrated to the new format & location as you resume them from `copilot --resume`",
     "- Enabled the Kitty protocol by default. Multi-line input is now supported via Shift+Ctrl on terminal that support the Kitty protocol. Multi-line input is also supported in VSCode and its forks by running the `/terminal-setup` command (fixes https://github.com/github/copilot-cli/issues/14)",
@@ -17,6 +19,7 @@
     "- Added debug logging when calls to `/model` result in Copilot API errors. This should help us diagnose some policy/model access edge cases like https://github.com/github/copilot-cli/issues/268 and https://github.com/github/copilot-cli/issues/116",
     "- Added `gradlew` to the list of commands whose subcommands can be whitelisted (fixes https://github.com/github/copilot-cli/issues/217#issuecomment-3393844685)",
     "- Fixed a bug where sessions could enter a stuck state after a failed MCP tool call (fixes https://github.com/github/copilot-cli/issues/312)",
+    "- Made the output of `--help` text more concise",
     "Run `npm install -g @github/copilot@latest` to update!"
   ],
   "prerelease": false,

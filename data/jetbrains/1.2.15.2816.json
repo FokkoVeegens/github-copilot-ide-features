@@ -8,7 +8,10 @@
   "body_markdown": "* Increased prompt size for better completions\n* Various bug fixes",
   "body_html": "<ul><li>Increased prompt size for better completions</li><li>Various bug fixes</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Increased prompt size for better completions",
+    "* Various bug fixes"
+  ],
   "builds": [
     {
       "ide_build": null,

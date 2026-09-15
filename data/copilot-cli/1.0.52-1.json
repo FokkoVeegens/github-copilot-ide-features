@@ -9,7 +9,17 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Automatically prune old process log files from ~/.copilot/logs/ at startup to prevent unbounded disk growth"
+    "**Improved**",
+    "- Status line command supports plain shell commands in addition to executable script paths",
+    "- Automatically prune old process log files from ~/.copilot/logs/ at startup to prevent unbounded disk growth",
+    "- Polish /statusline picker with cleaner item descriptions and better spacing",
+    "- Picker checkboxes now use a single-cell ▣/▢ glyph for tighter, more consistent rows across pickers",
+    "**Fixed**",
+    "- Sessions containing events with non-URL strings in URL/URI fields resume without a 'Session file is corrupted' error",
+    "- Requests that time out due to an HTTP/2 upload stall automatically retry over HTTP/1.1",
+    "- Sessions no longer fail to load on Windows when a process exits with a high-bit exit code (e.g., .NET unhandled exceptions)",
+    "- Timeline entry connector color matches surrounding elements when expanded",
+    "- Gray background bar no longer appears behind user messages on terminals without truecolor support"
   ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",

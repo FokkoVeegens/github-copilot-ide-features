@@ -40,7 +40,8 @@ def fetch(ide_config: dict) -> list[dict]:
 
         body_html: str = item.get("body") or ""
         body_markdown = html_to_markdown(body_html) if body_html else ""
-        copilot_mentions = extract_copilot_mentions(body_markdown)
+        # Entire changelog is about the Copilot plugin, so keep every bullet.
+        copilot_mentions = extract_copilot_mentions(body_markdown, require_keyword=False)
 
         html_url: str = item.get("html_url", "")
 

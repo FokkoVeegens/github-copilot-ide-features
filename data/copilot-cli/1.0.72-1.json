@@ -9,7 +9,17 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Add skill removal support to `copilot plugins remove --skill`"
+    "**Added**",
+    "- Add --plugin, --mcp, and --skill flags for plugin mutations",
+    "- Add skill removal support to `copilot plugins remove --skill`",
+    "**Improved**",
+    "- Reveal full file paths when expanding compact editing rows",
+    "- Make the plan-approval menu deterministic across models",
+    "- Keep /add-dir directories visible in the agent context across turns",
+    "**Fixed**",
+    "- Wrap ask-user and elicitation inputs in the split-pane chat view",
+    "- Modified vim keys (Ctrl+K, uppercase J/K) no longer move the selection in tool-permission prompts and other text-input select menus; only unmodified j/k, the arrow keys, and Ctrl+P/Ctrl+N navigate.",
+    "- `/terminal-setup` now refuses to modify a VS Code keybindings.json that contains a JSON syntax error (instead of rewriting it and reporting success), matching its documented invalid-JSON handling."
   ],
   "prerelease": true,
   "fetched_at": "2026-07-19T09:12:10Z",

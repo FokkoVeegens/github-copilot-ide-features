@@ -8,7 +8,13 @@
   "body_markdown": "**Added**\n- Set an HTTP(S) proxy with a user setting\n\n**Fixed**\n- Resume sessions by name even when the name contains spaces\n- Hide unsupported slash commands in remote-hosted sessions",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Set an HTTP(S) proxy with a user setting",
+    "**Fixed**",
+    "- Resume sessions by name even when the name contains spaces",
+    "- Hide unsupported slash commands in remote-hosted sessions"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-23T08:21:47Z",
   "schema_version": 1

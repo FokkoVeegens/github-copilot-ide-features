@@ -8,7 +8,14 @@
   "body_markdown": "**Added**\n- Add `/tasks` command to view and manage background tasks\n- Enable background agents for all users\n\n**Improved**\n- Simplify and clarify `/delegate` command messaging\n- GITHUB_TOKEN environment variable now accessible in agent shell sessions",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add `/tasks` command to view and manage background tasks",
+    "- Enable background agents for all users",
+    "**Improved**",
+    "- Simplify and clarify `/delegate` command messaging",
+    "- GITHUB_TOKEN environment variable now accessible in agent shell sessions"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

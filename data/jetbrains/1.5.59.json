@@ -9,7 +9,10 @@
   "body_html": "<ul><li>Added: (Experimental) Drag file from editor tab into Copilot context.\n</li><li>Fixed: Various prompt issues for agent mode.\n</li><li>Fixed: OOM issue when working with large project.\n</li><li>Fixed: Incorrect popup position for # context.</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "* Added: (Experimental) Drag file from editor tab into Copilot context."
+    "* Added: (Experimental) Drag file from editor tab into Copilot context.",
+    "* Fixed: Various prompt issues for agent mode.",
+    "* Fixed: OOM issue when working with large project.",
+    "* Fixed: Incorrect popup position for # context."
   ],
   "builds": [
     {

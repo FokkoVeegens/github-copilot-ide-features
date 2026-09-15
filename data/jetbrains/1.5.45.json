@@ -9,7 +9,11 @@
   "body_html": "<ul><li>Added: Preview of Agent mode with support for MCP tools. Requires enabling Editor Preview Features in Copilot settings.\n</li><li>Fixed: Resolved authorization issue. If an unexpected Authorize button appears in the chat panel, logging out and back in will fix it.\n</li><li>Fixed: Addressed IDE freezing in certain rare scenarios.\n</li><li>Fixed: Commit message generation now includes the current Git branch name as context.\n</li><li>Fixed: Enhanced user experience, including improved rendering of code blocks.</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "* Added: Preview of Agent mode with support for MCP tools. Requires enabling Editor Preview Features in Copilot settings."
+    "* Added: Preview of Agent mode with support for MCP tools. Requires enabling Editor Preview Features in Copilot settings.",
+    "* Fixed: Resolved authorization issue. If an unexpected Authorize button appears in the chat panel, logging out and back in will fix it.",
+    "* Fixed: Addressed IDE freezing in certain rare scenarios.",
+    "* Fixed: Commit message generation now includes the current Git branch name as context.",
+    "* Fixed: Enhanced user experience, including improved rendering of code blocks."
   ],
   "builds": [
     {

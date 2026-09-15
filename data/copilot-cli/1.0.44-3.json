@@ -8,7 +8,12 @@
   "body_markdown": "**Added**\n- userPromptSubmitted hooks can now handle requests directly, bypassing the LLM and returning a response without making a model call\n\n**Improved**\n- Faster /user list and /user switch for multi-account users",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- userPromptSubmitted hooks can now handle requests directly, bypassing the LLM and returning a response without making a model call",
+    "**Improved**",
+    "- Faster /user list and /user switch for multi-account users"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

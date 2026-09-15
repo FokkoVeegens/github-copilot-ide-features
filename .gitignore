@@ -28,7 +28,10 @@ env/
 ENV/
 
 # IDE
-.vscode/
+.vscode/*
+!.vscode/
+!.vscode/tasks.json
+!.vscode/launch.json
 .idea/
 *.swp
 *.swo
@@ -41,6 +44,10 @@ ENV/
 
 # Data (exclude test/dummy data only; real IDE data is tracked)
 data/dummy/
+
+# Generated site output
+site/meta.json
+site/search-index.json
 
 # Temporary files
 *.tmp

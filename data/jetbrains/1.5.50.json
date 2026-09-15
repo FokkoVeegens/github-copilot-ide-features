@@ -8,7 +8,9 @@
   "body_markdown": "* **Fixed**: Switch chat mode dropdown list not shown bug.",
   "body_html": "<ul><li><strong>Fixed</strong>: Switch chat mode dropdown list not shown bug.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* **Fixed**: Switch chat mode dropdown list not shown bug."
+  ],
   "builds": [
     {
       "ide_build": "241",

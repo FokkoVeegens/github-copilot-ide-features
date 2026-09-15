@@ -8,7 +8,15 @@
   "body_markdown": "* **New Features**\n\n* Added: Toggle settings for Agent mode, Coding Agent, Code Review, and Custom Agent.\n* Added: Sign-in prompt in settings for unauthenticated users.\n* Added: Settings UX improvements.\n* Added: Support Skills in Agent mode (Preview)\n\n* **Performance and reliability**\n\n* Fixed: Resolved login issues for GitHub Enterprise users by enabling support for custom authentication providers.\n* Fixed: Refined buttons to make actions more intuitive on view diff toolbar.\n* Fixed: Better readability on the chat panel.",
   "body_html": "<ul><li><strong>New Features</strong>\n</li></ul>\n<ul><li>Added: Toggle settings for Agent mode, Coding Agent, Code Review, and Custom Agent.\n</li><li>Added: Sign-in prompt in settings for unauthenticated users.\n</li><li>Added: Settings UX improvements.\n</li><li>Added: Support Skills in Agent mode (Preview)\n\n</li></ul>\n<ul><li><strong>Performance and reliability</strong>\n</li></ul>\n<ul><li>Fixed: Resolved login issues for GitHub Enterprise users by enabling support for custom authentication providers.\n</li><li>Fixed: Refined buttons to make actions more intuitive on view diff toolbar.\n</li><li>Fixed: Better readability on the chat panel.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Added: Toggle settings for Agent mode, Coding Agent, Code Review, and Custom Agent.",
+    "* Added: Sign-in prompt in settings for unauthenticated users.",
+    "* Added: Settings UX improvements.",
+    "* Added: Support Skills in Agent mode (Preview)",
+    "* Fixed: Resolved login issues for GitHub Enterprise users by enabling support for custom authentication providers.",
+    "* Fixed: Refined buttons to make actions more intuitive on view diff toolbar.",
+    "* Fixed: Better readability on the chat panel."
+  ],
   "builds": [
     {
       "ide_build": "243",

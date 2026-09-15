@@ -9,6 +9,7 @@
   "body_html": "<ul><li>Better support for transparent proxies</li><li>Improved UX for users without Copilot access</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Better support for transparent proxies",
     "* Improved UX for users without Copilot access"
   ],
   "builds": [

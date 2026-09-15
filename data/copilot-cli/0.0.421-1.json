@@ -8,7 +8,10 @@
   "body_markdown": "**Improved**\n- AUTO theme now reads your terminal's ANSI color palette and uses it directly, so colors match your terminal theme",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- AUTO theme now reads your terminal's ANSI color palette and uses it directly, so colors match your terminal theme"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

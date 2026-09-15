@@ -8,7 +8,12 @@
   "body_markdown": "* Major improvements of model quality for the most used languages\n* Better support for C# in Rider\n* Fixed critical issue with Jupyter notebooks\n* Various bug fixes",
   "body_html": "<ul><li>Major improvements of model quality for the most used languages</li><li>Better support for C# in Rider</li><li>Fixed critical issue with Jupyter notebooks</li><li>Various bug fixes</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Major improvements of model quality for the most used languages",
+    "* Better support for C# in Rider",
+    "* Fixed critical issue with Jupyter notebooks",
+    "* Various bug fixes"
+  ],
   "builds": [
     {
       "ide_build": null,

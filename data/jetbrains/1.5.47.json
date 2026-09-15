@@ -9,7 +9,17 @@
   "body_html": "<ul><li><strong>Added</strong>: Slash commands for <strong>Clear all context</strong> and <strong>Add all open files</strong> in Ask mode\n</li><li><strong>Added</strong>: Drag and drop at the Folder level\n</li><li><strong>Added</strong>: Vision support in Agent mode\n</li><li><strong>Added</strong>: Support for MCP remote servers (SSE and Streamable HTTP types)\n</li><li><strong>Added</strong>: Log panel for MCP servers\n</li><li><strong>Added</strong>: Custom instructions in Edit mode\n</li><li><strong>Changed</strong>: Use inline diff view in Edit mode\n</li><li><strong>Fixed</strong>: Support for including unversioned files when generating Git commit messages\n</li><li><strong>Fixed</strong>: Improved support for UNC paths (e.g., WSL file paths) in Agent mode\n</li><li><strong>Fixed</strong>: Bugs affecting Copilot features in SQL Console\n</li><li><strong>Fixed</strong>: Various performance and reliability issues</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "* **Fixed**: Bugs affecting Copilot features in SQL Console"
+    "* **Added**: Slash commands for **Clear all context** and **Add all open files** in Ask mode",
+    "* **Added**: Drag and drop at the Folder level",
+    "* **Added**: Vision support in Agent mode",
+    "* **Added**: Support for MCP remote servers (SSE and Streamable HTTP types)",
+    "* **Added**: Log panel for MCP servers",
+    "* **Added**: Custom instructions in Edit mode",
+    "* **Changed**: Use inline diff view in Edit mode",
+    "* **Fixed**: Support for including unversioned files when generating Git commit messages",
+    "* **Fixed**: Improved support for UNC paths (e.g., WSL file paths) in Agent mode",
+    "* **Fixed**: Bugs affecting Copilot features in SQL Console",
+    "* **Fixed**: Various performance and reliability issues"
   ],
   "builds": [
     {

@@ -8,7 +8,10 @@
   "body_markdown": "* Minor bugfixes\n* Reworked preference page",
   "body_html": "<ul><li>Minor bugfixes</li><li>Reworked preference page</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Minor bugfixes",
+    "* Reworked preference page"
+  ],
   "builds": [
     {
       "ide_build": null,

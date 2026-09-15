@@ -75,3 +75,39 @@ class TestExtractCopilotMentions:
         md = "\n\nCopilot enabled.\n\n"
         mentions = extract_copilot_mentions(md)
         assert all(m.strip() for m in mentions)
+
+
+class TestExtractCopilotMentionsNoKeyword:
+    def test_keeps_keyword_free_bullets(self):
+        md = "- Agent skills are generally available.\n- Faster indexing."
+        mentions = extract_copilot_mentions(md, require_keyword=False)
+        assert mentions == [
+            "- Agent skills are generally available.",
+            "- Faster indexing.",
+        ]
+
+    def test_excludes_atx_section_headings(self):
+        md = "### Added\n- Support tool calling in Ask Mode.\n### Changed\n- Update selector."
+        mentions = extract_copilot_mentions(md, require_keyword=False)
+        assert "### Added" not in mentions
+        assert "### Changed" not in mentions
+        assert mentions == [
+            "- Support tool calling in Ask Mode.",
+            "- Update selector.",
+        ]
+
+    def test_excludes_version_date_heading(self):
+        md = "## 0.0.334 - 2025-10-03\n- Improved pasting of large content."
+        mentions = extract_copilot_mentions(md, require_keyword=False)
+        assert mentions == ["- Improved pasting of large content."]
+
+    def test_excludes_bullet_only_bold_header(self):
+        md = "* **New Features**\n- Added a new command."
+        mentions = extract_copilot_mentions(md, require_keyword=False)
+        assert mentions == ["- Added a new command."]
+
+    def test_atx_heading_excluded_even_in_keyword_mode(self):
+        md = "## GitHub Copilot updates\n- Copilot chat added."
+        mentions = extract_copilot_mentions(md)
+        assert mentions == ["- Copilot chat added."]
+

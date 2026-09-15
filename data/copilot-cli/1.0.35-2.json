@@ -8,7 +8,15 @@
   "body_markdown": "**Added**\n- Add continueOnAutoMode config option to automatically switch to auto model on rate limit instead of pausing\n\n**Fixed**\n- Auto mode no longer fails with an error when switching to a model that doesn't support the configured reasoning effort\n- Pattern-specific instruction files (.github/instructions/*.instructions.md) no longer include their full body in the system prompt on every session\n- Extension shutdown errors no longer appear as error-level log noise on every session exit\n- LSP refactoring tools now register correctly on the first turn when LSP configs are present",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add continueOnAutoMode config option to automatically switch to auto model on rate limit instead of pausing",
+    "**Fixed**",
+    "- Auto mode no longer fails with an error when switching to a model that doesn't support the configured reasoning effort",
+    "- Pattern-specific instruction files (.github/instructions/*.instructions.md) no longer include their full body in the system prompt on every session",
+    "- Extension shutdown errors no longer appear as error-level log noise on every session exit",
+    "- LSP refactoring tools now register correctly on the first turn when LSP configs are present"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

@@ -8,7 +8,14 @@
   "body_markdown": "**Improved**\n- Skip IDE auto-connect when session is already in use by another client\n- Slash command timeline entries now include the command name (e.g., \"Review\", \"Plan\") for better context\n\n**Fixed**\n- Plugin hook scripts with missing execute permissions now run correctly on macOS\n- Custom agent is properly restored when resuming a session where the agent display name differs from its filename",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Skip IDE auto-connect when session is already in use by another client",
+    "- Slash command timeline entries now include the command name (e.g., \"Review\", \"Plan\") for better context",
+    "**Fixed**",
+    "- Plugin hook scripts with missing execute permissions now run correctly on macOS",
+    "- Custom agent is properly restored when resuming a session where the agent display name differs from its filename"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1
