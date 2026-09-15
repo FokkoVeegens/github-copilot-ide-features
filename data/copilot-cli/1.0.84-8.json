@@ -1,0 +1,15 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.84-8",
+  "release_date": "2026-09-15",
+  "title": "1.0.84-8",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.84-8",
+  "source": "api",
+  "body_markdown": "**Added**\n- Set transcriptView to \"concise\" to group tool activity into expandable work summaries.\n\n**Improved**\n- Pause and resume Agent Factory runs from the /factories dialog\n\n**Fixed**\n- Model lists refresh after signing in, switching accounts, or signing out",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [],
+  "prerelease": true,
+  "fetched_at": "2026-09-15T12:37:27Z",
+  "schema_version": 1
+}
