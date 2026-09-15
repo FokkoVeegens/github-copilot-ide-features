@@ -139,11 +139,20 @@ def test_extract_snippets_falls_back_to_body_markdown() -> None:
         "copilot_mentions": [],  # Empty, should fall back
         "body_markdown": "- Bullet point 1\n- Bullet point 2\nNot a bullet\n* Star bullet",
     }
-    snippets = _extract_snippets(release)
+    snippets = _extract_snippets(release, allow_body_fallback=True)
     assert len(snippets) == 3
     assert "Bullet point 1" in snippets
     assert "Bullet point 2" in snippets
     assert "Star bullet" in snippets
+
+
+def test_extract_snippets_does_not_fallback_by_default() -> None:
+    release = {
+        "copilot_mentions": [],
+        "body_markdown": "- Unrelated release note",
+    }
+
+    assert _extract_snippets(release) == []
 
 
 def test_extract_snippets_ignores_missing_fields() -> None:
@@ -225,7 +234,7 @@ def test_build_search_index_metadata_includes_version_counts(populated_data: tup
     metadata = result["metadata"]
     assert "generated_at" in metadata
     assert "ide_version_counts" in metadata
-    assert metadata["ide_version_counts"]["Test IDE One"] == 2
+    assert metadata["ide_version_counts"]["Test IDE One"] == 1
     assert metadata["ide_version_counts"]["Test IDE Two"] == 1
 
 

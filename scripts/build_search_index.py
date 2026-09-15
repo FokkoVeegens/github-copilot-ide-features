@@ -9,6 +9,10 @@ from datetime import UTC, datetime
 
 from scripts.common.config import load_config
 
+COPILOT_ONLY_IDES = frozenset(
+    {"eclipse", "copilot-cli", "jetbrains", "xcode", "vim-neovim"}
+)
+
 
 def build_search_index(config_path: pathlib.Path | None = None, data_root: pathlib.Path | None = None) -> dict:
     """Build search index from all IDE data files.
@@ -63,8 +67,9 @@ def build_search_index(config_path: pathlib.Path | None = None, data_root: pathl
                 if not (version and release_date and url):
                     continue
                 
-                # Extract snippets from copilot_mentions; fall back to body_markdown
-                snippets = _extract_snippets(release)
+                snippets = _extract_snippets(
+                    release, allow_body_fallback=ide_id in COPILOT_ONLY_IDES
+                )
                 
                 if snippets:
                     ide_version_counts[ide_name] += 1
@@ -104,10 +109,11 @@ def build_search_index(config_path: pathlib.Path | None = None, data_root: pathl
     return {"records": records, "metadata": metadata}
 
 
-def _extract_snippets(release: dict) -> list[str]:
+def _extract_snippets(release: dict, allow_body_fallback: bool = False) -> list[str]:
     """Extract Copilot-related snippets from a release.
     
-    Prefers copilot_mentions; falls back to body_markdown bullet lines.
+    Prefers copilot_mentions. For Copilot-only sources, optionally falls back
+    to body_markdown bullet lines when no mentions were extracted.
     """
     snippets = []
     
@@ -121,7 +127,9 @@ def _extract_snippets(release: dict) -> list[str]:
                     snippets.append(cleaned)
         return snippets
     
-    # Fall back to body_markdown
+    if not allow_body_fallback:
+        return snippets
+
     body = release.get("body_markdown", "")
     if body:
         # Extract bullet lines (lines starting with -, *, or +)
