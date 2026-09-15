@@ -181,7 +181,7 @@ function renderMatrix(matrix, query, hiddenCount = 0) {
           ? `<div class="all-versions">${escapeHtml(laterVersions.join(', '))}</div>`
           : '';
         tableHtml += `
-          <td class="match-cell" title="First in v${earliest}">
+           <td class="match-cell" title="First in v${escapeHtml(earliest)}">
             <a href="${escapeHtml(cell.url)}" target="_blank" rel="noopener noreferrer">
               <span class="earliest-badge">v${escapeHtml(earliest)}</span>
             </a>
