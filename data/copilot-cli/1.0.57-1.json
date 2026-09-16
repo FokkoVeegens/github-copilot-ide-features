@@ -8,7 +8,10 @@
   "body_markdown": "**Added**\n- Add showTipsOnStartup setting to control whether startup tips are shown",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add showTipsOnStartup setting to control whether startup tips are shown"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

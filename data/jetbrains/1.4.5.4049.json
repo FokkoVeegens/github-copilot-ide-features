@@ -8,7 +8,12 @@
   "body_markdown": "* Further improved TypeScript support in chat code blocks\n* Chat code blocks respect the editor theme now\n* Improved file references in chat\n* Better error messages in chat",
   "body_html": "<ul><li>Further improved TypeScript support in chat code blocks</li><li>Chat code blocks respect the editor theme now</li><li>Improved file references in chat</li><li>Better error messages in chat</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Further improved TypeScript support in chat code blocks",
+    "* Chat code blocks respect the editor theme now",
+    "* Improved file references in chat",
+    "* Better error messages in chat"
+  ],
   "builds": [
     {
       "ide_build": null,

@@ -8,7 +8,9 @@
   "body_markdown": "* Fix an issue that causes chat messages to be cut mid streaming",
   "body_html": "<ul><li>Fix an issue that causes chat messages to be cut mid streaming</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Fix an issue that causes chat messages to be cut mid streaming"
+  ],
   "builds": [
     {
       "ide_build": null,

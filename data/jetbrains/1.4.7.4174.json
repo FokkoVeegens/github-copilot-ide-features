@@ -8,7 +8,11 @@
   "body_markdown": "* Upgraded the minimum supported IDE version to 2023.1\n* Fixed a bug with `Shift+ENTER` not working properly in chat\n* Minor bug fixes",
   "body_html": "<ul><li>Upgraded the minimum supported IDE version to 2023.1</li><li>Fixed a bug with <code>Shift+ENTER</code> not working properly in chat</li><li>Minor bug fixes</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Upgraded the minimum supported IDE version to 2023.1",
+    "* Fixed a bug with `Shift+ENTER` not working properly in chat",
+    "* Minor bug fixes"
+  ],
   "builds": [
     {
       "ide_build": null,

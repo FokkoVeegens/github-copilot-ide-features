@@ -8,7 +8,9 @@
   "body_markdown": "* **Bug Fixes**\n* Resolved: An issue that block user to sign in.",
   "body_html": "<ul><li><strong>Bug Fixes</strong></li><li>Resolved: An issue that block user to sign in.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Resolved: An issue that block user to sign in."
+  ],
   "builds": [
     {
       "ide_build": "251",

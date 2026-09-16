@@ -8,7 +8,10 @@
   "body_markdown": "* Fixed suggestions in files on Windows network shared or in Windows WSL `\\\\wsl$\\...`.\n* Fixed missing completions for some files, especially larger files.",
   "body_html": "<ul><li>Fixed suggestions in files on Windows network shared or in Windows WSL <code>\\\\wsl$\\...</code>. </li><li>Fixed missing completions for some files, especially larger files.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Fixed suggestions in files on Windows network shared or in Windows WSL `\\\\wsl$\\...`.",
+    "* Fixed missing completions for some files, especially larger files."
+  ],
   "builds": [
     {
       "ide_build": null,

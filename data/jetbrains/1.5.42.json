@@ -9,10 +9,16 @@
   "body_html": "<ul><li>Added: New models (<strong>OpenAI GPT-4.1</strong>, <strong>o3</strong> and <strong>o4-mini</strong>, <strong>Gemini 2.5 Pro</strong>) are available.\n</li><li>Added: A new setting to toggle auto-scrolling to the bottom of the chat.\n</li><li>Added: Support for restoring checkpoints and conversation history in Copilot Edits.\n</li><li>Added: Custom instructions for generating Chat and Git commit messages. Specify these in the <strong>.github/copilot-instructions.md</strong> or <strong>.github/git-commit-instructions.md</strong> files.\n</li><li>Added: Vision support, enabling to attach and work with images directly in Copilot Chat.\n</li><li>Fixed: Inline completion provider now uses a human-readable name.\n</li><li>Fixed: Corrected the signed-in status in the main menu.\n</li><li>Fixed: Resolved issues with the delete-line shortcut in inline chat.\n</li><li>Fixed: Removed unused authentication settings.\n</li><li>Fixed: Various UI improvements and minor bug fixes.</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Added: New models (**OpenAI GPT-4.1**, **o3** and **o4-mini**, **Gemini 2.5 Pro**) are available.",
+    "* Added: A new setting to toggle auto-scrolling to the bottom of the chat.",
     "* Added: Support for restoring checkpoints and conversation history in Copilot Edits.",
     "* Added: Custom instructions for generating Chat and Git commit messages. Specify these in the **.github/copilot-instructions.md** or **.github/git-commit-instructions.md** files.",
     "* Added: Vision support, enabling to attach and work with images directly in Copilot Chat.",
-    "* Fixed: Resolved issues with the delete-line shortcut in inline chat."
+    "* Fixed: Inline completion provider now uses a human-readable name.",
+    "* Fixed: Corrected the signed-in status in the main menu.",
+    "* Fixed: Resolved issues with the delete-line shortcut in inline chat.",
+    "* Fixed: Removed unused authentication settings.",
+    "* Fixed: Various UI improvements and minor bug fixes."
   ],
   "builds": [
     {

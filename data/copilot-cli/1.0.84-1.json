@@ -8,7 +8,10 @@
   "body_markdown": "**Added**\n- Add support for GPT-6 Astra",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add support for GPT-6 Astra"
+  ],
   "prerelease": true,
   "fetched_at": "2026-09-06T11:37:22Z",
   "schema_version": 1

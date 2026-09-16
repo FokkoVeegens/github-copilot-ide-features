@@ -9,7 +9,22 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Custom agents and skills in ~/.claude/ are no longer incorrectly loaded as Copilot project config"
+    "**Added**",
+    "- Added a GitHub-style contribution graph to /usage that adapts to terminal color mode and falls back to distinct glyphs in no-color terminals",
+    "**Improved**",
+    "- Improve rendering performance when displaying large amounts of text in the timeline",
+    "- Sync task calls block until completion under MULTI_TURN_AGENTS instead of auto-promoting to background after 60s; sync no longer returns a reusable agent_id, use mode: \"background\" for follow-ups",
+    "- Tab navigation supports Home/End keys to jump to first and last tab",
+    "- Plugins take effect immediately after install without requiring a restart",
+    "**Fixed**",
+    "- Self-correcting custom tool calls in agentic loop",
+    "- Cursor movement, deletion, and rendering work correctly for emoji and multi-codepoint characters in the text input",
+    "- Tool availability detection works correctly on Windows",
+    "- Session token expiry during a turn is handled automatically without requiring you to resend your message",
+    "- Initial tab and arrow key navigation in /cwd and /add-dir path picker selects the correct item",
+    "- Transient I/O errors no longer appear as red error entries in the timeline when an IDE or extension disconnects",
+    "- Custom agents and skills in ~/.claude/ are no longer incorrectly loaded as Copilot project config",
+    "- Login command restores interactive input correctly after authentication"
   ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",

@@ -10,8 +10,15 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "- Added support for new models in Chat: Claude 3.7 Sonnet and GPT 4.5",
     "- Implemented @workspace context feature allowing questions about the entire codebase in Copilot Chat",
-    "- Simplified access to Copilot Chat from the Copilot for Xcode app with a single click"
+    "- Simplified access to Copilot Chat from the Copilot for Xcode app with a single click",
+    "- Enhanced instructions for granting background permissions",
+    "- Resolved false alarms for sign-in and free plan limit notifications",
+    "- Improved app launch performance",
+    "- Fixed workspace and context update issues",
+    "- Chat",
+    "- Code completion"
   ],
   "prerelease": false,
   "fetched_at": "2026-07-10T12:13:00Z",

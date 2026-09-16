@@ -9,7 +9,13 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Add `copilot help monitoring` topic with OpenTelemetry configuration details and examples"
+    "**Added**",
+    "- Add `copilot help monitoring` topic with OpenTelemetry configuration details and examples",
+    "**Improved**",
+    "- Spinner stays active until background agents and shell commands finish, and user input remains available throughout",
+    "- Azure OpenAI BYOK defaults to the GA versionless v1 route when no API version is configured",
+    "- Reduce UI sluggishness during live response streaming",
+    "- /yolo and --yolo now behave identically and /yolo state persists across /restart"
   ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",

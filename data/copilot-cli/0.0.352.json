@@ -8,7 +8,10 @@
   "body_markdown": "## 0.0.352 - 2025-10-27\r\n\r\n- Improve handling of MCP tools containing slashes\r\n- Improve error message from `/model <model>` command when using an unsupported model",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "- Improve handling of MCP tools containing slashes",
+    "- Improve error message from `/model <model>` command when using an unsupported model"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

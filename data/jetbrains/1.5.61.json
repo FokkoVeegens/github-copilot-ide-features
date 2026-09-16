@@ -8,7 +8,15 @@
   "body_markdown": "* Added: Support GPT-5.1 GPT-5.1-Codex GPT-5.1-Codex-Mini models (Preview).\n* Fixed: Agent mode acts as ask mode.\n* Fixed: Custom agent feature is missing.\n* Fixed: Code lens to edit custom agent tools.\n* Fixed: Cannot run subagent with auto model.\n* Fixed: Model picker switched to auto unexpectedly.\n* Fixed:​ Commands not in terminal-specific rules are now auto-approved by your general setting.",
   "body_html": "<ul><li>Added: Support GPT-5.1 GPT-5.1-Codex GPT-5.1-Codex-Mini models (Preview).\n</li><li>Fixed: Agent mode acts as ask mode.\n</li><li>Fixed: Custom agent feature is missing.\n</li><li>Fixed: Code lens to edit custom agent tools.\n</li><li>Fixed: Cannot run subagent with auto model.\n</li><li>Fixed: Model picker switched to auto unexpectedly.\n</li><li>Fixed:​ Commands not in terminal-specific rules are now auto-approved by your general setting.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Added: Support GPT-5.1 GPT-5.1-Codex GPT-5.1-Codex-Mini models (Preview).",
+    "* Fixed: Agent mode acts as ask mode.",
+    "* Fixed: Custom agent feature is missing.",
+    "* Fixed: Code lens to edit custom agent tools.",
+    "* Fixed: Cannot run subagent with auto model.",
+    "* Fixed: Model picker switched to auto unexpectedly.",
+    "* Fixed:​ Commands not in terminal-specific rules are now auto-approved by your general setting."
+  ],
   "builds": [
     {
       "ide_build": "243",

@@ -8,7 +8,9 @@
   "body_markdown": "### Bug Fixes\n\n* Fixed a model support issue.",
   "body_html": "<h3>Bug Fixes</h3>\n\n<ul><li>Fixed a model support issue.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Fixed a model support issue."
+  ],
   "builds": [
     {
       "ide_build": "251",

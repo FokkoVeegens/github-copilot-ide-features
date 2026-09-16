@@ -9,9 +9,24 @@
   "body_html": "<ul><li>Added: Custom agent – customize your chat mode with your own configurations.\n</li><li>Added: Isolated subagents – use isolated context of specified agents to make agents more accurate and effective.\n</li><li>Added: Plan agent – create detailed implementation plans before starting the implementation.\n</li><li>Added: Dynamic OAuth – flexible authentication for enterprise and cloud environments.\n</li><li>Added: Auto model selection – automatic model selection within Copilot Chat for optimized performance.\n</li><li>Added: Support for the GPT-5-Codex model (Preview).\n</li><li>Added: Global instruction and prompt file support.\n</li><li>Added: Customize folder path for Workspace instruction and prompt file.\n</li><li>Added: <strong>Log Models</strong> action and command for easier troubleshooting.\n</li><li>Added: Continue confirmation UI when max tool calls are reached.\n</li><li>Added: MCP server management and configuration.\n</li><li>Added: Support multiple modules projects in agent mode.\n</li><li>Added: Various UI improvements.\n</li><li>Fixed: Popup position and focus issues for # context.\n</li><li>Fixed: <strong>No model found</strong> error when sampling.\n</li><li>Fixed: Multi-line paste issue in Copilot Chat input panel.\n</li><li>Fixed: Copilot editing wrong file.\n</li><li>Fixed: Adjusted input handling for required and optional resource template variables.</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Added: Custom agent – customize your chat mode with your own configurations.",
+    "* Added: Isolated subagents – use isolated context of specified agents to make agents more accurate and effective.",
+    "* Added: Plan agent – create detailed implementation plans before starting the implementation.",
+    "* Added: Dynamic OAuth – flexible authentication for enterprise and cloud environments.",
     "* Added: Auto model selection – automatic model selection within Copilot Chat for optimized performance.",
+    "* Added: Support for the GPT-5-Codex model (Preview).",
+    "* Added: Global instruction and prompt file support.",
+    "* Added: Customize folder path for Workspace instruction and prompt file.",
+    "* Added: **Log Models** action and command for easier troubleshooting.",
+    "* Added: Continue confirmation UI when max tool calls are reached.",
+    "* Added: MCP server management and configuration.",
+    "* Added: Support multiple modules projects in agent mode.",
+    "* Added: Various UI improvements.",
+    "* Fixed: Popup position and focus issues for # context.",
+    "* Fixed: **No model found** error when sampling.",
     "* Fixed: Multi-line paste issue in Copilot Chat input panel.",
-    "* Fixed: Copilot editing wrong file."
+    "* Fixed: Copilot editing wrong file.",
+    "* Fixed: Adjusted input handling for required and optional resource template variables."
   ],
   "builds": [
     {

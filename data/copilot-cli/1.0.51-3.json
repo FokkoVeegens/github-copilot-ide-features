@@ -8,7 +8,18 @@
   "body_markdown": "**Added**\n- Add /security-review slash command to review code changes for security vulnerabilities\n- Add preMcpToolCall hook for hook providers to control outgoing MCP request metadata\n- Add /chronicle cost-tips subcommand for personalized token usage and cost reduction recommendations\n\n**Improved**\n- Experimental mode indicator now appears persistently in the app header instead of as a one-time notification\n- Loading indicator color matches the active mode (plan, autopilot, shell)\n\n**Fixed**\n- MCP servers using OAuth stay connected when authentication was performed in a separate session\n- GFM tables and blockquotes inside list items render correctly without a floating top border",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add /security-review slash command to review code changes for security vulnerabilities",
+    "- Add preMcpToolCall hook for hook providers to control outgoing MCP request metadata",
+    "- Add /chronicle cost-tips subcommand for personalized token usage and cost reduction recommendations",
+    "**Improved**",
+    "- Experimental mode indicator now appears persistently in the app header instead of as a one-time notification",
+    "- Loading indicator color matches the active mode (plan, autopilot, shell)",
+    "**Fixed**",
+    "- MCP servers using OAuth stay connected when authentication was performed in a separate session",
+    "- GFM tables and blockquotes inside list items render correctly without a floating top border"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

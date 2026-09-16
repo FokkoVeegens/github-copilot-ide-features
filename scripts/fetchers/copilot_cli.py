@@ -36,7 +36,8 @@ def fetch(ide_config: dict) -> list[dict]:
                 "body_markdown": body_markdown,
                 "body_html": None,
                 "categories": [],
-                "copilot_mentions": extract_copilot_mentions(body_markdown),
+                # Entire changelog is about the Copilot CLI, so keep every bullet.
+                "copilot_mentions": extract_copilot_mentions(body_markdown, require_keyword=False),
                 "prerelease": bool(item.get("prerelease", False)),
             }
         )

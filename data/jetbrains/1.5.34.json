@@ -8,7 +8,11 @@
   "body_markdown": "* **Added**: Support for inline completion model selection\n* **Added**: Support **Gemini 2.0 Flash (Preview)** in chat\n* **Fixed**: Login issue for GitHub Enterprise Cloud with data residency",
   "body_html": "<ul><li><strong>Added</strong>: Support for inline completion model selection\n</li><li><strong>Added</strong>: Support <strong>Gemini 2.0 Flash (Preview)</strong> in chat\n</li><li><strong>Fixed</strong>: Login issue for GitHub Enterprise Cloud with data residency</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* **Added**: Support for inline completion model selection",
+    "* **Added**: Support **Gemini 2.0 Flash (Preview)** in chat",
+    "* **Fixed**: Login issue for GitHub Enterprise Cloud with data residency"
+  ],
   "builds": [
     {
       "ide_build": "241",

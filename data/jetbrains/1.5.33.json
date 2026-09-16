@@ -8,7 +8,12 @@
   "body_markdown": "* **Added**: Support for model picker\n* **Added**: Support for 2025.1 EAP\n* **Fixed**: Enhanced commit message generation with error handling\n* **Fixed**: Code block styling issues",
   "body_html": "<ul><li><strong>Added</strong>: Support for model picker\n</li><li><strong>Added</strong>: Support for 2025.1 EAP\n</li><li><strong>Fixed</strong>: Enhanced commit message generation with error handling\n</li><li><strong>Fixed</strong>: Code block styling issues</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* **Added**: Support for model picker",
+    "* **Added**: Support for 2025.1 EAP",
+    "* **Fixed**: Enhanced commit message generation with error handling",
+    "* **Fixed**: Code block styling issues"
+  ],
   "builds": [
     {
       "ide_build": "242",

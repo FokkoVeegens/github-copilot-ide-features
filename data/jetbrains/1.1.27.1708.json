@@ -8,7 +8,9 @@
   "body_markdown": "* Minor tweaks and bugfixes",
   "body_html": "<ul><li>Minor tweaks and bugfixes</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Minor tweaks and bugfixes"
+  ],
   "builds": [
     {
       "ide_build": null,

@@ -8,7 +8,18 @@
   "body_markdown": "**Added**\n- Add show_file tool for presenting code and diffs to the user\n- Add env loading indicator showing skills, MCPs, plugins, ... being loaded\n\n**Improved**\n- `/mcp show` groups servers into User, Workspace, Plugins, and Built-in sections and makes all servers navigable\n- Agent now knows which model is powering it when asked\n- Ctrl+A/E cycle through visual lines in wrapped input; Home/End navigate within a visual line; Ctrl+Home/End jump to text boundaries\n\n**Fixed**\n- MCP tool results with giant single lines are truncated correctly\n- /plugin marketplace add and /plugin install support local paths containing spaces",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add show_file tool for presenting code and diffs to the user",
+    "- Add env loading indicator showing skills, MCPs, plugins, ... being loaded",
+    "**Improved**",
+    "- `/mcp show` groups servers into User, Workspace, Plugins, and Built-in sections and makes all servers navigable",
+    "- Agent now knows which model is powering it when asked",
+    "- Ctrl+A/E cycle through visual lines in wrapped input; Home/End navigate within a visual line; Ctrl+Home/End jump to text boundaries",
+    "**Fixed**",
+    "- MCP tool results with giant single lines are truncated correctly",
+    "- /plugin marketplace add and /plugin install support local paths containing spaces"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

@@ -8,7 +8,13 @@
   "body_markdown": "2025-11-20\n\n- Fix issues with image drag and drop on Windows\n- Shell commands are no longer included in Bash and PowerShell history files\n- Paste image data from your clipboard directly into the CLI\n- Cleanup and update prompts and tool instructions to be more fluid",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2025-11-20",
+    "- Fix issues with image drag and drop on Windows",
+    "- Shell commands are no longer included in Bash and PowerShell history files",
+    "- Paste image data from your clipboard directly into the CLI",
+    "- Cleanup and update prompts and tool instructions to be more fluid"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

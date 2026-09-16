@@ -8,7 +8,17 @@
   "body_markdown": "**Added**\n- Text selection now works in footer area in alt-screen mode\n- Support `--alt-screen on` and `--alt-screen off` syntax\n- SDK APIs for plan mode, autopilot, fleet, and workspace files\n\n**Fixed**\n- Interactive shell commands complete on all versions of Windows\n- Reduce memory usage in alt-screen mode during long sessions\n- Terminal bell rings once when agent finishes, not on every tool completion\n- Improve text selection responsiveness in --alt-screen mode",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Text selection now works in footer area in alt-screen mode",
+    "- Support `--alt-screen on` and `--alt-screen off` syntax",
+    "- SDK APIs for plan mode, autopilot, fleet, and workspace files",
+    "**Fixed**",
+    "- Interactive shell commands complete on all versions of Windows",
+    "- Reduce memory usage in alt-screen mode during long sessions",
+    "- Terminal bell rings once when agent finishes, not on every tool completion",
+    "- Improve text selection responsiveness in --alt-screen mode"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

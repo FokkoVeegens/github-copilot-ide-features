@@ -8,7 +8,10 @@
   "body_markdown": "* Improved exception handling\n* Populate Original Filename property on Windows",
   "body_html": "<ul><li>Improved exception handling</li><li>Populate Original Filename property on Windows</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Improved exception handling",
+    "* Populate Original Filename property on Windows"
+  ],
   "builds": [
     {
       "ide_build": null,

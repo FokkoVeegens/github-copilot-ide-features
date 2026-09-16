@@ -9,8 +9,21 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "**Added**",
+    "- Add structured form input for the ask_user tool using MCP Elicitations (experimental)",
+    "- Add --plugin-dir flag to load a plugin from a local directory",
+    "- Mouse text selection is automatically copied to the Linux primary selection buffer (middle-click to paste)",
+    "**Improved**",
+    "- Autopilot permission dialog appears on first prompt submission instead of on mode switch",
+    "- AUTO theme now reads your terminal's ANSI color palette and uses it directly, so colors match your terminal theme",
+    "- Plugin commands read extraKnownMarketplaces from project-level .claude/settings.json for Claude compatibility",
     "- Use consistent ~/.copilot/pkg path for auto-update instead of XDG_STATE_HOME",
-    "- Git hooks can detect Copilot CLI subprocesses via the COPILOT_CLI=1 environment variable to skip interactive prompts"
+    "**Fixed**",
+    "- Git hooks can detect Copilot CLI subprocesses via the COPILOT_CLI=1 environment variable to skip interactive prompts",
+    "- Spurious \"write EIO\" error entries no longer appear in the timeline during session resume or terminal state transitions",
+    "- Python-based MCP servers no longer time out due to buffered stdout",
+    "- MCP server availability correctly updates after signing in, switching accounts, or signing out",
+    "- Fix VS Code shift+enter and ctrl+enter keybindings for multiline input"
   ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",

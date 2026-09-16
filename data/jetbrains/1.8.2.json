@@ -9,7 +9,9 @@
   "body_html": "<ul><li><strong>What's New</strong>\n</li><li><strong>We’ve made updates to help you better understand and manage your Copilot session usage:</strong>\n</li></ul>\n<ul><li>Improved: Clearer messages when you hit usage limits, with more details on what happened and what to do next.\n</li><li>Improved: More accurate and transparent reset times, so you know exactly when your usage will refresh.\n</li><li>Added: Proactive notifications when you’re approaching your limits, helping you avoid unexpected interruptions.</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "* **We’ve made updates to help you better understand and manage your Copilot session usage:**"
+    "* Improved: Clearer messages when you hit usage limits, with more details on what happened and what to do next.",
+    "* Improved: More accurate and transparent reset times, so you know exactly when your usage will refresh.",
+    "* Added: Proactive notifications when you’re approaching your limits, helping you avoid unexpected interruptions."
   ],
   "builds": [
     {

@@ -8,7 +8,12 @@
   "body_markdown": "### Added\n\n* 1.0.1, our first public release\n\n### Fixed\n\n* Completions appeared at the wrong position after accepting lookup items, which also modified the document before the cursor position.\n* Several causes of exception `NullPointerException`.\n* Fixed a possible cause of `ClassNotFoundException`.",
   "body_html": "<h3>Added</h3>\n<ul><li>1.0.1, our first public release</li></ul>\n\n<h3>Fixed</h3>\n<ul><li>Completions appeared at the wrong position after accepting lookup items, which also modified the document before the cursor position.</li><li>Several causes of exception <code>NullPointerException</code>.</li><li>Fixed a possible cause of <code>ClassNotFoundException</code>.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* 1.0.1, our first public release",
+    "* Completions appeared at the wrong position after accepting lookup items, which also modified the document before the cursor position.",
+    "* Several causes of exception `NullPointerException`.",
+    "* Fixed a possible cause of `ClassNotFoundException`."
+  ],
   "builds": [
     {
       "ide_build": null,

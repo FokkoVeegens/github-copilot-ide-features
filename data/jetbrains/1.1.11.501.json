@@ -9,6 +9,7 @@
   "body_html": "<h3>Fixed</h3>\n<ul><li>Suggestions were not displayed after opening a project out of light edit mode.</li><li>Suggestions were not always removed when the setting for automatic GitHub Copilot completions was turned off.</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Suggestions were not displayed after opening a project out of light edit mode.",
     "* Suggestions were not always removed when the setting for automatic GitHub Copilot completions was turned off."
   ],
   "builds": [

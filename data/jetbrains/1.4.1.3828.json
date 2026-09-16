@@ -8,7 +8,12 @@
   "body_markdown": "* Support for partial acceptance in the editor\n  + You can either accept the first word of a suggestion using `Commmand+→` (or `Ctrl+→`)\n  + Or you can accept the first line of a multi-line suggestion using `Command+Control+→` (or `Ctrl+Alt+→`)\n  + Fixed an issue that caused the IDE to freeze",
   "body_html": "<ul><li>Support for partial acceptance in the editor<ul><li>You can either accept the first word of a suggestion using <code>Commmand+→</code> (or <code>Ctrl+→</code>)</li><li>Or you can accept the first line of a multi-line suggestion using <code>Command+Control+→</code> (or <code>Ctrl+Alt+→</code>)</li><li>Fixed an issue that caused the IDE to freeze</li></ul></li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Support for partial acceptance in the editor",
+    "+ You can either accept the first word of a suggestion using `Commmand+→` (or `Ctrl+→`)",
+    "+ Or you can accept the first line of a multi-line suggestion using `Command+Control+→` (or `Ctrl+Alt+→`)",
+    "+ Fixed an issue that caused the IDE to freeze"
+  ],
   "builds": [
     {
       "ide_build": null,

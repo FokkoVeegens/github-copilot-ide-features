@@ -8,7 +8,10 @@
   "body_markdown": "**Improved**\n- MCP configuration now opens in its own dedicated screen, with scrollable server and tool lists when content exceeds the visible area",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- MCP configuration now opens in its own dedicated screen, with scrollable server and tool lists when content exceeds the visible area"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

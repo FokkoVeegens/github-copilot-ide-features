@@ -8,7 +8,14 @@
   "body_markdown": "**New**\n- Adaptive color engine with dynamic color modes and interactive theme picker. Gracefully degrades on limited-color terminals and Windows\n\n**Improved**\n- Replace /pr open with /pr view [local|web] to view PR status locally or open in browser\n\n**Fixed**\n- MCP OAuth re-authentication works reliably when callback port changes or when using Microsoft Entra ID",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**New**",
+    "- Adaptive color engine with dynamic color modes and interactive theme picker. Gracefully degrades on limited-color terminals and Windows",
+    "**Improved**",
+    "- Replace /pr open with /pr view [local|web] to view PR status locally or open in browser",
+    "**Fixed**",
+    "- MCP OAuth re-authentication works reliably when callback port changes or when using Microsoft Entra ID"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

@@ -8,7 +8,14 @@
   "body_markdown": "**Improved**\n- Status line payload includes session_name field alongside session_id\n\n**Fixed**\n- OSC 8 hyperlinks are now clickable in VS Code terminals\n- PowerShell /flag arguments (e.g., /all, /enum-devices) are no longer mistakenly treated as file paths\n- Trusted folder access prompts no longer appear incorrectly on Windows OneDrive paths and case-insensitive filesystems",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Status line payload includes session_name field alongside session_id",
+    "**Fixed**",
+    "- OSC 8 hyperlinks are now clickable in VS Code terminals",
+    "- PowerShell /flag arguments (e.g., /all, /enum-devices) are no longer mistakenly treated as file paths",
+    "- Trusted folder access prompts no longer appear incorrectly on Windows OneDrive paths and case-insensitive filesystems"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

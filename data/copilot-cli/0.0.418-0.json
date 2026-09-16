@@ -8,7 +8,13 @@
   "body_markdown": "**Fixed**\n- Agent protected from accidentally killing itself\n- Plugin agents specified as file paths in plugin.json load correctly\n\n**Removed**\n- Remove --disable-parallel-tools-execution flag and parallel_tool_execution config option",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Agent protected from accidentally killing itself",
+    "- Plugin agents specified as file paths in plugin.json load correctly",
+    "**Removed**",
+    "- Remove --disable-parallel-tools-execution flag and parallel_tool_execution config option"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

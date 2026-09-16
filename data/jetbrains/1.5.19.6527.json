@@ -8,7 +8,9 @@
   "body_markdown": "* Fix node requirement issue",
   "body_html": "<ul><li>Fix node requirement issue</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Fix node requirement issue"
+  ],
   "builds": [
     {
       "ide_build": null,

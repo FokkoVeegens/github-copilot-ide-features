@@ -8,7 +8,9 @@
   "body_markdown": "* **Fixed**: an issue where the project context was not functioning correctly.",
   "body_html": "<ul><li><strong>Fixed</strong>: an issue where the project context was not functioning correctly.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* **Fixed**: an issue where the project context was not functioning correctly."
+  ],
   "builds": [
     {
       "ide_build": "243",

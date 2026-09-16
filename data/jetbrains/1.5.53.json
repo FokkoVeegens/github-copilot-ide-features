@@ -9,9 +9,19 @@
   "body_html": "<ul><li>Added: Support for the new OpenAI GPT-5 model in chat.\n</li><li>Added: New setting to manage automatic approval of tool usage.\n</li><li>Added: Option to limit the number of Copilot Agent mode requests per turn.\n</li><li>Added: GitHub OAuth authentication support for remote MCP servers.\n</li><li>Added: Ability to disable MCP support via Copilot policies.\n</li><li>Added: Quick access to MCP settings directly from the log panel.\n</li><li>Added: Support *.instructions.md for project scoped customisation. You can now define a Markdown file with the .instructions.md suffix in the .github/instructions directory.\n</li><li>Changed: Removed support for TIFF and TIF image formats in Copilot Vision.\n</li><li>Fixed: Resolved issue with MCP remote server connectivity when behind a proxy.\n</li><li>Fixed: Bug where the Agent service failed to initialize in certain scenarios.\n</li><li>Fixed: Unexpected display of inline diff view when starting a new session or switching chat modes.\n</li><li>Fixed: Improved reliability of the run_in_terminal tool in Agent mode.\n</li><li>Fixed: Restricted the list_dir tool to only access files within workspace folders.</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Added: Support for the new OpenAI GPT-5 model in chat.",
+    "* Added: New setting to manage automatic approval of tool usage.",
     "* Added: Option to limit the number of Copilot Agent mode requests per turn.",
+    "* Added: GitHub OAuth authentication support for remote MCP servers.",
     "* Added: Ability to disable MCP support via Copilot policies.",
-    "* Changed: Removed support for TIFF and TIF image formats in Copilot Vision."
+    "* Added: Quick access to MCP settings directly from the log panel.",
+    "* Added: Support \\*.instructions.md for project scoped customisation. You can now define a Markdown file with the .instructions.md suffix in the .github/instructions directory.",
+    "* Changed: Removed support for TIFF and TIF image formats in Copilot Vision.",
+    "* Fixed: Resolved issue with MCP remote server connectivity when behind a proxy.",
+    "* Fixed: Bug where the Agent service failed to initialize in certain scenarios.",
+    "* Fixed: Unexpected display of inline diff view when starting a new session or switching chat modes.",
+    "* Fixed: Improved reliability of the run\\_in\\_terminal tool in Agent mode.",
+    "* Fixed: Restricted the list\\_dir tool to only access files within workspace folders."
   ],
   "builds": [
     {

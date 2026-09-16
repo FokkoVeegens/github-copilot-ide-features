@@ -10,7 +10,8 @@
   "categories": [],
   "copilot_mentions": [
     "* Fix intermitent duplicate Copilot context menu items",
-    "* Add new Copilot Chat preconditions"
+    "* Add new Copilot Chat preconditions",
+    "* Completions improvements"
   ],
   "builds": [
     {

@@ -9,7 +9,10 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "- Added `/terminal-setup` command to set up multi-line input on terminals not implementing the kitty protocol",
     "- Fixed a bug where rejecting an MCP tool call would reject all future tool calls (fixes https://github.com/github/copilot-cli/issues/290)",
+    "- Fixed a regression where calling `/model` with an argument did not work properly",
+    "- Added each model's premium request multiplier to the `/model` list (currently, all our supported models are 1x)",
     "Run `npm install -g @github/copilot@latest` to update!"
   ],
   "prerelease": false,

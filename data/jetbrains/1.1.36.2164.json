@@ -8,7 +8,10 @@
   "body_markdown": "* Fixed several UI glitches on 2022.3 release candidates\n* Allow users to accept non-trusted certificates",
   "body_html": "<ul><li>Fixed several UI glitches on 2022.3 release candidates</li><li>Allow users to accept non-trusted certificates</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Fixed several UI glitches on 2022.3 release candidates",
+    "* Allow users to accept non-trusted certificates"
+  ],
   "builds": [
     {
       "ide_build": null,

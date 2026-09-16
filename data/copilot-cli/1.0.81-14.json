@@ -8,7 +8,12 @@
   "body_markdown": "**Improved**\n- Resume large sessions faster by showing recent history first while older messages load.\n\n**Fixed**\n- Repeated read_agent calls now consistently return the full turn history unless since_turn is provided",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Resume large sessions faster by showing recent history first while older messages load.",
+    "**Fixed**",
+    "- Repeated read_agent calls now consistently return the full turn history unless since_turn is provided"
+  ],
   "prerelease": true,
   "fetched_at": "2026-08-28T19:23:42Z",
   "schema_version": 1

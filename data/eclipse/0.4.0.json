@@ -8,7 +8,16 @@
   "body_markdown": "### Added\n- Support ABAP.\n### Changed\n- Mark org.eclipse.jdt.annotation to optional.\n### Fixed\n- NPE when IFile.getLocation() is null.\n- Illegal state exception in Turn widget.\n- SWT resources not disposed properly.\n- Markdown viewer fallbacks to textviewer.\n- Chat input cannot be rendered as multi line when input text in too long.\n- Exception when deleting word leading with brackets in chat input box.",
   "body_html": "### Added\n- Support ABAP.\n\n### Changed\n- Mark org.eclipse.jdt.annotation to optional.\n\n### Fixed\n- NPE when IFile.getLocation() is null.\n- Illegal state exception in Turn widget.\n- SWT resources not disposed properly.\n- Markdown viewer fallbacks to textviewer.\n- Chat input cannot be rendered as multi line when input text in too long.\n- Exception when deleting word leading with brackets in chat input box.",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "- Support ABAP.",
+    "- Mark org.eclipse.jdt.annotation to optional.",
+    "- NPE when IFile.getLocation() is null.",
+    "- Illegal state exception in Turn widget.",
+    "- SWT resources not disposed properly.",
+    "- Markdown viewer fallbacks to textviewer.",
+    "- Chat input cannot be rendered as multi line when input text in too long.",
+    "- Exception when deleting word leading with brackets in chat input box."
+  ],
   "fetched_at": "2026-05-05T19:53:39Z",
   "schema_version": 1
 }

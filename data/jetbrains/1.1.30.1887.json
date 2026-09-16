@@ -8,7 +8,10 @@
   "body_markdown": "* Fixed regression to configure text style of completions\n* Various bug fixes around notifications",
   "body_html": "<ul><li>Fixed regression to configure text style of completions</li><li>Various bug fixes around notifications</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Fixed regression to configure text style of completions",
+    "* Various bug fixes around notifications"
+  ],
   "builds": [
     {
       "ide_build": null,

@@ -9,7 +9,19 @@
   "body_html": "<ul><li><strong>User Experience</strong>\n</li></ul>\n<ul><li>Improved: Chat input history syncs across sessions.\n</li><li>Improved: Model picker reliability with better caching and degradation warnings.\n</li><li>Improved: Thinking panel layout for readability.\n</li><li>Improved: Auto‐approve flow, including confirmation before resetting rules.\n</li><li>Improved: Tool‑result code blocks are read‑only and large outputs load smoothly.\n</li><li>Improved: Settings management for pre‑login confirmation, proxy validation, and safer revert behavior.\n</li><li>Improved: Copilot status bar displays GitHub username and sign‑in state.\n\n</li></ul>\n<ul><li><strong>Bug Fixes</strong>\n</li></ul>\n<ul><li>Fixed: Reduced multiple UI freezes. \n</li><li>Fixed: Chat scroller flicker and HiDPI scaling issues.\n</li><li>Fixed: Chat panel stuck on the loading page.\n</li><li>Fixed: Markdown file links in the chat panel failed to open.\n</li><li>Fixed: Incomplete copied response content in Ask mode.\n</li><li>Fixed: Inconsistent UI appearance when switching themes, fonts, or modes.\n\n\n</li></ul>\n<ul><li><strong>Deprecation</strong>\n</li></ul>\n<ul><li>Updated: GitHub Copilot will end support for JetBrains IDEs versions 2024.2 and 2024.3.</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Improved: Chat input history syncs across sessions.",
+    "* Improved: Model picker reliability with better caching and degradation warnings.",
+    "* Improved: Thinking panel layout for readability.",
+    "* Improved: Auto‐approve flow, including confirmation before resetting rules.",
+    "* Improved: Tool‑result code blocks are read‑only and large outputs load smoothly.",
+    "* Improved: Settings management for pre‑login confirmation, proxy validation, and safer revert behavior.",
     "* Improved: Copilot status bar displays GitHub username and sign‑in state.",
+    "* Fixed: Reduced multiple UI freezes.",
+    "* Fixed: Chat scroller flicker and HiDPI scaling issues.",
+    "* Fixed: Chat panel stuck on the loading page.",
+    "* Fixed: Markdown file links in the chat panel failed to open.",
+    "* Fixed: Incomplete copied response content in Ask mode.",
+    "* Fixed: Inconsistent UI appearance when switching themes, fonts, or modes.",
     "* Updated: GitHub Copilot will end support for JetBrains IDEs versions 2024.2 and 2024.3."
   ],
   "builds": [

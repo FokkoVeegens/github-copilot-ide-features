@@ -8,7 +8,9 @@
   "body_markdown": "* **Bug Fixes**\n* Resolved: An issue where Plan mode (in Local agent) could modify files instead of staying read-only.",
   "body_html": "<ul><li><strong>Bug Fixes</strong></li><li>Resolved: An issue where Plan mode (in Local agent) could modify files instead of staying read-only.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Resolved: An issue where Plan mode (in Local agent) could modify files instead of staying read-only."
+  ],
   "builds": [
     {
       "ide_build": "251",

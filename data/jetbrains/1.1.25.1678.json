@@ -9,8 +9,11 @@
   "body_html": "<ul><li>Improved error handling</li><li>Clean up of Copilot Preferences page</li><li>Added helpful tooltips for first-time users</li><li>Removed editor intention, still available as \"Open GitHub Copilot\" action</li><li>Improved plugin stability</li><li>Added experimental support for basic proxy configurations (see Copilot Preference page)</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Improved error handling",
     "* Clean up of Copilot Preferences page",
+    "* Added helpful tooltips for first-time users",
     "* Removed editor intention, still available as \"Open GitHub Copilot\" action",
+    "* Improved plugin stability",
     "* Added experimental support for basic proxy configurations (see Copilot Preference page)"
   ],
   "builds": [

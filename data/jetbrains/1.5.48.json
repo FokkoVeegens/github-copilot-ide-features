@@ -9,7 +9,16 @@
   "body_html": "<ul><li><strong>Added</strong>: Custom proxy configuration that overrides the default IDE proxy settings when enabled.\n</li><li><strong>Added</strong>: Support for slash commands in both Edits and Agent modes.\n</li><li><strong>Added</strong>: Session history tracking in Agent mode.\n</li><li><strong>Added</strong>: Restore to Checkpoint as a preview feature in Agent mode.\n</li><li><strong>Added</strong>: Improved user interface for managing MCP tools more efficiently.\n</li><li><strong>Changed</strong>: Settings interface reorganized for improved usability and navigation, now in <strong>Settings</strong> -&gt; <strong>Tools</strong> -&gt; <strong>GitHub Copilot</strong>. \n</li><li><strong>Fixed</strong>: Issue when creating a new file in Edit mode.\n</li><li><strong>Fixed</strong>: Incorrect handling of special characters in the inline diff view.\n</li><li><strong>Fixed</strong>: Missing User-Agent header in network requests.\n</li><li><strong>Fixed</strong>: Various performance and stability improvements.</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "* **Changed**: Settings interface reorganized for improved usability and navigation, now in **Settings** -> **Tools** -> **GitHub Copilot**."
+    "* **Added**: Custom proxy configuration that overrides the default IDE proxy settings when enabled.",
+    "* **Added**: Support for slash commands in both Edits and Agent modes.",
+    "* **Added**: Session history tracking in Agent mode.",
+    "* **Added**: Restore to Checkpoint as a preview feature in Agent mode.",
+    "* **Added**: Improved user interface for managing MCP tools more efficiently.",
+    "* **Changed**: Settings interface reorganized for improved usability and navigation, now in **Settings** -> **Tools** -> **GitHub Copilot**.",
+    "* **Fixed**: Issue when creating a new file in Edit mode.",
+    "* **Fixed**: Incorrect handling of special characters in the inline diff view.",
+    "* **Fixed**: Missing User-Agent header in network requests.",
+    "* **Fixed**: Various performance and stability improvements."
   ],
   "builds": [
     {

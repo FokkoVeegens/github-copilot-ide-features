@@ -9,7 +9,15 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Add configure-copilot sub-agent for managing MCP servers, custom agents, and skills via the task tool"
+    "**Added**",
+    "- Add --reasoning-effort CLI flag to set reasoning effort level",
+    "- Hooks can now request user confirmation before tool execution with 'ask' permission decision",
+    "- Add configure-copilot sub-agent for managing MCP servers, custom agents, and skills via the task tool",
+    "**Improved**",
+    "- Faster shell commands on Windows by skipping PowerShell profile loading",
+    "- Improve CLI help documentation to use standard --option=value format and comma-separated list syntax",
+    "**Fixed**",
+    "- Interactive shell initialization no longer times out on slow machines"
   ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",

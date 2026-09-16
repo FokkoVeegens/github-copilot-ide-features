@@ -8,7 +8,13 @@
   "body_markdown": "**Added**\n- Custom agents can list several models in `model`, tried in order until one is available to you, and `model-policy: required` keeps model changes on that list\n- Adding support for claude-fable-5.1\n\n**Improved**\n- Linux sandboxes now restrict network egress to the configured proxy; proxy mode requires slirp4netns, util-linux 2.35+, iptables, and /dev/net/tun access",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Custom agents can list several models in `model`, tried in order until one is available to you, and `model-policy: required` keeps model changes on that list",
+    "- Adding support for claude-fable-5.1",
+    "**Improved**",
+    "- Linux sandboxes now restrict network egress to the configured proxy; proxy mode requires slirp4netns, util-linux 2.35+, iptables, and /dev/net/tun access"
+  ],
   "prerelease": true,
   "fetched_at": "2026-09-02T12:04:20Z",
   "schema_version": 1

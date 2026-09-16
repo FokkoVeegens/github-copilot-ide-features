@@ -9,7 +9,9 @@
   "body_html": "<ul><li><strong>Added:</strong> Copilot Edits - Make changes to one or more files directly from Copilot Chat smoothly.\n</li><li><strong>Fixed:</strong> Model selector occupied too much space.\n</li><li><strong>Fixed:</strong> Various UI improvements for a better user experience.</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "* **Added:** Copilot Edits - Make changes to one or more files directly from Copilot Chat smoothly."
+    "* **Added:** Copilot Edits - Make changes to one or more files directly from Copilot Chat smoothly.",
+    "* **Fixed:** Model selector occupied too much space.",
+    "* **Fixed:** Various UI improvements for a better user experience."
   ],
   "builds": [
     {

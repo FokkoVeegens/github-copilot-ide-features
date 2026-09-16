@@ -8,7 +8,12 @@
   "body_markdown": "**Improved**\n- Copy hint shows cmd+c in Ghostty on macOS and right-click as an alternative for all terminals\n\n**Fixed**\n- 502 bad gateway errors are retried automatically and no longer crash the session with raw HTML output",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Copy hint shows cmd+c in Ghostty on macOS and right-click as an alternative for all terminals",
+    "**Fixed**",
+    "- 502 bad gateway errors are retried automatically and no longer crash the session with raw HTML output"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

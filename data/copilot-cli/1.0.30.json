@@ -8,7 +8,16 @@
   "body_markdown": "2026-04-16\n\n- Feedback form links to the correct GitHub repository\n- /undo shows an explanatory message when rewind is unavailable (e.g., not in a git repository or no commits yet)\n- Plugin skills and commands are correctly discovered when using skills.discover\n- Add /statusline command (with /footer alias) to customize which items appear in the status bar (directory, branch, effort, context window, quota)\n- Remove --list-env flag that logged loaded plugins, agents, skills, and MCP servers in prompt mode\n- Image paste from clipboard works again after regression in bracketed paste handling\n- Both Ctrl+V and Meta+V trigger image paste on all platforms",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-04-16",
+    "- Feedback form links to the correct GitHub repository",
+    "- /undo shows an explanatory message when rewind is unavailable (e.g., not in a git repository or no commits yet)",
+    "- Plugin skills and commands are correctly discovered when using skills.discover",
+    "- Add /statusline command (with /footer alias) to customize which items appear in the status bar (directory, branch, effort, context window, quota)",
+    "- Remove --list-env flag that logged loaded plugins, agents, skills, and MCP servers in prompt mode",
+    "- Image paste from clipboard works again after regression in bracketed paste handling",
+    "- Both Ctrl+V and Meta+V trigger image paste on all platforms"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

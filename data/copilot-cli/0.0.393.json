@@ -8,7 +8,15 @@
   "body_markdown": "2026-01-23\n\n- Show conversation compaction status as timeline messages instead of header indicator\n- Memory loading no longer warns when outside a Git repository\n- Add support for GHE Cloud (\\*.ghe.com) remote custom agents\n- Plugin uninstall now works correctly\n- Expose MCP server and tool names in tool.execution_start events for better error handling\n- Add Esc-Esc to undo file changes to any previous snapshot",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-01-23",
+    "- Show conversation compaction status as timeline messages instead of header indicator",
+    "- Memory loading no longer warns when outside a Git repository",
+    "- Add support for GHE Cloud (\\*.ghe.com) remote custom agents",
+    "- Plugin uninstall now works correctly",
+    "- Expose MCP server and tool names in tool.execution_start events for better error handling",
+    "- Add Esc-Esc to undo file changes to any previous snapshot"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

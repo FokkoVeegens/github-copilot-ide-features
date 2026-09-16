@@ -9,7 +9,8 @@
   "body_html": "<ul><li>Improve error messages and debug information if Copilot hangs</li><li>Better recovery in case of a crash</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "* Improve error messages and debug information if Copilot hangs"
+    "* Improve error messages and debug information if Copilot hangs",
+    "* Better recovery in case of a crash"
   ],
   "builds": [
     {

@@ -9,6 +9,8 @@
   "body_html": "<ul><li>Handle disposed project more carefully\r</li><li>Prevent slow operation on EDT thread\r</li><li>Fix initial Copilot status\r</li><li>Copilot icon can be hidden and restored properly</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Handle disposed project more carefully",
+    "* Prevent slow operation on EDT thread",
     "* Fix initial Copilot status",
     "* Copilot icon can be hidden and restored properly"
   ],

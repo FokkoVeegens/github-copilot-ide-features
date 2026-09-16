@@ -8,7 +8,11 @@
   "body_markdown": "* **Added**: Ability to toggle between the built-in diff view and the modern inline view in both Agent and Edit modes.\n* **Fixed**: Proposed changes in Agent mode now persist correctly after IDE restarts.\n* **Fixed**: Various UI improvements and stability enhancements.",
   "body_html": "<ul><li><strong>Added</strong>: Ability to toggle between the built-in diff view and the modern inline view in both Agent and Edit modes.\n</li><li><strong>Fixed</strong>: Proposed changes in Agent mode now persist correctly after IDE restarts.\n</li><li><strong>Fixed</strong>: Various UI improvements and stability enhancements.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* **Added**: Ability to toggle between the built-in diff view and the modern inline view in both Agent and Edit modes.",
+    "* **Fixed**: Proposed changes in Agent mode now persist correctly after IDE restarts.",
+    "* **Fixed**: Various UI improvements and stability enhancements."
+  ],
   "builds": [
     {
       "ide_build": "241",

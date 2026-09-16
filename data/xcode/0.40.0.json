@@ -9,7 +9,15 @@
   "body_markdown": "### Added\n- Support disabling Agent mode when it's disabled by policy.\n\n### Supported features\n- Agent mode\n- Chat\n- Code completion\n- Custom instructions (P)\n- MCP (P)\n- Vision (P)",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "- Support disabling Agent mode when it's disabled by policy.",
+    "- Agent mode",
+    "- Chat",
+    "- Code completion",
+    "- Custom instructions (P)",
+    "- MCP (P)",
+    "- Vision (P)"
+  ],
   "prerelease": false,
   "fetched_at": "2026-07-10T12:13:00Z",
   "schema_version": 1

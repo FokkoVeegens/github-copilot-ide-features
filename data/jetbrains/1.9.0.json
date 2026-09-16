@@ -11,8 +11,20 @@
   "copilot_mentions": [
     "* Added: GitHub Copilot CLI support for delegating tasks to a locally running Copilot CLI (preview)",
     "* Added: Unified session view to manage local and GitHub Copilot CLI sessions",
+    "* Added: Ask question tool in agent mode",
+    "* Added: GitHub Enterprise Server (GHES) support in the sign-in flow",
     "* Added: Global .agent.md file support under ~/.copilot/agents, with UI support coming soon",
-    "* Fixed: Drag-and-drop issues when adding files to Copilot Chat"
+    "* Improved: Added confirmation when starting a new command to cancel the active one",
+    "* Improved: Sub-agent rendering and current file as context styling",
+    "* Improved: Auto‑approval panel UI",
+    "* Improved: Hover and pressed states for code‑block actions",
+    "* Improved: Code review apply behavior with full‑line replacements",
+    "* Fixed: Code completions not working on a second screen",
+    "* Fixed: Shift+Home / Shift+End issues for inline selection",
+    "* Fixed: Drag-and-drop issues when adding files to Copilot Chat",
+    "* Fixed: Multiple UI freezes and responsiveness issues",
+    "* Changed: Plan agent is no longer auto-invoked in sub-agent workflows, and remains available from the mode picker",
+    "* Removed: Edit mode support"
   ],
   "builds": [
     {

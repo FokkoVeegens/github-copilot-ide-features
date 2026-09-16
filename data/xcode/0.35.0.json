@@ -10,7 +10,19 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Launched Agent Mode. Copilot will automatically use multiple requests to edit files, run terminal commands, and fix errors."
+    "- Launched Agent Mode. Copilot will automatically use multiple requests to edit files, run terminal commands, and fix errors.",
+    "- Introduced Model Context Protocol (MCP) support in Agent Mode, allowing you to configure MCP tools to extend capabilities.",
+    "- Added a button to enable/disable referencing current file in conversations",
+    "- Added an animated progress icon in the response section",
+    "- Refined onboarding experience with updated instruction screens and welcome views",
+    "- Improved conversation reliability with extended timeout limits for agent requests",
+    "- Addressed critical error handling issues in core functionality",
+    "- Resolved UI inconsistencies with chat interface padding adjustments",
+    "- Implemented custom certificate handling using system environment variables `NODE_EXTRA_CA_CERTS` and `NODE_TLS_REJECT_UNAUTHORIZED`, fixing network access issues",
+    "- Agent mode (P)",
+    "- Chat",
+    "- Code completion",
+    "- MCP (P)"
   ],
   "prerelease": false,
   "fetched_at": "2026-07-10T12:13:00Z",
