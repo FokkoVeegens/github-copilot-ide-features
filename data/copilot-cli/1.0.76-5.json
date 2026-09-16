@@ -8,7 +8,11 @@
   "body_markdown": "**Added**\n- Add enable/disable controls in /plugins for plugins, instructions, agents, LSP servers, and hooks\n- Add support for the grok-4.5 model",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add enable/disable controls in /plugins for plugins, instructions, agents, LSP servers, and hooks",
+    "- Add support for the grok-4.5 model"
+  ],
   "prerelease": true,
   "fetched_at": "2026-08-03T10:50:18Z",
   "schema_version": 1

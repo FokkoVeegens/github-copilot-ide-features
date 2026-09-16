@@ -9,7 +9,12 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Block third-party MCP servers when the Copilot MCP policy does not allow them"
+    "2026-02-24",
+    "- Expand `--help` content with descriptions, examples, and sorted flags",
+    "- Block third-party MCP servers when the Copilot MCP policy does not allow them",
+    "- Streaming response size counter updates continuously during tool calls and reasoning, and resets between requests",
+    "- Status line automatically switches to a two-line layout on narrow terminals, keeping CWD, branch, and model info readable at any terminal width",
+    "- Undo operations now always require confirmation"
   ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",

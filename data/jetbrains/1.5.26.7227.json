@@ -8,7 +8,10 @@
   "body_markdown": "* Performance improvements\n* Accessibility improvements",
   "body_html": "<ul><li>Performance improvements\n</li><li>Accessibility improvements</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Performance improvements",
+    "* Accessibility improvements"
+  ],
   "builds": [
     {
       "ide_build": null,

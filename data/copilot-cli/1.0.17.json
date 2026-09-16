@@ -9,7 +9,10 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Built-in skills are now included with the CLI, starting with a guide for customizing Copilot cloud agent's environment"
+    "2026-04-03",
+    "- Built-in skills are now included with the CLI, starting with a guide for customizing Copilot cloud agent's environment",
+    "- MCP OAuth flows now support HTTPS redirect URIs via a self-signed certificate fallback, improving compatibility with OAuth providers that require HTTPS (e.g., Slack)",
+    "- /resume session picker loads significantly faster, especially with large session histories"
   ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",

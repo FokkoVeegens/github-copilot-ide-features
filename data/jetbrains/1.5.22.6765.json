@@ -9,8 +9,10 @@
   "body_html": "<ul><li>Fix authentication\n</li><li>Inline chat\n</li><li>Configuration item to disable inline chat gutter icon\n</li><li>Accessibility improvements</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Fix authentication",
     "* Inline chat",
-    "* Configuration item to disable inline chat gutter icon"
+    "* Configuration item to disable inline chat gutter icon",
+    "* Accessibility improvements"
   ],
   "builds": [
     {

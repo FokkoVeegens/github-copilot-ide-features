@@ -8,7 +8,10 @@
   "body_markdown": "* Enhanced accessibility support\n* Fixed a performance related bug that could cause high memory usage",
   "body_html": "<ul><li>Enhanced accessibility support\n</li><li>Fixed a performance related bug that could cause high memory usage</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Enhanced accessibility support",
+    "* Fixed a performance related bug that could cause high memory usage"
+  ],
   "builds": [
     {
       "ide_build": null,

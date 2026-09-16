@@ -9,7 +9,15 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Configure Copilot agent now has shell access on Windows"
+    "**Added**",
+    "- Name sessions with --name and resume them by name with --resume=<name>",
+    "**Improved**",
+    "- LSP server entries in lsp.json support configurable spawn, initialization, and warmup timeouts",
+    "- Context window indicator in the statusline is now hidden by default",
+    "- Move MCP OAuth into the shared runtime flow and clear associated OAuth state when removing an MCP server.",
+    "**Fixed**",
+    "- Configure Copilot agent now has shell access on Windows",
+    "- Show a helpful error message with install instructions when clipboard utilities (wl-clipboard or xclip) are missing on Linux"
   ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",

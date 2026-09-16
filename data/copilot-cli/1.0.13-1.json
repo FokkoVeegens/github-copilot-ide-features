@@ -8,7 +8,13 @@
   "body_markdown": "**Added**\n- /rewind and double-Esc now open a timeline picker that can roll back to any point in conversation history, not just the previous snapshot\n\n**Improved**\n- MCP registry lookups are more reliable with automatic retries and request timeouts\n- CLI starts faster due to V8 compile cache reducing parse and compile time on repeated invocations",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- /rewind and double-Esc now open a timeline picker that can roll back to any point in conversation history, not just the previous snapshot",
+    "**Improved**",
+    "- MCP registry lookups are more reliable with automatic retries and request timeouts",
+    "- CLI starts faster due to V8 compile cache reducing parse and compile time on repeated invocations"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

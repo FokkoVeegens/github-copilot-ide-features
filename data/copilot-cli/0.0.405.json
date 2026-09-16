@@ -8,7 +8,13 @@
   "body_markdown": "2026-02-05\n\n- Plugin and marketplace names support uppercase letters\n- `/experimental` shows help screen listing experimental features\n- Fix SQL tool disconnects\n- Plugins can bundle LSP server configurations",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-02-05",
+    "- Plugin and marketplace names support uppercase letters",
+    "- `/experimental` shows help screen listing experimental features",
+    "- Fix SQL tool disconnects",
+    "- Plugins can bundle LSP server configurations"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

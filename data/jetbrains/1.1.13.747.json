@@ -9,7 +9,9 @@
   "body_html": "<h3>Added</h3>\n<ul><li>Enable access to 'Nightly (Agent)' update channel via Copilot preferences. This channel provides highly improved but experimental integration with Github Copilot.</li><li>Support for IntelliJ 2021.1 and Android Studio Bumblebee</li></ul>\n\n<h3>Fixed</h3>\n<ul><li>Fixed errors when showing multiple solutions for certain file types.</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "* Enable access to 'Nightly (Agent)' update channel via Copilot preferences. This channel provides highly improved but experimental integration with Github Copilot."
+    "* Enable access to 'Nightly (Agent)' update channel via Copilot preferences. This channel provides highly improved but experimental integration with Github Copilot.",
+    "* Support for IntelliJ 2021.1 and Android Studio Bumblebee",
+    "* Fixed errors when showing multiple solutions for certain file types."
   ],
   "builds": [
     {

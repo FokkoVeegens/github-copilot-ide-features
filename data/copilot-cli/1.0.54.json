@@ -8,7 +8,10 @@
   "body_markdown": "2026-05-24\n\nFixes and changes",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-05-24",
+    "Fixes and changes"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

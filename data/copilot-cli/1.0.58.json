@@ -8,7 +8,15 @@
   "body_markdown": "- Rubber Duck is now enabled by default\r\n- Remote JSON RPC is now enabled by default\r\n- `/experimental` schedule prompts with `/every` and `/after` \r\n- `/experimental` new GitHub `/theme`\r\n- `/experimental` new UI with easy access to issues, pull requests, and gists\r\n\r\n> [!NOTE]\r\n> Turn `/experimental on` to see the Scheduled Prompts, new theme, and new UI.",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "- Rubber Duck is now enabled by default",
+    "- Remote JSON RPC is now enabled by default",
+    "- `/experimental` schedule prompts with `/every` and `/after`",
+    "- `/experimental` new GitHub `/theme`",
+    "- `/experimental` new UI with easy access to issues, pull requests, and gists",
+    "> [!NOTE]",
+    "> Turn `/experimental on` to see the Scheduled Prompts, new theme, and new UI."
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

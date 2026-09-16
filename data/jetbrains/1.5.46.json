@@ -8,7 +8,15 @@
   "body_markdown": "* **Added**: Custom instructions are supported for Agent mode. Workspace and global custom instructions can be configured in Settings.\n* **Added**: Support for premium requests.\n* **Changed**: Enhanced transparency in conversation context. The current file is now explicitly shown as context, and recent files are no longer included.\n* **Fixed**: Removed the maximum number of files containing proposed changes in Agent mode.\n* **Fixed**: Auto-scroll feature to focus on the last user message in chat.\n* **Fixed**: Various improvements for Agent mode and MCP tools support.\n* **Fixed**: Addressed several performance issues.",
   "body_html": "<ul><li><strong>Added</strong>: Custom instructions are supported for Agent mode. Workspace and global custom instructions can be configured in Settings.\n</li><li><strong>Added</strong>: Support for premium requests.\n</li><li><strong>Changed</strong>: Enhanced transparency in conversation context. The current file is now explicitly shown as context, and recent files are no longer included.\n</li><li><strong>Fixed</strong>: Removed the maximum number of files containing proposed changes in Agent mode.\n</li><li><strong>Fixed</strong>: Auto-scroll feature to focus on the last user message in chat.\n</li><li><strong>Fixed</strong>: Various improvements for Agent mode and MCP tools support.\n</li><li><strong>Fixed</strong>: Addressed several performance issues.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* **Added**: Custom instructions are supported for Agent mode. Workspace and global custom instructions can be configured in Settings.",
+    "* **Added**: Support for premium requests.",
+    "* **Changed**: Enhanced transparency in conversation context. The current file is now explicitly shown as context, and recent files are no longer included.",
+    "* **Fixed**: Removed the maximum number of files containing proposed changes in Agent mode.",
+    "* **Fixed**: Auto-scroll feature to focus on the last user message in chat.",
+    "* **Fixed**: Various improvements for Agent mode and MCP tools support.",
+    "* **Fixed**: Addressed several performance issues."
+  ],
   "builds": [
     {
       "ide_build": "241",

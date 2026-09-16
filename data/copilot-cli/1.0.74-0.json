@@ -8,7 +8,12 @@
   "body_markdown": "**Added**\n- Add `/model plan` (or `/model --plan`) to pick a model used while in plan mode; pass a model id, `off` to clear, or no id to open the picker. Reverts to the session model when you leave plan mode.\n\n**Improved**\n- Resume search matches session titles even when whitespace differs",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add `/model plan` (or `/model --plan`) to pick a model used while in plan mode; pass a model id, `off` to clear, or no id to open the picker. Reverts to the session model when you leave plan mode.",
+    "**Improved**",
+    "- Resume search matches session titles even when whitespace differs"
+  ],
   "prerelease": true,
   "fetched_at": "2026-07-22T09:34:16Z",
   "schema_version": 1

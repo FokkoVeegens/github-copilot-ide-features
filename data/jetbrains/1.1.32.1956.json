@@ -8,7 +8,10 @@
   "body_markdown": "* Improved support for Scala and Kotlin\n* Various bug fixes",
   "body_html": "<ul><li>Improved support for Scala and Kotlin</li><li>Various bug fixes</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Improved support for Scala and Kotlin",
+    "* Various bug fixes"
+  ],
   "builds": [
     {
       "ide_build": null,

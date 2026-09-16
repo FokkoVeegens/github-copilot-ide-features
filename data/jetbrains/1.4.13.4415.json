@@ -8,7 +8,9 @@
   "body_markdown": "### Changed\n\n* Agent binary for MacOs is now signed with GitHub's official developer ID certificate.",
   "body_html": "<h3>Changed</h3>\n<ul><li>Agent binary for MacOs is now signed with GitHub's official developer ID certificate.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Agent binary for MacOs is now signed with GitHub's official developer ID certificate."
+  ],
   "builds": [
     {
       "ide_build": null,

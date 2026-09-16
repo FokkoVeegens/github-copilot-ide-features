@@ -10,7 +10,16 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Copilot code review"
+    "- Cannot type non-Latin characters in the chat input field.",
+    "- Agent mode",
+    "- BYOK (P)",
+    "- Chat",
+    "- Code completion",
+    "- Copilot code review",
+    "- Custom instructions (P)",
+    "- MCP",
+    "- Prompt files (P)",
+    "- Vision (P)"
   ],
   "prerelease": false,
   "fetched_at": "2026-07-10T12:13:00Z",

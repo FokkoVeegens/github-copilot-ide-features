@@ -8,7 +8,11 @@
   "body_markdown": "**Fixed**\n- /copy includes task completion messages when available\n- OAuth-authenticated MCP servers connect reliably during session startup",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- /copy includes task completion messages when available",
+    "- OAuth-authenticated MCP servers connect reliably during session startup"
+  ],
   "prerelease": true,
   "fetched_at": "2026-09-11T12:10:10Z",
   "schema_version": 1

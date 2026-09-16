@@ -8,7 +8,9 @@
   "body_markdown": "* Tweaks to icons",
   "body_html": "<ul><li>Tweaks to icons</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Tweaks to icons"
+  ],
   "builds": [
     {
       "ide_build": null,

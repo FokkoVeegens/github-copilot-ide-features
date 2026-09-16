@@ -8,7 +8,16 @@
   "body_markdown": "**Added**\n- Press ctrl+x → b to move the current running task or shell command to the background\n\n**Improved**\n- `/remote` status output now shows actionable hints for each connection state\n- Improve --resume session picker with better tab layout, status display, and progressive loading\n- Slash command argument picker opens immediately at exact command boundaries without requiring a trailing space\n\n**Fixed**\n- Transient pipe errors on child process stdio streams no longer cause crashes or trigger false crash reports",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Press ctrl+x → b to move the current running task or shell command to the background",
+    "**Improved**",
+    "- `/remote` status output now shows actionable hints for each connection state",
+    "- Improve --resume session picker with better tab layout, status display, and progressive loading",
+    "- Slash command argument picker opens immediately at exact command boundaries without requiring a trailing space",
+    "**Fixed**",
+    "- Transient pipe errors on child process stdio streams no longer cause crashes or trigger false crash reports"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

@@ -8,7 +8,11 @@
   "body_markdown": "2026-07-20\n\n- Anthropic subagents continue working when additional directories are configured\n- Resolve relative links in custom agent instructions from the agent file location",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-07-20",
+    "- Anthropic subagents continue working when additional directories are configured",
+    "- Resolve relative links in custom agent instructions from the agent file location"
+  ],
   "prerelease": false,
   "fetched_at": "2026-07-22T09:34:16Z",
   "schema_version": 1

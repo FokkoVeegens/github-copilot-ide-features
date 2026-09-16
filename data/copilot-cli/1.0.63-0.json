@@ -9,7 +9,20 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Experimental: /rewind no longer requires git and restores only the files Copilot changed (leaving your own edits intact), with a conversation-only or conversation + files choice"
+    "**Added**",
+    "- Press w in /diff to hide whitespace-only changes",
+    "- Add deferTools option to MCP server config to keep a server's tools always available, even when tool search is enabled",
+    "**Improved**",
+    "- Improve reliability of OpenAI, Anthropic, and Azure OpenAI requests",
+    "- Experimental: /rewind no longer requires git and restores only the files Copilot changed (leaving your own edits intact), with a conversation-only or conversation + files choice",
+    "**Fixed**",
+    "- Agent mode is tracked per session, so it no longer carries over when you create, clear, or switch sessions",
+    "- Pressing Enter opens the highlighted issue details",
+    "- Plan review menus work on strict OpenAI-compatible backends",
+    "- Prevent Windows crashes when the native runtime addon loads in a corrupted host process heap",
+    "- Recover from unreadable native document attachments by falling back to file-path uploads",
+    "- Keep reverse search aligned in the input footer while you search command history",
+    "- PostToolUse hook matchers (e.g. `Edit|Write`) are now honored instead of silently dropped, so formatters and linters run only after the tools they target"
   ],
   "prerelease": true,
   "fetched_at": "2026-06-16T09:06:44Z",

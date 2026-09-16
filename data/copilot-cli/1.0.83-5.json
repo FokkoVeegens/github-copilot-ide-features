@@ -9,8 +9,16 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "**Added**",
     "- Show running Copilot sessions in the Windows 11 taskbar with live hover status cards",
-    "- Sandboxed `gh` commands now authenticate as the account configured for the repository instead of the Copilot CLI login"
+    "**Improved**",
+    "- On macOS and Linux, sandboxed commands can no longer reach services running on your machine. On macOS this also blocks a server the command itself starts on 127.0.0.1, so test suites that bind a local port will fail; turn on Allow local network in /sandbox to reach localhost again.",
+    "- Linux sandboxing now needs slirp4netns, nsenter, iptables, ip6tables, iptables-restore and ip6tables-restore on PATH. Install them if sandboxed commands start failing to launch.",
+    "**Fixed**",
+    "- A session lock that is re-entered on the same thread now fails with a reported error instead of freezing the CLI.",
+    "- Kerberos proxy authentication reconnects when the initial challenge answers with `Connection: close`",
+    "- Sandboxed `gh` commands now authenticate as the account configured for the repository instead of the Copilot CLI login",
+    "- MCP tools remain callable after MCP server restarts"
   ],
   "prerelease": true,
   "fetched_at": "2026-09-04T12:05:32Z",

@@ -8,7 +8,11 @@
   "body_markdown": "* Early support for IntelliJ 2023.1\n* Improved UX with Jupyter notebooks\n* Various bug fixes",
   "body_html": "<ul><li>Early support for IntelliJ 2023.1</li><li>Improved UX with Jupyter notebooks</li><li>Various bug fixes</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Early support for IntelliJ 2023.1",
+    "* Improved UX with Jupyter notebooks",
+    "* Various bug fixes"
+  ],
   "builds": [
     {
       "ide_build": null,

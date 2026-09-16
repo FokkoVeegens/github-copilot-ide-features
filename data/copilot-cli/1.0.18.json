@@ -8,7 +8,13 @@
   "body_markdown": "2026-04-04\n\n- New Critic agent automatically reviews plans and complex implementations using a complementary model to catch errors early (available in experimental mode for Claude models)\n- Session resume picker correctly groups sessions by branch and repository on first use\n- preToolUse hook permissionDecision 'allow' now suppresses the tool approval prompt\n- Add notification hook event that fires asynchronously on shell completion, permission prompts, elicitation dialogs, and agent completion",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-04-04",
+    "- New Critic agent automatically reviews plans and complex implementations using a complementary model to catch errors early (available in experimental mode for Claude models)",
+    "- Session resume picker correctly groups sessions by branch and repository on first use",
+    "- preToolUse hook permissionDecision 'allow' now suppresses the tool approval prompt",
+    "- Add notification hook event that fires asynchronously on shell completion, permission prompts, elicitation dialogs, and agent completion"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

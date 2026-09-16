@@ -8,7 +8,9 @@
   "body_markdown": "* Remove network preconditions check",
   "body_html": "<ul><li>Remove network preconditions check</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Remove network preconditions check"
+  ],
   "builds": [
     {
       "ide_build": null,

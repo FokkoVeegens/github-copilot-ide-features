@@ -8,7 +8,13 @@
   "body_markdown": "**Improved**\n- /clear now abandons the current session entirely, while /new starts a fresh conversation (keeping the old session backgrounded)\n\n**Fixed**\n- Extension hooks from multiple extensions now merge instead of overwriting each other or hooks from hooks.json\n- sessionStart hook additionalContext is now injected into the conversation",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- /clear now abandons the current session entirely, while /new starts a fresh conversation (keeping the old session backgrounded)",
+    "**Fixed**",
+    "- Extension hooks from multiple extensions now merge instead of overwriting each other or hooks from hooks.json",
+    "- sessionStart hook additionalContext is now injected into the conversation"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

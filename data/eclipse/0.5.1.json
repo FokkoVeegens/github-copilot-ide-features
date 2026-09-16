@@ -8,7 +8,15 @@
   "body_markdown": "### Fixed\n- Annotation model is null when triggering completion.\n- Input text box shakes when sending message by hitting Enter-Key.\n- SWTException when disposing completion manager.\n- Timeout error shows late when fail to login.\n- Improve auto scroll to bottom behavior.\n- Fixed schema name copilotCapabilities.\n- Wrong node runtime may be found.",
   "body_html": "### Fixed\n- Annotation model is null when triggering completion.\n- Input text box shakes when sending message by hitting Enter-Key.\n- SWTException when disposing completion manager.\n- Timeout error shows late when fail to login.\n- Improve auto scroll to bottom behavior.\n- Fixed schema name copilotCapabilities.\n- Wrong node runtime may be found.",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "- Annotation model is null when triggering completion.",
+    "- Input text box shakes when sending message by hitting Enter-Key.",
+    "- SWTException when disposing completion manager.",
+    "- Timeout error shows late when fail to login.",
+    "- Improve auto scroll to bottom behavior.",
+    "- Fixed schema name copilotCapabilities.",
+    "- Wrong node runtime may be found."
+  ],
   "fetched_at": "2026-05-05T19:53:39Z",
   "schema_version": 1
 }

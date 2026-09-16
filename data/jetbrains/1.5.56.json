@@ -8,7 +8,11 @@
   "body_markdown": "* Added: Redo the last request in Agent mode, allowing users to easily toggle between previous actions.\n* Fixed: Chat window appeared blank in certain scenarios.\n* Fixed: Code blocks in the chat window were displayed incompletely.",
   "body_html": "<ul><li>Added: Redo the last request in Agent mode, allowing users to easily toggle between previous actions.\n</li><li>Fixed: Chat window appeared blank in certain scenarios.\n</li><li>Fixed: Code blocks in the chat window were displayed incompletely.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Added: Redo the last request in Agent mode, allowing users to easily toggle between previous actions.",
+    "* Fixed: Chat window appeared blank in certain scenarios.",
+    "* Fixed: Code blocks in the chat window were displayed incompletely."
+  ],
   "builds": [
     {
       "ide_build": "243",

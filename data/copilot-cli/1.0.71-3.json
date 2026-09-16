@@ -8,7 +8,11 @@
   "body_markdown": "**Fixed**\n- On startup, an invalid settings.json now shows a warning identifying the offending value instead of silently ignoring your settings\n- /terminal-setup no longer skips setup on terminals without real kitty keyboard support",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- On startup, an invalid settings.json now shows a warning identifying the offending value instead of silently ignoring your settings",
+    "- /terminal-setup no longer skips setup on terminals without real kitty keyboard support"
+  ],
   "prerelease": true,
   "fetched_at": "2026-07-16T09:23:13Z",
   "schema_version": 1

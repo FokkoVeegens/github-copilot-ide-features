@@ -8,7 +8,13 @@
   "body_markdown": "**Improved**\n- Code review agent now uses the same model as the current session instead of a fixed default\n- When gh CLI is on PATH, GitHub MCP server now omits redundant gh-replaceable tools by default, reducing token usage\n\n**Fixed**\n- Cursor stays at correct position after pasting text that contains tab characters",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Code review agent now uses the same model as the current session instead of a fixed default",
+    "- When gh CLI is on PATH, GitHub MCP server now omits redundant gh-replaceable tools by default, reducing token usage",
+    "**Fixed**",
+    "- Cursor stays at correct position after pasting text that contains tab characters"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

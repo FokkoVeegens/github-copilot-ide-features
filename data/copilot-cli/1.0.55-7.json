@@ -8,7 +8,11 @@
   "body_markdown": "**Fixed**\n- The exit_plan_mode tool is only offered to the model while the session is in plan mode\n- Native binary crash (e.g. SIGSEGV) now falls through to the JavaScript fallback instead of silently exiting",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- The exit_plan_mode tool is only offered to the model while the session is in plan mode",
+    "- Native binary crash (e.g. SIGSEGV) now falls through to the JavaScript fallback instead of silently exiting"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

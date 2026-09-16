@@ -9,7 +9,10 @@
   "body_html": "<ul><li><strong>New Features</strong>\n</li></ul>\n<ul><li>Added /remote command to control Copilot CLI sessions, allowing you to view and steer from GitHub.com and the GitHub mobile app. Enable from Settings &gt; Tools &gt; GitHub Copilot &gt; Chat &gt; Enable Copilot CLI Remote.\n</li><li>Added internal support for upcoming usage-based billing, including billing updates for the usage panel, usage notifications, and model picker. This will be visible to the user once usage-based billing rolls out.\n\n</li></ul>\n<ul><li><strong>Changed</strong>\n</li></ul>\n<ul><li>MCP Registry (Experimental) is available without the Editor Preview feature flag\n</li><li>MCP Allowlist (Experimental) is available without the Editor Preview feature flag</li></ul>",
   "categories": [],
   "copilot_mentions": [
-    "* Added /remote command to control Copilot CLI sessions, allowing you to view and steer from GitHub.com and the GitHub mobile app. Enable from Settings > Tools > GitHub Copilot > Chat > Enable Copilot CLI Remote."
+    "* Added /remote command to control Copilot CLI sessions, allowing you to view and steer from GitHub.com and the GitHub mobile app. Enable from Settings > Tools > GitHub Copilot > Chat > Enable Copilot CLI Remote.",
+    "* Added internal support for upcoming usage-based billing, including billing updates for the usage panel, usage notifications, and model picker. This will be visible to the user once usage-based billing rolls out.",
+    "* MCP Registry (Experimental) is available without the Editor Preview feature flag",
+    "* MCP Allowlist (Experimental) is available without the Editor Preview feature flag"
   ],
   "builds": [
     {

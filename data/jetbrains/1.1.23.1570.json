@@ -9,7 +9,9 @@
   "body_html": "<ul><li>Added compatibility with 2022.2 EAP</li><li>Terminate the GitHub Copilot helper process when the IDE quits</li><li>Fixed exception <code>Cyclic service initialization</code></li><li>Support more color scheme text attributes for the GitHub Copilot editor inlay hints</li></ul>",
   "categories": [],
   "copilot_mentions": [
+    "* Added compatibility with 2022.2 EAP",
     "* Terminate the GitHub Copilot helper process when the IDE quits",
+    "* Fixed exception `Cyclic service initialization`",
     "* Support more color scheme text attributes for the GitHub Copilot editor inlay hints"
   ],
   "builds": [

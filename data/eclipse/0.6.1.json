@@ -8,7 +8,9 @@
   "body_markdown": "### Fixed\n- Correct the bundle version requirement to align with Eclipse 2024-09.",
   "body_html": "### Fixed\n- Correct the bundle version requirement to align with Eclipse 2024-09.",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "- Correct the bundle version requirement to align with Eclipse 2024-09."
+  ],
   "fetched_at": "2026-05-05T19:53:39Z",
   "schema_version": 1
 }

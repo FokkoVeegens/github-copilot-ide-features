@@ -8,7 +8,20 @@
   "body_markdown": "**Added**\n- Plugins can now ship extensions, making them installable via the plugin marketplace\n- Add content search, match highlighting, and n/N navigation in diff view\n- Add /app slash command to open the GitHub app or a browser fallback\n- Configure subagent model, reasoning effort, and context tier via user settings or the /subagents (also /agents) picker\n\n**Improved**\n- Make the MCP server config form easier to use with a picker-based flow\n\n**Fixed**\n- PowerShell redirect paths no longer trigger content-exclusion refusals\n- WebSocket transport closes cleanly outside the Tokio runtime\n- Shell tool errors now explain when a shell ID was stopped, completed, or reclaimed\n- Voice runtime download dialog no longer reopens in a loop after an install failure",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Plugins can now ship extensions, making them installable via the plugin marketplace",
+    "- Add content search, match highlighting, and n/N navigation in diff view",
+    "- Add /app slash command to open the GitHub app or a browser fallback",
+    "- Configure subagent model, reasoning effort, and context tier via user settings or the /subagents (also /agents) picker",
+    "**Improved**",
+    "- Make the MCP server config form easier to use with a picker-based flow",
+    "**Fixed**",
+    "- PowerShell redirect paths no longer trigger content-exclusion refusals",
+    "- WebSocket transport closes cleanly outside the Tokio runtime",
+    "- Shell tool errors now explain when a shell ID was stopped, completed, or reclaimed",
+    "- Voice runtime download dialog no longer reopens in a loop after an install failure"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-15T09:19:21Z",
   "schema_version": 1

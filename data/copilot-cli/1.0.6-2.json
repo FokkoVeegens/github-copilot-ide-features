@@ -8,7 +8,15 @@
   "body_markdown": "**Improved**\n- Reduce memory usage by eliminating redundant environment variable copies per child process spawn\n\n**Fixed**\n- Free tree-sitter WASM objects after shell command parsing to prevent memory leak\n- /help dialog starts scrolled to the top in alt-screen mode\n- Auto-update correctly recovers from race conditions on Windows\n- CLI no longer fails to load on Windows after updating while another instance is running",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Reduce memory usage by eliminating redundant environment variable copies per child process spawn",
+    "**Fixed**",
+    "- Free tree-sitter WASM objects after shell command parsing to prevent memory leak",
+    "- /help dialog starts scrolled to the top in alt-screen mode",
+    "- Auto-update correctly recovers from race conditions on Windows",
+    "- CLI no longer fails to load on Windows after updating while another instance is running"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

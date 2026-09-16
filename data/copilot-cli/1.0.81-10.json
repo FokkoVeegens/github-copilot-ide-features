@@ -9,7 +9,21 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- The plugins dashboard is available to everyone: run `/plugin`, `/mcp`, or `/skills`. Set `PLUGINS_DASHBOARD=false` to opt out of it and the `copilot plugins` command."
+    "**New**",
+    "- The plugins dashboard is available to everyone: run `/plugin`, `/mcp`, or `/skills`. Set `PLUGINS_DASHBOARD=false` to opt out of it and the `copilot plugins` command.",
+    "**Improved**",
+    "- `x` is now the delete key everywhere: /sandbox config, /settings, /mcp, the sessions dialog and the diff comments summary move off `d`",
+    "- Auto mode now adapts model selection as your task evolves during a conversation",
+    "- /plugin now flags installed plugins and marketplaces that have a newer version upstream, and offers an Update action to pull it",
+    "- Show your last prompt as the inferred objective in the Autopilot status panel",
+    "- When --no-sandbox is ignored because enterprise policy could not be determined, the notice now says so, and no longer points at an administrator, instead of claiming a policy requires the sandbox. The unsupported-host warning says the same rather than contradicting it.",
+    "**Fixed**",
+    "- Fixed an indefinite \"Loading…/Resuming…\" hang at startup when a repository plugin activates a contributed extension (or another extension reload races the initial load), which previously left the environment stuck on \"still waiting on extensions\"",
+    "- Vim mode badge stays visible beside the activity indicator during turns",
+    "- The startup status finishes after extension configuration during plugin reconciliation",
+    "**Removed**",
+    "- Removed `/plugins`; its resources moved to `/plugin`, `/mcp` and `/skills`, with `/subagents` and `/instructions` for agents and instructions.",
+    "- Enabling and disabling hooks and LSP servers is temporarily unavailable: those toggles existed only in the `/plugins` dashboard that this release removes."
   ],
   "prerelease": true,
   "fetched_at": "2026-08-28T19:23:42Z",

@@ -8,7 +8,22 @@
   "body_markdown": "* Added: Code review with Suggested Changes panel.\n* Added: MCP prompt files support.\n* Added: New settings for creating instruction and prompt files.\n* Added: Improved Ask mode layout for better usability.\n* Added: Automatic history migration from Ask mode to Agent mode.\n* Added: MCP sampling support for advanced interactions.\n* Added: MCP elicitation support.\n* Added: MCP resource support for extended functionality.\n* Added: Tool grouping for better organization.\n* Fixed: Session disposal issues causing unexpected behavior.\n* Fixed: Inlay display updates when changing font size.\n* Fixed: Updated tools status method for reliability.\n* Fixed: Chat reference spacing for cleaner appearance.\n* Fixed: Multiple edits to the same file failing in Agent mode.",
   "body_html": "<ul><li>Added: Code review with Suggested Changes panel.\n</li><li>Added: MCP prompt files support.\n</li><li>Added: New settings for creating instruction and prompt files.\n</li><li>Added: Improved Ask mode layout for better usability.\n</li><li>Added: Automatic history migration from Ask mode to Agent mode.\n</li><li>Added: MCP sampling support for advanced interactions.\n</li><li>Added: MCP elicitation support.\n</li><li>Added: MCP resource support for extended functionality.\n</li><li>Added: Tool grouping for better organization.\n</li><li>Fixed: Session disposal issues causing unexpected behavior.\n</li><li>Fixed: Inlay display updates when changing font size.\n</li><li>Fixed: Updated tools status method for reliability.\n</li><li>Fixed: Chat reference spacing for cleaner appearance.\n</li><li>Fixed: Multiple edits to the same file failing in Agent mode.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Added: Code review with Suggested Changes panel.",
+    "* Added: MCP prompt files support.",
+    "* Added: New settings for creating instruction and prompt files.",
+    "* Added: Improved Ask mode layout for better usability.",
+    "* Added: Automatic history migration from Ask mode to Agent mode.",
+    "* Added: MCP sampling support for advanced interactions.",
+    "* Added: MCP elicitation support.",
+    "* Added: MCP resource support for extended functionality.",
+    "* Added: Tool grouping for better organization.",
+    "* Fixed: Session disposal issues causing unexpected behavior.",
+    "* Fixed: Inlay display updates when changing font size.",
+    "* Fixed: Updated tools status method for reliability.",
+    "* Fixed: Chat reference spacing for cleaner appearance.",
+    "* Fixed: Multiple edits to the same file failing in Agent mode."
+  ],
   "builds": [
     {
       "ide_build": "243",

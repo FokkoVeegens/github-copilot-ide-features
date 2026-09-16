@@ -8,7 +8,9 @@
   "body_markdown": "* Improve compatibility with 2023.2",
   "body_html": "<ul><li>Improve compatibility with 2023.2</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Improve compatibility with 2023.2"
+  ],
   "builds": [
     {
       "ide_build": null,

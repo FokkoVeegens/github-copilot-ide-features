@@ -8,7 +8,15 @@
   "body_markdown": "**Improved**\n- /ask dialog no longer prompts for follow-up replies it cannot receive\n- Skill content injected to the model no longer includes YAML frontmatter metadata\n\n**Fixed**\n- Auto-disable the built-in github-mcp-server in Azure DevOps-only workspaces when running in prompt/headless mode, matching interactive mode behavior\n- Terminal cursor positions correctly on the input field instead of on decorative elements like the selected tab\n- ACP clients receive updated config options when the active model is changed",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- /ask dialog no longer prompts for follow-up replies it cannot receive",
+    "- Skill content injected to the model no longer includes YAML frontmatter metadata",
+    "**Fixed**",
+    "- Auto-disable the built-in github-mcp-server in Azure DevOps-only workspaces when running in prompt/headless mode, matching interactive mode behavior",
+    "- Terminal cursor positions correctly on the input field instead of on decorative elements like the selected tab",
+    "- ACP clients receive updated config options when the active model is changed"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

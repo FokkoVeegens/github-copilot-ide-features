@@ -8,7 +8,10 @@
   "body_markdown": "2026-01-08\n\n- Large file messages now encourage incremental reading with view_range instead of discouraging all reading",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-01-08",
+    "- Large file messages now encourage incremental reading with view_range instead of discouraging all reading"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

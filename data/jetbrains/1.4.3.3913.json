@@ -8,7 +8,11 @@
   "body_markdown": "* Improved test failure detection in chat\n* Removed blocking network calls prevent IDE freezes\n* Improved multi project handling",
   "body_html": "<ul><li>Improved test failure detection in chat</li><li>Removed blocking network calls prevent IDE freezes</li><li>Improved multi project handling</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Improved test failure detection in chat",
+    "* Removed blocking network calls prevent IDE freezes",
+    "* Improved multi project handling"
+  ],
   "builds": [
     {
       "ide_build": null,

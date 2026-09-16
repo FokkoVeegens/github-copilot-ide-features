@@ -8,7 +8,10 @@
   "body_markdown": "* **Added**: Support for the GPT-5.3-Codex model.\n* **Fixed**: Resolved an issue in Agent Mode where GPT-5.1-Codex and GPT-5.2-Codex responses could incorrectly end with the number “2“.",
   "body_html": "<ul><li><strong>Added</strong>: Support for the GPT-5.3-Codex model.\n</li><li><strong>Fixed</strong>: Resolved an issue in Agent Mode where GPT-5.1-Codex and GPT-5.2-Codex responses could incorrectly end with the number “2“.</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* **Added**: Support for the GPT-5.3-Codex model.",
+    "* **Fixed**: Resolved an issue in Agent Mode where GPT-5.1-Codex and GPT-5.2-Codex responses could incorrectly end with the number “2“."
+  ],
   "builds": [
     {
       "ide_build": "242",

@@ -9,7 +9,12 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Add `copilot login` subcommand and support ACP terminal-auth"
+    "**Added**",
+    "- Add `copilot login` subcommand and support ACP terminal-auth",
+    "- Add agentStop and subagentStop hooks to control agent completion",
+    "**Fixed**",
+    "- CLI handles unknown keypresses gracefully",
+    "- /diff displays accurate line numbers with dual column layout"
   ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",

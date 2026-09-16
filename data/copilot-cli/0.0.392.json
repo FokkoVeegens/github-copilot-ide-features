@@ -8,7 +8,13 @@
   "body_markdown": "2026-01-22\n\n- Add `/plugin` command for plugin marketplace management\n- Add /rename command as alias for /session rename\n- Add /plugin update command to update installed plugins\n- Edit tool now displays diffs when expanded in timeline",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-01-22",
+    "- Add `/plugin` command for plugin marketplace management",
+    "- Add /rename command as alias for /session rename",
+    "- Add /plugin update command to update installed plugins",
+    "- Edit tool now displays diffs when expanded in timeline"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

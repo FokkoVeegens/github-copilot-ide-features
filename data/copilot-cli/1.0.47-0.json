@@ -9,6 +9,9 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "**Added**",
+    "- Support j/k keys for up/down navigation in the /diff view",
+    "**Improved**",
     "- --resume supports Copilot cloud agent sessions where the agent hasn't pushed any changes to its branch"
   ],
   "prerelease": true,

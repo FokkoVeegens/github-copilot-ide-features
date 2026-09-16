@@ -8,7 +8,12 @@
   "body_markdown": "**Improved**\n- /diff defaults to branch diff when there are no unstaged changes\n\n**Fixed**\n- Surface the underlying reason (e.g. GitHub API rate limit) when SDK auth-token validation fails, instead of the misleading \"Session was not created with authentication info or custom provider\" message.",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- /diff defaults to branch diff when there are no unstaged changes",
+    "**Fixed**",
+    "- Surface the underlying reason (e.g. GitHub API rate limit) when SDK auth-token validation fails, instead of the misleading \"Session was not created with authentication info or custom provider\" message."
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

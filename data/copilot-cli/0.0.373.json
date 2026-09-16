@@ -9,7 +9,12 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Enable Copilot Spaces tools in GitHub MCP Server"
+    "2025-12-30",
+    "- Tab completion for path arguments in slash commands like `/cwd` and `/add-dir`",
+    "- Enable Copilot Spaces tools in GitHub MCP Server",
+    "- GitHub URL resolves correctly for GHE",
+    "- Kill command filtering now allows commands when 'kill' appears as an argument",
+    "- Device code authorization polling begins immediately instead of waiting for clipboard and browser"
   ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",

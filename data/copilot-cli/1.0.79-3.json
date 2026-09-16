@@ -8,7 +8,10 @@
   "body_markdown": "**Improved**\n- Use `/worktree new` to start a new session in a new worktree",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Use `/worktree new` to start a new session in a new worktree"
+  ],
   "prerelease": true,
   "fetched_at": "2026-08-06T09:47:08Z",
   "schema_version": 1

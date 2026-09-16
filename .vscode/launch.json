@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Open Website",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "python -m http.server -d site 8000",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Prepare website",
+      "serverReadyAction": {
+        "pattern": "Serving HTTP on .* port ([0-9]+)",
+        "uriFormat": "http://localhost:%s/",
+        "action": "openExternally"
+      }
+    }
+  ]
+}

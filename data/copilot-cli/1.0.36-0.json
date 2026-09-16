@@ -9,6 +9,10 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
+    "**Improved**",
+    "- Claude Opus 4.6 now uses medium reasoning effort by default",
+    "**Fixed**",
+    "- Saving debug logs or feedback bundles no longer overwrites existing archive files",
     "- Custom agents, skills, and commands from ~/.claude/ are no longer loaded by the Copilot CLI"
   ],
   "prerelease": true,

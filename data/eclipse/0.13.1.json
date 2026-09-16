@@ -8,7 +8,10 @@
   "body_markdown": "### Fixed\n- Chat View - NPE when rendering buttons in action bar.\n- Completion - Invalid thread access when completion in Eclipse 2024-03.",
   "body_html": "### Fixed\n- Chat View - NPE when rendering buttons in action bar.\n- Completion - Invalid thread access when completion in Eclipse 2024-03.",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "- Chat View - NPE when rendering buttons in action bar.",
+    "- Completion - Invalid thread access when completion in Eclipse 2024-03."
+  ],
   "fetched_at": "2026-05-05T19:53:39Z",
   "schema_version": 1
 }

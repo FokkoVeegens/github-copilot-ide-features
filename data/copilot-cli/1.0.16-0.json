@@ -8,7 +8,13 @@
   "body_markdown": "**Fixed**\n- MCP servers load correctly after login, user switch, and /mcp reload\n- BYOK Anthropic provider now respects the configured maxOutputTokens limit\n\n**Removed**\n- Remove deprecated `marketplaces` repository setting (use `extraKnownMarketplaces` instead)",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- MCP servers load correctly after login, user switch, and /mcp reload",
+    "- BYOK Anthropic provider now respects the configured maxOutputTokens limit",
+    "**Removed**",
+    "- Remove deprecated `marketplaces` repository setting (use `extraKnownMarketplaces` instead)"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

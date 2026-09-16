@@ -8,7 +8,10 @@
   "body_markdown": "**Fixed**\n- Extensions launch correctly when the CLI runs as a single-executable application (SEA)",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Extensions launch correctly when the CLI runs as a single-executable application (SEA)"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

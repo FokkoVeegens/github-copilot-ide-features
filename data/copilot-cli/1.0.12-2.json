@@ -8,7 +8,18 @@
   "body_markdown": "**Added**\n- Plugin hooks now receive CLAUDE_PROJECT_DIR and CLAUDE_PLUGIN_DATA environment variables, and support {{project_dir}} and {{plugin_data_dir}} template variables in hook configurations\n\n**Improved**\n- Model display header shows the active reasoning effort level (e.g. \"(high)\") next to the model name\n- /session rename auto-generates a session name from conversation history when called without a name argument\n\n**Fixed**\n- Workspace MCP servers are now correctly loaded and visible to the agent\n- /clear preserves MCP servers in the new session\n\n**Removed**\n- Remove --alt-screen flag and alt_screen setting; alt screen is now always enabled",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Plugin hooks now receive CLAUDE_PROJECT_DIR and CLAUDE_PLUGIN_DATA environment variables, and support {{project_dir}} and {{plugin_data_dir}} template variables in hook configurations",
+    "**Improved**",
+    "- Model display header shows the active reasoning effort level (e.g. \"(high)\") next to the model name",
+    "- /session rename auto-generates a session name from conversation history when called without a name argument",
+    "**Fixed**",
+    "- Workspace MCP servers are now correctly loaded and visible to the agent",
+    "- /clear preserves MCP servers in the new session",
+    "**Removed**",
+    "- Remove --alt-screen flag and alt_screen setting; alt screen is now always enabled"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

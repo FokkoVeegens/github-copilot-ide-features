@@ -8,7 +8,11 @@
   "body_markdown": "2025-11-25\n\n- Add syntax highlighting for diffs\n- Fix light theme markdown rendering",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2025-11-25",
+    "- Add syntax highlighting for diffs",
+    "- Fix light theme markdown rendering"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

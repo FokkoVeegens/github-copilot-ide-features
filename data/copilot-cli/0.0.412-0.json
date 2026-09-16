@@ -8,7 +8,16 @@
   "body_markdown": "**Added**\n- Add cross-session memory: ask about past work, files, and PRs across sessions (experimental)\n- Add `--bash-env` flag to source BASH_ENV in shell sessions\n- Restore `ctrl+x /` as alternate shortcut to run commands while preserving input\n\n**Fixed**\n- /clear preserves agent mode (autopilot, plan, or interactive)\n- MCP error messages include the server name\n- Text selection in timeline no longer spills into prompt area when dragging",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add cross-session memory: ask about past work, files, and PRs across sessions (experimental)",
+    "- Add `--bash-env` flag to source BASH_ENV in shell sessions",
+    "- Restore `ctrl+x /` as alternate shortcut to run commands while preserving input",
+    "**Fixed**",
+    "- /clear preserves agent mode (autopilot, plan, or interactive)",
+    "- MCP error messages include the server name",
+    "- Text selection in timeline no longer spills into prompt area when dragging"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

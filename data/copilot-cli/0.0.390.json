@@ -8,7 +8,12 @@
   "body_markdown": "2026-01-22\n\n- Preserve extended thinking after compaction\n- Custom agents with MCP servers avoid unnecessary restarts\n- Enable steering during plan mode",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-01-22",
+    "- Preserve extended thinking after compaction",
+    "- Custom agents with MCP servers avoid unnecessary restarts",
+    "- Enable steering during plan mode"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

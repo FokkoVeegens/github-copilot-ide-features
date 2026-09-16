@@ -8,7 +8,14 @@
   "body_markdown": "**Improved**\n- MCP tools load faster from definition-scoped snapshots, with process-wide and per-server cache opt-outs.\n- Autopilot stays selected after task_complete by default; set stayInAutopilot to false to return to interactive mode after each task\n\n**Fixed**\n- Restore the early warning when unreclaimable system and tool context nears the limit, before automatic compaction is blocked\n- Session working directory no longer reverts to the original checkout shortly after `/worktree` switches into a new worktree",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- MCP tools load faster from definition-scoped snapshots, with process-wide and per-server cache opt-outs.",
+    "- Autopilot stays selected after task_complete by default; set stayInAutopilot to false to return to interactive mode after each task",
+    "**Fixed**",
+    "- Restore the early warning when unreclaimable system and tool context nears the limit, before automatic compaction is blocked",
+    "- Session working directory no longer reverts to the original checkout shortly after `/worktree` switches into a new worktree"
+  ],
   "prerelease": true,
   "fetched_at": "2026-08-03T10:50:18Z",
   "schema_version": 1

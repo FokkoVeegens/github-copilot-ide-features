@@ -8,7 +8,10 @@
   "body_markdown": "* Packaged libraries for the Windows platform now include digital signatures.\n* Support for EAP 2023.3",
   "body_html": "<ul><li>Packaged libraries for the Windows platform now include digital signatures.</li><li>Support for EAP 2023.3</li></ul>",
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "* Packaged libraries for the Windows platform now include digital signatures.",
+    "* Support for EAP 2023.3"
+  ],
   "builds": [
     {
       "ide_build": null,

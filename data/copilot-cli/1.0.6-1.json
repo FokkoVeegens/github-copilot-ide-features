@@ -9,7 +9,14 @@
   "body_html": null,
   "categories": [],
   "copilot_mentions": [
-    "- Remaining requests widget no longer shows inaccurate quota data for Copilot Free users"
+    "**Improved**",
+    "- Improve streaming and tool-output memory usage",
+    "**Fixed**",
+    "- Remaining requests widget no longer shows inaccurate quota data for Copilot Free users",
+    "- Resolve session crashes caused by HTTP/2 connection pool race conditions when sub-agents are active",
+    "- CLI loads the latest version of itself after an auto-update",
+    "- Kill command validation no longer incorrectly blocks some legitimate commands. e.g. p.kill() in a python script",
+    "- Instruction file frontmatter applyTo field accepts both string and array values"
   ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",

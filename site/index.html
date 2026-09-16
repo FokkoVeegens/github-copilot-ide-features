@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Copilot Feature Matrix</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>GitHub Copilot Feature Matrix</h1>
+      <p class="subtitle">
+        Search across all IDEs to see which versions support a specific feature.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="search-section">
+        <div class="search-container">
+          <input
+            type="text"
+            id="search-input"
+            class="search-input"
+            placeholder="Search for a Copilot feature (min. 5 characters)..."
+            aria-label="Search for a Copilot feature"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="filter-container">
+          <label class="filter-label" title="Only show notes containing launch keywords such as 'released', 'preview', 'generally available', 'introducing'">
+            <input type="checkbox" id="launch-only-filter" checked />
+            Only launch announcements
+          </label>
+        </div>
+
+        <div id="hint" class="hint" style="display: none;">
+          <p>
+            Enter a keyword (at least 5 characters) to search across Copilot feature mentions
+            in all supported IDEs. Examples:
+          </p>
+          <ul>
+            <li>Next Edit Suggestions</li>
+            <li>Vision</li>
+            <li>Agent Mode</li>
+            <li>Skills</li>
+          </ul>
+        </div>
+
+        <div id="error-message" class="error-message" style="display: none;"></div>
+
+        <div id="results" class="results"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        Last updated: <span id="last-updated">—</span>
+      </p>
+      <p>
+        Data collected from official IDE or plugin/extension release notes.
+         <a href="https://github.com/FokkoVeegens/github-copilot-ide-features" target="_blank" rel="noopener noreferrer">
+          View on GitHub
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

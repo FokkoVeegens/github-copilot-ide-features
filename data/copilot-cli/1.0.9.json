@@ -8,7 +8,13 @@
   "body_markdown": "2026-03-19\n\n- Spurious I/O error messages (ENOTCONN, EIO) no longer appear in the timeline during SSH disconnects or terminal closes\n- Add include_gitignored config option to include gitignored files in @ file search\n- Copying text on WSL correctly preserves CJK and other non-ASCII characters\n- Marketplace and plugin installs from shortened URLs (e.g., aka.ms links) now work correctly",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-03-19",
+    "- Spurious I/O error messages (ENOTCONN, EIO) no longer appear in the timeline during SSH disconnects or terminal closes",
+    "- Add include_gitignored config option to include gitignored files in @ file search",
+    "- Copying text on WSL correctly preserves CJK and other non-ASCII characters",
+    "- Marketplace and plugin installs from shortened URLs (e.g., aka.ms links) now work correctly"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

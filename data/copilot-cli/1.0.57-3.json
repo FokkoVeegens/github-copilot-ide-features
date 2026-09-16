@@ -8,7 +8,12 @@
   "body_markdown": "**Improved**\n- High-contrast diff backgrounds use darker colors to improve text readability\n\n**Fixed**\n- Session resume works correctly after a crash that left partial data in the session log",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- High-contrast diff backgrounds use darker colors to improve text readability",
+    "**Fixed**",
+    "- Session resume works correctly after a crash that left partial data in the session log"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

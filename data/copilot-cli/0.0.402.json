@@ -8,7 +8,17 @@
   "body_markdown": "2026-02-03\n\n- ACP server supports agent and plan session modes\n- MCP configuration applies to ACP mode\n- Agent creation wizard styling improvements\n- Custom agents with unknown fields load with warnings instead of errors\n- Custom agents receive environment context when run as subagents\n- Plugins can provide hooks for session lifecycle events\n- Plugin update command works for direct plugins and handles Windows file locks\n- Stop MCP servers when uninstalling plugins",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "2026-02-03",
+    "- ACP server supports agent and plan session modes",
+    "- MCP configuration applies to ACP mode",
+    "- Agent creation wizard styling improvements",
+    "- Custom agents with unknown fields load with warnings instead of errors",
+    "- Custom agents receive environment context when run as subagents",
+    "- Plugins can provide hooks for session lifecycle events",
+    "- Plugin update command works for direct plugins and handles Windows file locks",
+    "- Stop MCP servers when uninstalling plugins"
+  ],
   "prerelease": false,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1

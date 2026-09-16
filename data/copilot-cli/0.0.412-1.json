@@ -8,7 +8,10 @@
   "body_markdown": "**Fixed**\n- Mouse event coordinate fragments no longer appear in input field",
   "body_html": null,
   "categories": [],
-  "copilot_mentions": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Mouse event coordinate fragments no longer appear in input field"
+  ],
   "prerelease": true,
   "fetched_at": "2026-06-02T17:01:24Z",
   "schema_version": 1
