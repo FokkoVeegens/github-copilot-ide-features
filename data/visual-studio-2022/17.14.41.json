@@ -1,0 +1,16 @@
+{
+  "ide": "visual-studio-2022",
+  "version": "17.14.41",
+  "release_date": "2026-09-15",
+  "title": "Version 17.14.41",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-notes",
+  "source": "html",
+  "body_markdown": "*Released September 15th, 2026*\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Corrects an issue causing bad codegen when dereferencing a pointer to a based pointer. |  |\n| Fixed an issue where builds could fail if an MSBuild task used `System.Configuration.ConfigurationManager`. |  |\n| VS will no longer create or update the .github/copilot-instructions.md file when opening a solution. | [Feedback ticket](https://developercommunity.visualstudio.com/t/GitHub-Copilot-auto-modifies-githubcop/11077846) |",
+  "body_html": "<p><em>Released September 15<sup>th</sup>, 2026</em></p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: right;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Corrects an issue causing bad codegen when dereferencing a pointer to a based pointer.</td>\n<td style=\"text-align: right;\"></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Fixed an issue where builds could fail if an MSBuild task used <code>System.Configuration.ConfigurationManager</code>.</td>\n<td style=\"text-align: right;\"></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">VS will no longer create or update the .github/copilot-instructions.md file when opening a solution.</td>\n<td style=\"text-align: right;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/GitHub-Copilot-auto-modifies-githubcop/11077846\">Feedback ticket</a></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [
+    "| VS will no longer create or update the .github/copilot-instructions.md file when opening a solution. | [Feedback ticket](https://developercommunity.visualstudio.com/t/GitHub-Copilot-auto-modifies-githubcop/11077846) |"
+  ],
+  "fetched_at": "2026-09-16T12:02:37Z",
+  "schema_version": 1
+}
