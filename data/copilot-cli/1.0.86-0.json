@@ -1,0 +1,20 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.86-0",
+  "release_date": "2026-09-16",
+  "title": "1.0.86-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.86-0",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Resume sessions even when transcript files contain recoverable corruption\n- Expanded reasoning text in the compact timeline is no longer dimmed, so it is as readable as the rest of the timeline.\n- Autopilot stops after accepted task completion instead of continuing unexpectedly",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Resume sessions even when transcript files contain recoverable corruption",
+    "- Expanded reasoning text in the compact timeline is no longer dimmed, so it is as readable as the rest of the timeline.",
+    "- Autopilot stops after accepted task completion instead of continuing unexpectedly"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-09-17T12:33:43Z",
+  "schema_version": 1
+}

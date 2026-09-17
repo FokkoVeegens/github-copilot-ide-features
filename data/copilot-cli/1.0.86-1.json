@@ -1,0 +1,22 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.86-1",
+  "release_date": "2026-09-16",
+  "title": "1.0.86-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.86-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Custom agents can opt into repository instruction files (AGENTS.md, copilot-instructions.md, CLAUDE.md) by setting `include-custom-instructions: true` in their frontmatter.\n\n**Fixed**\n- Resuming an active session without plugin-directory, discovery, or working-directory overrides preserves marketplace plugins and skills after reload. Configuration read or validation failures no longer discard active plugins; missing-file and intentional-removal behavior is unchanged.\n- /sandbox policy now reports local-network access using your configured setting\n- The status row now says it is waiting for background shells, instead of \"Working\", when a turn ends while an attached background shell such as a dev server is still running.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Custom agents can opt into repository instruction files (AGENTS.md, copilot-instructions.md, CLAUDE.md) by setting `include-custom-instructions: true` in their frontmatter.",
+    "**Fixed**",
+    "- Resuming an active session without plugin-directory, discovery, or working-directory overrides preserves marketplace plugins and skills after reload. Configuration read or validation failures no longer discard active plugins; missing-file and intentional-removal behavior is unchanged.",
+    "- /sandbox policy now reports local-network access using your configured setting",
+    "- The status row now says it is waiting for background shells, instead of \"Working\", when a turn ends while an attached background shell such as a dev server is still running."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-09-17T12:33:43Z",
+  "schema_version": 1
+}
