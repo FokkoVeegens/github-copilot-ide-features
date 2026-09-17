@@ -259,45 +259,34 @@ function getIdeOrderPriority(ideName) {
 }
 
 /**
- * Build a feature matrix from search results.
- * Pivots results into: rows = matched snippets, columns = IDEs.
+ * Build per-IDE rows from search results.
+ * Pivots results into one group per IDE, each holding every matching
+ * record (version, release date, snippet, url) sorted oldest first.
+ * IDEs with no matching record are reported separately so the caller can
+ * render them as a single "not available" row.
  * @param {Array<Object>} results - Results from searchIndex()
  * @param {Array<string>} [allIdes] - Optional full list of IDE names to always
- *   show as columns, even when they have no matching results
- * @returns {Object} Matrix with shape: { snippets: [...], ides: [...], cells: {...} }
+ *   consider, even when they have no matching results
+ * @returns {Object} Shape: { matched: [{ ide, rows: [...] }], missing: [...] }
  */
-export function buildMatrix(results, allIdes = null) {
-  if (!Array.isArray(results) || results.length === 0) {
-    return { snippets: [], ides: [], cells: {}, summary: [] };
-  }
+export function buildIdeRows(results, allIdes = null) {
+  const records = Array.isArray(results) ? results : [];
 
-  // Collect unique IDEs and snippets
   const ideSet = new Set(Array.isArray(allIdes) ? allIdes.filter(Boolean) : []);
-  const snippetMap = new Map(); // snippet -> { ide_names, versions, earliest_date }
+  const byIde = new Map(); // ide -> [{ version, release_date, snippet, url }]
 
-  for (const record of results) {
+  for (const record of records) {
     const ide = record.ide_name || record.ide || '';
-    const snippet = record.snippet || '';
+    if (!ide) continue;
     ideSet.add(ide);
 
-    if (!snippetMap.has(snippet)) {
-      snippetMap.set(snippet, { earliest_date: null });
-    }
-
-    const ideData = snippetMap.get(snippet);
-    if (!ideData[ide]) {
-      ideData[ide] = [];
-    }
-    ideData[ide].push({
+    if (!byIde.has(ide)) byIde.set(ide, []);
+    byIde.get(ide).push({
       version: record.version,
       release_date: record.release_date,
+      snippet: record.snippet || '',
       url: record.url,
     });
-
-    // Track earliest release date for this snippet
-    if (!ideData.earliest_date || record.release_date < ideData.earliest_date) {
-      ideData.earliest_date = record.release_date;
-    }
   }
 
   // Sort IDEs by custom priority, then by name
@@ -310,54 +299,27 @@ export function buildMatrix(results, allIdes = null) {
     return a.localeCompare(b);
   });
 
-  const snippets = Array.from(snippetMap.keys()).sort(
-    (a, b) => snippetMap.get(a).earliest_date.localeCompare(snippetMap.get(b).earliest_date)
-  );
+  const matched = [];
+  const missing = [];
 
-  // Build cells: cells[snippet][ide] = { versions: [...], earliest: "1.0.0" }
-  const cells = {};
-  for (const snippet of snippets) {
-    cells[snippet] = {};
-    for (const ide of ides) {
-      const versions = snippetMap.get(snippet)[ide];
-      if (versions) {
-        // Sort versions numerically and pick earliest
-        versions.sort(
-          (a, b) => compareVersions(a.version, b.version)
-        );
-        cells[snippet][ide] = {
-          versions: versions.map(v => v.version),
-          earliest: versions[0].version,
-          url: versions[0].url,
-        };
-      }
-    }
-  }
-
-  // Build summary: first version per IDE that mentions the keyword
-  const summary = [];
   for (const ide of ides) {
-    let earliestVersion = null;
-    let earliestDate = null;
-
-    for (const snippet of snippets) {
-      if (cells[snippet][ide]) {
-        const cell = cells[snippet][ide];
-        if (!earliestVersion || compareVersions(cell.earliest, earliestVersion) < 0) {
-          earliestVersion = cell.earliest;
-          earliestDate = results.find(
-            r => r.ide_name === ide && r.version === earliestVersion
-          )?.release_date;
-        }
-      }
+    const rows = byIde.get(ide);
+    if (!rows || rows.length === 0) {
+      missing.push(ide);
+      continue;
     }
 
-    if (earliestVersion) {
-      summary.push({ ide, version: earliestVersion, date: earliestDate });
-    }
+    // Sort oldest first: by version, falling back to release date for ties.
+    rows.sort((a, b) => {
+      const cmp = compareVersions(a.version, b.version);
+      if (cmp !== 0) return cmp;
+      return String(a.release_date || '').localeCompare(String(b.release_date || ''));
+    });
+
+    matched.push({ ide, rows });
   }
 
-  return { snippets, ides, cells, summary };
+  return { matched, missing };
 }
 
 /**

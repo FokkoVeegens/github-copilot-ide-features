@@ -4,7 +4,7 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert';
-import { validateQuery, searchIndex, buildMatrix, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, isGaAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames } from './search.js';
+import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, isGaAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames } from './search.js';
 
 test('validateQuery rejects empty string', () => {
   assert.strictEqual(validateQuery(''), null);
@@ -194,7 +194,7 @@ test('collectIdeNames handles invalid input', () => {
   assert.deepStrictEqual(collectIdeNames(undefined), []);
 });
 
-test('buildMatrix includes IDEs without matches as empty columns when allIdes is given', () => {
+test('buildIdeRows includes IDEs without matches in "missing" when allIdes is given', () => {
   const results = [
     {
       snippet: 'Next Edit Suggestions (preview)',
@@ -212,18 +212,16 @@ test('buildMatrix includes IDEs without matches as empty columns when allIdes is
     'GitHub Copilot for Eclipse',
   ];
 
-  const matrix = buildMatrix(results, allIdes);
-  assert.strictEqual(matrix.ides.length, 4);
-  assert(matrix.ides.includes('GitHub Copilot for Xcode'));
-  assert(matrix.ides.includes('GitHub Copilot for Vim/Neovim'));
-  assert(matrix.ides.includes('GitHub Copilot for Eclipse'));
-  // Empty IDEs have no cells and no summary entry
-  assert.strictEqual(matrix.cells['Next Edit Suggestions (preview)']['GitHub Copilot for Xcode'], undefined);
-  assert.strictEqual(matrix.summary.length, 1);
-  assert.strictEqual(matrix.summary[0].ide, 'GitHub Copilot for VS Code');
+  const ideRows = buildIdeRows(results, allIdes);
+  assert.strictEqual(ideRows.matched.length, 1);
+  assert.strictEqual(ideRows.matched[0].ide, 'GitHub Copilot for VS Code');
+  assert.strictEqual(ideRows.missing.length, 3);
+  assert(ideRows.missing.includes('GitHub Copilot for Xcode'));
+  assert(ideRows.missing.includes('GitHub Copilot for Vim/Neovim'));
+  assert(ideRows.missing.includes('GitHub Copilot for Eclipse'));
 });
 
-test('buildMatrix without allIdes only shows IDEs present in results', () => {
+test('buildIdeRows without allIdes only reports IDEs present in results', () => {
   const results = [
     {
       snippet: 'Agent mode released',
@@ -235,8 +233,9 @@ test('buildMatrix without allIdes only shows IDEs present in results', () => {
     },
   ];
 
-  const matrix = buildMatrix(results);
-  assert.deepStrictEqual(matrix.ides, ['GitHub Copilot for VS Code']);
+  const ideRows = buildIdeRows(results);
+  assert.deepStrictEqual(ideRows.matched.map(g => g.ide), ['GitHub Copilot for VS Code']);
+  assert.deepStrictEqual(ideRows.missing, []);
 });
 
 test('filterLaunchAnnouncements handles invalid input', () => {
@@ -245,7 +244,7 @@ test('filterLaunchAnnouncements handles invalid input', () => {
   assert.deepStrictEqual(filterLaunchAnnouncements([]), []);
 });
 
-test('buildMatrix returns expected structure', () => {
+test('buildIdeRows returns expected structure', () => {
   const results = [
     {
       snippet: 'New feature',
@@ -256,26 +255,23 @@ test('buildMatrix returns expected structure', () => {
       url: 'https://example.com/1.0.0',
     },
   ];
-  
-  const matrix = buildMatrix(results);
-  assert('snippets' in matrix);
-  assert('ides' in matrix);
-  assert('cells' in matrix);
-  assert('summary' in matrix);
-  assert(Array.isArray(matrix.snippets));
-  assert(Array.isArray(matrix.ides));
-  assert(Array.isArray(matrix.summary));
+
+  const ideRows = buildIdeRows(results);
+  assert('matched' in ideRows);
+  assert('missing' in ideRows);
+  assert(Array.isArray(ideRows.matched));
+  assert(Array.isArray(ideRows.missing));
+  assert('ide' in ideRows.matched[0]);
+  assert('rows' in ideRows.matched[0]);
 });
 
-test('buildMatrix returns empty structure for empty input', () => {
-  const matrix = buildMatrix([]);
-  assert.deepStrictEqual(matrix.snippets, []);
-  assert.deepStrictEqual(matrix.ides, []);
-  assert.deepStrictEqual(matrix.cells, {});
-  assert.deepStrictEqual(matrix.summary, []);
+test('buildIdeRows returns empty structure for empty input', () => {
+  const ideRows = buildIdeRows([]);
+  assert.deepStrictEqual(ideRows.matched, []);
+  assert.deepStrictEqual(ideRows.missing, []);
 });
 
-test('buildMatrix pivots results correctly', () => {
+test('buildIdeRows groups multiple releases for the same IDE together', () => {
   const results = [
     {
       snippet: 'Chat feature',
@@ -294,20 +290,18 @@ test('buildMatrix pivots results correctly', () => {
       url: 'https://example.com/2',
     },
   ];
-  
-  const matrix = buildMatrix(results);
-  assert.deepStrictEqual(matrix.snippets, ['Chat feature']);
-  assert(matrix.ides.includes('VS Code'));
-  assert(matrix.ides.includes('Eclipse'));
+
+  const ideRows = buildIdeRows(results);
+  const ideNames = ideRows.matched.map(g => g.ide);
+  assert(ideNames.includes('VS Code'));
+  assert(ideNames.includes('Eclipse'));
   // VS Code should come before Eclipse due to custom ordering
-  assert.strictEqual(matrix.ides[0], 'VS Code');
-  assert.strictEqual(matrix.ides[1], 'Eclipse');
-  assert('Chat feature' in matrix.cells);
-  assert('VS Code' in matrix.cells['Chat feature']);
-  assert('Eclipse' in matrix.cells['Chat feature']);
+  assert.strictEqual(ideNames[0], 'VS Code');
+  assert.strictEqual(ideNames[1], 'Eclipse');
+  assert.strictEqual(ideRows.matched.find(g => g.ide === 'VS Code').rows.length, 1);
 });
 
-test('buildMatrix selects earliest version for each IDE', () => {
+test('buildIdeRows sorts an IDE\'s rows oldest version first', () => {
   const results = [
     {
       snippet: 'Feature X',
@@ -326,127 +320,11 @@ test('buildMatrix selects earliest version for each IDE', () => {
       url: 'https://example.com/2',
     },
   ];
-  
-  const matrix = buildMatrix(results);
-  const cell = matrix.cells['Feature X']['VS Code'];
-  assert.strictEqual(cell.earliest, '1.0.0');
-});
 
-test('buildMatrix builds summary of earliest mention per IDE', () => {
-  const results = [
-    {
-      snippet: 'Feature A',
-      ide: 'vscode',
-      ide_name: 'VS Code',
-      version: '1.5.0',
-      release_date: '2023-06-15',
-      url: 'https://example.com/1',
-    },
-    {
-      snippet: 'Feature B',
-      ide: 'vscode',
-      ide_name: 'VS Code',
-      version: '1.0.0',
-      release_date: '2023-01-01',
-      url: 'https://example.com/2',
-    },
-  ];
-  
-  const matrix = buildMatrix(results);
-  const summaryEntry = matrix.summary.find(s => s.ide === 'VS Code');
-  assert(summaryEntry);
-  // Should pick the earliest version overall
-  assert.strictEqual(summaryEntry.version, '1.0.0');
-});
-
-test('buildMatrix sorts snippets by earliest release date', () => {
-  const results = [
-    {
-      snippet: 'Feature C',
-      ide: 'vscode',
-      ide_name: 'VS Code',
-      version: '1.0.0',
-      release_date: '2026-03-01',
-      url: 'https://example.com/1',
-    },
-    {
-      snippet: 'Feature A',
-      ide: 'vscode',
-      ide_name: 'VS Code',
-      version: '1.0.0',
-      release_date: '2026-01-01',
-      url: 'https://example.com/2',
-    },
-    {
-      snippet: 'Feature B',
-      ide: 'vscode',
-      ide_name: 'VS Code',
-      version: '1.0.0',
-      release_date: '2026-02-01',
-      url: 'https://example.com/3',
-    },
-  ];
-
-  const matrix = buildMatrix(results);
-  // Should be sorted by release_date, not alphabetically
-  assert.deepStrictEqual(matrix.snippets, ['Feature A', 'Feature B', 'Feature C']);
-});
-
-test('buildMatrix orders rows by release date when same IDE shows features at different times', () => {
-  const results = [
-    {
-      snippet: 'Inline edits',
-      ide: 'vscode',
-      ide_name: 'VS Code',
-      version: '1.90.0',
-      release_date: '2024-05-01',
-      url: 'https://example.com/1',
-    },
-    {
-      snippet: 'Chat',
-      ide: 'vscode',
-      ide_name: 'VS Code',
-      version: '1.88.0',
-      release_date: '2024-03-01',
-      url: 'https://example.com/2',
-    },
-    {
-      snippet: 'Vision',
-      ide: 'vscode',
-      ide_name: 'VS Code',
-      version: '1.91.0',
-      release_date: '2024-06-01',
-      url: 'https://example.com/3',
-    },
-  ];
-
-  const matrix = buildMatrix(results);
-  assert.deepStrictEqual(matrix.snippets, ['Chat', 'Inline edits', 'Vision']);
-});
-
-test('buildMatrix sorts snippets by alphabetically when IDEs showed features at different times', () => {
-  const results = [
-    {
-      snippet: 'Zebra feature',
-      ide: 'eclipse',
-      ide_name: 'Eclipse',
-      version: '1.0.0',
-      release_date: '2026-01-01',
-      url: 'https://example.com/1',
-    },
-    {
-      snippet: 'Apple feature',
-      ide: 'vscode',
-      ide_name: 'VS Code',
-      version: '1.0.0',
-      release_date: '2026-02-01',
-      url: 'https://example.com/2',
-    },
-  ];
-
-  const matrix = buildMatrix(results);
-  // Zebra was first (2026-01-01), so it comes first
-  assert.deepStrictEqual(matrix.snippets, ['Zebra feature', 'Apple feature']);
+  const ideRows = buildIdeRows(results);
+  const group = ideRows.matched.find(g => g.ide === 'VS Code');
+  assert.strictEqual(group.rows[0].version, '1.0.0');
+  assert.strictEqual(group.rows[1].version, '1.5.0');
 });
 
 test('formatIdeName removes "GitHub Copilot" and "Copilot for" prefixes', () => {
@@ -462,7 +340,7 @@ test('formatIdeName handles IDE names without prefix', () => {
   assert.strictEqual(formatIdeName(''), '');
 });
 
-test('buildMatrix sorts IDEs in custom order (VS Code, CLI, VS 2022, VS 2026, JetBrains, Xcode, Eclipse, Vim)', () => {
+test('buildIdeRows sorts IDEs in custom order (VS Code, CLI, VS 2022, VS 2026, JetBrains, Xcode, Eclipse, Vim)', () => {
   const results = [
     {
       snippet: 'Chat',
@@ -498,10 +376,12 @@ test('buildMatrix sorts IDEs in custom order (VS Code, CLI, VS 2022, VS 2026, Je
     },
   ];
 
-  const matrix = buildMatrix(results);
+  const ideRows = buildIdeRows(results);
+  const ideNames = ideRows.matched.map(g => g.ide);
   // Should follow custom order: VS Code, CLI, JetBrains, Eclipse
-  assert.strictEqual(matrix.ides[0], 'GitHub Copilot for VS Code');
-  assert.strictEqual(matrix.ides[1], 'GitHub Copilot CLI');
-  assert.strictEqual(matrix.ides[2], 'GitHub Copilot for JetBrains');
-  assert.strictEqual(matrix.ides[3], 'Copilot for Eclipse');
+  assert.strictEqual(ideNames[0], 'GitHub Copilot for VS Code');
+  assert.strictEqual(ideNames[1], 'GitHub Copilot CLI');
+  assert.strictEqual(ideNames[2], 'GitHub Copilot for JetBrains');
+  assert.strictEqual(ideNames[3], 'Copilot for Eclipse');
 });
+

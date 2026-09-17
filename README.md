@@ -19,7 +19,7 @@ The repository hosts a **searchable feature matrix** on GitHub Pages at [https:/
 ### How it works
 
 - Enter a keyword (minimum 5 characters) to search across Copilot feature mentions in all IDEs.
-- The matrix shows which IDE versions first mention that feature.
+- Results are shown as one row per IDE release that mentions the feature (IDE, version, date released, feature description), grouped by IDE and sorted oldest first. IDEs with no matching release notes are collapsed into a single "N/A" row at the bottom.
 - Clicking on a version badge links to the official release notes.
 - The **Only launch announcements** filter (enabled by default) hides mentions that describe incremental changes or fixes. Uncheck the box to see all mentions.
 
@@ -55,7 +55,7 @@ scripts/build_search_index.py – Build search index for the GitHub Pages site
 scripts/common/              – shared utilities (config, HTTP, extraction, I/O)
 scripts/fetchers/            – one module per IDE
 site/                        – static GitHub Pages site (HTML, CSS, JavaScript)
-site/images/                 – IDE logo images used as matrix column headers
+site/images/                 – IDE logo images shown next to each IDE row
 tests/                       – pytest test suite
 ```
 

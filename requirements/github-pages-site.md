@@ -31,7 +31,7 @@ flowchart LR
 - `search.js` — a **pure, dependency-free ES module** containing all business logic, so it's testable outside a browser:
   - `validateQuery(q)` — enforce the > 4 characters rule.
   - `searchIndex(index, keyword)` — case-insensitive substring match over snippets.
-  - `buildMatrix(results)` — pivot to the table model: rows = matched snippets, columns = IDEs; per IDE cell shows the version(s) (and earliest version highlighted) in which the match appears, with a link to the release notes URL.
+  - `buildIdeRows(results)` — pivot to the row-based table model: one row per IDE + matching release (IDE, version, date released, feature description), grouped by IDE and sorted oldest first; IDEs with no match are returned separately so the caller can render a single collapsed "N/A" row for them.
 - `app.js` — DOM wiring only: fetch `search-index.json` once on load, debounce input, render the table, show snippet text on hover/expand.
 - No frameworks, no build tooling, no npm dependencies at runtime. Optional later upgrade to MiniSearch if substring search proves too crude — not in scope now.
 - A summary row per IDE: "first version mentioning *keyword*", addressing the cross-IDE alignment nuance discussed earlier.
@@ -48,7 +48,7 @@ flowchart LR
 - `site/search.test.mjs` run with Node's built-in test runner: `node --test site/`.
   - `validateQuery`: rejects ≤ 4 chars, trims whitespace.
   - `searchIndex`: case-insensitivity, no-match, multi-IDE matches.
-  - `buildMatrix`: correct pivot, earliest-version selection, empty cells for IDEs without matches.
+  - `buildIdeRows`: correct grouping per IDE, oldest-first ordering within a group, IDEs without matches reported separately.
 
 **Smoke validation of the built artifact (CI step, not a test file):**
 - After building: `python -c` one-liner (or tiny script) asserting `search-index.json` parses, is non-empty, and every record has the required keys.
