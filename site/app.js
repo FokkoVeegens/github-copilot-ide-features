@@ -2,7 +2,7 @@
  * DOM wiring for the feature matrix search application.
  * Fetches search-index.json, handles user input, and renders results.
  */
-import { validateQuery, searchIndex, buildMatrix, formatIdeName, buildSnippetExcerpt, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames } from './search.js';
+import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames } from './search.js';
 
 let searchIndexData = [];
 
@@ -23,15 +23,18 @@ const IDE_LOGOS = {
 let ideIdByName = new Map();
 
 /**
- * Build the header cell for an IDE: logo image with tooltip, or text fallback.
+ * Build the IDE cell content: logo image (if available) plus display name,
+ * wrapped in an inner flex element so the outer <td> keeps normal table-cell
+ * layout (setting display:flex directly on a <td> causes browsers to center
+ * its content instead of respecting text-align/left alignment).
  */
-function buildIdeHeader(ideName) {
+function buildIdeCell(ideName) {
   const displayName = formatIdeName(ideName);
   const logo = IDE_LOGOS[ideIdByName.get(ideName)];
-  if (logo) {
-    return `<img class="ide-logo" src="${escapeHtml(logo)}" alt="${escapeHtml(displayName)}" title="${escapeHtml(displayName)}" />`;
-  }
-  return `<span title="${escapeHtml(displayName)}">${escapeHtml(displayName)}</span>`;
+  const logoHtml = logo
+    ? `<img class="ide-logo" src="${escapeHtml(logo)}" alt="" />`
+    : '';
+  return `<span class="ide-name">${logoHtml}<span>${escapeHtml(displayName)}</span></span>`;
 }
 
 /**
@@ -125,14 +128,15 @@ function handleSearch(event) {
     return;
   }
 
-  const matrix = buildMatrix(matches, collectIdeNames(searchIndexData));
-  renderMatrix(matrix, validQuery, launchOnly ? allMatches.length - matches.length : 0);
+  const ideRows = buildIdeRows(matches, collectIdeNames(searchIndexData));
+  renderIdeRows(ideRows, validQuery, launchOnly ? allMatches.length - matches.length : 0);
 }
 
 /**
- * Render the feature matrix table.
+ * Render the feature table: one row per IDE + matching release, grouped by
+ * IDE, with IDEs that have no match collapsed into a single N/A row.
  */
-function renderMatrix(matrix, query, hiddenCount = 0) {
+function renderIdeRows(ideRows, query, hiddenCount = 0) {
   const resultsDiv = document.getElementById('results');
 
   // Note about filtered-out results
@@ -141,59 +145,61 @@ function renderMatrix(matrix, query, hiddenCount = 0) {
     filterNoteHtml = `<p class="filter-note">${hiddenCount} mention${hiddenCount === 1 ? '' : 's'} without launch keywords hidden. Uncheck “Only launch announcements” to see all results.</p>`;
   }
 
-  // Build summary row
-  let summaryHtml = '<div class="summary-section"><h3>First appearance by IDE</h3><ul>';
-  for (const entry of matrix.summary) {
-    const dateStr = formatDate(entry.date);
-    const displayName = formatIdeName(entry.ide);
-    summaryHtml += `<li><strong>${escapeHtml(displayName)}</strong>: v${escapeHtml(entry.version)} (${dateStr})</li>`;
-  }
-  summaryHtml += '</ul></div>';
+  const supportedCount = ideRows.matched.length;
+  const missingCount = ideRows.missing.length;
+  const summaryHtml = `
+    <div class="summary-section">
+      <h3>Search results</h3>
+      <p>${supportedCount} IDE${supportedCount === 1 ? '' : 's'} support this feature${
+        missingCount > 0 ? ` · ${missingCount} IDE${missingCount === 1 ? '' : 's'} have no matching release notes yet` : ''
+      }</p>
+    </div>
+  `;
 
-  // Build matrix table
   let tableHtml = `
-    <table class="matrix-table">
+    <table class="rows-table">
       <thead>
         <tr>
-          <th>Feature / Snippet</th>
-          ${matrix.ides.map(ide => `<th>${buildIdeHeader(ide)}</th>`).join('')}
+          <th>IDE</th>
+          <th>Version</th>
+          <th>Date released</th>
+          <th>Feature description</th>
         </tr>
       </thead>
       <tbody>
   `;
 
-  for (const snippet of matrix.snippets) {
-    const excerpt = buildSnippetExcerpt(snippet, query);
-    const snippetPreviewHtml = highlightMatch(excerpt, query);
-    tableHtml += `
-      <tr>
-        <td class="snippet-cell">
-          <span class="snippet-text" tabindex="0" title="${escapeHtml(snippet)}">${snippetPreviewHtml}</span>
-        </td>
-    `;
+  for (const group of ideRows.matched) {
+    group.rows.forEach((row, index) => {
+      const excerpt = buildSnippetExcerpt(row.snippet, query);
+      const snippetPreviewHtml = highlightMatch(excerpt, query);
+      const versionBadgeClass = index === 0 ? 'version-badge' : 'version-badge later';
 
-    for (const ide of matrix.ides) {
-      const cell = matrix.cells[snippet][ide];
-      if (cell) {
-        const earliest = cell.earliest;
-        const laterVersions = cell.versions.filter(version => version !== earliest);
-        const laterVersionsHtml = laterVersions.length > 0
-          ? `<div class="all-versions">${escapeHtml(laterVersions.join(', '))}</div>`
-          : '';
-        tableHtml += `
-           <td class="match-cell" title="First in v${escapeHtml(earliest)}">
-            <a href="${escapeHtml(cell.url)}" target="_blank" rel="noopener noreferrer">
-              <span class="earliest-badge">v${escapeHtml(earliest)}</span>
-            </a>
-            ${laterVersionsHtml}
-          </td>
-        `;
-      } else {
-        tableHtml += '<td class="no-match-cell">—</td>';
+      tableHtml += '<tr>';
+      if (index === 0) {
+        tableHtml += `<td class="ide-cell" rowspan="${group.rows.length}">${buildIdeCell(group.ide)}</td>`;
       }
-    }
+      tableHtml += `
+            <td><a class="version-link" href="${escapeHtml(row.url)}" target="_blank" rel="noopener noreferrer"><span class="${versionBadgeClass}">v${escapeHtml(row.version)}</span></a></td>
+            <td class="date-cell">${escapeHtml(formatDate(row.release_date))}</td>
+            <td class="desc-cell">
+              <a href="${escapeHtml(row.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(row.snippet)}">${snippetPreviewHtml}</a>
+            </td>
+          </tr>
+      `;
+    });
+  }
 
-    tableHtml += '</tr>';
+  if (ideRows.missing.length > 0) {
+    tableHtml += '<tr class="section-divider"><td colspan="4">Not yet available</td></tr>';
+    for (const ide of ideRows.missing) {
+      tableHtml += `
+        <tr class="na-row">
+          <td class="ide-cell">${buildIdeCell(ide)}</td>
+          <td colspan="3" class="na-cell"><span class="na-badge">❌</span>N/A</td>
+        </tr>
+      `;
+    }
   }
 
   tableHtml += `

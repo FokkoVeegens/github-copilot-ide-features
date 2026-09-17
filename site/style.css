@@ -63,9 +63,22 @@ main {
   margin-bottom: 1.5rem;
 }
 
+.search-input-wrapper {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none;
+}
+
 .search-input {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
   font-size: 1rem;
   border: 2px solid #e0e0e0;
   border-radius: 6px;
@@ -76,6 +89,10 @@ main {
   outline: none;
   border-color: #0366d6;
   box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.1);
+}
+
+.search-input:focus ~ .search-icon {
+  color: #0366d6;
 }
 
 .search-input::placeholder {
@@ -100,15 +117,6 @@ main {
   color: #666;
   font-size: 0.9rem;
   margin-bottom: 1rem;
-}
-
-/* IDE logo headers */
-.ide-logo {
-  width: 28px;
-  height: 28px;
-  display: block;
-  margin: 0 auto;
-  object-fit: contain;
 }
 
 /* Hint */
@@ -169,62 +177,74 @@ main {
   margin-bottom: 0.5rem;
 }
 
-.summary-section ul {
-  margin-left: 1.5rem;
+.summary-section p {
   font-size: 0.95rem;
-}
-
-.summary-section li {
-  margin-bottom: 0.25rem;
   color: #555;
 }
 
-/* Matrix table */
-.matrix-table {
+/* Permanent disclaimer shown below the search results area, regardless of
+   search state (initial hint, no matches, or a populated results table). */
+.disclaimer {
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  color: #666;
+}
+
+/* Rows table */
+.rows-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95rem;
   margin-top: 1rem;
 }
 
-.matrix-table thead {
+.rows-table thead {
   background: #f0f0f0;
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
-.matrix-table th,
-.matrix-table td {
+.rows-table th,
+.rows-table td {
   padding: 0.75rem;
   text-align: left;
   border-bottom: 1px solid #e0e0e0;
+  vertical-align: top;
 }
 
-.matrix-table th {
+.rows-table th {
   font-weight: 600;
   color: #333;
   background: #f9f9f9;
 }
 
-.matrix-table tbody tr:hover {
+.rows-table tbody tr:hover {
   background: #f9f9f9;
 }
 
-.snippet-cell {
-  font-weight: 500;
+.ide-cell {
+  font-weight: 600;
   color: #333;
-  max-width: 360px;
-  word-wrap: break-word;
+  white-space: nowrap;
+  text-align: left;
 }
 
-.snippet-text {
-  display: inline-block;
-  word-wrap: break-word;
-  white-space: normal;
-  line-height: 1.35;
-  position: relative;
-  cursor: help;
+/* Inner wrapper handles the logo + name layout. Flex must live here rather
+   than on the <td> itself: browsers center a flex table-cell's content
+   instead of respecting text-align/justify-content, which breaks
+   left-alignment. */
+.ide-name {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.ide-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .snippet-match {
@@ -234,38 +254,83 @@ main {
   padding: 0 0.1em;
 }
 
-.match-cell {
-  background: #f0f7ff;
-  text-align: center;
-  min-width: 120px;
-  position: relative;
-}
-
-.match-cell a {
+.version-link {
   text-decoration: none;
-  color: inherit;
-  display: block;
 }
 
-.earliest-badge {
+.version-link:hover .version-badge {
+  filter: brightness(1.1);
+}
+
+.version-badge {
   display: inline-block;
   background: #0366d6;
   color: white;
-  padding: 0.25rem 0.5rem;
+  padding: 0.2rem 0.55rem;
   border-radius: 3px;
   font-weight: 600;
   font-size: 0.85rem;
+  white-space: nowrap;
 }
 
-.all-versions {
-  font-size: 0.8rem;
-  color: #666;
-  margin-top: 0.25rem;
+.version-badge.later {
+  background: #8a9bb0;
 }
 
-.no-match-cell {
-  text-align: center;
+.date-cell {
+  color: #555;
+  white-space: nowrap;
+}
+
+.desc-cell {
+  color: #333;
+  max-width: 480px;
+  word-wrap: break-word;
+}
+
+.desc-cell a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.desc-cell a:hover {
+  text-decoration: underline;
+}
+
+.section-divider td {
+  border-bottom: none;
+  padding: 0.6rem 0.75rem 0.3rem;
+  background: transparent;
   color: #999;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+.na-row {
+  background: #fafafa;
+  color: #999;
+}
+
+.na-row:hover {
+  background: #f3f3f3;
+}
+
+.na-row .ide-cell {
+  color: #999;
+  font-weight: 500;
+}
+
+.na-cell {
+  text-align: center;
+  color: #b5b5b5;
+  font-style: italic;
+}
+
+.na-badge {
+  font-size: 1.1rem;
+  margin-right: 0.35rem;
 }
 
 /* Footer */
@@ -305,25 +370,21 @@ footer a:hover {
     padding: 1.5rem;
   }
 
-  .matrix-table {
+  .rows-table {
     font-size: 0.85rem;
   }
 
-  .matrix-table th,
-  .matrix-table td {
+  .rows-table th,
+  .rows-table td {
     padding: 0.5rem;
   }
 
-  .snippet-cell {
-    max-width: 150px;
+  .desc-cell {
+    max-width: 220px;
     font-size: 0.9rem;
   }
 
-  .match-cell {
-    min-width: 100px;
-  }
-
-  .earliest-badge {
+  .version-badge {
     font-size: 0.75rem;
     padding: 0.2rem 0.4rem;
   }
@@ -335,21 +396,25 @@ footer a:hover {
   }
 
   .search-input {
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 2.25rem;
     font-size: 16px; /* Prevents zoom on iOS */
   }
 
-  .matrix-table {
+  .search-icon {
+    left: 0.75rem;
+  }
+
+  .rows-table {
     font-size: 0.75rem;
   }
 
-  .matrix-table th,
-  .matrix-table td {
+  .rows-table th,
+  .rows-table td {
     padding: 0.35rem;
   }
 
-  .snippet-cell {
-    max-width: 100px;
+  .desc-cell {
+    max-width: 140px;
     font-size: 0.8rem;
   }
 }
