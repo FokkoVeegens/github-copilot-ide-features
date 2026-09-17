@@ -273,20 +273,30 @@ export function buildIdeRows(results, allIdes = null) {
   const records = Array.isArray(results) ? results : [];
 
   const ideSet = new Set(Array.isArray(allIdes) ? allIdes.filter(Boolean) : []);
-  const byIde = new Map(); // ide -> [{ version, release_date, snippet, url }]
+  const byIde = new Map(); // ide -> Map(version -> { version, release_date, snippet, url })
 
   for (const record of records) {
     const ide = record.ide_name || record.ide || '';
     if (!ide) continue;
     ideSet.add(ide);
 
-    if (!byIde.has(ide)) byIde.set(ide, []);
-    byIde.get(ide).push({
+    if (!byIde.has(ide)) byIde.set(ide, new Map());
+    const versionMap = byIde.get(ide);
+    const version = record.version;
+    const candidate = {
       version: record.version,
       release_date: record.release_date,
       snippet: record.snippet || '',
       url: record.url,
-    });
+    };
+
+    // A release can match the search keyword in more than one note. Keep a
+    // single row per IDE + version, preferring the shortest (most
+    // headline-like) snippet, matching dedupeByIdeVersion's behavior.
+    const existing = versionMap.get(version);
+    if (!existing || candidate.snippet.length < existing.snippet.length) {
+      versionMap.set(version, candidate);
+    }
   }
 
   // Sort IDEs by custom priority, then by name
@@ -303,14 +313,14 @@ export function buildIdeRows(results, allIdes = null) {
   const missing = [];
 
   for (const ide of ides) {
-    const rows = byIde.get(ide);
-    if (!rows || rows.length === 0) {
+    const versionMap = byIde.get(ide);
+    if (!versionMap || versionMap.size === 0) {
       missing.push(ide);
       continue;
     }
 
     // Sort oldest first: by version, falling back to release date for ties.
-    rows.sort((a, b) => {
+    const rows = Array.from(versionMap.values()).sort((a, b) => {
       const cmp = compareVersions(a.version, b.version);
       if (cmp !== 0) return cmp;
       return String(a.release_date || '').localeCompare(String(b.release_date || ''));
@@ -326,23 +336,24 @@ export function buildIdeRows(results, allIdes = null) {
  * Compare two version strings.
  * Returns: -1 if a < b, 0 if a === b, 1 if a > b
  * Handles numeric components: "1.10.0" > "1.9.0"
+ * Also splits on hyphens so numeric build suffixes compare correctly, e.g.
+ * CLI-style versions "0.0.81-10" > "0.0.81-2" (not equal, as a plain
+ * dot-split would treat "81-10" and "81-2" both as the integer 81).
  * @param {string} a
  * @param {string} b
  * @returns {number}
  */
 function compareVersions(a, b) {
-  const aParts = String(a || '0')
-    .split('.')
-    .map(x => {
-      const num = parseInt(x, 10);
-      return isNaN(num) ? 0 : num;
-    });
-  const bParts = String(b || '0')
-    .split('.')
-    .map(x => {
-      const num = parseInt(x, 10);
-      return isNaN(num) ? 0 : num;
-    });
+  const toParts = v =>
+    String(v || '0')
+      .split(/[.-]/)
+      .map(x => {
+        const num = parseInt(x, 10);
+        return isNaN(num) ? 0 : num;
+      });
+
+  const aParts = toParts(a);
+  const bParts = toParts(b);
 
   const maxLen = Math.max(aParts.length, bParts.length);
   for (let i = 0; i < maxLen; i++) {

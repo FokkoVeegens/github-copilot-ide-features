@@ -153,10 +153,6 @@ function renderIdeRows(ideRows, query, hiddenCount = 0) {
       <p>${supportedCount} IDE${supportedCount === 1 ? '' : 's'} support this feature${
         missingCount > 0 ? ` · ${missingCount} IDE${missingCount === 1 ? '' : 's'} have no matching release notes yet` : ''
       }</p>
-      <p class="disclaimer">
-        Disclaimer: the data on this site is provided on a best-effort basis, "as is", with no
-        guarantee of accuracy or completeness. Use it at your own risk.
-      </p>
     </div>
   `;
 
@@ -184,7 +180,7 @@ function renderIdeRows(ideRows, query, hiddenCount = 0) {
         tableHtml += `<td class="ide-cell" rowspan="${group.rows.length}">${buildIdeCell(group.ide)}</td>`;
       }
       tableHtml += `
-            <td><span class="${versionBadgeClass}">v${escapeHtml(row.version)}</span></td>
+            <td><a class="version-link" href="${escapeHtml(row.url)}" target="_blank" rel="noopener noreferrer"><span class="${versionBadgeClass}">v${escapeHtml(row.version)}</span></a></td>
             <td class="date-cell">${escapeHtml(formatDate(row.release_date))}</td>
             <td class="desc-cell">
               <a href="${escapeHtml(row.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(row.snippet)}">${snippetPreviewHtml}</a>

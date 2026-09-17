@@ -327,6 +327,58 @@ test('buildIdeRows sorts an IDE\'s rows oldest version first', () => {
   assert.strictEqual(group.rows[1].version, '1.5.0');
 });
 
+test('buildIdeRows sorts hyphenated build versions numerically, not lexically', () => {
+  const results = [
+    {
+      snippet: 'Feature X',
+      ide: 'cli',
+      ide_name: 'CLI',
+      version: '0.0.81-10',
+      release_date: '2023-06-15',
+      url: 'https://example.com/1',
+    },
+    {
+      snippet: 'Feature X',
+      ide: 'cli',
+      ide_name: 'CLI',
+      version: '0.0.81-2',
+      release_date: '2023-06-01',
+      url: 'https://example.com/2',
+    },
+  ];
+
+  const ideRows = buildIdeRows(results);
+  const group = ideRows.matched.find(g => g.ide === 'CLI');
+  assert.strictEqual(group.rows[0].version, '0.0.81-2');
+  assert.strictEqual(group.rows[1].version, '0.0.81-10');
+});
+
+test('buildIdeRows deduplicates multiple matching snippets for the same IDE + version', () => {
+  const results = [
+    {
+      snippet: 'A much longer sentence mentioning the feature in passing',
+      ide: 'vscode',
+      ide_name: 'VS Code',
+      version: '1.5.0',
+      release_date: '2023-06-15',
+      url: 'https://example.com/1',
+    },
+    {
+      snippet: 'Feature X',
+      ide: 'vscode',
+      ide_name: 'VS Code',
+      version: '1.5.0',
+      release_date: '2023-06-15',
+      url: 'https://example.com/2',
+    },
+  ];
+
+  const ideRows = buildIdeRows(results);
+  const group = ideRows.matched.find(g => g.ide === 'VS Code');
+  assert.strictEqual(group.rows.length, 1);
+  assert.strictEqual(group.rows[0].snippet, 'Feature X');
+});
+
 test('formatIdeName removes "GitHub Copilot" and "Copilot for" prefixes', () => {
   assert.strictEqual(formatIdeName('GitHub Copilot for VS Code'), 'VS Code');
   assert.strictEqual(formatIdeName('GitHub Copilot CLI'), 'CLI');

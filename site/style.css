@@ -182,8 +182,10 @@ main {
   color: #555;
 }
 
-.summary-section p.disclaimer {
-  margin-top: 0.75rem;
+/* Permanent disclaimer shown below the search results area, regardless of
+   search state (initial hint, no matches, or a populated results table). */
+.disclaimer {
+  margin-top: 1rem;
   font-size: 0.82rem;
   color: #888;
 }
@@ -250,6 +252,14 @@ main {
   color: inherit;
   border-radius: 2px;
   padding: 0 0.1em;
+}
+
+.version-link {
+  text-decoration: none;
+}
+
+.version-link:hover .version-badge {
+  filter: brightness(1.1);
 }
 
 .version-badge {

@@ -34,7 +34,7 @@ flowchart LR
   - `buildIdeRows(results)` — pivot to the row-based table model: one row per IDE + matching release (IDE, version, date released, feature description), grouped by IDE and sorted oldest first; IDEs with no match are returned separately so the caller can render a single collapsed "N/A" row for them.
 - `app.js` — DOM wiring only: fetch `search-index.json` once on load, debounce input, render the table, show snippet text on hover/expand.
 - No frameworks, no build tooling, no npm dependencies at runtime. Optional later upgrade to MiniSearch if substring search proves too crude — not in scope now.
-- A summary row per IDE: "first version mentioning *keyword*", addressing the cross-IDE alignment nuance discussed earlier.
+- A summary panel above the table reporting how many IDEs support the searched feature and how many don't (rendered as a collapsed "N/A" section), plus a permanent best-effort/accuracy disclaimer shown regardless of search state.
 
 ### Phase 3 — Testing
 
