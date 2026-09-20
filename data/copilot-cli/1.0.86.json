@@ -1,0 +1,24 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.86",
+  "release_date": "2026-09-17",
+  "title": "1.0.86",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.86",
+  "source": "api",
+  "body_markdown": "2026-09-17\n\n- Custom agents can opt into repository instruction files (AGENTS.md, copilot-instructions.md, CLAUDE.md) by setting `include-custom-instructions: true` in their frontmatter.\n- Resuming an active session without plugin-directory, discovery, or working-directory overrides preserves marketplace plugins and skills after reload. Configuration read or validation failures no longer discard active plugins; missing-file and intentional-removal behavior is unchanged.\n- /sandbox policy now reports local-network access using your configured setting\n- The status row now says it is waiting for background shells, instead of \"Working\", when a turn ends while an attached background shell such as a dev server is still running.\n- Resume sessions even when transcript files contain recoverable corruption\n- Expanded reasoning text in the compact timeline is no longer dimmed, so it is as readable as the rest of the timeline.\n- Autopilot stops after accepted task completion instead of continuing unexpectedly",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "2026-09-17",
+    "- Custom agents can opt into repository instruction files (AGENTS.md, copilot-instructions.md, CLAUDE.md) by setting `include-custom-instructions: true` in their frontmatter.",
+    "- Resuming an active session without plugin-directory, discovery, or working-directory overrides preserves marketplace plugins and skills after reload. Configuration read or validation failures no longer discard active plugins; missing-file and intentional-removal behavior is unchanged.",
+    "- /sandbox policy now reports local-network access using your configured setting",
+    "- The status row now says it is waiting for background shells, instead of \"Working\", when a turn ends while an attached background shell such as a dev server is still running.",
+    "- Resume sessions even when transcript files contain recoverable corruption",
+    "- Expanded reasoning text in the compact timeline is no longer dimmed, so it is as readable as the rest of the timeline.",
+    "- Autopilot stops after accepted task completion instead of continuing unexpectedly"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-09-20T12:14:52Z",
+  "schema_version": 1
+}
