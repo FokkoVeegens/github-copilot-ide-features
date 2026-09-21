@@ -7,11 +7,11 @@
 /**
  * Validate a search query.
  * @param {string} q - The query string
- * @returns {string | null} Trimmed query if valid, null if invalid (≤4 chars)
+ * @returns {string | null} Trimmed query if valid, null if invalid (≤2 chars)
  */
 export function validateQuery(q) {
   const trimmed = String(q || '').trim();
-  return trimmed.length > 4 ? trimmed : null;
+  return trimmed.length >= 3 ? trimmed : null;
 }
 
 /**
@@ -176,6 +176,30 @@ export function searchIndex(index, keyword) {
   return index.filter(record =>
     String(record.snippet || '').toLowerCase().includes(lowerKeyword)
   );
+}
+
+/**
+ * Limit the rendered release rows for each IDE without changing which IDEs
+ * are represented in the search result.
+ * @param {Object} ideRows - Result from buildIdeRows()
+ * @param {number} maxRowsPerIde - Maximum rows to retain for each IDE
+ * @returns {Object} Limited rows and the number of omitted rows
+ */
+export function limitRowsPerIde(ideRows, maxRowsPerIde) {
+  const matched = Array.isArray(ideRows?.matched) ? ideRows.matched : [];
+  const missing = Array.isArray(ideRows?.missing) ? ideRows.missing : [];
+  const limit = Number.isInteger(maxRowsPerIde) && maxRowsPerIde > 0
+    ? maxRowsPerIde
+    : Infinity;
+
+  let hiddenRowCount = 0;
+  const limitedMatched = matched.map(group => {
+    const rows = Array.isArray(group.rows) ? group.rows : [];
+    hiddenRowCount += Math.max(0, rows.length - limit);
+    return { ...group, rows: rows.slice(0, limit) };
+  });
+
+  return { matched: limitedMatched, missing, hiddenRowCount };
 }
 
 /**
