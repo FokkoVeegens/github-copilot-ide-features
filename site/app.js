@@ -2,7 +2,9 @@
  * DOM wiring for the feature matrix search application.
  * Fetches search-index.json, handles user input, and renders results.
  */
-import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames } from './search.js';
+import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames, limitRowsPerIde } from './search.js';
+
+const MAX_ROWS_PER_IDE = 20;
 
 let searchIndexData = [];
 
@@ -128,7 +130,10 @@ function handleSearch(event) {
     return;
   }
 
-  const ideRows = buildIdeRows(matches, collectIdeNames(searchIndexData));
+  const ideRows = limitRowsPerIde(
+    buildIdeRows(matches, collectIdeNames(searchIndexData)),
+    MAX_ROWS_PER_IDE,
+  );
   renderIdeRows(ideRows, validQuery, launchOnly ? allMatches.length - matches.length : 0);
 }
 
@@ -143,6 +148,9 @@ function renderIdeRows(ideRows, query, hiddenCount = 0) {
   let filterNoteHtml = '';
   if (hiddenCount > 0) {
     filterNoteHtml = `<p class="filter-note">${hiddenCount} mention${hiddenCount === 1 ? '' : 's'} without launch keywords hidden. Uncheck “Only launch announcements” to see all results.</p>`;
+  }
+  if (ideRows.hiddenRowCount > 0) {
+    filterNoteHtml += `<p class="filter-note"><span aria-hidden="true">&#9888;</span> Showing the first ${MAX_ROWS_PER_IDE} matching releases per IDE; ${ideRows.hiddenRowCount} additional release${ideRows.hiddenRowCount === 1 ? '' : 's'} hidden.</p>`;
   }
 
   const supportedCount = ideRows.matched.length;

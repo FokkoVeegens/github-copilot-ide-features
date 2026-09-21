@@ -4,7 +4,7 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert';
-import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, isGaAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames } from './search.js';
+import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, isGaAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames, limitRowsPerIde } from './search.js';
 
 test('validateQuery rejects empty string', () => {
   assert.strictEqual(validateQuery(''), null);
@@ -14,12 +14,13 @@ test('validateQuery rejects whitespace-only string', () => {
   assert.strictEqual(validateQuery('   '), null);
 });
 
-test('validateQuery rejects ≤4 character strings', () => {
-  assert.strictEqual(validateQuery('abc'), null);
-  assert.strictEqual(validateQuery('1234'), null);
+test('validateQuery rejects strings shorter than three characters', () => {
+  assert.strictEqual(validateQuery('ab'), null);
+  assert.strictEqual(validateQuery('  1  '), null);
 });
 
-test('validateQuery accepts >4 character strings', () => {
+test('validateQuery accepts strings with at least three characters', () => {
+  assert.strictEqual(validateQuery('MCP'), 'MCP');
   assert.strictEqual(validateQuery('hello'), 'hello');
   assert.strictEqual(validateQuery('  hello  '), 'hello');
 });
@@ -56,6 +57,23 @@ test('searchIndex finds multiple matches', () => {
   
   const results = searchIndex(index, 'chat');
   assert.strictEqual(results.length, 2);
+});
+
+test('limitRowsPerIde caps each IDE while retaining missing IDEs and counts hidden rows', () => {
+  const ideRows = {
+    matched: [
+      { ide: 'vscode', rows: [{ version: '1' }, { version: '2' }, { version: '3' }] },
+      { ide: 'cli', rows: [{ version: '1' }] },
+    ],
+    missing: ['xcode'],
+  };
+
+  const limited = limitRowsPerIde(ideRows, 2);
+
+  assert.deepStrictEqual(limited.matched[0].rows, [{ version: '1' }, { version: '2' }]);
+  assert.deepStrictEqual(limited.matched[1].rows, [{ version: '1' }]);
+  assert.deepStrictEqual(limited.missing, ['xcode']);
+  assert.strictEqual(limited.hiddenRowCount, 1);
 });
 
 test('buildSnippetExcerpt centers around matching term with ellipses', () => {
