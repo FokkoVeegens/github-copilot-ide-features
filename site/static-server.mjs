@@ -22,7 +22,14 @@ const CONTENT_TYPES = {
 };
 
 const server = createServer(async (req, res) => {
-  const pathname = decodeURIComponent(new URL(req.url, `http://127.0.0.1:${PORT}`).pathname);
+  let pathname;
+  try {
+    pathname = decodeURIComponent(new URL(req.url, `http://127.0.0.1:${PORT}`).pathname);
+  } catch {
+    res.writeHead(400).end('Bad request');
+    return;
+  }
+
   const relativePath = normalize(pathname === '/' ? 'index.html' : pathname.slice(1));
   const filePath = resolve(ROOT, relativePath);
 

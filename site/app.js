@@ -268,7 +268,7 @@ export function buildResultsMarkup(ideRows, query, hiddenCount = 0) {
     </div>
   `;
 
-  let mobileHtml = '<div class="mobile-results" aria-label="Search results by IDE">';
+  let mobileHtml = '<div class="mobile-results" role="region" aria-label="Search results by IDE">';
   for (const group of ideRows.matched) {
     mobileHtml += buildMatchedMobileCard(group, query);
   }

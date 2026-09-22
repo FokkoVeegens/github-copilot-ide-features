@@ -232,6 +232,12 @@ test('rejects encoded paths outside the site root', async ({ request }) => {
   expect(response.status()).toBe(403);
 });
 
+test('returns a bad request for malformed URI encoding', async ({ request }) => {
+  const response = await request.get('/%');
+
+  expect(response.status()).toBe(400);
+});
+
 test.describe('table layout on wide viewports', () => {
   test.use({ viewport: DESKTOP_VIEWPORT });
 

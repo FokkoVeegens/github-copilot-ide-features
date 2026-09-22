@@ -478,7 +478,7 @@ test('buildResultsMarkup renders accessible mobile labels in the DOM', () => {
     'agent mode',
   );
 
-  assert.match(markup, /<div class="mobile-results" aria-label="Search results by IDE">/);
+  assert.match(markup, /<div class="mobile-results" role="region" aria-label="Search results by IDE">/);
   assert.match(markup, /<span class="mobile-field-label">Version<\/span>/);
   assert.match(markup, /<span class="mobile-field-label">Date released<\/span>/);
   assert.match(markup, /<span class="mobile-field-label">Feature description<\/span>/);
