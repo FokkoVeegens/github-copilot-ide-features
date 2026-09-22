@@ -81,7 +81,7 @@ async function search(page, query, { launchOnly = true } = {}) {
 function fieldValue(card, label) {
   return card
     .locator('.mobile-field')
-    .filter({ has: card.page().getByText(label, { exact: true }) })
+.filter({ has: card.getByText(label, { exact: true }) })
     .locator('.mobile-field-value');
 }
 
@@ -208,9 +208,9 @@ test.describe('stacked cards below 600px', () => {
     await expect(naGroups.locator('.mobile-field-value')).toHaveText('❌N/A');
     await expect(naGroups.locator('.na-badge')).toBeVisible();
 
-    // The launch-only filter keeps a single release per IDE; nothing duplicates.
+    // The launch-only filter preserves all matching releases and only removes duplicate IDE + version records.
     await expect(page.locator('.mobile-ide-group:not(.mobile-ide-group-na)')).toHaveCount(2);
-    await expect(page.locator('.version-badge:visible')).toHaveCount(2);
+    await expect(page.locator('.version-badge:visible')).toHaveCount(4);
   });
 
   test('keeps cards inside the viewport width', async ({ page }) => {
