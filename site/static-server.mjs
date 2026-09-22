@@ -5,7 +5,7 @@
  */
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
-import { extname, join, normalize, resolve } from 'node:path';
+import { extname, normalize, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(fileURLToPath(new URL('.', import.meta.url)));
@@ -24,9 +24,9 @@ const CONTENT_TYPES = {
 const server = createServer(async (req, res) => {
   const pathname = decodeURIComponent(new URL(req.url, `http://127.0.0.1:${PORT}`).pathname);
   const relativePath = normalize(pathname === '/' ? 'index.html' : pathname.slice(1));
-  const filePath = join(ROOT, relativePath);
+  const filePath = resolve(ROOT, relativePath);
 
-  if (!filePath.startsWith(ROOT)) {
+  if (filePath !== ROOT && !filePath.startsWith(`${ROOT}${sep}`)) {
     res.writeHead(403).end('Forbidden');
     return;
   }

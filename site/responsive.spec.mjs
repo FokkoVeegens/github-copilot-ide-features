@@ -226,6 +226,12 @@ test.describe('stacked cards below 600px', () => {
   });
 });
 
+test('rejects encoded paths outside the site root', async ({ request }) => {
+  const response = await request.get('/%2e%2e%2fsite-private/file');
+
+  expect(response.status()).toBe(403);
+});
+
 test.describe('table layout on wide viewports', () => {
   test.use({ viewport: DESKTOP_VIEWPORT });
 
