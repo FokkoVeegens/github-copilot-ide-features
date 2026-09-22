@@ -52,3 +52,10 @@ site/search-index.json
 # Temporary files
 *.tmp
 *.log
+
+# Node / Playwright
+node_modules/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/

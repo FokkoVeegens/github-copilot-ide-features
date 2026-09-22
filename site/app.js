@@ -39,6 +39,59 @@ function buildIdeCell(ideName) {
   return `<span class="ide-name">${logoHtml}<span>${escapeHtml(displayName)}</span></span>`;
 }
 
+function buildMobileField(label, valueHtml, extraClass = '') {
+  const className = extraClass ? `mobile-field ${extraClass}` : 'mobile-field';
+  return `
+    <div class="${className}">
+      <span class="mobile-field-label">${escapeHtml(label)}</span>
+      <div class="mobile-field-value">${valueHtml}</div>
+    </div>
+  `;
+}
+
+function buildMatchedMobileCard(group, query) {
+  const releasesHtml = group.rows
+    .map((row, index) => {
+      const excerpt = buildSnippetExcerpt(row.snippet, query);
+      const snippetPreviewHtml = highlightMatch(excerpt, query);
+      const versionBadgeClass = index === 0 ? 'version-badge' : 'version-badge later';
+
+      return `
+        <article class="mobile-release-card">
+          ${buildMobileField(
+            'Version',
+            `<a class="version-link" href="${escapeHtml(row.url)}" target="_blank" rel="noopener noreferrer"><span class="${versionBadgeClass}">v${escapeHtml(row.version)}</span></a>`,
+          )}
+          ${buildMobileField('Date released', escapeHtml(formatDate(row.release_date)))}
+          ${buildMobileField(
+            'Feature description',
+            `<a href="${escapeHtml(row.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(row.snippet)}">${snippetPreviewHtml}</a>`,
+            'desc-cell',
+          )}
+        </article>
+      `;
+    })
+    .join('');
+
+  return `
+    <section class="mobile-ide-group">
+      <h4 class="mobile-ide-heading">${buildIdeCell(group.ide)}</h4>
+      ${releasesHtml}
+    </section>
+  `;
+}
+
+function buildMissingMobileCard(ideName) {
+  return `
+    <section class="mobile-ide-group mobile-ide-group-na">
+      <h4 class="mobile-ide-heading">${buildIdeCell(ideName)}</h4>
+      <article class="mobile-release-card mobile-release-card-na">
+        ${buildMobileField('Availability', '<span class="na-badge">❌</span>N/A', 'na-cell')}
+      </article>
+    </section>
+  `;
+}
+
 /**
  * Initialize the application.
  * Fetches the search index and sets up event listeners.
@@ -141,9 +194,7 @@ function handleSearch(event) {
  * Render the feature table: one row per IDE + matching release, grouped by
  * IDE, with IDEs that have no match collapsed into a single N/A row.
  */
-function renderIdeRows(ideRows, query, hiddenCount = 0) {
-  const resultsDiv = document.getElementById('results');
-
+export function buildResultsMarkup(ideRows, query, hiddenCount = 0) {
   // Note about filtered-out results
   let filterNoteHtml = '';
   if (hiddenCount > 0) {
@@ -165,6 +216,7 @@ function renderIdeRows(ideRows, query, hiddenCount = 0) {
   `;
 
   let tableHtml = `
+    <div class="table-wrapper">
     <table class="rows-table">
       <thead>
         <tr>
@@ -213,9 +265,28 @@ function renderIdeRows(ideRows, query, hiddenCount = 0) {
   tableHtml += `
       </tbody>
     </table>
+    </div>
   `;
 
-  resultsDiv.innerHTML = filterNoteHtml + summaryHtml + tableHtml;
+  let mobileHtml = '<div class="mobile-results" aria-label="Search results by IDE">';
+  for (const group of ideRows.matched) {
+    mobileHtml += buildMatchedMobileCard(group, query);
+  }
+
+  if (ideRows.missing.length > 0) {
+    mobileHtml += '<h4 class="mobile-section-title">Not yet available</h4>';
+    for (const ide of ideRows.missing) {
+      mobileHtml += buildMissingMobileCard(ide);
+    }
+  }
+  mobileHtml += '</div>';
+
+  return filterNoteHtml + summaryHtml + tableHtml + mobileHtml;
+}
+
+function renderIdeRows(ideRows, query, hiddenCount = 0) {
+  const resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = buildResultsMarkup(ideRows, query, hiddenCount);
 }
 
 /**
@@ -276,4 +347,6 @@ function highlightMatch(text, query) {
 }
 
 // Initialize on page load
-document.addEventListener('DOMContentLoaded', init);
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', init);
+}

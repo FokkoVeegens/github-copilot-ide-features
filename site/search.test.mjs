@@ -5,6 +5,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert';
 import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, isGaAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames, limitRowsPerIde } from './search.js';
+import { buildResultsMarkup } from './app.js';
 
 test('validateQuery rejects empty string', () => {
   assert.strictEqual(validateQuery(''), null);
@@ -455,3 +456,32 @@ test('buildIdeRows sorts IDEs in custom order (VS Code, CLI, VS 2022, VS 2026, J
   assert.strictEqual(ideNames[3], 'Copilot for Eclipse');
 });
 
+test('buildResultsMarkup renders accessible mobile labels in the DOM', () => {
+  const markup = buildResultsMarkup(
+    {
+      matched: [
+        {
+          ide: 'GitHub Copilot CLI',
+          rows: [
+            {
+              snippet: 'Agent mode is generally available for CLI.',
+              version: '1.2.3',
+              release_date: '2026-03-15',
+              url: 'https://example.com/cli',
+            },
+          ],
+        },
+      ],
+      missing: ['Copilot for Eclipse'],
+      hiddenRowCount: 0,
+    },
+    'agent mode',
+  );
+
+  assert.match(markup, /<div class="mobile-results" aria-label="Search results by IDE">/);
+  assert.match(markup, /<span class="mobile-field-label">Version<\/span>/);
+  assert.match(markup, /<span class="mobile-field-label">Date released<\/span>/);
+  assert.match(markup, /<span class="mobile-field-label">Feature description<\/span>/);
+  assert.match(markup, /<span class="mobile-field-label">Availability<\/span>/);
+  assert.match(markup, /Not yet available/);
+});

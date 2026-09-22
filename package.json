@@ -1,4 +1,13 @@
 {
   "private": true,
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "test": "npm run test:unit && npm run test:browser",
+    "test:unit": "node --test site/search.test.mjs",
+    "test:browser": "playwright test",
+    "serve": "node site/static-server.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
 }
