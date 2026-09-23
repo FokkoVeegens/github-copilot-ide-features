@@ -25,7 +25,7 @@ def generate_ide_index(data_dir: pathlib.Path) -> None:
     
     The index contains an array of objects with properties:
     - version: the release version
-    - release_date: the release date (YYYY-MM-DD format)
+    - release_date: the release date (YYYY-MM-DD format), or null when unknown
     - filename: the JSON filename (e.g., "1.83.0.json")
     
     Index is sorted by release_date in descending order (newest first).
@@ -47,7 +47,7 @@ def generate_ide_index(data_dir: pathlib.Path) -> None:
             version = data.get("version")
             release_date = data.get("release_date")
             
-            if version and release_date:
+            if version and "release_date" in data:
                 index_entries.append({
                     "version": version,
                     "release_date": release_date,
@@ -58,7 +58,10 @@ def generate_ide_index(data_dir: pathlib.Path) -> None:
             continue
     
     # Sort by release_date in descending order (newest first)
-    index_entries.sort(key=lambda x: x["release_date"], reverse=True)
+    index_entries.sort(
+        key=lambda x: (x["release_date"] is not None, x["release_date"] or ""),
+        reverse=True,
+    )
     
     # Write index.json
     index_path = data_dir / "index.json"

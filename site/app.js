@@ -291,6 +291,7 @@ function renderIdeRows(ideRows, query, hiddenCount = 0) {
  * Format a date string (YYYY-MM-DD) as dd-MMM-yyyy.
  */
 function formatDate(dateString) {
+  if (!dateString) return 'Unknown';
   const date = new Date(dateString + 'T00:00:00Z'); // Ensure UTC parsing
   const day = String(date.getUTCDate()).padStart(2, '0');
   const month = date.toLocaleString('en-US', { month: 'short', timeZone: 'UTC' });
