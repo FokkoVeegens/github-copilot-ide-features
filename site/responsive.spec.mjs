@@ -79,10 +79,12 @@ async function search(page, query, { launchOnly = true } = {}) {
 
 /** Locate the value of a labelled field inside a stacked card. */
 function fieldValue(card, label) {
-  return card
-    .locator('.mobile-field')
-.filter({ has: card.getByText(label, { exact: true }) })
-    .locator('.mobile-field-value');
+  const index = FIELD_LABELS.indexOf(label);
+  if (index === -1) {
+    throw new Error(`Unknown mobile field label: ${label}`);
+  }
+
+  return card.locator('.mobile-field').nth(index).locator('.mobile-field-value');
 }
 
 async function expectReleaseCard(card, expected) {

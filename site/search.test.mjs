@@ -123,7 +123,7 @@ test('isLaunchAnnouncement rejects incremental change notes', () => {
   assert(!isLaunchAnnouncement(null));
 });
 
-test('filterLaunchAnnouncements prefers the GA record over an earlier preview record', () => {
+test('filterLaunchAnnouncements keeps every launch record for an IDE while dropping non-launch notes', () => {
   const results = [
     { ide: 'vscode', snippet: 'Next Edit Suggestions is now available in preview', version: '1.0.0', release_date: '2025-01-01' },
     { ide: 'vscode', snippet: 'Fixed flickering in Next Edit Suggestions', version: '1.1.0', release_date: '2025-02-01' },
@@ -131,11 +131,13 @@ test('filterLaunchAnnouncements prefers the GA record over an earlier preview re
   ];
 
   const filtered = filterLaunchAnnouncements(results);
-  assert.strictEqual(filtered.length, 1);
-  assert.strictEqual(filtered[0].version, '1.2.0');
+  assert.strictEqual(filtered.length, 2);
+  assert(filtered.some(r => r.version === '1.0.0'));
+  assert(filtered.some(r => r.version === '1.2.0'));
+  assert(!filtered.some(r => r.version === '1.1.0'));
 });
 
-test('filterLaunchAnnouncements keeps the earliest launch record when no GA mention exists', () => {
+test('filterLaunchAnnouncements keeps all launch announcements for an IDE when there is no GA record', () => {
   const results = [
     { ide: 'vscode', snippet: 'Next Edit Suggestions (preview) released', version: '1.0.0', release_date: '2025-01-01' },
     { ide: 'vscode', snippet: 'Fixed flickering in Next Edit Suggestions', version: '1.1.0', release_date: '2025-02-01' },
@@ -143,11 +145,13 @@ test('filterLaunchAnnouncements keeps the earliest launch record when no GA ment
   ];
 
   const filtered = filterLaunchAnnouncements(results);
-  assert.strictEqual(filtered.length, 1);
-  assert.strictEqual(filtered[0].version, '1.0.0');
+  assert.strictEqual(filtered.length, 2);
+  assert(filtered.some(r => r.version === '1.0.0'));
+  assert(filtered.some(r => r.version === '1.2.0'));
+  assert(!filtered.some(r => r.version === '1.1.0'));
 });
 
-test('filterLaunchAnnouncements falls back to earliest version for IDEs without launch keywords', () => {
+test('filterLaunchAnnouncements falls back to the earliest version for IDEs without launch keywords', () => {
   const results = [
     // Eclipse launch note without any launch keyword
     { ide: 'eclipse', snippet: 'Support Next Edit Suggestion (NES).', version: '0.13.0', release_date: '2025-05-01' },

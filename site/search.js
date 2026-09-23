@@ -98,7 +98,9 @@ export function isGaAnnouncement(snippet) {
 export function filterLaunchAnnouncements(results) {
   if (!Array.isArray(results)) return [];
 
-  // Group records per IDE
+  // Group records per IDE. When a launch announcement is present, keep all
+  // launch-related records for that IDE; otherwise fall back to the earliest
+  // release as a minimal signal that the feature exists.
   const byIde = new Map();
   for (const record of results) {
     const ide = record.ide_name || record.ide || '';
@@ -108,15 +110,21 @@ export function filterLaunchAnnouncements(results) {
 
   const kept = new Set();
   for (const records of byIde.values()) {
-    const gaRecords = records.filter(r => isGaAnnouncement(r.snippet));
     const launchRecords = records.filter(r => isLaunchAnnouncement(r.snippet));
-    const candidates = gaRecords.length > 0 ? gaRecords : (launchRecords.length > 0 ? launchRecords : records);
-
-    let earliest = candidates[0];
-    for (const r of candidates) {
-      if (compareVersions(r.version, earliest.version) < 0) earliest = r;
+    if (launchRecords.length > 0) {
+      for (const record of launchRecords) {
+        kept.add(record);
+      }
+      continue;
     }
-    kept.add(earliest);
+
+    let earliest = records[0];
+    for (const record of records.slice(1)) {
+      if (compareVersions(record.version, earliest.version) < 0) {
+        earliest = record;
+      }
+    }
+    if (earliest) kept.add(earliest);
   }
 
   // Preserve original result order
