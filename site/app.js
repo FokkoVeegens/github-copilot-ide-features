@@ -2,7 +2,7 @@
  * DOM wiring for the feature matrix search application.
  * Fetches search-index.json, handles user input, and renders results.
  */
-import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames, limitRowsPerIde } from './search.js';
+import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, prepareSearchResults, collectIdeNames, limitRowsPerIde } from './search.js';
 
 const MAX_ROWS_PER_IDE = 20;
 
@@ -170,9 +170,7 @@ function handleSearch(event) {
   hint.style.display = 'none';
   const allMatches = searchIndex(searchIndexData, validQuery);
   const launchOnly = document.getElementById('launch-only-filter')?.checked ?? false;
-  const matches = launchOnly
-    ? dedupeByIdeVersion(filterLaunchAnnouncements(allMatches))
-    : allMatches;
+  const { matches, hiddenCount } = prepareSearchResults(allMatches, launchOnly);
 
   if (matches.length === 0) {
     if (launchOnly && allMatches.length > 0) {
@@ -187,7 +185,7 @@ function handleSearch(event) {
     buildIdeRows(matches, collectIdeNames(searchIndexData)),
     MAX_ROWS_PER_IDE,
   );
-  renderIdeRows(ideRows, validQuery, launchOnly ? allMatches.length - matches.length : 0);
+  renderIdeRows(ideRows, validQuery, hiddenCount);
 }
 
 /**

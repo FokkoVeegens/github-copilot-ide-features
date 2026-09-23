@@ -195,7 +195,7 @@ test.describe('stacked cards below 600px', () => {
   });
 
   test('renders IDEs without a matching release as N/A cards', async ({ page }) => {
-    await search(page, 'agent mode');
+    await search(page, 'agent mode', { launchOnly: false });
 
     await expect(page.locator('.mobile-section-title')).toHaveText('Not yet available');
 
@@ -210,7 +210,7 @@ test.describe('stacked cards below 600px', () => {
     await expect(naGroups.locator('.mobile-field-value')).toHaveText('❌N/A');
     await expect(naGroups.locator('.na-badge')).toBeVisible();
 
-    // The launch-only filter preserves all matching releases and only removes duplicate IDE + version records.
+    // All matching releases remain visible alongside the N/A group.
     await expect(page.locator('.mobile-ide-group:not(.mobile-ide-group-na)')).toHaveCount(2);
     await expect(page.locator('.version-badge:visible')).toHaveCount(4);
   });

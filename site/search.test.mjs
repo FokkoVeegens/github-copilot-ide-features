@@ -4,7 +4,7 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert';
-import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, isGaAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames, limitRowsPerIde } from './search.js';
+import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, isGaAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, prepareSearchResults, collectIdeNames, limitRowsPerIde } from './search.js';
 import { buildResultsMarkup } from './app.js';
 
 test('validateQuery rejects empty string', () => {
@@ -195,6 +195,19 @@ test('dedupeByIdeVersion handles invalid input', () => {
   assert.deepStrictEqual(dedupeByIdeVersion(null), []);
   assert.deepStrictEqual(dedupeByIdeVersion(undefined), []);
   assert.deepStrictEqual(dedupeByIdeVersion([]), []);
+});
+
+test('prepareSearchResults does not count version duplicates as mentions hidden by launch filtering', () => {
+  const results = [
+    { ide: 'vscode', snippet: 'Agent mode is available in preview', version: '1.0.0' },
+    { ide: 'vscode', snippet: 'Agent mode preview released to all users', version: '1.0.0' },
+    { ide: 'vscode', snippet: 'Fixed an agent mode crash', version: '1.1.0' },
+  ];
+
+  const prepared = prepareSearchResults(results, true);
+
+  assert.strictEqual(prepared.matches.length, 1);
+  assert.strictEqual(prepared.hiddenCount, 1);
 });
 
 test('collectIdeNames returns unique IDE names from the index', () => {
