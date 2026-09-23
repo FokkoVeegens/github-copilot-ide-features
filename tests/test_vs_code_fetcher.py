@@ -268,7 +268,7 @@ class TestFetch:
         assert isinstance(r75["categories"], list)
         assert isinstance(r75["copilot_mentions"], list)
 
-    def test_october_2025_release_date_is_persisted_correctly(self):
+    def test_historical_release_dates_are_persisted_correctly(self):
         expected_dates = {
             "1.75.0": "2023-02-02",
             "1.76.0": "2023-03-01",
