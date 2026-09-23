@@ -6,6 +6,7 @@
  * search index and verify the card layout at a narrow viewport.
  */
 import { test, expect } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
 
 const MOBILE_VIEWPORT = { width: 390, height: 844 };
 const DESKTOP_VIEWPORT = { width: 1280, height: 900 };
@@ -77,6 +78,14 @@ async function search(page, query, { launchOnly = true } = {}) {
   await expect(page.locator('#results .summary-section')).toBeVisible();
 }
 
+async function expectNoAccessibilityViolations(page, selector) {
+  const results = await new AxeBuilder({ page })
+    .include(selector)
+    .analyze();
+
+  expect(results.violations).toEqual([]);
+}
+
 /** Locate the value of a labelled field inside a stacked card. */
 function fieldValue(card, label) {
   const index = FIELD_LABELS.indexOf(label);
@@ -108,6 +117,12 @@ test.describe('stacked cards below 600px', () => {
 
     await expect(page.locator('.table-wrapper')).toBeHidden();
     await expect(page.locator('.mobile-results')).toBeVisible();
+  });
+
+  test('has no detectable accessibility violations in the mobile results', async ({ page }) => {
+    await search(page, 'agent mode', { launchOnly: false });
+
+    await expectNoAccessibilityViolations(page, '#results');
   });
 
   test('renders every release of an IDE in its own card, exactly once', async ({ page }) => {
@@ -215,6 +230,24 @@ test.describe('stacked cards below 600px', () => {
     await expect(page.locator('.version-badge:visible')).toHaveCount(4);
   });
 
+  test('keeps mobile description links visually identifiable without hover', async ({ page }) => {
+    await search(page, 'agent mode', { launchOnly: false });
+
+    const descriptionLink = page.locator('.mobile-release-card .desc-cell a').first();
+    const styles = await descriptionLink.evaluate(element => {
+      const computed = window.getComputedStyle(element);
+      return {
+        color: computed.color,
+        parentColor: window.getComputedStyle(element.parentElement).color,
+        textDecorationLine: computed.textDecorationLine,
+      };
+    });
+
+    expect(
+      styles.textDecorationLine.includes('underline') || styles.color !== styles.parentColor,
+    ).toBe(true);
+  });
+
   test('keeps cards inside the viewport width', async ({ page }) => {
     await search(page, 'agent mode', { launchOnly: false });
 
@@ -253,5 +286,12 @@ test.describe('table layout on wide viewports', () => {
     // 3 VS Code rows + 1 CLI row + divider + Eclipse N/A row
     await expect(page.locator('.rows-table tbody tr')).toHaveCount(6);
     await expect(page.locator('.version-badge:visible')).toHaveCount(4);
+  });
+
+  test('has no detectable accessibility violations in the desktop results', async ({ page }) => {
+    await loadSite(page);
+    await search(page, 'agent mode', { launchOnly: false });
+
+    await expectNoAccessibilityViolations(page, '#results');
   });
 });

@@ -75,7 +75,7 @@ function buildMatchedMobileCard(group, query) {
 
   return `
     <section class="mobile-ide-group">
-      <h4 class="mobile-ide-heading">${buildIdeCell(group.ide)}</h4>
+      <h3 class="mobile-ide-heading">${buildIdeCell(group.ide)}</h3>
       ${releasesHtml}
     </section>
   `;
@@ -84,7 +84,7 @@ function buildMatchedMobileCard(group, query) {
 function buildMissingMobileCard(ideName) {
   return `
     <section class="mobile-ide-group mobile-ide-group-na">
-      <h4 class="mobile-ide-heading">${buildIdeCell(ideName)}</h4>
+      <h3 class="mobile-ide-heading">${buildIdeCell(ideName)}</h3>
       <article class="mobile-release-card mobile-release-card-na">
         ${buildMobileField('Availability', '<span class="na-badge">❌</span>N/A', 'na-cell')}
       </article>
@@ -206,7 +206,7 @@ export function buildResultsMarkup(ideRows, query, hiddenCount = 0) {
   const missingCount = ideRows.missing.length;
   const summaryHtml = `
     <div class="summary-section">
-      <h3>Search results</h3>
+      <h2>Search results</h2>
       <p>${supportedCount} IDE${supportedCount === 1 ? '' : 's'} support this feature${
         missingCount > 0 ? ` · ${missingCount} IDE${missingCount === 1 ? '' : 's'} have no matching release notes yet` : ''
       }</p>
@@ -272,7 +272,7 @@ export function buildResultsMarkup(ideRows, query, hiddenCount = 0) {
   }
 
   if (ideRows.missing.length > 0) {
-    mobileHtml += '<h4 class="mobile-section-title">Not yet available</h4>';
+    mobileHtml += '<h3 class="mobile-section-title">Not yet available</h3>';
     for (const ide of ideRows.missing) {
       mobileHtml += buildMissingMobileCard(ide);
     }

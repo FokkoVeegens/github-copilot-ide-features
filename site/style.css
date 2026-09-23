@@ -279,7 +279,7 @@ main {
 }
 
 .version-badge.later {
-  background: #8a9bb0;
+  background: #5f6f82;
 }
 
 .date-cell {
@@ -307,7 +307,7 @@ main {
   border-bottom: none;
   padding: 0.6rem 0.75rem 0.3rem;
   background: transparent;
-  color: #999;
+  color: #666;
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -316,7 +316,7 @@ main {
 
 .na-row {
   background: #fafafa;
-  color: #999;
+  color: #666;
 }
 
 .na-row:hover {
@@ -324,13 +324,13 @@ main {
 }
 
 .na-row .ide-cell {
-  color: #999;
+  color: #666;
   font-weight: 500;
 }
 
 .na-cell {
   text-align: center;
-  color: #b5b5b5;
+  color: #666;
   font-style: italic;
 }
 
@@ -363,7 +363,7 @@ main {
   margin-top: 1.25rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #777;
+  color: #666;
 }
 
 .mobile-release-card {
@@ -499,6 +499,12 @@ footer a:hover {
   .mobile-release-card .desc-cell a {
     display: inline-block;
     min-height: 32px; /* Comfortable tap target */
+  }
+
+  .mobile-release-card .desc-cell a {
+    color: #0366d6;
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
   }
 
   footer {
