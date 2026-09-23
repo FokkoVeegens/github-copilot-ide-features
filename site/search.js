@@ -82,18 +82,15 @@ export function isGaAnnouncement(snippet) {
 }
 
 /**
- * Filter search results down to a single canonical record per IDE: the one
- * that marks the feature's most meaningful "first appearance".
+ * Filter search results to launch-related records per IDE, or to the earliest
+ * record when an IDE has no launch-related result.
  *
  * Selection per IDE:
- * - If any snippet unambiguously announces General Availability, the
- *   earliest such GA record is kept (this "wins" over an earlier preview
- *   mention, since GA is the more useful milestone to show).
- * - Otherwise, the earliest record that matches any launch keyword is kept.
- * - Otherwise (no launch keywords at all), the earliest record overall is
- *   kept, since the first mention marks when the feature appeared.
+ * - If any record matches a launch keyword, all such records are kept.
+ * - Otherwise, the earliest record overall is kept, since the first mention
+ *   marks when the feature appeared.
  * @param {Array<Object>} results - Results from searchIndex()
- * @returns {Array<Object>} At most one record per IDE
+ * @returns {Array<Object>} Launch-related records per IDE, or one fallback record
  */
 export function filterLaunchAnnouncements(results) {
   if (!Array.isArray(results)) return [];
