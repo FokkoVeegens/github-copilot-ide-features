@@ -6,8 +6,8 @@ from datetime import date
 
 DATA_ROOT = pathlib.Path(__file__).parents[1] / "data"
 EXPLICIT_DATE_PATTERNS = (
-    re.compile(r"\*[ \t]*Release date:\s*([A-Za-z]+\s+\d{1,2},\s+\d{4})\*"),
-    re.compile(r"^##\s+\d+\.\d+\.\d+\s+-\s+([A-Za-z]+\s+\d{1,2},\s+\d{4})$", re.MULTILINE),
+    re.compile(r"\*[ \t]*Release date:\s*([A-Za-z]+\s+\d{1,2},\s+\d{4})"),
+    re.compile(r"^##\s+\d+\.\d+\.\d+\s+-\s+([A-Za-z]+\s+\d{1,2},\s+\d{4})\r?$", re.MULTILINE),
 )
 
 
