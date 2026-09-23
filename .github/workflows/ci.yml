@@ -43,3 +43,12 @@ jobs:
 
       - name: Run JavaScript tests
         run: node --test site/search.test.mjs
+
+      - name: Install browser test dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run browser tests
+        run: npx playwright test

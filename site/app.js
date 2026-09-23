@@ -2,7 +2,7 @@
  * DOM wiring for the feature matrix search application.
  * Fetches search-index.json, handles user input, and renders results.
  */
-import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames, limitRowsPerIde } from './search.js';
+import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, prepareSearchResults, collectIdeNames, limitRowsPerIde } from './search.js';
 
 const MAX_ROWS_PER_IDE = 20;
 
@@ -37,6 +37,59 @@ function buildIdeCell(ideName) {
     ? `<img class="ide-logo" src="${escapeHtml(logo)}" alt="" />`
     : '';
   return `<span class="ide-name">${logoHtml}<span>${escapeHtml(displayName)}</span></span>`;
+}
+
+function buildMobileField(label, valueHtml, extraClass = '') {
+  const className = extraClass ? `mobile-field ${extraClass}` : 'mobile-field';
+  return `
+    <div class="${className}">
+      <span class="mobile-field-label">${escapeHtml(label)}</span>
+      <div class="mobile-field-value">${valueHtml}</div>
+    </div>
+  `;
+}
+
+function buildMatchedMobileCard(group, query) {
+  const releasesHtml = group.rows
+    .map((row, index) => {
+      const excerpt = buildSnippetExcerpt(row.snippet, query);
+      const snippetPreviewHtml = highlightMatch(excerpt, query);
+      const versionBadgeClass = index === 0 ? 'version-badge' : 'version-badge later';
+
+      return `
+        <article class="mobile-release-card">
+          ${buildMobileField(
+            'Version',
+            `<a class="version-link" href="${escapeHtml(row.url)}" target="_blank" rel="noopener noreferrer"><span class="${versionBadgeClass}">v${escapeHtml(row.version)}</span></a>`,
+          )}
+          ${buildMobileField('Date released', escapeHtml(formatDate(row.release_date)))}
+          ${buildMobileField(
+            'Feature description',
+            `<a href="${escapeHtml(row.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(row.snippet)}">${snippetPreviewHtml}</a>`,
+            'desc-cell',
+          )}
+        </article>
+      `;
+    })
+    .join('');
+
+  return `
+    <section class="mobile-ide-group">
+      <h3 class="mobile-ide-heading">${buildIdeCell(group.ide)}</h3>
+      ${releasesHtml}
+    </section>
+  `;
+}
+
+function buildMissingMobileCard(ideName) {
+  return `
+    <section class="mobile-ide-group mobile-ide-group-na">
+      <h3 class="mobile-ide-heading">${buildIdeCell(ideName)}</h3>
+      <article class="mobile-release-card mobile-release-card-na">
+        ${buildMobileField('Availability', '<span class="na-badge">❌</span>N/A', 'na-cell')}
+      </article>
+    </section>
+  `;
 }
 
 /**
@@ -117,9 +170,7 @@ function handleSearch(event) {
   hint.style.display = 'none';
   const allMatches = searchIndex(searchIndexData, validQuery);
   const launchOnly = document.getElementById('launch-only-filter')?.checked ?? false;
-  const matches = launchOnly
-    ? dedupeByIdeVersion(filterLaunchAnnouncements(allMatches))
-    : allMatches;
+  const { matches, hiddenCount } = prepareSearchResults(allMatches, launchOnly);
 
   if (matches.length === 0) {
     if (launchOnly && allMatches.length > 0) {
@@ -134,16 +185,14 @@ function handleSearch(event) {
     buildIdeRows(matches, collectIdeNames(searchIndexData)),
     MAX_ROWS_PER_IDE,
   );
-  renderIdeRows(ideRows, validQuery, launchOnly ? allMatches.length - matches.length : 0);
+  renderIdeRows(ideRows, validQuery, hiddenCount);
 }
 
 /**
  * Render the feature table: one row per IDE + matching release, grouped by
  * IDE, with IDEs that have no match collapsed into a single N/A row.
  */
-function renderIdeRows(ideRows, query, hiddenCount = 0) {
-  const resultsDiv = document.getElementById('results');
-
+export function buildResultsMarkup(ideRows, query, hiddenCount = 0) {
   // Note about filtered-out results
   let filterNoteHtml = '';
   if (hiddenCount > 0) {
@@ -157,7 +206,7 @@ function renderIdeRows(ideRows, query, hiddenCount = 0) {
   const missingCount = ideRows.missing.length;
   const summaryHtml = `
     <div class="summary-section">
-      <h3>Search results</h3>
+      <h2>Search results</h2>
       <p>${supportedCount} IDE${supportedCount === 1 ? '' : 's'} support this feature${
         missingCount > 0 ? ` · ${missingCount} IDE${missingCount === 1 ? '' : 's'} have no matching release notes yet` : ''
       }</p>
@@ -165,6 +214,7 @@ function renderIdeRows(ideRows, query, hiddenCount = 0) {
   `;
 
   let tableHtml = `
+    <div class="table-wrapper">
     <table class="rows-table">
       <thead>
         <tr>
@@ -213,9 +263,28 @@ function renderIdeRows(ideRows, query, hiddenCount = 0) {
   tableHtml += `
       </tbody>
     </table>
+    </div>
   `;
 
-  resultsDiv.innerHTML = filterNoteHtml + summaryHtml + tableHtml;
+  let mobileHtml = '<div class="mobile-results" role="region" aria-label="Search results by IDE">';
+  for (const group of ideRows.matched) {
+    mobileHtml += buildMatchedMobileCard(group, query);
+  }
+
+  if (ideRows.missing.length > 0) {
+    mobileHtml += '<h3 class="mobile-section-title">Not yet available</h3>';
+    for (const ide of ideRows.missing) {
+      mobileHtml += buildMissingMobileCard(ide);
+    }
+  }
+  mobileHtml += '</div>';
+
+  return filterNoteHtml + summaryHtml + tableHtml + mobileHtml;
+}
+
+function renderIdeRows(ideRows, query, hiddenCount = 0) {
+  const resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = buildResultsMarkup(ideRows, query, hiddenCount);
 }
 
 /**
@@ -276,4 +345,6 @@ function highlightMatch(text, query) {
 }
 
 // Initialize on page load
-document.addEventListener('DOMContentLoaded', init);
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', init);
+}

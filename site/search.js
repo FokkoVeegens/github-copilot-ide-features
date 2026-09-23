@@ -148,6 +148,23 @@ export function dedupeByIdeVersion(results) {
 }
 
 /**
+ * Apply the launch-only filter and version deduplication used by the UI.
+ * @param {Array<Object>} results - Results from searchIndex()
+ * @param {boolean} launchOnly - Whether to keep launch announcements only
+ * @returns {{ matches: Array<Object>, hiddenCount: number }} Prepared results
+ */
+export function prepareSearchResults(results, launchOnly) {
+  if (!Array.isArray(results)) return { matches: [], hiddenCount: 0 };
+  if (!launchOnly) return { matches: results, hiddenCount: 0 };
+
+  const matches = dedupeByIdeVersion(filterLaunchAnnouncements(results));
+  return {
+    matches,
+    hiddenCount: results.length - matches.length,
+  };
+}
+
+/**
  * Collect the unique IDE names present in a search index.
  * @param {Array<Object>} index - Full search index records
  * @returns {Array<string>} Unique IDE names

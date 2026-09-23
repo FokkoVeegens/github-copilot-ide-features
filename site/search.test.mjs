@@ -4,7 +4,8 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert';
-import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, isGaAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, collectIdeNames, limitRowsPerIde } from './search.js';
+import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, isGaAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, prepareSearchResults, collectIdeNames, limitRowsPerIde } from './search.js';
+import { buildResultsMarkup } from './app.js';
 
 test('validateQuery rejects empty string', () => {
   assert.strictEqual(validateQuery(''), null);
@@ -122,7 +123,7 @@ test('isLaunchAnnouncement rejects incremental change notes', () => {
   assert(!isLaunchAnnouncement(null));
 });
 
-test('filterLaunchAnnouncements prefers the GA record over an earlier preview record', () => {
+test('filterLaunchAnnouncements keeps the GA record for an IDE over an earlier preview note', () => {
   const results = [
     { ide: 'vscode', snippet: 'Next Edit Suggestions is now available in preview', version: '1.0.0', release_date: '2025-01-01' },
     { ide: 'vscode', snippet: 'Fixed flickering in Next Edit Suggestions', version: '1.1.0', release_date: '2025-02-01' },
@@ -134,7 +135,7 @@ test('filterLaunchAnnouncements prefers the GA record over an earlier preview re
   assert.strictEqual(filtered[0].version, '1.2.0');
 });
 
-test('filterLaunchAnnouncements keeps the earliest launch record when no GA mention exists', () => {
+test('filterLaunchAnnouncements keeps the earliest launch announcement for an IDE when there is no GA record', () => {
   const results = [
     { ide: 'vscode', snippet: 'Next Edit Suggestions (preview) released', version: '1.0.0', release_date: '2025-01-01' },
     { ide: 'vscode', snippet: 'Fixed flickering in Next Edit Suggestions', version: '1.1.0', release_date: '2025-02-01' },
@@ -146,7 +147,7 @@ test('filterLaunchAnnouncements keeps the earliest launch record when no GA ment
   assert.strictEqual(filtered[0].version, '1.0.0');
 });
 
-test('filterLaunchAnnouncements falls back to earliest version for IDEs without launch keywords', () => {
+test('filterLaunchAnnouncements falls back to the earliest version for IDEs without launch keywords', () => {
   const results = [
     // Eclipse launch note without any launch keyword
     { ide: 'eclipse', snippet: 'Support Next Edit Suggestion (NES).', version: '0.13.0', release_date: '2025-05-01' },
@@ -190,6 +191,19 @@ test('dedupeByIdeVersion handles invalid input', () => {
   assert.deepStrictEqual(dedupeByIdeVersion(null), []);
   assert.deepStrictEqual(dedupeByIdeVersion(undefined), []);
   assert.deepStrictEqual(dedupeByIdeVersion([]), []);
+});
+
+test('prepareSearchResults counts every non-kept mention as hidden when launch filtering is on', () => {
+  const results = [
+    { ide: 'vscode', snippet: 'Agent mode is available in preview', version: '1.0.0' },
+    { ide: 'vscode', snippet: 'Agent mode preview released to all users', version: '1.0.0' },
+    { ide: 'vscode', snippet: 'Fixed an agent mode crash', version: '1.1.0' },
+  ];
+
+  const prepared = prepareSearchResults(results, true);
+
+  assert.strictEqual(prepared.matches.length, 1);
+  assert.strictEqual(prepared.hiddenCount, 2);
 });
 
 test('collectIdeNames returns unique IDE names from the index', () => {
@@ -455,3 +469,32 @@ test('buildIdeRows sorts IDEs in custom order (VS Code, CLI, VS 2022, VS 2026, J
   assert.strictEqual(ideNames[3], 'Copilot for Eclipse');
 });
 
+test('buildResultsMarkup renders accessible mobile labels in the DOM', () => {
+  const markup = buildResultsMarkup(
+    {
+      matched: [
+        {
+          ide: 'GitHub Copilot CLI',
+          rows: [
+            {
+              snippet: 'Agent mode is generally available for CLI.',
+              version: '1.2.3',
+              release_date: '2026-03-15',
+              url: 'https://example.com/cli',
+            },
+          ],
+        },
+      ],
+      missing: ['Copilot for Eclipse'],
+      hiddenRowCount: 0,
+    },
+    'agent mode',
+  );
+
+  assert.match(markup, /<div class="mobile-results" role="region" aria-label="Search results by IDE">/);
+  assert.match(markup, /<span class="mobile-field-label">Version<\/span>/);
+  assert.match(markup, /<span class="mobile-field-label">Date released<\/span>/);
+  assert.match(markup, /<span class="mobile-field-label">Feature description<\/span>/);
+  assert.match(markup, /<span class="mobile-field-label">Availability<\/span>/);
+  assert.match(markup, /Not yet available/);
+});

@@ -56,6 +56,7 @@ scripts/common/              – shared utilities (config, HTTP, extraction, I/O
 scripts/fetchers/            – one module per IDE
 site/                        – static GitHub Pages site (HTML, CSS, JavaScript)
 site/images/                 – IDE logo images shown next to each IDE row
+site/responsive.spec.mjs     – Playwright browser tests for the responsive layout
 tests/                       – pytest test suite
 ```
 
@@ -123,10 +124,16 @@ pip install -r requirements.txt
 ruff check scripts tests
 pytest
 node --test site/search.test.mjs
+
+# Browser tests (responsive layout)
+npm ci
+npx playwright install chromium
+npx playwright test
 ```
 
 **Python**: Both `ruff` and `pytest` must pass before committing.  
 **JavaScript**: All Node.js tests in `site/search.test.mjs` must pass.  
+**Browser**: The Playwright tests in `site/responsive.spec.mjs` render the real page in Chromium and verify the table layout on wide viewports and the stacked card layout below 600px.
 GitHub Actions CI runs the same test suite on pushes to `main`, pull requests, and manual dispatches. It also runs `python -m compileall scripts tests` as a fast syntax check before `pytest`.
 
 ## Output format

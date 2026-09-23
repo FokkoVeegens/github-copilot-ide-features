@@ -20,10 +20,16 @@ pip install -r requirements.txt
 ruff check scripts tests
 pytest
 node --test site/search.test.mjs
+
+# Browser tests (responsive layout)
+npm ci
+npx playwright install chromium
+npx playwright test
 ```
 
 **Python**: Both `ruff` and `pytest` must pass before committing.  
 **JavaScript**: All Node.js tests in `site/search.test.mjs` must pass.  
+**Browser**: All Playwright tests in `site/responsive.spec.mjs` must pass. They load the real page in Chromium and assert the table layout on wide viewports and the stacked card layout below 600px.
 Run the full suite locally before pushing.
 
 ## Repository layout
@@ -39,6 +45,9 @@ scripts/fetchers/            – one module per IDE (eclipse.py, dummy.py, …)
 site/                        – static GitHub Pages site (index.html, app.js, search.js, style.css)
 site/images/                 – IDE logo images shown next to each IDE row
 site/search.test.mjs         – JavaScript tests for site/search.js
+site/responsive.spec.mjs     – Playwright browser tests for the responsive layout
+site/static-server.mjs       – static file server used by the browser tests
+playwright.config.mjs        – Playwright configuration (Chromium, local web server)
 tests/                       – pytest test suite
 .github/workflows/           – GitHub Actions workflows (fetch-*.yml, deploy-pages.yml, ci.yml)
 ```
@@ -64,7 +73,7 @@ the fetch logic on feature branches without writing to the repository.
 ### Pages deployment workflow
 The `deploy-pages.yml` workflow:
 - **Triggers**: On `push` to `main` with changes to `data/**`, `site/**`, `scripts/**`, or `config/ides.yml`
-- **Test job**: Runs Python linting, pytest, and JavaScript tests (before any builds)
+- **Test job**: Runs Python linting, pytest, JavaScript tests, and Playwright browser tests (before any builds)
 - **Build job**: Generates the search index via `build_search_index.py` and builds the Pages artifact
 - **Deploy job**: Deploys to GitHub Pages (only on `main` branch)
 - **Development**: On feature branches, only test + build jobs run (no deployment)

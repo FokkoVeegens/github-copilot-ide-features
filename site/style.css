@@ -171,7 +171,7 @@ main {
   margin-bottom: 1.5rem;
 }
 
-.summary-section h3 {
+.summary-section h2 {
   font-size: 1rem;
   color: #0366d6;
   margin-bottom: 0.5rem;
@@ -191,6 +191,11 @@ main {
 }
 
 /* Rows table */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .rows-table {
   width: 100%;
   border-collapse: collapse;
@@ -274,7 +279,7 @@ main {
 }
 
 .version-badge.later {
-  background: #8a9bb0;
+  background: #5f6f82;
 }
 
 .date-cell {
@@ -286,6 +291,7 @@ main {
   color: #333;
   max-width: 480px;
   word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 .desc-cell a {
@@ -301,7 +307,7 @@ main {
   border-bottom: none;
   padding: 0.6rem 0.75rem 0.3rem;
   background: transparent;
-  color: #999;
+  color: #666;
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -310,7 +316,7 @@ main {
 
 .na-row {
   background: #fafafa;
-  color: #999;
+  color: #666;
 }
 
 .na-row:hover {
@@ -318,19 +324,84 @@ main {
 }
 
 .na-row .ide-cell {
-  color: #999;
+  color: #666;
   font-weight: 500;
 }
 
 .na-cell {
   text-align: center;
-  color: #b5b5b5;
+  color: #666;
   font-style: italic;
 }
 
 .na-badge {
   font-size: 1.1rem;
   margin-right: 0.35rem;
+}
+
+.mobile-results {
+  display: none;
+  margin-top: 1rem;
+}
+
+.mobile-ide-group {
+  margin-bottom: 1rem;
+}
+
+.mobile-ide-group-na {
+  margin-bottom: 0.75rem;
+}
+
+.mobile-ide-heading,
+.mobile-section-title {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-section-title {
+  margin-top: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #666;
+}
+
+.mobile-release-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  background: white;
+}
+
+.mobile-release-card-na {
+  background: #fafafa;
+}
+
+.mobile-field + .mobile-field {
+  margin-top: 0.6rem;
+}
+
+.mobile-field-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #666;
+  margin-bottom: 0.2rem;
+}
+
+.mobile-field-value {
+  color: #333;
+}
+
+.mobile-field-value a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mobile-field-value a:hover {
+  text-decoration: underline;
 }
 
 /* Footer */
@@ -358,20 +429,43 @@ footer a:hover {
 
 /* Responsive design */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 0.85rem;
+  }
+
+  header {
+    padding: 1.25rem 0;
+    margin-bottom: 1.25rem;
+  }
+
   header h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .search-section {
-    padding: 1.5rem;
+    padding: 1.1rem;
+  }
+
+  .search-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 0.7rem 0.75rem 0.7rem 2.6rem;
+  }
+
+  .filter-label {
+    padding: 0.35rem 0; /* Larger touch target */
+  }
+
+  .filter-label input {
+    width: 1.1rem;
+    height: 1.1rem;
   }
 
   .rows-table {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .rows-table th,
@@ -380,41 +474,40 @@ footer a:hover {
   }
 
   .desc-cell {
-    max-width: 220px;
-    font-size: 0.9rem;
-  }
-
-  .version-badge {
-    font-size: 0.75rem;
-    padding: 0.2rem 0.4rem;
+    max-width: none;
   }
 }
 
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.5rem;
+/* Below this width a four-column table no longer fits: each release becomes a
+   stacked card with explicit labels in the DOM. */
+@media (max-width: 600px) {
+  .table-wrapper {
+    display: none;
   }
 
-  .search-input {
-    padding: 0.5rem 0.5rem 0.5rem 2.25rem;
-    font-size: 16px; /* Prevents zoom on iOS */
+  .mobile-results {
+    display: block;
   }
 
-  .search-icon {
-    left: 0.75rem;
+  .mobile-release-card .desc-cell,
+  .mobile-release-card .desc-cell a {
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
-  .rows-table {
-    font-size: 0.75rem;
+  .mobile-release-card .version-link,
+  .mobile-release-card .desc-cell a {
+    display: inline-block;
+    min-height: 32px; /* Comfortable tap target */
   }
 
-  .rows-table th,
-  .rows-table td {
-    padding: 0.35rem;
+  .mobile-release-card .desc-cell a {
+    color: #0366d6;
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
   }
 
-  .desc-cell {
-    max-width: 140px;
-    font-size: 0.8rem;
+  footer {
+    font-size: 0.85rem;
   }
 }
