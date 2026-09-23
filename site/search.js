@@ -82,22 +82,23 @@ export function isGaAnnouncement(snippet) {
 }
 
 /**
- * Filter search results to launch-related records per IDE, or to the earliest
- * record when an IDE has no launch-related result.
+ * Filter search results down to a single canonical record per IDE: the one
+ * that marks the feature's most meaningful "first appearance".
  *
  * Selection per IDE:
- * - If any record matches a launch keyword, all such records are kept.
- * - Otherwise, the earliest record overall is kept, since the first mention
- *   marks when the feature appeared.
+ * - If any snippet unambiguously announces General Availability, the
+ *   earliest such GA record is kept (this "wins" over an earlier preview
+ *   mention, since GA is the more useful milestone to show).
+ * - Otherwise, the earliest record that matches any launch keyword is kept.
+ * - Otherwise (no launch keywords at all), the earliest record overall is
+ *   kept, since the first mention marks when the feature appeared.
  * @param {Array<Object>} results - Results from searchIndex()
- * @returns {Array<Object>} Launch-related records per IDE, or one fallback record
+ * @returns {Array<Object>} At most one record per IDE
  */
 export function filterLaunchAnnouncements(results) {
   if (!Array.isArray(results)) return [];
 
-  // Group records per IDE. When a launch announcement is present, keep all
-  // launch-related records for that IDE; otherwise fall back to the earliest
-  // release as a minimal signal that the feature exists.
+  // Group records per IDE
   const byIde = new Map();
   for (const record of results) {
     const ide = record.ide_name || record.ide || '';
@@ -107,21 +108,15 @@ export function filterLaunchAnnouncements(results) {
 
   const kept = new Set();
   for (const records of byIde.values()) {
+    const gaRecords = records.filter(r => isGaAnnouncement(r.snippet));
     const launchRecords = records.filter(r => isLaunchAnnouncement(r.snippet));
-    if (launchRecords.length > 0) {
-      for (const record of launchRecords) {
-        kept.add(record);
-      }
-      continue;
-    }
+    const candidates = gaRecords.length > 0 ? gaRecords : (launchRecords.length > 0 ? launchRecords : records);
 
-    let earliest = records[0];
-    for (const record of records.slice(1)) {
-      if (compareVersions(record.version, earliest.version) < 0) {
-        earliest = record;
-      }
+    let earliest = candidates[0];
+    for (const r of candidates) {
+      if (compareVersions(r.version, earliest.version) < 0) earliest = r;
     }
-    if (earliest) kept.add(earliest);
+    kept.add(earliest);
   }
 
   // Preserve original result order
@@ -162,10 +157,10 @@ export function prepareSearchResults(results, launchOnly) {
   if (!Array.isArray(results)) return { matches: [], hiddenCount: 0 };
   if (!launchOnly) return { matches: results, hiddenCount: 0 };
 
-  const launchMatches = filterLaunchAnnouncements(results);
+  const matches = dedupeByIdeVersion(filterLaunchAnnouncements(results));
   return {
-    matches: dedupeByIdeVersion(launchMatches),
-    hiddenCount: results.length - launchMatches.length,
+    matches,
+    hiddenCount: results.length - matches.length,
   };
 }
 

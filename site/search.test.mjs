@@ -123,7 +123,7 @@ test('isLaunchAnnouncement rejects incremental change notes', () => {
   assert(!isLaunchAnnouncement(null));
 });
 
-test('filterLaunchAnnouncements keeps every launch record for an IDE while dropping non-launch notes', () => {
+test('filterLaunchAnnouncements keeps the GA record for an IDE over an earlier preview note', () => {
   const results = [
     { ide: 'vscode', snippet: 'Next Edit Suggestions is now available in preview', version: '1.0.0', release_date: '2025-01-01' },
     { ide: 'vscode', snippet: 'Fixed flickering in Next Edit Suggestions', version: '1.1.0', release_date: '2025-02-01' },
@@ -131,13 +131,11 @@ test('filterLaunchAnnouncements keeps every launch record for an IDE while dropp
   ];
 
   const filtered = filterLaunchAnnouncements(results);
-  assert.strictEqual(filtered.length, 2);
-  assert(filtered.some(r => r.version === '1.0.0'));
-  assert(filtered.some(r => r.version === '1.2.0'));
-  assert(!filtered.some(r => r.version === '1.1.0'));
+  assert.strictEqual(filtered.length, 1);
+  assert.strictEqual(filtered[0].version, '1.2.0');
 });
 
-test('filterLaunchAnnouncements keeps all launch announcements for an IDE when there is no GA record', () => {
+test('filterLaunchAnnouncements keeps the earliest launch announcement for an IDE when there is no GA record', () => {
   const results = [
     { ide: 'vscode', snippet: 'Next Edit Suggestions (preview) released', version: '1.0.0', release_date: '2025-01-01' },
     { ide: 'vscode', snippet: 'Fixed flickering in Next Edit Suggestions', version: '1.1.0', release_date: '2025-02-01' },
@@ -145,10 +143,8 @@ test('filterLaunchAnnouncements keeps all launch announcements for an IDE when t
   ];
 
   const filtered = filterLaunchAnnouncements(results);
-  assert.strictEqual(filtered.length, 2);
-  assert(filtered.some(r => r.version === '1.0.0'));
-  assert(filtered.some(r => r.version === '1.2.0'));
-  assert(!filtered.some(r => r.version === '1.1.0'));
+  assert.strictEqual(filtered.length, 1);
+  assert.strictEqual(filtered[0].version, '1.0.0');
 });
 
 test('filterLaunchAnnouncements falls back to the earliest version for IDEs without launch keywords', () => {
@@ -197,7 +193,7 @@ test('dedupeByIdeVersion handles invalid input', () => {
   assert.deepStrictEqual(dedupeByIdeVersion([]), []);
 });
 
-test('prepareSearchResults does not count version duplicates as mentions hidden by launch filtering', () => {
+test('prepareSearchResults counts every non-kept mention as hidden when launch filtering is on', () => {
   const results = [
     { ide: 'vscode', snippet: 'Agent mode is available in preview', version: '1.0.0' },
     { ide: 'vscode', snippet: 'Agent mode preview released to all users', version: '1.0.0' },
@@ -207,7 +203,7 @@ test('prepareSearchResults does not count version duplicates as mentions hidden 
   const prepared = prepareSearchResults(results, true);
 
   assert.strictEqual(prepared.matches.length, 1);
-  assert.strictEqual(prepared.hiddenCount, 1);
+  assert.strictEqual(prepared.hiddenCount, 2);
 });
 
 test('collectIdeNames returns unique IDE names from the index', () => {
