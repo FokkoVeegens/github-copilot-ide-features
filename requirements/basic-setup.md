@@ -64,7 +64,7 @@ Build a Python-based scraper toolkit driven by a single `config/ides.yml`, execu
 ### Phase 4 — GitHub Actions workflows
 1. One workflow per IDE under `.github/workflows/`: `fetch-vs-code.yml`, `fetch-visual-studio-2022.yml`, `fetch-visual-studio-2026.yml`, `fetch-jetbrains.yml`, `fetch-xcode.yml`, `fetch-vim-neovim.yml`, `fetch-eclipse.yml`, `fetch-ssms.yml`. Each:
    - Triggers: `schedule: cron '17 6 * * *'` (daily, staggered minutes per IDE), and `workflow_dispatch` for manual backfills.
-   - Steps: checkout → setup-python 3.12 → `pip install -r requirements.txt` → `python -m scripts.run --ide <id>` → if new files and on `main`, open a PR via `peter-evans/create-pull-request` targeting `main`, then immediately enable auto-merge (`gh pr merge --auto --squash`) so it merges once branch protection checks pass with no manual review. On non-default branches, log the files that would be committed (simulate step) without pushing.
+   - Steps: checkout → setup-python 3.14 → `pip install -r requirements.txt` → `python -m scripts.run --ide <id>` → if new files and on `main`, open a PR via `peter-evans/create-pull-request` targeting `main`, then immediately enable auto-merge (`gh pr merge --auto --squash`) so it merges once branch protection checks pass with no manual review. On non-default branches, log the files that would be committed (simulate step) without pushing.
    - Permissions: `contents: write`, `pull-requests: write`; GitHub API fetchers (Eclipse) use the workflow's `GITHUB_TOKEN` for rate-limit headroom. Xcode and Vim/Neovim scrape public docs pages and do not require authentication.
    - Repository prerequisite: "Allow auto-merge" must be enabled in repository settings. If required PR reviews are configured, the GitHub Actions app must be added as a bypass actor so bot-opened PRs auto-merge without human approval.
 2. Optional `fetch-all.yml` that calls the others via `workflow_call` for ad-hoc full runs.
@@ -92,7 +92,7 @@ Build a Python-based scraper toolkit driven by a single `config/ides.yml`, execu
 6. Trigger each workflow via `workflow_dispatch` and confirm it commits / opens a PR with new JSONs.
 
 ## Decisions
-- Runtime: Python 3.12.
+- Runtime: Python 3.14.
 - Schema: extended (raw_html, categories, copilot_mentions[]).
 - Filter: store full notes; do not pre-filter.
 - Schedule: daily cron + manual dispatch.

@@ -79,7 +79,7 @@ jobs:
     steps:
       - uses: actions/checkout@<sha> # vX.Y.Z
       - uses: actions/setup-python@<sha> # vX.Y.Z
-        with: { python-version: '3.12' }
+        with: { python-version: '3.14' }
       - run: pip install -r requirements.txt
       - run: ruff check scripts tests
       - run: pytest
@@ -93,7 +93,7 @@ jobs:
     steps:
       - uses: actions/checkout@<sha> # vX.Y.Z
       - uses: actions/setup-python@<sha> # vX.Y.Z
-        with: { python-version: '3.12' }
+        with: { python-version: '3.14' }
       - run: pip install -r requirements.txt
       - name: Build search index into _site
         run: |
