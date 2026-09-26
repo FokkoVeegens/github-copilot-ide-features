@@ -509,6 +509,7 @@ test('buildResultsMarkup renders Unknown when a release date is missing', () => 
             {
               snippet: 'Agent mode is generally available for CLI.',
               version: '1.2.3',
+              release_date: null,
               url: 'https://example.com/cli',
             },
           ],

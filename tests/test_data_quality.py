@@ -2,9 +2,10 @@
 import json
 import pathlib
 import re
-from datetime import date
+from datetime import date, datetime
 
 DATA_ROOT = pathlib.Path(__file__).parents[1] / "data"
+KNOWN_PLACEHOLDER_RELEASE_DATES = {"2024-01-01", "2026-01-01"}
 EXPLICIT_DATE_PATTERNS = (
     re.compile(r"\*[ \t]*Release date:\s*([A-Za-z]+\s+\d{1,2},\s+\d{4})"),
     re.compile(r"^##\s+\d+\.\d+\.\d+\s+-\s+([A-Za-z]+\s+\d{1,2},\s+\d{4})\r?$", re.MULTILINE),
@@ -18,6 +19,7 @@ def test_release_dates_are_iso_and_not_synthetic_placeholders() -> None:
 
         if release_date is not None:
             date.fromisoformat(release_date)
+            assert release_date not in KNOWN_PLACEHOLDER_RELEASE_DATES, path
 
 
 def test_explicit_release_dates_match_persisted_dates() -> None:
@@ -28,6 +30,6 @@ def test_explicit_release_dates_match_persisted_dates() -> None:
         for pattern in EXPLICIT_DATE_PATTERNS:
             match = pattern.search(body)
             if match:
-                expected_date = date.strptime(match.group(1), "%B %d, %Y")
+                expected_date = datetime.strptime(match.group(1), "%B %d, %Y").date()
                 assert record["release_date"] == expected_date.isoformat(), path
                 break
