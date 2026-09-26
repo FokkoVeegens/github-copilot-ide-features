@@ -298,6 +298,15 @@ def test_build_search_index_includes_records_with_null_release_date(tmp_config: 
     (data_root / "test-ide-1" / "1.0.0.json").write_text(
         json.dumps(release), encoding="utf-8"
     )
+    (data_root / "test-ide-1" / "missing-release-date.json").write_text(
+        json.dumps({
+            "ide": "test-ide-1",
+            "version": "1.1.0",
+            "url": "https://example.com/releases/1.1.0",
+            "copilot_mentions": ["- Missing release_date should still be skipped"],
+        }),
+        encoding="utf-8",
+    )
 
     result = build_search_index(config_path, data_root)
 
