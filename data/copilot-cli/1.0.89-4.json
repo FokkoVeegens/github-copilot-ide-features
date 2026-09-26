@@ -1,0 +1,27 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.89-4",
+  "release_date": "2026-09-25",
+  "title": "1.0.89-4",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.89-4",
+  "source": "api",
+  "body_markdown": "**Added**\n- Auto suggests a routing tier and lets you switch with a shortcut or click\n- Auto shows a quick feedback prompt after switching away to a manually selected model\n\n**Improved**\n- Direct plugin installs can now be enabled and disabled. One already recorded as disabled now stops loading; re-enable it with copilot plugin enable\n\n**Fixed**\n- Fix Auto tier selection to cycle correctly in /model and remove the unsupported Fast profile; a previously stored, exported, or resumed Fast preference now falls back to Balance instead of routing on it\n- Run wrapped gh and git commands, such as `timeout 60 gh ...`, correctly in sandboxed sessions\n- ACP sessions stay connected when clients pause reading large responses\n- Gemini models no longer fail every request with 400 invalid request body when an MCP server exposes a tool whose schema puts a type or properties beside anyOf, such as a nullable discriminated union\n- GitHub MCP tools connect correctly on first CLI startup after sign-in",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Auto suggests a routing tier and lets you switch with a shortcut or click",
+    "- Auto shows a quick feedback prompt after switching away to a manually selected model",
+    "**Improved**",
+    "- Direct plugin installs can now be enabled and disabled. One already recorded as disabled now stops loading; re-enable it with copilot plugin enable",
+    "**Fixed**",
+    "- Fix Auto tier selection to cycle correctly in /model and remove the unsupported Fast profile; a previously stored, exported, or resumed Fast preference now falls back to Balance instead of routing on it",
+    "- Run wrapped gh and git commands, such as `timeout 60 gh ...`, correctly in sandboxed sessions",
+    "- ACP sessions stay connected when clients pause reading large responses",
+    "- Gemini models no longer fail every request with 400 invalid request body when an MCP server exposes a tool whose schema puts a type or properties beside anyOf, such as a nullable discriminated union",
+    "- GitHub MCP tools connect correctly on first CLI startup after sign-in"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-09-26T12:11:16Z",
+  "schema_version": 1
+}
