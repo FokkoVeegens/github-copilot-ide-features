@@ -5,6 +5,9 @@ import re
 from datetime import date, datetime
 
 DATA_ROOT = pathlib.Path(__file__).parents[1] / "data"
+# These synthetic era-start dates were previously used as Vim/Neovim placeholders
+# before exact source dates were backfilled; extend this set if similar sentinels
+# are introduced for other repositories or time ranges.
 KNOWN_PLACEHOLDER_RELEASE_DATES = {"2024-01-01", "2026-01-01"}
 EXPLICIT_DATE_PATTERNS = (
     re.compile(r"\*[ \t]*Release date:\s*([A-Za-z]+\s+\d{1,2},\s+\d{4})"),
