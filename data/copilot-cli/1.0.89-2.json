@@ -1,0 +1,27 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.89-2",
+  "release_date": "2026-09-24",
+  "title": "1.0.89-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.89-2",
+  "source": "api",
+  "body_markdown": "**Added**\n- MCP pre-registered OAuth clients honor configured oauthScopes.\n- In local sessions, Esc Esc in an empty chat input takes back a prompt whose turn the model has not started answering and removes it from the conversation\n\n**Improved**\n- Sandboxed commands on supported Windows versions can access localhost when Local network access is on\n- Autocomplete model IDs in /model and /model plan argument pickers\n\n**Fixed**\n- MCP config loading keeps valid workspace servers when sibling entries are invalid\n- Delete old sessions succeeds when run directly in the CLI\n- Claude requests above attachment size limits now recover automatically before sending.\n- Listing shells shows running shells first, so a shell still running in the background is no longer hidden behind a long list of finished ones",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- MCP pre-registered OAuth clients honor configured oauthScopes.",
+    "- In local sessions, Esc Esc in an empty chat input takes back a prompt whose turn the model has not started answering and removes it from the conversation",
+    "**Improved**",
+    "- Sandboxed commands on supported Windows versions can access localhost when Local network access is on",
+    "- Autocomplete model IDs in /model and /model plan argument pickers",
+    "**Fixed**",
+    "- MCP config loading keeps valid workspace servers when sibling entries are invalid",
+    "- Delete old sessions succeeds when run directly in the CLI",
+    "- Claude requests above attachment size limits now recover automatically before sending.",
+    "- Listing shells shows running shells first, so a shell still running in the background is no longer hidden behind a long list of finished ones"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-09-26T12:11:16Z",
+  "schema_version": 1
+}

@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.88-2",
+  "release_date": "2026-09-22",
+  "title": "1.0.88-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.88-2",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Text selection now works in bottom-anchored dialogs, including login device codes",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Text selection now works in bottom-anchored dialogs, including login device codes"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-09-26T12:11:16Z",
+  "schema_version": 1
+}

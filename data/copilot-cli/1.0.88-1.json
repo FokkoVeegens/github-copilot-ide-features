@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.88-1",
+  "release_date": "2026-09-22",
+  "title": "1.0.88-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.88-1",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Preserve /allow-all during managed-settings refresh failures, and remember exact session approvals for missing paths without granting their parent directory; exact grants are visible in /list-dirs and cleared by /reset-allowed-tools\n- Sandboxed network denials from proxy tunnel failures now show bypass guidance",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Preserve /allow-all during managed-settings refresh failures, and remember exact session approvals for missing paths without granting their parent directory; exact grants are visible in /list-dirs and cleared by /reset-allowed-tools",
+    "- Sandboxed network denials from proxy tunnel failures now show bypass guidance"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-09-26T12:11:16Z",
+  "schema_version": 1
+}

@@ -1,0 +1,20 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.89-0",
+  "release_date": "2026-09-22",
+  "title": "1.0.89-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.89-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Adding support for claude-opus-5.5\n\n**Improved**\n- Show managed Connector consent progress with a copyable authorization URL during connect and reconnect.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Adding support for claude-opus-5.5",
+    "**Improved**",
+    "- Show managed Connector consent progress with a copyable authorization URL during connect and reconnect."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-09-26T12:11:16Z",
+  "schema_version": 1
+}
