@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2026",
+  "version": "18.10.2",
+  "release_date": "2026-09-22",
+  "title": "Version 18.10.2",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+  "source": "html",
+  "body_markdown": "Released on **September 22, 2026**.\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Fixed an issue where solution folders (and their contents) could appear unavailable when opening a solution directly from the root of a drive or network-share. | [Feedback ticket](https://developercommunity.visualstudio.com/t/Visual-Studio-fails-to-load-SLNX-project/11132994) |",
+  "body_html": "<p>Released on <strong>September 22, 2026</strong>.</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: left;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Fixed an issue where solution folders (and their contents) could appear unavailable when opening a solution directly from the root of a drive or network-share.</td>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Visual-Studio-fails-to-load-SLNX-project/11132994\">Feedback ticket</a></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-09-26T11:44:44Z",
+  "schema_version": 1
+}
