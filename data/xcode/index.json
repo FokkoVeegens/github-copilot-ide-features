@@ -100,53 +100,53 @@
     "filename": "0.32.0.json"
   },
   {
+    "version": "0.30.0",
+    "release_date": "2025-02-12",
+    "filename": "0.30.0.json"
+  },
+  {
     "version": "0.31.0",
     "release_date": "2025-02-11",
     "filename": "0.31.0.json"
   },
   {
-    "version": "0.30.0",
-    "release_date": "2025-01-01",
-    "filename": "0.30.0.json"
-  },
-  {
-    "version": "0.0.0",
-    "release_date": "2024-01-01",
-    "filename": "0.0.0.json"
-  },
-  {
-    "version": "0.23.0",
-    "release_date": "2024-01-01",
-    "filename": "0.23.0.json"
-  },
-  {
-    "version": "0.24.0",
-    "release_date": "2024-01-01",
-    "filename": "0.24.0.json"
-  },
-  {
-    "version": "0.25.0",
-    "release_date": "2024-01-01",
-    "filename": "0.25.0.json"
-  },
-  {
-    "version": "0.26.0",
-    "release_date": "2024-01-01",
-    "filename": "0.26.0.json"
-  },
-  {
-    "version": "0.27.0",
-    "release_date": "2024-01-01",
-    "filename": "0.27.0.json"
+    "version": "0.29.0",
+    "release_date": "2024-11-14",
+    "filename": "0.29.0.json"
   },
   {
     "version": "0.28.0",
-    "release_date": "2024-01-01",
+    "release_date": "2024-11-05",
     "filename": "0.28.0.json"
   },
   {
-    "version": "0.29.0",
-    "release_date": "2024-01-01",
-    "filename": "0.29.0.json"
+    "version": "0.27.0",
+    "release_date": "2024-10-23",
+    "filename": "0.27.0.json"
+  },
+  {
+    "version": "0.26.0",
+    "release_date": "2024-10-21",
+    "filename": "0.26.0.json"
+  },
+  {
+    "version": "0.25.0",
+    "release_date": "2024-10-09",
+    "filename": "0.25.0.json"
+  },
+  {
+    "version": "0.24.0",
+    "release_date": "2024-10-01",
+    "filename": "0.24.0.json"
+  },
+  {
+    "version": "0.23.0",
+    "release_date": "2024-09-26",
+    "filename": "0.23.0.json"
+  },
+  {
+    "version": "0.0.0",
+    "release_date": null,
+    "filename": "0.0.0.json"
   }
 ]

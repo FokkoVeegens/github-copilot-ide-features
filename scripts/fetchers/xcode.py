@@ -33,15 +33,12 @@ from scripts.common.feature_matrix import (
 )
 from scripts.common.http import get_text
 
-# (heading text on the page, version key for the JSON file, approximate release date)
+# (heading text on the page, version key for the JSON file, era start date)
 _SECTIONS: list[tuple[str, str, str]] = [
     ("Xcode latest releases", "xcode-latest", "2026-01-01"),
     ("Xcode 2025 releases", "xcode-2025", "2025-01-01"),
     ("Xcode 2024 releases", "xcode-2024", "2024-01-01"),
 ]
-
-# Fallback release date for changelog-only records whose heading has no parseable date.
-_DEFAULT_ERA_DATE = next(date for _, key, date in _SECTIONS if key == "xcode-latest")
 
 # Matches changelog headings like "## 0.50.0 - May 20, 2026" or "## [0.50.0] - May 20, 2026"
 # (optional brackets around the version, hyphen or en-dash separator).
@@ -83,7 +80,7 @@ def _parse_feature_matrix(
     soup = BeautifulSoup(html, "lxml")
     results = []
 
-    for heading_text, era_key, release_date in _SECTIONS:
+    for heading_text, era_key, _release_date in _SECTIONS:
         heading = _find_section_heading(soup, heading_text)
         if heading is None:
             print(f"  [warn] Section '{heading_text}' not found in feature matrix page.")
@@ -99,7 +96,7 @@ def _parse_feature_matrix(
             ide_config,
             heading_text,
             era_key,
-            release_date,
+            None,
             source_url=source_url,
         )
         results.extend(records)
@@ -192,7 +189,7 @@ def _merge_changelog(
                 "ide": ide_config["id"],
                 "version": version,
                 "xcode_era": era_key,
-                "release_date": release_date or _DEFAULT_ERA_DATE,
+                "release_date": release_date,
                 "title": f"GitHub Copilot for Xcode {version} \u2013 {heading_text}",
                 "url": changelog_url,
                 "source": "html",
@@ -216,7 +213,7 @@ def _extract_plugin_versions(
     ide_config: dict,
     heading_text: str,
     era_key: str,
-    release_date: str,
+    release_date: str | None,
     *,
     source_url: str | None = None,
 ) -> list[dict]:

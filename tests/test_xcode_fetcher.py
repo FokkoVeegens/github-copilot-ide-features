@@ -227,7 +227,7 @@ class TestParseFeatureMatrix:
         results = _parse_feature_matrix(_IDE_CONFIG, _FAKE_HTML)
         record = next(r for r in results if r["version"] == "0.48.0")
         assert record["ide"] == "xcode"
-        assert record["release_date"] == "2026-01-01"
+        assert record["release_date"] is None
         assert record["source"] == "html"
         assert record["prerelease"] is False
         assert "Code completion" in record["body_markdown"]
@@ -379,6 +379,23 @@ class TestMergeChangelog:
         record = next(r for r in results if r["version"] == "0.48.0")
         assert "Context window usage details" in record["body_markdown"]
 
+    def test_historical_release_date_is_persisted(self):
+        data_dir = pathlib.Path(__file__).parents[1] / "data" / "xcode"
+        expected_dates = {
+            "0.23.0": "2024-09-26",
+            "0.24.0": "2024-10-01",
+            "0.25.0": "2024-10-09",
+            "0.26.0": "2024-10-21",
+            "0.27.0": "2024-10-23",
+            "0.28.0": "2024-11-05",
+            "0.29.0": "2024-11-14",
+            "0.30.0": "2025-02-12",
+        }
+
+        for version, expected_date in expected_dates.items():
+            record = json.loads((data_dir / f"{version}.json").read_text(encoding="utf-8"))
+            assert record["release_date"] == expected_date
+
     def test_version_without_changelog_is_unchanged(self):
         results = _parse_feature_matrix(
             _IDE_CONFIG, _FAKE_HTML, changelog_markdown=_FAKE_CHANGELOG
@@ -386,7 +403,7 @@ class TestMergeChangelog:
         # 0.47.0 is in the matrix but not the fake changelog.
         record = next(r for r in results if r["version"] == "0.47.0")
         assert "### Supported features" not in record["body_markdown"]
-        assert record["release_date"] == "2026-01-01"
+        assert record["release_date"] is None
 
     def test_changelog_only_version_is_added(self):
         results = _parse_feature_matrix(

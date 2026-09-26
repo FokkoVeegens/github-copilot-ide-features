@@ -284,6 +284,44 @@ def test_build_search_index_skips_files_missing_required_fields(tmp_config: tupl
     assert len(result["records"]) == 0
 
 
+def test_build_search_index_includes_records_with_null_release_date(tmp_config: tuple[pathlib.Path, pathlib.Path]) -> None:
+    config_path, data_root = tmp_config
+    (data_root / "test-ide-1").mkdir(parents=True, exist_ok=True)
+
+    release = {
+        "ide": "test-ide-1",
+        "version": "1.0.0",
+        "release_date": None,
+        "url": "https://example.com/releases/1.0.0",
+        "copilot_mentions": ["- Copilot feature without a release date"],
+    }
+    (data_root / "test-ide-1" / "1.0.0.json").write_text(
+        json.dumps(release), encoding="utf-8"
+    )
+    (data_root / "test-ide-1" / "missing-release-date.json").write_text(
+        json.dumps({
+            "ide": "test-ide-1",
+            "version": "1.1.0",
+            "url": "https://example.com/releases/1.1.0",
+            "copilot_mentions": ["- Missing release_date should still be skipped"],
+        }),
+        encoding="utf-8",
+    )
+
+    result = build_search_index(config_path, data_root)
+
+    assert result["records"] == [
+        {
+            "ide": "test-ide-1",
+            "ide_name": "Test IDE One",
+            "version": "1.0.0",
+            "release_date": None,
+            "url": "https://example.com/releases/1.0.0",
+            "snippet": "Copilot feature without a release date",
+        }
+    ]
+
+
 def test_backfill_respects_custom_data_root(tmp_path: pathlib.Path) -> None:
     config_path = tmp_path / "ides.yml"
     data_root = tmp_path / "custom-data"

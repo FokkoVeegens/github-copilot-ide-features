@@ -1,4 +1,6 @@
 """Tests for scripts/fetchers/vs_code.py"""
+import json
+from pathlib import Path
 from unittest.mock import patch
 
 import feedparser
@@ -265,6 +267,49 @@ class TestFetch:
         assert r75["body_markdown"] != ""
         assert isinstance(r75["categories"], list)
         assert isinstance(r75["copilot_mentions"], list)
+
+    def test_historical_release_dates_are_persisted_correctly(self):
+        expected_dates = {
+            "1.75.0": "2023-02-02",
+            "1.76.0": "2023-03-01",
+            "1.77.0": "2023-03-30",
+            "1.78.0": "2023-05-04",
+            "1.79.0": "2023-06-01",
+            "1.80.0": "2023-07-06",
+            "1.81.0": "2023-08-03",
+            "1.82.0": "2023-09-07",
+            "1.83.0": "2023-10-05",
+            "1.84.0": "2023-11-02",
+            "1.85.0": "2023-12-07",
+            "1.86.0": "2024-02-01",
+            "1.87.0": "2024-03-07",
+            "1.88.0": "2024-04-04",
+            "1.89.0": "2024-05-02",
+            "1.90.0": "2024-06-06",
+            "1.91.0": "2024-07-04",
+            "1.92.0": "2024-08-01",
+            "1.93.0": "2024-09-05",
+            "1.94.0": "2024-10-03",
+            "1.95.0": "2024-10-31",
+            "1.96.0": "2024-12-05",
+            "1.97.0": "2025-02-06",
+            "1.98.0": "2025-03-06",
+            "1.99.0": "2025-04-03",
+            "1.100.0": "2025-05-08",
+            "1.101.0": "2025-06-12",
+            "1.102.0": "2025-07-09",
+            "1.103.0": "2025-08-07",
+            "1.104.0": "2025-09-11",
+            "1.105.0": "2025-10-09",
+            "1.106.0": "2025-11-12",
+            "1.107.0": "2025-12-10",
+            "1.108.0": "2026-01-08",
+        }
+        data_dir = Path(__file__).parents[1] / "data" / "vs-code"
+
+        for version, expected_date in expected_dates.items():
+            record = json.loads((data_dir / f"{version}.json").read_text(encoding="utf-8"))
+            assert record["release_date"] == expected_date
 
     def test_copilot_mentions_populated(self):
         pages = {

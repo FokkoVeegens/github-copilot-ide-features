@@ -137,6 +137,19 @@ def test_generate_ide_index_includes_filename() -> None:
         assert index[0]["filename"] == "1.5.0.json"
 
 
+def test_generate_ide_index_keeps_undated_releases_last() -> None:
+    with tempfile.TemporaryDirectory() as tmpdir:
+        data_dir = pathlib.Path(tmpdir)
+        write_release(data_dir, {"version": "1.0.0", "release_date": None})
+        write_release(data_dir, {"version": "1.1.0", "release_date": "2026-01-01"})
+
+        generate_ide_index(data_dir)
+
+        index = json.loads((data_dir / "index.json").read_text())
+        assert [entry["version"] for entry in index] == ["1.1.0", "1.0.0"]
+        assert index[-1]["release_date"] is None
+
+
 def test_generate_ide_index_skips_invalid_files() -> None:
     """Test that generate_ide_index skips files without required fields."""
     with tempfile.TemporaryDirectory() as tmpdir:
