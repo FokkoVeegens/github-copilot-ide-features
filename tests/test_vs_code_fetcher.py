@@ -42,7 +42,7 @@ _FAKE_FEED_XML = """\
     <title>VS Code 1.75</title>
     <link rel="alternate" href="https://code.visualstudio.com/updates/v1_75"/>
     <category term="release"/>
-    <updated>2023-02-01T00:00:00Z</updated>
+    <updated>2023-02-02T00:00:00Z</updated>
   </entry>
   <entry>
     <title>VS Code 1.77</title>
@@ -87,7 +87,7 @@ _FAKE_PAGE_HTML_75 = """\
 <html>
 <head>
   <title>Visual Studio Code January 2023</title>
-  <meta property="article:published_time" content="2023-02-01T00:00:00Z"/>
+  <meta property="article:published_time" content="2023-02-02T00:00:00Z"/>
 </head>
 <body>
   <main>
@@ -154,7 +154,7 @@ class TestParseFeed:
         _, feed_dates = _parse_feed(_FAKE_FEED_XML)
         assert 75 in feed_dates
         assert 76 in feed_dates
-        assert feed_dates[75] == "2023-02-01"
+        assert feed_dates[75] == "2023-02-02"
         assert feed_dates[76] == "2023-03-01"
 
     def test_blog_entries_are_excluded(self):
@@ -214,7 +214,7 @@ class TestExtractDateFromHtml:
         assert _extract_date_from_html(_FAKE_PAGE_HTML_76) == "2023-03-01"
 
     def test_meta_article_published_time(self):
-        assert _extract_date_from_html(_FAKE_PAGE_HTML_75) == "2023-02-01"
+        assert _extract_date_from_html(_FAKE_PAGE_HTML_75) == "2023-02-02"
 
     def test_returns_none_when_no_date(self):
         assert _extract_date_from_html(_FAKE_PAGE_HTML_NO_DATE) is None
@@ -260,7 +260,7 @@ class TestFetch:
 
         r75 = next(r for r in results if r["version"] == "1.75.0")
         assert r75["ide"] == "vs-code"
-        assert r75["release_date"] == "2023-02-01"
+        assert r75["release_date"] == "2023-02-02"
         assert r75["url"] == "https://code.visualstudio.com/updates/v1_75"
         assert r75["source"] == "feed"
         assert r75["title"] == "Visual Studio Code January 2023"
