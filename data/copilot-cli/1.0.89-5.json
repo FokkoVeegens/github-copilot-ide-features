@@ -1,0 +1,25 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.89-5",
+  "release_date": "2026-09-27",
+  "title": "1.0.89-5",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.89-5",
+  "source": "api",
+  "body_markdown": "**Added**\n- Left-clicking supported ask_user and elicitation form inputs focuses them and places the cursor at the clicked position\n- Add support for Claude Code rule files in .claude/rules as custom instructions\n- Sessions in the sidebar show a blue dot when they finished a turn you have not opened yet\n\n**Fixed**\n- Extensions no longer fail to load under enterprise managed settings while managed MCP policy is still being applied\n- Fixed Git failures in applications launched from CLI shells when empty environment variables are dropped, on Git 2.36 or newer.\n- Sessions sidebar saves opened and closed tabs as they change, rather than only on exit\n- Agent shell commands in sandbox can access session files and logs",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Left-clicking supported ask_user and elicitation form inputs focuses them and places the cursor at the clicked position",
+    "- Add support for Claude Code rule files in .claude/rules as custom instructions",
+    "- Sessions in the sidebar show a blue dot when they finished a turn you have not opened yet",
+    "**Fixed**",
+    "- Extensions no longer fail to load under enterprise managed settings while managed MCP policy is still being applied",
+    "- Fixed Git failures in applications launched from CLI shells when empty environment variables are dropped, on Git 2.36 or newer.",
+    "- Sessions sidebar saves opened and closed tabs as they change, rather than only on exit",
+    "- Agent shell commands in sandbox can access session files and logs"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-09-27T12:56:55Z",
+  "schema_version": 1
+}
