@@ -1,0 +1,24 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.89-6",
+  "release_date": "2026-09-28",
+  "title": "1.0.89-6",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.89-6",
+  "source": "api",
+  "body_markdown": "**Improved**\n- PR creation now follows repository pull request templates, preserving required sections and checklist structure.\n- Configure automatic indexed search activation with TGREP_FILE_COUNT_THRESHOLD\n\n**Fixed**\n- Shell output no longer shows trailing command completion metadata.\n- Timeline output stops auto-following while text selection is active\n- server/tool and server/* tool filters now match MCP tool names that contain a slash\n- Queue exit commands while an agent response is still running",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- PR creation now follows repository pull request templates, preserving required sections and checklist structure.",
+    "- Configure automatic indexed search activation with TGREP_FILE_COUNT_THRESHOLD",
+    "**Fixed**",
+    "- Shell output no longer shows trailing command completion metadata.",
+    "- Timeline output stops auto-following while text selection is active",
+    "- server/tool and server/* tool filters now match MCP tool names that contain a slash",
+    "- Queue exit commands while an agent response is still running"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-09-28T15:20:17Z",
+  "schema_version": 1
+}
