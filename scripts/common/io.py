@@ -47,7 +47,10 @@ def generate_ide_index(data_dir: pathlib.Path) -> None:
             version = data.get("version")
             release_date = data.get("release_date")
             
-            if version and "release_date" in data:
+            has_valid_date = "release_date" in data and (
+                release_date is None or bool(release_date)
+            )
+            if version and has_valid_date:
                 index_entries.append({
                     "version": version,
                     "release_date": release_date,
