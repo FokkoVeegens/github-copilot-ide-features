@@ -498,3 +498,29 @@ test('buildResultsMarkup renders accessible mobile labels in the DOM', () => {
   assert.match(markup, /<span class="mobile-field-label">Availability<\/span>/);
   assert.match(markup, /Not yet available/);
 });
+
+test('buildResultsMarkup renders Unknown when a release date is missing', () => {
+  const markup = buildResultsMarkup(
+    {
+      matched: [
+        {
+          ide: 'GitHub Copilot CLI',
+          rows: [
+            {
+              snippet: 'Agent mode is generally available for CLI.',
+              version: '1.2.3',
+              release_date: null,
+              url: 'https://example.com/cli',
+            },
+          ],
+        },
+      ],
+      missing: [],
+      hiddenRowCount: 0,
+    },
+    'agent mode',
+  );
+
+  assert.match(markup, /<td class="date-cell">Unknown<\/td>/);
+  assert.match(markup, /<div class="mobile-field-value">Unknown<\/div>/);
+});

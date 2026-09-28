@@ -18,7 +18,7 @@ from scripts.common.feature_matrix import (
 )
 from scripts.common.http import get_text
 
-# (heading text on the page, version key for the JSON file, approximate release date)
+# (heading text on the page, version key for the JSON file, era start date)
 _SECTIONS: list[tuple[str, str, str]] = [
     ("NeoVim latest releases", "neovim-latest", "2026-01-01"),
     ("NeoVim 2024 releases", "neovim-2024", "2024-01-01"),
@@ -40,7 +40,7 @@ def _parse_feature_matrix(
     soup = BeautifulSoup(html, "lxml")
     results = []
 
-    for heading_text, era_key, release_date in _SECTIONS:
+    for heading_text, era_key, _release_date in _SECTIONS:
         heading = _find_section_heading(soup, heading_text)
         if heading is None:
             print(f"  [warn] Section '{heading_text}' not found in feature matrix page.")
@@ -56,7 +56,7 @@ def _parse_feature_matrix(
             ide_config,
             heading_text,
             era_key,
-            release_date,
+            None,
             source_url=source_url,
         )
         results.extend(records)
@@ -72,7 +72,7 @@ def _extract_plugin_versions(
     ide_config: dict,
     heading_text: str,
     era_key: str,
-    release_date: str,
+    release_date: str | None,
     *,
     source_url: str | None = None,
 ) -> list[dict]:

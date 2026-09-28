@@ -2,7 +2,7 @@
   "ide": "vim-neovim",
   "version": "1.0.0",
   "neovim_era": "neovim-2021",
-  "release_date": "2021-01-01",
+  "release_date": "2021-10-27",
   "title": "GitHub Copilot for Vim/Neovim 1.0.0 – NeoVim 2021 releases",
   "url": "https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=vimneovim",
   "source": "html",

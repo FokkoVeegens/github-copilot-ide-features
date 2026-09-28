@@ -1,4 +1,6 @@
 """Tests for scripts/fetchers/copilot_vim.py."""
+import json
+from pathlib import Path
 from unittest.mock import patch
 
 import pytest
@@ -200,10 +202,38 @@ class TestParseFeatureMatrix:
         results = _parse_feature_matrix(_IDE_CONFIG, _FAKE_HTML)
         record = next(r for r in results if r["version"] == "1.59.0")
         assert record["ide"] == "vim-neovim"
-        assert record["release_date"] == "2026-01-01"
+        assert record["release_date"] is None
         assert record["source"] == "html"
         assert record["prerelease"] is False
         assert "Code completion" in record["body_markdown"]
+
+    def test_historical_tag_dates_are_persisted(self):
+        data_dir = Path(__file__).parents[1] / "data" / "vim-neovim"
+        expected_dates = {
+            "1.0.0": "2021-10-27",
+            "1.1.0": "2022-02-15",
+            "1.2.0": "2022-04-08",
+            "1.3.0": "2022-05-09",
+            "1.4.0": "2022-06-07",
+            "1.5.0": "2022-08-09",
+            "1.6.0": "2022-10-11",
+            "1.7.0": "2022-12-06",
+            "1.8.0": "2022-12-19",
+            "1.9.0": "2023-06-22",
+            "1.10.0": "2023-08-17",
+            "1.11.0": "2023-10-18",
+            "1.12.0": "2023-11-22",
+            "1.13.0": "2023-12-11",
+            "1.14.0": "2024-01-10",
+            "1.15.0": "2024-01-18",
+            "1.16.0": "2024-01-23",
+            "1.17.0": "2024-01-25",
+            "1.18.0": "2024-02-08",
+        }
+
+        for version, expected_date in expected_dates.items():
+            record = json.loads((data_dir / f"{version}.json").read_text(encoding="utf-8"))
+            assert record["release_date"] == expected_date
 
     def test_body_markdown_contains_only_this_versions_column(self):
         results = _parse_feature_matrix(_IDE_CONFIG, _FAKE_HTML)

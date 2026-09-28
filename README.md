@@ -64,7 +64,7 @@ Fetcher endpoints are configured centrally in [config/ides.yml](config/ides.yml)
 
 ### Index files
 
-Each IDE directory contains an automatically-generated `index.json` file that provides a quick reference to all available versions. The index contains an array of objects with the following properties:
+Each IDE directory contains an automatically-generated `index.json` file that provides a quick reference to all available versions. The index contains an array of objects with the following properties. Releases whose source does not provide an exact date use `null` and are listed after dated releases.
 
 ```json
 [
@@ -144,7 +144,7 @@ Each file under `data/<ide>/` follows the JSON schema defined in `scripts/common
 |-------|-------------|
 | `ide` | IDE identifier matching `config/ides.yml` |
 | `version` | Normalised version string (e.g. `0.16.0`) |
-| `release_date` | ISO-8601 date (`YYYY-MM-DD`) |
+| `release_date` | ISO-8601 date (`YYYY-MM-DD`), or `null` when the source has no exact date |
 | `body_markdown` | Full release notes as Markdown |
 | `copilot_mentions` | Lines from the notes matching a Copilot/AI heuristic |
 | `source` | How the data was obtained (`api`, `feed`, `html`, …) |

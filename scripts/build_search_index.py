@@ -64,7 +64,10 @@ def build_search_index(config_path: pathlib.Path | None = None, data_root: pathl
                 release_date = release.get("release_date")
                 url = release.get("url")
                 
-                if not (version and release_date and url):
+                has_valid_date = "release_date" in release and (
+                    release_date is None or bool(release_date)
+                )
+                if not (version and has_valid_date and url):
                     continue
                 
                 snippets = _extract_snippets(
