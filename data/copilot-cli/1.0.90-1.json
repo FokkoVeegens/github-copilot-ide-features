@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.90-1",
+  "release_date": "2026-09-29",
+  "title": "1.0.90-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.90-1",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- MCP OAuth sign-in to servers such as Datadog reuses a still-valid cached token\n- Withdrawn running prompts stay removed after session resume",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- MCP OAuth sign-in to servers such as Datadog reuses a still-valid cached token",
+    "- Withdrawn running prompts stay removed after session resume"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-01T14:24:54Z",
+  "schema_version": 1
+}

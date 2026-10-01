@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.90-3",
+  "release_date": "2026-09-29",
+  "title": "1.0.90-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.90-3",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add --mcp-github-auth to scope GitHub account auth to approved MCP server origins\n- Add session-scoped read-only directory approvals to path access prompts",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add --mcp-github-auth to scope GitHub account auth to approved MCP server origins",
+    "- Add session-scoped read-only directory approvals to path access prompts"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-01T14:24:54Z",
+  "schema_version": 1
+}

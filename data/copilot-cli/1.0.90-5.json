@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.90-5",
+  "release_date": "2026-09-29",
+  "title": "1.0.90-5",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.90-5",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- \"No supported model available\" is no longer shown on launch or in the model picker when a configured provider already supplies a model\n- MCP tool calls complete even when servers keep sending progress updates after responding",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- \"No supported model available\" is no longer shown on launch or in the model picker when a configured provider already supplies a model",
+    "- MCP tool calls complete even when servers keep sending progress updates after responding"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-01T14:24:54Z",
+  "schema_version": 1
+}
