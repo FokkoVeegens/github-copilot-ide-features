@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2026",
+  "version": "18.10.3",
+  "release_date": "2026-09-29",
+  "title": "Version 18.10.3",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+  "source": "html",
+  "body_markdown": "Released on **September 29, 2026**.\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Fixed an issue where Visual Studio could become unresponsive while unloading a project due to a stale designer component. | [Feedback ticket](https://developercommunity.visualstudio.com/t/SSIS-Projects:-Visual-Studio-hangs-unloa/11152592) |\n| Fixed an issue where component changes could cause Visual Studio to crash after reloading the .NET Framework Windows Forms Designer. |  |",
+  "body_html": "<p>Released on <strong>September 29, 2026</strong>.</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: left;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Fixed an issue where Visual Studio could become unresponsive while unloading a project due to a stale designer component.</td>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/SSIS-Projects:-Visual-Studio-hangs-unloa/11152592\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Fixed an issue where component changes could cause Visual Studio to crash after reloading the .NET Framework Windows Forms Designer.</td>\n<td style=\"text-align: left;\"></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-10-01T13:51:32Z",
+  "schema_version": 1
+}
