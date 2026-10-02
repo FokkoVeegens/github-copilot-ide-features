@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.90-4",
+  "release_date": "2026-09-29",
+  "title": "1.0.90-4",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.90-4",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- A fresh launch no longer prints \"Failed to read model provider attribution\" errors while it signs in",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- A fresh launch no longer prints \"Failed to read model provider attribution\" errors while it signs in"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-01T14:24:54Z",
+  "schema_version": 1
+}

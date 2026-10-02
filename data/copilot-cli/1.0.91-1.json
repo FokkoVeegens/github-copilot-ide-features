@@ -1,0 +1,24 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.91-1",
+  "release_date": "2026-10-01",
+  "title": "1.0.91-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.91-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add `copilot sandbox ca` commands to check, create, trust, rotate, and remove proxy CA trust, including unattended Windows setup; `/sandbox ca install` becomes `create` and `trust`\n\n**Improved**\n- CLI shutdown flushes pending telemetry before exit, with a bounded delay when telemetry is still initializing.\n\n**Fixed**\n- Session timelines now clear busy status after interrupted turns finish.\n- Sandboxed commands run on Windows versions without filesystem enumeration support, with a warning that PowerShell's current location may be wrong\n- Footer text selection stays on the same visible line when the footer grows or shrinks.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add `copilot sandbox ca` commands to check, create, trust, rotate, and remove proxy CA trust, including unattended Windows setup; `/sandbox ca install` becomes `create` and `trust`",
+    "**Improved**",
+    "- CLI shutdown flushes pending telemetry before exit, with a bounded delay when telemetry is still initializing.",
+    "**Fixed**",
+    "- Session timelines now clear busy status after interrupted turns finish.",
+    "- Sandboxed commands run on Windows versions without filesystem enumeration support, with a warning that PowerShell's current location may be wrong",
+    "- Footer text selection stays on the same visible line when the footer grows or shrinks."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-01T14:24:54Z",
+  "schema_version": 1
+}

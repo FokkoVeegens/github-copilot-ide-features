@@ -1,0 +1,28 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.90-6",
+  "release_date": "2026-09-30",
+  "title": "1.0.90-6",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.90-6",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add support for GPT-6.1 Sol in model selection\n\n**Improved**\n- Click anywhere on expanded tool calls in compact timeline to collapse them\n- Holding Space and Ctrl+X V explain when voice mode is off or still getting ready\n\n**Fixed**\n- Permission prompts remain answerable after resuming interrupted sessions.\n- Auto-approval now takes into account messages you type while the agent is working, as it already did for prompts sent while it was idle\n- Compaction now returns a summary even when instructions ask for tool use.\n- Copying selected text on Wayland now finishes as soon as wl-copy accepts it, instead of timing out and falling back to the in-process clipboard that can print \"Somebody else owns the clipboard now\" over the UI\n- A narrow Sessions sidebar drops keyboard hints that do not fit instead of cutting one off mid-word\n- MCP tools recover after transient discovery failures without restarting the session; unchanged catalogs remain available during recovery.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add support for GPT-6.1 Sol in model selection",
+    "**Improved**",
+    "- Click anywhere on expanded tool calls in compact timeline to collapse them",
+    "- Holding Space and Ctrl+X V explain when voice mode is off or still getting ready",
+    "**Fixed**",
+    "- Permission prompts remain answerable after resuming interrupted sessions.",
+    "- Auto-approval now takes into account messages you type while the agent is working, as it already did for prompts sent while it was idle",
+    "- Compaction now returns a summary even when instructions ask for tool use.",
+    "- Copying selected text on Wayland now finishes as soon as wl-copy accepts it, instead of timing out and falling back to the in-process clipboard that can print \"Somebody else owns the clipboard now\" over the UI",
+    "- A narrow Sessions sidebar drops keyboard hints that do not fit instead of cutting one off mid-word",
+    "- MCP tools recover after transient discovery failures without restarting the session; unchanged catalogs remain available during recovery."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-01T14:24:54Z",
+  "schema_version": 1
+}
