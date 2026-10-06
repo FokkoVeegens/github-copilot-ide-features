@@ -1,0 +1,20 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.92-5",
+  "release_date": "2026-10-05",
+  "title": "1.0.92-5",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.92-5",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Select which account to use after Microsoft Entra sign-in, and let /logout sign out those OAuth sessions.\n\n**Fixed**\n- Entra-protected MCP servers can silently renew access-token-only credentials.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Select which account to use after Microsoft Entra sign-in, and let /logout sign out those OAuth sessions.",
+    "**Fixed**",
+    "- Entra-protected MCP servers can silently renew access-token-only credentials."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-06T14:07:57Z",
+  "schema_version": 1
+}

@@ -1,0 +1,25 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.92-3",
+  "release_date": "2026-10-02",
+  "title": "1.0.92-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.92-3",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add a pre-conversation Ctrl+E environment picker to switch between local and cloud runs\n\n**Fixed**\n- Keyboard, paste, and mouse input now stay ordered and responsive during rapid interaction.\n- Sandboxed shell commands offer a network bypass prompt whenever the proxy blocks a destination\n- Sandboxed scripts that run Git now authenticate with masked credentials and SSH remote rewrites\n- Sub-agents keep working after you replace your GitHub authentication credentials\n\n**Removed**\n- Remove retired models from the model picker and supported CLI selections",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add a pre-conversation Ctrl+E environment picker to switch between local and cloud runs",
+    "**Fixed**",
+    "- Keyboard, paste, and mouse input now stay ordered and responsive during rapid interaction.",
+    "- Sandboxed shell commands offer a network bypass prompt whenever the proxy blocks a destination",
+    "- Sandboxed scripts that run Git now authenticate with masked credentials and SSH remote rewrites",
+    "- Sub-agents keep working after you replace your GitHub authentication credentials",
+    "**Removed**",
+    "- Remove retired models from the model picker and supported CLI selections"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-06T14:07:57Z",
+  "schema_version": 1
+}
