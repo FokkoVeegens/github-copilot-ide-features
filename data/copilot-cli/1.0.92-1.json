@@ -1,0 +1,22 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.92-1",
+  "release_date": "2026-10-02",
+  "title": "1.0.92-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.92-1",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Reconnect to remote MCP servers after idle Streamable HTTP sessions expire\n- Messaging a running background agent now steers its active turn at the next processing opportunity.\n- Context rollovers keep your latest requests in the recovery context.\n- Hide the automatic sandbox CA setup prompt on Windows accounts that cannot self-elevate\n- Copilot no longer describes a subagent as configured when the current session cannot run it. Previously a session that could not use rubber-duck still reported it as set up in /subagents, and asking for it failed instead of being skipped cleanly.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Reconnect to remote MCP servers after idle Streamable HTTP sessions expire",
+    "- Messaging a running background agent now steers its active turn at the next processing opportunity.",
+    "- Context rollovers keep your latest requests in the recovery context.",
+    "- Hide the automatic sandbox CA setup prompt on Windows accounts that cannot self-elevate",
+    "- Copilot no longer describes a subagent as configured when the current session cannot run it. Previously a session that could not use rubber-duck still reported it as set up in /subagents, and asking for it failed instead of being skipped cleanly."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-06T14:07:57Z",
+  "schema_version": 1
+}

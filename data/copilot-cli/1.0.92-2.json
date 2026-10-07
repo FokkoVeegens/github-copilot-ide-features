@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.92-2",
+  "release_date": "2026-10-02",
+  "title": "1.0.92-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.92-2",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Sandboxed commands on Windows write temporary files to the granted temp directory, so tools that rename a temp file into place work\n- Prompt-mode sessions fire a single sessionEnd hook after Stop-hook continuations complete",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Sandboxed commands on Windows write temporary files to the granted temp directory, so tools that rename a temp file into place work",
+    "- Prompt-mode sessions fire a single sessionEnd hook after Stop-hook continuations complete"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-06T14:07:57Z",
+  "schema_version": 1
+}

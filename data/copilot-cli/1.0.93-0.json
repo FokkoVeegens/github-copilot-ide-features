@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.93-0",
+  "release_date": "2026-10-05",
+  "title": "1.0.93-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.93-0",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Warmed language servers stay running across LSP requests when sandboxing is disabled\n- Clicking a truncated compact shell command expands it",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Warmed language servers stay running across LSP requests when sandboxing is disabled",
+    "- Clicking a truncated compact shell command expands it"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-06T14:07:57Z",
+  "schema_version": 1
+}
