@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.94-1",
+  "release_date": "2026-10-07",
+  "title": "1.0.94-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.94-1",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Clicking a Sessions sidebar row now reliably switches sessions during split-view reconciliation",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Clicking a Sessions sidebar row now reliably switches sessions during split-view reconciliation"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-10T13:34:17Z",
+  "schema_version": 1
+}

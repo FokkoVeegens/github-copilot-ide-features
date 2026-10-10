@@ -1,0 +1,17 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.94-2",
+  "release_date": "2026-10-07",
+  "title": "1.0.94-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.94-2",
+  "source": "api",
+  "body_markdown": "Fixes and changes",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "Fixes and changes"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-10T13:34:17Z",
+  "schema_version": 1
+}

@@ -1,0 +1,26 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.93-2",
+  "release_date": "2026-10-06",
+  "title": "1.0.93-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.93-2",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add enterprise permissions.limitTo to enforce managed domain boundaries for network requests\n\n**Improved**\n- Model picker updates the recommended list to prioritize GPT-6.1 Sol, GPT-6 Astra/Luna, and Claude 5.5 models.\n\n**Fixed**\n- GitHub.com Connector users can expand GitHub CLI permissions in place and retry connections without switching sign-in methods.\n- Honor --context long_context at startup and show accurate context allowance in /context\n- Connecting a Connector without the required GitHub scope now prompts to update your authorization instead of failing with an authentication error\n\n**Removed**\n- Read user settings only from ~/.copilot/settings.json; user-setting keys in ~/.copilot/config.json are ignored.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add enterprise permissions.limitTo to enforce managed domain boundaries for network requests",
+    "**Improved**",
+    "- Model picker updates the recommended list to prioritize GPT-6.1 Sol, GPT-6 Astra/Luna, and Claude 5.5 models.",
+    "**Fixed**",
+    "- GitHub.com Connector users can expand GitHub CLI permissions in place and retry connections without switching sign-in methods.",
+    "- Honor --context long_context at startup and show accurate context allowance in /context",
+    "- Connecting a Connector without the required GitHub scope now prompts to update your authorization instead of failing with an authentication error",
+    "**Removed**",
+    "- Read user settings only from ~/.copilot/settings.json; user-setting keys in ~/.copilot/config.json are ignored."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-10T13:34:17Z",
+  "schema_version": 1
+}

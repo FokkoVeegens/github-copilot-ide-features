@@ -1,0 +1,20 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.95-0",
+  "release_date": "2026-10-08",
+  "title": "1.0.95-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.95-0",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Managed plugin setup retries hourly or after policy changes instead of on every message failure\n\n**Fixed**\n- --context now applies to new and resumed ACP sessions instead of silently using the default or previously saved context tier",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Managed plugin setup retries hourly or after policy changes instead of on every message failure",
+    "**Fixed**",
+    "- --context now applies to new and resumed ACP sessions instead of silently using the default or previously saved context tier"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-10T13:34:17Z",
+  "schema_version": 1
+}

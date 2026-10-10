@@ -1,0 +1,20 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.96-1",
+  "release_date": "2026-10-10",
+  "title": "1.0.96-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.96-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Interactive sandbox settings suggest possible environment secrets and let you add masking hosts before saving.\n\n**Fixed**\n- Keep /allow-all available during startup while enterprise policy is still resolving",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Interactive sandbox settings suggest possible environment secrets and let you add masking hosts before saving.",
+    "**Fixed**",
+    "- Keep /allow-all available during startup while enterprise policy is still resolving"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-10T13:34:17Z",
+  "schema_version": 1
+}

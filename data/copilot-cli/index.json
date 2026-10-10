@@ -1,8 +1,103 @@
 [
   {
+    "version": "1.0.96-1",
+    "release_date": "2026-10-10",
+    "filename": "1.0.96-1.json"
+  },
+  {
+    "version": "1.0.96-2",
+    "release_date": "2026-10-10",
+    "filename": "1.0.96-2.json"
+  },
+  {
+    "version": "1.0.95-1",
+    "release_date": "2026-10-09",
+    "filename": "1.0.95-1.json"
+  },
+  {
+    "version": "1.0.95-2",
+    "release_date": "2026-10-09",
+    "filename": "1.0.95-2.json"
+  },
+  {
+    "version": "1.0.95-3",
+    "release_date": "2026-10-09",
+    "filename": "1.0.95-3.json"
+  },
+  {
+    "version": "1.0.95",
+    "release_date": "2026-10-09",
+    "filename": "1.0.95.json"
+  },
+  {
+    "version": "1.0.96-0",
+    "release_date": "2026-10-09",
+    "filename": "1.0.96-0.json"
+  },
+  {
+    "version": "1.0.94-3",
+    "release_date": "2026-10-08",
+    "filename": "1.0.94-3.json"
+  },
+  {
+    "version": "1.0.94-4",
+    "release_date": "2026-10-08",
+    "filename": "1.0.94-4.json"
+  },
+  {
+    "version": "1.0.94-5",
+    "release_date": "2026-10-08",
+    "filename": "1.0.94-5.json"
+  },
+  {
+    "version": "1.0.94",
+    "release_date": "2026-10-08",
+    "filename": "1.0.94.json"
+  },
+  {
+    "version": "1.0.95-0",
+    "release_date": "2026-10-08",
+    "filename": "1.0.95-0.json"
+  },
+  {
+    "version": "1.0.93-3",
+    "release_date": "2026-10-07",
+    "filename": "1.0.93-3.json"
+  },
+  {
+    "version": "1.0.93-4",
+    "release_date": "2026-10-07",
+    "filename": "1.0.93-4.json"
+  },
+  {
+    "version": "1.0.93",
+    "release_date": "2026-10-07",
+    "filename": "1.0.93.json"
+  },
+  {
+    "version": "1.0.94-0",
+    "release_date": "2026-10-07",
+    "filename": "1.0.94-0.json"
+  },
+  {
+    "version": "1.0.94-1",
+    "release_date": "2026-10-07",
+    "filename": "1.0.94-1.json"
+  },
+  {
+    "version": "1.0.94-2",
+    "release_date": "2026-10-07",
+    "filename": "1.0.94-2.json"
+  },
+  {
     "version": "1.0.93-1",
     "release_date": "2026-10-06",
     "filename": "1.0.93-1.json"
+  },
+  {
+    "version": "1.0.93-2",
+    "release_date": "2026-10-06",
+    "filename": "1.0.93-2.json"
   },
   {
     "version": "1.0.92-5",
