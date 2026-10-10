@@ -1,0 +1,21 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.95",
+  "release_date": "2026-10-09",
+  "title": "1.0.95",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.95",
+  "source": "api",
+  "body_markdown": "2026-10-09\n\n- Use native Microsoft Entra broker authentication on macOS when available, with browser fallback.\n- copilot config supports sandbox credential injectHosts keys, with key completion in Bash, Zsh, and Fish.\n- --context now applies to new and resumed ACP sessions instead of silently using the default or previously saved context tier\n- Managed plugin setup retries hourly or after policy changes instead of on every message failure",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "2026-10-09",
+    "- Use native Microsoft Entra broker authentication on macOS when available, with browser fallback.",
+    "- copilot config supports sandbox credential injectHosts keys, with key completion in Bash, Zsh, and Fish.",
+    "- --context now applies to new and resumed ACP sessions instead of silently using the default or previously saved context tier",
+    "- Managed plugin setup retries hourly or after policy changes instead of on every message failure"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-10-10T13:34:17Z",
+  "schema_version": 1
+}

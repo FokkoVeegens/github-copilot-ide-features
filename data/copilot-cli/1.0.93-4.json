@@ -1,0 +1,22 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.93-4",
+  "release_date": "2026-10-07",
+  "title": "1.0.93-4",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.93-4",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Command sandboxing is available to all users via /sandbox and --sandbox.\n\n**Fixed**\n- Run safe /user commands immediately during active turns, reject unsafe remote commands during active turns without opening dialogs, and queue commands advertised by relay hosts\n- Plugin skill commands stay available after reloading enabled plugins\n- Sandbox local-network allowlists now include localhost and loopback hosts.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Command sandboxing is available to all users via /sandbox and --sandbox.",
+    "**Fixed**",
+    "- Run safe /user commands immediately during active turns, reject unsafe remote commands during active turns without opening dialogs, and queue commands advertised by relay hosts",
+    "- Plugin skill commands stay available after reloading enabled plugins",
+    "- Sandbox local-network allowlists now include localhost and loopback hosts."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-10T13:34:17Z",
+  "schema_version": 1
+}

@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.94-0",
+  "release_date": "2026-10-07",
+  "title": "1.0.94-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.94-0",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Show update guidance when managed settings request a newer CLI version without blocking normal prompts\n- Managed policy can disable Assisted Permissions and keep sessions in Manual Approval mode.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Show update guidance when managed settings request a newer CLI version without blocking normal prompts",
+    "- Managed policy can disable Assisted Permissions and keep sessions in Manual Approval mode."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-10T13:34:17Z",
+  "schema_version": 1
+}

@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.94-4",
+  "release_date": "2026-10-08",
+  "title": "1.0.94-4",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.94-4",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- MCP enable/disable now works before server discovery without starting MCP servers\n- Assisted permissions send visible shell code to the permission judge instead of requiring unnecessary manual approval",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- MCP enable/disable now works before server discovery without starting MCP servers",
+    "- Assisted permissions send visible shell code to the permission judge instead of requiring unnecessary manual approval"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-10T13:34:17Z",
+  "schema_version": 1
+}

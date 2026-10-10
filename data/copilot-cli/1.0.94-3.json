@@ -1,0 +1,20 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.94-3",
+  "release_date": "2026-10-08",
+  "title": "1.0.94-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.94-3",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add Claude Haiku 5.5 to model selection and --model completions\n\n**Fixed**\n- Show a policy warning when startup bypass-permission flags are suppressed by managed settings",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add Claude Haiku 5.5 to model selection and --model completions",
+    "**Fixed**",
+    "- Show a policy warning when startup bypass-permission flags are suppressed by managed settings"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-10T13:34:17Z",
+  "schema_version": 1
+}
