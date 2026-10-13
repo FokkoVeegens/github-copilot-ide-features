@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.97-2",
+  "release_date": "2026-10-13",
+  "title": "1.0.97-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.97-2",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Discover all custom agents even when repositories define more than 100 or nest agent files deeply.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Discover all custom agents even when repositories define more than 100 or nest agent files deeply."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-13T14:57:40Z",
+  "schema_version": 1
+}
