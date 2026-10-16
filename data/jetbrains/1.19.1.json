@@ -1,0 +1,43 @@
+{
+  "ide": "jetbrains",
+  "version": "1.19.1",
+  "release_date": "2026-10-13",
+  "title": "GitHub Copilot for JetBrains 1.19.1",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "### Bug Fixes\n\n* Fixed errors when opening Copilot Chat, Recent Sessions, and the session navigator in JetBrains IDEs 2026.3 EAP.",
+  "body_html": "<h3>Bug Fixes</h3>\n\n<ul><li>Fixed errors when opening Copilot Chat, Recent Sessions, and the session navigator in JetBrains IDEs 2026.3 EAP.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Fixed errors when opening Copilot Chat, Recent Sessions, and the session navigator in JetBrains IDEs 2026.3 EAP."
+  ],
+  "builds": [
+    {
+      "ide_build": "252",
+      "since": "252.0",
+      "until": "253.*",
+      "compatible_versions": {
+        "DATASPELL": "2025.2 — 2025.3.3",
+        "PHPSTORM": "2025.2 — 2025.3.6.1",
+        "RUST": "2025.2 — 2025.3.7",
+        "DBE": "2025.2 — 2025.3.6",
+        "RUBYMINE": "2025.2 — 2025.3.6.1",
+        "MPS": "2025.2 — 2025.3.2",
+        "ANDROID_STUDIO": "Otter | 2025.2.1 — Panda 4 | 2025.3.4 Patch 1",
+        "GOLAND": "2025.2 — 2025.3.5.1",
+        "IDEA": "2025.2 — 2025.3.6.1",
+        "PYCHARM": "2025.2 — 2025.3.6.1",
+        "PYCHARM_COMMUNITY": "2025.2 — 2025.3",
+        "JBCLIENT": "build 252.0 — 253.*",
+        "WEBSTORM": "2025.2 — 2025.3.6.1",
+        "CLION": "2025.2 — 2025.3.6.2",
+        "IDEA_COMMUNITY": "2025.2 — 2025.3",
+        "RIDER": "2025.2 — 2025.3.5.2"
+      },
+      "file_id": 1192920,
+      "downloads": 42661
+    }
+  ],
+  "fetched_at": "2026-10-16T11:40:20Z",
+  "schema_version": 1
+}
