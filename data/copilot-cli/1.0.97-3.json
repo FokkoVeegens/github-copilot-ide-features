@@ -1,0 +1,20 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.97-3",
+  "release_date": "2026-10-13",
+  "title": "1.0.97-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.97-3",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Remote plugin marketplace and plugin fetches retry once with your signed-in GitHub token after HTTPS auth fails.\n- Streamed responses behind TLS-intercepting proxies complete when close_notify is omitted\n- Fix parsing of GitHub SCP remotes with absolute paths so repository owner and name resolve correctly",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Remote plugin marketplace and plugin fetches retry once with your signed-in GitHub token after HTTPS auth fails.",
+    "- Streamed responses behind TLS-intercepting proxies complete when close_notify is omitted",
+    "- Fix parsing of GitHub SCP remotes with absolute paths so repository owner and name resolve correctly"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-16T12:18:47Z",
+  "schema_version": 1
+}

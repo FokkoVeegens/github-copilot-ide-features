@@ -1,0 +1,20 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.98-2",
+  "release_date": "2026-10-14",
+  "title": "1.0.98-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.98-2",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Expand /ask answers with Ctrl+E, copy the entire answer with Ctrl+Y, and reopen the last usable completed answer in the session with /ask or /btw.\n\n**Fixed**\n- Command hooks complete reliably even when child-exit signals are lost under Node",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Expand /ask answers with Ctrl+E, copy the entire answer with Ctrl+Y, and reopen the last usable completed answer in the session with /ask or /btw.",
+    "**Fixed**",
+    "- Command hooks complete reliably even when child-exit signals are lost under Node"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-16T12:18:47Z",
+  "schema_version": 1
+}

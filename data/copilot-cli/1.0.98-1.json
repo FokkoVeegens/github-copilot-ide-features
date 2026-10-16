@@ -1,0 +1,22 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.98-1",
+  "release_date": "2026-10-14",
+  "title": "1.0.98-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.98-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add support for Gemini 4 Argon\n\n**Fixed**\n- MCP status and /mcp commands stay synced to the active session after split-view session switches\n- Resuming a session now respects abandoned pending-permission work and continues only active permission requests.\n- Keep ordinary characters typed while the input box is still coming up at startup, instead of dropping them",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add support for Gemini 4 Argon",
+    "**Fixed**",
+    "- MCP status and /mcp commands stay synced to the active session after split-view session switches",
+    "- Resuming a session now respects abandoned pending-permission work and continues only active permission requests.",
+    "- Keep ordinary characters typed while the input box is still coming up at startup, instead of dropping them"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-16T12:18:47Z",
+  "schema_version": 1
+}
