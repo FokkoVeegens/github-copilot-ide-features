@@ -1,0 +1,31 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.99-1",
+  "release_date": "2026-10-15",
+  "title": "1.0.99-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.99-1",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add --trust-folder for one-off prompt-mode sessions started with -p or piped stdin\n- Install verified Skills and plugins from GitHub install links via copilot plugin install \"ghapp://air/install?...\"\n\n**Improved**\n- Improve /login for Microsoft Entra by letting you choose a cached account or explicitly sign in with a different account\n- Sandboxed git on github.com can use your configured GITHUB_TOKEN from credentials.envVars\n\n**Fixed**\n- HydraFusion keeps a pass expanded while its review runs, passes that were not kept stay expandable until you switch sessions or resume, and passes from an aborted turn say whether they were kept\n- Managed account policy and bypass-mode warnings stay accurate after switching accounts, even when a policy cache miss happens.\n- Avoid false context exhaustion and rollover refusal when tool definitions are deferred\n- Custom agents that declare the documented `search`, `web` or `todo` tool aliases, or name `github-mcp-server/web_search`, now receive the matching tools\n- CLI help and version flags exit reliably after printing their output\n- Enterprise-managed ask permissions in Assisted mode now allow safe actions without unnecessary confirmation prompts.\n- Keep your selected Microsoft Entra account pinned during sign-in and token renewal\n- Up from sessions sidebar header actions wraps to the last visible session",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add --trust-folder for one-off prompt-mode sessions started with -p or piped stdin",
+    "- Install verified Skills and plugins from GitHub install links via copilot plugin install \"ghapp://air/install?...\"",
+    "**Improved**",
+    "- Improve /login for Microsoft Entra by letting you choose a cached account or explicitly sign in with a different account",
+    "- Sandboxed git on github.com can use your configured GITHUB_TOKEN from credentials.envVars",
+    "**Fixed**",
+    "- HydraFusion keeps a pass expanded while its review runs, passes that were not kept stay expandable until you switch sessions or resume, and passes from an aborted turn say whether they were kept",
+    "- Managed account policy and bypass-mode warnings stay accurate after switching accounts, even when a policy cache miss happens.",
+    "- Avoid false context exhaustion and rollover refusal when tool definitions are deferred",
+    "- Custom agents that declare the documented `search`, `web` or `todo` tool aliases, or name `github-mcp-server/web_search`, now receive the matching tools",
+    "- CLI help and version flags exit reliably after printing their output",
+    "- Enterprise-managed ask permissions in Assisted mode now allow safe actions without unnecessary confirmation prompts.",
+    "- Keep your selected Microsoft Entra account pinned during sign-in and token renewal",
+    "- Up from sessions sidebar header actions wraps to the last visible session"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-16T12:18:47Z",
+  "schema_version": 1
+}

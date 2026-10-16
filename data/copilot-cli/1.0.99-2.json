@@ -1,0 +1,25 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.99-2",
+  "release_date": "2026-10-16",
+  "title": "1.0.99-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.99-2",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Show a clear notice when administrator-managed settings override your selected model\n- Enable semantic code search by default for online sessions.\n\n**Fixed**\n- Sandboxed commands on Linux start more reliably without intermittent loopback setup failures\n- Back from MCP resource details stays on the list during live metadata refreshes\n- Native chats can start and finish while optional managed plugin downloads continue in the background.\n- Double Ctrl+C exits immediately even when the CLI UI is busy\n- Catalog search reports proxy authentication requirements for CONNECT proxy challenges",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Show a clear notice when administrator-managed settings override your selected model",
+    "- Enable semantic code search by default for online sessions.",
+    "**Fixed**",
+    "- Sandboxed commands on Linux start more reliably without intermittent loopback setup failures",
+    "- Back from MCP resource details stays on the list during live metadata refreshes",
+    "- Native chats can start and finish while optional managed plugin downloads continue in the background.",
+    "- Double Ctrl+C exits immediately even when the CLI UI is busy",
+    "- Catalog search reports proxy authentication requirements for CONNECT proxy challenges"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-16T12:18:47Z",
+  "schema_version": 1
+}
