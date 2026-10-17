@@ -1,0 +1,24 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.99-3",
+  "release_date": "2026-10-16",
+  "title": "1.0.99-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.99-3",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add --disable-client-telemetry flag to turn off client telemetry uploads from the CLI\n\n**Fixed**\n- Sandboxed shell commands now explain credential-proxy certificate trust failures and can offer an approved rerun outside the sandbox.\n- Keep saved /diff review comments when reopening an unchanged diff in the same session, with an explicit discard action.\n- Plugin enable, disable, update, and uninstall actions now route reliably after plugin inventory refreshes.\n- Reasoning-only max-token responses no longer loop indefinitely and now end with a clear error when no progress is made\n- Show a clear warning and keep the active model display in sync when a saved model is automatically replaced on resume.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add --disable-client-telemetry flag to turn off client telemetry uploads from the CLI",
+    "**Fixed**",
+    "- Sandboxed shell commands now explain credential-proxy certificate trust failures and can offer an approved rerun outside the sandbox.",
+    "- Keep saved /diff review comments when reopening an unchanged diff in the same session, with an explicit discard action.",
+    "- Plugin enable, disable, update, and uninstall actions now route reliably after plugin inventory refreshes.",
+    "- Reasoning-only max-token responses no longer loop indefinitely and now end with a clear error when no progress is made",
+    "- Show a clear warning and keep the active model display in sync when a saved model is automatically replaced on resume."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-17T11:32:35Z",
+  "schema_version": 1
+}

@@ -1,0 +1,23 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.100-0",
+  "release_date": "2026-10-16",
+  "title": "1.0.100-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.100-0",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Prompt to update the sandbox proxy certificate authority when masked hosts change\n\n**Fixed**\n- Managed plugins update activation in existing sessions when managed policy changes\n- Sessions no longer stall for minutes when an MCP server hangs while loading tools.\n- Gemini tool calls no longer fail when array parameters define enum values\n- Gemini chats no longer fail after earlier tool results contain no readable content.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Prompt to update the sandbox proxy certificate authority when masked hosts change",
+    "**Fixed**",
+    "- Managed plugins update activation in existing sessions when managed policy changes",
+    "- Sessions no longer stall for minutes when an MCP server hangs while loading tools.",
+    "- Gemini tool calls no longer fail when array parameters define enum values",
+    "- Gemini chats no longer fail after earlier tool results contain no readable content."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-17T11:32:35Z",
+  "schema_version": 1
+}
