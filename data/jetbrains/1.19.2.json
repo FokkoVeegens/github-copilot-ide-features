@@ -1,0 +1,43 @@
+{
+  "ide": "jetbrains",
+  "version": "1.19.2",
+  "release_date": "2026-10-19",
+  "title": "GitHub Copilot for JetBrains 1.19.2",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "### Bug Fixes\n\n* Fixed the **What's New** tab failing to open on IntelliJ 2026.3.",
+  "body_html": "<h3>Bug Fixes</h3>\n\n<ul><li>Fixed the <strong>What's New</strong> tab failing to open on IntelliJ 2026.3.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Fixed the **What's New** tab failing to open on IntelliJ 2026.3."
+  ],
+  "builds": [
+    {
+      "ide_build": "252",
+      "since": "252.0",
+      "until": "253.*",
+      "compatible_versions": {
+        "RIDER": "2025.2 — 2025.3.5.2",
+        "CLION": "2025.2 — 2025.3.6.2",
+        "DBE": "2025.2 — 2025.3.6",
+        "IDEA_COMMUNITY": "2025.2 — 2025.3",
+        "PYCHARM_COMMUNITY": "2025.2 — 2025.3",
+        "ANDROID_STUDIO": "Otter | 2025.2.1 — Panda 4 | 2025.3.4 Patch 1",
+        "PYCHARM": "2025.2 — 2025.3.6.1",
+        "GOLAND": "2025.2 — 2025.3.5.1",
+        "WEBSTORM": "2025.2 — 2025.3.6.1",
+        "MPS": "2025.2 — 2025.3.2",
+        "RUST": "2025.2 — 2025.3.7",
+        "PHPSTORM": "2025.2 — 2025.3.6.1",
+        "IDEA": "2025.2 — 2025.3.6.1",
+        "RUBYMINE": "2025.2 — 2025.3.6.1",
+        "DATASPELL": "2025.2 — 2025.3.3",
+        "JBCLIENT": "build 252.0 — 253.*"
+      },
+      "file_id": 1197890,
+      "downloads": 39737
+    }
+  ],
+  "fetched_at": "2026-10-22T12:08:05Z",
+  "schema_version": 1
+}
