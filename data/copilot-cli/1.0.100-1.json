@@ -1,0 +1,22 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.100-1",
+  "release_date": "2026-10-16",
+  "title": "1.0.100-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.100-1",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Use the unified Sessions browser by default for /sessions, /session, and /resume.\n- Session browsing now caps account discovery at 500 records and respects Retry-After hints for automatic refresh timing.\n\n**Fixed**\n- Sandbox host-rule traffic now honors HTTPS_PROXY and HTTP_PROXY when no sandbox proxy is configured\n- Voice dictation no longer inserts language markers like <en-US> into transcript text",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Use the unified Sessions browser by default for /sessions, /session, and /resume.",
+    "- Session browsing now caps account discovery at 500 records and respects Retry-After hints for automatic refresh timing.",
+    "**Fixed**",
+    "- Sandbox host-rule traffic now honors HTTPS_PROXY and HTTP_PROXY when no sandbox proxy is configured",
+    "- Voice dictation no longer inserts language markers like <en-US> into transcript text"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-22T12:55:03Z",
+  "schema_version": 1
+}

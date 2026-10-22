@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.102-1",
+  "release_date": "2026-10-21",
+  "title": "1.0.102-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.102-1",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Prompt mode now honors managed Auto model selection for -p and piped stdin runs\n- Subagents honor custom and MCP tool approvals, avoiding duplicate permission prompts and allowing inherited workflows to run",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Prompt mode now honors managed Auto model selection for -p and piped stdin runs",
+    "- Subagents honor custom and MCP tool approvals, avoiding duplicate permission prompts and allowing inherited workflows to run"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-22T12:55:03Z",
+  "schema_version": 1
+}
