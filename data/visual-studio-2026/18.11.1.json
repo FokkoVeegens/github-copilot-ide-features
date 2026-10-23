@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2026",
+  "version": "18.11.1",
+  "release_date": "2026-10-20",
+  "title": "Version 18.11.1",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+  "source": "html",
+  "body_markdown": "Released on **October 20, 2026**.\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Fixed issue debugging compose projects due to overeager failover to wslc | [Feedback ticket](https://developercommunity.visualstudio.com/t/Visual-Studio-CtrlF5-blocks-Docker-Comp/11160129) |\n| Updating the installer to include the latest servicing release of the 10.0.26100 Windows SDK (10.0.26100.9457) |  |\n| C++23 feature complete in IntelliSense minus modules support |  |",
+  "body_html": "<p>Released on <strong>October 20, 2026</strong>.</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: left;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Fixed issue debugging compose projects due to overeager failover to wslc</td>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Visual-Studio-CtrlF5-blocks-Docker-Comp/11160129\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Updating the installer to include the latest servicing release of the 10.0.26100 Windows SDK (10.0.26100.9457)</td>\n<td style=\"text-align: left;\"></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">C++23 feature complete in IntelliSense minus modules support</td>\n<td style=\"text-align: left;\"></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-10-22T12:21:44Z",
+  "schema_version": 1
+}
