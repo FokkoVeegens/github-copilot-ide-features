@@ -1,0 +1,32 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.101-0",
+  "release_date": "2026-10-19",
+  "title": "1.0.101-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.101-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add native structured output for dynamic workflow subagents on supported models\n- Add assistedApprovalInstructions setting to guide Assisted Permissions confirmation decisions\n\n**Fixed**\n- Shared MCP auth errors point to your client's sign-in settings; CLI authentication warnings still show /mcp auth.\n- Switching from GPT models to Gemini no longer fails when earlier turns include custom tool calls\n- Google model requests now respect registry image limits to avoid image-count request failures\n- The first prompt no longer hangs silently when no model is selected at startup; the CLI now asks you to pick one with /model and keeps your prompt\n- /usage now shows just the model name for BYOK and other rows without a provider label instead of \"Unknown provider\"\n- Cancelling an admission-gated prompt now re-enables Enter without requiring extra typing while background work continues.\n- Model picker marks your administrator-managed model as the default when it is available\n- Preserve MCP PNG images that include ICC color profiles instead of omitting them\n- Windows shell commands start reliably in restored sessions and clean up orphaned child processes\n- Switching to HydraFusion compacts only when the routed model actually needs it\n- CLI model lists refresh after endpoint updates instead of staying stale or empty\n- Windows taskbar icon staging avoids concurrent temp-file collisions so icon presence remains stable across launches.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add native structured output for dynamic workflow subagents on supported models",
+    "- Add assistedApprovalInstructions setting to guide Assisted Permissions confirmation decisions",
+    "**Fixed**",
+    "- Shared MCP auth errors point to your client's sign-in settings; CLI authentication warnings still show /mcp auth.",
+    "- Switching from GPT models to Gemini no longer fails when earlier turns include custom tool calls",
+    "- Google model requests now respect registry image limits to avoid image-count request failures",
+    "- The first prompt no longer hangs silently when no model is selected at startup; the CLI now asks you to pick one with /model and keeps your prompt",
+    "- /usage now shows just the model name for BYOK and other rows without a provider label instead of \"Unknown provider\"",
+    "- Cancelling an admission-gated prompt now re-enables Enter without requiring extra typing while background work continues.",
+    "- Model picker marks your administrator-managed model as the default when it is available",
+    "- Preserve MCP PNG images that include ICC color profiles instead of omitting them",
+    "- Windows shell commands start reliably in restored sessions and clean up orphaned child processes",
+    "- Switching to HydraFusion compacts only when the routed model actually needs it",
+    "- CLI model lists refresh after endpoint updates instead of staying stale or empty",
+    "- Windows taskbar icon staging avoids concurrent temp-file collisions so icon presence remains stable across launches."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-22T12:55:03Z",
+  "schema_version": 1
+}
