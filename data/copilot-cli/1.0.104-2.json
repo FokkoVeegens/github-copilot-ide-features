@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.104-2",
+  "release_date": "2026-10-24",
+  "title": "1.0.104-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.104-2",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Managed model \"fusion\" now starts sessions on Auto and applies fusionTier settings\n- Interactive and SDK Autopilot sessions keep waiting for attached background tasks instead of stopping after COPILOT_TASK_WAIT_TIMEOUT_SECONDS; `-p --autopilot` still honors it",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Managed model \"fusion\" now starts sessions on Auto and applies fusionTier settings",
+    "- Interactive and SDK Autopilot sessions keep waiting for attached background tasks instead of stopping after COPILOT_TASK_WAIT_TIMEOUT_SECONDS; `-p --autopilot` still honors it"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-24T11:57:39Z",
+  "schema_version": 1
+}

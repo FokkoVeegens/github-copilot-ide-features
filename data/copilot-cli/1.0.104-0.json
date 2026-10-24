@@ -1,0 +1,20 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.104-0",
+  "release_date": "2026-10-23",
+  "title": "1.0.104-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.104-0",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Assisted Permissions are available without enabling experimental mode.\n\n**Fixed**\n- When a saved Auto preference is no longer available, Auto falls back to its default preference instead of failing each turn",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Assisted Permissions are available without enabling experimental mode.",
+    "**Fixed**",
+    "- When a saved Auto preference is no longer available, Auto falls back to its default preference instead of failing each turn"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-10-24T11:57:39Z",
+  "schema_version": 1
+}
