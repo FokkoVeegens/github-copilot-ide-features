@@ -1,0 +1,29 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.103",
+  "release_date": "2026-10-22",
+  "title": "1.0.103",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.103",
+  "source": "api",
+  "body_markdown": "2026-10-22\n\n- Clicking a completed response code block copies its original code when enabled.\n- ACP sessions now honor saved sandbox settings and --sandbox/--no-sandbox flags, including on resume.\n- Cloud replies keep full text when the CLI reconnects after a dropped connection\n- Sessions browser shows a session's recorded title instead of a generic Session N fallback when available\n- Model-specific default Responses verbosity now applies correctly for GPT-5 models unless session verbosity is explicitly set\n- Allow dnx commands to use existing .NET and NuGet sandbox grants when developer-tool access is enabled\n- Windows dev-tool shims like npm.cmd now receive the same sandbox grants as npm.\n- Gemini tool calls now avoid 400 schema validation errors for nullable and enum fields\n- Resume sessions under mandatory managed model defaults without rejecting saved preferences\n- Hash mention suggestions refresh automatically when the GitHub client becomes ready\n- Reuse cached local MCP tool snapshots across registered Git worktrees in one repository\n- Improve remote launch options with clearer hosting/connection flags and retire legacy --remote/--no-remote startup flags",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "2026-10-22",
+    "- Clicking a completed response code block copies its original code when enabled.",
+    "- ACP sessions now honor saved sandbox settings and --sandbox/--no-sandbox flags, including on resume.",
+    "- Cloud replies keep full text when the CLI reconnects after a dropped connection",
+    "- Sessions browser shows a session's recorded title instead of a generic Session N fallback when available",
+    "- Model-specific default Responses verbosity now applies correctly for GPT-5 models unless session verbosity is explicitly set",
+    "- Allow dnx commands to use existing .NET and NuGet sandbox grants when developer-tool access is enabled",
+    "- Windows dev-tool shims like npm.cmd now receive the same sandbox grants as npm.",
+    "- Gemini tool calls now avoid 400 schema validation errors for nullable and enum fields",
+    "- Resume sessions under mandatory managed model defaults without rejecting saved preferences",
+    "- Hash mention suggestions refresh automatically when the GitHub client becomes ready",
+    "- Reuse cached local MCP tool snapshots across registered Git worktrees in one repository",
+    "- Improve remote launch options with clearer hosting/connection flags and retire legacy --remote/--no-remote startup flags"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-10-24T11:57:39Z",
+  "schema_version": 1
+}
