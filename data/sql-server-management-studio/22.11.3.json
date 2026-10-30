@@ -1,0 +1,14 @@
+{
+  "ide": "sql-server-management-studio",
+  "version": "22.11.3",
+  "release_date": "2026-10-29",
+  "title": "22.11.3",
+  "url": "https://learn.microsoft.com/en-us/ssms/release-notes-22",
+  "source": "html",
+  "body_markdown": "**[Download SQL Server Management Studio (SSMS) 22](https://aka.ms/ssms/22/release/vs_SSMS.exe)**\n\n* Release number: 22.11.3\n* Release date: October 29, 2026\n\n#### What's new in 22.11.3\n\n| Feature | Details |\n| --- | --- |\n| Visual Studio | Updated to Visual Studio 18.11.3 [12328.437] |\n\n#### Bug fixes in 22.11.3\n\n| Feature | Description |\n| --- | --- |\n| Security | For a list of security vulnerabilities addressed, see the [Visual Studio Release Notes](/en-us/visualstudio/releases/2026/release-notes#18.11.3). |",
+  "body_html": "<p><strong><a data-linktype=\"external\" href=\"https://aka.ms/ssms/22/release/vs_SSMS.exe\">Download SQL Server Management Studio (SSMS) 22</a></strong></p>\n<ul>\n<li>Release number: 22.11.3</li>\n<li>Release date: October 29, 2026</li>\n</ul>\n<h4 id=\"whats-new-in-22113\">What's new in 22.11.3</h4>\n<table>\n<thead>\n<tr>\n<th>Feature</th>\n<th>Details</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Visual Studio</td>\n<td>Updated to Visual Studio 18.11.3 [12328.437]</td>\n</tr>\n</tbody>\n</table>\n<h4 id=\"bug-fixes-in-22113\">Bug fixes in 22.11.3</h4>\n<table>\n<thead>\n<tr>\n<th>Feature</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Security</td>\n<td>For a list of security vulnerabilities addressed, see the <a data-linktype=\"absolute-path\" href=\"/en-us/visualstudio/releases/2026/release-notes#18.11.3\">Visual Studio Release Notes</a>.</td>\n</tr>\n</tbody>\n</table>\n<p><a id=\"22.11.2\"></a></p>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-10-30T13:38:00Z",
+  "schema_version": 1
+}
