@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2026",
+  "version": "18.11.2",
+  "release_date": "2026-10-25",
+  "title": "Version 18.11.2",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+  "source": "html",
+  "body_markdown": "Released on **October 25, 2026**.\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Updated IntelliSense error strings |  |\n\n### Security Advisory Notices\n\n| Advisory | CVE | Description |\n| --- | --- | --- |\n| [CVE-2026-102870](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-102870) | CVE-2026-102870 | ASP.NET Core Blazor Remote Code Execution Vulnerability |\n| [CVE-2026-70197](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70197) | CVE-2026-70197 | .NET Remote Code Execution Vulnerability |\n| [CVE-2026-111497](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-111497) | CVE-2026-111497 | Brotli Decoder Out-of-bounds Write Vulnerability |\n\n**Known Issue**\n\n* [Visual Studio F5 fails to launch Blazor WebAssembly debug adapter](https://developercommunity.visualstudio.com/t/Visual-Studio-F5-fails-to-launch-Blazor/11172634)",
+  "body_html": "<p>Released on <strong>October 25, 2026</strong>.</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: left;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Updated IntelliSense error strings</td>\n<td style=\"text-align: left;\"></td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"security-advisory-notices-1\">Security Advisory Notices</h3>\n<table>\n<thead>\n<tr>\n<th>Advisory</th>\n<th>CVE</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><a data-linktype=\"external\" href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-102870\">CVE-2026-102870</a></td>\n<td>CVE-2026-102870</td>\n<td>ASP.NET Core Blazor Remote Code Execution Vulnerability</td>\n</tr>\n<tr>\n<td><a data-linktype=\"external\" href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-70197\">CVE-2026-70197</a></td>\n<td>CVE-2026-70197</td>\n<td>.NET Remote Code Execution Vulnerability</td>\n</tr>\n<tr>\n<td><a data-linktype=\"external\" href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-111497\">CVE-2026-111497</a></td>\n<td>CVE-2026-111497</td>\n<td>Brotli Decoder Out-of-bounds Write Vulnerability</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Known Issue</strong></p>\n<ul>\n<li><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Visual-Studio-F5-fails-to-launch-Blazor/11172634\">Visual Studio F5 fails to launch Blazor WebAssembly debug adapter</a></li>\n</ul>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-10-30T13:29:44Z",
+  "schema_version": 1
+}
