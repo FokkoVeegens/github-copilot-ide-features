@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.105",
+  "release_date": "2026-10-28",
+  "title": "1.0.105",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.105",
+  "source": "api",
+  "body_markdown": "2026-10-27\n\n- Selecting Copilot Fusion High or Max in /model now works from long-context sessions",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "2026-10-27",
+    "- Selecting Copilot Fusion High or Max in /model now works from long-context sessions"
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-10-30T14:01:33Z",
+  "schema_version": 1
+}
