@@ -1,0 +1,22 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.106-2",
+  "release_date": "2026-11-01",
+  "title": "1.0.106-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.106-2",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- With --screen-reader, failed and rejected tool calls, errors such as an unknown command, and warnings now begin with \"Error:\" or \"Warning:\" instead of reading like any other message.\n- /resume <session-id> foregrounds an already running background session instead of showing it twice on exit\n- An HTTP MCP server that accepts connections but never answers now holds startup for its connection timeout once, instead of three times over\n- Saving MCP server changes preserves symlinked mcp-config.json files and updates the symlink target.\n- Keep /skills add, remove, and reload in sync with session skills and report refresh failures immediately",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- With --screen-reader, failed and rejected tool calls, errors such as an unknown command, and warnings now begin with \"Error:\" or \"Warning:\" instead of reading like any other message.",
+    "- /resume <session-id> foregrounds an already running background session instead of showing it twice on exit",
+    "- An HTTP MCP server that accepts connections but never answers now holds startup for its connection timeout once, instead of three times over",
+    "- Saving MCP server changes preserves symlinked mcp-config.json files and updates the symlink target.",
+    "- Keep /skills add, remove, and reload in sync with session skills and report refresh failures immediately"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-07T13:55:15Z",
+  "schema_version": 1
+}
