@@ -1,0 +1,32 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.106-9",
+  "release_date": "2026-11-04",
+  "title": "1.0.106-9",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.106-9",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- apply_patch no longer counts one extra line for each file it adds or deletes, so the timeline summary, permission prompt, /usage and exit summary show the real line counts\n- `copilot config` now warns when a value of the wrong type makes settings.json ignored, instead of reading every setting as unset and reporting writes into that file as if they took effect\n- Deleting text in front of Chinese, Japanese or Korean characters in the prompt no longer leaves the line garbled until the next edit.\n- Markdown output no longer turns colon-delimited text such as file.ts:100:5 or crate::id::Id into emoji.\n- A top-level SKILL.md in a skills directory now produces a warning in /skills explaining that subdirectories are resources, not separate skills, and how to load them.\n- A message sent while the agent is working that mentions a file or directory (`@path`) is no longer rejected with \"Submission failed\" when an earlier one is still waiting.\n- /keep-alive busy releases sleep prevention once all tracked sessions finish working, including background turns and standalone local-shell commands\n- Git URL caches use short paths and diagnose path-length failures. Old caches are copied, not moved, and kept for older CLIs; delete the originals manually when no longer needed.\n- ACP session/prompt and session/cancel stop only the active turn, keeping background tasks and shell commands running\n- Long conversations now recover from oversized requests by trimming historical reasoning and retrying.\n- Prompt before out-of-workspace access through dangling symlinks\n- Rewinding and resubmitting a prompt now keeps image and file attachments.\n- Sessions recover from unavailable program endpoints and continue answering prompts\n- Skill calls explain when model invocation is disabled instead of reporting the skill as not found\n- /memory now reports when Memory is disabled for the session by an experiment and clarifies /memory on behavior.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- apply_patch no longer counts one extra line for each file it adds or deletes, so the timeline summary, permission prompt, /usage and exit summary show the real line counts",
+    "- `copilot config` now warns when a value of the wrong type makes settings.json ignored, instead of reading every setting as unset and reporting writes into that file as if they took effect",
+    "- Deleting text in front of Chinese, Japanese or Korean characters in the prompt no longer leaves the line garbled until the next edit.",
+    "- Markdown output no longer turns colon-delimited text such as file.ts:100:5 or crate::id::Id into emoji.",
+    "- A top-level SKILL.md in a skills directory now produces a warning in /skills explaining that subdirectories are resources, not separate skills, and how to load them.",
+    "- A message sent while the agent is working that mentions a file or directory (`@path`) is no longer rejected with \"Submission failed\" when an earlier one is still waiting.",
+    "- /keep-alive busy releases sleep prevention once all tracked sessions finish working, including background turns and standalone local-shell commands",
+    "- Git URL caches use short paths and diagnose path-length failures. Old caches are copied, not moved, and kept for older CLIs; delete the originals manually when no longer needed.",
+    "- ACP session/prompt and session/cancel stop only the active turn, keeping background tasks and shell commands running",
+    "- Long conversations now recover from oversized requests by trimming historical reasoning and retrying.",
+    "- Prompt before out-of-workspace access through dangling symlinks",
+    "- Rewinding and resubmitting a prompt now keeps image and file attachments.",
+    "- Sessions recover from unavailable program endpoints and continue answering prompts",
+    "- Skill calls explain when model invocation is disabled instead of reporting the skill as not found",
+    "- /memory now reports when Memory is disabled for the session by an experiment and clarifies /memory on behavior."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-07T13:55:15Z",
+  "schema_version": 1
+}
