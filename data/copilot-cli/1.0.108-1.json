@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.108-1",
+  "release_date": "2026-11-07",
+  "title": "1.0.108-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.108-1",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- PDF attachments on Grok 4.7 and Grok 4.6 fall back to file references instead of failing the turn\n- With the sandbox on, a running local MCP server is now restarted after `/cd`, so it follows the new directory's denied paths instead of keeping those of the directory the session left.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- PDF attachments on Grok 4.7 and Grok 4.6 fall back to file references instead of failing the turn",
+    "- With the sandbox on, a running local MCP server is now restarted after `/cd`, so it follows the new directory's denied paths instead of keeping those of the directory the session left."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-08T14:15:03Z",
+  "schema_version": 1
+}

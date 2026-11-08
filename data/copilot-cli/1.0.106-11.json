@@ -1,0 +1,27 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.106-11",
+  "release_date": "2026-11-05",
+  "title": "1.0.106-11",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.106-11",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- An image removed from the prompt with Ctrl+U, Ctrl+K or Ctrl+W, or replaced by a recalled history entry, is no longer sent with the message, and Ctrl+S can stash the prompt afterwards.\n- Pasted text containing NEL, Unicode line or paragraph separators now fills separate prompt lines, and pasted DEL and C1 control characters are dropped, instead of being kept in the prompt and cutting characters off the end of the row.\n- In `copilot -p --plan`, the agent is no longer told to suggest Shift+Tab to leave plan mode, which only works in the interactive interface, and is asked to include the plan's key points in its reply instead.\n- `copilot --resume <id>` no longer waits with no output and no end when the Copilot task service does not respond; the task lookup now gives up after 10 seconds and resolution continues.\n- Sandboxed grep, rg, and glob now report Windows launch failures instead of silent no-match results\n- Model picker shows context window size for flat, unpriced, and single-tier models\n- Sandboxed local MCP servers respect relative filesystem permissions from the session directory, even when configured with a different working directory.\n- PowerShell commands work on Windows when the CLI is installed in a long directory path\n- Switching sessions while other sessions are busy no longer crashes the CLI and leaves a blank terminal\n- Keep readable image attachments when retrying a prompt that contains a corrupt image",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- An image removed from the prompt with Ctrl+U, Ctrl+K or Ctrl+W, or replaced by a recalled history entry, is no longer sent with the message, and Ctrl+S can stash the prompt afterwards.",
+    "- Pasted text containing NEL, Unicode line or paragraph separators now fills separate prompt lines, and pasted DEL and C1 control characters are dropped, instead of being kept in the prompt and cutting characters off the end of the row.",
+    "- In `copilot -p --plan`, the agent is no longer told to suggest Shift+Tab to leave plan mode, which only works in the interactive interface, and is asked to include the plan's key points in its reply instead.",
+    "- `copilot --resume <id>` no longer waits with no output and no end when the Copilot task service does not respond; the task lookup now gives up after 10 seconds and resolution continues.",
+    "- Sandboxed grep, rg, and glob now report Windows launch failures instead of silent no-match results",
+    "- Model picker shows context window size for flat, unpriced, and single-tier models",
+    "- Sandboxed local MCP servers respect relative filesystem permissions from the session directory, even when configured with a different working directory.",
+    "- PowerShell commands work on Windows when the CLI is installed in a long directory path",
+    "- Switching sessions while other sessions are busy no longer crashes the CLI and leaves a blank terminal",
+    "- Keep readable image attachments when retrying a prompt that contains a corrupt image"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-08T14:15:03Z",
+  "schema_version": 1
+}
