@@ -1,0 +1,31 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.106-1",
+  "release_date": "2026-10-31",
+  "title": "1.0.106-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.106-1",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- apply_patch keeps the line ending of every line it does not change in a file that mixes LF and CRLF endings, instead of rewriting the whole file to the ending of its first few lines.\n- `COPILOT_PROVIDER_GHES_HOST` now accepts the instance's browser address, such as `https://ghes.example.com/`, instead of failing with a malformed `https://https//...` URL, and a value that is not a host name fails with an error explaining the expected format.\n- Text pasted over several lines after `/clear`, `/new`, `/ask`, `/delegate` or `/diagnose` keeps its line breaks and indentation instead of reaching the model as one line\n- A copilot -p run stopped by Ctrl+C or a signal now finishes writing the session's shutdown record (usage and code-change totals) before it exits\n- A session.resume request whose params are not a JSON object now fails with an error instead of crashing the copilot --server process\n- web_fetch now decodes pages in the character encoding they declare (Content-Type charset or a meta tag), so ISO-8859-1, windows-1252 and other non-UTF-8 pages no longer reach the model with their accented characters replaced.\n- Session picker closes immediately after a /resume switch commits\n- Fix clipboard copy on WSL by running clip.exe with compatible cmd.exe arguments\n- Generated images now save correctly on filesystems without hard-link support\n- Return the original refusal when an organization disables a Claude fallback model\n- Blocked MCP server warnings now include the specific registry failure reason.\n- Rewind keeps turns where agents edit files above the capture size limit\n- Reopening a recently closed local session no longer stalls for up to 30 seconds\n- Sources a tool returns for citations are kept with the tool result, so Claude can still cite them after a session is resumed",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- apply_patch keeps the line ending of every line it does not change in a file that mixes LF and CRLF endings, instead of rewriting the whole file to the ending of its first few lines.",
+    "- `COPILOT_PROVIDER_GHES_HOST` now accepts the instance's browser address, such as `https://ghes.example.com/`, instead of failing with a malformed `https://https//...` URL, and a value that is not a host name fails with an error explaining the expected format.",
+    "- Text pasted over several lines after `/clear`, `/new`, `/ask`, `/delegate` or `/diagnose` keeps its line breaks and indentation instead of reaching the model as one line",
+    "- A copilot -p run stopped by Ctrl+C or a signal now finishes writing the session's shutdown record (usage and code-change totals) before it exits",
+    "- A session.resume request whose params are not a JSON object now fails with an error instead of crashing the copilot --server process",
+    "- web_fetch now decodes pages in the character encoding they declare (Content-Type charset or a meta tag), so ISO-8859-1, windows-1252 and other non-UTF-8 pages no longer reach the model with their accented characters replaced.",
+    "- Session picker closes immediately after a /resume switch commits",
+    "- Fix clipboard copy on WSL by running clip.exe with compatible cmd.exe arguments",
+    "- Generated images now save correctly on filesystems without hard-link support",
+    "- Return the original refusal when an organization disables a Claude fallback model",
+    "- Blocked MCP server warnings now include the specific registry failure reason.",
+    "- Rewind keeps turns where agents edit files above the capture size limit",
+    "- Reopening a recently closed local session no longer stalls for up to 30 seconds",
+    "- Sources a tool returns for citations are kept with the tool result, so Claude can still cite them after a session is resumed"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-08T14:15:03Z",
+  "schema_version": 1
+}
