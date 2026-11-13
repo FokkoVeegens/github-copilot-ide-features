@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths: ['data/**', 'site/**', 'scripts/**', 'config/ides.yml']
+  workflow_dispatch:
 
 permissions:
   contents: read
