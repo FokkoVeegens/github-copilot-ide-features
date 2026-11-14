@@ -1,8 +1,58 @@
 [
   {
+    "version": "1.0.111-0",
+    "release_date": "2026-11-13",
+    "filename": "1.0.111-0.json"
+  },
+  {
+    "version": "1.0.111",
+    "release_date": "2026-11-13",
+    "filename": "1.0.111.json"
+  },
+  {
+    "version": "1.0.112-0",
+    "release_date": "2026-11-13",
+    "filename": "1.0.112-0.json"
+  },
+  {
+    "version": "1.0.112",
+    "release_date": "2026-11-13",
+    "filename": "1.0.112.json"
+  },
+  {
+    "version": "1.0.110-3",
+    "release_date": "2026-11-12",
+    "filename": "1.0.110-3.json"
+  },
+  {
+    "version": "1.0.110",
+    "release_date": "2026-11-12",
+    "filename": "1.0.110.json"
+  },
+  {
+    "version": "1.0.110-2",
+    "release_date": "2026-11-11",
+    "filename": "1.0.110-2.json"
+  },
+  {
     "version": "1.0.109-1",
     "release_date": "2026-11-10",
     "filename": "1.0.109-1.json"
+  },
+  {
+    "version": "1.0.109",
+    "release_date": "2026-11-10",
+    "filename": "1.0.109.json"
+  },
+  {
+    "version": "1.0.110-0",
+    "release_date": "2026-11-10",
+    "filename": "1.0.110-0.json"
+  },
+  {
+    "version": "1.0.110-1",
+    "release_date": "2026-11-10",
+    "filename": "1.0.110-1.json"
   },
   {
     "version": "1.0.108",

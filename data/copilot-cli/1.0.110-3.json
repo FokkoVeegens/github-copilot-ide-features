@@ -1,0 +1,25 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.110-3",
+  "release_date": "2026-11-12",
+  "title": "1.0.110-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.110-3",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Avoid unnecessary error popups during Microsoft Entra sign-in when an organization account is available\n- Screen readers identify the current session and announce when sessions need attention or are idle in the Sessions list\n- /usage model rows wrap at the terminal width instead of breaking at 100 columns\n- The / command picker no longer lists, preselects or runs a skill for a word that the skill's description hides inside a terminal escape sequence; only words the description shows match\n- Preserve keys typed just as the Ctrl+X shortcut window closes\n- Keep session rows and the selection cursor visible in the Sessions tab in narrow or short terminals\n- Preserve existing MCP configuration when /mcp add or /mcp edit encounters an invalid configuration file, and show a save error\n- Hide empty Thought rows when reasoning contains only invisible characters",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Avoid unnecessary error popups during Microsoft Entra sign-in when an organization account is available",
+    "- Screen readers identify the current session and announce when sessions need attention or are idle in the Sessions list",
+    "- /usage model rows wrap at the terminal width instead of breaking at 100 columns",
+    "- The / command picker no longer lists, preselects or runs a skill for a word that the skill's description hides inside a terminal escape sequence; only words the description shows match",
+    "- Preserve keys typed just as the Ctrl+X shortcut window closes",
+    "- Keep session rows and the selection cursor visible in the Sessions tab in narrow or short terminals",
+    "- Preserve existing MCP configuration when /mcp add or /mcp edit encounters an invalid configuration file, and show a save error",
+    "- Hide empty Thought rows when reasoning contains only invisible characters"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-14T14:04:28Z",
+  "schema_version": 1
+}
