@@ -2,7 +2,7 @@
  * DOM wiring for the feature matrix search application.
  * Fetches search-index.json, handles user input, and renders results.
  */
-import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, prepareSearchResults, collectIdeNames, limitRowsPerIde } from './search.js';
+import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, prepareSearchResults, collectIdeNames, limitRowsPerIde, wholeWordPattern } from './search.js';
 
 const MAX_ROWS_PER_IDE = 20;
 
@@ -314,13 +314,6 @@ function escapeHtml(text) {
 }
 
 /**
- * Escape text for use inside a RegExp.
- */
-function escapeRegExp(text) {
-  return String(text).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-/**
  * Highlight all query matches in an excerpt.
  */
 function highlightMatch(text, query) {
@@ -330,7 +323,7 @@ function highlightMatch(text, query) {
     return escapeHtml(source);
   }
 
-  const regex = new RegExp(escapeRegExp(keyword), 'gi');
+  const regex = wholeWordPattern(keyword, true);
   let html = '';
   let lastIndex = 0;
   let match = regex.exec(source);
