@@ -1,0 +1,30 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.110-1",
+  "release_date": "2026-11-10",
+  "title": "1.0.110-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.110-1",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- A session reopened with `copilot --resume` is marked in use as soon as it opens, so `copilot -p --resume` and a second window no longer write into it while it sits idle\n- Custom status lines preserve the first row's indentation so all rows align consistently\n- Show control characters visibly in /settings list items instead of applying terminal styling or hyperlinks\n- Markdown tables containing the wavy dash and similar wide symbols render with correctly aligned rows\n- Show the sign-in prompt after /logout removes the last saved account with invalid credentials, without requiring a restart\n- Wrapped text uses the full width of each row without inserting extra blank lines inside paragraphs\n- `copilot mcp add` preserves existing invalid server entries and asks you to remove them before reusing their names\n- Preserve plugin preferences and settings files at startup when settings.json contains invalid values or cannot be parsed\n- Shell and Search results show accurate line and file counts and omit model-only cost guidance when an AI-credit limit is set\n- Vim mode's j/k motions use the current cursor column after gg, ge, operators, or redo\n- Display custom agent names and models as plain text in /subagents, keeping table columns aligned and preventing embedded terminal formatting or links\n- A local MCP server whose reply contains a lone UTF-16 surrogate escape (such as a tool description cut inside an emoji) no longer fails after 60 seconds or hangs a tool call for 3 minutes; the reply is read with a replacement character\n- Plugin toggles now honor repository-controlled live plugin settings and consistently use the same marketplace source across listing and activation.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- A session reopened with `copilot --resume` is marked in use as soon as it opens, so `copilot -p --resume` and a second window no longer write into it while it sits idle",
+    "- Custom status lines preserve the first row's indentation so all rows align consistently",
+    "- Show control characters visibly in /settings list items instead of applying terminal styling or hyperlinks",
+    "- Markdown tables containing the wavy dash and similar wide symbols render with correctly aligned rows",
+    "- Show the sign-in prompt after /logout removes the last saved account with invalid credentials, without requiring a restart",
+    "- Wrapped text uses the full width of each row without inserting extra blank lines inside paragraphs",
+    "- `copilot mcp add` preserves existing invalid server entries and asks you to remove them before reusing their names",
+    "- Preserve plugin preferences and settings files at startup when settings.json contains invalid values or cannot be parsed",
+    "- Shell and Search results show accurate line and file counts and omit model-only cost guidance when an AI-credit limit is set",
+    "- Vim mode's j/k motions use the current cursor column after gg, ge, operators, or redo",
+    "- Display custom agent names and models as plain text in /subagents, keeping table columns aligned and preventing embedded terminal formatting or links",
+    "- A local MCP server whose reply contains a lone UTF-16 surrogate escape (such as a tool description cut inside an emoji) no longer fails after 60 seconds or hangs a tool call for 3 minutes; the reply is read with a replacement character",
+    "- Plugin toggles now honor repository-controlled live plugin settings and consistently use the same marketplace source across listing and activation."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-14T14:04:28Z",
+  "schema_version": 1
+}
