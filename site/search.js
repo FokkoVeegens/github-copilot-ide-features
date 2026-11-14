@@ -196,14 +196,14 @@ export function searchIndex(index, keyword) {
 }
 
 /**
- * Match a literal query at word boundaries, including Unicode letters and numbers.
+ * Match a literal query at word boundaries, including Unicode word characters.
  * @param {string} keyword
  * @param {boolean} global
  * @returns {RegExp}
  */
 export function wholeWordPattern(keyword, global = false) {
   const escaped = String(keyword).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  return new RegExp(`(?<![\\p{L}\\p{M}\\p{N}_])${escaped}(?![\\p{L}\\p{M}\\p{N}_])`, global ? 'giu' : 'iu');
+  return new RegExp(`(?<![\\p{L}\\p{M}\\p{N}\\p{Pc}])${escaped}(?![\\p{L}\\p{M}\\p{N}\\p{Pc}])`, global ? 'giu' : 'iu');
 }
 
 /**

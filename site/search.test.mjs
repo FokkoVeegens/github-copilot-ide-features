@@ -66,6 +66,25 @@ test('searchIndex matches whole words and phrases without matching parts of word
   assert.deepStrictEqual(searchIndex(index, 'C.*'), []);
 });
 
+test('Unicode connector punctuation joins words for searches and highlights', () => {
+  const index = [
+    { snippet: 'fusion\u203fx' },
+    { snippet: 'x\u2054fusion' },
+    { snippet: 'fusion-powered' },
+  ];
+  assert.deepStrictEqual(searchIndex(index, 'fusion'), [index[2]]);
+
+  const rows = {
+    matched: [{
+      ide: 'VS Code',
+      rows: [{ version: '1', release_date: '2026-01-01', url: 'https://example.test', snippet: 'fusion\u203fx x\u2054fusion Fusion' }],
+    }],
+    missing: [],
+  };
+  const markup = buildResultsMarkup(rows, 'fusion');
+  assert(markup.includes('fusion\u203fx x\u2054fusion <mark class="snippet-match">Fusion</mark>'));
+});
+
 test('searchIndex finds multiple matches', () => {
   const index = [
     { snippet: 'Chat support', version: '1.0.0' },
