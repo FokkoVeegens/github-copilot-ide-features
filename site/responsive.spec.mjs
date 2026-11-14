@@ -105,6 +105,29 @@ async function expectReleaseCard(card, expected) {
   await expect(card).toBeVisible();
 }
 
+test('whole-word search excludes substring-only IDEs and highlights only whole matches', async ({ page }) => {
+  const index = [
+    { ...SEARCH_INDEX[0], snippet: 'Fusion is available despite earlier confusion.' },
+    { ...SEARCH_INDEX[3], snippet: 'A fix for confusion is now available.' },
+    { ...SEARCH_INDEX[4], snippet: 'Fusion-powered features are now available.' },
+  ];
+  await page.route('**/search-index.json', route => route.fulfill({ json: index }));
+  await page.route('**/meta.json', route => route.fulfill({ json: { generated_at: '2026-03-15T09:00:00Z' } }));
+  await page.goto('/index.html');
+  await expect(page.locator('#hint')).toBeVisible();
+  await search(page, 'fusion');
+
+  for (const launchOnly of [true, false]) {
+    if (!launchOnly) await page.locator('#launch-only-filter').uncheck();
+    const table = page.locator('.table-wrapper');
+    await expect(table.locator('.snippet-match')).toHaveText(['Fusion', 'Fusion']);
+    await expect(table).toContainText('confusion');
+    await expect(table).not.toContainText('A fix for confusion');
+    await expect(table).toContainText('CLI');
+    await expect(page.locator('.mobile-results .snippet-match')).toHaveText(['Fusion', 'Fusion']);
+  }
+});
+
 test.describe('stacked cards below 600px', () => {
   test.use({ viewport: MOBILE_VIEWPORT });
 
