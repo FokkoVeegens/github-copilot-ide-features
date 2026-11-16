@@ -8,8 +8,7 @@ function isDisabled() {
   return localStorage.getItem(STORAGE_KEY) !== null;
 }
 
-function render(button, status) {
-  const disabled = isDisabled();
+function render(button, status, disabled) {
   button.textContent = disabled ? 'Allow visit counting' : 'Stop counting my visits';
   button.setAttribute('aria-pressed', String(disabled));
   status.textContent = disabled
@@ -22,21 +21,25 @@ function init() {
   const status = document.getElementById('analytics-status');
 
   try {
-    isDisabled();
+    render(button, status, isDisabled());
   } catch {
     status.textContent = 'Your browser blocks local storage, so this setting cannot be saved. Use a content blocker instead.';
     return;
   }
 
   button.hidden = false;
-  render(button, status);
   button.addEventListener('click', () => {
-    if (isDisabled()) {
-      localStorage.removeItem(STORAGE_KEY);
-    } else {
-      localStorage.setItem(STORAGE_KEY, '1');
+    try {
+      const disabled = isDisabled();
+      if (disabled) {
+        localStorage.removeItem(STORAGE_KEY);
+      } else {
+        localStorage.setItem(STORAGE_KEY, '1');
+      }
+      render(button, status, !disabled);
+    } catch {
+      status.textContent = 'Your choice could not be saved. Try again or use a content blocker.';
     }
-    render(button, status);
   });
 }
 

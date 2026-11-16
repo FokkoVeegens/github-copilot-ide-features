@@ -113,7 +113,7 @@ async function expectReleaseCard(card, expected) {
   await expect(card).toBeVisible();
 }
 
-test('loads Umami analytics only for the production domain and keeps search working when blocked', async ({ page }) => {
+test('configures Umami to track only the production domain and keeps search working when blocked', async ({ page }) => {
   const analyticsRequests = [];
   page.on('request', request => {
     if (request.url().startsWith('https://cloud.umami.is/')) analyticsRequests.push(request.url());
@@ -157,6 +157,31 @@ test('privacy page is linked from the footer and lets visitors opt out of analyt
 
   await expectNoAccessibilityViolations(page, 'body');
 });
+
+for (const initiallyDisabled of [false, true]) {
+  test(`reports an opt-out storage failure when tracking is ${initiallyDisabled ? 'disabled' : 'enabled'}`, async ({ page }) => {
+    await page.addInitScript((disabled) => {
+      if (disabled) localStorage.setItem('umami.disabled', '1');
+      const method = disabled ? 'removeItem' : 'setItem';
+      const original = Storage.prototype[method];
+      Storage.prototype[method] = function (key, ...args) {
+        if (key === 'umami.disabled') throw new DOMException('Storage unavailable', 'QuotaExceededError');
+        return original.call(this, key, ...args);
+      };
+    }, initiallyDisabled);
+
+    const errors = [];
+    page.on('pageerror', error => errors.push(error));
+    await page.goto('/privacy.html');
+    const toggle = page.locator('#analytics-toggle');
+    await expect(toggle).toHaveAttribute('aria-pressed', String(initiallyDisabled));
+    await toggle.click();
+    await expect(page.locator('#analytics-status')).toHaveText('Your choice could not be saved. Try again or use a content blocker.');
+    await expect(toggle).toHaveAttribute('aria-pressed', String(initiallyDisabled));
+    expect(await page.evaluate(() => localStorage.getItem('umami.disabled'))).toBe(initiallyDisabled ? '1' : null);
+    expect(errors).toEqual([]);
+  });
+}
 
 test('loads a favicon matching the header colors', async ({ page }) => {
   await loadSite(page);
