@@ -22,6 +22,7 @@ The repository hosts a **searchable feature matrix** on GitHub Pages at [https:/
 - Results are shown as one row per IDE release that mentions the feature (IDE, version, date released, feature description), grouped by IDE and sorted oldest first. IDEs with no matching release notes are collapsed into a single "N/A" row at the bottom.
 - Clicking on a version badge links to the official release notes.
 - The **Only launch announcements** filter (enabled by default) hides mentions that describe incremental changes or fixes. Uncheck the box to see all mentions.
+- The GitHub logo in the header links to this repository.
 
 ### Running the site locally
 
