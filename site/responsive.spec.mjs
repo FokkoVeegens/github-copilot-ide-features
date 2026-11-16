@@ -69,8 +69,8 @@ test.beforeEach(async ({ page }) => {
   await page.route('https://cloud.umami.is/**', route => route.abort());
 });
 
-async function loadSite(page) {
-  await page.route('**/search-index.json', route => route.fulfill({ json: SEARCH_INDEX }));
+async function loadSite(page, index = SEARCH_INDEX) {
+  await page.route('**/search-index.json', route => route.fulfill({ json: index }));
   await page.route('**/meta.json', route =>
     route.fulfill({ json: { generated_at: '2026-03-15T09:00:00Z' } }),
   );
@@ -131,12 +131,68 @@ test('configures Umami to track only the production domain and keeps search work
   await search(page, 'agent mode');
 });
 
+test('tracks search terms after typing pauses without changing the searched phrase', async ({ page }) => {
+  await page.addInitScript(() => {
+    window.umami = {
+      track: (name, data) => {
+        window.trackedUmamiEvents ??= [];
+        window.trackedUmamiEvents.push({ name, data });
+      },
+    };
+  });
+  await loadSite(page);
+
+  await page.locator('#search-input').fill('ab');
+  await page.waitForTimeout(1100);
+  expect(await page.evaluate(() => window.trackedUmamiEvents ?? [])).toEqual([]);
+
+  await page.locator('#search-input').fill('  AGENT MODE  ');
+  await expect(page.locator('#results .summary-section')).toBeVisible();
+  await expect.poll(() => page.evaluate(() => window.trackedUmamiEvents ?? [])).toHaveLength(1);
+
+  const [event] = await page.evaluate(() => window.trackedUmamiEvents);
+  expect(event.name).toBe('search');
+  expect(event.data).toMatchObject({
+    query: 'AGENT MODE',
+    launch_only: true,
+  });
+  expect(event.data.result_count).toBeGreaterThan(0);
+
+  await page.locator('#search-input').fill(' Agent   Mode ');
+  await expect(page.locator('#results')).toHaveText('No matching features found.');
+  await expect.poll(() => page.evaluate(() => window.trackedUmamiEvents)).toHaveLength(2);
+  const secondEvent = await page.evaluate(() => window.trackedUmamiEvents[1]);
+  expect(secondEvent.data).toEqual({ query: 'Agent   Mode', result_count: 0, launch_only: true });
+});
+
+test('search event counts deduplicated and capped visible release rows', async ({ page }) => {
+  await page.addInitScript(() => {
+    window.umami = {
+      track: (name, data) => {
+        window.trackedUmamiEvents ??= [];
+        window.trackedUmamiEvents.push({ name, data });
+      },
+    };
+  });
+  const releases = Array.from({ length: 22 }, (_, i) => ({
+    ...SEARCH_INDEX[0],
+    version: `1.${i}.0`,
+  }));
+  await loadSite(page, [...releases, releases[0], SEARCH_INDEX[3], SEARCH_INDEX[3]]);
+  await search(page, 'agent mode', { launchOnly: false });
+  await expect(page.locator('.rows-table .version-link')).toHaveCount(21);
+  await expect.poll(() => page.evaluate(() => window.trackedUmamiEvents ?? [])).toHaveLength(1);
+  const [event] = await page.evaluate(() => window.trackedUmamiEvents);
+  expect(event.data).toEqual({ query: 'agent mode', result_count: 21, launch_only: false });
+});
+
 test('privacy page is linked from the footer and lets visitors opt out of analytics', async ({ page }) => {
   await loadSite(page);
   await page.locator('footer a', { hasText: 'Privacy' }).click();
   await expect(page).toHaveURL(/\/privacy\.html$/);
   await expect(page.locator('h1')).toHaveText('Privacy');
   await expect(page.locator(`script[src="${UMAMI_SCRIPT_URL}"]`)).toHaveCount(0);
+  await expect(page.locator('article')).toContainText('the search term');
 
   const toggle = page.locator('#analytics-toggle');
   const status = page.locator('#analytics-status');

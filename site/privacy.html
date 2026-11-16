@@ -45,8 +45,11 @@
           identifier used for visitor metrics. The salt used to create that identifier changes
           monthly, so identifiers are not automatically linked across those periods. This does
           not guarantee anonymity: Umami or its infrastructure providers may also process or
-          record IP addresses in operational or security logs. What you type in the search box
-          is not sent to Umami.
+          record IP addresses in operational or security logs. When you pause after entering a
+          valid search (at least three characters), the search term, the number of
+          matching results, and whether launch-only filtering is enabled are sent as a custom
+          Umami event. Leading and trailing whitespace is removed from search terms. Please do
+          not enter personal or sensitive information in the search box.
         </p>
         <p>
           The full list is in Umami's
