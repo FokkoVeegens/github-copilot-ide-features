@@ -495,7 +495,6 @@ main {
   background: white;
   color: #0366d6;
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .opt-out-button:hover {

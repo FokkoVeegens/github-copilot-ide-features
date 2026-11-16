@@ -158,6 +158,48 @@ test('privacy page is linked from the footer and lets visitors opt out of analyt
   await expectNoAccessibilityViolations(page, 'body');
 });
 
+test('opt-out button maintains readable contrast while hovering and unhovering', async ({ page }) => {
+  await page.goto('/privacy.html');
+  const toggle = page.locator('#analytics-toggle');
+  await expect(toggle).toBeVisible();
+  await page.mouse.move(0, 0);
+
+  async function sampleContrastDuring(action) {
+    await page.evaluate(() => {
+      const button = document.getElementById('analytics-toggle');
+      const luminance = color => {
+        const channels = color.match(/[\d.]+/g).slice(0, 3).map(Number);
+        const linear = channels.map(value => {
+          const s = value / 255;
+          return s <= 0.04045 ? s / 12.92 : ((s + 0.055) / 1.055) ** 2.4;
+        });
+        return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
+      };
+      window.contrastSamples = new Promise(resolve => {
+        const samples = [];
+        const start = performance.now();
+        function sample() {
+          const style = getComputedStyle(button);
+          const foreground = luminance(style.color);
+          const background = luminance(style.backgroundColor);
+          samples.push((Math.max(foreground, background) + 0.05) / (Math.min(foreground, background) + 0.05));
+          if (performance.now() - start < 350) requestAnimationFrame(sample);
+          else resolve(samples);
+        }
+        requestAnimationFrame(sample);
+      });
+    });
+    await action();
+    return page.evaluate(() => window.contrastSamples);
+  }
+
+  for (const action of [() => toggle.hover(), () => page.mouse.move(0, 0)]) {
+    const samples = await sampleContrastDuring(action);
+    expect(samples.length).toBeGreaterThan(1);
+    expect(Math.min(...samples)).toBeGreaterThanOrEqual(4.5);
+  }
+});
+
 for (const initiallyDisabled of [false, true]) {
   test(`reports an opt-out storage failure when tracking is ${initiallyDisabled ? 'disabled' : 'enabled'}`, async ({ page }) => {
     await page.addInitScript((disabled) => {
