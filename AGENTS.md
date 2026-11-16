@@ -42,7 +42,7 @@ scripts/run.py               – CLI entry point: --ide <id>
 scripts/build_search_index.py – Build search index for the GitHub Pages site
 scripts/common/              – shared utilities (config, HTTP, JSON schema, extraction, I/O)
 scripts/fetchers/            – one module per IDE (eclipse.py, dummy.py, …)
-site/                        – static GitHub Pages site (index.html, app.js, search.js, style.css)
+site/                        – static GitHub Pages site (index.html, app.js, search.js, style.css, privacy.html, privacy.js)
 site/images/                 – IDE logo images shown next to each IDE row
 site/search.test.mjs         – JavaScript tests for site/search.js
 site/responsive.spec.mjs     – Playwright browser tests for the responsive layout

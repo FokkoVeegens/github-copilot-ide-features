@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy · GitHub Copilot Feature Tracker</title>
+  <link rel="icon" type="image/svg+xml" sizes="any" href="./images/favicon.svg" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h1>Privacy</h1>
+        <p class="subtitle">How this site measures visits, and how to opt out.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <article class="search-section prose">
+        <p>
+          <a href="./index.html">&larr; Back to the feature search</a>
+        </p>
+
+        <h2>In short</h2>
+        <p>
+          This site counts visits with <a href="https://umami.is/" target="_blank" rel="noopener noreferrer">Umami Cloud</a>,
+          a privacy-focused analytics service. It does not use cookies, does not show ads, and
+          does not build profiles of you. The statistics only help to see how much the site is
+          used and which parts are useful.
+        </p>
+
+        <h2>What is collected</h2>
+        <p>When you open the search page, your browser sends Umami:</p>
+        <ul>
+          <li>the page address and title, and the page you came from (referrer);</li>
+          <li>your browser, operating system, device type, screen size, and language;</li>
+          <li>an approximate country, region, and city, derived from your IP address.</li>
+        </ul>
+        <p>
+          Umami does not store your IP address as a field in its standard analytics records.
+          It processes your IP address and browser User-Agent to create a pseudonymous session
+          identifier used for visitor metrics. The salt used to create that identifier changes
+          monthly, so identifiers are not automatically linked across those periods. This does
+          not guarantee anonymity: Umami or its infrastructure providers may also process or
+          record IP addresses in operational or security logs. What you type in the search box
+          is not sent to Umami.
+        </p>
+        <p>
+          The full list is in Umami's
+          <a href="https://docs.umami.is/docs/metric-definitions" target="_blank" rel="noopener noreferrer">metric definitions</a>.
+        </p>
+
+        <h2>Who processes it, and for how long</h2>
+        <p>
+          Umami Software, Inc. processes the statistics on behalf of this site under its
+          <a href="https://umami.is/dpa" target="_blank" rel="noopener noreferrer">data processing agreement</a>.
+          Umami may use third-party subprocessors to operate the service. On Umami's
+          <a href="https://umami.is/pricing" target="_blank" rel="noopener noreferrer">Hobby plan</a>,
+          analytics data is retained for six months; backup copies may be retained longer.
+          See Umami's
+          <a href="https://umami.is/privacy" target="_blank" rel="noopener noreferrer">privacy policy</a>
+          and <a href="https://umami.is/subprocessors" target="_blank" rel="noopener noreferrer">subprocessors</a>
+          for details.
+        </p>
+        <p>
+          The site itself is hosted on GitHub Pages, which may log technical data such as your
+          IP address when serving pages. See the
+          <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub privacy statement</a>.
+        </p>
+
+        <h2>Opt out</h2>
+        <p>
+          You can turn off visit counting for this browser. The choice is remembered in your
+          browser's local storage on this site; clearing your site data resets it. Content
+          blockers that block <code>cloud.umami.is</code> also prevent counting.
+        </p>
+        <div class="opt-out">
+          <button type="button" id="analytics-toggle" class="opt-out-button" hidden></button>
+          <p id="analytics-status" class="opt-out-status" role="status" aria-live="polite">
+            Enable JavaScript to change this setting, or use a content blocker.
+          </p>
+        </div>
+
+        <h2>Questions</h2>
+        <p>
+          This site does not send your name or account identifier to Umami. Its default analytics
+          use pseudonymous identifiers, which are not a guarantee that activity cannot be linked
+          to you. For questions,
+          <a href="https://github.com/FokkoVeegens/github-copilot-ide-features/issues" target="_blank" rel="noopener noreferrer">open an issue on GitHub</a>.
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><a href="./index.html">Feature search</a></p>
+    </div>
+  </footer>
+
+  <script type="module" src="./privacy.js"></script>
+</body>
+</html>

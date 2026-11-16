@@ -436,6 +436,77 @@ main {
   text-decoration: underline;
 }
 
+/* Privacy page prose */
+.prose {
+  line-height: 1.65;
+}
+
+.prose > * {
+  max-width: 70ch;
+}
+
+.prose h2 {
+  font-size: 1.25rem;
+  color: #24292f;
+  margin: 2rem 0 0.5rem;
+}
+
+.prose p,
+.prose ul {
+  margin-bottom: 0.85rem;
+}
+
+.prose ul {
+  padding-left: 1.5rem;
+}
+
+.prose a {
+  color: #0366d6;
+  text-underline-offset: 0.15em;
+}
+
+.prose code {
+  font-size: 0.9em;
+  background: #f0f4f8;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+.opt-out {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.opt-out-status {
+  margin-bottom: 0;
+  color: #555;
+}
+
+.opt-out-button {
+  font: inherit;
+  font-weight: 600;
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  border: 2px solid #0366d6;
+  border-radius: 6px;
+  background: white;
+  color: #0366d6;
+  cursor: pointer;
+}
+
+.opt-out-button:hover {
+  background: #0366d6;
+  color: white;
+}
+
+.opt-out-button:focus-visible {
+  outline: 3px solid #0366d6;
+  outline-offset: 2px;
+}
+
 /* Footer */
 footer {
   background: white;

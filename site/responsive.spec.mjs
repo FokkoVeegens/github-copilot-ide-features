@@ -61,6 +61,14 @@ const SEARCH_INDEX = [
   },
 ];
 
+const UMAMI_SCRIPT_URL = 'https://cloud.umami.is/script.js';
+
+// Never contact the analytics service from tests; this also simulates visitors
+// whose browser blocks the analytics script.
+test.beforeEach(async ({ page }) => {
+  await page.route('https://cloud.umami.is/**', route => route.abort());
+});
+
 async function loadSite(page) {
   await page.route('**/search-index.json', route => route.fulfill({ json: SEARCH_INDEX }));
   await page.route('**/meta.json', route =>
@@ -103,6 +111,118 @@ async function expectReleaseCard(card, expected) {
   await expect(fieldValue(card, 'Feature description')).toHaveText(expected.description);
   await expect(card.locator('.desc-cell a')).toHaveAttribute('href', expected.url);
   await expect(card).toBeVisible();
+}
+
+test('configures Umami to track only the production domain and keeps search working when blocked', async ({ page }) => {
+  const analyticsRequests = [];
+  page.on('request', request => {
+    if (request.url().startsWith('https://cloud.umami.is/')) analyticsRequests.push(request.url());
+  });
+
+  await loadSite(page);
+
+  const analytics = page.locator(`script[src="${UMAMI_SCRIPT_URL}"]`);
+  await expect(analytics).toHaveCount(1);
+  await expect(analytics).toHaveAttribute('data-website-id', 'cc73becd-edb9-4960-bc37-705935831da4');
+  await expect(analytics).toHaveAttribute('data-domains', 'fokkoveegens.github.io');
+  expect(await analytics.evaluate(script => script.defer)).toBe(true);
+  expect(analyticsRequests).toEqual([UMAMI_SCRIPT_URL]);
+
+  await search(page, 'agent mode');
+});
+
+test('privacy page is linked from the footer and lets visitors opt out of analytics', async ({ page }) => {
+  await loadSite(page);
+  await page.locator('footer a', { hasText: 'Privacy' }).click();
+  await expect(page).toHaveURL(/\/privacy\.html$/);
+  await expect(page.locator('h1')).toHaveText('Privacy');
+  await expect(page.locator(`script[src="${UMAMI_SCRIPT_URL}"]`)).toHaveCount(0);
+
+  const toggle = page.locator('#analytics-toggle');
+  const status = page.locator('#analytics-status');
+  await expect(toggle).toHaveText('Stop counting my visits');
+  await expect(toggle).toHaveAttribute('aria-pressed', 'false');
+
+  await toggle.click();
+  await expect(toggle).toHaveText('Allow visit counting');
+  await expect(toggle).toHaveAttribute('aria-pressed', 'true');
+  await expect(status).toHaveText('Your visits are not counted in this browser.');
+  expect(await page.evaluate(() => localStorage.getItem('umami.disabled'))).toBe('1');
+
+  await page.reload();
+  await expect(toggle).toHaveAttribute('aria-pressed', 'true');
+  await toggle.click();
+  expect(await page.evaluate(() => localStorage.getItem('umami.disabled'))).toBeNull();
+  await expect(status).toHaveText('Your visits are counted anonymously.');
+
+  await expectNoAccessibilityViolations(page, 'body');
+});
+
+test('opt-out button maintains readable contrast while hovering and unhovering', async ({ page }) => {
+  await page.goto('/privacy.html');
+  const toggle = page.locator('#analytics-toggle');
+  await expect(toggle).toBeVisible();
+  await page.mouse.move(0, 0);
+
+  async function sampleContrastDuring(action) {
+    await page.evaluate(() => {
+      const button = document.getElementById('analytics-toggle');
+      const luminance = color => {
+        const channels = color.match(/[\d.]+/g).slice(0, 3).map(Number);
+        const linear = channels.map(value => {
+          const s = value / 255;
+          return s <= 0.04045 ? s / 12.92 : ((s + 0.055) / 1.055) ** 2.4;
+        });
+        return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
+      };
+      window.contrastSamples = new Promise(resolve => {
+        const samples = [];
+        const start = performance.now();
+        function sample() {
+          const style = getComputedStyle(button);
+          const foreground = luminance(style.color);
+          const background = luminance(style.backgroundColor);
+          samples.push((Math.max(foreground, background) + 0.05) / (Math.min(foreground, background) + 0.05));
+          if (performance.now() - start < 350) requestAnimationFrame(sample);
+          else resolve(samples);
+        }
+        requestAnimationFrame(sample);
+      });
+    });
+    await action();
+    return page.evaluate(() => window.contrastSamples);
+  }
+
+  for (const action of [() => toggle.hover(), () => page.mouse.move(0, 0)]) {
+    const samples = await sampleContrastDuring(action);
+    expect(samples.length).toBeGreaterThan(1);
+    expect(Math.min(...samples)).toBeGreaterThanOrEqual(4.5);
+  }
+});
+
+for (const initiallyDisabled of [false, true]) {
+  test(`reports an opt-out storage failure when tracking is ${initiallyDisabled ? 'disabled' : 'enabled'}`, async ({ page }) => {
+    await page.addInitScript((disabled) => {
+      if (disabled) localStorage.setItem('umami.disabled', '1');
+      const method = disabled ? 'removeItem' : 'setItem';
+      const original = Storage.prototype[method];
+      Storage.prototype[method] = function (key, ...args) {
+        if (key === 'umami.disabled') throw new DOMException('Storage unavailable', 'QuotaExceededError');
+        return original.call(this, key, ...args);
+      };
+    }, initiallyDisabled);
+
+    const errors = [];
+    page.on('pageerror', error => errors.push(error));
+    await page.goto('/privacy.html');
+    const toggle = page.locator('#analytics-toggle');
+    await expect(toggle).toHaveAttribute('aria-pressed', String(initiallyDisabled));
+    await toggle.click();
+    await expect(page.locator('#analytics-status')).toHaveText('Your choice could not be saved. Try again or use a content blocker.');
+    await expect(toggle).toHaveAttribute('aria-pressed', String(initiallyDisabled));
+    expect(await page.evaluate(() => localStorage.getItem('umami.disabled'))).toBe(initiallyDisabled ? '1' : null);
+    expect(errors).toEqual([]);
+  });
 }
 
 test('loads a favicon matching the header colors', async ({ page }) => {
