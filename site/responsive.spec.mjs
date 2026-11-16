@@ -61,6 +61,14 @@ const SEARCH_INDEX = [
   },
 ];
 
+const UMAMI_SCRIPT_URL = 'https://cloud.umami.is/script.js';
+
+// Never contact the analytics service from tests; this also simulates visitors
+// whose browser blocks the analytics script.
+test.beforeEach(async ({ page }) => {
+  await page.route('https://cloud.umami.is/**', route => route.abort());
+});
+
 async function loadSite(page) {
   await page.route('**/search-index.json', route => route.fulfill({ json: SEARCH_INDEX }));
   await page.route('**/meta.json', route =>
@@ -104,6 +112,24 @@ async function expectReleaseCard(card, expected) {
   await expect(card.locator('.desc-cell a')).toHaveAttribute('href', expected.url);
   await expect(card).toBeVisible();
 }
+
+test('loads Umami analytics only for the production domain and keeps search working when blocked', async ({ page }) => {
+  const analyticsRequests = [];
+  page.on('request', request => {
+    if (request.url().startsWith('https://cloud.umami.is/')) analyticsRequests.push(request.url());
+  });
+
+  await loadSite(page);
+
+  const analytics = page.locator(`script[src="${UMAMI_SCRIPT_URL}"]`);
+  await expect(analytics).toHaveCount(1);
+  await expect(analytics).toHaveAttribute('data-website-id', 'cc73becd-edb9-4960-bc37-705935831da4');
+  await expect(analytics).toHaveAttribute('data-domains', 'fokkoveegens.github.io');
+  expect(await analytics.evaluate(script => script.defer)).toBe(true);
+  expect(analyticsRequests).toEqual([UMAMI_SCRIPT_URL]);
+
+  await search(page, 'agent mode');
+});
 
 test('loads a favicon matching the header colors', async ({ page }) => {
   await loadSite(page);

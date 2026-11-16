@@ -43,7 +43,9 @@ python -m http.server -d site 8000
 # Visit http://localhost:8000/
 ```
 
-The site is a pure client-side application: HTML, CSS, and ES module JavaScript with no external dependencies. It loads a pre-built search index at page load and performs all searching in the browser.
+The site is a pure client-side application: HTML, CSS, and ES module JavaScript. It loads a pre-built search index at page load and performs all searching in the browser.
+
+The published site loads the [Umami Cloud](https://umami.is/) tracking script for cookie-free usage analytics. Tracking is limited to `fokkoveegens.github.io` via `data-domains`, so local previews and tests do not send analytics; the site keeps working when the script is blocked.
 
 ## Repository layout
 
