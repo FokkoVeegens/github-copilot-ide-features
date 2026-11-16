@@ -4,8 +4,36 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert';
-import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, isGaAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, prepareSearchResults, collectIdeNames, limitRowsPerIde } from './search.js';
+import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, isGaAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, prepareSearchResults, collectIdeNames, limitRowsPerIde, formatRelativeTime, formatDateTime } from './search.js';
 import { buildResultsMarkup } from './app.js';
+
+test('formatRelativeTime describes elapsed time in human terms', () => {
+  const now = new Date('2026-03-20T12:00:00Z');
+  const ago = ms => new Date(now.getTime() - ms);
+  const MIN = 60000, HOUR = 60 * MIN, DAY = 24 * HOUR;
+  assert.strictEqual(formatRelativeTime(ago(10 * 1000), now), 'just now');
+  assert.strictEqual(formatRelativeTime(ago(MIN), now), '1 minute ago');
+  assert.strictEqual(formatRelativeTime(ago(45 * MIN), now), '45 minutes ago');
+  assert.strictEqual(formatRelativeTime(ago(HOUR), now), '1 hour ago');
+  assert.strictEqual(formatRelativeTime(ago(5 * HOUR), now), '5 hours ago');
+  assert.strictEqual(formatRelativeTime(ago(DAY), now), '1 day ago');
+  assert.strictEqual(formatRelativeTime(ago(7 * DAY), now), '7 days ago');
+  assert.strictEqual(formatRelativeTime(ago(8 * DAY), now), 'more than a week ago');
+  assert.strictEqual(formatRelativeTime(ago(60 * DAY), now), 'more than a month ago');
+  assert.strictEqual(formatRelativeTime(ago(400 * DAY), now), 'more than a year ago');
+});
+
+test('formatRelativeTime handles future and invalid dates', () => {
+  const now = new Date('2026-03-20T12:00:00Z');
+  assert.strictEqual(formatRelativeTime('2026-03-21T12:00:00Z', now), 'just now');
+  assert.strictEqual(formatRelativeTime('not a date', now), '');
+});
+
+test('formatDateTime formats as dd-MMM-yyyy HH:mm in local time', () => {
+  assert.strictEqual(formatDateTime(new Date(2026, 2, 5, 9, 7)), '05-Mar-2026 09:07');
+  assert.strictEqual(formatDateTime(new Date(2025, 11, 31, 23, 59)), '31-Dec-2025 23:59');
+  assert.strictEqual(formatDateTime('invalid'), '');
+});
 
 test('validateQuery rejects empty string', () => {
   assert.strictEqual(validateQuery(''), null);

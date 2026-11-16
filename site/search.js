@@ -15,6 +15,45 @@ export function validateQuery(q) {
 }
 
 /**
+ * Describe how long ago a date was, e.g. "1 hour ago", "2 days ago" or
+ * "more than a week ago".
+ * @param {Date|string|number} date - The past date
+ * @param {Date|string|number} [now] - Reference time (defaults to the current time)
+ * @returns {string} Relative description, or '' for an invalid date
+ */
+export function formatRelativeTime(date, now = new Date()) {
+  const then = new Date(date).getTime();
+  const reference = new Date(now).getTime();
+  if (Number.isNaN(then) || Number.isNaN(reference)) return '';
+
+  const minutes = Math.floor(Math.max(0, reference - then) / 60000);
+  const hours = Math.floor(minutes / 60);
+  const days = Math.floor(hours / 24);
+  const plural = (n, unit) => `${n} ${unit}${n === 1 ? '' : 's'} ago`;
+
+  if (minutes < 1) return 'just now';
+  if (minutes < 60) return plural(minutes, 'minute');
+  if (hours < 24) return plural(hours, 'hour');
+  if (days <= 7) return plural(days, 'day');
+  if (days <= 30) return 'more than a week ago';
+  if (days <= 365) return 'more than a month ago';
+  return 'more than a year ago';
+}
+
+/**
+ * Format a date in local time as dd-MMM-yyyy HH:mm, e.g. "15-Mar-2026 09:00".
+ * @param {Date|string|number} date
+ * @returns {string} Formatted date, or '' for an invalid date
+ */
+export function formatDateTime(date) {
+  const d = new Date(date);
+  if (Number.isNaN(d.getTime())) return '';
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const pad = n => String(n).padStart(2, '0');
+  return `${pad(d.getDate())}-${months[d.getMonth()]}-${d.getFullYear()} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+}
+
+/**
  * Strip "GitHub Copilot" / "Copilot for" prefixes from IDE name for display,
  * leaving only the real IDE name (e.g. "VS Code", "Eclipse", "CLI").
  * @param {string} ideName - Full IDE name

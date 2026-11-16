@@ -105,6 +105,65 @@ async function expectReleaseCard(card, expected) {
   await expect(card).toBeVisible();
 }
 
+test('loads a favicon matching the header colors', async ({ page }) => {
+  await loadSite(page);
+
+  const favicon = page.locator('link[rel="icon"]');
+  await expect(favicon).toHaveAttribute('type', 'image/svg+xml');
+  const href = await favicon.getAttribute('href');
+  const nestedPage = new URL('/project/index.html', page.url());
+  expect(new URL(href, nestedPage).pathname).toBe('/project/images/favicon.svg');
+
+  const icon = await page.evaluate(async () => {
+    const image = new Image();
+    image.src = document.querySelector('link[rel="icon"]').href;
+    await image.decode();
+
+    const canvas = document.createElement('canvas');
+    canvas.width = 16;
+    canvas.height = 16;
+    const context = canvas.getContext('2d');
+    context.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+    const colorComponents = color => color.match(/\d+/g).slice(0, 3).map(Number);
+    const header = document.querySelector('header');
+    const background = Array.from(context.getImageData(1, Math.floor(canvas.height / 2), 1, 1).data).slice(0, 3);
+    const headerBackground = colorComponents(getComputedStyle(header).backgroundColor);
+    const headerText = colorComponents(getComputedStyle(header.querySelector('h1')).color);
+    const pixels = context.getImageData(0, 0, canvas.width, canvas.height).data;
+    let hasHeaderTextColor = false;
+    for (let i = 0; i < pixels.length; i += 4) {
+      if (headerText.every((component, index) => component === pixels[i + index]) && pixels[i + 3] === 255) {
+        hasHeaderTextColor = true;
+        break;
+      }
+    }
+
+    return { width: image.naturalWidth, height: image.naturalHeight, background, headerBackground, hasHeaderTextColor };
+  });
+  expect(icon.width).toBeGreaterThan(0);
+  expect(icon.height).toBeGreaterThan(0);
+  expect(icon.background).toEqual(icon.headerBackground);
+  expect(icon.hasHeaderTextColor).toBe(true);
+});
+
+test('shows the last updated date as relative time with an exact tooltip', async ({ page }) => {
+  await page.clock.setFixedTime(new Date('2026-03-17T09:00:00Z'));
+  await loadSite(page);
+
+  const lastUpdated = page.locator('#last-updated');
+  await expect(lastUpdated).toHaveText('2 days ago');
+  const expectedTooltip = await page.evaluate(() => {
+    const d = new Date('2026-03-15T09:00:00Z');
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const pad = n => String(n).padStart(2, '0');
+    return `${pad(d.getDate())}-${months[d.getMonth()]}-${d.getFullYear()} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+  });
+  await expect(lastUpdated).toHaveAttribute('title', expectedTooltip);
+  await expect(lastUpdated).toHaveAttribute('title', /^\d{2}-[A-Z][a-z]{2}-\d{4} \d{2}:\d{2}$/);
+  await expect(lastUpdated).toHaveAttribute('datetime', '2026-03-15T09:00:00.000Z');
+});
+
 for (const [label, viewport] of [
   ['desktop', DESKTOP_VIEWPORT],
   ['narrow mobile', { width: 320, height: 800 }],

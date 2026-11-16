@@ -56,7 +56,7 @@ scripts/build_search_index.py – Build search index for the GitHub Pages site
 scripts/common/              – shared utilities (config, HTTP, extraction, I/O)
 scripts/fetchers/            – one module per IDE
 site/                        – static GitHub Pages site (HTML, CSS, JavaScript)
-site/images/                 – IDE logo images shown next to each IDE row
+site/images/                 – site favicon and IDE logos
 site/responsive.spec.mjs     – Playwright browser tests for the responsive layout
 tests/                       – pytest test suite
 ```
