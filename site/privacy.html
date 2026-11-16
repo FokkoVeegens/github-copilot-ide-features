@@ -40,10 +40,13 @@
           <li>an approximate country, region, and city, derived from your IP address.</li>
         </ul>
         <p>
-          Umami does not store your IP address in the statistics. It uses your IP address and
-          browser details to calculate an anonymous visitor code that changes every month, so
-          repeat visits within a month are counted once. What you type in the search box is
-          not sent to Umami.
+          Umami does not store your IP address as a field in its standard analytics records.
+          It processes your IP address and browser User-Agent to create a pseudonymous session
+          identifier used for visitor metrics. The salt used to create that identifier changes
+          monthly, so identifiers are not automatically linked across those periods. This does
+          not guarantee anonymity: Umami or its infrastructure providers may also process or
+          record IP addresses in operational or security logs. What you type in the search box
+          is not sent to Umami.
         </p>
         <p>
           The full list is in Umami's
@@ -83,7 +86,9 @@
 
         <h2>Questions</h2>
         <p>
-          Because the statistics are anonymous, they cannot be linked back to you. For questions,
+          This site does not send your name or account identifier to Umami. Its default analytics
+          use pseudonymous identifiers, which are not a guarantee that activity cannot be linked
+          to you. For questions,
           <a href="https://github.com/FokkoVeegens/github-copilot-ide-features/issues" target="_blank" rel="noopener noreferrer">open an issue on GitHub</a>.
         </p>
       </article>
