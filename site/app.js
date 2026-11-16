@@ -2,7 +2,7 @@
  * DOM wiring for the feature matrix search application.
  * Fetches search-index.json, handles user input, and renders results.
  */
-import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, prepareSearchResults, collectIdeNames, limitRowsPerIde, wholeWordPattern } from './search.js';
+import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, prepareSearchResults, collectIdeNames, limitRowsPerIde, wholeWordPattern, formatRelativeTime, formatDateTime } from './search.js';
 
 const MAX_ROWS_PER_IDE = 20;
 
@@ -116,8 +116,13 @@ async function init() {
     const metaResponse = await fetch('./meta.json');
     if (metaResponse.ok) {
       const meta = await metaResponse.json();
-      document.getElementById('last-updated').textContent =
-        new Date(meta.generated_at).toLocaleString();
+      const lastUpdated = document.getElementById('last-updated');
+      const relative = formatRelativeTime(meta.generated_at);
+      if (relative) {
+        lastUpdated.textContent = relative;
+        lastUpdated.title = formatDateTime(meta.generated_at);
+        lastUpdated.setAttribute('datetime', new Date(meta.generated_at).toISOString());
+      }
     }
   } catch (e) {
     console.error('Failed to fetch meta.json:', e);

@@ -105,6 +105,23 @@ async function expectReleaseCard(card, expected) {
   await expect(card).toBeVisible();
 }
 
+test('shows the last updated date as relative time with an exact tooltip', async ({ page }) => {
+  await page.clock.setFixedTime(new Date('2026-03-17T09:00:00Z'));
+  await loadSite(page);
+
+  const lastUpdated = page.locator('#last-updated');
+  await expect(lastUpdated).toHaveText('2 days ago');
+  const expectedTooltip = await page.evaluate(() => {
+    const d = new Date('2026-03-15T09:00:00Z');
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const pad = n => String(n).padStart(2, '0');
+    return `${pad(d.getDate())}-${months[d.getMonth()]}-${d.getFullYear()} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+  });
+  await expect(lastUpdated).toHaveAttribute('title', expectedTooltip);
+  await expect(lastUpdated).toHaveAttribute('title', /^\d{2}-[A-Z][a-z]{2}-\d{4} \d{2}:\d{2}$/);
+  await expect(lastUpdated).toHaveAttribute('datetime', '2026-03-15T09:00:00.000Z');
+});
+
 for (const [label, viewport] of [
   ['desktop', DESKTOP_VIEWPORT],
   ['narrow mobile', { width: 320, height: 800 }],
