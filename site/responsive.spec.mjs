@@ -131,6 +131,33 @@ test('loads Umami analytics only for the production domain and keeps search work
   await search(page, 'agent mode');
 });
 
+test('privacy page is linked from the footer and lets visitors opt out of analytics', async ({ page }) => {
+  await loadSite(page);
+  await page.locator('footer a', { hasText: 'Privacy' }).click();
+  await expect(page).toHaveURL(/\/privacy\.html$/);
+  await expect(page.locator('h1')).toHaveText('Privacy');
+  await expect(page.locator(`script[src="${UMAMI_SCRIPT_URL}"]`)).toHaveCount(0);
+
+  const toggle = page.locator('#analytics-toggle');
+  const status = page.locator('#analytics-status');
+  await expect(toggle).toHaveText('Stop counting my visits');
+  await expect(toggle).toHaveAttribute('aria-pressed', 'false');
+
+  await toggle.click();
+  await expect(toggle).toHaveText('Allow visit counting');
+  await expect(toggle).toHaveAttribute('aria-pressed', 'true');
+  await expect(status).toHaveText('Your visits are not counted in this browser.');
+  expect(await page.evaluate(() => localStorage.getItem('umami.disabled'))).toBe('1');
+
+  await page.reload();
+  await expect(toggle).toHaveAttribute('aria-pressed', 'true');
+  await toggle.click();
+  expect(await page.evaluate(() => localStorage.getItem('umami.disabled'))).toBeNull();
+  await expect(status).toHaveText('Your visits are counted anonymously.');
+
+  await expectNoAccessibilityViolations(page, 'body');
+});
+
 test('loads a favicon matching the header colors', async ({ page }) => {
   await loadSite(page);
 
