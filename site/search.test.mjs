@@ -36,7 +36,7 @@ test('searchIndex returns empty array for empty keyword', () => {
   assert.deepStrictEqual(searchIndex(index, ''), []);
 });
 
-test('searchIndex performs case-insensitive substring match', () => {
+test('searchIndex performs case-insensitive whole-word match', () => {
   const index = [
     { snippet: 'Improved Chat', ide: 'vscode' },
     { snippet: 'New Feature', ide: 'eclipse' },
@@ -47,6 +47,63 @@ test('searchIndex performs case-insensitive substring match', () => {
   assert.strictEqual(results.length, 2);
   assert(results.some(r => r.ide === 'vscode'));
   assert(results.some(r => r.ide === 'jetbrains'));
+});
+
+test('searchIndex matches whole words and phrases without matching parts of words', () => {
+  const index = [
+    { snippet: 'Fusion is available.' },
+    { snippet: '(fusion), fusion-powered and fusion!' },
+    { snippet: 'confusion and fusions' },
+    { snippet: 'éfusion fusioné fusion2 fusion_name' },
+    { snippet: 'New Agent Mode is available.' },
+    { snippet: 'A subagent model is available.' },
+    { snippet: 'C++ is supported; C-- is not.' },
+  ];
+
+  assert.deepStrictEqual(searchIndex(index, 'fusion'), index.slice(0, 2));
+  assert.deepStrictEqual(searchIndex(index, 'agent mode'), [index[4]]);
+  assert.deepStrictEqual(searchIndex(index, 'C++'), [index[6]]);
+  assert.deepStrictEqual(searchIndex(index, 'C.*'), []);
+});
+
+test('Unicode connector punctuation joins words for searches and highlights', () => {
+  const index = [
+    { snippet: 'fusion\u203fx' },
+    { snippet: 'x\u2054fusion' },
+    { snippet: 'fusion-powered' },
+  ];
+  assert.deepStrictEqual(searchIndex(index, 'fusion'), [index[2]]);
+
+  const rows = {
+    matched: [{
+      ide: 'VS Code',
+      rows: [{ version: '1', release_date: '2026-01-01', url: 'https://example.test', snippet: 'fusion\u203fx x\u2054fusion Fusion' }],
+    }],
+    missing: [],
+  };
+  const markup = buildResultsMarkup(rows, 'fusion');
+  assert(markup.includes('fusion\u203fx x\u2054fusion <mark class="snippet-match">Fusion</mark>'));
+});
+
+test('Unicode join controls join words for searches and highlights', () => {
+  const index = [
+    { snippet: 'fusion\u200cx' },
+    { snippet: 'fusion\u200dx' },
+    { snippet: 'x\u200cfusion' },
+    { snippet: 'x\u200dfusion' },
+    { snippet: 'fusion-powered' },
+  ];
+  assert.deepStrictEqual(searchIndex(index, 'fusion'), [index[4]]);
+
+  const rows = {
+    matched: [{
+      ide: 'VS Code',
+      rows: [{ version: '1', release_date: '2026-01-01', url: 'https://example.test', snippet: 'fusion\u200cx x\u200dfusion Fusion' }],
+    }],
+    missing: [],
+  };
+  const markup = buildResultsMarkup(rows, 'fusion');
+  assert(markup.includes('fusion\u200cx x\u200dfusion <mark class="snippet-match">Fusion</mark>'));
 });
 
 test('searchIndex finds multiple matches', () => {
@@ -100,6 +157,29 @@ test('buildSnippetExcerpt keeps the full match visible instead of clipping it at
 
   assert(excerpt.includes('Next Edit Suggestions'));
   assert(!excerpt.includes('... **Copilot Next...'));
+});
+
+test('buildSnippetExcerpt centers on the whole-word match, not an earlier substring', () => {
+  const snippet = 'Earlier confusion appeared in a very long unrelated description with several extra words. Now Fusion is available to everyone.';
+  const excerpt = buildSnippetExcerpt(snippet, 'fusion');
+
+  assert(excerpt.includes('Fusion'));
+  assert(!excerpt.includes('confusion'));
+});
+
+test('result markup highlights only whole-word matches and escapes HTML', () => {
+  const rows = {
+    matched: [{
+      ide: 'VS Code',
+      rows: [{ version: '1', release_date: '2026-01-01', url: 'https://example.test', snippet: 'confusion & Fusion, fusion-powered <fusion>' }],
+    }],
+    missing: [],
+  };
+  const markup = buildResultsMarkup(rows, 'fusion');
+
+  assert(!markup.includes('con<mark'));
+  assert(markup.includes('confusion &amp; <mark class="snippet-match">Fusion</mark>'));
+  assert(markup.includes('&lt;<mark class="snippet-match">fusion</mark>&gt;'));
 });
 
 test('isLaunchAnnouncement matches launch keywords', () => {

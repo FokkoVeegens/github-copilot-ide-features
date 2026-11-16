@@ -29,11 +29,11 @@ flowchart LR
 **New folder: `site/`** — `index.html`, `style.css`, `app.js`, `search.js`
 
 - `search.js` — a **pure, dependency-free ES module** containing all business logic, so it's testable outside a browser:
-  - `validateQuery(q)` — enforce the > 4 characters rule.
-  - `searchIndex(index, keyword)` — case-insensitive substring match over snippets.
+  - `validateQuery(q)` — require at least 3 characters after trimming.
+  - `searchIndex(index, keyword)` — case-insensitive whole-word or exact-phrase match over snippets.
   - `buildIdeRows(results)` — pivot to the row-based table model: one row per IDE + matching release (IDE, version, date released, feature description), grouped by IDE and sorted oldest first; IDEs with no match are returned separately so the caller can render a single collapsed "N/A" row for them.
 - `app.js` — DOM wiring only: fetch `search-index.json` once on load, debounce input, render the table, show snippet text on hover/expand.
-- No frameworks, no build tooling, no npm dependencies at runtime. Optional later upgrade to MiniSearch if substring search proves too crude — not in scope now.
+- No frameworks, no build tooling, no npm dependencies at runtime.
 - A summary panel above the table reporting how many IDEs support the searched feature and how many don't (rendered as a collapsed "N/A" section), plus a permanent best-effort/accuracy disclaimer shown regardless of search state.
 
 ### Phase 3 — Testing
@@ -46,7 +46,7 @@ flowchart LR
 
 **JavaScript (zero new dependencies):**
 - `site/search.test.mjs` run with Node's built-in test runner: `node --test site/`.
-  - `validateQuery`: rejects ≤ 4 chars, trims whitespace.
+  - `validateQuery`: rejects fewer than 3 characters, trims whitespace.
   - `searchIndex`: case-insensitivity, no-match, multi-IDE matches.
   - `buildIdeRows`: correct grouping per IDE, oldest-first ordering within a group, IDEs without matches reported separately.
 
@@ -134,7 +134,7 @@ Document these steps in the README (they can't be automated with the default tok
 
 ### Phase 6 — Documentation (definition of done)
 
-- **README.md**: add a "Website" section — link to the live site, how search works (>4 char keyword, substring match, table semantics), how to run the site locally (`python -m scripts.build_search_index --output site && python -m http.server -d site`).
+- **README.md**: add a "Website" section — link to the live site, how search works (minimum 3 characters, whole words or exact phrases, table semantics), how to run the site locally (`python -m scripts.build_search_index --output site && python -m http.server -d site`).
 - **AGENTS.md**: extend repository layout with `site/` and `scripts/build_search_index.py`; add `node --test site/` to the local verification step; document the Pages workflow behavior.
 
 ---

@@ -181,7 +181,7 @@ export function collectIdeNames(index) {
 
 /**
  * Search the index for a keyword.
- * Case-insensitive substring match over snippet text.
+ * Case-insensitive whole-word or whole-phrase match over snippet text.
  * @param {Array<Object>} index - Array of records with 'snippet' field
  * @param {string} keyword - The keyword to search for
  * @returns {Array<Object>} Matching records
@@ -189,10 +189,21 @@ export function collectIdeNames(index) {
 export function searchIndex(index, keyword) {
   if (!keyword || !Array.isArray(index)) return [];
   
-  const lowerKeyword = keyword.toLowerCase();
+  const pattern = wholeWordPattern(keyword);
   return index.filter(record =>
-    String(record.snippet || '').toLowerCase().includes(lowerKeyword)
+    pattern.test(String(record.snippet || ''))
   );
+}
+
+/**
+ * Match a literal query at word boundaries, including Unicode word characters.
+ * @param {string} keyword
+ * @param {boolean} global
+ * @returns {RegExp}
+ */
+export function wholeWordPattern(keyword, global = false) {
+  const escaped = String(keyword).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp(`(?<![\\p{L}\\p{M}\\p{N}\\p{Pc}\\p{Join_Control}])${escaped}(?![\\p{L}\\p{M}\\p{N}\\p{Pc}\\p{Join_Control}])`, global ? 'giu' : 'iu');
 }
 
 /**
@@ -432,23 +443,20 @@ function clipText(text, maxChars) {
  * @returns {{start: number, end: number} | null}
  */
 function findBestMatch(text, query) {
-  const lowerText = text.toLowerCase();
-  const lowerQuery = query.toLowerCase();
-
-  const exactStart = lowerText.indexOf(lowerQuery);
-  if (exactStart !== -1) {
-    return { start: exactStart, end: exactStart + lowerQuery.length };
+  const exactMatch = wholeWordPattern(query).exec(text);
+  if (exactMatch) {
+    return { start: exactMatch.index, end: exactMatch.index + exactMatch[0].length };
   }
 
-  const terms = lowerQuery
+  const terms = query
     .split(/\s+/)
     .map(term => term.trim())
     .filter(term => term.length >= 3);
 
   for (const term of terms) {
-    const termStart = lowerText.indexOf(term);
-    if (termStart !== -1) {
-      return { start: termStart, end: termStart + term.length };
+    const termMatch = wholeWordPattern(term).exec(text);
+    if (termMatch) {
+      return { start: termMatch.index, end: termMatch.index + termMatch[0].length };
     }
   }
   return null;
