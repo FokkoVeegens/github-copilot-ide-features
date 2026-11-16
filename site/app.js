@@ -157,9 +157,10 @@ function scheduleSearchTracking(searchInput) {
 
     const launchOnly = document.getElementById('launch-only-filter')?.checked ?? false;
     const { matches } = prepareSearchResults(searchIndex(searchIndexData, query), launchOnly);
+    const ideRows = limitRowsPerIde(buildIdeRows(matches), MAX_ROWS_PER_IDE);
     window.umami.track('search', {
-      query: query.toLowerCase().replace(/\s+/g, ' '),
-      result_count: matches.length,
+      query,
+      result_count: ideRows.matched.reduce((count, group) => count + group.rows.length, 0),
       launch_only: launchOnly,
     });
   }, SEARCH_TRACK_DELAY_MS);
