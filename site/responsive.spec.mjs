@@ -115,6 +115,7 @@ test('whole-word search excludes substring-only IDEs and highlights only whole m
   await page.route('**/meta.json', route => route.fulfill({ json: { generated_at: '2026-03-15T09:00:00Z' } }));
   await page.goto('/index.html');
   await expect(page.locator('#hint')).toBeVisible();
+  await expect(page.locator('#hint')).toContainText('whole word or exact phrase (at least 3 characters)');
   await search(page, 'fusion');
 
   for (const launchOnly of [true, false]) {

@@ -85,6 +85,27 @@ test('Unicode connector punctuation joins words for searches and highlights', ()
   assert(markup.includes('fusion\u203fx x\u2054fusion <mark class="snippet-match">Fusion</mark>'));
 });
 
+test('Unicode join controls join words for searches and highlights', () => {
+  const index = [
+    { snippet: 'fusion\u200cx' },
+    { snippet: 'fusion\u200dx' },
+    { snippet: 'x\u200cfusion' },
+    { snippet: 'x\u200dfusion' },
+    { snippet: 'fusion-powered' },
+  ];
+  assert.deepStrictEqual(searchIndex(index, 'fusion'), [index[4]]);
+
+  const rows = {
+    matched: [{
+      ide: 'VS Code',
+      rows: [{ version: '1', release_date: '2026-01-01', url: 'https://example.test', snippet: 'fusion\u200cx x\u200dfusion Fusion' }],
+    }],
+    missing: [],
+  };
+  const markup = buildResultsMarkup(rows, 'fusion');
+  assert(markup.includes('fusion\u200cx x\u200dfusion <mark class="snippet-match">Fusion</mark>'));
+});
+
 test('searchIndex finds multiple matches', () => {
   const index = [
     { snippet: 'Chat support', version: '1.0.0' },

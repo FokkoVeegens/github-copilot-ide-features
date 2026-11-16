@@ -203,7 +203,7 @@ export function searchIndex(index, keyword) {
  */
 export function wholeWordPattern(keyword, global = false) {
   const escaped = String(keyword).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  return new RegExp(`(?<![\\p{L}\\p{M}\\p{N}\\p{Pc}])${escaped}(?![\\p{L}\\p{M}\\p{N}\\p{Pc}])`, global ? 'giu' : 'iu');
+  return new RegExp(`(?<![\\p{L}\\p{M}\\p{N}\\p{Pc}\\p{Join_Control}])${escaped}(?![\\p{L}\\p{M}\\p{N}\\p{Pc}\\p{Join_Control}])`, global ? 'giu' : 'iu');
 }
 
 /**
