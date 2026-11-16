@@ -45,7 +45,7 @@ python -m http.server -d site 8000
 
 The site is a pure client-side application: HTML, CSS, and ES module JavaScript. It loads a pre-built search index at page load and performs all searching in the browser.
 
-The published site loads the [Umami Cloud](https://umami.is/) tracking script for cookie-free usage analytics. Tracking is limited to `fokkoveegens.github.io` via `data-domains`, so local previews and tests do not send analytics; the site keeps working when the script is blocked. The footer links to `site/privacy.html`, which explains what is collected and offers an opt-out toggle (it sets Umami's `umami.disabled` flag in local storage).
+The published site loads the [Umami Cloud](https://umami.is/) tracking script for cookie-free usage analytics. Tracking is limited to `fokkoveegens.github.io` via `data-domains`, so local previews and tests do not send analytics; the site keeps working when the script is blocked. A `search` event records the normalized query after a one-second pause, the visible result count, and whether launch-only filtering is enabled. View search terms under the site's **Events** report in Umami and break down the `search` event by its `query` property. The footer links to `site/privacy.html`, which explains what is collected and offers an opt-out toggle (it sets Umami's `umami.disabled` flag in local storage).
 
 ## Repository layout
 

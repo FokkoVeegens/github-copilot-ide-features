@@ -5,8 +5,10 @@
 import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, prepareSearchResults, collectIdeNames, limitRowsPerIde, wholeWordPattern, formatRelativeTime, formatDateTime } from './search.js';
 
 const MAX_ROWS_PER_IDE = 20;
+const SEARCH_TRACK_DELAY_MS = 1000;
 
 let searchIndexData = [];
+let searchTrackingTimeout;
 
 /** Logo image per IDE id. IDEs without a logo fall back to a text header. */
 const IDE_LOGOS = {
@@ -130,7 +132,11 @@ async function init() {
 
   // Set up event listeners
   const searchInput = document.getElementById('search-input');
-  searchInput.addEventListener('input', debounce(handleSearch, 300));
+  const debouncedHandleSearch = debounce(handleSearch, 300);
+  searchInput.addEventListener('input', event => {
+    debouncedHandleSearch(event);
+    scheduleSearchTracking(event.target);
+  });
 
   const launchOnlyFilter = document.getElementById('launch-only-filter');
   launchOnlyFilter.addEventListener('change', () => {
@@ -139,6 +145,24 @@ async function init() {
 
   // Show initial hint
   document.getElementById('hint').style.display = 'block';
+}
+
+function scheduleSearchTracking(searchInput) {
+  clearTimeout(searchTrackingTimeout);
+  const query = validateQuery(searchInput.value);
+  if (!query) return;
+
+  searchTrackingTimeout = setTimeout(() => {
+    if (typeof window.umami?.track !== 'function') return;
+
+    const launchOnly = document.getElementById('launch-only-filter')?.checked ?? false;
+    const { matches } = prepareSearchResults(searchIndex(searchIndexData, query), launchOnly);
+    window.umami.track('search', {
+      query: query.toLowerCase().replace(/\s+/g, ' '),
+      result_count: matches.length,
+      launch_only: launchOnly,
+    });
+  }, SEARCH_TRACK_DELAY_MS);
 }
 
 /**

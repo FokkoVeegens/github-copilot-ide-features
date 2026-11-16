@@ -131,12 +131,41 @@ test('configures Umami to track only the production domain and keeps search work
   await search(page, 'agent mode');
 });
 
+test('tracks normalized search terms after typing pauses', async ({ page }) => {
+  await page.addInitScript(() => {
+    window.umami = {
+      track: (name, data) => {
+        window.trackedUmamiEvents ??= [];
+        window.trackedUmamiEvents.push({ name, data });
+      },
+    };
+  });
+  await loadSite(page);
+
+  await page.locator('#search-input').fill('ab');
+  await page.waitForTimeout(1100);
+  expect(await page.evaluate(() => window.trackedUmamiEvents ?? [])).toEqual([]);
+
+  await page.locator('#search-input').fill('  AGENT MODE  ');
+  await expect(page.locator('#results .summary-section')).toBeVisible();
+  await expect.poll(() => page.evaluate(() => window.trackedUmamiEvents ?? [])).toHaveLength(1);
+
+  const [event] = await page.evaluate(() => window.trackedUmamiEvents);
+  expect(event.name).toBe('search');
+  expect(event.data).toMatchObject({
+    query: 'agent mode',
+    launch_only: true,
+  });
+  expect(event.data.result_count).toBeGreaterThan(0);
+});
+
 test('privacy page is linked from the footer and lets visitors opt out of analytics', async ({ page }) => {
   await loadSite(page);
   await page.locator('footer a', { hasText: 'Privacy' }).click();
   await expect(page).toHaveURL(/\/privacy\.html$/);
   await expect(page.locator('h1')).toHaveText('Privacy');
   await expect(page.locator(`script[src="${UMAMI_SCRIPT_URL}"]`)).toHaveCount(0);
+  await expect(page.locator('article')).toContainText('normalized search term');
 
   const toggle = page.locator('#analytics-toggle');
   const status = page.locator('#analytics-status');
