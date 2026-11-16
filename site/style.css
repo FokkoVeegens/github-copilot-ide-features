@@ -28,22 +28,54 @@ body {
 
 /* Header */
 header {
-  background: white;
+  background: #0366d6;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: white;
   padding: 2rem 0;
   margin-bottom: 2rem;
 }
 
+header .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header-content {
+  min-width: 0;
+}
+
 header h1 {
   font-size: 2.5rem;
-  color: #0366d6;
+  color: inherit;
   margin-bottom: 0.5rem;
 }
 
 .subtitle {
   font-size: 1.1rem;
-  color: #666;
+  color: inherit;
   line-height: 1.6;
+}
+
+.repository-link {
+  display: inline-flex;
+  flex: 0 0 44px;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  color: inherit;
+}
+
+.repository-link:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.repository-link:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 2px;
 }
 
 /* Main content */

@@ -105,6 +105,56 @@ async function expectReleaseCard(card, expected) {
   await expect(card).toBeVisible();
 }
 
+for (const [label, viewport] of [
+  ['desktop', DESKTOP_VIEWPORT],
+  ['narrow mobile', { width: 320, height: 800 }],
+]) {
+  test(`shows an accessible repository link in the ${label} header`, async ({ page }) => {
+    await page.setViewportSize(viewport);
+    await loadSite(page);
+
+    const header = page.locator('header');
+    const heading = header.locator('h1');
+    const subtitle = header.locator('.subtitle');
+    const link = header.getByRole('link', { name: 'View repository on GitHub' });
+    const logo = link.locator('svg');
+
+    await expect(link).toBeVisible();
+    await expect(link).toHaveAttribute(
+      'href',
+      'https://github.com/FokkoVeegens/github-copilot-ide-features',
+    );
+    await expect(link).toHaveAttribute('target', '_blank');
+    await expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+    await expect(logo).toBeVisible();
+    await expect(heading).toHaveCSS('color', 'rgb(255, 255, 255)');
+    await expect(subtitle).toHaveCSS('color', 'rgb(255, 255, 255)');
+    await expect(logo.locator('path')).toHaveCSS('fill', 'rgb(255, 255, 255)');
+
+    const background = await header.evaluate(element =>
+      getComputedStyle(element).backgroundColor.match(/\d+/g).map(Number),
+    );
+    expect(background[2]).toBeGreaterThan(background[0]);
+    expect(background[2]).toBeGreaterThan(background[1]);
+
+    const headingBox = await heading.boundingBox();
+    const linkBox = await link.boundingBox();
+    expect(linkBox.width).toBeGreaterThanOrEqual(44);
+    expect(linkBox.height).toBeGreaterThanOrEqual(44);
+    expect(linkBox.x).toBeGreaterThanOrEqual(headingBox.x + headingBox.width);
+    expect(linkBox.x + linkBox.width).toBeLessThanOrEqual(viewport.width);
+    expect(Math.abs(linkBox.y - headingBox.y)).toBeLessThanOrEqual(2);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+      viewport.width,
+    );
+
+    await page.keyboard.press('Tab');
+    await expect(link).toBeFocused();
+    await expect(link).not.toHaveCSS('outline-style', 'none');
+    await expectNoAccessibilityViolations(page, 'header');
+  });
+}
+
 test('whole-word search excludes substring-only IDEs and highlights only whole matches', async ({ page }) => {
   const index = [
     { ...SEARCH_INDEX[0], snippet: 'Fusion is available despite earlier confusion.' },
