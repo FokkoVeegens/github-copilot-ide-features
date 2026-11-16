@@ -1,0 +1,51 @@
+{
+  "ide": "jetbrains",
+  "version": "1.21.1",
+  "release_date": "2026-11-16",
+  "title": "GitHub Copilot for JetBrains 1.21.1",
+  "url": "https://plugins.jetbrains.com/plugin/17718-github-copilot/versions",
+  "source": "api",
+  "body_markdown": "### New Features\n\n* Added on-device voice dictation for Chat on supported native plugin packages with Editor Preview enabled. Dictation requires opt-in and a downloaded model, and keeps transcripts as editable drafts until Send.\n* Added cloud sandbox (preview) support to run Copilot sessions in a remote sandbox environment. This feature is rolled out in phases.\n* Added remote access (preview) with Mission Control registration while the IDE is open, allowing users to expose Copilot chats remotely. This feature is rolled out in phases.\n* Added discovery of shared Copilot sessions from remote accessible computers, and reopening remote sessions from history to continue the conversation (preview). This feature is rolled out in phases.\n* Added a browser use setting under Chat > Agent that enables the built-in browser-use plugin after restart (preview).\n* Added support for Copilot Access.\n\n### Bug Fixes\n\n* Attempt to fix the issue of sessions being lost sometimes after a restart\n* Fixed Local agent changes failing to open in Copilot (Modern Inline) review when the edited file was not already open.\n* Fixed failed tool calls showing progress text instead of the actual error message.\n* Fixed opening historical Copilot session diffs on newer JetBrains IDE EAP builds.",
+  "body_html": "<h3>New Features</h3>\n\n<ul><li>Added on-device voice dictation for Chat on supported native plugin packages with Editor Preview enabled. Dictation requires opt-in and a downloaded model, and keeps transcripts as editable drafts until Send.</li><li>Added cloud sandbox (preview) support to run Copilot sessions in a remote sandbox environment. This feature is rolled out in phases.</li><li>Added remote access (preview) with Mission Control registration while the IDE is open, allowing users to expose Copilot chats remotely. This feature is rolled out in phases.</li><li>Added discovery of shared Copilot sessions from remote accessible computers, and reopening remote sessions from history to continue the conversation (preview). This feature is rolled out in phases.</li><li>Added a browser use setting under Chat &gt; Agent that enables the built-in browser-use plugin after restart (preview).</li><li>Added support for Copilot Access.</li></ul>\n\n<h3>Bug Fixes</h3>\n\n<ul><li>Attempt to fix the issue of sessions being lost sometimes after a restart</li><li>Fixed Local agent changes failing to open in Copilot (Modern Inline) review when the edited file was not already open.</li><li>Fixed failed tool calls showing progress text instead of the actual error message.</li><li>Fixed opening historical Copilot session diffs on newer JetBrains IDE EAP builds.</li></ul>",
+  "categories": [],
+  "copilot_mentions": [
+    "* Added on-device voice dictation for Chat on supported native plugin packages with Editor Preview enabled. Dictation requires opt-in and a downloaded model, and keeps transcripts as editable drafts until Send.",
+    "* Added cloud sandbox (preview) support to run Copilot sessions in a remote sandbox environment. This feature is rolled out in phases.",
+    "* Added remote access (preview) with Mission Control registration while the IDE is open, allowing users to expose Copilot chats remotely. This feature is rolled out in phases.",
+    "* Added discovery of shared Copilot sessions from remote accessible computers, and reopening remote sessions from history to continue the conversation (preview). This feature is rolled out in phases.",
+    "* Added a browser use setting under Chat > Agent that enables the built-in browser-use plugin after restart (preview).",
+    "* Added support for Copilot Access.",
+    "* Attempt to fix the issue of sessions being lost sometimes after a restart",
+    "* Fixed Local agent changes failing to open in Copilot (Modern Inline) review when the edited file was not already open.",
+    "* Fixed failed tool calls showing progress text instead of the actual error message.",
+    "* Fixed opening historical Copilot session diffs on newer JetBrains IDE EAP builds."
+  ],
+  "builds": [
+    {
+      "ide_build": "252",
+      "since": "252.0",
+      "until": "253.*",
+      "compatible_versions": {
+        "PHPSTORM": "2025.2 — 2025.3.6.2",
+        "PYCHARM_COMMUNITY": "2025.2 — 2025.3",
+        "PYCHARM": "2025.2 — 2025.3.6.2",
+        "IDEA": "2025.2 — 2025.3.6.2",
+        "DATASPELL": "2025.2 — 2025.3.3.1",
+        "CLION": "2025.2 — 2025.3.6.3",
+        "RUBYMINE": "2025.2 — 2025.3.6.2",
+        "IDEA_COMMUNITY": "2025.2 — 2025.3",
+        "RIDER": "2025.2 — 2025.3.5.3",
+        "ANDROID_STUDIO": "Otter | 2025.2.1 — Panda 4 | 2025.3.4 Patch 1",
+        "RUST": "2025.2 — 2025.3.7.1",
+        "WEBSTORM": "2025.2 — 2025.3.6.2",
+        "MPS": "2025.2 — 2025.3.3",
+        "DBE": "2025.2 — 2025.3.6.1",
+        "GOLAND": "2025.2 — 2025.3.5.2"
+      },
+      "file_id": 1221863,
+      "downloads": 0
+    }
+  ],
+  "fetched_at": "2026-11-16T16:09:30Z",
+  "schema_version": 1
+}
