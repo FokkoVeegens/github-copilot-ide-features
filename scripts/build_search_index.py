@@ -32,6 +32,7 @@ def build_search_index(config_path: pathlib.Path | None = None, data_root: pathl
     config = load_config(config_path)
     records = []
     ide_version_counts = {}
+    ide_last_updated: dict[str, str | None] = {}
     
     # Iterate all IDEs except 'dummy'
     for ide_config in config.get("ides", []):
@@ -50,6 +51,7 @@ def build_search_index(config_path: pathlib.Path | None = None, data_root: pathl
         
         # Track version counts
         ide_version_counts[ide_name] = 0
+        ide_last_updated[ide_id] = None
         
         # Scan all JSON files except index.json
         for json_file in sorted(data_dir.glob("*.json")):
@@ -69,6 +71,12 @@ def build_search_index(config_path: pathlib.Path | None = None, data_root: pathl
                 )
                 if not (version and has_valid_date and url):
                     continue
+
+                if _is_iso_date(release_date) and (
+                    ide_last_updated[ide_id] is None
+                    or release_date > ide_last_updated[ide_id]
+                ):
+                    ide_last_updated[ide_id] = release_date
                 
                 snippets = _extract_snippets(
                     release, allow_body_fallback=ide_id in COPILOT_ONLY_IDES
@@ -107,9 +115,21 @@ def build_search_index(config_path: pathlib.Path | None = None, data_root: pathl
     metadata = {
         "generated_at": datetime.now(UTC).isoformat().replace("+00:00", "") + "Z",
         "ide_version_counts": ide_version_counts,
+        "ide_last_updated": ide_last_updated,
     }
     
     return {"records": records, "metadata": metadata}
+
+
+def _is_iso_date(value: object) -> bool:
+    """Return True for a valid YYYY-MM-DD date string."""
+    if not isinstance(value, str) or len(value) != 10:
+        return False
+    try:
+        datetime.strptime(value, "%Y-%m-%d")
+    except ValueError:
+        return False
+    return True
 
 
 def _extract_snippets(release: dict, allow_body_fallback: bool = False) -> list[str]:

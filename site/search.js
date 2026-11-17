@@ -40,6 +40,20 @@ export function formatRelativeTime(date, now = new Date()) {
   return 'more than a year ago';
 }
 
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const pad2 = n => String(n).padStart(2, '0');
+
+/**
+ * Format a date in local time as dd-MMM-yyyy, e.g. "15-Mar-2026".
+ * @param {Date|string|number} date
+ * @returns {string} Formatted date, or '' for an invalid date
+ */
+export function formatDate(date) {
+  const d = new Date(date);
+  if (Number.isNaN(d.getTime())) return '';
+  return `${pad2(d.getDate())}-${MONTHS[d.getMonth()]}-${d.getFullYear()}`;
+}
+
 /**
  * Format a date in local time as dd-MMM-yyyy HH:mm, e.g. "15-Mar-2026 09:00".
  * @param {Date|string|number} date
@@ -48,9 +62,43 @@ export function formatRelativeTime(date, now = new Date()) {
 export function formatDateTime(date) {
   const d = new Date(date);
   if (Number.isNaN(d.getTime())) return '';
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  const pad = n => String(n).padStart(2, '0');
-  return `${pad(d.getDate())}-${months[d.getMonth()]}-${d.getFullYear()} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+  return `${formatDate(d)} ${pad2(d.getHours())}:${pad2(d.getMinutes())}`;
+}
+
+/**
+ * Parse a YYYY-MM-DD release date as local midnight, so it shows on the same
+ * calendar day in every time zone.
+ * @param {string|null|undefined} value
+ * @returns {Date|null} Parsed date, or null when missing or invalid
+ */
+export function parseReleaseDate(value) {
+  const match = typeof value === 'string' && /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+  if (!match) return null;
+  const [year, month, day] = match.slice(1).map(Number);
+  const date = new Date(year, month - 1, day);
+  return date.getMonth() === month - 1 && date.getDate() === day ? date : null;
+}
+
+/**
+ * Describe how many calendar days ago a date was, e.g. "today", "1 day ago",
+ * or "more than a week ago".
+ * @param {Date|string|number} date - The past date
+ * @param {Date|string|number} [now] - Reference time (defaults to the current time)
+ * @returns {string} Relative description, or '' for an invalid date
+ */
+export function formatRelativeDate(date, now = new Date()) {
+  const then = new Date(date);
+  const reference = new Date(now);
+  if (Number.isNaN(then.getTime()) || Number.isNaN(reference.getTime())) return '';
+
+  const startOfDay = d => Date.UTC(d.getFullYear(), d.getMonth(), d.getDate());
+  const days = Math.max(0, Math.round((startOfDay(reference) - startOfDay(then)) / 86400000));
+
+  if (days === 0) return 'today';
+  if (days <= 7) return `${days} day${days === 1 ? '' : 's'} ago`;
+  if (days <= 30) return 'more than a week ago';
+  if (days <= 365) return 'more than a month ago';
+  return 'more than a year ago';
 }
 
 /**

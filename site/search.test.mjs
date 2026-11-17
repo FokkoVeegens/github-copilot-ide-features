@@ -4,7 +4,7 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert';
-import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, isGaAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, prepareSearchResults, collectIdeNames, limitRowsPerIde, formatRelativeTime, formatDateTime } from './search.js';
+import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, isGaAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, prepareSearchResults, collectIdeNames, limitRowsPerIde, formatRelativeTime, formatDateTime, formatDate, parseReleaseDate, formatRelativeDate } from './search.js';
 import { buildResultsMarkup } from './app.js';
 
 test('formatRelativeTime describes elapsed time in human terms', () => {
@@ -33,6 +33,31 @@ test('formatDateTime formats as dd-MMM-yyyy HH:mm in local time', () => {
   assert.strictEqual(formatDateTime(new Date(2026, 2, 5, 9, 7)), '05-Mar-2026 09:07');
   assert.strictEqual(formatDateTime(new Date(2025, 11, 31, 23, 59)), '31-Dec-2025 23:59');
   assert.strictEqual(formatDateTime('invalid'), '');
+});
+
+test('formatDate formats as dd-MMM-yyyy in local time', () => {
+  assert.strictEqual(formatDate(new Date(2026, 4, 20, 23, 59)), '20-May-2026');
+  assert.strictEqual(formatDate('invalid'), '');
+});
+
+test('parseReleaseDate keeps the calendar day and rejects invalid dates', () => {
+  const date = parseReleaseDate('2026-05-20');
+  assert.deepStrictEqual([date.getFullYear(), date.getMonth(), date.getDate(), date.getHours()], [2026, 4, 20, 0]);
+  assert.strictEqual(parseReleaseDate('2026-02-30'), null);
+  assert.strictEqual(parseReleaseDate('2026-05-20T10:00:00Z'), null);
+  assert.strictEqual(parseReleaseDate(null), null);
+});
+
+test('formatRelativeDate counts calendar days, not elapsed hours', () => {
+  const now = new Date(2026, 4, 20, 0, 30);
+  assert.strictEqual(formatRelativeDate(new Date(2026, 4, 20), now), 'today');
+  assert.strictEqual(formatRelativeDate(new Date(2026, 4, 19), now), '1 day ago');
+  assert.strictEqual(formatRelativeDate(new Date(2026, 4, 13), now), '7 days ago');
+  assert.strictEqual(formatRelativeDate(new Date(2026, 4, 12), now), 'more than a week ago');
+  assert.strictEqual(formatRelativeDate(new Date(2026, 3, 1), now), 'more than a month ago');
+  assert.strictEqual(formatRelativeDate(new Date(2025, 0, 1), now), 'more than a year ago');
+  assert.strictEqual(formatRelativeDate(new Date(2026, 4, 21), now), 'today');
+  assert.strictEqual(formatRelativeDate('invalid', now), '');
 });
 
 test('validateQuery rejects empty string', () => {

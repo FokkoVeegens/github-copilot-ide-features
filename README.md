@@ -23,6 +23,11 @@ The repository hosts a **searchable feature matrix** on GitHub Pages at [https:/
 - Clicking on a version badge links to the official release notes.
 - The **Only launch announcements** filter (enabled by default) hides mentions that describe incremental changes or fixes. Uncheck the box to see all mentions.
 - The GitHub logo in the header links to this repository.
+- The disclaimer's **the data on this site** link opens a dedicated source directory for every supported IDE. It links to the official release notes, plugin version histories, and feature matrices used by the collectors, including the Xcode changelog and both SSMS release-note sources. The footer also links to the directory next to Privacy.
+
+The source directory is maintained in `site/sources.html`; keep its links aligned with the fetcher endpoints in `config/ides.yml`, using readable source pages rather than API or raw-file URLs.
+
+Each source row also shows a **Last updated** date: the release date of the newest release collected for that IDE, taken across all of its sources (for example both SSMS sources). `scripts/build_search_index.py` writes these dates to `meta.json` as `ide_last_updated` (IDE id → `YYYY-MM-DD`, or `null` when no dated release exists). `site/sources.js` shows each date relative to today (for example "2 days ago"), with the exact date in `dd-MMM-yyyy` format as a hover tooltip. Without JavaScript or a known date, the cell reads "Not available".
 
 ### Running the site locally
 

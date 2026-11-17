@@ -344,6 +344,80 @@ for (const [label, viewport] of [
   ['desktop', DESKTOP_VIEWPORT],
   ['narrow mobile', { width: 320, height: 800 }],
 ]) {
+  test(`makes collection sources discoverable and readable on ${label}`, async ({ page }) => {
+    await page.setViewportSize(viewport);
+    await loadSite(page);
+
+    const sourceLink = page.locator('.disclaimer').getByRole('link', {
+      name: 'the data on this site',
+      exact: true,
+    });
+    await expect(sourceLink).toHaveAttribute('href', './sources.html');
+    await expect(page.locator('.source-intro')).toHaveCount(0);
+    await search(page, 'agent mode');
+    await expect(sourceLink).toBeVisible();
+    await page.locator('#search-input').fill('no matching feature');
+    await expect(page.locator('#results')).toHaveText('No matching features found.');
+    await expect(sourceLink).toBeVisible();
+    await sourceLink.focus();
+    await expect(sourceLink).not.toHaveCSS('outline-style', 'none');
+    await page.keyboard.press('Enter');
+    await expect(page).toHaveURL(/\/sources\.html$/);
+
+    const sources = page.getByRole('region', {
+      name: 'Official release notes and feature documentation',
+      exact: true,
+    });
+    await expect(page.locator('h1')).toHaveText('Data sources');
+    await expect(
+      sources.getByRole('heading', {
+        name: 'Official release notes and feature documentation',
+      }),
+    ).toBeInViewport();
+    await expect(sources.locator('tbody th')).toHaveText([
+      'VS Code', 'GitHub Copilot CLI', 'Visual Studio 2022', 'Visual Studio 2026',
+      'JetBrains', 'Xcode', 'Eclipse', 'Vim/Neovim', 'SQL Server Management Studio',
+    ]);
+    expect(await sources.getByRole('link').evaluateAll(links => links.map(link => ({
+      href: link.href, target: link.target, rel: link.rel,
+    })))).toEqual([
+      'https://code.visualstudio.com/updates',
+      'https://github.com/github/copilot-cli/releases',
+      'https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-history',
+      'https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes',
+      'https://plugins.jetbrains.com/plugin/17718-github-copilot/versions',
+      'https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=xcode',
+      'https://github.com/github/CopilotForXcode/blob/main/CHANGELOG.md',
+      'https://github.com/microsoft/copilot-for-eclipse/releases',
+      'https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=vimneovim',
+      'https://learn.microsoft.com/en-us/ssms/release-notes-22',
+      'https://learn.microsoft.com/en-us/ssms/release-notes-21',
+    ].map(href => ({ href, target: '_blank', rel: 'noopener noreferrer' })));
+    await expectNoAccessibilityViolations(page, 'main');
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+      viewport.width,
+    );
+
+    await expect(
+      page.locator('footer').getByRole('link', { name: 'Feature search' }),
+    ).toHaveAttribute('href', './index.html');
+    await expect(page.locator('footer').getByRole('link', { name: 'Privacy' })).toHaveAttribute(
+      'href',
+      './privacy.html',
+    );
+  });
+
+  test(`links to data sources beside Privacy in the ${label} search footer`, async ({ page }) => {
+    await page.setViewportSize(viewport);
+    await loadSite(page);
+    const footerLinks = page.locator('footer a');
+    await expect(footerLinks).toHaveText(['Data sources', 'Privacy']);
+    await expect(footerLinks.nth(0)).toHaveAttribute('href', './sources.html');
+    await footerLinks.nth(0).click();
+    await expect(page).toHaveURL(/\/sources\.html$/);
+    await expect(page.locator('h1')).toHaveText('Data sources');
+  });
+
   test(`shows an accessible repository link in the ${label} header`, async ({ page }) => {
     await page.setViewportSize(viewport);
     await loadSite(page);
@@ -387,6 +461,76 @@ for (const [label, viewport] of [
     await expect(link).toBeFocused();
     await expect(link).not.toHaveCSS('outline-style', 'none');
     await expectNoAccessibilityViolations(page, 'header');
+  });
+}
+
+test('keeps the source page reachable without JavaScript', async ({ browser }) => {
+  const context = await browser.newContext({ javaScriptEnabled: false });
+  const page = await context.newPage();
+  await page.route('https://cloud.umami.is/**', route => route.abort());
+  try {
+    await page.goto('/index.html');
+    await page.getByRole('link', { name: 'the data on this site', exact: true }).click();
+    await expect(page).toHaveURL(/\/sources\.html$/);
+    const sources = page.getByRole('region', {
+      name: 'Official release notes and feature documentation',
+      exact: true,
+    });
+    await expect(sources).toBeVisible();
+    await expect(sources.getByRole('link')).toHaveCount(11);
+    await expect(sources.locator('[data-last-updated]')).toHaveText(Array(9).fill('Not available'));
+  } finally {
+    await context.close();
+  }
+});
+
+for (const [label, viewport] of [
+  ['desktop', DESKTOP_VIEWPORT],
+  ['narrow mobile', { width: 320, height: 800 }],
+]) {
+  test(`shows each IDE's newest collected release date on the ${label} sources page`, async ({ page }) => {
+    await page.setViewportSize(viewport);
+    await page.clock.setFixedTime(new Date(2026, 4, 20, 0, 30));
+    await page.route('**/meta.json', route => route.fulfill({
+      json: {
+        generated_at: '2026-05-20T00:00:00Z',
+        ide_last_updated: {
+          'vs-code': '2026-05-20',
+          'copilot-cli': '2026-05-19',
+          'visual-studio-2022': '2026-05-13',
+          'visual-studio-2026': '2026-05-01',
+          jetbrains: '2026-03-01',
+          xcode: '2026-05-18',
+          eclipse: '2024-01-01',
+          'vim-neovim': null,
+          'sql-server-management-studio': 'not-a-date',
+        },
+      },
+    }));
+    await page.goto('/sources.html');
+
+    const table = page.locator('.sources-table');
+    if (viewport === DESKTOP_VIEWPORT) {
+      await expect(table.locator('thead th')).toHaveText(['IDE', 'Source', 'Last updated']);
+    }
+    const cells = table.locator('[data-last-updated]');
+    await expect(cells).toContainText([
+      'today', '1 day ago', '7 days ago', 'more than a week ago', 'more than a month ago',
+      '2 days ago', 'more than a year ago', 'Not available', 'Not available',
+    ]);
+
+    const xcode = page.getByRole('row', { name: /^Xcode/ }).locator('time');
+    await expect(xcode).toHaveAttribute('datetime', '2026-05-18');
+    await expect(xcode).toHaveAttribute('title', '18-May-2026');
+    await expect(table.locator('time')).toHaveCount(7);
+    for (const title of await table.locator('time').evaluateAll(els => els.map(el => el.title))) {
+      expect(title).toMatch(/^\d{2}-[A-Z][a-z]{2}-\d{4}$/);
+    }
+
+    await expectNoAccessibilityViolations(page, 'main');
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+      viewport.width,
+    );
   });
 }
 

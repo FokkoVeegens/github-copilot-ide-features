@@ -238,6 +238,42 @@ def test_build_search_index_metadata_includes_version_counts(populated_data: tup
     assert metadata["ide_version_counts"]["Test IDE Two"] == 1
 
 
+def test_build_search_index_metadata_includes_newest_release_date_per_ide(
+    tmp_config: tuple[pathlib.Path, pathlib.Path],
+) -> None:
+    config_path, data_root = tmp_config
+    ide_dir = data_root / "test-ide-1"
+    ide_dir.mkdir(parents=True, exist_ok=True)
+    (data_root / "test-ide-2").mkdir(parents=True, exist_ok=True)
+    releases = [
+        ("1.0.0", "2026-03-01", ["- Copilot feature"]),
+        ("2.0.0", "2026-05-20", []),  # no Copilot snippets, still a collected release
+        ("3.0.0", None, ["- Undated Copilot feature"]),
+        ("4.0.0", "not-a-date", ["- Copilot feature"]),
+    ]
+    for version, release_date, mentions in releases:
+        (ide_dir / f"{version}.json").write_text(
+            json.dumps({
+                "ide": "test-ide-1",
+                "version": version,
+                "release_date": release_date,
+                "url": f"https://example.com/{version}",
+                "copilot_mentions": mentions,
+            }),
+            encoding="utf-8",
+        )
+    (ide_dir / "index.json").write_text(
+        json.dumps([{"release_date": "2099-01-01"}]), encoding="utf-8"
+    )
+
+    metadata = build_search_index(config_path, data_root)["metadata"]
+
+    assert metadata["ide_last_updated"] == {
+        "test-ide-1": "2026-05-20",
+        "test-ide-2": None,
+    }
+
+
 def test_build_search_index_tolerates_malformed_json(populated_data: tuple[pathlib.Path, pathlib.Path]) -> None:
     config_path, data_root = populated_data
     
