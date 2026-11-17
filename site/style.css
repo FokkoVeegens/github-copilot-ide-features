@@ -83,11 +83,93 @@ main {
   margin-bottom: 2rem;
 }
 
-.search-section {
+.search-section,
+.sources-section {
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 2rem;
+}
+
+.disclaimer a,
+.sources-section a {
+  color: #0366d6;
+  text-underline-offset: 0.15em;
+}
+
+.disclaimer a:hover,
+.sources-section a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.disclaimer a:focus-visible,
+.sources-section a:focus-visible {
+  outline: 2px solid #0366d6;
+  outline-offset: 3px;
+}
+
+.sources-section {
+  line-height: 1.6;
+}
+
+.sources-section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.sources-section > p {
+  max-width: 70ch;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.sources-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-wrap: anywhere;
+}
+
+.sources-table th,
+.sources-table td {
+  padding: 0.85rem 1.5rem 0.85rem 0;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sources-table th:last-child,
+.sources-table td:last-child {
+  padding-right: 0;
+}
+
+.sources-table thead th {
+  padding-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #555;
+  border-bottom-width: 2px;
+}
+
+.sources-table tbody th {
+  width: 30%;
+  font-weight: 600;
+}
+
+.sources-table tbody tr:last-child > * {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sources-table .last-updated {
+  width: 12rem;
+  color: #555;
+  white-space: nowrap;
+}
+
+.sources-table .last-updated time {
+  color: #333;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.2em;
+  cursor: help;
 }
 
 /* Search input */
@@ -549,8 +631,47 @@ footer a:hover {
     font-size: 0.95rem;
   }
 
-  .search-section {
+  .search-section,
+  .sources-section {
     padding: 1.1rem;
+  }
+
+  .sources-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .sources-table tbody tr {
+    display: grid;
+    gap: 0.25rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .sources-table tbody tr:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .sources-table tbody th,
+  .sources-table tbody td,
+  .sources-table .last-updated {
+    width: auto;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .sources-table .last-updated {
+    font-size: 0.9rem;
+    white-space: normal;
+  }
+
+  .sources-table .last-updated::before {
+    content: 'Last updated: ';
   }
 
   .search-input {

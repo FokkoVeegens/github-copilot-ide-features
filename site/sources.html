@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data sources · GitHub Copilot Feature Tracker</title>
+  <link rel="icon" type="image/svg+xml" sizes="any" href="./images/favicon.svg" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h1>Data sources</h1>
+        <p class="subtitle">Where this site's Copilot feature data comes from.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="sources-section" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">Official release notes and feature documentation</h2>
+        <p>
+          Explore the sources used to collect data for each IDE.
+          In search results, select a version or feature description to read the original notes.
+          <strong>Last updated</strong> shows the release date of the newest release collected from each IDE's sources.
+        </p>
+        <table class="sources-table">
+          <thead>
+            <tr>
+              <th scope="col">IDE</th>
+              <th scope="col">Source</th>
+              <th scope="col">Last updated</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">VS Code</th>
+              <td>
+                <a href="https://code.visualstudio.com/updates" target="_blank" rel="noopener noreferrer">VS Code release notes</a>
+              </td>
+              <td class="last-updated" data-last-updated="vs-code">Not available</td>
+            </tr>
+            <tr>
+              <th scope="row">GitHub Copilot CLI</th>
+              <td>
+                <a href="https://github.com/github/copilot-cli/releases" target="_blank" rel="noopener noreferrer">Copilot CLI releases on GitHub</a>
+              </td>
+              <td class="last-updated" data-last-updated="copilot-cli">Not available</td>
+            </tr>
+            <tr>
+              <th scope="row">Visual Studio 2022</th>
+              <td>
+                <a href="https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-history" target="_blank" rel="noopener noreferrer">Visual Studio 2022 release history and linked release notes</a>
+              </td>
+              <td class="last-updated" data-last-updated="visual-studio-2022">Not available</td>
+            </tr>
+            <tr>
+              <th scope="row">Visual Studio 2026</th>
+              <td>
+                <a href="https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes" target="_blank" rel="noopener noreferrer">Visual Studio 2026 release notes</a>
+              </td>
+              <td class="last-updated" data-last-updated="visual-studio-2026">Not available</td>
+            </tr>
+            <tr>
+              <th scope="row">JetBrains</th>
+              <td>
+                <a href="https://plugins.jetbrains.com/plugin/17718-github-copilot/versions" target="_blank" rel="noopener noreferrer">GitHub Copilot plugin version history</a>
+              </td>
+              <td class="last-updated" data-last-updated="jetbrains">Not available</td>
+            </tr>
+            <tr>
+              <th scope="row">Xcode</th>
+              <td>
+                <a href="https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=xcode" target="_blank" rel="noopener noreferrer">Xcode feature matrix</a>
+                and <a href="https://github.com/github/CopilotForXcode/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer">Copilot for Xcode changelog</a>
+              </td>
+              <td class="last-updated" data-last-updated="xcode">Not available</td>
+            </tr>
+            <tr>
+              <th scope="row">Eclipse</th>
+              <td>
+                <a href="https://github.com/microsoft/copilot-for-eclipse/releases" target="_blank" rel="noopener noreferrer">Copilot for Eclipse releases on GitHub</a>
+              </td>
+              <td class="last-updated" data-last-updated="eclipse">Not available</td>
+            </tr>
+            <tr>
+              <th scope="row">Vim/Neovim</th>
+              <td>
+                <a href="https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=vimneovim" target="_blank" rel="noopener noreferrer">Vim/Neovim feature matrix</a>
+              </td>
+              <td class="last-updated" data-last-updated="vim-neovim">Not available</td>
+            </tr>
+            <tr>
+              <th scope="row">SQL Server Management Studio</th>
+              <td>
+                <a href="https://learn.microsoft.com/en-us/ssms/release-notes-22" target="_blank" rel="noopener noreferrer">SSMS 22 release notes</a>
+                and <a href="https://learn.microsoft.com/en-us/ssms/release-notes-21" target="_blank" rel="noopener noreferrer">SSMS 21 release notes</a>
+              </td>
+              <td class="last-updated" data-last-updated="sql-server-management-studio">Not available</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        <a href="./index.html">Feature search</a> ·
+        <a href="./privacy.html">Privacy</a>
+      </p>
+    </div>
+  </footer>
+  <script type="module" src="./sources.js"></script>
+</body>
+</html>
