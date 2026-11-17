@@ -580,7 +580,7 @@ for (const width of [1280, 768, 320]) {
         .toBeGreaterThanOrEqual(14);
     }
 
-    for (const index of [0, 4]) {
+    for (const index of [0, 2, 4]) {
       const column = first.locator('.release-history-month').nth(index);
       const hitArea = column.locator('.release-history-hit-area');
       const hitBox = await hitArea.boundingBox();
@@ -588,14 +588,14 @@ for (const width of [1280, 768, 320]) {
       await hitArea.hover({ position: { x: hitBox.width / 2, y: hitBox.height / 4 } });
       await expect(hitArea).toHaveCSS('fill', 'rgba(3, 102, 214, 0.08)');
       await expect(column.locator('title')).toHaveText(
-        index === 0 ? 'Oct 2025: 0 releases' : 'Feb 2026: 1 releases',
+        { 0: 'Oct 2025: 0 releases', 2: 'Dec 2025: 2 releases', 4: 'Feb 2026: 1 release' }[index],
       );
     }
     await expect(page.getByText('Monthly counts', { exact: true })).toHaveCount(0);
     await expect(first.getByRole('img')).toHaveAccessibleName(
       'VS Code: releases per month, Oct 2025 to Mar 2026. Scale: 0 to 65 releases. ' +
       'Oct 2025: 0 releases; Nov 2025: 0 releases; Dec 2025: 2 releases; ' +
-      'Jan 2026: 0 releases; Feb 2026: 1 releases; Mar 2026: 0 releases.',
+      'Jan 2026: 0 releases; Feb 2026: 1 release; Mar 2026: 0 releases.',
     );
     await expectNoAccessibilityViolations(page, 'main');
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
@@ -615,6 +615,9 @@ test('source charts ignore undated counts and handle unavailable metadata', asyn
   await expect(first.locator('figcaption')).toHaveText('0 releases in this period');
   await expect(page.locator('[data-release-history="xcode"] figcaption')).toHaveText(
     '1 release in this period',
+  );
+  await expect(page.locator('[data-release-history="xcode"]').getByRole('img')).toHaveAccessibleName(
+    /Scale: 0 to 1 release\..*Mar 2026: 1 release\./,
   );
   await expect(first).not.toContainText('without a known date');
   await expect(first.locator('svg')).toHaveCount(1);

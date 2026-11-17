@@ -25,6 +25,10 @@ function monthLabel(month) {
   });
 }
 
+function releaseCount(count) {
+  return `${count} ${count === 1 ? 'release' : 'releases'}`;
+}
+
 function svgElement(name, attributes) {
   const element = document.createElementNS('http://www.w3.org/2000/svg', name);
   for (const [key, value] of Object.entries(attributes)) element.setAttribute(key, value);
@@ -40,20 +44,20 @@ function renderReleaseHistory(root, histories) {
     const total = months.reduce((sum, month) => sum + (history.months[month] || 0), 0);
     const figure = document.createElement('figure');
     const caption = document.createElement('figcaption');
-    caption.textContent = `${total} ${total === 1 ? 'release' : 'releases'} in this period`;
+    caption.textContent = `${releaseCount(total)} in this period`;
     figure.append(caption);
 
     if (months.length) {
       const name = cell.closest('tr').querySelector('th').textContent;
       const range = `${monthLabel(months[0])} to ${monthLabel(months.at(-1))}`;
       const monthlyCounts = months.map(month =>
-        `${monthLabel(month)}: ${history.months[month] || 0} releases`,
+        `${monthLabel(month)}: ${releaseCount(history.months[month] || 0)}`,
       ).join('; ');
       const plot = document.createElement('div');
       plot.className = 'release-history-plot';
       const svg = svgElement('svg', {
         viewBox: '0 0 360 112', role: 'img',
-        'aria-label': `${name}: releases per month, ${range}. Scale: 0 to ${maximum} releases. ${monthlyCounts}.`,
+        'aria-label': `${name}: releases per month, ${range}. Scale: 0 to ${releaseCount(maximum)}. ${monthlyCounts}.`,
       });
       plot.append(svg);
       for (const [value, y] of [[maximum, 34], [0, 98]]) {
@@ -71,7 +75,7 @@ function renderReleaseHistory(root, histories) {
         const x = 30 + index * step;
         const column = svgElement('g', { class: 'release-history-month' });
         const title = svgElement('title', {});
-        title.textContent = `${monthLabel(month)}: ${count} releases`;
+        title.textContent = `${monthLabel(month)}: ${releaseCount(count)}`;
         column.append(title, svgElement('rect', {
           class: 'release-history-hit-area',
           x, y: 0, width: step, height: 112,
