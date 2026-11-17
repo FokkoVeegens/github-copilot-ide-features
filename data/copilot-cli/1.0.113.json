@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.113",
+  "release_date": "2026-11-17",
+  "title": "1.0.113",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.113",
+  "source": "api",
+  "body_markdown": "2026-11-17\n\n- Administrators can disable built-in Browser Use with the managed setting features.browserUse, including in running sessions.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "2026-11-17",
+    "- Administrators can disable built-in Browser Use with the managed setting features.browserUse, including in running sessions."
+  ],
+  "prerelease": false,
+  "fetched_at": "2026-11-17T16:50:06Z",
+  "schema_version": 1
+}
