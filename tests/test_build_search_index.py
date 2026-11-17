@@ -298,6 +298,10 @@ def test_build_search_index_tolerates_missing_data_dir(populated_data: tuple[pat
     # Should still have records from test-ide-1
     for record in result["records"]:
         assert record["ide"] == "test-ide-1"
+    assert result["metadata"]["ide_last_updated"] == {
+        "test-ide-1": "2026-01-15",
+        "test-ide-2": None,
+    }
 
 
 def test_build_search_index_skips_files_missing_required_fields(tmp_config: tuple[pathlib.Path, pathlib.Path]) -> None:

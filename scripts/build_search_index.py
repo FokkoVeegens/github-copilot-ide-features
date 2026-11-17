@@ -39,6 +39,7 @@ def build_search_index(config_path: pathlib.Path | None = None, data_root: pathl
         ide_id = ide_config["id"]
         if ide_id == "dummy":
             continue
+        ide_last_updated[ide_id] = None
         
         ide_name = ide_config.get("name", ide_id)
         # data_dir in config is like "data/eclipse", extract just the IDE part
@@ -51,7 +52,6 @@ def build_search_index(config_path: pathlib.Path | None = None, data_root: pathl
         
         # Track version counts
         ide_version_counts[ide_name] = 0
-        ide_last_updated[ide_id] = None
         
         # Scan all JSON files except index.json
         for json_file in sorted(data_dir.glob("*.json")):
