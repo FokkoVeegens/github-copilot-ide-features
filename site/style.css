@@ -150,7 +150,7 @@ main {
 }
 
 .sources-table tbody th {
-  width: 30%;
+  width: 18%;
   font-weight: 600;
 }
 
@@ -160,7 +160,7 @@ main {
 }
 
 .sources-table .last-updated {
-  width: 12rem;
+  width: 10rem;
   color: #555;
   white-space: nowrap;
 }
@@ -170,6 +170,68 @@ main {
   text-decoration: underline dotted;
   text-underline-offset: 0.2em;
   cursor: help;
+}
+
+.sources-table .release-history {
+  width: 38%;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.release-history-plot {
+  position: relative;
+  margin-top: 0.25rem;
+}
+
+.release-history svg {
+  display: block;
+  width: 100%;
+}
+
+.release-history svg text {
+  fill: #555;
+  font-size: 12px;
+}
+
+.release-history svg line {
+  stroke: #d0d7de;
+}
+
+.release-history-bar {
+  fill: #0366d6;
+}
+
+.release-history-hit-area {
+  fill: transparent;
+  pointer-events: all;
+}
+
+.release-history-month:hover .release-history-hit-area {
+  fill: rgba(3, 102, 214, 0.08);
+}
+
+.release-history-count {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #333;
+  pointer-events: none;
+}
+
+.release-history-months {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin-left: 8.33%;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.release-history-axis {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-left: 8.33%;
 }
 
 /* Search input */
@@ -659,7 +721,8 @@ footer a:hover {
 
   .sources-table tbody th,
   .sources-table tbody td,
-  .sources-table .last-updated {
+  .sources-table .last-updated,
+  .sources-table .release-history {
     width: auto;
     padding: 0;
     border-bottom: none;
@@ -672,6 +735,10 @@ footer a:hover {
 
   .sources-table .last-updated::before {
     content: 'Last updated: ';
+  }
+
+  .sources-table .release-history {
+    margin-top: 0.75rem;
   }
 
   .search-input {

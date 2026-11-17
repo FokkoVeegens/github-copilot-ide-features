@@ -33,6 +33,7 @@ def build_search_index(config_path: pathlib.Path | None = None, data_root: pathl
     records = []
     ide_version_counts = {}
     ide_last_updated: dict[str, str | None] = {}
+    ide_release_history = {}
     
     # Iterate all IDEs except 'dummy'
     for ide_config in config.get("ides", []):
@@ -40,6 +41,8 @@ def build_search_index(config_path: pathlib.Path | None = None, data_root: pathl
         if ide_id == "dummy":
             continue
         ide_last_updated[ide_id] = None
+        history = {"months": {}}
+        ide_release_history[ide_id] = history
         
         ide_name = ide_config.get("name", ide_id)
         # data_dir in config is like "data/eclipse", extract just the IDE part
@@ -72,11 +75,14 @@ def build_search_index(config_path: pathlib.Path | None = None, data_root: pathl
                 if not (version and has_valid_date and url):
                     continue
 
-                if _is_iso_date(release_date) and (
-                    ide_last_updated[ide_id] is None
-                    or release_date > ide_last_updated[ide_id]
-                ):
-                    ide_last_updated[ide_id] = release_date
+                if _is_iso_date(release_date):
+                    month = release_date[:7]
+                    history["months"][month] = history["months"].get(month, 0) + 1
+                    if (
+                        ide_last_updated[ide_id] is None
+                        or release_date > ide_last_updated[ide_id]
+                    ):
+                        ide_last_updated[ide_id] = release_date
                 
                 snippets = _extract_snippets(
                     release, allow_body_fallback=ide_id in COPILOT_ONLY_IDES
@@ -116,6 +122,7 @@ def build_search_index(config_path: pathlib.Path | None = None, data_root: pathl
         "generated_at": datetime.now(UTC).isoformat().replace("+00:00", "") + "Z",
         "ide_version_counts": ide_version_counts,
         "ide_last_updated": ide_last_updated,
+        "ide_release_history": ide_release_history,
     }
     
     return {"records": records, "metadata": metadata}

@@ -511,7 +511,9 @@ for (const [label, viewport] of [
 
     const table = page.locator('.sources-table');
     if (viewport === DESKTOP_VIEWPORT) {
-      await expect(table.locator('thead th')).toHaveText(['IDE', 'Source', 'Last updated']);
+      await expect(table.locator('thead th')).toHaveText([
+        'IDE', 'Source', 'Last updated', 'Releases per month',
+      ]);
     }
     const cells = table.locator('[data-last-updated]');
     await expect(cells).toContainText([
@@ -533,6 +535,96 @@ for (const [label, viewport] of [
     );
   });
 }
+
+for (const width of [1280, 768, 320]) {
+  test(`shows separate release charts with identical axes at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    const ids = [
+      'vs-code', 'copilot-cli', 'visual-studio-2022', 'visual-studio-2026',
+      'jetbrains', 'xcode', 'eclipse', 'vim-neovim', 'sql-server-management-studio',
+    ];
+    const histories = Object.fromEntries(ids.map(id => [id, { months: {}, undated: 0 }]));
+    histories['vs-code'] = { months: { '2025-12': 2, '2026-02': 1 }, undated: 3 };
+    histories['copilot-cli'] = { months: { '2026-02': 65 }, undated: 0 };
+    await page.route('**/meta.json', route => route.fulfill({
+      json: { ide_release_history: histories },
+    }));
+    await page.clock.setFixedTime(new Date('2026-03-20T12:00:00Z'));
+    await page.goto('/sources.html');
+
+    const charts = page.locator('.release-history svg');
+    await expect(charts).toHaveCount(9);
+    for (const chart of await charts.all()) {
+      await expect(chart).toBeVisible();
+      await expect(chart).toHaveAttribute('aria-label', /Oct 2025 to Mar 2026\. Scale: 0 to 65/);
+    }
+    const first = page.locator('[data-release-history="vs-code"]');
+    const second = page.locator('[data-release-history="copilot-cli"]');
+    await expect(first.locator('figcaption')).toHaveText('3 releases in this period');
+    await expect(first.locator('.release-history-axis')).toHaveText('Oct 2025Mar 2026');
+    const firstBars = first.locator('.release-history-bar');
+    await expect(firstBars).toHaveCount(2);
+    await expect(firstBars.nth(1)).toHaveAttribute(
+      'x', await second.locator('.release-history-bar').getAttribute('x'),
+    );
+    expect(Number(await firstBars.nth(0).getAttribute('height'))).toBeCloseTo(2 / 65 * 64);
+    await expect(second.locator('.release-history-bar')).toHaveAttribute('height', '64');
+
+    await expect(first.locator('.release-history-count')).toHaveText(['0', '0', '2', '0', '1', '0']);
+    await expect(first.locator('.release-history-months span')).toHaveText([
+      'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar',
+    ]);
+    for (const count of await first.locator('.release-history-count').all()) {
+      await expect(count).toBeVisible();
+      expect(await count.evaluate(el => parseFloat(getComputedStyle(el).fontSize)))
+        .toBeGreaterThanOrEqual(14);
+    }
+
+    for (const index of [0, 4]) {
+      const column = first.locator('.release-history-month').nth(index);
+      const hitArea = column.locator('.release-history-hit-area');
+      const hitBox = await hitArea.boundingBox();
+      expect(hitBox.height).toBeGreaterThanOrEqual(40);
+      await hitArea.hover({ position: { x: hitBox.width / 2, y: hitBox.height / 4 } });
+      await expect(hitArea).toHaveCSS('fill', 'rgba(3, 102, 214, 0.08)');
+      await expect(column.locator('title')).toHaveText(
+        index === 0 ? 'Oct 2025: 0 releases' : 'Feb 2026: 1 releases',
+      );
+    }
+    await expect(page.getByText('Monthly counts', { exact: true })).toHaveCount(0);
+    await expect(first.getByRole('img')).toHaveAccessibleName(
+      'VS Code: releases per month, Oct 2025 to Mar 2026. Scale: 0 to 65 releases. ' +
+      'Oct 2025: 0 releases; Nov 2025: 0 releases; Dec 2025: 2 releases; ' +
+      'Jan 2026: 0 releases; Feb 2026: 1 releases; Mar 2026: 0 releases.',
+    );
+    await expectNoAccessibilityViolations(page, 'main');
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+  });
+}
+
+test('source charts ignore undated counts and handle unavailable metadata', async ({ page }) => {
+  await page.clock.setFixedTime(new Date('2026-03-20T12:00:00Z'));
+  await page.route('**/meta.json', route => route.fulfill({
+    json: { ide_release_history: {
+      'vs-code': { months: {}, undated: 2 },
+      'xcode': { months: { '2026-03': 1 } },
+    } },
+  }));
+  await page.goto('/sources.html');
+  const first = page.locator('[data-release-history="vs-code"]');
+  await expect(first.locator('figcaption')).toHaveText('0 releases in this period');
+  await expect(page.locator('[data-release-history="xcode"] figcaption')).toHaveText(
+    '1 release in this period',
+  );
+  await expect(first).not.toContainText('without a known date');
+  await expect(first.locator('svg')).toHaveCount(1);
+  await expect(page.locator('[data-release-history="copilot-cli"]')).toHaveText(
+    'Release history unavailable.',
+  );
+  await page.route('**/meta.json', route => route.fulfill({ status: 503, body: 'Unavailable' }));
+  await page.reload();
+  await expect(first).toHaveText('Release history unavailable.');
+});
 
 test('whole-word search excludes substring-only IDEs and highlights only whole matches', async ({ page }) => {
   const index = [
