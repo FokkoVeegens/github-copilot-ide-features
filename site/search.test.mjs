@@ -6,6 +6,32 @@ import { test } from 'node:test';
 import assert from 'node:assert';
 import { validateQuery, searchIndex, buildIdeRows, formatIdeName, buildSnippetExcerpt, isLaunchAnnouncement, isGaAnnouncement, filterLaunchAnnouncements, dedupeByIdeVersion, prepareSearchResults, collectIdeNames, limitRowsPerIde, formatRelativeTime, formatDateTime, formatDate, parseReleaseDate, formatRelativeDate } from './search.js';
 import { buildResultsMarkup } from './app.js';
+import { buildReleaseTimeline } from './sources.js';
+
+test('release charts share a continuous timeline and scale across sources', () => {
+  assert.deepStrictEqual(buildReleaseTimeline({
+    first: { months: { '2025-12': 2, '2026-02': 1 }, undated: 8 },
+    second: { months: { '2026-01': 7, '2026-04': 3 }, undated: 0 },
+    empty: { months: {}, undated: 12 },
+  }, new Date('2026-04-15T12:00:00Z')), {
+    months: ['2025-11', '2025-12', '2026-01', '2026-02', '2026-03', '2026-04'],
+    maximum: 7,
+  });
+});
+
+test('release chart timeline always spans six months, including year boundaries', () => {
+  const expectedMonths = ['2025-08', '2025-09', '2025-10', '2025-11', '2025-12', '2026-01'];
+  assert.deepStrictEqual(buildReleaseTimeline({}, new Date('2026-01-15T00:00:00Z')), {
+    months: expectedMonths, maximum: 1,
+  });
+  assert.deepStrictEqual(buildReleaseTimeline({
+    undated: { months: {}, undated: 3 },
+  }, new Date('2026-01-15T00:00:00Z')), { months: expectedMonths, maximum: 1 });
+  assert.deepStrictEqual(buildReleaseTimeline({
+    recent: { months: { '2026-01': 4 }, undated: 0 },
+    old: { months: { '2024-01': 100 }, undated: 0 },
+  }, new Date('2026-01-15T00:00:00Z')), { months: expectedMonths, maximum: 4 });
+});
 
 test('formatRelativeTime describes elapsed time in human terms', () => {
   const now = new Date('2026-03-20T12:00:00Z');

@@ -21,17 +21,17 @@
     <div class="container">
       <section class="sources-section" aria-labelledby="sources-heading">
         <h2 id="sources-heading">Official release notes and feature documentation</h2>
-        <p>
-          Explore the sources used to collect data for each IDE.
-          In search results, select a version or feature description to read the original notes.
-          <strong>Last updated</strong> shows the release date of the newest release collected from each IDE's sources.
+        <p id="release-history-description">
+          Explore the sources used to collect data for each IDE and see their release cadence.
         </p>
+        <noscript><p>Enable JavaScript to view release history charts.</p></noscript>
         <table class="sources-table">
           <thead>
             <tr>
               <th scope="col">IDE</th>
               <th scope="col">Source</th>
               <th scope="col">Last updated</th>
+              <th scope="col">Releases per month</th>
             </tr>
           </thead>
           <tbody>
@@ -41,6 +41,7 @@
                 <a href="https://code.visualstudio.com/updates" target="_blank" rel="noopener noreferrer">VS Code release notes</a>
               </td>
               <td class="last-updated" data-last-updated="vs-code">Not available</td>
+              <td class="release-history" data-release-history="vs-code">Release history unavailable.</td>
             </tr>
             <tr>
               <th scope="row">GitHub Copilot CLI</th>
@@ -48,6 +49,7 @@
                 <a href="https://github.com/github/copilot-cli/releases" target="_blank" rel="noopener noreferrer">Copilot CLI releases on GitHub</a>
               </td>
               <td class="last-updated" data-last-updated="copilot-cli">Not available</td>
+              <td class="release-history" data-release-history="copilot-cli">Release history unavailable.</td>
             </tr>
             <tr>
               <th scope="row">Visual Studio 2022</th>
@@ -55,6 +57,7 @@
                 <a href="https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-history" target="_blank" rel="noopener noreferrer">Visual Studio 2022 release history and linked release notes</a>
               </td>
               <td class="last-updated" data-last-updated="visual-studio-2022">Not available</td>
+              <td class="release-history" data-release-history="visual-studio-2022">Release history unavailable.</td>
             </tr>
             <tr>
               <th scope="row">Visual Studio 2026</th>
@@ -62,6 +65,7 @@
                 <a href="https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes" target="_blank" rel="noopener noreferrer">Visual Studio 2026 release notes</a>
               </td>
               <td class="last-updated" data-last-updated="visual-studio-2026">Not available</td>
+              <td class="release-history" data-release-history="visual-studio-2026">Release history unavailable.</td>
             </tr>
             <tr>
               <th scope="row">JetBrains</th>
@@ -69,6 +73,7 @@
                 <a href="https://plugins.jetbrains.com/plugin/17718-github-copilot/versions" target="_blank" rel="noopener noreferrer">GitHub Copilot plugin version history</a>
               </td>
               <td class="last-updated" data-last-updated="jetbrains">Not available</td>
+              <td class="release-history" data-release-history="jetbrains">Release history unavailable.</td>
             </tr>
             <tr>
               <th scope="row">Xcode</th>
@@ -77,6 +82,7 @@
                 and <a href="https://github.com/github/CopilotForXcode/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer">Copilot for Xcode changelog</a>
               </td>
               <td class="last-updated" data-last-updated="xcode">Not available</td>
+              <td class="release-history" data-release-history="xcode">Release history unavailable.</td>
             </tr>
             <tr>
               <th scope="row">Eclipse</th>
@@ -84,6 +90,7 @@
                 <a href="https://github.com/microsoft/copilot-for-eclipse/releases" target="_blank" rel="noopener noreferrer">Copilot for Eclipse releases on GitHub</a>
               </td>
               <td class="last-updated" data-last-updated="eclipse">Not available</td>
+              <td class="release-history" data-release-history="eclipse">Release history unavailable.</td>
             </tr>
             <tr>
               <th scope="row">Vim/Neovim</th>
@@ -91,6 +98,7 @@
                 <a href="https://docs.github.com/en/copilot/reference/copilot-feature-matrix?tool=vimneovim" target="_blank" rel="noopener noreferrer">Vim/Neovim feature matrix</a>
               </td>
               <td class="last-updated" data-last-updated="vim-neovim">Not available</td>
+              <td class="release-history" data-release-history="vim-neovim">Release history unavailable.</td>
             </tr>
             <tr>
               <th scope="row">SQL Server Management Studio</th>
@@ -99,6 +107,7 @@
                 and <a href="https://learn.microsoft.com/en-us/ssms/release-notes-21" target="_blank" rel="noopener noreferrer">SSMS 21 release notes</a>
               </td>
               <td class="last-updated" data-last-updated="sql-server-management-studio">Not available</td>
+              <td class="release-history" data-release-history="sql-server-management-studio">Release history unavailable.</td>
             </tr>
           </tbody>
         </table>

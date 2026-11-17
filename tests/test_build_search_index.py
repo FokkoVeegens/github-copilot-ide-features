@@ -274,6 +274,41 @@ def test_build_search_index_metadata_includes_newest_release_date_per_ide(
     }
 
 
+def test_release_history_counts_releases_not_snippets(
+    tmp_config: tuple[pathlib.Path, pathlib.Path],
+) -> None:
+    config_path, data_root = tmp_config
+    ide_dir = data_root / "test-ide-1"
+    ide_dir.mkdir(parents=True)
+    releases = [
+        ("1", "2025-12-01", ["Copilot chat", "Copilot edits"]),
+        ("2", "2025-12-31", []),
+        ("3", "2026-02-01", []),
+        ("4", None, ["Undated Copilot"]),
+        ("5", "2026-02-30", []),
+        ("6", "not-a-date", []),
+    ]
+    for version, date, mentions in releases:
+        (ide_dir / f"{version}.json").write_text(json.dumps({
+            "version": version,
+            "release_date": date,
+            "url": f"https://example.com/{version}",
+            "copilot_mentions": mentions,
+        }), encoding="utf-8")
+    (ide_dir / "index.json").write_text(json.dumps({
+        "version": "index",
+        "release_date": "2099-01-01",
+        "url": "https://example.com",
+    }), encoding="utf-8")
+
+    history = build_search_index(config_path, data_root)["metadata"]["ide_release_history"]
+
+    assert history == {
+        "test-ide-1": {"months": {"2025-12": 2, "2026-02": 1}},
+        "test-ide-2": {"months": {}},
+    }
+
+
 def test_build_search_index_tolerates_malformed_json(populated_data: tuple[pathlib.Path, pathlib.Path]) -> None:
     config_path, data_root = populated_data
     
