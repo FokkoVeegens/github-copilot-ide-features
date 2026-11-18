@@ -1,0 +1,14 @@
+{
+  "ide": "visual-studio-2026",
+  "version": "18.12.1",
+  "release_date": "2026-11-17",
+  "title": "Version 18.12.1",
+  "url": "https://learn.microsoft.com/en-us/visualstudio/releases/2026/release-notes",
+  "source": "html",
+  "body_markdown": "Released on **November 17, 2026**.\n\n| Top bug fixes | From the community |\n| --- | --- |\n| Hot Reload fails to start session for Executable launch profiles. | [Feedback ticket](https://developercommunity.visualstudio.com/t/Hot-Reload-fails-to-start-session-for-Ex/11176397) |\n| Fixed incorrect TypeScript errors appearing in valid .mjs and .cjs JavaScript files when the native language service was enabled. |  |\n| GHCP in SSMS New Harness mode Opt-in Preview Available. |  |",
+  "body_html": "<p>Released on <strong>November 17, 2026</strong>.</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Top bug fixes</th>\n<th style=\"text-align: left;\">From the community</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\">Hot Reload fails to start session for Executable launch profiles.</td>\n<td style=\"text-align: left;\"><a data-linktype=\"external\" href=\"https://developercommunity.visualstudio.com/t/Hot-Reload-fails-to-start-session-for-Ex/11176397\">Feedback ticket</a></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">Fixed incorrect TypeScript errors appearing in valid .mjs and .cjs JavaScript files when the native language service was enabled.</td>\n<td style=\"text-align: left;\"></td>\n</tr>\n<tr>\n<td style=\"text-align: left;\">GHCP in SSMS New Harness mode Opt-in Preview Available.</td>\n<td style=\"text-align: left;\"></td>\n</tr>\n</tbody>\n</table>",
+  "categories": [],
+  "copilot_mentions": [],
+  "fetched_at": "2026-11-18T15:56:55Z",
+  "schema_version": 1
+}
