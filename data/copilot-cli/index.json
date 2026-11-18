@@ -1,5 +1,20 @@
 [
   {
+    "version": "1.0.113-1",
+    "release_date": "2026-11-17",
+    "filename": "1.0.113-1.json"
+  },
+  {
+    "version": "1.0.113",
+    "release_date": "2026-11-17",
+    "filename": "1.0.113.json"
+  },
+  {
+    "version": "1.0.113-0",
+    "release_date": "2026-11-16",
+    "filename": "1.0.113-0.json"
+  },
+  {
     "version": "1.0.111-0",
     "release_date": "2026-11-13",
     "filename": "1.0.111-0.json"
