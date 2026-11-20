@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.115-1",
+  "release_date": "2026-11-19",
+  "title": "1.0.115-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.115-1",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- MCP sign-in can continue when a server grants the required scopes but omits an automatically requested refresh-token scope.\n- Make direct workflow execution wait for project extension workflows to register",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- MCP sign-in can continue when a server grants the required scopes but omits an automatically requested refresh-token scope.",
+    "- Make direct workflow execution wait for project extension workflows to register"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-20T16:03:12Z",
+  "schema_version": 1
+}
