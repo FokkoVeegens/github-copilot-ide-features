@@ -1,0 +1,21 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.115-4",
+  "release_date": "2026-11-21",
+  "title": "1.0.115-4",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.115-4",
+  "source": "api",
+  "body_markdown": "**Added**\n- Enable structured clarification questions in ACP editors that support forms\n\n**Fixed**\n- Prevent a plugin initialization race from blocking new sessions or making existing sessions fail to resume\n- On Windows, clean up child processes from Git commands, hooks, and language server checks even after their parent process exits.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Enable structured clarification questions in ACP editors that support forms",
+    "**Fixed**",
+    "- Prevent a plugin initialization race from blocking new sessions or making existing sessions fail to resume",
+    "- On Windows, clean up child processes from Git commands, hooks, and language server checks even after their parent process exits."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-23T19:10:27Z",
+  "schema_version": 1
+}
