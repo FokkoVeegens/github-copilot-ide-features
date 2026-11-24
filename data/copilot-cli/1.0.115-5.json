@@ -1,0 +1,20 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.115-5",
+  "release_date": "2026-11-21",
+  "title": "1.0.115-5",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.115-5",
+  "source": "api",
+  "body_markdown": "**Improved**\n- Long-running local sessions take up less disk space and resume faster.\n\n**Fixed**\n- When you queue a switch from a specific model to Copilot Fusion, the CLI acknowledges the requested routing profile instead of showing the previous profile.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- Long-running local sessions take up less disk space and resume faster.",
+    "**Fixed**",
+    "- When you queue a switch from a specific model to Copilot Fusion, the CLI acknowledges the requested routing profile instead of showing the previous profile."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-23T19:10:27Z",
+  "schema_version": 1
+}

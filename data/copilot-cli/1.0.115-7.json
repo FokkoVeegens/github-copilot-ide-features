@@ -1,0 +1,19 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.115-7",
+  "release_date": "2026-11-22",
+  "title": "1.0.115-7",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.115-7",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Clients using `--ui-server` can attach to the resumed CLI session as soon as the server starts listening.\n- Ensure that stopping an npm-installed Copilot CLI during startup does not leave it running in the background",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Clients using `--ui-server` can attach to the resumed CLI session as soon as the server starts listening.",
+    "- Ensure that stopping an npm-installed Copilot CLI during startup does not leave it running in the background"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-23T19:10:27Z",
+  "schema_version": 1
+}

@@ -1,0 +1,21 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.115-6",
+  "release_date": "2026-11-21",
+  "title": "1.0.115-6",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.115-6",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Organization-required plugins can install on the next attempt when a temporary policy change interrupts setup, without waiting for the usual retry delay.\n- /delegate now explains that a login is needed instead of doing nothing when you are not signed in.\n- On Unix, canceling a shell command now stops orphaned child processes that remain in the shell's process group.\n- The Sessions sidebar shows Copilot Fusion sessions as working while they choose a model in the background.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Organization-required plugins can install on the next attempt when a temporary policy change interrupts setup, without waiting for the usual retry delay.",
+    "- /delegate now explains that a login is needed instead of doing nothing when you are not signed in.",
+    "- On Unix, canceling a shell command now stops orphaned child processes that remain in the shell's process group.",
+    "- The Sessions sidebar shows Copilot Fusion sessions as working while they choose a model in the background."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-23T19:10:27Z",
+  "schema_version": 1
+}

@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.115-3",
+  "release_date": "2026-11-20",
+  "title": "1.0.115-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.115-3",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- Keep the @ mention picker visible until an empty search finishes, so Ctrl+Y and Tab resume their normal actions when it closes",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- Keep the @ mention picker visible until an empty search finishes, so Ctrl+Y and Tab resume their normal actions when it closes"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-23T19:10:27Z",
+  "schema_version": 1
+}
