@@ -1,0 +1,32 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.115-8",
+  "release_date": "2026-11-23",
+  "title": "1.0.115-8",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.115-8",
+  "source": "api",
+  "body_markdown": "**Improved**\n- `--usage-output-file` groups subagent usage by configured name instead of invocation ID and reports how many times each subagent was launched.\n- Assisted Permissions can try another review model when the first stalls or fails, reducing unnecessary approval prompts.\n- Assisted Permissions can reuse a one-time approval for an identical request in the same session, reducing repeat prompts.\n\n**Fixed**\n- Show the current model and reasoning effort in the footer when resuming a session.\n- `/worktree new` reliably shows the worktree creation confirmation after switching to the new session.\n- New and resumed ACP sessions honor your image generation setting, enabling image generation by default where supported.\n- Allow sandboxed Git add and commit operations in repositories with many linked worktrees or large directories under .git\n- SDK connection errors no longer overwrite the interactive prompt when the CLI runs with `--ui-server`.\n- `/worktree` and `/move` show the Git reason when a worktree operation fails instead of an internal error wrapper.\n- Keep detached terminals visible and other terminal statuses updating in shared sessions.\n- The /agent wizard keeps text typed immediately after submitting the agent name in the description field, even while the name is being validated.\n- Assisted Permissions keeps reviewing later requests after a message or an answer to an agent question of up to 128,000 characters, instead of asking for approval every time.\n- In Assisted Permissions, approving a custom tool or memory request for the session also clears queued prompts covered by that approval.\n- Assisted Permissions no longer prompts again for parallel tool calls already covered by an approval you granted while they were under review.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- `--usage-output-file` groups subagent usage by configured name instead of invocation ID and reports how many times each subagent was launched.",
+    "- Assisted Permissions can try another review model when the first stalls or fails, reducing unnecessary approval prompts.",
+    "- Assisted Permissions can reuse a one-time approval for an identical request in the same session, reducing repeat prompts.",
+    "**Fixed**",
+    "- Show the current model and reasoning effort in the footer when resuming a session.",
+    "- `/worktree new` reliably shows the worktree creation confirmation after switching to the new session.",
+    "- New and resumed ACP sessions honor your image generation setting, enabling image generation by default where supported.",
+    "- Allow sandboxed Git add and commit operations in repositories with many linked worktrees or large directories under .git",
+    "- SDK connection errors no longer overwrite the interactive prompt when the CLI runs with `--ui-server`.",
+    "- `/worktree` and `/move` show the Git reason when a worktree operation fails instead of an internal error wrapper.",
+    "- Keep detached terminals visible and other terminal statuses updating in shared sessions.",
+    "- The /agent wizard keeps text typed immediately after submitting the agent name in the description field, even while the name is being validated.",
+    "- Assisted Permissions keeps reviewing later requests after a message or an answer to an agent question of up to 128,000 characters, instead of asking for approval every time.",
+    "- In Assisted Permissions, approving a custom tool or memory request for the session also clears queued prompts covered by that approval.",
+    "- Assisted Permissions no longer prompts again for parallel tool calls already covered by an approval you granted while they were under review."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-24T18:49:32Z",
+  "schema_version": 1
+}
