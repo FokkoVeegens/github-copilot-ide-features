@@ -167,5 +167,5 @@ The website is deployed from GitHub Actions to GitHub Pages. To configure it for
 1. **Settings → Pages** → Set *Build and deployment* → **Source = GitHub Actions** (not "Deploy from a branch")
 2. **Settings → Environments** → Confirm `github-pages` environment exists; optionally restrict to `main` branch
 3. **Settings → Actions → General** → Ensure workflow permissions allow OIDC (usually default; no change needed)
-4. **First deploy**: Manually trigger the `deploy-pages.yml` workflow on `main` via **Actions**, or wait for the next push to `main` affecting `data/`, `site/`, `scripts/`, or `config/ides.yml`. Manual runs on other branches test and build without deploying.
+4. **Deploys**: `deploy-pages.yml` runs on pushes to `main` affecting `data/`, `site/`, `scripts/`, or `config/ides.yml`, and nightly at 23:00 UTC. The nightly run picks up release-note PRs merged with `GITHUB_TOKEN`, which do not trigger the push event. You can also trigger it manually on `main` via **Actions**; manual runs on other branches test and build without deploying.
 5. **Site URL**: `https://<owner>.github.io/<repo-name>/` — all relative URLs in the site use `./` to work correctly from the sub-path
