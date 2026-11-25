@@ -72,7 +72,7 @@ the fetch logic on feature branches without writing to the repository.
 
 ### Pages deployment workflow
 The `deploy-pages.yml` workflow:
-- **Triggers**: On `push` to `main` with changes to `data/**`, `site/**`, `scripts/**`, or `config/ides.yml`
+- **Triggers**: On `push` to `main` with changes to `data/**`, `site/**`, `scripts/**`, or `config/ides.yml`; nightly at 23:00 UTC; and manual dispatch. The nightly run is needed because release-note PRs are merged with `GITHUB_TOKEN`, whose pushes do not trigger other workflows.
 - **Test job**: Runs Python linting, pytest, JavaScript tests, and Playwright browser tests (before any builds)
 - **Build job**: Generates the search index via `build_search_index.py` and builds the Pages artifact
 - **Deploy job**: Deploys to GitHub Pages (only on `main` branch)

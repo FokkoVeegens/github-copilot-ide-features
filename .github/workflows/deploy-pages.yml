@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
     paths: ['data/**', 'site/**', 'scripts/**', 'config/ides.yml']
+  schedule:
+    # Nightly, because merges made with GITHUB_TOKEN (release-note PRs) do not trigger the push event
+    - cron: '0 23 * * *'
   workflow_dispatch:
 
 permissions:

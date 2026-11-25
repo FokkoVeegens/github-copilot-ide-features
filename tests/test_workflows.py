@@ -8,4 +8,5 @@ def test_pages_workflow_can_be_manually_triggered_without_deploying_other_branch
     workflow = yaml.load(path.read_text(encoding="utf-8"), Loader=yaml.BaseLoader)
 
     assert "workflow_dispatch" in workflow["on"]
+    assert workflow["on"]["schedule"] == [{"cron": "0 23 * * *"}]
     assert workflow["jobs"]["deploy"]["if"] == "github.ref == 'refs/heads/main'"
