@@ -1,0 +1,22 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.116-5",
+  "release_date": "2026-11-25",
+  "title": "1.0.116-5",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-5",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- `copilot help parallel-work` no longer says approving a plan can offer to continue in Autopilot with /fleet; plan approval no longer offers that choice\n- Shell approval prompts in ACP clients show the command you're authorizing instead of its description.\n- Configured HTTP hooks still run when TERM_PROGRAM contains invalid characters, so an invalid terminal name no longer blocks tool calls.\n- /rewind reports files it cannot restore because a turn exceeded the file capture limit\n- Keep Incoming connections settings in /environments on one line per row in narrow terminals, including in screen-reader mode",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- `copilot help parallel-work` no longer says approving a plan can offer to continue in Autopilot with /fleet; plan approval no longer offers that choice",
+    "- Shell approval prompts in ACP clients show the command you're authorizing instead of its description.",
+    "- Configured HTTP hooks still run when TERM_PROGRAM contains invalid characters, so an invalid terminal name no longer blocks tool calls.",
+    "- /rewind reports files it cannot restore because a turn exceeded the file capture limit",
+    "- Keep Incoming connections settings in /environments on one line per row in narrow terminals, including in screen-reader mode"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-25T17:55:26Z",
+  "schema_version": 1
+}

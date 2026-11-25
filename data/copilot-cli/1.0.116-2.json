@@ -1,0 +1,25 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.116-2",
+  "release_date": "2026-11-25",
+  "title": "1.0.116-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-2",
+  "source": "api",
+  "body_markdown": "**Added**\n- Warn when a plugin and a standalone MCP server connect to the same endpoint, and show how to disable one in /mcp\n\n**Fixed**\n- Cancel pending prompts without waiting for activity to refresh, and avoid showing idle sessions as busy after reconnecting to a host.\n- On Unix, canceled foreground shell commands can finish cleanup even if they write to stdout or stderr during shutdown.\n- Prevent repeated sign-in prompts when multiple CLI sessions refresh access to the same MCP server.\n- The Ctrl+Y hint no longer stays hidden when a research report is created while the CLI starts watching for reports.\n- Reduce memory growth in long sessions: text measurement caches kept a full copy of each streamed reply, which could exhaust the JavaScript heap.\n- Keep the highlighted theme and its description readable in narrow terminals when screen-reader mode is on.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Warn when a plugin and a standalone MCP server connect to the same endpoint, and show how to disable one in /mcp",
+    "**Fixed**",
+    "- Cancel pending prompts without waiting for activity to refresh, and avoid showing idle sessions as busy after reconnecting to a host.",
+    "- On Unix, canceled foreground shell commands can finish cleanup even if they write to stdout or stderr during shutdown.",
+    "- Prevent repeated sign-in prompts when multiple CLI sessions refresh access to the same MCP server.",
+    "- The Ctrl+Y hint no longer stays hidden when a research report is created while the CLI starts watching for reports.",
+    "- Reduce memory growth in long sessions: text measurement caches kept a full copy of each streamed reply, which could exhaust the JavaScript heap.",
+    "- Keep the highlighted theme and its description readable in narrow terminals when screen-reader mode is on."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-25T17:55:26Z",
+  "schema_version": 1
+}

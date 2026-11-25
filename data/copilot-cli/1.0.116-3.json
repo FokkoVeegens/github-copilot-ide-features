@@ -1,0 +1,30 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.116-3",
+  "release_date": "2026-11-25",
+  "title": "1.0.116-3",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-3",
+  "source": "api",
+  "body_markdown": "**Added**\n- Click \"Jump to latest\" in the fullscreen timeline to return to the newest output and resume following it.\n- Choose the context size for supported models in ACP-compatible editors without changing your saved defaults.\n- Set environment variables for every process Copilot starts (shell commands, local LSP and MCP servers, hooks and extensions) with the env setting, with or without the sandbox\n\n**Fixed**\n- Search falls back to ripgrep when another Copilot profile owns the repository's active index. On Windows, search helpers no longer use profile folders as their working directory.\n- Switching models before your first prompt now skips compaction and completes successfully\n- Assisted Permissions honors later chat approvals or withdrawals of earlier permission decisions, including session approvals\n- Keep your place when reading older output in the terminal while a large reply arrives.\n- Open the link when clicking anywhere on linked inline code or color swatches, including their shaded edges.\n- Keep the selected MCP servers or Skills view visible in /config on very narrow terminals.\n- Gemini reasoning summaries honor your saved visibility preference, and Ctrl+T shows or hides them and saves your choice.\n- Built-in search keeps full filenames and correct line numbers when compacting matches from files with numeric suffixes.\n- `/worktree` and `/move` preserve Git diagnostics when branch names, paths, or hook output contain HTML-like text.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Click \"Jump to latest\" in the fullscreen timeline to return to the newest output and resume following it.",
+    "- Choose the context size for supported models in ACP-compatible editors without changing your saved defaults.",
+    "- Set environment variables for every process Copilot starts (shell commands, local LSP and MCP servers, hooks and extensions) with the env setting, with or without the sandbox",
+    "**Fixed**",
+    "- Search falls back to ripgrep when another Copilot profile owns the repository's active index. On Windows, search helpers no longer use profile folders as their working directory.",
+    "- Switching models before your first prompt now skips compaction and completes successfully",
+    "- Assisted Permissions honors later chat approvals or withdrawals of earlier permission decisions, including session approvals",
+    "- Keep your place when reading older output in the terminal while a large reply arrives.",
+    "- Open the link when clicking anywhere on linked inline code or color swatches, including their shaded edges.",
+    "- Keep the selected MCP servers or Skills view visible in /config on very narrow terminals.",
+    "- Gemini reasoning summaries honor your saved visibility preference, and Ctrl+T shows or hides them and saves your choice.",
+    "- Built-in search keeps full filenames and correct line numbers when compacting matches from files with numeric suffixes.",
+    "- `/worktree` and `/move` preserve Git diagnostics when branch names, paths, or hook output contain HTML-like text."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-25T17:55:26Z",
+  "schema_version": 1
+}
