@@ -1,0 +1,25 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.116-4",
+  "release_date": "2026-11-25",
+  "title": "1.0.116-4",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.116-4",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add a build-time JSON Schema for extension manifests\n\n**Fixed**\n- PowerShell commands with digits in a parameter name, such as -n1 or -ExpectedSha256, honor allow rules again instead of requiring full-script approval.\n- Choosing \"Yes\" in the folder trust prompt closes it without waiting for MCP servers to finish reconnecting\n- Allow Swift tools in the Copilot CLI sandbox to write to the compiler module cache and SwiftPM shared cache on macOS and Linux.\n- A prompt passed with -i, a repository startup prompt or a restored schedule now waits for the MCP servers that trusting the folder starts, for up to 30 seconds, so its first request includes their tools\n- Show the selected preview model's name in /model switch notices and /exit print when settings.json is empty.\n- Sub-agent events in a session's event log now record when they happened (`occurredAt`), not only when they reached the main session.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add a build-time JSON Schema for extension manifests",
+    "**Fixed**",
+    "- PowerShell commands with digits in a parameter name, such as -n1 or -ExpectedSha256, honor allow rules again instead of requiring full-script approval.",
+    "- Choosing \"Yes\" in the folder trust prompt closes it without waiting for MCP servers to finish reconnecting",
+    "- Allow Swift tools in the Copilot CLI sandbox to write to the compiler module cache and SwiftPM shared cache on macOS and Linux.",
+    "- A prompt passed with -i, a repository startup prompt or a restored schedule now waits for the MCP servers that trusting the folder starts, for up to 30 seconds, so its first request includes their tools",
+    "- Show the selected preview model's name in /model switch notices and /exit print when settings.json is empty.",
+    "- Sub-agent events in a session's event log now record when they happened (`occurredAt`), not only when they reached the main session."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-25T17:55:26Z",
+  "schema_version": 1
+}
