@@ -2,9 +2,13 @@ name: CI
 
 on:
   pull_request:
+    paths-ignore:
+      - 'data/**'
   push:
     branches:
       - main
+    paths-ignore:
+      - 'data/**'
   workflow_dispatch:
 
 permissions:
