@@ -144,7 +144,7 @@ npx playwright test
 **Python**: Both `ruff` and `pytest` must pass before committing.  
 **JavaScript**: All Node.js tests in `site/search.test.mjs` must pass.  
 **Browser**: The Playwright tests in `site/responsive.spec.mjs` render the real page in Chromium and verify the table layout on wide viewports and the stacked card layout below 600px.
-GitHub Actions CI runs the same test suite on pushes to `main`, pull requests, and manual dispatches. It also runs `python -m compileall scripts tests` as a fast syntax check before `pytest`.
+GitHub Actions CI runs the same test suite on pushes to `main`, pull requests, and manual dispatches. Pushes and pull requests that change only files under `data/` skip CI; changes outside `data/` still trigger it, even when release-note updates are included. Manual dispatches always run. The Pages workflow still tests, builds, and deploys data updates. CI also runs `python -m compileall scripts tests` as a fast syntax check before `pytest`.
 
 ## Output format
 
