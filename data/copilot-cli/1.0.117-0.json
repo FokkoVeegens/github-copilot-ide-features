@@ -1,0 +1,33 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.117-0",
+  "release_date": "2026-11-25",
+  "title": "1.0.117-0",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-0",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add explicit tool exposure so custom agents can opt in to tools\n\n**Fixed**\n- Load connected Copilot Connectors when resuming a CLI session while GitHub sign-in is still finishing.\n- Background agents can continue their conversations after restarting the CLI and resuming a session\n- Pressing Enter more than once on the folder trust prompt trusts the folder and reloads plugins once, instead of restarting every extension for each extra key press\n- Subagent details in /tasks show the reasoning effort the agent uses when the requested level isn't supported.\n- Running tasks in `/tasks` stay on one line and keep their spinners visible in narrow terminals.\n- Successful non-interactive CLI runs exit with code 0 when a session write fails temporarily but the final save succeeds.\n- Remove extra blank lines below wrapped text in narrow terminals, including task descriptions and IDs in /tasks.\n- Keep the MCP tool cache disabled across reloads when `COPILOT_MCP_TOOL_CACHE=false`, so Copilot neither reads nor writes tool snapshots.\n- `/sandbox policy` identifies grants that point to broken symlinks and warns that they can prevent sandboxed commands from starting.\n- Permission prompts and help clarify which approvals stay in effect when you resume the same session.\n- Assisted Permissions no longer denies a shell command retry as a duplicate solely because the previous attempt ran and failed.\n- Autopilot with Assisted Permissions can retry an automatically denied action once if you ask for it in a later chat message. The retry still goes through permission review.\n- In plan mode, Assisted Permissions asks before actions like creating a Git branch or installing packages instead of automatically approving them before you approve the plan.\n- --trust-folder from a subdirectory no longer runs the repository root's hooks when --add-dir names a folder in the same repository, including the root itself",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add explicit tool exposure so custom agents can opt in to tools",
+    "**Fixed**",
+    "- Load connected Copilot Connectors when resuming a CLI session while GitHub sign-in is still finishing.",
+    "- Background agents can continue their conversations after restarting the CLI and resuming a session",
+    "- Pressing Enter more than once on the folder trust prompt trusts the folder and reloads plugins once, instead of restarting every extension for each extra key press",
+    "- Subagent details in /tasks show the reasoning effort the agent uses when the requested level isn't supported.",
+    "- Running tasks in `/tasks` stay on one line and keep their spinners visible in narrow terminals.",
+    "- Successful non-interactive CLI runs exit with code 0 when a session write fails temporarily but the final save succeeds.",
+    "- Remove extra blank lines below wrapped text in narrow terminals, including task descriptions and IDs in /tasks.",
+    "- Keep the MCP tool cache disabled across reloads when `COPILOT_MCP_TOOL_CACHE=false`, so Copilot neither reads nor writes tool snapshots.",
+    "- `/sandbox policy` identifies grants that point to broken symlinks and warns that they can prevent sandboxed commands from starting.",
+    "- Permission prompts and help clarify which approvals stay in effect when you resume the same session.",
+    "- Assisted Permissions no longer denies a shell command retry as a duplicate solely because the previous attempt ran and failed.",
+    "- Autopilot with Assisted Permissions can retry an automatically denied action once if you ask for it in a later chat message. The retry still goes through permission review.",
+    "- In plan mode, Assisted Permissions asks before actions like creating a Git branch or installing packages instead of automatically approving them before you approve the plan.",
+    "- --trust-folder from a subdirectory no longer runs the repository root's hooks when --add-dir names a folder in the same repository, including the root itself"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-27T17:24:24Z",
+  "schema_version": 1
+}

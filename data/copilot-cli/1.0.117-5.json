@@ -1,0 +1,18 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.117-5",
+  "release_date": "2026-11-27",
+  "title": "1.0.117-5",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-5",
+  "source": "api",
+  "body_markdown": "**Added**\n- Add sandbox.userPolicy.network.extraCaCertificates, in user or managed settings, to trust custom CA certificates for sandboxed commands through TLS-intercepting proxies",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Added**",
+    "- Add sandbox.userPolicy.network.extraCaCertificates, in user or managed settings, to trust custom CA certificates for sandboxed commands through TLS-intercepting proxies"
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-27T17:24:24Z",
+  "schema_version": 1
+}

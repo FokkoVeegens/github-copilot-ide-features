@@ -1,0 +1,24 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.117-1",
+  "release_date": "2026-11-25",
+  "title": "1.0.117-1",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-1",
+  "source": "api",
+  "body_markdown": "**Improved**\n- The /model picker shows service notices and marks retiring models so you can see warnings before choosing a model.\n\n**Fixed**\n- Show an error instead of silently switching providers when a repository pins a model to an unavailable provider.\n- Only announce a new session checkpoint after automatic compaction if the checkpoint was saved.\n- Trusting a folder for the current session reloads MCP servers once and shows a single reload summary.\n- On Linux, Copilot accepts keyboard input again if the interactive shell opened with `$` is killed.\n- Subagents respect the tool list in their custom agent file, even when the file has no prompt.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Improved**",
+    "- The /model picker shows service notices and marks retiring models so you can see warnings before choosing a model.",
+    "**Fixed**",
+    "- Show an error instead of silently switching providers when a repository pins a model to an unavailable provider.",
+    "- Only announce a new session checkpoint after automatic compaction if the checkpoint was saved.",
+    "- Trusting a folder for the current session reloads MCP servers once and shows a single reload summary.",
+    "- On Linux, Copilot accepts keyboard input again if the interactive shell opened with `$` is killed.",
+    "- Subagents respect the tool list in their custom agent file, even when the file has no prompt."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-27T17:24:24Z",
+  "schema_version": 1
+}
