@@ -1,0 +1,21 @@
+{
+  "ide": "copilot-cli",
+  "version": "1.0.117-2",
+  "release_date": "2026-11-26",
+  "title": "1.0.117-2",
+  "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.117-2",
+  "source": "api",
+  "body_markdown": "**Fixed**\n- `copilot help extensions` no longer says your own and plugin extensions load with -p; an extension starts there only if its launch is already approved, by --allow-all-tools or --yolo or by an approval saved earlier\n- Built-in searches no longer fail when Copilot sends flags such as line numbers and result limits, or a list of paths, as text.\n- Resume shared sessions even when their selected model is unavailable, so you can choose a different model with /model.\n- PowerShell hooks on Windows preserve native program exit codes, so exit code 2 is treated as a warning or denial rather than a hook failure.",
+  "body_html": null,
+  "categories": [],
+  "copilot_mentions": [
+    "**Fixed**",
+    "- `copilot help extensions` no longer says your own and plugin extensions load with -p; an extension starts there only if its launch is already approved, by --allow-all-tools or --yolo or by an approval saved earlier",
+    "- Built-in searches no longer fail when Copilot sends flags such as line numbers and result limits, or a list of paths, as text.",
+    "- Resume shared sessions even when their selected model is unavailable, so you can choose a different model with /model.",
+    "- PowerShell hooks on Windows preserve native program exit codes, so exit code 2 is treated as a warning or denial rather than a hook failure."
+  ],
+  "prerelease": true,
+  "fetched_at": "2026-11-27T17:24:24Z",
+  "schema_version": 1
+}
